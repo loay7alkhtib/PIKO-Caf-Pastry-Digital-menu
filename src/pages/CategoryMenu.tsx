@@ -1,4 +1,4 @@
-import { useState, memo, useCallback, useMemo, useEffect } from 'react';
+import { useState, memo, useCallback, useMemo } from 'react';
 import NavBar from '../components/NavBar';
 import ItemPreview from '../components/ItemPreview';
 import CategoryNavigation from '../components/CategoryNavigation';
@@ -7,13 +7,14 @@ import ItemsGrid from '../components/ItemsGrid';
 import BrowseMoreSection from '../components/BrowseMoreSection';
 import { Button } from '../components/ui/button';
 import { useLang } from '../lib/LangContext';
-import { useCart } from '../lib/CartContext';
 import { useData } from '../lib/DataContext';
 import { useResponsiveColumns } from '../lib/hooks/useResponsiveColumns';
+import { useNavigation } from '../lib/hooks/useNavigation';
+import { useCartOperations } from '../lib/hooks/useCartOperations';
+import { useScrollToTop } from '../lib/hooks/useScrollToTop';
 import { t, dirFor } from '../lib/i18n';
 import type { Item } from '../lib/types';
 import { ArrowLeft } from 'lucide-react';
-import { toast } from 'sonner';
 
 interface CategoryMenuProps {
   categoryId: string;
@@ -22,15 +23,14 @@ interface CategoryMenuProps {
 
 const CategoryMenu = memo(function CategoryMenu({ categoryId, onNavigate }: CategoryMenuProps) {
   const { lang } = useLang();
-  const { addItem } = useCart();
   const { categories, items: allItems } = useData();
   const [previewItem, setPreviewItem] = useState<Item | null>(null);
   const { columnCount, gutterSize } = useResponsiveColumns();
+  const { navigateToHome, navigateToAdminLogin } = useNavigation({ onNavigate });
+  const { addItemToCart } = useCartOperations();
 
   // Scroll to top when category changes
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [categoryId]);
+  useScrollToTop(categoryId);
 
   // Get category from cache - INSTANT!
   const category = useMemo(() => 
@@ -45,24 +45,11 @@ const CategoryMenu = memo(function CategoryMenu({ categoryId, onNavigate }: Cate
   );
 
   const handleAddItem = useCallback((item: Item, size?: string, customPrice?: number) => {
-    const displayPrice = customPrice || item.price;
-    
-    addItem({
-      id: item.id,
-      name: item.names[lang] || item.names.en,
-      price: displayPrice,
-      image: item.image || undefined,
-      size,
-    });
-    toast.success(
-      lang === 'en' ? 'Added to list!' :
-      lang === 'tr' ? 'Listeye eklendi!' :
-      'أضيف إلى القائمة!'
-    );
-  }, [addItem, lang]);
+    addItemToCart(item, size, customPrice);
+  }, [addItemToCart]);
 
   const handleLogoTripleTap = () => {
-    onNavigate('admin-login');
+    navigateToAdminLogin();
   };
 
   return (
@@ -71,7 +58,7 @@ const CategoryMenu = memo(function CategoryMenu({ categoryId, onNavigate }: Cate
 
       <div className="max-w-[1400px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6">
         <Button
-          onClick={() => onNavigate('home')}
+          onClick={navigateToHome}
           variant="outline"
           className="mb-4"
           size="sm"

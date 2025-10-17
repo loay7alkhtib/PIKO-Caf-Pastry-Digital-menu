@@ -6,6 +6,7 @@ import PikoLogoBadge from '../components/PikoLogoBadge';
 import PikoLoader from '../components/PikoLoader';
 import { useLang } from '../lib/LangContext';
 import { useData } from '../lib/DataContext';
+import { useNavigation } from '../lib/hooks/useNavigation';
 import { t, dirFor } from '../lib/i18n';
 
 interface HomeProps {
@@ -15,17 +16,18 @@ interface HomeProps {
 const Home = memo(function Home({ onNavigate }: HomeProps) {
   const { lang } = useLang();
   const { categories, loading, prefetchCategory } = useData(); // Use cached data!
+  const { navigateToCategory, navigateToAdminLogin } = useNavigation({ onNavigate });
 
   const handleCategoryClick = useCallback((categoryId: string) => {
-    onNavigate('category', categoryId);
-  }, [onNavigate]);
+    navigateToCategory(categoryId);
+  }, [navigateToCategory]);
   
   const handleCategoryHover = useCallback((categoryId: string) => {
     prefetchCategory(categoryId);
   }, [prefetchCategory]);
 
   const handleLogoTripleTap = () => {
-    onNavigate('admin-login');
+    navigateToAdminLogin();
   };
 
   // Show full PikoLoader on initial load
