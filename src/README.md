@@ -5,23 +5,27 @@ A fast, elegant digital menu web application built with React, Tailwind CSS, and
 ## ✨ Features
 
 ### 🎨 **Design**
+
 - Minimal, elegant design with brand color #0C6071 (teal)
 - Gelica font (EN) and IBM Plex Sans Arabic (AR)
 - Full RTL support for Arabic
 - Responsive from mobile to ultrawide screens
 
 ### 🌍 **Multi-Language**
+
 - English, Turkish, and Arabic
 - Real-time language switching
 - Proper RTL layout for Arabic
 
 ### 📱 **User Features**
+
 - Browse menu categories and items
 - View item details with variants (sizes)
 - Shopping cart system
 - Order placement
 
 ### 🔐 **Admin Panel**
+
 - Hidden admin panel (triple-tap logo)
 - Full CRUD for categories and items
 - Drag-and-drop reordering
@@ -37,6 +41,7 @@ A fast, elegant digital menu web application built with React, Tailwind CSS, and
 ## 🚀 Quick Start
 
 ### **Admin Login:**
+
 ```
 Triple-tap the logo anywhere in the app
 Email: admin@piko.com
@@ -44,46 +49,30 @@ Password: admin123
 ```
 
 ### **Upload Menu:**
+
 1. Login to admin panel
-2. Go to "Auto Process Menu" section
-3. Upload `piko_smart_upload.json` file
-4. Wait for processing to complete
-5. All ~350 items loaded with duplicate consolidation!
+2. Use the admin tools to manually manage your menu items
+3. Add categories and items through the admin interface
 
 ---
 
 ## 🛠️ Current Admin Tools
 
-### **1. Auto Process Menu** ⭐ PRIMARY TOOL
-**Location**: Admin Panel (top section)  
-**Purpose**: Upload your complete menu from JSON file
-
-**Features:**
-- ✅ Upload or paste JSON data
-- ✅ Automatic duplicate consolidation
-- ✅ Real-time progress tracking
-- ✅ Processes ~350 items in seconds
-- ✅ Direct upload to Supabase
-
-**Usage:**
-```
-1. Click "Choose JSON File" or paste JSON
-2. Click "Process & Upload Menu"
-3. Watch real-time progress
-4. Done! ✅
-```
 
 ### **2. History Panel** 🗄️
+
 **Location**: Admin Panel → History Tab  
 **Purpose**: Recover deleted items/categories
 
 **Features:**
+
 - ✅ View all deleted items
 - ✅ One-click restore
 - ✅ Statistics dashboard
 - ✅ Permanent delete option
 
 **Usage:**
+
 ```
 1. Go to History tab
 2. Browse deleted items
@@ -92,10 +81,12 @@ Password: admin123
 ```
 
 ### **3. Session Debugger** 🔍
-**Location**: Admin Panel (below Auto Process Menu)  
+
+**Location**: Admin Panel  
 **Purpose**: Monitor your login session
 
 **Features:**
+
 - ✅ Session status check
 - ✅ Age tracking
 - ✅ Server verification
@@ -111,7 +102,6 @@ Password: admin123
 │   │   ├── AdminCategories.tsx    # Category management
 │   │   ├── AdminItems.tsx         # Item management
 │   │   ├── AdminOrders.tsx        # Order management
-│   │   ├── AutoProcessMenu.tsx    # ⭐ Smart menu uploader
 │   │   ├── HistoryPanel.tsx       # Archive system
 │   │   ├── SessionDebugger.tsx    # Session monitor
 │   │   ├── DraggableCategory.tsx  # Drag & drop for categories
@@ -140,24 +130,28 @@ Password: admin123
 ## 🎯 Key Systems
 
 ### **Data Caching (DataContext)**
+
 - Prevents unnecessary API calls
 - 5-minute TTL for categories
 - Instant page loads
 - Auto-refresh on data changes
 
 ### **Session Persistence**
+
 - 7-day session expiry
 - Auto-recovery on page refresh
 - Resilient to network errors
 - localStorage-based
 
 ### **History & Archive**
+
 - Soft delete system
 - All deletions recoverable
 - Timestamped entries
 - One-click restore
 
 ### **Smart Menu Upload**
+
 - Handles 350+ items
 - Duplicate consolidation
 - Variant merging
@@ -168,14 +162,16 @@ Password: admin123
 ## 📊 Admin Workflow
 
 ### **Initial Setup:**
+
 ```
 1. Login to admin (admin@piko.com / admin123)
-2. Use Auto Process Menu
-3. Upload piko_smart_upload.json
-4. Done! Menu is loaded
+2. Use the admin tools to manage your menu
+3. Add categories and items manually
+4. Done! Menu is ready
 ```
 
 ### **Daily Management:**
+
 ```
 1. Categories Tab - Manage categories
 2. Items Tab - Edit menu items
@@ -184,6 +180,7 @@ Password: admin123
 ```
 
 ### **Editing Items:**
+
 ```
 1. Click "Edit" on any item
 2. Update names (EN/TR/AR)
@@ -193,6 +190,7 @@ Password: admin123
 ```
 
 ### **Managing Variants:**
+
 ```
 1. Edit item
 2. Click "Add Variant"
@@ -206,13 +204,17 @@ Password: admin123
 ## 🔧 Configuration
 
 ### **Session Expiry:**
+
 Edit `/lib/sessionManager.ts`:
+
 ```typescript
 const SESSION_EXPIRY_DAYS = 7; // Change this
 ```
 
 ### **API Endpoint:**
+
 Located in `/lib/supabase.ts`:
+
 ```typescript
 const API_BASE = `https://${projectId}.supabase.co/functions/v1/make-server-4050140e`;
 ```
@@ -222,6 +224,7 @@ const API_BASE = `https://${projectId}.supabase.co/functions/v1/make-server-4050
 ## 📚 Documentation
 
 ### **Available Guides:**
+
 - `COMPLETE_FIXES_SUMMARY.md` - All recent fixes
 - `HISTORY_SYSTEM_GUIDE.md` - Archive system details
 - `SESSION_PERSISTENCE_FIX.md` - Session handling
@@ -232,6 +235,7 @@ const API_BASE = `https://${projectId}.supabase.co/functions/v1/make-server-4050
 ## 🐛 Troubleshooting
 
 ### **Session Issues:**
+
 ```
 1. Check SessionDebugger in admin panel
 2. Verify localStorage is enabled
@@ -240,6 +244,7 @@ const API_BASE = `https://${projectId}.supabase.co/functions/v1/make-server-4050
 ```
 
 ### **Menu Upload Issues:**
+
 ```
 1. Verify JSON file format
 2. Check browser console
@@ -248,6 +253,7 @@ const API_BASE = `https://${projectId}.supabase.co/functions/v1/make-server-4050
 ```
 
 ### **Items Not Showing:**
+
 ```
 1. Check if category exists
 2. Verify item has valid category_id

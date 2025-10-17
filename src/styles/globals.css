@@ -1,35 +1,35 @@
 @custom-variant dark (&:is(.dark *));
 
 /* Fonts - IBM Plex Sans Arabic for Arabic with display=swap for performance */
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
 
 /* Light theme - Piko Patisserie brand colors */
 :root {
   --font-size: 16px;
-  
+
   /* Piko brand colors */
-  --bg: 45 100% 99%;          /* Ivory #FFFDF9 */
-  --fg: 197 21% 15%;          /* Charcoal #1E2C2F */
-  --card: 198 52% 95%;        /* Powder #E6F3F8 */
+  --bg: 45 100% 99%; /* Ivory #FFFDF9 */
+  --fg: 197 21% 15%; /* Charcoal #1E2C2F */
+  --card: 198 52% 95%; /* Powder #E6F3F8 */
   --card-foreground: 197 21% 15%;
-  --muted: 200 18% 76%;       /* Cool Gray #A0B2B8 */
+  --muted: 200 18% 76%; /* Cool Gray #A0B2B8 */
   --muted-foreground: 200 18% 35%;
   --border: 200 18% 85%;
   --input: 200 18% 85%;
-  --ring: 190 82% 25%;        /* Teal ring */
-  --primary: 190 82% 25%;     /* #0C6071 Teal */
+  --ring: 190 82% 25%; /* Teal ring */
+  --primary: 190 82% 25%; /* #0C6071 Teal */
   --primary-foreground: 45 100% 99%;
-  --secondary: 37 100% 80%;   /* Apricot #FFD9A0 */
+  --secondary: 37 100% 80%; /* Apricot #FFD9A0 */
   --secondary-foreground: 197 21% 15%;
-  --accent: 356 100% 70%;     /* Coral #FF6B6B */
+  --accent: 356 100% 70%; /* Coral #FF6B6B */
   --accent-foreground: 45 100% 99%;
   --destructive: 0 84% 60%;
   --destructive-foreground: 45 100% 99%;
-  
+
   /* Convert to color values */
   --background: hsl(var(--bg));
   --foreground: hsl(var(--fg));
-  
+
   --font-weight-medium: 500;
   --font-weight-normal: 400;
   --radius: 1rem;
@@ -54,7 +54,7 @@
   --accent-foreground: 198 32% 8%;
   --destructive: 0 70% 45%;
   --destructive-foreground: 45 20% 96%;
-  
+
   --background: hsl(var(--bg));
   --foreground: hsl(var(--fg));
 }
@@ -93,13 +93,21 @@
   body {
     @apply bg-background text-foreground antialiased;
   }
-  
-  html, body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+
+  html,
+  body {
+    font-family:
+      'Inter',
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      system-ui,
+      sans-serif;
   }
-  
+
   /* Arabic font */
-  [dir="rtl"], .lang-ar {
+  [dir='rtl'],
+  .lang-ar {
     font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif;
   }
 }
@@ -108,7 +116,7 @@
  * Base typography
  */
 @layer base {
-  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+  :where(:not(:has([class*=' text-']), :not(:has([class^='text-'])))) {
     h1 {
       font-size: var(--text-2xl);
       font-weight: var(--font-weight-medium);
@@ -168,7 +176,7 @@ html {
   .transition-gentle {
     transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
   }
-  
+
   .shadow-soft {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
   }
@@ -178,7 +186,7 @@ html {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-  
+
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }

@@ -29,10 +29,10 @@ export interface Item {
 
 export interface Order {
   id: string;
-  items: { 
-    id: string; 
-    quantity: number; 
-    name: string; 
+  items: {
+    id: string;
+    quantity: number;
+    name: string;
     price: number;
     size?: string; // Optional size variant
   }[];
@@ -69,7 +69,13 @@ export interface CartItem {
 }
 
 // Language types
-export type Lang = "en" | "tr" | "ar";
+export type Lang = 'en' | 'tr' | 'ar';
 
 // Navigation types
-export type Page = 'home' | 'category' | 'login' | 'signup' | 'admin-login' | 'admin';
+export type Page =
+  | 'home'
+  | 'category'
+  | 'login'
+  | 'signup'
+  | 'admin-login'
+  | 'admin';

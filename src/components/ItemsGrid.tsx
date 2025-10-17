@@ -12,53 +12,70 @@ interface ItemsGridProps {
   gutterSize: string;
   onItemAdd: (item: Item) => void;
   onItemClick: (item: Item) => void;
+  showCategories?: boolean;
+  categories?: Array<{ id: string; names: { en: string; tr: string; ar: string } }>;
 }
 
-const ItemsGrid = memo(function ItemsGrid({
-  items,
-  lang,
-  columnCount,
-  gutterSize,
-  onItemAdd,
-  onItemClick
-}: ItemsGridProps) {
-  if (items.length === 0) {
+const ItemsGrid = memo(
+  ({
+    items,
+    lang,
+    columnCount,
+    gutterSize,
+    onItemAdd,
+    onItemClick,
+    showCategories = false,
+    categories = [],
+  }: ItemsGridProps) => {
+    if (items.length === 0) {
+      return (
+        <div className='text-start py-12 text-muted-foreground'>
+          <p className='text-sm sm:text-base'>
+            {lang === 'en'
+              ? 'No items in this category yet'
+              : lang === 'tr'
+                ? 'Bu kategoride henüz ürün yok'
+                : 'لا توجد عناصر في هذه الفئة بعد'}
+          </p>
+        </div>
+      );
+    }
+
+    const getCategoryName = (categoryId: string) => {
+      const category = categories.find(c => c.id === categoryId);
+      return category ? (category.names[lang] || category.names.en) : '';
+    };
+
     return (
-      <div className="text-start py-12 text-muted-foreground">
-        <p className="text-sm sm:text-base">
-          {lang === 'en' ? 'No items in this category yet' :
-           lang === 'tr' ? 'Bu kategoride henüz ürün yok' :
-           'لا توجد عناصر في هذه الفئة بعد'}
-        </p>
-      </div>
+      <Masonry columnsCount={columnCount} gutter={gutterSize}>
+        {items.map((item, index) => (
+          <motion.div
+            key={item.id}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: Math.min(index * 0.02, 0.2) }}
+          >
+            <div className="relative">
+              <ItemCard
+                name={item.names[lang] || item.names.en}
+                price={item.price}
+                image={item.image}
+                tags={item.tags}
+                variants={item.variants}
+                onAdd={() => onItemAdd(item)}
+                onClick={() => onItemClick(item)}
+              />
+              {showCategories && item.category_id && (
+                <div className="absolute top-2 left-2 bg-primary/90 text-primary-foreground px-2 py-1 rounded-full text-xs font-medium">
+                  {getCategoryName(item.category_id)}
+                </div>
+              )}
+            </div>
+          </motion.div>
+        ))}
+      </Masonry>
     );
   }
-
-  return (
-    <Masonry
-      columnsCount={columnCount}
-      gutter={gutterSize}
-    >
-      {items.map((item, index) => (
-        <motion.div
-          key={item.id}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, delay: Math.min(index * 0.02, 0.2) }}
-        >
-          <ItemCard
-            name={item.names[lang] || item.names.en}
-            price={item.price}
-            image={item.image}
-            tags={item.tags}
-            variants={item.variants}
-            onAdd={() => onItemAdd(item)}
-            onClick={() => onItemClick(item)}
-          />
-        </motion.div>
-      ))}
-    </Masonry>
-  );
-});
+);
 
 export default ItemsGrid;

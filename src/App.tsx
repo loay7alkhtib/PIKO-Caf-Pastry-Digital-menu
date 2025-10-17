@@ -1,4 +1,4 @@
-import { useState, useEffect, lazy, Suspense } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
 import { LangProvider } from './lib/LangContext';
 import { CartProvider } from './lib/CartContext';
 import { DataProvider } from './lib/DataContext';
@@ -32,12 +32,12 @@ export default function App() {
         {
           method: 'POST',
           headers: {
-            'Authorization': `Bearer ${publicAnonKey}`,
+            Authorization: `Bearer ${publicAnonKey}`,
             'Content-Type': 'application/json',
           },
-        }
+        },
       );
-      
+
       const data = await response.json();
       console.log('Database initialization:', data);
     } catch (error) {
@@ -56,7 +56,7 @@ export default function App() {
     <LangProvider>
       <DataProvider>
         <CartProvider>
-          <div className="min-h-screen bg-background text-foreground">
+          <div className='min-h-screen bg-background text-foreground'>
             <Suspense fallback={<PikoLoader />}>
               {page === 'home' && (
                 <Home onNavigate={(p, catId) => navigate(p as Page, catId)} />
@@ -68,20 +68,20 @@ export default function App() {
                 />
               )}
               {page === 'login' && (
-                <Login onNavigate={(p) => navigate(p as Page)} />
+                <Login onNavigate={p => navigate(p as Page)} />
               )}
               {page === 'signup' && (
-                <SignUp onNavigate={(p) => navigate(p as Page)} />
+                <SignUp onNavigate={p => navigate(p as Page)} />
               )}
               {page === 'admin-login' && (
-                <AdminLogin onNavigate={(p) => navigate(p as Page)} />
+                <AdminLogin onNavigate={p => navigate(p as Page)} />
               )}
               {page === 'admin' && (
-                <Admin onNavigate={(p) => navigate(p as Page)} />
+                <Admin onNavigate={p => navigate(p as Page)} />
               )}
             </Suspense>
           </div>
-          <Toaster position="bottom-center" />
+          <Toaster position='bottom-center' />
         </CartProvider>
       </DataProvider>
     </LangProvider>

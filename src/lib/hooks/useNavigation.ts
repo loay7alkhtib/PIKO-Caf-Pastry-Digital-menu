@@ -10,9 +10,13 @@ export function useNavigation({ onNavigate }: UseNavigationProps) {
     onNavigate('home');
   }, [onNavigate]);
 
-  const navigateToCategory = useCallback((categoryId: string) => {
-    onNavigate('category', categoryId);
-  }, [onNavigate]);
+  const navigateToCategory = useCallback(
+    (categoryId: string) => {
+      onNavigate('category', categoryId);
+    },
+    [onNavigate]
+  );
+
 
   const navigateToLogin = useCallback(() => {
     onNavigate('login');

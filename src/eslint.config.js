@@ -1,9 +1,9 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import tseslint from '@typescript-eslint/eslint-plugin'
-import tsParser from '@typescript-eslint/parser'
+import js from '@eslint/js';
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
 
 export default [
   {
@@ -37,7 +37,7 @@ export default [
       ],
       '@typescript-eslint/no-unused-vars': [
         'warn',
-        { 
+        {
           argsIgnorePattern: '^_',
           varsIgnorePattern: '^_',
         },
@@ -45,4 +45,4 @@ export default [
       'no-console': ['warn', { allow: ['warn', 'error'] }],
     },
   },
-]
+];

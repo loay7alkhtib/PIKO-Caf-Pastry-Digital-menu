@@ -1,5 +1,5 @@
 import { projectId, publicAnonKey } from './config/supabase';
-import { saveSession, loadSession, clearSession } from './sessionManager';
+import { clearSession, loadSession, saveSession } from './sessionManager';
 import type { Category, Item, ItemVariant, Order, Session } from './types';
 
 // Simple auth state management
@@ -17,14 +17,16 @@ async function apiCall(endpoint: string, options: RequestInit = {}) {
   const response = await fetch(`${API_BASE}${endpoint}`, {
     ...options,
     headers: {
-      'Authorization': `Bearer ${publicAnonKey}`,
+      Authorization: `Bearer ${publicAnonKey}`,
       'Content-Type': 'application/json',
       ...options.headers,
     },
   });
 
   if (!response.ok) {
-    const error = await response.json().catch(() => ({ error: 'Request failed' }));
+    const error = await response
+      .json()
+      .catch(() => ({ error: 'Request failed' }));
     throw new Error(error.error || `HTTP ${response.status}`);
   }
 
@@ -38,19 +40,19 @@ export const categoriesAPI = {
     if (categoriesCache && Date.now() - categoriesCache.timestamp < CACHE_TTL) {
       return categoriesCache.data;
     }
-    
+
     // Fetch from API
     const data = await apiCall('/categories');
-    
+
     // Update cache
     categoriesCache = {
       data,
-      timestamp: Date.now()
+      timestamp: Date.now(),
     };
-    
+
     return data;
   },
-  
+
   create: async (data: Omit<Category, 'id' | 'created_at'>) => {
     const result = await apiCall('/categories', {
       method: 'POST',
@@ -59,7 +61,7 @@ export const categoriesAPI = {
     categoriesCache = null; // Invalidate cache
     return result;
   },
-  
+
   update: async (id: string, data: Omit<Category, 'id' | 'created_at'>) => {
     const result = await apiCall(`/categories/${id}`, {
       method: 'PUT',
@@ -68,7 +70,7 @@ export const categoriesAPI = {
     categoriesCache = null; // Invalidate cache
     return result;
   },
-  
+
   delete: async (id: string) => {
     const result = await apiCall(`/categories/${id}`, {
       method: 'DELETE',
@@ -76,7 +78,7 @@ export const categoriesAPI = {
     categoriesCache = null; // Invalidate cache
     return result;
   },
-  
+
   clearCache: () => {
     categoriesCache = null; // Clear cache
   },
@@ -88,29 +90,29 @@ export const itemsAPI = {
     const query = categoryId ? `?category_id=${categoryId}` : '';
     return apiCall(`/items${query}`);
   },
-  
+
   create: (data: Omit<Item, 'id' | 'created_at'>) =>
     apiCall('/items', {
       method: 'POST',
       body: JSON.stringify(data),
     }),
-  
+
   update: (id: string, data: Omit<Item, 'id' | 'created_at'>) =>
     apiCall(`/items/${id}`, {
       method: 'PUT',
       body: JSON.stringify(data),
     }),
-  
+
   delete: (id: string) =>
     apiCall(`/items/${id}`, {
       method: 'DELETE',
     }),
-  
+
   deleteAll: () =>
     apiCall('/items/bulk/delete-all', {
       method: 'DELETE',
     }),
-  
+
   bulkCreate: (items: Omit<Item, 'id' | 'created_at'>[]) =>
     apiCall('/items/bulk/create', {
       method: 'POST',
@@ -121,13 +123,13 @@ export const itemsAPI = {
 // Orders API
 export const ordersAPI = {
   getAll: () => apiCall('/orders'),
-  
-  create: (data: { items: any[], total: number }) =>
+
+  create: (data: { items: any[]; total: number }) =>
     apiCall('/orders', {
       method: 'POST',
       body: JSON.stringify(data),
     }),
-  
+
   update: (id: string, status: 'pending' | 'completed') =>
     apiCall(`/orders/${id}`, {
       method: 'PUT',
@@ -137,25 +139,36 @@ export const ordersAPI = {
 
 // Auth API (custom implementation)
 export const authAPI = {
-  signUp: async (credentials: { email: string; password: string; name: string }) => {
+  signUp: async (credentials: {
+    email: string;
+    password: string;
+    name: string;
+  }) => {
     try {
-      console.log('🚀 Calling signup API with:', { email: credentials.email, name: credentials.name });
+      console.log('🚀 Calling signup API with:', {
+        email: credentials.email,
+        name: credentials.name,
+      });
       console.log('📡 API endpoint:', `${API_BASE}/auth/signup`);
-      
+
       const response = await fetch(`${API_BASE}/auth/signup`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${publicAnonKey}`,
+          Authorization: `Bearer ${publicAnonKey}`,
         },
         body: JSON.stringify(credentials),
       });
 
-      console.log('📥 Signup response status:', response.status, response.statusText);
-      
+      console.log(
+        '📥 Signup response status:',
+        response.status,
+        response.statusText,
+      );
+
       const responseText = await response.text();
       console.log('📄 Signup response text:', responseText);
-      
+
       let data;
       try {
         data = JSON.parse(responseText);
@@ -175,10 +188,10 @@ export const authAPI = {
 
       console.log('🎉 Signup successful! Setting session...');
       currentSession = data.session;
-      
+
       // Store session using session manager
       saveSession(data.session);
-      
+
       console.log('✅ Signup complete!');
       return { data, error: null };
     } catch (error: any) {
@@ -188,14 +201,17 @@ export const authAPI = {
     }
   },
 
-  signInWithPassword: async (credentials: { email: string; password: string }) => {
+  signInWithPassword: async (credentials: {
+    email: string;
+    password: string;
+  }) => {
     console.log('🔐 Attempting login for:', credentials.email);
-    
+
     const response = await fetch(`${API_BASE}/auth/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${publicAnonKey}`,
+        Authorization: `Bearer ${publicAnonKey}`,
       },
       body: JSON.stringify(credentials),
     });
@@ -203,7 +219,9 @@ export const authAPI = {
     console.log('📥 Login response status:', response.status);
 
     if (!response.ok) {
-      const error = await response.json().catch(() => ({ error: 'Login failed' }));
+      const error = await response
+        .json()
+        .catch(() => ({ error: 'Login failed' }));
       console.error('❌ Login failed:', error);
       throw new Error(error.error || 'Invalid credentials');
     }
@@ -211,10 +229,10 @@ export const authAPI = {
     const data = await response.json();
     console.log('✅ Login successful!');
     currentSession = data.session;
-    
+
     // Store session using session manager
     saveSession(data.session);
-    
+
     return { data, error: null };
   },
 
@@ -227,18 +245,18 @@ export const authAPI = {
 
     // Try to load from storage using session manager
     const storedSession = loadSession();
-    
+
     if (storedSession) {
       currentSession = storedSession;
-      
+
       // Try to verify session is still valid (but don't fail if it can't verify)
       try {
         const response = await fetch(`${API_BASE}/auth/session`, {
           headers: {
-            'Authorization': `Bearer ${storedSession.access_token}`,
+            Authorization: `Bearer ${storedSession.access_token}`,
           },
         });
-        
+
         if (response.ok) {
           const data = await response.json();
           if (data.session) {
@@ -256,12 +274,16 @@ export const authAPI = {
           }
         } else {
           // Server error - but keep the local session
-          console.log('⚠️ Server error during verification, using local session');
+          console.log(
+            '⚠️ Server error during verification, using local session',
+          );
           return { data: { session: storedSession }, error: null };
         }
       } catch (verifyError) {
         // If verification request fails, keep using stored session
-        console.log('⚠️ Session verification failed (network error), using local session');
+        console.log(
+          '⚠️ Session verification failed (network error), using local session',
+        );
         return { data: { session: storedSession }, error: null };
       }
     }
@@ -276,7 +298,7 @@ export const authAPI = {
         await fetch(`${API_BASE}/auth/logout`, {
           method: 'POST',
           headers: {
-            'Authorization': `Bearer ${currentSession.access_token}`,
+            Authorization: `Bearer ${currentSession.access_token}`,
           },
         });
       } catch (e) {

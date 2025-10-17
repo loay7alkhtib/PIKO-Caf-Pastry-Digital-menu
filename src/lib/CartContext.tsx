@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, ReactNode, useContext, useState } from 'react';
 import type { CartItem } from './types';
 
 interface CartContextType {
@@ -23,11 +23,13 @@ export function CartProvider({ children }: { children: ReactNode }) {
         const existingKey = i.size ? `${i.id}-${i.size}` : i.id;
         return existingKey === itemKey;
       });
-      
+
       if (existing) {
         return prev.map(i => {
           const existingKey = i.size ? `${i.id}-${i.size}` : i.id;
-          return existingKey === itemKey ? { ...i, quantity: i.quantity + 1 } : i;
+          return existingKey === itemKey
+            ? { ...i, quantity: i.quantity + 1 }
+            : i;
         });
       }
       return [...prev, { ...item, quantity: 1 }];
@@ -35,10 +37,12 @@ export function CartProvider({ children }: { children: ReactNode }) {
   };
 
   const removeItem = (id: string) => {
-    setItems(prev => prev.filter(i => {
-      const itemKey = i.size ? `${i.id}-${i.size}` : i.id;
-      return itemKey !== id;
-    }));
+    setItems(prev =>
+      prev.filter(i => {
+        const itemKey = i.size ? `${i.id}-${i.size}` : i.id;
+        return itemKey !== id;
+      }),
+    );
   };
 
   const updateQuantity = (id: string, quantity: number) => {
@@ -50,7 +54,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       prev.map(i => {
         const itemKey = i.size ? `${i.id}-${i.size}` : i.id;
         return itemKey === id ? { ...i, quantity } : i;
-      })
+      }),
     );
   };
 
@@ -58,7 +62,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setItems([]);
   };
 
-  const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const total = items.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0,
+  );
 
   return (
     <CartContext.Provider
