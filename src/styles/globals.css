@@ -1,0 +1,278 @@
+@custom-variant dark (&:is(.dark *));
+
+/* Fonts - IBM Plex Sans Arabic for Arabic with display=swap for performance */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap");
+
+/* Light theme - Piko Patisserie brand colors */
+:root {
+  --font-size: 16px;
+  
+  /* Piko brand colors */
+  --bg: 45 100% 99%;          /* Ivory #FFFDF9 */
+  --fg: 197 21% 15%;          /* Charcoal #1E2C2F */
+  --card: 198 52% 95%;        /* Powder #E6F3F8 */
+  --card-foreground: 197 21% 15%;
+  --muted: 200 18% 76%;       /* Cool Gray #A0B2B8 */
+  --muted-foreground: 200 18% 35%;
+  --border: 200 18% 85%;
+  --input: 200 18% 85%;
+  --ring: 190 82% 25%;        /* Teal ring */
+  --primary: 190 82% 25%;     /* #0C6071 Teal */
+  --primary-foreground: 45 100% 99%;
+  --secondary: 37 100% 80%;   /* Apricot #FFD9A0 */
+  --secondary-foreground: 197 21% 15%;
+  --accent: 356 100% 70%;     /* Coral #FF6B6B */
+  --accent-foreground: 45 100% 99%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 45 100% 99%;
+  
+  /* Convert to color values */
+  --background: hsl(var(--bg));
+  --foreground: hsl(var(--fg));
+  
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --radius: 1rem;
+}
+
+/* Dark theme */
+.dark {
+  --bg: 198 32% 8%;
+  --fg: 45 20% 96%;
+  --card: 198 22% 12%;
+  --card-foreground: 45 20% 96%;
+  --muted: 198 14% 30%;
+  --muted-foreground: 198 12% 70%;
+  --border: 198 14% 22%;
+  --input: 198 14% 22%;
+  --ring: 190 82% 40%;
+  --primary: 190 82% 40%;
+  --primary-foreground: 198 32% 8%;
+  --secondary: 37 90% 55%;
+  --secondary-foreground: 198 32% 8%;
+  --accent: 356 85% 62%;
+  --accent-foreground: 198 32% 8%;
+  --destructive: 0 70% 45%;
+  --destructive-foreground: 45 20% 96%;
+  
+  --background: hsl(var(--bg));
+  --foreground: hsl(var(--fg));
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--card));
+  --color-popover-foreground: hsl(var(--card-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  
+  html, body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  }
+  
+  /* Arabic font */
+  [dir="rtl"], .lang-ar {
+    font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif;
+  }
+}
+
+/**
+ * Base typography
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Custom utilities */
+@layer utilities {
+  .transition-gentle {
+    transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  
+  .shadow-soft {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Liquid Glass Effect Utilities */
+  .glass-card {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.4)
+    );
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .dark .glass-card {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.02)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-shine {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glass-shine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transition: left 0.7s ease;
+  }
+
+  .glass-shine:hover::before {
+    left: 100%;
+  }
+}
+
+/* Performance-optimized animations - GPU accelerated */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-pulse {
+  animation: shimmer 2s ease-in-out infinite;
+  background: linear-gradient(
+    90deg,
+    hsl(var(--muted) / 0.1) 0%,
+    hsl(var(--muted) / 0.2) 50%,
+    hsl(var(--muted) / 0.1) 100%
+  );
+  background-size: 200% 100%;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+  /* Use transform for GPU acceleration */
+  will-change: transform;
+}
+
+/* Reduce motion for users who prefer it (accessibility + performance) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
