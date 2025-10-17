@@ -1,4 +1,4 @@
-import { supabaseConfig } from '../../config/supabase-credentials';
+import { supabaseConfig } from './supabase-credentials';
 
 // Get project ID from URL (either from environment variable or config file)
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || supabaseConfig.url;

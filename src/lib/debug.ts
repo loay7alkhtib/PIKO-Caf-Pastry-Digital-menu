@@ -1,5 +1,5 @@
 // Debug utility for diagnosing connection issues
-import { projectId, publicAnonKey } from '../utils/supabase/info';
+import { projectId, publicAnonKey } from './config/supabase';
 
 const API_BASE = `https://${projectId}.supabase.co/functions/v1/make-server-4050140e`;
 
