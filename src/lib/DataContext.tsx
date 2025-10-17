@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
-import { categoriesAPI, itemsAPI, Category, Item } from './supabase';
+import { categoriesAPI, itemsAPI } from './supabase';
+import type { Category, Item } from './types';
 import './debug'; // Load diagnostics tool
 import * as idb from './idb';
 import { toast } from 'sonner';
@@ -92,10 +93,10 @@ export function DataProvider({ children }: { children: ReactNode }) {
       try {
         console.log('🏥 Checking server health...');
         const healthCheck = await fetch(
-          `https://${await import('../utils/supabase/info').then(m => m.projectId)}.supabase.co/functions/v1/make-server-4050140e/health`,
+          `https://${await import('./config/supabase').then(m => m.projectId)}.supabase.co/functions/v1/make-server-4050140e/health`,
           {
             headers: {
-              'Authorization': `Bearer ${await import('../utils/supabase/info').then(m => m.publicAnonKey)}`,
+              'Authorization': `Bearer ${await import('./config/supabase').then(m => m.publicAnonKey)}`,
             },
           }
         ).catch(() => null);

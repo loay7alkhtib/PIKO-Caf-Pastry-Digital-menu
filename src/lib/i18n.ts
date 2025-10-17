@@ -1,4 +1,4 @@
-export type Lang = "en" | "tr" | "ar";
+import type { Lang } from './types';
 
 export const translations = {
   // Brand

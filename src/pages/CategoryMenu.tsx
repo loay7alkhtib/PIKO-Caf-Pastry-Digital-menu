@@ -11,7 +11,7 @@ import { useLang } from '../lib/LangContext';
 import { useCart } from '../lib/CartContext';
 import { useData } from '../lib/DataContext';
 import { t, dirFor } from '../lib/i18n';
-import { Item } from '../lib/supabase';
+import type { Item } from '../lib/types';
 import { ArrowLeft, Grid3x3 } from 'lucide-react';
 import { toast } from 'sonner';
 

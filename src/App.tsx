@@ -5,7 +5,7 @@ import { DataProvider } from './lib/DataContext';
 import { Toaster } from './components/ui/sonner';
 import Home from './pages/Home';
 import PikoLoader from './components/PikoLoader';
-import { projectId, publicAnonKey } from './utils/supabase/info';
+import { projectId, publicAnonKey } from './lib/config/supabase';
 
 // Lazy load pages that aren't immediately needed
 const CategoryMenu = lazy(() => import('./pages/CategoryMenu'));
@@ -14,7 +14,7 @@ const SignUp = lazy(() => import('./pages/SignUp'));
 const AdminLogin = lazy(() => import('./pages/AdminLogin'));
 const Admin = lazy(() => import('./pages/Admin'));
 
-type Page = 'home' | 'category' | 'login' | 'signup' | 'admin-login' | 'admin';
+import type { Page } from './lib/types';
 
 export default function App() {
   const [page, setPage] = useState<Page>('home');

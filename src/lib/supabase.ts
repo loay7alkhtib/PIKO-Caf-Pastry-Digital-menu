@@ -1,54 +1,9 @@
-import { projectId, publicAnonKey } from '../utils/supabase/info';
+import { projectId, publicAnonKey } from './config/supabase';
 import { saveSession, loadSession, clearSession } from './sessionManager';
+import type { Category, Item, ItemVariant, Order, Session } from './types';
 
 // Simple auth state management
-let currentSession: { 
-  access_token: string; 
-  user: { email: string; name?: string; isAdmin?: boolean } 
-} | null = null;
-
-// Database types
-export interface Category {
-  id: string;
-  names: { en: string; tr: string; ar: string };
-  icon: string;
-  image?: string;
-  color?: string; // NEW: Category color for theming
-  order: number;
-  created_at: string;
-}
-
-export interface ItemVariant {
-  size: string; // e.g., "Small", "Medium", "Large"
-  price: number;
-}
-
-export interface Item {
-  id: string;
-  names: { en: string; tr: string; ar: string };
-  descriptions?: { en?: string; tr?: string; ar?: string }; // NEW: Optional descriptions
-  category_id: string | null;
-  price: number; // Base price (used if no variants)
-  image: string | null;
-  tags: string[];
-  variants?: ItemVariant[]; // Optional size variants
-  is_available?: boolean; // NEW: Availability status
-  created_at: string;
-}
-
-export interface Order {
-  id: string;
-  items: { 
-    id: string; 
-    quantity: number; 
-    name: string; 
-    price: number;
-    size?: string; // Optional size variant
-  }[];
-  total: number;
-  status: 'pending' | 'completed';
-  created_at: string;
-}
+let currentSession: Session | null = null;
 
 // API base URL
 const API_BASE = `https://${projectId}.supabase.co/functions/v1/make-server-4050140e`;
