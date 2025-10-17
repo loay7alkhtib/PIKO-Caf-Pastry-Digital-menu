@@ -55,6 +55,7 @@ export interface Session {
     email: string;
     name?: string;
     isAdmin?: boolean;
+    id?: string;
   };
 }
 

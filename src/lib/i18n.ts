@@ -284,7 +284,6 @@ export const translations = {
     ar: 'إضافة متغير',
   },
 
-
   // History Panel
   archivedItems: {
     en: 'Archived Items',

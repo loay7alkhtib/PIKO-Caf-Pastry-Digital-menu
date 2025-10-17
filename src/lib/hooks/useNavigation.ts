@@ -17,7 +17,6 @@ export function useNavigation({ onNavigate }: UseNavigationProps) {
     [onNavigate]
   );
 
-
   const navigateToLogin = useCallback(() => {
     onNavigate('login');
   }, [onNavigate]);

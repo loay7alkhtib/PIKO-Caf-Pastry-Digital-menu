@@ -67,7 +67,7 @@ const NavBar = memo(
                 {t('brandName', lang)}
               </h1>
             </div>
-            
+
             <div className='flex items-center gap-1.5 sm:gap-2 flex-shrink-0'>
               <LangToggle />
 

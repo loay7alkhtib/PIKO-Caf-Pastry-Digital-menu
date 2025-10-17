@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 
 export function useResponsiveColumns() {
   const [windowWidth, setWindowWidth] = useState(
-    typeof window !== 'undefined' ? window.innerWidth : 1024,
+    typeof window !== 'undefined' ? window.innerWidth : 1024
   );
 
   // Track window width for responsive columns

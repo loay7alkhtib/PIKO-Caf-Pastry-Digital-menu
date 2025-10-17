@@ -34,6 +34,7 @@ const DataContext = createContext<DataContextType | undefined>(undefined);
 const ITEMS_CACHE_TTL = 300_000; // 5 minutes
 
 export function DataProvider({ children }: { children: ReactNode }) {
+  console.log('🚀 DataProvider initialized');
   const [categories, setCategories] = useState<Category[]>([]);
   const [items, setItems] = useState<Item[]>([]);
   const [loading, setLoading] = useState(true);
@@ -49,8 +50,13 @@ export function DataProvider({ children }: { children: ReactNode }) {
       setError(null);
 
       console.log('🔄 Fetching all data...');
+      console.log(
+        '🔍 API Base URL:',
+        'https://eoaissoqwlfvfizfomax.supabase.co/functions/v1/make-server-4050140e'
+      );
 
       // Try to fetch categories and items in parallel
+      console.log('🔄 About to call categoriesAPI.getAll()');
       const [categoriesData, itemsDataRaw] = await Promise.all([
         categoriesAPI.getAll().catch(err => {
           console.error('Categories fetch error:', err);
@@ -62,13 +68,19 @@ export function DataProvider({ children }: { children: ReactNode }) {
         }),
       ]);
 
-      // Filter out invalid items
+      // Filter out only invalid items (keep all items, even with empty names)
       const itemsData = Array.isArray(itemsDataRaw)
         ? itemsDataRaw.filter(
             item =>
               item && typeof item === 'object' && item.category_id !== undefined
-        )
+          )
         : [];
+
+      console.log('📊 Received data:', {
+        categoriesData: categoriesData?.length || 0,
+        itemsDataRaw: itemsDataRaw?.length || 0,
+        itemsDataFiltered: itemsData?.length || 0,
+      });
 
       // If both are empty, there might be an initialization issue
       if (!categoriesData || categoriesData.length === 0) {
@@ -104,12 +116,13 @@ export function DataProvider({ children }: { children: ReactNode }) {
 
   // Load data on mount
   useEffect(() => {
+    console.log('🔄 DataProvider useEffect triggered');
     // Check server health first, then fetch data
     const initData = async () => {
       try {
         console.log('🏥 Checking server health...');
         const healthCheck = await fetch(
-          `https://${await import('./config/supabase').then(m => m.projectId)}.supabase.co/functions/v1/make-server-4050140e/health`,
+          'https://eoaissoqwlfvfizfomax.supabase.co/functions/v1/make-server-4050140e/health',
           {
             headers: {
               Authorization: `Bearer ${await import('./config/supabase').then(m => m.publicAnonKey)}`,
@@ -172,7 +185,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
                       item &&
                       typeof item === 'object' &&
                       item.category_id !== undefined
-                )
+                  )
                 : [];
 
               // Check if data actually changed
@@ -233,7 +246,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
                 item &&
                 typeof item === 'object' &&
                 item.category_id !== undefined
-          )
+            )
           : [];
 
         const newCache = { data: freshData, timestamp: now };

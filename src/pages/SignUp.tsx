@@ -24,13 +24,38 @@ export default function SignUp({ onNavigate }: SignUpProps) {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      toast.error(
+        lang === 'en'
+          ? 'Please enter a valid email address'
+          : lang === 'tr'
+            ? 'Lütfen geçerli bir e-posta adresi girin'
+            : 'يرجى إدخال عنوان بريد إلكتروني صحيح'
+      );
+      return;
+    }
+
+    // Validate name
+    if (name.trim().length < 2) {
+      toast.error(
+        lang === 'en'
+          ? 'Name must be at least 2 characters'
+          : lang === 'tr'
+            ? 'Ad en az 2 karakter olmalıdır'
+            : 'يجب أن يكون الاسم حرفين على الأقل'
+      );
+      return;
+    }
+
     if (password !== confirmPassword) {
       toast.error(
         lang === 'en'
           ? 'Passwords do not match'
           : lang === 'tr'
             ? 'Şifreler eşleşmiyor'
-            : 'كلمات المرور غير متطابقة',
+            : 'كلمات المرور غير متطابقة'
       );
       return;
     }
@@ -41,7 +66,7 @@ export default function SignUp({ onNavigate }: SignUpProps) {
           ? 'Password must be at least 6 characters'
           : lang === 'tr'
             ? 'Şifre en az 6 karakter olmalıdır'
-            : 'يجب أن تكون كلمة المرور 6 أحرف على الأقل',
+            : 'يجب أن تكون كلمة المرور 6 أحرف على الأقل'
       );
       return;
     }
@@ -63,13 +88,62 @@ export default function SignUp({ onNavigate }: SignUpProps) {
           ? 'Account created successfully!'
           : lang === 'tr'
             ? 'Hesap başarıyla oluşturuldu!'
-            : 'تم إنشاء الحساب بنجاح!',
+            : 'تم إنشاء الحساب بنجاح!'
       );
-      onNavigate('home');
+
+      // Small delay to ensure session is saved before navigation
+      setTimeout(() => {
+        onNavigate('home');
+      }, 100);
     } catch (error: any) {
       console.error('Signup error:', error);
       console.error('Error details:', error.message, error);
-      toast.error(error.message || 'Signup failed. Please try again.');
+
+      // Provide more helpful error messages
+      let errorMessage = error.message || 'Signup failed. Please try again.';
+
+      // Handle specific error cases
+      if (
+        errorMessage.includes('User with this email already exists') ||
+        errorMessage.includes('already exists')
+      ) {
+        errorMessage =
+          lang === 'en'
+            ? 'An account with this email already exists. Please login instead.'
+            : lang === 'tr'
+              ? 'Bu e-posta ile zaten bir hesap var. Lütfen giriş yapın.'
+              : 'يوجد حساب بهذا البريد الإلكتروني بالفعل. يرجى تسجيل الدخول بدلاً من ذلك.';
+      } else if (
+        errorMessage.includes('Failed to fetch') ||
+        errorMessage.includes('NetworkError')
+      ) {
+        errorMessage =
+          lang === 'en'
+            ? 'Network error. Please check your connection and try again.'
+            : lang === 'tr'
+              ? 'Ağ hatası. Lütfen bağlantınızı kontrol edin ve tekrar deneyin.'
+              : 'خطأ في الشبكة. يرجى التحقق من الاتصال والمحاولة مرة أخرى.';
+      } else if (
+        errorMessage.includes('Email, password, and name are required')
+      ) {
+        errorMessage =
+          lang === 'en'
+            ? 'Please fill in all required fields.'
+            : lang === 'tr'
+              ? 'Lütfen tüm gerekli alanları doldurun.'
+              : 'يرجى ملء جميع الحقول المطلوبة.';
+      } else if (
+        errorMessage.includes('Password must be at least 6 characters')
+      ) {
+        errorMessage =
+          lang === 'en'
+            ? 'Password must be at least 6 characters long.'
+            : lang === 'tr'
+              ? 'Şifre en az 6 karakter olmalıdır.'
+              : 'يجب أن تكون كلمة المرور 6 أحرف على الأقل.';
+      }
+
+      toast.error(errorMessage);
     } finally {
       setLoading(false);
     }

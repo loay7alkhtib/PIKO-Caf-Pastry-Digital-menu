@@ -115,7 +115,7 @@ export default function AdminItems({
         setLocalItems(items); // Revert on error
       }
     },
-    [filteredItems, localItems, items],
+    [filteredItems, localItems, items]
   );
 
   const openDialog = (item?: Item) => {
@@ -255,7 +255,7 @@ export default function AdminItems({
           </Badge>
           {categories.map(cat => {
             const count = items.filter(
-              item => item.category_id === cat.id,
+              item => item.category_id === cat.id
             ).length;
             return (
               <Badge
@@ -549,7 +549,7 @@ export default function AdminItems({
                     size='sm'
                     onClick={() => {
                       const newVariants = formData.variants.filter(
-                        (_, i) => i !== index,
+                        (_, i) => i !== index
                       );
                       setFormData({ ...formData, variants: newVariants });
                     }}

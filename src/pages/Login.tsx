@@ -36,22 +36,47 @@ export default function Login({ onNavigate }: LoginProps) {
           ? 'Login successful!'
           : lang === 'tr'
             ? 'Giriş başarılı!'
-            : 'تسجيل الدخول ناجح!',
+            : 'تسجيل الدخول ناجح!'
       );
-      onNavigate('home');
+
+      // Small delay to ensure session is saved before navigation
+      setTimeout(() => {
+        onNavigate('home');
+      }, 100);
     } catch (error: any) {
       console.error('Login error:', error);
 
       // Provide more helpful error messages
       let errorMessage = error.message || 'Login failed';
 
-      if (errorMessage.includes('Invalid credentials')) {
+      // Handle specific error cases
+      if (
+        errorMessage.includes('Invalid credentials') ||
+        errorMessage.includes('Invalid email or password')
+      ) {
         errorMessage =
           lang === 'en'
             ? 'Invalid email or password. Please check your credentials or sign up.'
             : lang === 'tr'
               ? 'Geçersiz e-posta veya şifre. Lütfen bilgilerinizi kontrol edin veya kaydolun.'
               : 'بريد إلكتروني أو كلمة مرور غير صالحة. يرجى التحقق من بيانات الاعتماد أو التسجيل.';
+      } else if (
+        errorMessage.includes('Failed to fetch') ||
+        errorMessage.includes('NetworkError')
+      ) {
+        errorMessage =
+          lang === 'en'
+            ? 'Network error. Please check your connection and try again.'
+            : lang === 'tr'
+              ? 'Ağ hatası. Lütfen bağlantınızı kontrol edin ve tekrar deneyin.'
+              : 'خطأ في الشبكة. يرجى التحقق من الاتصال والمحاولة مرة أخرى.';
+      } else if (errorMessage.includes('User not found')) {
+        errorMessage =
+          lang === 'en'
+            ? 'No account found with this email. Please sign up first.'
+            : lang === 'tr'
+              ? 'Bu e-posta ile hesap bulunamadı. Lütfen önce kaydolun.'
+              : 'لم يتم العثور على حساب بهذا البريد الإلكتروني. يرجى التسجيل أولاً.';
       }
 
       toast.error(errorMessage);

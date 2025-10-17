@@ -78,7 +78,7 @@ export function HistoryPanel({ onRestore }: HistoryPanelProps) {
           headers: {
             Authorization: `Bearer ${publicAnonKey}`,
           },
-        },
+        }
       );
 
       // Fetch archived categories
@@ -88,7 +88,7 @@ export function HistoryPanel({ onRestore }: HistoryPanelProps) {
           headers: {
             Authorization: `Bearer ${publicAnonKey}`,
           },
-        },
+        }
       );
 
       if (itemsResponse.ok) {
@@ -118,7 +118,7 @@ export function HistoryPanel({ onRestore }: HistoryPanelProps) {
           headers: {
             Authorization: `Bearer ${publicAnonKey}`,
           },
-        },
+        }
       );
 
       if (!response.ok) {
@@ -146,7 +146,7 @@ export function HistoryPanel({ onRestore }: HistoryPanelProps) {
           headers: {
             Authorization: `Bearer ${publicAnonKey}`,
           },
-        },
+        }
       );
 
       if (!response.ok) {
@@ -167,7 +167,7 @@ export function HistoryPanel({ onRestore }: HistoryPanelProps) {
   const permanentlyDelete = async (
     type: 'item' | 'category',
     id: string,
-    name: string,
+    name: string
   ) => {
     if (!confirm(`Permanently delete "${name}"? This cannot be undone!`)) {
       return;
@@ -181,7 +181,7 @@ export function HistoryPanel({ onRestore }: HistoryPanelProps) {
           headers: {
             Authorization: `Bearer ${publicAnonKey}`,
           },
-        },
+        }
       );
 
       if (!response.ok) {
@@ -415,7 +415,7 @@ export function HistoryPanel({ onRestore }: HistoryPanelProps) {
                           permanentlyDelete(
                             'category',
                             category.id,
-                            category.names.en,
+                            category.names.en
                           )
                         }
                       >

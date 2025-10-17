@@ -12,6 +12,7 @@ interface Session {
     email: string;
     name?: string;
     isAdmin?: boolean;
+    id?: string;
   };
 }
 
@@ -21,6 +22,12 @@ interface Session {
 export function saveSession(session: Session): void {
   try {
     if (typeof localStorage === 'undefined') return;
+
+    // Validate session structure before saving
+    if (!session || !session.user) {
+      console.error('❌ Invalid session structure:', session);
+      return;
+    }
 
     localStorage.setItem(SESSION_KEY, JSON.stringify(session));
     localStorage.setItem(SESSION_TIMESTAMP_KEY, Date.now().toString());
@@ -45,8 +52,8 @@ export function loadSession(): Session | null {
     const sessionStr = localStorage.getItem(SESSION_KEY);
     const timestampStr = localStorage.getItem(SESSION_TIMESTAMP_KEY);
 
-    if (!sessionStr) {
-      console.log('ℹ️ No session in storage');
+    if (!sessionStr || sessionStr === 'undefined' || sessionStr === 'null') {
+      console.log('ℹ️ No valid session in storage');
       return null;
     }
 
@@ -64,6 +71,14 @@ export function loadSession(): Session | null {
     }
 
     const session = JSON.parse(sessionStr);
+
+    // Validate session structure
+    if (!session || !session.user) {
+      console.log('❌ Invalid session structure, clearing...');
+      clearSession();
+      return null;
+    }
+
     console.log('✅ Session loaded from storage:', {
       email: session.user?.email,
       isAdmin: session.user?.isAdmin,

@@ -36,7 +36,7 @@ export default function AdminLogin({ onNavigate }: AdminLoginProps) {
             Authorization: `Bearer ${publicAnonKey}`,
             'Content-Type': 'application/json',
           },
-        },
+        }
       );
       const data = await response.json();
       console.log('Admin credentials ensured:', data);
@@ -52,6 +52,9 @@ export default function AdminLogin({ onNavigate }: AdminLoginProps) {
     setLoading(true);
 
     try {
+      console.log('🔐 Admin login attempt for:', email);
+
+      // Use the same authAPI but with admin-specific handling
       const { error } = await authAPI.signInWithPassword({
         email,
         password,
@@ -59,17 +62,46 @@ export default function AdminLogin({ onNavigate }: AdminLoginProps) {
 
       if (error) throw error;
 
+      console.log('✅ Admin login successful, navigating to admin panel');
       toast.success(
         lang === 'en'
-          ? 'Login successful!'
+          ? 'Admin login successful!'
           : lang === 'tr'
-            ? 'Giriş başarılı!'
-            : 'تسجيل الدخول ناجح!',
+            ? 'Admin girişi başarılı!'
+            : 'تسجيل دخول المسؤول ناجح!'
       );
+
+      // Navigate to admin panel
       onNavigate('admin');
     } catch (error: any) {
-      console.error('Login error:', error);
-      toast.error(error.message || 'Login failed');
+      console.error('❌ Admin login error:', error);
+
+      // Provide more helpful error messages for admin login
+      let errorMessage = error.message || 'Admin login failed';
+
+      if (
+        errorMessage.includes('Invalid credentials') ||
+        errorMessage.includes('Invalid email or password')
+      ) {
+        errorMessage =
+          lang === 'en'
+            ? 'Invalid admin credentials. Please check your email and password.'
+            : lang === 'tr'
+              ? 'Geçersiz admin bilgileri. Lütfen e-posta ve şifrenizi kontrol edin.'
+              : 'بيانات اعتماد المسؤول غير صالحة. يرجى التحقق من البريد الإلكتروني وكلمة المرور.';
+      } else if (
+        errorMessage.includes('Failed to fetch') ||
+        errorMessage.includes('NetworkError')
+      ) {
+        errorMessage =
+          lang === 'en'
+            ? 'Network error. Please check your connection and try again.'
+            : lang === 'tr'
+              ? 'Ağ hatası. Lütfen bağlantınızı kontrol edin ve tekrar deneyin.'
+              : 'خطأ في الشبكة. يرجى التحقق من الاتصال والمحاولة مرة أخرى.';
+      }
+
+      toast.error(errorMessage);
     } finally {
       setLoading(false);
     }

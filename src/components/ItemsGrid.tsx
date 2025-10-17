@@ -13,7 +13,10 @@ interface ItemsGridProps {
   onItemAdd: (item: Item) => void;
   onItemClick: (item: Item) => void;
   showCategories?: boolean;
-  categories?: Array<{ id: string; names: { en: string; tr: string; ar: string } }>;
+  categories?: Array<{
+    id: string;
+    names: { en: string; tr: string; ar: string };
+  }>;
 }
 
 const ItemsGrid = memo(
@@ -43,7 +46,7 @@ const ItemsGrid = memo(
 
     const getCategoryName = (categoryId: string) => {
       const category = categories.find(c => c.id === categoryId);
-      return category ? (category.names[lang] || category.names.en) : '';
+      return category ? category.names[lang] || category.names.en : '';
     };
 
     return (
@@ -55,9 +58,15 @@ const ItemsGrid = memo(
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: Math.min(index * 0.02, 0.2) }}
           >
-            <div className="relative">
+            <div className='relative'>
               <ItemCard
-                name={item.names[lang] || item.names.en}
+                name={
+                  item.names[lang] ||
+                  item.names.en ||
+                  item.names.tr ||
+                  item.names.ar ||
+                  `Item ${item.id.slice(0, 8)}`
+                }
                 price={item.price}
                 image={item.image}
                 tags={item.tags}
@@ -66,7 +75,7 @@ const ItemsGrid = memo(
                 onClick={() => onItemClick(item)}
               />
               {showCategories && item.category_id && (
-                <div className="absolute top-2 left-2 bg-primary/90 text-primary-foreground px-2 py-1 rounded-full text-xs font-medium">
+                <div className='absolute top-2 left-2 bg-primary/90 text-primary-foreground px-2 py-1 rounded-full text-xs font-medium'>
                   {getCategoryName(item.category_id)}
                 </div>
               )}

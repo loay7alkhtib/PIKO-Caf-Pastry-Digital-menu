@@ -9,26 +9,27 @@ import {
 import { useLang } from '../lib/LangContext';
 import { useData } from '../lib/DataContext';
 import { t } from '../lib/i18n';
-import { authAPI, Order, ordersAPI } from '../lib/supabase';
+import { authAPI, ordersAPI } from '../lib/supabase';
+import type { Order } from '../lib/types';
 import { toast } from 'sonner';
 import { LogOut, RefreshCw, Settings } from 'lucide-react';
 
 // Lazy load admin components
 const AdminCategories = lazy(
-  () => import('../components/admin/AdminCategories'),
+  () => import('../components/admin/AdminCategories')
 );
 const AdminItems = lazy(() => import('../components/admin/AdminItems'));
 const AdminOrders = lazy(() => import('../components/admin/AdminOrders'));
 const HistoryPanel = lazy(() =>
   import('../components/admin/HistoryPanel').then(m => ({
     default: m.HistoryPanel,
-  })),
+  }))
 );
-const SessionDebugger = lazy(() =>
-  import('../components/admin/SessionDebugger').then(m => ({
-    default: m.SessionDebugger,
-  })),
-);
+// const SessionDebugger = lazy(() =>
+//   import('../components/admin/SessionDebugger').then(m => ({
+//     default: m.SessionDebugger,
+//   })),
+// );
 
 interface AdminProps {
   onNavigate: (page: string) => void;
@@ -58,7 +59,16 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
       console.log('🔍 Checking admin session...');
       const {
         data: { session },
+        error,
       } = await authAPI.getSession();
+
+      if (error) {
+        console.error('❌ Session check error:', error);
+        toast.error('Authentication error. Please login again.');
+        setAuthorized(false);
+        onNavigate('admin-login');
+        return;
+      }
 
       if (!session) {
         console.log('❌ No session found, redirecting to login');
@@ -71,14 +81,26 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
         return;
       }
 
-      console.log('✅ Session valid:', session.user?.email);
+      // Check if user is admin
+      if (!session.user?.isAdmin) {
+        console.log('❌ User is not admin, redirecting to login');
+        console.log('📊 Session user data:', session.user);
+        toast.error(
+          'Admin access required. Please login with admin credentials.'
+        );
+        setAuthorized(false);
+        onNavigate('admin-login');
+        return;
+      }
+
+      console.log('✅ Admin session valid:', session.user?.email);
       if (!authorized) {
         setAuthorized(true);
         loadOrders();
       }
     } catch (error) {
       console.error('❌ Auth check error:', error);
-      toast.error('Authentication error');
+      toast.error('Authentication error. Please login again.');
       setAuthorized(false);
       onNavigate('admin-login');
     } finally {
@@ -104,7 +126,7 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
           ? 'Data refreshed successfully!'
           : lang === 'tr'
             ? 'Veriler başarıyla yenilendi!'
-            : 'تم تحديث البيانات بنجاح!',
+            : 'تم تحديث البيانات بنجاح!'
       );
     } catch (error) {
       console.error('Refresh error:', error);
@@ -113,7 +135,7 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
           ? 'Failed to refresh data'
           : lang === 'tr'
             ? 'Veriler yenilenemedi'
-            : 'فشل في تحديث البيانات',
+            : 'فشل في تحديث البيانات'
       );
     }
   };
@@ -195,8 +217,7 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
           <div className='mb-6 max-w-4xl mx-auto'>
             <Suspense
               fallback={<div className='text-center py-4'>Loading...</div>}
-            >
-            </Suspense>
+            ></Suspense>
           </div>
         )}
 

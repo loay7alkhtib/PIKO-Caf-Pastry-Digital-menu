@@ -20,30 +20,12 @@ export default function App() {
   const [page, setPage] = useState<Page>('home');
   const [categoryId, setCategoryId] = useState<string | null>(null);
 
-  // Initialize database in background (non-blocking)
+  // Initialize database in background (non-blocking) - only if needed
   useEffect(() => {
-    initializeDatabase();
+    // Only initialize if we detect the database is empty
+    // This will be handled by the DataContext instead
+    console.log('App mounted, data loading will be handled by DataContext');
   }, []);
-
-  async function initializeDatabase() {
-    try {
-      const response = await fetch(
-        `https://${projectId}.supabase.co/functions/v1/make-server-4050140e/init-db`,
-        {
-          method: 'POST',
-          headers: {
-            Authorization: `Bearer ${publicAnonKey}`,
-            'Content-Type': 'application/json',
-          },
-        },
-      );
-
-      const data = await response.json();
-      console.log('Database initialization:', data);
-    } catch (error) {
-      console.error('Database initialization error:', error);
-    }
-  }
 
   const navigate = (newPage: Page, newCategoryId?: string) => {
     setPage(newPage);

@@ -1,0 +1,4050 @@
+{
+  "categories": [
+    {
+      "id": "cat-hot-coffee",
+      "names": {
+        "en": "Hot Coffee",
+        "tr": "Sıcak Kahve",
+        "ar": "قهوة ساخنة"
+      },
+      "icon": "☕",
+      "order": 1
+    },
+    {
+      "id": "cat-iced-coffee",
+      "names": {
+        "en": "Iced Coffee",
+        "tr": "Soğuk Kahve",
+        "ar": "قهوة باردة"
+      },
+      "icon": "🧊",
+      "order": 2
+    },
+    {
+      "id": "cat-blended-coffee",
+      "names": {
+        "en": "Blended Coffee",
+        "tr": "Karışık Kahve",
+        "ar": "قهوة مخلوطة"
+      },
+      "icon": "🥤",
+      "order": 3
+    },
+    {
+      "id": "cat-signature-refreshers",
+      "names": {
+        "en": "Signature Refreshers",
+        "tr": "Özel Serinleticiler",
+        "ar": "مشروبات منعشة مميزة"
+      },
+      "icon": "🍹",
+      "order": 4
+    },
+    {
+      "id": "cat-fresh-juices",
+      "names": {
+        "en": "Fresh Juices",
+        "tr": "Taze Meyve Suları",
+        "ar": "عصائر طازجة"
+      },
+      "icon": "🍊",
+      "order": 5
+    },
+    {
+      "id": "cat-smoothies",
+      "names": {
+        "en": "Smoothies",
+        "tr": "Smoothie",
+        "ar": "سموزي"
+      },
+      "icon": "🥤",
+      "order": 6
+    },
+    {
+      "id": "cat-milkshakes",
+      "names": {
+        "en": "Milkshakes",
+        "tr": "Milkshake",
+        "ar": "ميلك شيك"
+      },
+      "icon": "🥛",
+      "order": 7
+    },
+    {
+      "id": "cat-mojito",
+      "names": {
+        "en": "Mojito",
+        "tr": "Mojito",
+        "ar": "موهيتو"
+      },
+      "icon": "🍃",
+      "order": 8
+    },
+    {
+      "id": "cat-tea-selection",
+      "names": {
+        "en": "Tea Selection",
+        "tr": "Çay Seçimi",
+        "ar": "تشكيلة الشاي"
+      },
+      "icon": "🍵",
+      "order": 9
+    },
+    {
+      "id": "cat-sweets",
+      "names": {
+        "en": "Sweets",
+        "tr": "Tatlılar",
+        "ar": "حلويات"
+      },
+      "icon": "🍭",
+      "order": 10
+    },
+    {
+      "id": "cat-desserts-cakes",
+      "names": {
+        "en": "Desserts & Cakes",
+        "tr": "Tatlılar ve Kekler",
+        "ar": "حلويات وكيك"
+      },
+      "icon": "🍰",
+      "order": 11
+    },
+    {
+      "id": "cat-ice-cream",
+      "names": {
+        "en": "Ice Cream",
+        "tr": "Dondurma",
+        "ar": "آيس كريم"
+      },
+      "icon": "🍨",
+      "order": 12
+    }
+  ],
+  "items": [
+    {
+      "names": {
+        "en": "Americano",
+        "tr": "Americano",
+        "ar": "امريكانو"
+      },
+      "price": 120,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot"]
+    },
+    {
+      "names": {
+        "en": "Americano",
+        "tr": "Americano",
+        "ar": "امريكانو وسط"
+      },
+      "price": 140,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 140
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Apple carrot",
+        "tr": "Apple carrot",
+        "ar": "عصير تفاح و جزر"
+      },
+      "price": 180,
+      "category_id": "cat-fresh-juices",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Apple carrot",
+        "tr": "Apple carrot",
+        "ar": "عصير تفاح و جزر وسط"
+      },
+      "price": 180,
+      "category_id": "cat-fresh-juices",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 180
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Apple juice",
+        "tr": "Apple Meyve Suyu",
+        "ar": "عصير تفاح"
+      },
+      "price": 170,
+      "category_id": "cat-fresh-juices",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Apple juice",
+        "tr": "Apple Meyve Suyu",
+        "ar": "عصير تفاح وسط"
+      },
+      "price": 180,
+      "category_id": "cat-fresh-juices",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 180
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Brownie Cake",
+        "tr": "Brownie Cake",
+        "ar": "كيكة براونيز"
+      },
+      "price": 0,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Butter scotch Latte",
+        "tr": "Butterscotch Latte",
+        "ar": "بترسكوتش لاتيه"
+      },
+      "price": 180,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Butter scotch Latte",
+        "tr": "Butterscotch Latte",
+        "ar": "بترسكوتش لاتيه وسط"
+      },
+      "price": 200,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Cappuccino",
+        "tr": "Kapuçino",
+        "ar": "كابتشينو"
+      },
+      "price": 140,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Cappuccino",
+        "tr": "Kapuçino",
+        "ar": "كابتشينو وسط"
+      },
+      "price": 160,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 160
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Caramel bubbles Iced Latte",
+        "tr": "Caramel bubbles Buzlu Latte",
+        "ar": "كراميل بابلز ايس لاتيه"
+      },
+      "price": 180,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Caramel bubbles Iced Latte",
+        "tr": "Caramel bubbles Buzlu Latte",
+        "ar": "كراميل بابلز ايس لاتيه كبير"
+      },
+      "price": 220,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Caramel bubbles Iced Latte",
+        "tr": "Caramel bubbles Buzlu Latte",
+        "ar": "كراميل بابلز ايس لاتيه وسط"
+      },
+      "price": 200,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Caramel Frappucino",
+        "tr": "Caramel Frappucino",
+        "ar": "كراميل فرابتشينو وسط"
+      },
+      "price": 250,
+      "category_id": "cat-blended-coffee",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 250
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Caramel Latte",
+        "tr": "Caramel Latte",
+        "ar": "كراميل لاتيه"
+      },
+      "price": 180,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Caramel Latte",
+        "tr": "Caramel Latte",
+        "ar": "كراميل لاتيه وسط"
+      },
+      "price": 200,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Caramel Macchiato",
+        "tr": "Caramel Makiyato",
+        "ar": "كراميل مكياتو"
+      },
+      "price": 180,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Caramel macchiato",
+        "tr": "Caramel Makiyato",
+        "ar": "كراميل مكياتو وسط"
+      },
+      "price": 200,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Caramel milkshake",
+        "tr": "Caramel milkshake",
+        "ar": "ميلك شيك كراميل وسط"
+      },
+      "price": 275,
+      "category_id": "cat-milkshakes",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 275
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Cardamom Coffee",
+        "tr": "Cardamom Coffee",
+        "ar": "قهوة عربية"
+      },
+      "price": 95,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "cardamom Coffee",
+        "tr": "cardamom Coffee",
+        "ar": "قهوة عربية دبل"
+      },
+      "price": 135,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Double",
+          "price": 135
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Caribbean smoothie",
+        "tr": "Caribbean Smoothie",
+        "ar": "سموزي كاريبيان وسط"
+      },
+      "price": 240,
+      "category_id": "cat-smoothies",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Carrot Cake",
+        "tr": "Carrot Cake",
+        "ar": "كيكة الجزر"
+      },
+      "price": 0,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Carrot juice",
+        "tr": "Carrot Meyve Suyu",
+        "ar": "عصير جزر"
+      },
+      "price": 170,
+      "category_id": "cat-fresh-juices",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Carrot juice",
+        "tr": "Carrot Meyve Suyu",
+        "ar": "عصير جزر وسط"
+      },
+      "price": 170,
+      "category_id": "cat-fresh-juices",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 170
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Chai Tea Latte",
+        "tr": "Chai Çay Latte",
+        "ar": "شاي تي لاتيه"
+      },
+      "price": 180,
+      "category_id": "cat-tea-selection",
+      "tags": ["Coffee", "Hot", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Chai Tea Latte",
+        "tr": "Chai Çay Latte",
+        "ar": "شاي تي لاتيه وسط"
+      },
+      "price": 200,
+      "category_id": "cat-tea-selection",
+      "tags": ["Coffee", "Hot", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Cheese cake Latte",
+        "tr": "Cheese cake Latte",
+        "ar": "تشيز كيك لاتيه"
+      },
+      "price": 200,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Coffee", "Hot", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Cheese cake Latte",
+        "tr": "Cheese cake Latte",
+        "ar": "تشيز كيك لاتيه وسط"
+      },
+      "price": 220,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Coffee", "Hot", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Cheesecake Crepe",
+        "tr": "Cheesecake Crepe",
+        "ar": "كريب تشيز كيك"
+      },
+      "price": 320,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Cherry Blossom Iced Latte",
+        "tr": "Cherry Blossom Buzlu Latte",
+        "ar": "تشيري بلوسوم ايس لاتيه كبير"
+      },
+      "price": 240,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Cherry Blossom Iced Latte",
+        "tr": "Cherry Blossom Buzlu Latte",
+        "ar": "تشيري بلوسوم ايس لاتيه وسط"
+      },
+      "price": 220,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Cherry Blossom Iced Latte",
+        "tr": "Cherry Blossom Buzlu Latte",
+        "ar": "شيري بلوسوم ايس لاتيه"
+      },
+      "price": 180,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Chimney Cake",
+        "tr": "Chimney Cake",
+        "ar": "تشمني كيك"
+      },
+      "price": 0,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Chocolate Crepe",
+        "tr": "Çikolata Crepe",
+        "ar": "كريب شوكولا"
+      },
+      "price": 300,
+      "category_id": "cat-sweets",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Chocolate milkshake",
+        "tr": "Çikolata milkshake",
+        "ar": "ميلك شيك شوكولا وسط"
+      },
+      "price": 275,
+      "category_id": "cat-milkshakes",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 275
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Chocolate Pancake",
+        "tr": "Çikolata Pancake",
+        "ar": "بان كيك شوكولا"
+      },
+      "price": 300,
+      "category_id": "cat-sweets",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Chocolate Waffle",
+        "tr": "Çikolata Waffle",
+        "ar": "وافل شوكولا"
+      },
+      "price": 280,
+      "category_id": "cat-sweets",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Coconut Iced Latte",
+        "tr": "Coconut Buzlu Latte",
+        "ar": "كوكو نت ايس لاتيه"
+      },
+      "price": 180,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Coconut Iced Latte",
+        "tr": "Coconut Buzlu Latte",
+        "ar": "كوكو نت ايس لاتيه كبير"
+      },
+      "price": 220,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Coconut Iced Latte",
+        "tr": "Coconut Buzlu Latte",
+        "ar": "كوكو نت ايس لاتيه وسط"
+      },
+      "price": 200,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Cookies frappucino",
+        "tr": "Cookies frappucino",
+        "ar": "كوكيز فراب وسط"
+      },
+      "price": 250,
+      "category_id": "cat-blended-coffee",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 250
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Cookies milkshake",
+        "tr": "Cookies milkshake",
+        "ar": "ميلك شيك كوكيز وسط"
+      },
+      "price": 275,
+      "category_id": "cat-milkshakes",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 275
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Cool lime",
+        "tr": "Cool lime",
+        "ar": "كول لايم"
+      },
+      "price": 160,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Cool lime",
+        "tr": "Cool lime",
+        "ar": "كول لايم كبير"
+      },
+      "price": 200,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Cool lime",
+        "tr": "Cool lime",
+        "ar": "كول لايم وسط"
+      },
+      "price": 180,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 180
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Cool lime apple bubbles",
+        "tr": "Cool lime apple bubbles",
+        "ar": "كول لايم ابل بابلز"
+      },
+      "price": 180,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Cool lime apple bubbles",
+        "tr": "Cool lime apple bubbles",
+        "ar": "كول لايم ابل بابلز كبير"
+      },
+      "price": 220,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Cool lime apple bubbles",
+        "tr": "Cool lime apple bubbles",
+        "ar": "كول لايم ابل بابلز وسط"
+      },
+      "price": 200,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Cool lime blueberry bubbles",
+        "tr": "Cool lime blueberry bubbles",
+        "ar": "كول لايم بلو بيري بابلز"
+      },
+      "price": 180,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Cool lime blueberry bubbles",
+        "tr": "Cool lime blueberry bubbles",
+        "ar": "كول لايم بلو بيري بابلز كبير"
+      },
+      "price": 220,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Cool lime blueberry bubbles",
+        "tr": "Cool lime blueberry bubbles",
+        "ar": "كول لايم بلو بيري بابلز وسط"
+      },
+      "price": 200,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Cool lime mango mix",
+        "tr": "Cool lime mango mix",
+        "ar": "كول لايم مانجو ميكس"
+      },
+      "price": 160,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Cool lime mango mix",
+        "tr": "Cool lime mango mix",
+        "ar": "كول لايم مانجو ميكس كبير"
+      },
+      "price": 220,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Cool lime mango mix",
+        "tr": "Cool lime mango mix",
+        "ar": "كول لايم مانجو ميكس وسط"
+      },
+      "price": 180,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 180
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Cool lime strawberry bubbles",
+        "tr": "Cool lime strawberry bubbles",
+        "ar": "كول لايم سترو بيري بابلز"
+      },
+      "price": 180,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Cool lime strawberry bubbles",
+        "tr": "Cool lime strawberry bubbles",
+        "ar": "كول لايم سترو بيري بابلز كبير"
+      },
+      "price": 220,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Cool lime strawberry bubbles",
+        "tr": "Cool lime strawberry bubbles",
+        "ar": "كول لايم سترو بيري بابلز وسط"
+      },
+      "price": 200,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Cool lime strawberry mix",
+        "tr": "Cool lime strawberry mix",
+        "ar": "كول لايم سترو بيري ميكس"
+      },
+      "price": 160,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Cool lime strawberry mix",
+        "tr": "Cool lime strawberry mix",
+        "ar": "كول لايم سترو بيري ميكس كبير"
+      },
+      "price": 200,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Cool lime strawberry mix",
+        "tr": "Cool lime strawberry mix",
+        "ar": "كول لايم سترو بيري ميكس وسط"
+      },
+      "price": 200,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Cortado",
+        "tr": "Cortado",
+        "ar": "كورتادو"
+      },
+      "price": 140,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot"]
+    },
+    {
+      "names": {
+        "en": "Croissants",
+        "tr": "Croissants",
+        "ar": "كروسان"
+      },
+      "price": 0,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Espresso",
+        "tr": "Espresso",
+        "ar": "اسبريسو"
+      },
+      "price": 95,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Strong"]
+    },
+    {
+      "names": {
+        "en": "Espresso",
+        "tr": "Espresso",
+        "ar": "دبل اسبريسو"
+      },
+      "price": 110,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Strong"],
+      "variants": [
+        {
+          "size": "Double",
+          "price": 110
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Espresso Affogato",
+        "tr": "Espresso Affogato",
+        "ar": "اسبريسو افوكاتو"
+      },
+      "price": 195,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Coffee", "Hot", "Strong"]
+    },
+    {
+      "names": {
+        "en": "Espresso Macchiato",
+        "tr": "Espresso Makiyato",
+        "ar": "اسبريسو مكياتو"
+      },
+      "price": 120,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky", "Strong"]
+    },
+    {
+      "names": {
+        "en": "Espresso Ristretto",
+        "tr": "Espresso Ristretto",
+        "ar": "اسبريسو ريستريتو"
+      },
+      "price": 95,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Strong"]
+    },
+    {
+      "names": {
+        "en": "Fettuccine Crepe",
+        "tr": "Fettuccine Crepe",
+        "ar": "كريب فوتوتشيني"
+      },
+      "price": 350,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Filter Coffee",
+        "tr": "Filter Coffee",
+        "ar": "فلتر قهوة"
+      },
+      "price": 140,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Filter Coffee",
+        "tr": "Filter Coffee",
+        "ar": "فلتر قهوة وسط"
+      },
+      "price": 140,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 140
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Filter Coffee with Milk",
+        "tr": "Filter Coffee with Milk",
+        "ar": "فلتر قهوة بالحليب"
+      },
+      "price": 140,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Filter Coffee with Milk",
+        "tr": "Filter Coffee with Milk",
+        "ar": "فلتر قهوة بالحليب وسط"
+      },
+      "price": 160,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 160
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Flat White",
+        "tr": "Flat White",
+        "ar": "فلات وايت"
+      },
+      "price": 140,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Flat White",
+        "tr": "Flat White",
+        "ar": "فلات وايت وسط"
+      },
+      "price": 160,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 160
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Flavoured tea",
+        "tr": "Flavoured Çay",
+        "ar": "زهورات"
+      },
+      "price": 120,
+      "category_id": "cat-tea-selection",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Fruit Crepe",
+        "tr": "Fruit Crepe",
+        "ar": "كريب فواكه"
+      },
+      "price": 400,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Fruit Pancake",
+        "tr": "Fruit Pancake",
+        "ar": "بان كيك فواكه"
+      },
+      "price": 450,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Fruit Waffle",
+        "tr": "Fruit Waffle",
+        "ar": "وافل فواكه"
+      },
+      "price": 450,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Ginger mojito 7up",
+        "tr": "Ginger mojito 7up",
+        "ar": "موهيتو زنجبيل سفن وسط"
+      },
+      "price": 220,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Ginger mojito RedBull",
+        "tr": "Ginger mojito RedBull",
+        "ar": "موهيتو زنجبيل ريد بول وسط"
+      },
+      "price": 240,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Ginger mojito soda",
+        "tr": "Ginger mojito soda",
+        "ar": "موهيتو زنجبيل صودا وسط"
+      },
+      "price": 200,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Hibiscus",
+        "tr": "Hibiscus",
+        "ar": "هيبسكوس"
+      },
+      "price": 170,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Hibiscus",
+        "tr": "Hibiscus",
+        "ar": "هيبسكوس كبير"
+      },
+      "price": 200,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Hibiscus",
+        "tr": "Hibiscus",
+        "ar": "هيبسكوس وسط"
+      },
+      "price": 180,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 180
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Hibiscus apple bubbles",
+        "tr": "Hibiscus apple bubbles",
+        "ar": "هيبسكوس ابل بابلز"
+      },
+      "price": 180,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Hibiscus apple bubbles",
+        "tr": "Hibiscus apple bubbles",
+        "ar": "هيبسكوس ابل بابلز كبير"
+      },
+      "price": 220,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Hibiscus apple bubbles",
+        "tr": "Hibiscus apple bubbles",
+        "ar": "هيبسكوس ابل بابلز وسط"
+      },
+      "price": 200,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Hibiscus blueberry bubbles",
+        "tr": "Hibiscus blueberry bubbles",
+        "ar": "هيبسكوس بلو بيري بابلز"
+      },
+      "price": 180,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Hibiscus blueberry bubbles",
+        "tr": "Hibiscus blueberry bubbles",
+        "ar": "هيبسكوس بلوبيري بابلز كبير"
+      },
+      "price": 220,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Hibiscus blueberry bubbles",
+        "tr": "Hibiscus blueberry bubbles",
+        "ar": "هيبسكوس بلوبيري بابلز وسط"
+      },
+      "price": 200,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Hibiscus blueberry mix",
+        "tr": "Hibiscus blueberry mix",
+        "ar": "هيبسكوس بلو بيري ميكس"
+      },
+      "price": 160,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Hibiscus blueberry mix",
+        "tr": "Hibiscus blueberry mix",
+        "ar": "هيبسكوس بلو بيري ميكس كبير"
+      },
+      "price": 200,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Hibiscus blueberry mix",
+        "tr": "Hibiscus blueberry mix",
+        "ar": "هيبسكوس بلو بيري ميكس وسط"
+      },
+      "price": 180,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 180
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Hibiscus strawberry bubbles",
+        "tr": "Hibiscus strawberry bubbles",
+        "ar": "هيبسكوس سترو بيري بابلز"
+      },
+      "price": 180,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Hibiscus strawberry bubbles",
+        "tr": "Hibiscus strawberry bubbles",
+        "ar": "هيبسكوس ستروبيري بابلز كبير"
+      },
+      "price": 220,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Hibiscus strawberry bubbles",
+        "tr": "Hibiscus strawberry bubbles",
+        "ar": "هيبسكوس ستروبيري بابلز وسط"
+      },
+      "price": 200,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Hibiscus strawberry Mix",
+        "tr": "Hibiscus strawberry Mix",
+        "ar": "هيبسكوس سترو بيري ميكس"
+      },
+      "price": 160,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Hibiscus strawberry mix",
+        "tr": "Hibiscus strawberry mix",
+        "ar": "هيبسكوس سترو بيري ميكس كبير"
+      },
+      "price": 200,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Hibiscus strawberry mix",
+        "tr": "Hibiscus strawberry mix",
+        "ar": "هيبسكوس سترو بيري ميكس وسط"
+      },
+      "price": 180,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 180
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Honey Cake",
+        "tr": "Honey Cake",
+        "ar": "كيكة العسل"
+      },
+      "price": 0,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Hot Chocolate",
+        "tr": "Hot Çikolata",
+        "ar": "هوت شوكلت"
+      },
+      "price": 200,
+      "category_id": "cat-sweets",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Hot Chocolate",
+        "tr": "Hot Çikolata",
+        "ar": "هوت شوكلت وسط"
+      },
+      "price": 220,
+      "category_id": "cat-sweets",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Ice cream",
+        "tr": "Buzlu cream",
+        "ar": "كاسة بوظة وسط"
+      },
+      "price": 210,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Iced"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 210
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Americano",
+        "tr": "Buzlu Americano",
+        "ar": "ايس امريكانو"
+      },
+      "price": 130,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced"]
+    },
+    {
+      "names": {
+        "en": "Iced Americano",
+        "tr": "Buzlu Americano",
+        "ar": "ايس امريكانو كبير"
+      },
+      "price": 150,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 150
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Americano",
+        "tr": "Buzlu Americano",
+        "ar": "ايس امريكانو وسط"
+      },
+      "price": 170,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 170
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced butter scotch",
+        "tr": "Buzlu Butterscotch",
+        "ar": "ايس بتر سكوتش كبير"
+      },
+      "price": 220,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Iced"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced butter scotch",
+        "tr": "Buzlu Butterscotch",
+        "ar": "ايس بتر سكوتش وسط"
+      },
+      "price": 200,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Iced"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced butter scotch",
+        "tr": "Buzlu Butterscotch",
+        "ar": "ايس بتر سوكتش لاتيه"
+      },
+      "price": 180,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Iced"]
+    },
+    {
+      "names": {
+        "en": "Iced Caramel Latte",
+        "tr": "Buzlu Caramel Latte",
+        "ar": "ايس كراميل لاتيه"
+      },
+      "price": 180,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Iced Caramel Latte",
+        "tr": "Buzlu Caramel Latte",
+        "ar": "ايس كراميل لاتيه كبير"
+      },
+      "price": 220,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Caramel Latte",
+        "tr": "Buzlu Caramel Latte",
+        "ar": "ايس كراميل لاتيه وسط"
+      },
+      "price": 200,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced caramel macchiato",
+        "tr": "Buzlu caramel Makiyato",
+        "ar": "ايس كراميل مكياتو"
+      },
+      "price": 180,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Iced caramel macchiato",
+        "tr": "Buzlu caramel Makiyato",
+        "ar": "ايس كراميل مكياتو كبير"
+      },
+      "price": 220,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced caramel macchiato",
+        "tr": "Buzlu caramel Makiyato",
+        "ar": "ايس كراميل مكياتو وسط"
+      },
+      "price": 200,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced chai tea latte",
+        "tr": "Buzlu chai Çay Latte",
+        "ar": "ايس شاي تي لاتيه"
+      },
+      "price": 200,
+      "category_id": "cat-tea-selection",
+      "tags": ["Coffee", "Iced", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Iced chai tea latte",
+        "tr": "Buzlu chai Çay Latte",
+        "ar": "ايس شاي تي لاتيه كبير"
+      },
+      "price": 240,
+      "category_id": "cat-tea-selection",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced chai tea latte",
+        "tr": "Buzlu chai Çay Latte",
+        "ar": "ايس شاي تي لاتيه وسط"
+      },
+      "price": 220,
+      "category_id": "cat-tea-selection",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced cheese cake latte",
+        "tr": "Buzlu cheese cake Latte",
+        "ar": "ايس تشيز كيك لاتيه"
+      },
+      "price": 200,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Coffee", "Iced", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Iced cheese cake latte",
+        "tr": "Buzlu cheese cake Latte",
+        "ar": "ايس تشيز كيك لاتيه كبير"
+      },
+      "price": 250,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 250
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced cheese cake latte",
+        "tr": "Buzlu cheese cake Latte",
+        "ar": "ايس تشيز كيك لاتيه وسط"
+      },
+      "price": 220,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Filter Coffee",
+        "tr": "Buzlu Filter Coffee",
+        "ar": "ايس فيلتر قهوة"
+      },
+      "price": 125,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Iced"]
+    },
+    {
+      "names": {
+        "en": "Iced Filter Coffee",
+        "tr": "Buzlu Filter Coffee",
+        "ar": "ايس فيلترة قهوة كبير"
+      },
+      "price": 145,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Iced"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 145
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Filter Coffee",
+        "tr": "Buzlu Filter Coffee",
+        "ar": "ايس فيلترة قهوة وسط"
+      },
+      "price": 130,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Iced"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 130
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Filter Coffee with Milk",
+        "tr": "Buzlu Filter Coffee with Milk",
+        "ar": "ايس فيلتر قهوة بالحليب"
+      },
+      "price": 140,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Iced"]
+    },
+    {
+      "names": {
+        "en": "Iced Filter Coffee with Milk",
+        "tr": "Buzlu Filter Coffee with Milk",
+        "ar": "ايس فيلترة قهوة بالحليب كبير"
+      },
+      "price": 160,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Iced"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 160
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Filter Coffee with Milk",
+        "tr": "Buzlu Filter Coffee with Milk",
+        "ar": "ايس فيلترة قهوة بالحليب وسط"
+      },
+      "price": 160,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Iced"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 160
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Latte",
+        "tr": "Buzlu Latte",
+        "ar": "ايس لاتيه"
+      },
+      "price": 160,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Iced Latte",
+        "tr": "Buzlu Latte",
+        "ar": "ايس لاتيه كبير"
+      },
+      "price": 160,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 160
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Latte",
+        "tr": "Buzlu Latte",
+        "ar": "ايس لاتيه وسط"
+      },
+      "price": 160,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 160
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Matcha latte",
+        "tr": "Buzlu Matcha Latte",
+        "ar": "ايس ماتشا لاتيه"
+      },
+      "price": 190,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Iced Matcha latte",
+        "tr": "Buzlu Matcha Latte",
+        "ar": "ايس ماتشا لاتيه كبير"
+      },
+      "price": 250,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 250
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Matcha latte",
+        "tr": "Buzlu Matcha Latte",
+        "ar": "ايس ماتشا لاتيه وسط"
+      },
+      "price": 220,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Mocha Latte",
+        "tr": "Buzlu Mocha Latte",
+        "ar": "ايس موكا لاتيه"
+      },
+      "price": 200,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Iced Mocha Latte",
+        "tr": "Buzlu Mocha Latte",
+        "ar": "ايس موكا لاتيه كبير"
+      },
+      "price": 240,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Mocha Latte",
+        "tr": "Buzlu Mocha Latte",
+        "ar": "ايس موكا لاتيه وسط"
+      },
+      "price": 220,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced piko latte",
+        "tr": "Buzlu piko Latte",
+        "ar": "ايس بيكو لاتيه"
+      },
+      "price": 200,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Iced piko latte",
+        "tr": "Buzlu piko Latte",
+        "ar": "ايس بيكو لاتيه كبير"
+      },
+      "price": 240,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced piko latte",
+        "tr": "Buzlu piko Latte",
+        "ar": "ايس بيكو لاتيه وسط"
+      },
+      "price": 220,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Pink matcha latte",
+        "tr": "Buzlu Pink matcha Latte",
+        "ar": "ايس بينك ماتشا لاتيه"
+      },
+      "price": 0,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Iced Pink matcha latte",
+        "tr": "Buzlu Pink matcha Latte",
+        "ar": "ايس بينك ماتشا لاتيه كبير"
+      },
+      "price": 250,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 250
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Pink matcha latte",
+        "tr": "Buzlu Pink matcha Latte",
+        "ar": "ايس بينك ماتشا لاتيه وسط"
+      },
+      "price": 220,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Pink Perry matcha latta",
+        "tr": "Buzlu Pink Perry matcha latta",
+        "ar": "ايس بينك بيري ماتشا لاتيه"
+      },
+      "price": 190,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Iced"]
+    },
+    {
+      "names": {
+        "en": "Iced Pink Perry matcha latta",
+        "tr": "Buzlu Pink Perry matcha latta",
+        "ar": "ايس بينك بيري ماتشا لاتيه وسط"
+      },
+      "price": 220,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Iced"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Pink Perry matcha latta learg",
+        "tr": "Buzlu Pink Perry matcha latta learg",
+        "ar": "ايس بينك بيري ماتشا لاتيه كبير"
+      },
+      "price": 250,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Iced"]
+    },
+    {
+      "names": {
+        "en": "Iced Salted Caramel Latte",
+        "tr": "Buzlu Salted Caramel Latte",
+        "ar": "ايس سلتد كراميل لاتيه"
+      },
+      "price": 180,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Iced salted caramel latte",
+        "tr": "Buzlu salted caramel Latte",
+        "ar": "ايس سلتد كراميل لاتيه كبير"
+      },
+      "price": 220,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Salted Caramel Latte",
+        "tr": "Buzlu Salted Caramel Latte",
+        "ar": "ايس سلتد كراميل وسط"
+      },
+      "price": 200,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Spanish Latte",
+        "tr": "Buzlu Spanish Latte",
+        "ar": "ايس سبانش لاتيه"
+      },
+      "price": 180,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Iced Spanish Latte",
+        "tr": "Buzlu Spanish Latte",
+        "ar": "ايس سبانش لاتيه وسط"
+      },
+      "price": 200,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Spanish Latte",
+        "tr": "Buzlu Spanish Latte",
+        "ar": "ايس سبانيش لاتيه كبير"
+      },
+      "price": 220,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Strawberry matcha latte",
+        "tr": "Buzlu Strawberry matcha Latte",
+        "ar": "ايس ستروبري ماتشا لاتيه"
+      },
+      "price": 190,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Iced Strawberry matcha latte",
+        "tr": "Buzlu Strawberry matcha Latte",
+        "ar": "ايس ستروبري ماتشا لاتيه كبير"
+      },
+      "price": 250,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 250
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Strawberry matcha latte",
+        "tr": "Buzlu Strawberry matcha Latte",
+        "ar": "ايس ستروبري ماتشا لاتيه وسط"
+      },
+      "price": 220,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced strawberry mocha",
+        "tr": "Buzlu strawberry Mocha",
+        "ar": "ايس ستروبيري موكا"
+      },
+      "price": 200,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Iced strawberry mocha",
+        "tr": "Buzlu strawberry Mocha",
+        "ar": "ايس ستروبيري موكا كبير"
+      },
+      "price": 240,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced strawberry mocha",
+        "tr": "Buzlu strawberry Mocha",
+        "ar": "ايس ستروبيري موكا وسط"
+      },
+      "price": 220,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Toffee Nut Latte",
+        "tr": "Buzlu Toffee Nut Latte",
+        "ar": "ايس توفي نت لاتيه"
+      },
+      "price": 180,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Iced Toffee Nut Latte",
+        "tr": "Buzlu Toffee Nut Latte",
+        "ar": "ايس توفي نت لاتيه كبير"
+      },
+      "price": 240,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Toffee Nut Latte",
+        "tr": "Buzlu Toffee Nut Latte",
+        "ar": "ايس توفي نت لاتيه وسط"
+      },
+      "price": 220,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Vanilla Latte",
+        "tr": "Buzlu Vanilla Latte",
+        "ar": "ايس فانيليا لاتيه"
+      },
+      "price": 180,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Iced Vanilla Latte",
+        "tr": "Buzlu Vanilla Latte",
+        "ar": "ايس فانيليا لاتيه كبير"
+      },
+      "price": 220,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Vanilla Latte",
+        "tr": "Buzlu Vanilla Latte",
+        "ar": "ايس فانيليا لاتيه وسط"
+      },
+      "price": 200,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced White Chocolate Mocha",
+        "tr": "Buzlu White Çikolata Mocha",
+        "ar": "ايس وايت شوكليت موكا كبير"
+      },
+      "price": 240,
+      "category_id": "cat-sweets",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced White Chocolate Mocha",
+        "tr": "Buzlu White Çikolata Mocha",
+        "ar": "ايس وايت شوكليت موكا وسط"
+      },
+      "price": 220,
+      "category_id": "cat-sweets",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced White Chocolate Mocha",
+        "tr": "Buzlu White Çikolata Mocha",
+        "ar": "ايس وايت موكا"
+      },
+      "price": 200,
+      "category_id": "cat-sweets",
+      "tags": ["Coffee", "Iced", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Iced Zebra mocha latte",
+        "tr": "Buzlu Zebra Mocha Latte",
+        "ar": "ايس زيبرا موكا لاتيه كبير"
+      },
+      "price": 240,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Large",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Zebra mocha latte",
+        "tr": "Buzlu Zebra Mocha Latte",
+        "ar": "ايس زيبرا موكا لاتيه وسط"
+      },
+      "price": 220,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Iced Zebra mocha latte",
+        "tr": "Buzlu Zebra Mocha Latte",
+        "ar": "ايس زيبره موكا لاتيه"
+      },
+      "price": 200,
+      "category_id": "cat-iced-coffee",
+      "tags": ["Coffee", "Iced", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Kiwi mojito 7up",
+        "tr": "Kiwi mojito 7up",
+        "ar": "موهيتو كيوي سفن وسط"
+      },
+      "price": 220,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Kiwi mojito RedBull",
+        "tr": "Kiwi mojito RedBull",
+        "ar": "موهيتو كيوي ريد بول وسط"
+      },
+      "price": 240,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Kiwi mojito soda",
+        "tr": "Kiwi mojito soda",
+        "ar": "موهيتو كيوي صودا وسط"
+      },
+      "price": 200,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Latte",
+        "tr": "Latte",
+        "ar": "لاتيه"
+      },
+      "price": 140,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Latte",
+        "tr": "Latte",
+        "ar": "لاتيه وسط"
+      },
+      "price": 160,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 160
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Lemonade",
+        "tr": "Limonata",
+        "ar": "عصير ليمون"
+      },
+      "price": 170,
+      "category_id": "cat-fresh-juices",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Lemonade",
+        "tr": "Limonata",
+        "ar": "عصير ليمون وسط"
+      },
+      "price": 170,
+      "category_id": "cat-fresh-juices",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 170
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Lime blossom tea",
+        "tr": "Lime blossom Çay",
+        "ar": "زيزفون"
+      },
+      "price": 120,
+      "category_id": "cat-tea-selection",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Lotus Crepe",
+        "tr": "Lotus Crepe",
+        "ar": "كريب لوتوس"
+      },
+      "price": 380,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Lotus milkshake",
+        "tr": "Lotus milkshake",
+        "ar": "ميلك شيك لوتوس وسط"
+      },
+      "price": 275,
+      "category_id": "cat-milkshakes",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 275
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Lotus Pancake",
+        "tr": "Lotus Pancake",
+        "ar": "بان كيك لوتوس"
+      },
+      "price": 400,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Lotus Waffle",
+        "tr": "Lotus Waffle",
+        "ar": "وافل لوتوس"
+      },
+      "price": 450,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Mango mojito 7up",
+        "tr": "Mango mojito 7up",
+        "ar": "موهيتو مانجو سفن وسط"
+      },
+      "price": 220,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Mango mojito RedBull",
+        "tr": "Mango mojito RedBull",
+        "ar": "موهيتو مانجو ريد بول وسط"
+      },
+      "price": 240,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Mango mojito soda",
+        "tr": "Mango mojito soda",
+        "ar": "موهيتو مانجو صودا وسط"
+      },
+      "price": 200,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Mango smoothie",
+        "tr": "Mango Smoothie",
+        "ar": "سموزي مانجو وسط"
+      },
+      "price": 240,
+      "category_id": "cat-smoothies",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Marshmallow Waffle",
+        "tr": "Marshmallow Waffle",
+        "ar": "وافل مارشميلو"
+      },
+      "price": 300,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Matcha green tea frappucino",
+        "tr": "Matcha green Çay frappucino",
+        "ar": "ماتشا غرين فراب وسط"
+      },
+      "price": 0,
+      "category_id": "cat-blended-coffee",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 0
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Matcha latte",
+        "tr": "Matcha Latte",
+        "ar": "ماتشا لاتيه"
+      },
+      "price": 180,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Mini Chocolate Pancake",
+        "tr": "Mini Çikolata Pancake",
+        "ar": "ميني بان كيك شوكولا"
+      },
+      "price": 300,
+      "category_id": "cat-sweets",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Mini Fruit Pancake",
+        "tr": "Mini Fruit Pancake",
+        "ar": "ميني بان كيك فواكه"
+      },
+      "price": 450,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Mini Lotus Pancake",
+        "tr": "Mini Lotus Pancake",
+        "ar": "ميني بان كيك لوتوس"
+      },
+      "price": 360,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Mini Oreo Pancake",
+        "tr": "Mini Oreo Pancake",
+        "ar": "ميني بان كيك اوريو"
+      },
+      "price": 350,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Mini Pistachio Pancake",
+        "tr": "Mini Pistachio Pancake",
+        "ar": "ميني بان كيك بستاشيو"
+      },
+      "price": 320,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Minted lemonade",
+        "tr": "Minted Limonata",
+        "ar": "سموزي ليمون بالنعناع وسط"
+      },
+      "price": 170,
+      "category_id": "cat-fresh-juices",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 170
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Mix berries mojito 7up",
+        "tr": "Mix berries mojito 7up",
+        "ar": "موهيتو ميكس بيري سفن وسط"
+      },
+      "price": 220,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Mix berries mojito RedBull",
+        "tr": "Mix berries mojito RedBull",
+        "ar": "موهيتو ميكس بيري ريد بول وسط"
+      },
+      "price": 290,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 290
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Mix berries mojito soda",
+        "tr": "Mix berries mojito soda",
+        "ar": "موهيتو ميكس بيري صودا وسط"
+      },
+      "price": 200,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Mix berries smoothie",
+        "tr": "Mix berries Smoothie",
+        "ar": "سموزي ميكس بيريز وسط"
+      },
+      "price": 240,
+      "category_id": "cat-smoothies",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Mixed Berry Pancake",
+        "tr": "Mixed Berry Pancake",
+        "ar": "ميني بان كيك ميكس بيري"
+      },
+      "price": 350,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Mocha Frappucino",
+        "tr": "Mocha Frappucino",
+        "ar": "موكا فراب وسط"
+      },
+      "price": 250,
+      "category_id": "cat-blended-coffee",
+      "tags": ["Coffee", "Hot", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 250
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Mocha Latte",
+        "tr": "Mocha Latte",
+        "ar": "موكا لاتيه"
+      },
+      "price": 180,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Mocha Latte",
+        "tr": "Mocha Latte",
+        "ar": "موكا لاتيه وسط"
+      },
+      "price": 200,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Mojito classic 7up",
+        "tr": "Mojito classic 7up",
+        "ar": "موهيتو كلاسيك سفن وسط"
+      },
+      "price": 220,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Mojito classic RedBull",
+        "tr": "Mojito classic RedBull",
+        "ar": "موهيتو كلاسيك ريد بول وسط"
+      },
+      "price": 240,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Mojito classic soda",
+        "tr": "Mojito classic soda",
+        "ar": "موهيتو كلاسيك صودا وسط"
+      },
+      "price": 200,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Orange carrot",
+        "tr": "Orange carrot",
+        "ar": "عصير برتقال و جزر"
+      },
+      "price": 170,
+      "category_id": "cat-fresh-juices",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Orange carrot",
+        "tr": "Orange carrot",
+        "ar": "عصير برتقال و جزر وسط"
+      },
+      "price": 170,
+      "category_id": "cat-fresh-juices",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 170
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Orange juice",
+        "tr": "Orange Meyve Suyu",
+        "ar": "عصير برتقال"
+      },
+      "price": 170,
+      "category_id": "cat-fresh-juices",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Orange juice",
+        "tr": "Orange Meyve Suyu",
+        "ar": "عصير برتقال وسط"
+      },
+      "price": 180,
+      "category_id": "cat-fresh-juices",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 180
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Orange lemon",
+        "tr": "Orange lemon",
+        "ar": "عصير برتقال و ليمون"
+      },
+      "price": 170,
+      "category_id": "cat-fresh-juices",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Orange lemon",
+        "tr": "Orange lemon",
+        "ar": "عصير برتقال و ليمون وسط"
+      },
+      "price": 180,
+      "category_id": "cat-fresh-juices",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 180
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Orange peach mojito 7up",
+        "tr": "Orange peach mojito 7up",
+        "ar": "موهيتو برتقال دراق سفن وسط"
+      },
+      "price": 220,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Orange peach mojito RedBull",
+        "tr": "Orange peach mojito RedBull",
+        "ar": "موهيتو برتقال دراق ريد بول وسط"
+      },
+      "price": 240,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Orange peach mojito soda",
+        "tr": "Orange peach mojito soda",
+        "ar": "موهيتو برتقال دراق صودا وسط"
+      },
+      "price": 200,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Oreo Crepe",
+        "tr": "Oreo Crepe",
+        "ar": "كريب اوريو"
+      },
+      "price": 350,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Oreo milkshake",
+        "tr": "Oreo milkshake",
+        "ar": "ميلك شيك اوريو وسط"
+      },
+      "price": 275,
+      "category_id": "cat-milkshakes",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 275
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Oreo Pancake",
+        "tr": "Oreo Pancake",
+        "ar": "بان كيك اوريو"
+      },
+      "price": 320,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Oreo Waffle",
+        "tr": "Oreo Waffle",
+        "ar": "وافل اوريو"
+      },
+      "price": 350,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Passion mango smoothie",
+        "tr": "Passion mango Smoothie",
+        "ar": "سموزي باشن مانجو وسط"
+      },
+      "price": 250,
+      "category_id": "cat-smoothies",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 250
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Passion orange mojito 7up",
+        "tr": "Passion orange mojito 7up",
+        "ar": "موهيتو باشن برتقال سفن وسط"
+      },
+      "price": 220,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Passion orange mojito RedBull",
+        "tr": "Passion orange mojito RedBull",
+        "ar": "موهيتو باشن برتقال ريد بول وسط"
+      },
+      "price": 240,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Passion orange mojito soda",
+        "tr": "Passion orange mojito soda",
+        "ar": "موهيتو باشن برتقال صودا وسط"
+      },
+      "price": 200,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Passion orange smoothie",
+        "tr": "Passion orange Smoothie",
+        "ar": "سموزي باشن برتقال وسط"
+      },
+      "price": 240,
+      "category_id": "cat-smoothies",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Passion peach mojito 7up",
+        "tr": "Passion peach mojito 7up",
+        "ar": "موهيتو باشن دراق سفن وسط"
+      },
+      "price": 220,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Passion peach mojito RedBull",
+        "tr": "Passion peach mojito RedBull",
+        "ar": "موهيتو باشن دراق ريد بول وسط"
+      },
+      "price": 240,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Passion peach mojito soda",
+        "tr": "Passion peach mojito soda",
+        "ar": "موهيتو باشن دراق صودا وسط"
+      },
+      "price": 200,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Passion peach smoothie",
+        "tr": "Passion peach Smoothie",
+        "ar": "سموزي دراق باشن وسط"
+      },
+      "price": 240,
+      "category_id": "cat-smoothies",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Peach mojito 7up",
+        "tr": "Peach mojito 7up",
+        "ar": "موهيتو دراق سفن وسط"
+      },
+      "price": 220,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Peach mojito RedBull",
+        "tr": "Peach mojito RedBull",
+        "ar": "موهيتو دراق ريد بول وسط"
+      },
+      "price": 240,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Peach mojito soda",
+        "tr": "Peach mojito soda",
+        "ar": "موهيتو دراق صودا وسط"
+      },
+      "price": 200,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Peach orange smoothie",
+        "tr": "Peach orange Smoothie",
+        "ar": "سموزي برتقال دراق وسط"
+      },
+      "price": 240,
+      "category_id": "cat-smoothies",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Peach smoothie",
+        "tr": "Peach Smoothie",
+        "ar": "سموزي دراق وسط"
+      },
+      "price": 240,
+      "category_id": "cat-smoothies",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Piko Crepe",
+        "tr": "Piko Crepe",
+        "ar": "كريب بيكو"
+      },
+      "price": 420,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Piko Mocha",
+        "tr": "Piko Mocha",
+        "ar": "بيكو موكا"
+      },
+      "price": 200,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Piko Mocha",
+        "tr": "Piko Mocha",
+        "ar": "بيكو موكا وسط"
+      },
+      "price": 220,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Pineapple mojito 7up",
+        "tr": "Pineapple mojito 7up",
+        "ar": "موهيتو اناناس سفن وسط"
+      },
+      "price": 220,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Pineapple mojito RedBull",
+        "tr": "Pineapple mojito RedBull",
+        "ar": "موهيتو اناناس ريد بول وسط"
+      },
+      "price": 240,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Pineapple mojito soda",
+        "tr": "Pineapple mojito soda",
+        "ar": "موهيتو اناناس صودا وسط"
+      },
+      "price": 200,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Pineapple orange smoothie",
+        "tr": "Pineapple orange Smoothie",
+        "ar": "سموزي اناناس برتقال وسط"
+      },
+      "price": 240,
+      "category_id": "cat-smoothies",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Pineapple smoothie",
+        "tr": "Pineapple Smoothie",
+        "ar": "سموزي اناناس وسط"
+      },
+      "price": 200,
+      "category_id": "cat-smoothies",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Pink lemonade",
+        "tr": "Pink Limonata",
+        "ar": "سموزي ليمون مع رمان وسط"
+      },
+      "price": 250,
+      "category_id": "cat-fresh-juices",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 250
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Pink matcha latte",
+        "tr": "Pink matcha Latte",
+        "ar": "بينك ماتشا لاتيه"
+      },
+      "price": 180,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Pink Perry matcha latta",
+        "tr": "Pink Perry matcha latta",
+        "ar": "بينك بيري ماتشا لاتيه"
+      },
+      "price": 180,
+      "category_id": "cat-signature-refreshers",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Pistachio Crepe",
+        "tr": "Pistachio Crepe",
+        "ar": "كريب بستاشيو"
+      },
+      "price": 300,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Pistachio frappucino",
+        "tr": "Pistachio frappucino",
+        "ar": "بيستاشيو فراب وسط"
+      },
+      "price": 275,
+      "category_id": "cat-blended-coffee",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 275
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Pistachio Pancake",
+        "tr": "Pistachio Pancake",
+        "ar": "بان كيك بستاشيو"
+      },
+      "price": 350,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Pistachio Waffle",
+        "tr": "Pistachio Waffle",
+        "ar": "وافل بستاشيو"
+      },
+      "price": 390,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Pomegranate mojito 7up",
+        "tr": "Pomegranate mojito 7up",
+        "ar": "موهيتو رمان سفن وسط"
+      },
+      "price": 220,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Pomegranate mojito RedBull",
+        "tr": "Pomegranate mojito RedBull",
+        "ar": "موهيتو رمان ريد بول وسط"
+      },
+      "price": 240,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Pomegranate mojito soda",
+        "tr": "Pomegranate mojito soda",
+        "ar": "موهيتو رمان صودا وسط"
+      },
+      "price": 200,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Sahlab with Cinnamon",
+        "tr": "Sahlab with Cinnamon",
+        "ar": "سحلب بالقرفة"
+      },
+      "price": 150,
+      "category_id": "cat-sweets",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Salted Caramel Latte",
+        "tr": "Salted Caramel Latte",
+        "ar": "سلتد كراميل لاتيه"
+      },
+      "price": 180,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Salted Caramel Latte",
+        "tr": "Salted Caramel Latte",
+        "ar": "سلتد كراميل لاتيه وسط"
+      },
+      "price": 200,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "San Sebastian Cake",
+        "tr": "San Sebastian Cake",
+        "ar": "كيكة سان سباستيان"
+      },
+      "price": 0,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Spanish Latte",
+        "tr": "Spanish Latte",
+        "ar": "سبانش لاتيه"
+      },
+      "price": 180,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Spanish Latte",
+        "tr": "Spanish Latte",
+        "ar": "سبانش لاتيه وسط"
+      },
+      "price": 200,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Strawberry lemonade smoothie",
+        "tr": "Strawberry Limonata Smoothie",
+        "ar": "سموزي ليموناضة بالفريز وسط"
+      },
+      "price": 180,
+      "category_id": "cat-smoothies",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 180
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Strawberry mango smoothie",
+        "tr": "Strawberry mango Smoothie",
+        "ar": "سموزي مانجو فريز وسط"
+      },
+      "price": 240,
+      "category_id": "cat-smoothies",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Strawberry matcha latte",
+        "tr": "Strawberry matcha Latte",
+        "ar": "ستروبيري ماتشا لاتيه"
+      },
+      "price": 180,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Strawberry milkshake",
+        "tr": "Strawberry milkshake",
+        "ar": "ميلك شيك فريز وسط"
+      },
+      "price": 275,
+      "category_id": "cat-milkshakes",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 275
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Strawberry Mocha Latte",
+        "tr": "Strawberry Mocha Latte",
+        "ar": "ستروبيري موكا لاتيه"
+      },
+      "price": 180,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Strawberry mocha latte",
+        "tr": "Strawberry Mocha Latte",
+        "ar": "ستروبيري موكا لاتيه وسط"
+      },
+      "price": 200,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Strawberry mojito 7up",
+        "tr": "Strawberry mojito 7up",
+        "ar": "موهيتو فريز سفن وسط"
+      },
+      "price": 220,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Strawberry mojito RedBull",
+        "tr": "Strawberry mojito RedBull",
+        "ar": "موهيتو فريز ريد بول وسط"
+      },
+      "price": 240,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 240
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Strawberry mojito soda",
+        "tr": "Strawberry mojito soda",
+        "ar": "موهيتو فريز صودا وسط"
+      },
+      "price": 200,
+      "category_id": "cat-mojito",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Strawberry smoothie",
+        "tr": "Strawberry Smoothie",
+        "ar": "سموزي فريز وسط"
+      },
+      "price": 170,
+      "category_id": "cat-smoothies",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 170
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Strawberry Waffle",
+        "tr": "Strawberry Waffle",
+        "ar": "وافل فريز"
+      },
+      "price": 340,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Tea",
+        "tr": "Çay",
+        "ar": "شاي"
+      },
+      "price": 40,
+      "category_id": "cat-tea-selection",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Tiramisu",
+        "tr": "Tiramisu",
+        "ar": "تيراميسو"
+      },
+      "price": 0,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Tiramisu Pancake",
+        "tr": "Tiramisu Pancake",
+        "ar": "بان كيك تيرامسو"
+      },
+      "price": 320,
+      "category_id": "cat-desserts-cakes",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Toffee Nut Latte",
+        "tr": "Toffee Nut Latte",
+        "ar": "توفي نات لاتيه"
+      },
+      "price": 180,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Toffee Nut Latte",
+        "tr": "Toffee Nut Latte",
+        "ar": "توفي نات لاتيه وسط"
+      },
+      "price": 220,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Turkish Coffee",
+        "tr": "Turkish Coffee",
+        "ar": "قهوة تركية"
+      },
+      "price": 95,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "Turkish Coffee",
+        "tr": "Turkish Coffee",
+        "ar": "قهوة تركية دبل"
+      },
+      "price": 135,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Double",
+          "price": 135
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "V60",
+        "tr": "V60",
+        "ar": "في 60"
+      },
+      "price": 195,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "V60",
+        "tr": "V60",
+        "ar": "في 60 وسط"
+      },
+      "price": 220,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Vanilla frappucino",
+        "tr": "Vanilla frappucino",
+        "ar": "فانيليا فراب وسط"
+      },
+      "price": 250,
+      "category_id": "cat-blended-coffee",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 250
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Vanilla Latte",
+        "tr": "Vanilla Latte",
+        "ar": "فانيليا لاتيه"
+      },
+      "price": 160,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Vanilla Latte",
+        "tr": "Vanilla Latte",
+        "ar": "فانيليا لاتيه وسط"
+      },
+      "price": 200,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Vanilla milkshake",
+        "tr": "Vanilla milkshake",
+        "ar": "ميلك شيك فانيليا وسط"
+      },
+      "price": 275,
+      "category_id": "cat-milkshakes",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 275
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "White Hot Chocolate",
+        "tr": "White Hot Çikolata",
+        "ar": "وايت هوت شوكلت"
+      },
+      "price": 200,
+      "category_id": "cat-sweets",
+      "tags": ["Hot"]
+    },
+    {
+      "names": {
+        "en": "White Hot Chocolate",
+        "tr": "White Hot Çikolata",
+        "ar": "وايت هوت شوكلت وسط"
+      },
+      "price": 220,
+      "category_id": "cat-sweets",
+      "tags": ["Hot"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "White Mocha Latte",
+        "tr": "White Mocha Latte",
+        "ar": "وايت موكا لاتيه"
+      },
+      "price": 180,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"]
+    },
+    {
+      "names": {
+        "en": "White Mocha Latte",
+        "tr": "White Mocha Latte",
+        "ar": "وايت موكا لاتيه وسط"
+      },
+      "price": 200,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "names": {
+        "en": "Zebra Mocha",
+        "tr": "Zebra Mocha",
+        "ar": "زيبرا موكا"
+      },
+      "price": 200,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"]
+    },
+    {
+      "names": {
+        "en": "Zebra Mocha",
+        "tr": "Zebra Mocha",
+        "ar": "زيبرا موكا وسط"
+      },
+      "price": 220,
+      "category_id": "cat-hot-coffee",
+      "tags": ["Coffee", "Hot", "Milky"],
+      "variants": [
+        {
+          "size": "Medium",
+          "price": 220
+        }
+      ]
+    }
+  ],
+  "statistics": {
+    "cat-hot-coffee": 50,
+    "cat-fresh-juices": 16,
+    "cat-desserts-cakes": 36,
+    "cat-iced-coffee": 67,
+    "cat-blended-coffee": 6,
+    "cat-milkshakes": 7,
+    "cat-smoothies": 13,
+    "cat-tea-selection": 8,
+    "cat-sweets": 12,
+    "cat-signature-refreshers": 37,
+    "cat-mojito": 36
+  },
+  "metadata": {
+    "totalItems": 288,
+    "totalCategories": 12,
+    "lastUpdated": "2025-10-17T15:55:06.412Z"
+  }
+}

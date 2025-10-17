@@ -72,7 +72,7 @@ export default function AdminCategories({
         await Promise.all(
           updates.map(cat =>
             categoriesAPI.update(cat.id, { ...cat, order: cat.order })
-          ),
+          )
         );
 
         toast.success('Order updated');

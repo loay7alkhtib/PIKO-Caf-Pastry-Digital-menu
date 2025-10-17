@@ -65,21 +65,22 @@
     "vite": "*"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.0.0",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.0.0",
     "@types/node": "^20.10.0",
     "@types/react-responsive-masonry": "^2.6.0",
     "@vitejs/plugin-react-swc": "^3.10.2",
-    "vite": "6.3.5",
-    "prettier": "^3.0.0",
-    "husky": "^8.0.0",
-    "lint-staged": "^15.0.0",
+    "@vitest/ui": "^1.0.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
-    "vitest": "^1.0.0",
-    "@testing-library/react": "^14.0.0",
-    "@testing-library/jest-dom": "^6.0.0",
-    "@testing-library/user-event": "^14.0.0",
+    "husky": "^8.0.0",
     "jsdom": "^23.0.0",
-    "@vitest/ui": "^1.0.0"
+    "lint-staged": "^15.0.0",
+    "prettier": "^3.0.0",
+    "terser": "^5.44.0",
+    "vite": "6.3.5",
+    "vitest": "^1.0.0"
   },
   "scripts": {
     "dev": "vite",

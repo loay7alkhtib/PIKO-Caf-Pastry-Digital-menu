@@ -103,7 +103,7 @@ export default function AdminOrders({ orders, onRefresh }: AdminOrdersProps) {
                         day: 'numeric',
                         hour: '2-digit',
                         minute: '2-digit',
-                      },
+                      }
                     )}
                   </TableCell>
                   <TableCell className='text-right'>

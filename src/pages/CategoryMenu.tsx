@@ -1,4 +1,4 @@
-import { memo, useCallback, useMemo, useState, useEffect } from 'react';
+import { memo, useCallback, useEffect, useMemo, useState } from 'react';
 import NavBar from '../components/NavBar';
 import ItemPreview from '../components/ItemPreview';
 import CategoryNavigation from '../components/CategoryNavigation';
@@ -55,29 +55,31 @@ const CategoryMenu = memo(({ categoryId, onNavigate }: CategoryMenuProps) => {
     }
 
     const query = searchQuery.toLowerCase().trim();
-    
+
     // When searching, search across ALL items in the menu, not just current category
     const allFilteredItems = allItems.filter(item => {
       // Search in item names (multilingual)
-      const nameMatch = Object.values(item.names).some(name => 
+      const nameMatch = Object.values(item.names).some(name =>
         name.toLowerCase().includes(query)
       );
 
       // Search in descriptions (multilingual)
-      const descriptionMatch = item.descriptions && Object.values(item.descriptions).some(desc => 
-        desc?.toLowerCase().includes(query)
-      );
+      const descriptionMatch =
+        item.descriptions &&
+        Object.values(item.descriptions).some(desc =>
+          desc?.toLowerCase().includes(query)
+        );
 
       // Search in tags
-      const tagMatch = item.tags.some(tag => 
-        tag.toLowerCase().includes(query)
-      );
+      const tagMatch = item.tags.some(tag => tag.toLowerCase().includes(query));
 
       // Search in category names
       const category = categories.find(c => c.id === item.category_id);
-      const categoryMatch = category && Object.values(category.names).some(catName => 
-        catName.toLowerCase().includes(query)
-      );
+      const categoryMatch =
+        category &&
+        Object.values(category.names).some(catName =>
+          catName.toLowerCase().includes(query)
+        );
 
       return nameMatch || descriptionMatch || tagMatch || categoryMatch;
     });
@@ -134,11 +136,8 @@ const CategoryMenu = memo(({ categoryId, onNavigate }: CategoryMenuProps) => {
         <CategoryHeader category={category} lang={lang} />
 
         {/* Search Bar */}
-        <div className="mb-6">
-          <SearchBar 
-            onSearch={handleSearch}
-            onClear={handleClearSearch}
-          />
+        <div className='mb-6'>
+          <SearchBar onSearch={handleSearch} onClear={handleClearSearch} />
         </div>
 
         <ItemsGrid

@@ -29,7 +29,7 @@ const CartSheet = memo(({ open, onClose }: CartSheetProps) => {
         ? 'Order ready to show to waiter!'
         : lang === 'tr'
           ? 'Sipariş garsona gösterilmeye hazır!'
-          : 'الطلب جاهز لعرضه على النادل!',
+          : 'الطلب جاهز لعرضه على النادل!'
     );
   };
 
