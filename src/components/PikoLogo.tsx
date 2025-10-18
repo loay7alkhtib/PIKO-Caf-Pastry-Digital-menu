@@ -1,5 +1,6 @@
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import svgPaths from '../imports/svg-8vv1jmhkim';
+import { gsap } from 'gsap';
 
 interface PikoLogoProps {
   onTripleTap?: () => void;
@@ -9,6 +10,38 @@ export default function PikoLogo({ onTripleTap }: PikoLogoProps) {
   const lastTap = useRef(0);
   const tapCount = useRef(0);
   const longPressTimer = useRef<NodeJS.Timeout | null>(null);
+  const logoRef = useRef<HTMLDivElement>(null);
+  const svgRef = useRef<SVGSVGElement>(null);
+
+  // Add GSAP animations on mount
+  useEffect(() => {
+    if (logoRef.current && svgRef.current) {
+      // Initial entrance animation
+      gsap.fromTo(logoRef.current, 
+        { 
+          scale: 0.8, 
+          opacity: 0,
+          rotation: -10
+        },
+        {
+          scale: 1,
+          opacity: 1,
+          rotation: 0,
+          duration: 0.8,
+          ease: "back.out(1.7)"
+        }
+      );
+      
+      // Add subtle floating animation
+      gsap.to(logoRef.current, {
+        y: -3,
+        duration: 2,
+        ease: "power2.inOut",
+        repeat: -1,
+        yoyo: true
+      });
+    }
+  }, []);
 
   const handleClick = () => {
     const now = Date.now();
@@ -19,9 +52,32 @@ export default function PikoLogo({ onTripleTap }: PikoLogoProps) {
     }
     lastTap.current = now;
 
+    // Add click animation
+    if (logoRef.current) {
+      gsap.to(logoRef.current, {
+        scale: 0.95,
+        duration: 0.1,
+        ease: "power2.out",
+        yoyo: true,
+        repeat: 1
+      });
+    }
+
     if (tapCount.current >= 3) {
       tapCount.current = 0;
       onTripleTap?.();
+      
+      // Special animation for triple tap
+      if (logoRef.current) {
+        gsap.to(logoRef.current, {
+          scale: 1.2,
+          rotation: 360,
+          duration: 0.6,
+          ease: "back.out(1.7)",
+          yoyo: true,
+          repeat: 1
+        });
+      }
     }
   };
 
@@ -29,6 +85,16 @@ export default function PikoLogo({ onTripleTap }: PikoLogoProps) {
   const handlePointerDown = () => {
     longPressTimer.current = setTimeout(() => {
       onTripleTap?.();
+      
+      // Long press animation
+      if (logoRef.current) {
+        gsap.to(logoRef.current, {
+          scale: 1.1,
+          rotation: 180,
+          duration: 0.5,
+          ease: "power2.out"
+        });
+      }
     }, 1500);
   };
 
@@ -55,8 +121,9 @@ export default function PikoLogo({ onTripleTap }: PikoLogoProps) {
       className='select-none focus:outline-none focus:ring-2 focus:ring-primary rounded-full transition-transform active:scale-95 hover:scale-105 duration-200'
       aria-label='Piko Patisserie Logo'
     >
-      <div className='w-10 h-10 sm:w-12 sm:h-12 relative overflow-hidden'>
+      <div ref={logoRef} className='w-10 h-10 sm:w-12 sm:h-12 relative overflow-hidden'>
         <svg
+          ref={svgRef}
           className='block size-full'
           fill='none'
           preserveAspectRatio='none'

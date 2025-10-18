@@ -1,27 +1,198 @@
-import { useEffect, useState } from 'react';
-import { motion } from 'motion/react';
+import { useEffect, useState, useRef } from 'react';
 import { Progress } from './ui/progress';
 import { useLang } from '../lib/LangContext';
 import { dirFor, t } from '../lib/i18n';
 import svgPaths from '../imports/svg-8vv1jmhkim';
+import { gsap } from 'gsap';
 
 export default function PikoLoader() {
   const [progress, setProgress] = useState(0);
   const { lang } = useLang();
+  
+  // Refs for GSAP animations
+  const logoRef = useRef<HTMLDivElement>(null);
+  const progressRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
+  const dotsRef = useRef<HTMLDivElement>(null);
+  const backgroundRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Simulate loading progress with a more realistic curve
-    const timer = setInterval(() => {
-      setProgress(prev => {
-        if (prev >= 100) return 100;
-        // Fast at first, then slower
-        const increment = prev < 50 ? 15 : prev < 80 ? 8 : 3;
-        return Math.min(prev + increment, 100);
+    // Small delay to ensure DOM is ready
+    const timer = setTimeout(() => {
+      // GSAP animations on mount
+      const tl = gsap.timeline();
+      
+      // Initial setup - hide all elements
+      gsap.set([logoRef.current, progressRef.current, textRef.current, dotsRef.current], {
+        opacity: 0,
+        y: 50
       });
-    }, 200);
+    
+      // Animate background elements with complex floating animations
+      if (backgroundRef.current) {
+        const children = backgroundRef.current.children;
+        
+        // Initial entrance animation
+        gsap.fromTo(children, 
+          { 
+            scale: 0, 
+            rotation: -180,
+            opacity: 0 
+          },
+          {
+            scale: 1,
+            rotation: 0,
+            opacity: 0.1,
+            duration: 1.5,
+            stagger: 0.3,
+            ease: "back.out(1.7)"
+          }
+        );
+        
+        // Create floating animations for each element
+        Array.from(children).forEach((child: Element, index: number) => {
+          const duration = 15 + (index * 3); // Varying durations
+          const delay = index * 0.5;
+          
+          gsap.to(child, {
+            x: `+=${100 + (index * 50)}`,
+            y: `+=${-50 + (index * 30)}`,
+            rotation: `+=${360 + (index * 180)}`,
+            duration: duration,
+            ease: "none",
+            repeat: -1,
+            yoyo: true,
+            delay: delay
+          });
+          
+          // Add pulsing scale effect
+          gsap.to(child, {
+            scale: 1.2,
+            opacity: 0.2,
+            duration: 2 + (index * 0.5),
+            ease: "power2.inOut",
+            repeat: -1,
+            yoyo: true,
+            delay: delay + 1
+          });
+        });
+      }
+      
+      // Logo entrance animation
+      tl.to(logoRef.current, {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        rotation: 0,
+        duration: 1.2,
+        ease: "elastic.out(1, 0.3)"
+      })
+      // Add pulsing glow effect to logo
+      .to(logoRef.current?.querySelector('.glow-effect') || [], {
+        scale: 1.3,
+        opacity: 0.8,
+        duration: 2,
+        repeat: -1,
+        yoyo: true,
+        ease: "power2.inOut"
+      }, "-=0.5")
+      // Text animation
+      .to(textRef.current, {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out"
+      }, "-=0.3")
+      // Progress bar animation
+      .to(progressRef.current, {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        ease: "power2.out"
+      }, "-=0.2")
+      // Dots animation
+      .to(dotsRef.current, {
+        opacity: 1,
+        y: 0,
+        duration: 0.4,
+        ease: "power2.out"
+      }, "-=0.1");
 
-    return () => clearInterval(timer);
+      // Animate the loading dots
+      if (dotsRef.current && dotsRef.current.children.length > 0) {
+        gsap.to(dotsRef.current.children, {
+          y: -12,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.2,
+          repeat: -1,
+          yoyo: true,
+          ease: "power2.inOut"
+        });
+      }
+
+      // Simulate loading progress with a more realistic curve
+      const progressTimer = setInterval(() => {
+        setProgress(prev => {
+          if (prev >= 100) return 100;
+          // Fast at first, then slower
+          const increment = prev < 50 ? 15 : prev < 80 ? 8 : 3;
+          return Math.min(prev + increment, 100);
+        });
+      }, 200);
+
+      return () => {
+        clearInterval(progressTimer);
+        tl.kill();
+      };
+    }, 100); // Small delay to ensure DOM is ready
+
+    return () => {
+      clearTimeout(timer);
+    };
   }, []);
+
+  // Animate progress updates
+  useEffect(() => {
+    if (progressRef.current) {
+      gsap.to(progressRef.current.querySelector('[role="progressbar"]'), {
+        scaleX: progress / 100,
+        duration: 0.3,
+        ease: "power2.out"
+      });
+    }
+    
+    // Completion animation when loading reaches 100%
+    if (progress === 100) {
+      const completionTl = gsap.timeline();
+      
+      // Logo celebration animation
+      completionTl.to(logoRef.current, {
+        scale: 1.2,
+        rotation: 360,
+        duration: 0.8,
+        ease: "back.out(1.7)"
+      })
+      .to(logoRef.current, {
+        scale: 1,
+        rotation: 0,
+        duration: 0.5,
+        ease: "elastic.out(1, 0.3)"
+      });
+      
+      // Progress bar completion effect
+      completionTl.to(progressRef.current, {
+        scale: 1.05,
+        duration: 0.3,
+        ease: "power2.out"
+      }, "-=0.5")
+      .to(progressRef.current, {
+        scale: 1,
+        duration: 0.2,
+        ease: "power2.out"
+      });
+    }
+  }, [progress]);
 
   const getLoadingMessage = () => {
     if (progress < 30) return t('loadingMenu', lang);
@@ -36,120 +207,37 @@ export default function PikoLoader() {
       dir={dirFor(lang)}
     >
       {/* Animated background elements */}
-      <div className='absolute inset-0 overflow-hidden pointer-events-none'>
-        {/* Floating croissants */}
-        <motion.div
-          className='absolute text-6xl opacity-10'
-          initial={{ x: -100, y: 100, rotate: 0 }}
-          animate={{
-            x: ['0%', '100%'],
-            y: ['0%', '-20%', '0%'],
-            rotate: [0, 360],
-          }}
-          transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-          style={{ left: '10%', top: '20%' }}
-        >
+      <div ref={backgroundRef} className='absolute inset-0 overflow-hidden pointer-events-none'>
+        {/* Floating food items with GSAP animations */}
+        <div className='absolute text-6xl opacity-10' style={{ left: '10%', top: '20%' }}>
           🥐
-        </motion.div>
-        <motion.div
-          className='absolute text-5xl opacity-10'
-          initial={{ x: 100, y: -100, rotate: 0 }}
-          animate={{
-            x: ['-100%', '0%'],
-            y: ['100%', '20%', '100%'],
-            rotate: [360, 0],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: 'linear',
-            delay: 2,
-          }}
-          style={{ right: '15%', top: '60%' }}
-        >
+        </div>
+        <div className='absolute text-5xl opacity-10' style={{ right: '15%', top: '60%' }}>
           ☕
-        </motion.div>
-        <motion.div
-          className='absolute text-4xl opacity-10'
-          initial={{ x: 0, y: 0, rotate: 0 }}
-          animate={{
-            x: ['100%', '-100%'],
-            y: ['50%', '0%', '50%'],
-            rotate: [0, -360],
-          }}
-          transition={{
-            duration: 30,
-            repeat: Infinity,
-            ease: 'linear',
-            delay: 4,
-          }}
-          style={{ left: '60%', top: '80%' }}
-        >
+        </div>
+        <div className='absolute text-4xl opacity-10' style={{ left: '60%', top: '80%' }}>
           🧁
-        </motion.div>
-        <motion.div
-          className='absolute text-5xl opacity-10'
-          initial={{ x: 0, y: 0, rotate: 0 }}
-          animate={{
-            x: ['-50%', '150%'],
-            y: ['80%', '20%', '80%'],
-            rotate: [0, 180],
-          }}
-          transition={{
-            duration: 22,
-            repeat: Infinity,
-            ease: 'linear',
-            delay: 1,
-          }}
-          style={{ left: '30%', top: '10%' }}
-        >
+        </div>
+        <div className='absolute text-5xl opacity-10' style={{ left: '30%', top: '10%' }}>
           🍰
-        </motion.div>
+        </div>
+        <div className='absolute text-4xl opacity-10' style={{ left: '80%', top: '30%' }}>
+          🍪
+        </div>
+        <div className='absolute text-3xl opacity-10' style={{ left: '5%', top: '70%' }}>
+          🥧
+        </div>
       </div>
 
       {/* Main content */}
       <div className='relative z-10 flex flex-col items-center gap-8 w-full max-w-md'>
         {/* Animated Piko Logo */}
-        <motion.div
-          initial={{ scale: 0, rotate: -180 }}
-          animate={{
-            scale: 1,
-            rotate: 0,
-          }}
-          transition={{
-            type: 'spring',
-            stiffness: 200,
-            damping: 20,
-            duration: 0.8,
-          }}
-          className='relative'
-        >
+        <div ref={logoRef} className='relative'>
           {/* Glow effect */}
-          <motion.div
-            className='absolute -inset-4 bg-primary/20 rounded-full blur-2xl'
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.3, 0.6, 0.3],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-          />
+          <div className='glow-effect absolute -inset-4 bg-primary/20 rounded-full blur-2xl' />
 
           {/* Logo */}
-          <motion.div
-            className='relative w-24 h-24 sm:w-32 sm:h-32'
-            animate={{
-              y: [0, -10, 0],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-          >
+          <div className='relative w-24 h-24 sm:w-32 sm:h-32'>
             <svg
               className='block size-full drop-shadow-2xl'
               fill='none'
@@ -229,79 +317,42 @@ export default function PikoLoader() {
                 <path d={svgPaths.p1aff7700} fill='white' />
               </g>
             </svg>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
         {/* Loading text with typing animation */}
-        <motion.div
-          className='text-center space-y-2'
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-        >
+        <div ref={textRef} className='text-center space-y-2'>
           <h2 className='text-2xl sm:text-3xl font-medium bg-gradient-to-r from-primary via-primary/80 to-primary bg-clip-text text-transparent'>
             {t('brandName', lang)}
           </h2>
-          <motion.p
-            className='text-sm text-muted-foreground'
-            animate={{ opacity: [0.5, 1, 0.5] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
+          <p className='text-sm text-muted-foreground'>
             {t('preparingMenu', lang)}
-          </motion.p>
-        </motion.div>
+          </p>
+        </div>
 
         {/* Progress bar */}
-        <motion.div
-          className='w-full space-y-3'
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.7 }}
-        >
+        <div ref={progressRef} className='w-full space-y-3'>
           <Progress value={progress} className='h-2' />
 
           <div className='flex items-center justify-between text-xs text-muted-foreground px-1'>
-            <motion.span
-              key={progress}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.2 }}
-            >
+            <span key={progress}>
               {progress}%
-            </motion.span>
-            <motion.span
-              animate={{ opacity: [0.5, 1, 0.5] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            >
+            </span>
+            <span>
               {getLoadingMessage()}
-            </motion.span>
+            </span>
           </div>
-        </motion.div>
+        </div>
 
         {/* Fun loading indicators */}
-        <motion.div
-          className='flex gap-2'
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-        >
+        <div ref={dotsRef} className='flex gap-2'>
           {[0, 1, 2].map(i => (
-            <motion.div
+            <div
               key={i}
               className='w-2 h-2 rounded-full bg-primary'
-              animate={{
-                y: [0, -12, 0],
-                opacity: [0.3, 1, 0.3],
-              }}
-              transition={{
-                duration: 0.8,
-                repeat: Infinity,
-                delay: i * 0.2,
-                ease: 'easeInOut',
-              }}
             />
           ))}
-        </motion.div>
+        </div>
       </div>
     </div>
   );

@@ -44,6 +44,7 @@
     "eslint-plugin-react-hooks": "*",
     "eslint-plugin-react-refresh": "*",
     "globals": "*",
+    "gsap": "^3.13.0",
     "hono": "*",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.487.0",
