@@ -74,7 +74,7 @@ export default defineConfig({
           ],
           supabase: ['@supabase/supabase-js', '@jsr/supabase__supabase-js'],
           utils: ['clsx', 'tailwind-merge', 'class-variance-authority'],
-          forms: ['react-hook-form', '@radix-ui/react-form'],
+          forms: ['react-hook-form'],
         },
       },
     },
