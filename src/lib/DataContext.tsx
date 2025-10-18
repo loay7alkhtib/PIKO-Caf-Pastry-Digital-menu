@@ -11,6 +11,7 @@ import type { Category, Item } from './types';
 import './debug'; // Load diagnostics tool
 import * as idb from './idb';
 import { toast } from 'sonner';
+import PikoLoader from '../components/PikoLoader';
 
 interface ItemsCache {
   data: Item[];
@@ -313,17 +314,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       }}
     >
       {loading ? (
-        <div className='min-h-screen flex items-center justify-center bg-background'>
-          <div className='text-center space-y-4'>
-            <div className='text-5xl animate-spin'>🥐</div>
-            <p className='text-muted-foreground text-sm'>
-              Loading menu data...
-            </p>
-            <p className='text-muted-foreground text-xs opacity-60'>
-              First load may take a moment
-            </p>
-          </div>
-        </div>
+        <PikoLoader />
       ) : error ? (
         <div className='min-h-screen flex items-center justify-center bg-background p-4'>
           <div className='text-start space-y-4 max-w-md'>
