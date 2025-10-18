@@ -111,7 +111,7 @@ export default function AdminItems({
 
       // Only allow reordering within same category
       if (dragItem.category_id !== hoverItem.category_id) {
-        console.log('❌ Different categories:', { 
+        console.log('❌ Different categories:', {
           dragCategory: dragItem.category_id, 
           hoverCategory: hoverItem.category_id 
         });
