@@ -13,13 +13,13 @@ import { useResponsiveColumns } from '../lib/hooks/useResponsiveColumns';
 import { useNavigation } from '../lib/hooks/useNavigation';
 import { useCartOperations } from '../lib/hooks/useCartOperations';
 import { useScrollToTop } from '../lib/hooks/useScrollToTop';
-import { dirFor, t } from '../lib/i18n';
+import { t } from '../lib/i18n';
 import type { Item } from '../lib/types';
 import { ArrowLeft } from 'lucide-react';
 
 interface CategoryMenuProps {
   categoryId: string;
-  onNavigate: (page: string, categoryId?: string) => void;
+  onNavigate: (_page: string, _categoryId?: string) => void;
 }
 
 const CategoryMenu = memo(({ categoryId, onNavigate }: CategoryMenuProps) => {
@@ -104,15 +104,17 @@ const CategoryMenu = memo(({ categoryId, onNavigate }: CategoryMenuProps) => {
 
   // Clear search when category changes
   useEffect(() => {
-    setSearchQuery(prev => (prev ? '' : prev));
-  }, [categoryId]);
+    if (searchQuery) {
+      setSearchQuery('');
+    }
+  }, [categoryId, searchQuery]);
 
   const handleLogoTripleTap = () => {
     navigateToAdminLogin();
   };
 
   return (
-    <div className='min-h-screen' dir={dirFor(lang)}>
+    <div className='min-h-screen'>
       <NavBar
         onLogoTripleTap={handleLogoTripleTap}
         onNavigate={onNavigate}

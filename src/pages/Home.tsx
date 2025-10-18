@@ -7,7 +7,7 @@ import PikoLoader from '../components/PikoLoader';
 import { useLang } from '../lib/LangContext';
 import { useData } from '../lib/DataContext';
 import { useNavigation } from '../lib/hooks/useNavigation';
-import { dirFor, t } from '../lib/i18n';
+import { t } from '../lib/i18n';
 
 interface HomeProps {
   onNavigate: (_page: string, _categoryId?: string) => void;
@@ -44,7 +44,7 @@ const Home = memo(({ onNavigate }: HomeProps) => {
   }
 
   return (
-    <div className='min-h-screen' dir={dirFor(lang)}>
+    <div className='min-h-screen'>
       <NavBar
         onLogoTripleTap={handleLogoTripleTap}
         onNavigate={onNavigate}

@@ -65,7 +65,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
         ? itemsDataRaw.filter(
             item =>
               item && typeof item === 'object' && item.category_id !== undefined
-          )
+        )
         : [];
 
       // Ensure all items have an order field, defaulting to 0
@@ -174,7 +174,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
                       item &&
                       typeof item === 'object' &&
                       item.category_id !== undefined
-                  )
+                )
                 : [];
 
               // Check if data actually changed
@@ -228,7 +228,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
                 item &&
                 typeof item === 'object' &&
                 item.category_id !== undefined
-            )
+          )
           : [];
 
         const newCache = { data: freshData, timestamp: now };

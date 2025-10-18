@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Progress } from './ui/progress';
 import { useLang } from '../lib/LangContext';
-import { dirFor, t } from '../lib/i18n';
+import { t } from '../lib/i18n';
 import svgPaths from '../imports/svg-8vv1jmhkim';
 import { gsap } from 'gsap';
 
@@ -33,7 +33,7 @@ export default function PikoLoader() {
         {
           opacity: 0,
           y: 50,
-        }
+        },
       );
 
       // Animate background elements with complex floating animations
@@ -55,7 +55,7 @@ export default function PikoLoader() {
             duration: 1.5,
             stagger: 0.3,
             ease: 'back.out(1.7)',
-          }
+          },
         );
 
         // Create floating animations for each element
@@ -107,7 +107,7 @@ export default function PikoLoader() {
             yoyo: true,
             ease: 'power2.inOut',
           },
-          '-=0.5'
+          '-=0.5',
         )
         // Text animation
         .to(
@@ -118,7 +118,7 @@ export default function PikoLoader() {
             duration: 0.8,
             ease: 'power2.out',
           },
-          '-=0.3'
+          '-=0.3',
         )
         // Progress bar animation
         .to(
@@ -129,7 +129,7 @@ export default function PikoLoader() {
             duration: 0.6,
             ease: 'power2.out',
           },
-          '-=0.2'
+          '-=0.2',
         )
         // Dots animation
         .to(
@@ -140,7 +140,7 @@ export default function PikoLoader() {
             duration: 0.4,
             ease: 'power2.out',
           },
-          '-=0.1'
+          '-=0.1',
         );
 
       // Animate the loading dots
@@ -215,7 +215,7 @@ export default function PikoLoader() {
             duration: 0.3,
             ease: 'power2.out',
           },
-          '-=0.5'
+          '-=0.5',
         )
         .to(progressRef.current, {
           scale: 1,
@@ -233,10 +233,7 @@ export default function PikoLoader() {
   };
 
   return (
-    <div
-      className='min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-background via-background to-primary/5 p-6 overflow-hidden relative'
-      dir={dirFor(lang)}
-    >
+    <div className='min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-background via-background to-primary/5 p-6 overflow-hidden relative'>
       {/* Animated background elements */}
       <div
         ref={backgroundRef}

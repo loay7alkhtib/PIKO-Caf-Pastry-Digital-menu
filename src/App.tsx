@@ -5,6 +5,7 @@ import { DataProvider } from './lib/DataContext';
 import { Toaster } from './components/ui/sonner';
 import Home from './pages/Home';
 import PikoLoader from './components/PikoLoader';
+import LanguageWrapper from './components/LanguageWrapper';
 
 // Lazy load pages that aren't immediately needed
 const CategoryMenu = lazy(() => import('./pages/CategoryMenu'));
@@ -37,7 +38,7 @@ export default function App() {
     <LangProvider>
       <DataProvider>
         <CartProvider>
-          <div className='min-h-screen bg-background text-foreground'>
+          <LanguageWrapper>
             <Suspense fallback={<PikoLoader />}>
               {page === 'home' && (
                 <Home onNavigate={(p, catId) => navigate(p as Page, catId)} />
@@ -61,8 +62,8 @@ export default function App() {
                 <Admin onNavigate={p => navigate(p as Page)} />
               )}
             </Suspense>
-          </div>
-          <Toaster position='bottom-center' />
+            <Toaster position='bottom-center' />
+          </LanguageWrapper>
         </CartProvider>
       </DataProvider>
     </LangProvider>
