@@ -34,7 +34,6 @@ const DataContext = createContext<DataContextType | undefined>(undefined);
 const ITEMS_CACHE_TTL = 300_000; // 5 minutes
 
 export function DataProvider({ children }: { children: ReactNode }) {
-  console.log('🚀 DataProvider initialized');
   const [categories, setCategories] = useState<Category[]>([]);
   const [items, setItems] = useState<Item[]>([]);
   const [loading, setLoading] = useState(true);
@@ -49,14 +48,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       setLoading(true);
       setError(null);
 
-      console.log('🔄 Fetching all data...');
-      console.log(
-        '🔍 API Base URL:',
-        'https://eoaissoqwlfvfizfomax.supabase.co/functions/v1/make-server-4050140e'
-      );
-
       // Try to fetch categories and items in parallel
-      console.log('🔄 About to call categoriesAPI.getAll()');
       const [categoriesData, itemsDataRaw] = await Promise.all([
         categoriesAPI.getAll().catch(err => {
           console.error('Categories fetch error:', err);
@@ -91,12 +83,6 @@ export function DataProvider({ children }: { children: ReactNode }) {
         return (a.order || 0) - (b.order || 0);
       });
 
-      console.log('📊 Received data:', {
-        categoriesData: categoriesData?.length || 0,
-        itemsDataRaw: itemsDataRaw?.length || 0,
-        itemsDataFiltered: itemsData?.length || 0,
-        itemsDataSorted: sortedItems?.length || 0,
-      });
 
       // If both are empty, there might be an initialization issue
       if (!categoriesData || categoriesData.length === 0) {
@@ -108,10 +94,6 @@ export function DataProvider({ children }: { children: ReactNode }) {
       setCategories(Array.isArray(categoriesData) ? categoriesData : []);
       setItems(sortedItems);
 
-      console.log('✅ Data loaded:', {
-        categories: categoriesData?.length || 0,
-        items: sortedItems?.length || 0,
-      });
     } catch (err) {
       console.error('❌ Data fetch error:', err);
       const errorMessage =
@@ -132,11 +114,9 @@ export function DataProvider({ children }: { children: ReactNode }) {
 
   // Load data on mount
   useEffect(() => {
-    console.log('🔄 DataProvider useEffect triggered');
     // Check server health first, then fetch data
     const initData = async () => {
       try {
-        console.log('🏥 Checking server health...');
         const healthCheck = await fetch(
           'https://eoaissoqwlfvfizfomax.supabase.co/functions/v1/make-server-4050140e/health',
           {
@@ -147,7 +127,6 @@ export function DataProvider({ children }: { children: ReactNode }) {
         ).catch(() => null);
 
         if (healthCheck && healthCheck.ok) {
-          console.log('✅ Server is healthy');
         } else {
           console.warn('⚠️ Server health check failed');
         }
@@ -179,13 +158,9 @@ export function DataProvider({ children }: { children: ReactNode }) {
 
         if (isFresh) {
           // Cache is fresh, return immediately
-          console.log(`✅ Cache HIT for category ${categoryId} (fresh)`);
           return cached.data;
         } else {
           // Cache is stale, return it but revalidate in background
-          console.log(
-            `♻️  Cache HIT for category ${categoryId} (stale, revalidating...)`
-          );
 
           // Return stale data immediately for instant UI
           const staleData = cached.data;
@@ -219,7 +194,6 @@ export function DataProvider({ children }: { children: ReactNode }) {
                   duration: 2000,
                 });
 
-                console.log(`🔄 Cache UPDATED for category ${categoryId}`);
               } else {
                 // Data unchanged, just update timestamp
                 const newCache = { data: freshData, timestamp: now };
@@ -239,20 +213,15 @@ export function DataProvider({ children }: { children: ReactNode }) {
       }
 
       // Cache miss - try IndexedDB
-      console.log(
-        `❌ Cache MISS for category ${categoryId}, checking IndexedDB...`
-      );
       const idbCache = await idb.get<ItemsCache>(cacheKey);
 
       if (idbCache && now - idbCache.timestamp < ITEMS_CACHE_TTL) {
-        console.log(`💾 IndexedDB HIT for category ${categoryId}`);
         // Restore to in-memory cache
         setItemsCache(prev => ({ ...prev, [categoryId]: idbCache }));
         return idbCache.data;
       }
 
       // No cache - fetch from network
-      console.log(`🌐 Fetching from network for category ${categoryId}`);
       try {
         const freshDataRaw = await itemsAPI.getAll(categoryId);
         // Filter out any invalid items
@@ -281,7 +250,6 @@ export function DataProvider({ children }: { children: ReactNode }) {
         );
         // If we have stale IndexedDB data, use it as fallback
         if (idbCache) {
-          console.log('📦 Using stale IndexedDB data as fallback');
           return idbCache.data;
         }
         // Return empty array instead of throwing to prevent app crash
@@ -305,7 +273,6 @@ export function DataProvider({ children }: { children: ReactNode }) {
           return;
         }
 
-        console.log(`🔮 Prefetching category ${categoryId}`);
         await getCategoryItems(categoryId, { preferCache: false });
       } catch (err) {
         // Silent fail for prefetch
@@ -317,7 +284,6 @@ export function DataProvider({ children }: { children: ReactNode }) {
 
   // Refetch function for admin updates
   const refetch = useCallback(async () => {
-    console.log('🔄 Force refreshing data...');
     // Clear all caches before refetching
     setItemsCache({});
 
@@ -396,10 +362,8 @@ export function DataProvider({ children }: { children: ReactNode }) {
               </div>
               <button
                 onClick={async () => {
-                  console.log('🔍 Running diagnostics...');
                   const { diagnoseConnection } = await import('./debug');
                   await diagnoseConnection();
-                  console.log('💡 Check console for diagnostic results');
                 }}
                 className='px-3 py-1 text-xs bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded hover:bg-blue-500/20 transition-all'
               >

@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 import type { Identifier, XYCoord } from 'dnd-core';
 import { TableCell, TableRow } from '../ui/table';
@@ -93,7 +93,6 @@ export default function DraggableItem({
         return;
       }
 
-      console.log('🔄 Calling onMove:', { dragIndex, hoverIndex });
       onMove(dragIndex, hoverIndex);
       // Update the drag item's index to prevent infinite loops
       dragItem.index = hoverIndex;
@@ -104,8 +103,6 @@ export default function DraggableItem({
     type: 'item',
     item: () => {
       const dragItem = { id: item.id, index, categoryId: item.category_id, order: item.order };
-      console.log('🚀 Drag started:', dragItem);
-      console.log('🚀 Current item:', { id: item.id, name: item.names?.en, index, order: item.order });
       return dragItem;
     },
     collect: monitor => ({
@@ -115,8 +112,16 @@ export default function DraggableItem({
 
   const opacity = isDragging ? 0.4 : 1;
   const dragRef = useRef<HTMLDivElement>(null);
-  drag(dragRef);
-  drop(ref);
+  
+  // Use useEffect to avoid accessing refs during render
+  useEffect(() => {
+    if (dragRef.current) {
+      drag(dragRef);
+    }
+    if (ref.current) {
+      drop(ref);
+    }
+  }, [drag, drop]);
 
   const category = categories.find(c => c.id === item.category_id);
 

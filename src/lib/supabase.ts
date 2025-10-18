@@ -1,6 +1,6 @@
-import { projectId, publicAnonKey } from './config/supabase';
+import { publicAnonKey } from './config/supabase';
 import { clearSession, loadSession, saveSession } from './sessionManager';
-import type { Category, Item, ItemVariant, Order, Session } from './types';
+import type { Category, Item, Session } from './types';
 import { createClient } from '@supabase/supabase-js';
 
 // Simple auth state management
@@ -11,9 +11,9 @@ const API_BASE =
   'https://eoaissoqwlfvfizfomax.supabase.co/functions/v1/make-server-4050140e';
 
 // Direct Supabase client for KV store access
-const supabaseClient = createClient(
+const _supabaseClient = createClient(
   'https://eoaissoqwlfvfizfomax.supabase.co',
-  publicAnonKey
+  publicAnonKey,
 );
 
 // Simple cache for categories (5 minutes TTL)

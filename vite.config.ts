@@ -53,17 +53,32 @@ export default defineConfig({
   build: {
     target: 'esnext',
     outDir: 'build',
-    sourcemap: true,
+    sourcemap: false, // Disable sourcemaps for production
     minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true, // Remove console.log in production
+        drop_debugger: true,
+      },
+    },
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu'],
+          ui: [
+            '@radix-ui/react-dialog',
+            '@radix-ui/react-dropdown-menu',
+            '@radix-ui/react-sheet',
+            '@radix-ui/react-tabs',
+            '@radix-ui/react-select',
+          ],
+          supabase: ['@supabase/supabase-js', '@jsr/supabase__supabase-js'],
           utils: ['clsx', 'tailwind-merge', 'class-variance-authority'],
+          forms: ['react-hook-form', '@radix-ui/react-form'],
         },
       },
     },
+    chunkSizeWarningLimit: 1000, // Increase chunk size warning limit
   },
   server: {
     port: 3000,

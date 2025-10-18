@@ -14,7 +14,7 @@ async function hashPassword(password: string): Promise<string> {
 
 async function verifyPassword(
   password: string,
-  hash: string
+  hash: string,
 ): Promise<boolean> {
   const hashedPassword = await hashPassword(password);
   return hashedPassword === hash;
@@ -25,7 +25,7 @@ const app = new Hono();
 // Supabase admin client for auth
 const supabase = createClient(
   Deno.env.get('SUPABASE_URL')!,
-  Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!
+  Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!,
 );
 
 // Enable logger

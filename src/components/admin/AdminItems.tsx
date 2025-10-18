@@ -88,7 +88,7 @@ export default function AdminItems({
       id: item.id, 
       name: item.names?.en, 
       order: item.order,
-      category: item.category_id 
+      category: item.category_id,
     }))
   });
 
