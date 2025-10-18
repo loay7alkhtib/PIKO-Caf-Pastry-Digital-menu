@@ -39,7 +39,7 @@ export default function AdminLogin({ onNavigate }: AdminLoginProps) {
         }
       );
       const data = await response.json();
-      console.log('Admin credentials ensured:', data);
+      console.warn('Admin credentials ensured:', data);
     } catch (error) {
       console.error('Error ensuring admin credentials:', error);
     } finally {
@@ -52,7 +52,7 @@ export default function AdminLogin({ onNavigate }: AdminLoginProps) {
     setLoading(true);
 
     try {
-      console.log('🔐 Admin login attempt for:', email);
+      console.warn('🔐 Admin login attempt for:', email);
 
       // Use the same authAPI but with admin-specific handling
       const { error } = await authAPI.signInWithPassword({
@@ -62,7 +62,7 @@ export default function AdminLogin({ onNavigate }: AdminLoginProps) {
 
       if (error) throw error;
 
-      console.log('✅ Admin login successful, navigating to admin panel');
+      console.warn('✅ Admin login successful, navigating to admin panel');
       toast.success(
         lang === 'en'
           ? 'Admin login successful!'
@@ -73,11 +73,11 @@ export default function AdminLogin({ onNavigate }: AdminLoginProps) {
 
       // Navigate to admin panel
       onNavigate('admin');
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('❌ Admin login error:', error);
 
       // Provide more helpful error messages for admin login
-      let errorMessage = error.message || 'Admin login failed';
+      let errorMessage = (error as Error).message || 'Admin login failed';
 
       if (
         errorMessage.includes('Invalid credentials') ||
@@ -148,7 +148,7 @@ export default function AdminLogin({ onNavigate }: AdminLoginProps) {
                 type='email'
                 value={email}
                 onChange={e => setEmail(e.target.value)}
-                placeholder='admin@piko.com'
+                placeholder={t('email', lang)}
                 required
                 className='rounded-xl'
               />
@@ -186,14 +186,6 @@ export default function AdminLogin({ onNavigate }: AdminLoginProps) {
               )}
             </Button>
           </form>
-
-          <p className='text-sm text-muted-foreground text-start'>
-            {lang === 'en'
-              ? 'Demo: admin@piko.com / admin123'
-              : lang === 'tr'
-                ? 'Demo: admin@piko.com / admin123'
-                : 'تجريبي: admin@piko.com / admin123'}
-          </p>
 
           <div className='border-t border-border pt-5 sm:pt-6 space-y-3'>
             <div className='text-start space-y-2'>

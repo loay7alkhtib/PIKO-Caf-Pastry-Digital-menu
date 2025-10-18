@@ -104,7 +104,7 @@ const CategoryMenu = memo(({ categoryId, onNavigate }: CategoryMenuProps) => {
 
   // Clear search when category changes
   useEffect(() => {
-    setSearchQuery('');
+    setSearchQuery(prev => (prev ? '' : prev));
   }, [categoryId]);
 
   const handleLogoTripleTap = () => {
@@ -113,7 +113,11 @@ const CategoryMenu = memo(({ categoryId, onNavigate }: CategoryMenuProps) => {
 
   return (
     <div className='min-h-screen' dir={dirFor(lang)}>
-      <NavBar onLogoTripleTap={handleLogoTripleTap} onNavigate={onNavigate} />
+      <NavBar
+        onLogoTripleTap={handleLogoTripleTap}
+        onNavigate={onNavigate}
+        showAccountIcon={false}
+      />
 
       <div className='max-w-[1400px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6'>
         <Button
