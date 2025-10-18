@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useState, useEffect } from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { Button } from '../ui/button';
@@ -68,9 +68,11 @@ export default function AdminItems({
   });
 
   // Update local items when props change
-  useState(() => {
+  useEffect(() => {
+    console.log('📦 Items updated:', items.length, 'items');
+    console.log('📊 Sample item:', items[0]);
     setLocalItems([...items]);
-  });
+  }, [items]);
 
   // Filter items by selected category
   const filteredItems =
@@ -78,41 +80,93 @@ export default function AdminItems({
       ? localItems
       : localItems.filter(item => item.category_id === selectedCategory);
 
+  console.log('🔍 Filtered items:', {
+    selectedCategory,
+    totalItems: localItems.length,
+    filteredCount: filteredItems.length,
+    sampleFiltered: filteredItems.slice(0, 2).map(item => ({ 
+      id: item.id, 
+      name: item.names?.en, 
+      order: item.order,
+      category: item.category_id 
+    }))
+  });
+
   const moveItem = useCallback(
     async (dragIndex: number, hoverIndex: number) => {
+      console.log('🔄 moveItem called:', { dragIndex, hoverIndex });
+      console.log('📊 filteredItems length:', filteredItems.length);
+      console.log('📊 filteredItems:', filteredItems.map(item => ({ id: item.id, name: item.names?.en, order: item.order })));
+      
       const dragItem = filteredItems[dragIndex];
       const hoverItem = filteredItems[hoverIndex];
 
+      console.log('📊 Items:', { dragItem: dragItem?.names?.en, hoverItem: hoverItem?.names?.en });
+
       // Check if items exist
       if (!dragItem || !hoverItem) {
+        console.log('❌ Missing items:', { dragItem: !!dragItem, hoverItem: !!hoverItem });
         return;
       }
 
       // Only allow reordering within same category
       if (dragItem.category_id !== hoverItem.category_id) {
+        console.log('❌ Different categories:', { 
+          dragCategory: dragItem.category_id, 
+          hoverCategory: hoverItem.category_id 
+        });
         return;
       }
+
+      console.log('🔄 Reordering items:', { 
+        from: dragIndex, 
+        to: hoverIndex,
+        dragItem: dragItem.names?.en,
+        hoverItem: hoverItem.names?.en
+      });
 
       const newItems = [...filteredItems];
       newItems.splice(dragIndex, 1);
       newItems.splice(hoverIndex, 0, dragItem);
 
+      // Update order values for all items in the category
+      const updatedItems = newItems.map((item, index) => ({
+        ...item,
+        order: index,
+      }));
+
+      console.log('📊 Updated items order:', updatedItems.map(item => ({ 
+        id: item.id, 
+        name: item.names?.en, 
+        order: item.order 
+      })));
+
       // Update local state immediately
       const updatedAllItems = localItems.map(item => {
-        const foundItem = newItems.find(ni => ni.id === item.id);
+        const foundItem = updatedItems.find(ni => ni.id === item.id);
         return foundItem || item;
       });
       setLocalItems(updatedAllItems);
 
-      // Update order in backend (we'll use a simple approach: swap the items)
+      // Update order in backend
       try {
-        // For simplicity, we'll just update the display order client-side
-        // In a production app, you'd want to persist order to backend
+        // Create array of items with their new order values
+        const orderUpdates = updatedItems.map(item => ({
+          id: item.id,
+          order: item.order,
+        }));
+
+        console.log('🔄 Calling updateOrder API with:', orderUpdates);
+        
+        // Call bulk update endpoint
+        await itemsAPI.updateOrder(orderUpdates);
         toast.success('Order updated');
       } catch (error: any) {
         console.error('Reorder error:', error);
-        toast.error('Failed to update order');
-        setLocalItems(items); // Revert on error
+        console.log('⚠️ API failed, but keeping local changes for now');
+        toast.warning('Order updated locally (API sync failed)');
+        // Don't revert on error for now - keep the local changes
+        // setLocalItems(items); // Revert on error
       }
     },
     [filteredItems, localItems, items]
@@ -177,6 +231,7 @@ export default function AdminItems({
           .filter(t => t),
         is_available: formData.isAvailable,
         variants: formData.variants.length > 0 ? formData.variants : undefined,
+        order: 0, // New items get order 0 by default
       };
 
       if (editingId) {

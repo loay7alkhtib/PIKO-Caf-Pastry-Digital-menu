@@ -642,6 +642,138 @@ app.get('/make-server-4050140e/categories', async c => {
   }
 });
 
+// Create category endpoint
+app.post('/make-server-4050140e/categories', async c => {
+  try {
+    const body = await c.req.json();
+    console.log('Creating category with data:', body);
+
+    const { names, icon, image, color, order } = body;
+
+    // Generate slug from English name
+    const slug = createSlug(names.en || 'category');
+
+    const { data: category, error } = await supabase
+      .from('categories')
+      .insert({
+        slug,
+        names,
+        icon: icon || '🍽️',
+        image_url: image,
+        color: color || '#0C6071',
+        sort_order: order || 0,
+        is_active: true,
+        created_at: new Date().toISOString(),
+      })
+      .select()
+      .single();
+
+    if (error) {
+      console.error('Error creating category:', error);
+      return c.json({ error: error.message }, 500);
+    }
+
+    // Transform to expected format
+    const transformedCategory = {
+      id: category.id,
+      names: category.names,
+      icon: category.icon,
+      color: category.color,
+      image: category.image_url,
+      order: category.sort_order,
+      created_at: category.created_at,
+    };
+
+    console.log('Category created successfully:', transformedCategory);
+    return c.json(transformedCategory);
+  } catch (error: any) {
+    console.error('Error creating category:', error);
+    return c.json({ error: error.message }, 500);
+  }
+});
+
+// Update category endpoint
+app.put('/make-server-4050140e/categories/:id', async c => {
+  try {
+    const id = c.req.param('id');
+    const body = await c.req.json();
+    console.log(`Updating category ${id} with data:`, body);
+
+    const { names, icon, image, color, order } = body;
+
+    // Update slug if English name changed
+    let updateData: any = {
+      names,
+      icon: icon || '🍽️',
+      image_url: image,
+      color: color || '#0C6071',
+      sort_order: order || 0,
+      updated_at: new Date().toISOString(),
+    };
+
+    if (names?.en) {
+      updateData.slug = createSlug(names.en);
+    }
+
+    const { data: category, error } = await supabase
+      .from('categories')
+      .update(updateData)
+      .eq('id', id)
+      .select()
+      .single();
+
+    if (error) {
+      console.error('Error updating category:', error);
+      return c.json({ error: error.message }, 500);
+    }
+
+    // Transform to expected format
+    const transformedCategory = {
+      id: category.id,
+      names: category.names,
+      icon: category.icon,
+      color: category.color,
+      image: category.image_url,
+      order: category.sort_order,
+      created_at: category.created_at,
+    };
+
+    console.log('Category updated successfully:', transformedCategory);
+    return c.json(transformedCategory);
+  } catch (error: any) {
+    console.error('Error updating category:', error);
+    return c.json({ error: error.message }, 500);
+  }
+});
+
+// Delete category endpoint
+app.delete('/make-server-4050140e/categories/:id', async c => {
+  try {
+    const id = c.req.param('id');
+    console.log(`Deleting category ${id}`);
+
+    // Soft delete by setting is_active to false
+    const { error } = await supabase
+      .from('categories')
+      .update({
+        is_active: false,
+        updated_at: new Date().toISOString(),
+      })
+      .eq('id', id);
+
+    if (error) {
+      console.error('Error deleting category:', error);
+      return c.json({ error: error.message }, 500);
+    }
+
+    console.log('Category deleted successfully');
+    return c.json({ success: true });
+  } catch (error: any) {
+    console.error('Error deleting category:', error);
+    return c.json({ error: error.message }, 500);
+  }
+});
+
 // Items endpoints
 app.get('/make-server-4050140e/items', async c => {
   try {
@@ -694,12 +826,245 @@ app.get('/make-server-4050140e/items', async c => {
           : undefined,
       tags: item.tags || ['menu-item'],
       is_available: item.is_active,
+      order: item.sort_order || 0,
       created_at: item.created_at,
     }));
 
     return c.json(transformedItems);
   } catch (error: any) {
     console.error('Error fetching items:', error);
+    return c.json({ error: error.message }, 500);
+  }
+});
+
+// Create item endpoint
+app.post('/make-server-4050140e/items', async c => {
+  try {
+    const body = await c.req.json();
+    console.log('Creating item with data:', body);
+
+    const { names, descriptions, category_id, price, image, tags, variants, order } = body;
+
+    const { data: item, error } = await supabase
+      .from('items')
+      .insert({
+        category_id,
+        names,
+        descriptions,
+        price: price || 0,
+        image_url: image,
+        tags: tags || ['menu-item'],
+        variants: variants || [],
+        is_active: true,
+        sort_order: order || 0,
+        created_at: new Date().toISOString(),
+      })
+      .select()
+      .single();
+
+    if (error) {
+      console.error('Error creating item:', error);
+      return c.json({ error: error.message }, 500);
+    }
+
+    // Transform to expected format
+    const transformedItem = {
+      id: item.id,
+      names: item.names,
+      descriptions: item.descriptions,
+      category_id: item.category_id,
+      price: item.price,
+      image: item.image_url,
+      variants: item.variants,
+      tags: item.tags,
+      is_available: item.is_active,
+      order: item.sort_order || 0,
+      created_at: item.created_at,
+    };
+
+    console.log('Item created successfully:', transformedItem);
+    return c.json(transformedItem);
+  } catch (error: any) {
+    console.error('Error creating item:', error);
+    return c.json({ error: error.message }, 500);
+  }
+});
+
+// Update item endpoint
+app.put('/make-server-4050140e/items/:id', async c => {
+  try {
+    const id = c.req.param('id');
+    const body = await c.req.json();
+    console.log(`Updating item ${id} with data:`, body);
+
+    const { names, descriptions, category_id, price, image, tags, variants, order } = body;
+
+    const { data: item, error } = await supabase
+      .from('items')
+      .update({
+        category_id,
+        names,
+        descriptions,
+        price: price || 0,
+        image_url: image,
+        tags: tags || ['menu-item'],
+        variants: variants || [],
+        sort_order: order !== undefined ? order : undefined,
+        updated_at: new Date().toISOString(),
+      })
+      .eq('id', id)
+      .select()
+      .single();
+
+    if (error) {
+      console.error('Error updating item:', error);
+      return c.json({ error: error.message }, 500);
+    }
+
+    // Transform to expected format
+    const transformedItem = {
+      id: item.id,
+      names: item.names,
+      descriptions: item.descriptions,
+      category_id: item.category_id,
+      price: item.price,
+      image: item.image_url,
+      variants: item.variants,
+      tags: item.tags,
+      is_available: item.is_active,
+      order: item.sort_order || 0,
+      created_at: item.created_at,
+    };
+
+    console.log('Item updated successfully:', transformedItem);
+    return c.json(transformedItem);
+  } catch (error: any) {
+    console.error('Error updating item:', error);
+    return c.json({ error: error.message }, 500);
+  }
+});
+
+// Delete item endpoint
+app.delete('/make-server-4050140e/items/:id', async c => {
+  try {
+    const id = c.req.param('id');
+    console.log(`Deleting item ${id}`);
+
+    // Soft delete by setting is_active to false
+    const { error } = await supabase
+      .from('items')
+      .update({
+        is_active: false,
+        updated_at: new Date().toISOString(),
+      })
+      .eq('id', id);
+
+    if (error) {
+      console.error('Error deleting item:', error);
+      return c.json({ error: error.message }, 500);
+    }
+
+    console.log('Item deleted successfully');
+    return c.json({ success: true });
+  } catch (error: any) {
+    console.error('Error deleting item:', error);
+    return c.json({ error: error.message }, 500);
+  }
+});
+
+// Bulk delete all items endpoint
+app.delete('/make-server-4050140e/items/bulk/delete-all', async c => {
+  try {
+    console.log('Bulk deleting all items');
+
+    // Soft delete all items by setting is_active to false
+    const { error } = await supabase
+      .from('items')
+      .update({
+        is_active: false,
+        updated_at: new Date().toISOString(),
+      });
+
+    if (error) {
+      console.error('Error bulk deleting items:', error);
+      return c.json({ error: error.message }, 500);
+    }
+
+    console.log('All items deleted successfully');
+    return c.json({ success: true });
+  } catch (error: any) {
+    console.error('Error bulk deleting items:', error);
+    return c.json({ error: error.message }, 500);
+  }
+});
+
+// Bulk create items endpoint
+app.post('/make-server-4050140e/items/bulk/create', async c => {
+  try {
+    const { items } = await c.req.json();
+    console.log(`Bulk creating ${items.length} items`);
+
+    const itemsToInsert = items.map((item: any) => ({
+      category_id: item.category_id,
+      names: item.names,
+      descriptions: item.descriptions,
+      price: item.price || 0,
+      image_url: item.image,
+      tags: item.tags || ['menu-item'],
+      variants: item.variants || [],
+      is_active: true,
+      sort_order: 0,
+      created_at: new Date().toISOString(),
+    }));
+
+    const { data: createdItems, error } = await supabase
+      .from('items')
+      .insert(itemsToInsert)
+      .select();
+
+    if (error) {
+      console.error('Error bulk creating items:', error);
+      return c.json({ error: error.message }, 500);
+    }
+
+    console.log(`${createdItems.length} items created successfully`);
+    return c.json({ success: true, count: createdItems.length });
+  } catch (error: any) {
+    console.error('Error bulk creating items:', error);
+    return c.json({ error: error.message }, 500);
+  }
+});
+
+// Bulk update item order endpoint
+app.put('/make-server-4050140e/items/bulk/update-order', async c => {
+  try {
+    const { orderUpdates } = await c.req.json();
+    console.log(`Bulk updating order for ${orderUpdates.length} items`);
+
+    // Update each item's sort_order
+    const updatePromises = orderUpdates.map((update: { id: string; order: number }) =>
+      supabase
+        .from('items')
+        .update({ 
+          sort_order: update.order,
+          updated_at: new Date().toISOString()
+        })
+        .eq('id', update.id)
+    );
+
+    const results = await Promise.all(updatePromises);
+    
+    // Check for any errors
+    const errors = results.filter(result => result.error);
+    if (errors.length > 0) {
+      console.error('Error updating item orders:', errors);
+      return c.json({ error: 'Failed to update some item orders' }, 500);
+    }
+
+    console.log(`Successfully updated order for ${orderUpdates.length} items`);
+    return c.json({ success: true, count: orderUpdates.length });
+  } catch (error: any) {
+    console.error('Error bulk updating item order:', error);
     return c.json({ error: error.message }, 500);
   }
 });

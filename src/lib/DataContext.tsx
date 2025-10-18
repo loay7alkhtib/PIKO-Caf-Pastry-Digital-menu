@@ -76,10 +76,26 @@ export function DataProvider({ children }: { children: ReactNode }) {
         )
         : [];
 
+      // Ensure all items have an order field, defaulting to 0
+      const itemsWithOrder = itemsData.map((item, index) => ({
+        ...item,
+        order: item.order ?? index
+      }));
+
+      // Sort items by order within each category
+      const sortedItems = itemsWithOrder.sort((a, b) => {
+        // First sort by category_id, then by order
+        if (a.category_id !== b.category_id) {
+          return (a.category_id || '').localeCompare(b.category_id || '');
+        }
+        return (a.order || 0) - (b.order || 0);
+      });
+
       console.log('📊 Received data:', {
         categoriesData: categoriesData?.length || 0,
         itemsDataRaw: itemsDataRaw?.length || 0,
         itemsDataFiltered: itemsData?.length || 0,
+        itemsDataSorted: sortedItems?.length || 0,
       });
 
       // If both are empty, there might be an initialization issue
@@ -90,11 +106,11 @@ export function DataProvider({ children }: { children: ReactNode }) {
       }
 
       setCategories(Array.isArray(categoriesData) ? categoriesData : []);
-      setItems(itemsData);
+      setItems(sortedItems);
 
       console.log('✅ Data loaded:', {
         categories: categoriesData?.length || 0,
-        items: itemsData?.length || 0,
+        items: sortedItems?.length || 0,
       });
     } catch (err) {
       console.error('❌ Data fetch error:', err);

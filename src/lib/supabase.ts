@@ -134,6 +134,21 @@ export const itemsAPI = {
       method: 'POST',
       body: JSON.stringify({ items }),
     }),
+
+  updateOrder: async (orderUpdates: { id: string; order: number }[]) => {
+    console.log('🔄 Calling updateOrder API endpoint...');
+    try {
+      const result = await apiCall('/items/bulk/update-order', {
+        method: 'PUT',
+        body: JSON.stringify({ orderUpdates }),
+      });
+      console.log('✅ updateOrder API success:', result);
+      return result;
+    } catch (error) {
+      console.error('❌ updateOrder API error:', error);
+      throw error;
+    }
+  },
 };
 
 // Orders API

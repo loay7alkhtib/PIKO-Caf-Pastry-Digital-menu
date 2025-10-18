@@ -22,6 +22,7 @@ interface DragItem {
   id: string;
   type: string;
   categoryId: string;
+  order: number;
 }
 
 export default function DraggableItem({
@@ -33,6 +34,7 @@ export default function DraggableItem({
   onDelete,
 }: DraggableItemProps) {
   const ref = useRef<HTMLTableRowElement>(null);
+  const lastHoverTime = useRef<number>(0);
 
   const [{ handlerId }, drop] = useDrop<
     DragItem,
@@ -53,13 +55,25 @@ export default function DraggableItem({
       const dragIndex = dragItem.index;
       const hoverIndex = index;
 
-      // Don't replace items with themselves
-      if (dragIndex === hoverIndex) {
+      // Throttle hover events to prevent excessive calls
+      const now = Date.now();
+      if (now - lastHoverTime.current < 100) {
+        return;
+      }
+      lastHoverTime.current = now;
+
+      // Prevent dragging the same item over itself
+      if (dragItem.id === item.id) {
         return;
       }
 
       // Only allow reordering within the same category
       if (dragItem.categoryId !== item.category_id) {
+        return;
+      }
+
+      // Don't replace items with themselves
+      if (dragIndex === hoverIndex) {
         return;
       }
 
@@ -79,7 +93,9 @@ export default function DraggableItem({
         return;
       }
 
+      console.log('🔄 Calling onMove:', { dragIndex, hoverIndex });
       onMove(dragIndex, hoverIndex);
+      // Update the drag item's index to prevent infinite loops
       dragItem.index = hoverIndex;
     },
   });
@@ -87,7 +103,10 @@ export default function DraggableItem({
   const [{ isDragging }, drag] = useDrag({
     type: 'item',
     item: () => {
-      return { id: item.id, index, categoryId: item.category_id };
+      const dragItem = { id: item.id, index, categoryId: item.category_id, order: item.order };
+      console.log('🚀 Drag started:', dragItem);
+      console.log('🚀 Current item:', { id: item.id, name: item.names?.en, index, order: item.order });
+      return dragItem;
     },
     collect: monitor => ({
       isDragging: monitor.isDragging(),
@@ -95,7 +114,9 @@ export default function DraggableItem({
   });
 
   const opacity = isDragging ? 0.4 : 1;
-  drag(drop(ref));
+  const dragRef = useRef<HTMLDivElement>(null);
+  drag(dragRef);
+  drop(ref);
 
   const category = categories.find(c => c.id === item.category_id);
 
@@ -107,7 +128,16 @@ export default function DraggableItem({
       className='transition-opacity'
     >
       <TableCell className='w-8'>
-        <div className='cursor-grab active:cursor-grabbing text-muted-foreground hover:text-foreground'>
+        <div 
+          ref={dragRef}
+          className={`cursor-grab active:cursor-grabbing text-muted-foreground hover:text-foreground ${
+            isDragging ? 'bg-blue-100' : ''
+          }`}
+          style={{ 
+            backgroundColor: isDragging ? '#dbeafe' : 'transparent',
+            border: isDragging ? '2px solid #3b82f6' : 'none'
+          }}
+        >
           <GripVertical className='w-5 h-5' />
         </div>
       </TableCell>

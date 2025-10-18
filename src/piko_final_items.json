@@ -3904,5 +3904,249 @@
         "price": 220
       }
     ]
+  },
+  {
+    "names": {
+      "en": "Hot Chocolate",
+      "tr": "Sıcak Çikolata",
+      "ar": "شوكولاتة ساخنة"
+    },
+    "price": 180,
+    "category_id": "cat-hot-coffee",
+    "tags": ["Hot", "Chocolate"]
+  },
+  {
+    "names": {
+      "en": "Hot Chocolate",
+      "tr": "Sıcak Çikolata",
+      "ar": "شوكولاتة ساخنة وسط"
+    },
+    "price": 200,
+    "category_id": "cat-hot-coffee",
+    "tags": ["Hot", "Chocolate"],
+    "variants": [
+      {
+        "size": "Medium",
+        "price": 200
+      }
+    ]
+  },
+  {
+    "names": {
+      "en": "Hot Chocolate",
+      "tr": "Sıcak Çikolata",
+      "ar": "شوكولاتة ساخنة كبير"
+    },
+    "price": 220,
+    "category_id": "cat-hot-coffee",
+    "tags": ["Hot", "Chocolate"],
+    "variants": [
+      {
+        "size": "Large",
+        "price": 220
+      }
+    ]
+  },
+  {
+    "names": {
+      "en": "Spanish Hot Chocolate",
+      "tr": "İspanyol Sıcak Çikolata",
+      "ar": "شوكولاتة ساخنة إسبانية"
+    },
+    "price": 200,
+    "category_id": "cat-hot-coffee",
+    "tags": ["Hot", "Chocolate", "Spanish"]
+  },
+  {
+    "names": {
+      "en": "Spanish Hot Chocolate",
+      "tr": "İspanyol Sıcak Çikolata",
+      "ar": "شوكولاتة ساخنة إسبانية وسط"
+    },
+    "price": 220,
+    "category_id": "cat-hot-coffee",
+    "tags": ["Hot", "Chocolate", "Spanish"],
+    "variants": [
+      {
+        "size": "Medium",
+        "price": 220
+      }
+    ]
+  },
+  {
+    "names": {
+      "en": "Spanish Hot Chocolate",
+      "tr": "İspanyol Sıcak Çikolata",
+      "ar": "شوكولاتة ساخنة إسبانية كبير"
+    },
+    "price": 240,
+    "category_id": "cat-hot-coffee",
+    "tags": ["Hot", "Chocolate", "Spanish"],
+    "variants": [
+      {
+        "size": "Large",
+        "price": 240
+      }
+    ]
+  },
+  {
+    "names": {
+      "en": "Matcha Latte",
+      "tr": "Matcha Latte",
+      "ar": "ماتشا لاتيه"
+    },
+    "price": 190,
+    "category_id": "cat-hot-coffee",
+    "tags": ["Hot", "Milky", "Matcha"]
+  },
+  {
+    "names": {
+      "en": "Matcha Latte",
+      "tr": "Matcha Latte",
+      "ar": "ماتشا لاتيه وسط"
+    },
+    "price": 210,
+    "category_id": "cat-hot-coffee",
+    "tags": ["Hot", "Milky", "Matcha"],
+    "variants": [
+      {
+        "size": "Medium",
+        "price": 210
+      }
+    ]
+  },
+  {
+    "names": {
+      "en": "Matcha Latte",
+      "tr": "Matcha Latte",
+      "ar": "ماتشا لاتيه كبير"
+    },
+    "price": 230,
+    "category_id": "cat-hot-coffee",
+    "tags": ["Hot", "Milky", "Matcha"],
+    "variants": [
+      {
+        "size": "Large",
+        "price": 230
+      }
+    ]
+  },
+  {
+    "names": {
+      "en": "Saffron Latte",
+      "tr": "Safran Latte",
+      "ar": "زعفران لاتيه"
+    },
+    "price": 220,
+    "category_id": "cat-hot-coffee",
+    "tags": ["Hot", "Milky", "Saffron"]
+  },
+  {
+    "names": {
+      "en": "Saffron Latte",
+      "tr": "Safran Latte",
+      "ar": "زعفران لاتيه وسط"
+    },
+    "price": 240,
+    "category_id": "cat-hot-coffee",
+    "tags": ["Hot", "Milky", "Saffron"],
+    "variants": [
+      {
+        "size": "Medium",
+        "price": 240
+      }
+    ]
+  },
+  {
+    "names": {
+      "en": "Saffron Latte",
+      "tr": "Safran Latte",
+      "ar": "زعفران لاتيه كبير"
+    },
+    "price": 260,
+    "category_id": "cat-hot-coffee",
+    "tags": ["Hot", "Milky", "Saffron"],
+    "variants": [
+      {
+        "size": "Large",
+        "price": 260
+      }
+    ]
+  },
+  {
+    "names": {
+      "en": "Turkish Coffee",
+      "tr": "Türk Kahvesi",
+      "ar": "قهوة تركية"
+    },
+    "price": 100,
+    "category_id": "cat-hot-coffee",
+    "tags": ["Hot", "Turkish", "Traditional"]
+  },
+  {
+    "names": {
+      "en": "Turkish Coffee",
+      "tr": "Türk Kahvesi",
+      "ar": "قهوة تركية دبل"
+    },
+    "price": 140,
+    "category_id": "cat-hot-coffee",
+    "tags": ["Hot", "Turkish", "Traditional"],
+    "variants": [
+      {
+        "size": "Double",
+        "price": 140
+      }
+    ]
+  },
+  {
+    "names": {
+      "en": "Nutella Waffle",
+      "tr": "Nutella Waffle",
+      "ar": "وافل نوتيلا"
+    },
+    "price": 250,
+    "category_id": "cat-desserts-cakes",
+    "tags": ["Hot"]
+  },
+  {
+    "names": {
+      "en": "Lotus Pancake",
+      "tr": "Lotus Pancake",
+      "ar": "بان كيك لوتس"
+    },
+    "price": 250,
+    "category_id": "cat-desserts-cakes",
+    "tags": ["Hot"]
+  },
+  {
+    "names": {
+      "en": "French Toast",
+      "tr": "Fransız Tostu",
+      "ar": "توست فرنسي"
+    },
+    "price": 250,
+    "category_id": "cat-desserts-cakes",
+    "tags": ["Hot"]
+  },
+  {
+    "names": {
+      "en": "Milk Cake",
+      "tr": "Süt Keki",
+      "ar": "كيك حليب"
+    },
+    "price": 250,
+    "category_id": "cat-desserts-cakes",
+    "tags": ["Hot"]
+  },
+  {
+    "names": {
+      "en": "Crepe Chocolate",
+      "tr": "Çikolatalı Krep",
+      "ar": "كريب شوكولاتة"
+    },
+    "price": 250,
+    "category_id": "cat-desserts-cakes",
+    "tags": ["Hot"]
   }
 ]

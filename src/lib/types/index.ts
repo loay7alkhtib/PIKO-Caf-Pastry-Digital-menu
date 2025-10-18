@@ -24,6 +24,7 @@ export interface Item {
   tags: string[];
   variants?: ItemVariant[]; // Optional size variants
   is_available?: boolean; // Availability status
+  order: number; // Display order within category
   created_at: string;
 }
 
