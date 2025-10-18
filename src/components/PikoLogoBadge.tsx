@@ -12,7 +12,7 @@ export default function PikoLogoBadge({
 }: PikoLogoBadgeProps) {
   const lastTap = useRef(0);
   const tapCount = useRef(0);
-  const longPressTimer = useRef<NodeJS.Timeout | null>(null);
+  const longPressTimer = useRef<number | null>(null);
 
   const handleClick = () => {
     const now = Date.now();

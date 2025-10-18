@@ -14,7 +14,7 @@ async function hashPassword(password: string): Promise<string> {
 
 async function verifyPassword(
   password: string,
-  hash: string,
+  hash: string
 ): Promise<boolean> {
   const hashedPassword = await hashPassword(password);
   return hashedPassword === hash;
@@ -25,7 +25,7 @@ const app = new Hono();
 // Supabase admin client for auth
 const supabase = createClient(
   Deno.env.get('SUPABASE_URL')!,
-  Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!,
+  Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!
 );
 
 // Enable logger
@@ -40,7 +40,7 @@ app.use(
     allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     exposeHeaders: ['Content-Length'],
     maxAge: 600,
-  })
+  }),
 );
 
 // Helper function to generate UUID
@@ -355,7 +355,7 @@ app.post('/make-server-4050140e/auth/signup', async c => {
         error: error.message || 'Signup failed',
         details: String(error),
       },
-      500
+      500,
     );
   }
 });
@@ -373,7 +373,7 @@ app.get('/make-server-4050140e/auth/session', async c => {
 
     console.log(
       '🔍 Checking session for token:',
-      `${token.substring(0, 8)}...`
+      `${token.substring(0, 8)}...`,
     );
 
     // Check session in database
@@ -485,7 +485,7 @@ app.post('/make-server-4050140e/auth/login', async c => {
           is_admin: true,
           created_at: new Date().toISOString(),
           expires_at: new Date(
-            Date.now() + 30 * 24 * 60 * 60 * 1000
+            Date.now() + 30 * 24 * 60 * 60 * 1000,
           ).toISOString(), // 30 days
         });
 
@@ -527,21 +527,21 @@ app.post('/make-server-4050140e/auth/login', async c => {
       console.log('❌ Error details:', credentialsError);
       return c.json(
         { error: 'Invalid credentials. Please check your email or sign up.' },
-        401
+        401,
       );
     }
 
     console.log('✅ User found in database:', userCredentials.email);
     console.log(
       '✅ User password hash:',
-      userCredentials.password_hash ? 'Present' : 'Missing'
+      userCredentials.password_hash ? 'Present' : 'Missing',
     );
 
     // Verify password using hashed comparison
     console.log('🔍 Verifying password hash...');
     const passwordMatch = await verifyPassword(
       password,
-      userCredentials.password_hash
+      userCredentials.password_hash,
     );
     console.log('🔍 Password match:', passwordMatch ? 'Yes' : 'No');
 
@@ -559,7 +559,7 @@ app.post('/make-server-4050140e/auth/login', async c => {
         is_admin: false,
         created_at: new Date().toISOString(),
         expires_at: new Date(
-          Date.now() + 30 * 24 * 60 * 60 * 1000
+          Date.now() + 30 * 24 * 60 * 60 * 1000,
         ).toISOString(), // 30 days
       });
 
@@ -588,7 +588,7 @@ app.post('/make-server-4050140e/auth/login', async c => {
       console.log('❌ Password mismatch');
       return c.json(
         { error: 'Invalid credentials. Please check your email or sign up.' },
-        401
+        401,
       );
     }
   } catch (error: any) {
@@ -614,7 +614,7 @@ app.get('/make-server-4050140e/categories', async c => {
         sort_order,
         is_active,
         created_at
-      `
+      `,
       )
       .eq('is_active', true)
       .order('sort_order');
@@ -702,7 +702,7 @@ app.put('/make-server-4050140e/categories/:id', async c => {
     const { names, icon, image, color, order } = body;
 
     // Update slug if English name changed
-    let updateData: any = {
+    const updateData: any = {
       names,
       icon: icon || '🍽️',
       image_url: image,
@@ -795,7 +795,7 @@ app.get('/make-server-4050140e/items', async c => {
         is_active,
         sort_order,
         created_at
-      `
+      `,
       )
       .eq('is_active', true);
 
@@ -843,7 +843,16 @@ app.post('/make-server-4050140e/items', async c => {
     const body = await c.req.json();
     console.log('Creating item with data:', body);
 
-    const { names, descriptions, category_id, price, image, tags, variants, order } = body;
+    const {
+      names,
+      descriptions,
+      category_id,
+      price,
+      image,
+      tags,
+      variants,
+      order,
+    } = body;
 
     const { data: item, error } = await supabase
       .from('items')
@@ -897,7 +906,16 @@ app.put('/make-server-4050140e/items/:id', async c => {
     const body = await c.req.json();
     console.log(`Updating item ${id} with data:`, body);
 
-    const { names, descriptions, category_id, price, image, tags, variants, order } = body;
+    const {
+      names,
+      descriptions,
+      category_id,
+      price,
+      image,
+      tags,
+      variants,
+      order,
+    } = body;
 
     const { data: item, error } = await supabase
       .from('items')
@@ -978,12 +996,10 @@ app.delete('/make-server-4050140e/items/bulk/delete-all', async c => {
     console.log('Bulk deleting all items');
 
     // Soft delete all items by setting is_active to false
-    const { error } = await supabase
-      .from('items')
-      .update({
-        is_active: false,
-        updated_at: new Date().toISOString(),
-      });
+    const { error } = await supabase.from('items').update({
+      is_active: false,
+      updated_at: new Date().toISOString(),
+    });
 
     if (error) {
       console.error('Error bulk deleting items:', error);
@@ -1042,18 +1058,19 @@ app.put('/make-server-4050140e/items/bulk/update-order', async c => {
     console.log(`Bulk updating order for ${orderUpdates.length} items`);
 
     // Update each item's sort_order
-    const updatePromises = orderUpdates.map((update: { id: string; order: number }) =>
-      supabase
-        .from('items')
-        .update({ 
-          sort_order: update.order,
-          updated_at: new Date().toISOString()
-        })
-        .eq('id', update.id)
+    const updatePromises = orderUpdates.map(
+      (update: { id: string; order: number }) =>
+        supabase
+          .from('items')
+          .update({
+            sort_order: update.order,
+            updated_at: new Date().toISOString(),
+          })
+          .eq('id', update.id),
     );
 
     const results = await Promise.all(updatePromises);
-    
+
     // Check for any errors
     const errors = results.filter(result => result.error);
     if (errors.length > 0) {

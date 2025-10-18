@@ -1,4 +1,4 @@
-import { useCallback, useState, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { Button } from '../ui/button';
@@ -84,45 +84,58 @@ export default function AdminItems({
     selectedCategory,
     totalItems: localItems.length,
     filteredCount: filteredItems.length,
-    sampleFiltered: filteredItems.slice(0, 2).map(item => ({ 
-      id: item.id, 
-      name: item.names?.en, 
+    sampleFiltered: filteredItems.slice(0, 2).map(item => ({
+      id: item.id,
+      name: item.names?.en,
       order: item.order,
       category: item.category_id,
-    }))
+    })),
   });
 
   const moveItem = useCallback(
     async (dragIndex: number, hoverIndex: number) => {
       console.log('🔄 moveItem called:', { dragIndex, hoverIndex });
       console.log('📊 filteredItems length:', filteredItems.length);
-      console.log('📊 filteredItems:', filteredItems.map(item => ({ id: item.id, name: item.names?.en, order: item.order })));
-      
+      console.log(
+        '📊 filteredItems:',
+        filteredItems.map(item => ({
+          id: item.id,
+          name: item.names?.en,
+          order: item.order,
+        })),
+      );
+
       const dragItem = filteredItems[dragIndex];
       const hoverItem = filteredItems[hoverIndex];
 
-      console.log('📊 Items:', { dragItem: dragItem?.names?.en, hoverItem: hoverItem?.names?.en });
+      console.log('📊 Items:', {
+        dragItem: dragItem?.names?.en,
+        hoverItem: hoverItem?.names?.en,
+      });
 
       // Check if items exist
       if (!dragItem || !hoverItem) {
-        console.log('❌ Missing items:', { dragItem: !!dragItem, hoverItem: !!hoverItem });
+        console.log('❌ Missing items:', {
+          dragItem: !!dragItem,
+          hoverItem: !!hoverItem,
+        });
         return;
       }
 
       // Only allow reordering within same category
       if (dragItem.category_id !== hoverItem.category_id) {
         console.log('❌ Different categories:', {
-          dragCategory: dragItem.category_id, 
-          hoverCategory: hoverItem.category_id 
+          dragCategory: dragItem.category_id,
+          hoverCategory: hoverItem.category_id, 
         });
         return;
       }
 
-      console.log('🔄 Reordering items:', { 
-        from: dragIndex, 
+      console.log('🔄 Reordering items:', {
+        from: dragIndex,
         to: hoverIndex,
         dragItem: dragItem.names?.en,
-        hoverItem: hoverItem.names?.en
+        hoverItem: hoverItem.names?.en,
       });
 
       const newItems = [...filteredItems];
@@ -135,11 +148,14 @@ export default function AdminItems({
         order: index,
       }));
 
-      console.log('📊 Updated items order:', updatedItems.map(item => ({ 
-        id: item.id, 
-        name: item.names?.en, 
-        order: item.order 
-      })));
+      console.log(
+        '📊 Updated items order:',
+        updatedItems.map(item => ({
+          id: item.id,
+          name: item.names?.en,
+          order: item.order,
+        }))
+      );
 
       // Update local state immediately
       const updatedAllItems = localItems.map(item => {
@@ -157,7 +173,7 @@ export default function AdminItems({
         }));
 
         console.log('🔄 Calling updateOrder API with:', orderUpdates);
-        
+
         // Call bulk update endpoint
         await itemsAPI.updateOrder(orderUpdates);
         toast.success('Order updated');
@@ -169,7 +185,7 @@ export default function AdminItems({
         // setLocalItems(items); // Revert on error
       }
     },
-    [filteredItems, localItems, items]
+    [filteredItems, localItems, items],
   );
 
   const openDialog = (item?: Item) => {
@@ -310,7 +326,7 @@ export default function AdminItems({
           </Badge>
           {categories.map(cat => {
             const count = items.filter(
-              item => item.category_id === cat.id
+              item => item.category_id === cat.id,
             ).length;
             return (
               <Badge
@@ -604,7 +620,7 @@ export default function AdminItems({
                     size='sm'
                     onClick={() => {
                       const newVariants = formData.variants.filter(
-                        (_, i) => i !== index
+                        (_, i) => i !== index,
                       );
                       setFormData({ ...formData, variants: newVariants });
                     }}

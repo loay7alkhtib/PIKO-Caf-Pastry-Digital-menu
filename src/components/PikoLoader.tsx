@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Progress } from './ui/progress';
 import { useLang } from '../lib/LangContext';
 import { dirFor, t } from '../lib/i18n';
@@ -8,7 +8,7 @@ import { gsap } from 'gsap';
 export default function PikoLoader() {
   const [progress, setProgress] = useState(0);
   const { lang } = useLang();
-  
+
   // Refs for GSAP animations
   const logoRef = useRef<HTMLDivElement>(null);
   const progressRef = useRef<HTMLDivElement>(null);
@@ -21,23 +21,32 @@ export default function PikoLoader() {
     const timer = setTimeout(() => {
       // GSAP animations on mount
       const tl = gsap.timeline();
-      
+
       // Initial setup - hide all elements
-      gsap.set([logoRef.current, progressRef.current, textRef.current, dotsRef.current], {
-        opacity: 0,
-        y: 50
-      });
-    
+      gsap.set(
+        [
+          logoRef.current,
+          progressRef.current,
+          textRef.current,
+          dotsRef.current,
+        ],
+        {
+          opacity: 0,
+          y: 50,
+        },
+      );
+
       // Animate background elements with complex floating animations
       if (backgroundRef.current) {
         const children = backgroundRef.current.children;
-        
+
         // Initial entrance animation
-        gsap.fromTo(children, 
-          { 
-            scale: 0, 
+        gsap.fromTo(
+          children,
+          {
+            scale: 0,
             rotation: -180,
-            opacity: 0 
+            opacity: 0,
           },
           {
             scale: 1,
@@ -45,39 +54,39 @@ export default function PikoLoader() {
             opacity: 0.1,
             duration: 1.5,
             stagger: 0.3,
-            ease: "back.out(1.7)"
-          }
+            ease: 'back.out(1.7)',
+          },
         );
-        
+
         // Create floating animations for each element
         Array.from(children).forEach((child: Element, index: number) => {
-          const duration = 15 + (index * 3); // Varying durations
+          const duration = 15 + index * 3; // Varying durations
           const delay = index * 0.5;
-          
+
           gsap.to(child, {
-            x: `+=${100 + (index * 50)}`,
-            y: `+=${-50 + (index * 30)}`,
-            rotation: `+=${360 + (index * 180)}`,
-            duration: duration,
-            ease: "none",
+            x: `+=${100 + index * 50}`,
+            y: `+=${-50 + index * 30}`,
+            rotation: `+=${360 + index * 180}`,
+            duration,
+            ease: 'none',
             repeat: -1,
             yoyo: true,
-            delay: delay
+            delay,
           });
-          
+
           // Add pulsing scale effect
           gsap.to(child, {
             scale: 1.2,
             opacity: 0.2,
-            duration: 2 + (index * 0.5),
-            ease: "power2.inOut",
+            duration: 2 + index * 0.5,
+            ease: 'power2.inOut',
             repeat: -1,
             yoyo: true,
-            delay: delay + 1
+            delay: delay + 1,
           });
         });
       }
-      
+
       // Logo entrance animation
       tl.to(logoRef.current, {
         opacity: 1,
@@ -85,38 +94,54 @@ export default function PikoLoader() {
         scale: 1,
         rotation: 0,
         duration: 1.2,
-        ease: "elastic.out(1, 0.3)"
+        ease: 'elastic.out(1, 0.3)',
       })
-      // Add pulsing glow effect to logo
-      .to(logoRef.current?.querySelector('.glow-effect') || [], {
-        scale: 1.3,
-        opacity: 0.8,
-        duration: 2,
-        repeat: -1,
-        yoyo: true,
-        ease: "power2.inOut"
-      }, "-=0.5")
-      // Text animation
-      .to(textRef.current, {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: "power2.out"
-      }, "-=0.3")
-      // Progress bar animation
-      .to(progressRef.current, {
-        opacity: 1,
-        y: 0,
-        duration: 0.6,
-        ease: "power2.out"
-      }, "-=0.2")
-      // Dots animation
-      .to(dotsRef.current, {
-        opacity: 1,
-        y: 0,
-        duration: 0.4,
-        ease: "power2.out"
-      }, "-=0.1");
+        // Add pulsing glow effect to logo
+        .to(
+          logoRef.current?.querySelector('.glow-effect') || [],
+          {
+            scale: 1.3,
+            opacity: 0.8,
+            duration: 2,
+            repeat: -1,
+            yoyo: true,
+            ease: 'power2.inOut',
+          },
+          '-=0.5',
+        )
+        // Text animation
+        .to(
+          textRef.current,
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: 'power2.out',
+          },
+          '-=0.3',
+        )
+        // Progress bar animation
+        .to(
+          progressRef.current,
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            ease: 'power2.out',
+          },
+          '-=0.2',
+        )
+        // Dots animation
+        .to(
+          dotsRef.current,
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.4,
+            ease: 'power2.out',
+          },
+          '-=0.1',
+        );
 
       // Animate the loading dots
       if (dotsRef.current && dotsRef.current.children.length > 0) {
@@ -127,7 +152,7 @@ export default function PikoLoader() {
           stagger: 0.2,
           repeat: -1,
           yoyo: true,
-          ease: "power2.inOut"
+          ease: 'power2.inOut',
         });
       }
 
@@ -158,39 +183,45 @@ export default function PikoLoader() {
       gsap.to(progressRef.current.querySelector('[role="progressbar"]'), {
         scaleX: progress / 100,
         duration: 0.3,
-        ease: "power2.out"
+        ease: 'power2.out',
       });
     }
-    
+
     // Completion animation when loading reaches 100%
     if (progress === 100) {
       const completionTl = gsap.timeline();
-      
+
       // Logo celebration animation
-      completionTl.to(logoRef.current, {
-        scale: 1.2,
-        rotation: 360,
-        duration: 0.8,
-        ease: "back.out(1.7)"
-      })
-      .to(logoRef.current, {
-        scale: 1,
-        rotation: 0,
-        duration: 0.5,
-        ease: "elastic.out(1, 0.3)"
-      });
-      
+      completionTl
+        .to(logoRef.current, {
+          scale: 1.2,
+          rotation: 360,
+          duration: 0.8,
+          ease: 'back.out(1.7)',
+        })
+        .to(logoRef.current, {
+          scale: 1,
+          rotation: 0,
+          duration: 0.5,
+          ease: 'elastic.out(1, 0.3)',
+        });
+
       // Progress bar completion effect
-      completionTl.to(progressRef.current, {
-        scale: 1.05,
-        duration: 0.3,
-        ease: "power2.out"
-      }, "-=0.5")
-      .to(progressRef.current, {
-        scale: 1,
-        duration: 0.2,
-        ease: "power2.out"
-      });
+      completionTl
+        .to(
+          progressRef.current,
+          {
+            scale: 1.05,
+            duration: 0.3,
+            ease: 'power2.out',
+          },
+          '-=0.5'
+        )
+        .to(progressRef.current, {
+          scale: 1,
+          duration: 0.2,
+          ease: 'power2.out',
+        });
     }
   }, [progress]);
 
@@ -207,24 +238,45 @@ export default function PikoLoader() {
       dir={dirFor(lang)}
     >
       {/* Animated background elements */}
-      <div ref={backgroundRef} className='absolute inset-0 overflow-hidden pointer-events-none'>
+      <div
+        ref={backgroundRef}
+        className='absolute inset-0 overflow-hidden pointer-events-none'
+      >
         {/* Floating food items with GSAP animations */}
-        <div className='absolute text-6xl opacity-10' style={{ left: '10%', top: '20%' }}>
+        <div
+          className='absolute text-6xl opacity-10'
+          style={{ left: '10%', top: '20%' }}
+        >
           🥐
         </div>
-        <div className='absolute text-5xl opacity-10' style={{ right: '15%', top: '60%' }}>
+        <div
+          className='absolute text-5xl opacity-10'
+          style={{ right: '15%', top: '60%' }}
+        >
           ☕
         </div>
-        <div className='absolute text-4xl opacity-10' style={{ left: '60%', top: '80%' }}>
+        <div
+          className='absolute text-4xl opacity-10'
+          style={{ left: '60%', top: '80%' }}
+        >
           🧁
         </div>
-        <div className='absolute text-5xl opacity-10' style={{ left: '30%', top: '10%' }}>
+        <div
+          className='absolute text-5xl opacity-10'
+          style={{ left: '30%', top: '10%' }}
+        >
           🍰
         </div>
-        <div className='absolute text-4xl opacity-10' style={{ left: '80%', top: '30%' }}>
+        <div
+          className='absolute text-4xl opacity-10'
+          style={{ left: '80%', top: '30%' }}
+        >
           🍪
         </div>
-        <div className='absolute text-3xl opacity-10' style={{ left: '5%', top: '70%' }}>
+        <div
+          className='absolute text-3xl opacity-10'
+          style={{ left: '5%', top: '70%' }}
+        >
           🥧
         </div>
       </div>
@@ -335,22 +387,15 @@ export default function PikoLoader() {
           <Progress value={progress} className='h-2' />
 
           <div className='flex items-center justify-between text-xs text-muted-foreground px-1'>
-            <span key={progress}>
-              {progress}%
-            </span>
-            <span>
-              {getLoadingMessage()}
-            </span>
+            <span key={progress}>{progress}%</span>
+            <span>{getLoadingMessage()}</span>
           </div>
         </div>
 
         {/* Fun loading indicators */}
         <div ref={dotsRef} className='flex gap-2'>
           {[0, 1, 2].map(i => (
-            <div
-              key={i}
-              className='w-2 h-2 rounded-full bg-primary'
-            />
+            <div key={i} className='w-2 h-2 rounded-full bg-primary' />
           ))}
         </div>
       </div>

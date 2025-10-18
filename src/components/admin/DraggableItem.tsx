@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 import type { Identifier, XYCoord } from 'dnd-core';
 import { TableCell, TableRow } from '../ui/table';
@@ -102,7 +102,12 @@ export default function DraggableItem({
   const [{ isDragging }, drag] = useDrag({
     type: 'item',
     item: () => {
-      const dragItem = { id: item.id, index, categoryId: item.category_id, order: item.order };
+      const dragItem = {
+        id: item.id,
+        index,
+        categoryId: item.category_id,
+        order: item.order,
+      };
       return dragItem;
     },
     collect: monitor => ({
@@ -112,7 +117,7 @@ export default function DraggableItem({
 
   const opacity = isDragging ? 0.4 : 1;
   const dragRef = useRef<HTMLDivElement>(null);
-  
+
   // Use useEffect to avoid accessing refs during render
   useEffect(() => {
     if (dragRef.current) {
@@ -133,14 +138,14 @@ export default function DraggableItem({
       className='transition-opacity'
     >
       <TableCell className='w-8'>
-        <div 
+        <div
           ref={dragRef}
           className={`cursor-grab active:cursor-grabbing text-muted-foreground hover:text-foreground ${
             isDragging ? 'bg-blue-100' : ''
           }`}
-          style={{ 
+          style={{
             backgroundColor: isDragging ? '#dbeafe' : 'transparent',
-            border: isDragging ? '2px solid #3b82f6' : 'none'
+            border: isDragging ? '2px solid #3b82f6' : 'none',
           }}
         >
           <GripVertical className='w-5 h-5' />

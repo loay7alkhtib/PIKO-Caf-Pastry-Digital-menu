@@ -71,7 +71,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       // Ensure all items have an order field, defaulting to 0
       const itemsWithOrder = itemsData.map((item, index) => ({
         ...item,
-        order: item.order ?? index
+        order: item.order ?? index,
       }));
 
       // Sort items by order within each category
@@ -83,7 +83,6 @@ export function DataProvider({ children }: { children: ReactNode }) {
         return (a.order || 0) - (b.order || 0);
       });
 
-
       // If both are empty, there might be an initialization issue
       if (!categoriesData || categoriesData.length === 0) {
         console.warn(
@@ -93,7 +92,6 @@ export function DataProvider({ children }: { children: ReactNode }) {
 
       setCategories(Array.isArray(categoriesData) ? categoriesData : []);
       setItems(sortedItems);
-
     } catch (err) {
       console.error('❌ Data fetch error:', err);
       const errorMessage =
@@ -193,7 +191,6 @@ export function DataProvider({ children }: { children: ReactNode }) {
                   description: 'New items available',
                   duration: 2000,
                 });
-
               } else {
                 // Data unchanged, just update timestamp
                 const newCache = { data: freshData, timestamp: now };
