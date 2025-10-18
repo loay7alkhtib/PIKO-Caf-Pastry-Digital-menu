@@ -20,28 +20,39 @@ export default function PikoLoader() {
   // Create confetti particles
   const createConfetti = () => {
     if (!confettiRef.current) return;
-    
-    const colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', '#DDA0DD', '#98D8C8'];
+
+    const colors = [
+      '#FF6B6B',
+      '#4ECDC4',
+      '#45B7D1',
+      '#96CEB4',
+      '#FFEAA7',
+      '#DDA0DD',
+      '#98D8C8',
+    ];
     const shapes = ['🎉', '✨', '🌟', '💫', '🎊', '⭐', '💎'];
-    
+
     // Create 50 confetti particles
     for (let i = 0; i < 50; i++) {
       const confetti = document.createElement('div');
       confetti.style.position = 'absolute';
       confetti.style.fontSize = `${Math.random() * 20 + 10}px`;
-      confetti.style.color = colors[Math.floor(Math.random() * colors.length)];
+      confetti.style.color =
+        colors[Math.floor(Math.random() * colors.length)] || '#FF6B6B';
       confetti.style.pointerEvents = 'none';
       confetti.style.zIndex = '1000';
-      confetti.textContent = shapes[Math.floor(Math.random() * shapes.length)];
-      
+      confetti.textContent =
+        shapes[Math.floor(Math.random() * shapes.length)] || '✨';
+
       // Random starting position
       confetti.style.left = `${Math.random() * 100}%`;
       confetti.style.top = `${Math.random() * 100}%`;
-      
+
       confettiRef.current.appendChild(confetti);
-      
+
       // Animate each confetti particle
-      gsap.fromTo(confetti, 
+      gsap.fromTo(
+        confetti,
         {
           x: 0,
           y: 0,
@@ -84,7 +95,7 @@ export default function PikoLoader() {
         {
           opacity: 0,
           y: 50,
-        },
+        }
       );
 
       // Animate background elements with complex floating animations
@@ -106,7 +117,7 @@ export default function PikoLoader() {
             duration: 1.5,
             stagger: 0.3,
             ease: 'back.out(1.7)',
-          },
+          }
         );
 
         // Create floating animations for each element
@@ -158,7 +169,7 @@ export default function PikoLoader() {
             yoyo: true,
             ease: 'power2.inOut',
           },
-          '-=0.5',
+          '-=0.5'
         )
         // Text animation
         .to(
@@ -169,7 +180,7 @@ export default function PikoLoader() {
             duration: 0.8,
             ease: 'power2.out',
           },
-          '-=0.3',
+          '-=0.3'
         )
         // Progress bar animation
         .to(
@@ -180,7 +191,7 @@ export default function PikoLoader() {
             duration: 0.6,
             ease: 'power2.out',
           },
-          '-=0.2',
+          '-=0.2'
         )
         // Dots animation
         .to(
@@ -191,7 +202,7 @@ export default function PikoLoader() {
             duration: 0.4,
             ease: 'power2.out',
           },
-          '-=0.1',
+          '-=0.1'
         );
 
       // Animate the loading dots
@@ -274,7 +285,7 @@ export default function PikoLoader() {
             duration: 0.3,
             ease: 'power2.out',
           },
-          '-=0.5',
+          '-=0.5'
         )
         .to(progressRef.current, {
           scale: 1,
@@ -295,15 +306,16 @@ export default function PikoLoader() {
         readyMessage.style.color = '#FF6B6B';
         readyMessage.style.zIndex = '1001';
         readyMessage.style.pointerEvents = 'none';
-        
+
         textRef.current.appendChild(readyMessage);
-        
-        gsap.fromTo(readyMessage, 
+
+        gsap.fromTo(
+          readyMessage,
           { scale: 0, opacity: 0 },
-          { 
-            scale: 1.2, 
-            opacity: 1, 
-            duration: 0.5, 
+          {
+            scale: 1.2,
+            opacity: 1,
+            duration: 0.5,
             ease: 'back.out(1.7)',
             yoyo: true,
             repeat: 1,
@@ -311,7 +323,7 @@ export default function PikoLoader() {
               if (readyMessage.parentNode) {
                 readyMessage.parentNode.removeChild(readyMessage);
               }
-            }
+            },
           }
         );
       }
@@ -332,7 +344,7 @@ export default function PikoLoader() {
         ref={confettiRef}
         className='absolute inset-0 overflow-hidden pointer-events-none z-50'
       />
-      
+
       {/* Animated background elements */}
       <div
         ref={backgroundRef}
@@ -375,18 +387,30 @@ export default function PikoLoader() {
         >
           🥧
         </div>
-        
+
         {/* Additional sparkle effects */}
-        <div className='absolute text-2xl opacity-20 animate-pulse' style={{ left: '20%', top: '40%' }}>
+        <div
+          className='absolute text-2xl opacity-20 animate-pulse'
+          style={{ left: '20%', top: '40%' }}
+        >
           ✨
         </div>
-        <div className='absolute text-xl opacity-15 animate-bounce' style={{ right: '20%', top: '40%' }}>
+        <div
+          className='absolute text-xl opacity-15 animate-bounce'
+          style={{ right: '20%', top: '40%' }}
+        >
           💫
         </div>
-        <div className='absolute text-lg opacity-25 animate-pulse' style={{ left: '50%', top: '20%' }}>
+        <div
+          className='absolute text-lg opacity-25 animate-pulse'
+          style={{ left: '50%', top: '20%' }}
+        >
           🌟
         </div>
-        <div className='absolute text-sm opacity-20 animate-bounce' style={{ right: '30%', top: '80%' }}>
+        <div
+          className='absolute text-sm opacity-20 animate-bounce'
+          style={{ right: '30%', top: '80%' }}
+        >
           ⭐
         </div>
       </div>
@@ -495,21 +519,30 @@ export default function PikoLoader() {
         {/* Progress bar */}
         <div ref={progressRef} className='w-full space-y-3'>
           <div className='relative'>
-            <Progress value={progress} className='h-3 bg-gradient-to-r from-primary/20 to-primary/40' />
+            <Progress
+              value={progress}
+              className='h-3 bg-gradient-to-r from-primary/20 to-primary/40'
+            />
             {/* Sparkle effect on progress bar */}
             <div className='absolute inset-0 overflow-hidden rounded-full'>
-              <div className='absolute top-0 left-0 h-full w-2 bg-gradient-to-r from-transparent via-white to-transparent opacity-60 animate-pulse' 
-                   style={{ 
-                     left: `${progress}%`, 
-                     transform: 'translateX(-50%)',
-                     animation: 'shimmer 1.5s ease-in-out infinite'
-                   }} />
+              <div
+                className='absolute top-0 left-0 h-full w-2 bg-gradient-to-r from-transparent via-white to-transparent opacity-60 animate-pulse'
+                style={{
+                  left: `${progress}%`,
+                  transform: 'translateX(-50%)',
+                  animation: 'shimmer 1.5s ease-in-out infinite',
+                }}
+              />
             </div>
           </div>
 
           <div className='flex items-center justify-between text-xs text-muted-foreground px-1'>
-            <span key={progress} className='font-bold text-primary'>{progress}%</span>
-            <span className='text-center flex-1 font-medium'>{getLoadingMessage()}</span>
+            <span key={progress} className='font-bold text-primary'>
+              {progress}%
+            </span>
+            <span className='text-center flex-1 font-medium'>
+              {getLoadingMessage()}
+            </span>
           </div>
         </div>
 

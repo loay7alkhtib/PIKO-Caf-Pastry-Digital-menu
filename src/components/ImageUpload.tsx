@@ -6,7 +6,7 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 
 interface ImageUploadProps {
   value?: string;
-  onChange: (_base64: string | null) => void;
+  onChange: (base64: string | null) => void;
   label?: string;
   fallbackIcon?: string;
   aspectRatio?: string;

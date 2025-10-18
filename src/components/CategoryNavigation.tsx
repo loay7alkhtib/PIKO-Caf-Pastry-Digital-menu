@@ -1,6 +1,5 @@
 import { memo } from 'react';
-import type { Category } from '../lib/types';
-import type { Lang } from '../lib/types';
+import type { Category, Lang } from '../lib/types';
 
 interface CategoryNavigationProps {
   categories: Category[];

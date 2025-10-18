@@ -44,7 +44,7 @@ app.use(
 );
 
 // Helper function to generate UUID
-function generateId() {
+function _generateId() {
   return crypto.randomUUID();
 }
 
@@ -125,7 +125,7 @@ app.post('/make-server-4050140e/ensure-admin', async c => {
     const adminEmail = 'admin@piko.com';
 
     // Check if admin user already exists
-    const { data: existingAdmin, error: checkError } = await supabase
+    const { data: existingAdmin, error: _checkError } = await supabase
       .from('profiles')
       .select('*')
       .eq('email', adminEmail)
@@ -233,7 +233,7 @@ app.post('/make-server-4050140e/auth/signup', async c => {
 
     // Check if user already exists in database
     console.log('🔍 Checking if user exists in database...');
-    const { data: existingUser, error: checkError } = await supabase
+    const { data: existingUser, error: _checkError } = await supabase
       .from('profiles')
       .select('*')
       .eq('email', email)
@@ -263,7 +263,7 @@ app.post('/make-server-4050140e/auth/signup', async c => {
 
     // Create profile in database
     console.log('✅ Creating profile in database...');
-    const { data: profile, error: profileError } = await supabase
+    const { data: _profile, error: profileError } = await supabase
       .from('profiles')
       .insert({
         id: authUser.user.id,

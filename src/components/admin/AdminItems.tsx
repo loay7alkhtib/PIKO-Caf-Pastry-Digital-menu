@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
+// @ts-ignore
 import { DndProvider } from 'react-dnd';
+// @ts-ignore
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';

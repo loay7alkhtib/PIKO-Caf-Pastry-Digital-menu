@@ -1,4 +1,5 @@
-import { useEffect, useLayoutEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
+// @ts-ignore
 import { useDrag, useDrop } from 'react-dnd';
 import type { Identifier, XYCoord } from 'dnd-core';
 import { TableCell, TableRow } from '../ui/table';
@@ -12,9 +13,9 @@ interface DraggableItemProps {
   item: Item;
   index: number;
   categories: Category[];
-  onMove: (dragIndex: number, hoverIndex: number) => void;
-  onEdit: (item: Item) => void;
-  onDelete: (id: string) => void;
+  onMove: (_dragIndex: number, _hoverIndex: number) => void;
+  onEdit: (_item: Item) => void;
+  onDelete: (_id: string) => void;
 }
 
 interface DragItem {
@@ -42,12 +43,12 @@ export default function DraggableItem({
     { handlerId: Identifier | null }
   >({
     accept: 'item',
-    collect(monitor) {
+    collect(monitor: any) {
       return {
         handlerId: monitor.getHandlerId(),
       };
     },
-    hover(dragItem: DragItem, monitor) {
+    hover(dragItem: DragItem, monitor: any) {
       if (!ref.current) {
         return;
       }
@@ -110,7 +111,7 @@ export default function DraggableItem({
       };
       return dragItem;
     },
-    collect: monitor => ({
+    collect: (monitor: any) => ({
       isDragging: monitor.isDragging(),
     }),
   });

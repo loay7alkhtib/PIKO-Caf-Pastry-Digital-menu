@@ -10,7 +10,7 @@ import { toast } from 'sonner';
 import { ArrowLeft } from 'lucide-react';
 
 interface SignUpProps {
-  onNavigate: (page: string) => void;
+  onNavigate: (_page: string) => void;
 }
 
 export default function SignUp({ onNavigate }: SignUpProps) {
