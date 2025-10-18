@@ -18,6 +18,7 @@
 3. **Configure DNS** (Choose one method)
 
 #### Method A: Vercel Nameservers (Easiest)
+
 ```
 Nameservers to set at your domain registrar:
 - ns1.vercel-dns.com
@@ -25,6 +26,7 @@ Nameservers to set at your domain registrar:
 ```
 
 #### Method B: DNS Records (Keep current DNS)
+
 ```
 A Record: @ → 76.76.19.61
 CNAME: www → cname.vercel-dns.com
@@ -48,6 +50,7 @@ vercel domains inspect your-domain.com
 ### For Root Domain (your-domain.com)
 
 **Option A: A Record**
+
 ```
 Type: A
 Name: @
@@ -56,6 +59,7 @@ TTL: 3600
 ```
 
 **Option B: CNAME Record**
+
 ```
 Type: CNAME
 Name: @
@@ -84,6 +88,7 @@ TTL: 3600
 ## 🛡️ SSL Certificate
 
 **Automatic SSL**: Vercel automatically provides SSL certificates for all domains
+
 - ✅ HTTPS enabled by default
 - ✅ Automatic certificate renewal
 - ✅ HTTP to HTTPS redirect
@@ -91,11 +96,13 @@ TTL: 3600
 ## 📋 Domain Setup Checklist
 
 ### Before Adding Domain
+
 - [ ] Domain is registered and active
 - [ ] You have access to DNS settings
 - [ ] Domain is not already in use elsewhere
 
 ### After Adding Domain
+
 - [ ] DNS records are configured correctly
 - [ ] Wait for DNS propagation (24-48 hours)
 - [ ] Test domain accessibility
@@ -105,6 +112,7 @@ TTL: 3600
 ## 🔍 Verification Steps
 
 1. **Check DNS Propagation**
+
    ```bash
    # Check if DNS is propagated
    nslookup your-domain.com
@@ -126,33 +134,39 @@ TTL: 3600
 ### Common Issues
 
 **Domain Not Working**
+
 - Check DNS propagation: [whatsmydns.net](https://whatsmydns.net)
 - Verify DNS records are correct
 - Wait 24-48 hours for full propagation
 
 **SSL Certificate Issues**
+
 - Vercel automatically handles SSL
 - If issues persist, contact Vercel support
 
 **Subdomain Not Working**
+
 - Ensure CNAME record is set correctly
 - Check that subdomain points to `cname.vercel-dns.com`
 
 ### DNS Record Examples by Provider
 
 **GoDaddy**
+
 ```
 A Record: @ → 76.76.19.61
 CNAME: www → cname.vercel-dns.com
 ```
 
 **Namecheap**
+
 ```
 A Record: @ → 76.76.19.61
 CNAME: www → cname.vercel-dns.com
 ```
 
 **Cloudflare**
+
 ```
 A Record: @ → 76.76.19.61
 CNAME: www → cname.vercel-dns.com
@@ -176,12 +190,14 @@ For your PIKO Café Digital Menu, consider these domain options:
 ## 🔄 Domain Management
 
 ### Changing Domains
+
 1. Add new domain in Vercel dashboard
 2. Update DNS records
 3. Remove old domain (optional)
 4. Update any hardcoded references
 
 ### Multiple Domains
+
 - You can add multiple domains to the same project
 - All domains will serve the same content
 - Useful for different languages or regions

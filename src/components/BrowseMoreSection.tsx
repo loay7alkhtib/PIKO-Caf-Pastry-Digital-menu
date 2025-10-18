@@ -5,13 +5,12 @@ import { Separator } from './ui/separator';
 import CategoryCard from './CategoryCard';
 import { ArrowLeft, Grid3x3 } from 'lucide-react';
 import { t } from '../lib/i18n';
-import type { Category } from '../lib/types';
-import type { Lang } from '../lib/types';
+import type { Category, Lang } from '../lib/types';
 
 interface BrowseMoreSectionProps {
   categories: Category[];
   lang: Lang;
-  onNavigate: (page: string, categoryId?: string) => void;
+  onNavigate: (_page: string, _categoryId?: string) => void;
 }
 
 const BrowseMoreSection = memo(
@@ -75,7 +74,7 @@ const BrowseMoreSection = memo(
         </div>
       </div>
     );
-  }
+  },
 );
 
 export default BrowseMoreSection;

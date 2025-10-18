@@ -5,7 +5,6 @@ import { DataProvider } from './lib/DataContext';
 import { Toaster } from './components/ui/sonner';
 import Home from './pages/Home';
 import PikoLoader from './components/PikoLoader';
-import { projectId, publicAnonKey } from './lib/config/supabase';
 
 // Lazy load pages that aren't immediately needed
 const CategoryMenu = lazy(() => import('./pages/CategoryMenu'));

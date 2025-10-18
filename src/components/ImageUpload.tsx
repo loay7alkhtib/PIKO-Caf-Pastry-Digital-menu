@@ -1,4 +1,4 @@
-import { memo, useRef, useState } from 'react';
+import React, { memo, useRef, useState } from 'react';
 import { Button } from './ui/button';
 import { Label } from './ui/label';
 import { Image as ImageIcon, Upload, X } from 'lucide-react';
@@ -6,7 +6,7 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 
 interface ImageUploadProps {
   value?: string;
-  onChange: (base64: string | null) => void;
+  onChange: (_base64: string | null) => void;
   label?: string;
   fallbackIcon?: string;
   aspectRatio?: string;

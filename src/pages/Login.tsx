@@ -10,7 +10,7 @@ import { toast } from 'sonner';
 import { ArrowLeft } from 'lucide-react';
 
 interface LoginProps {
-  onNavigate: (page: string) => void;
+  onNavigate: (_page: string) => void;
 }
 
 export default function Login({ onNavigate }: LoginProps) {
@@ -43,11 +43,12 @@ export default function Login({ onNavigate }: LoginProps) {
       setTimeout(() => {
         onNavigate('home');
       }, 100);
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Login error:', error);
 
       // Provide more helpful error messages
-      let errorMessage = error.message || 'Login failed';
+      let errorMessage =
+        error instanceof Error ? error.message : 'Login failed';
 
       // Handle specific error cases
       if (

@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 import type { Identifier, XYCoord } from 'dnd-core';
 import { Card, CardContent } from '../ui/card';
@@ -82,7 +82,9 @@ export default function DraggableCategory({
 
   const opacity = isDragging ? 0.4 : 1;
 
-  drag(drop(ref));
+  useLayoutEffect(() => {
+    drag(drop(ref));
+  }, [drag, drop]);
 
   return (
     <div ref={ref} style={{ opacity }} data-handler-id={handlerId}>

@@ -3,6 +3,7 @@
 ## 🚀 Quick Deployment Steps
 
 ### Prerequisites
+
 - [Vercel account](https://vercel.com) (free tier available)
 - [GitHub account](https://github.com) (if not already connected)
 - Your project pushed to GitHub repository
@@ -10,6 +11,7 @@
 ### Method 1: Deploy via Vercel Dashboard (Recommended)
 
 1. **Push your code to GitHub**
+
    ```bash
    git add .
    git commit -m "Prepare for Vercel deployment"
@@ -40,21 +42,25 @@
 ### Method 2: Deploy via Vercel CLI
 
 1. **Install Vercel CLI**
+
    ```bash
    npm i -g vercel
    ```
 
 2. **Login to Vercel**
+
    ```bash
    vercel login
    ```
 
 3. **Deploy from your project directory**
+
    ```bash
    vercel
    ```
 
 4. **Set environment variables**
+
    ```bash
    vercel env add VITE_SUPABASE_URL
    vercel env add VITE_SUPABASE_ANON_KEY
@@ -68,12 +74,14 @@
 ## 🔧 Configuration Details
 
 ### Build Settings
+
 - **Framework Preset**: Vite
 - **Build Command**: `npm run build`
 - **Output Directory**: `build`
 - **Install Command**: `npm install`
 
 ### Environment Variables Required
+
 ```
 VITE_SUPABASE_URL=https://eoaissoqwlfvfizfomax.supabase.co
 VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVvYWlzc29xd2xmdmZpemZvbWF4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk3NTY5OTIsImV4cCI6MjA3NTMzMjk5Mn0.SHkFV9EvSnWVmC0tApVU6A6C1rrDqsPMO922rMC1JpY
@@ -111,6 +119,7 @@ VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFz
 ## 🔄 Continuous Deployment
 
 Once connected to Vercel:
+
 - Every push to your main branch will trigger automatic deployment
 - Preview deployments are created for pull requests
 - You can manage deployments from the Vercel dashboard
@@ -118,6 +127,7 @@ Once connected to Vercel:
 ## 📊 Performance Optimization
 
 The project is already optimized for Vercel with:
+
 - ✅ Vite build configuration
 - ✅ Code splitting with manual chunks
 - ✅ Terser minification
@@ -127,6 +137,7 @@ The project is already optimized for Vercel with:
 ## 🚀 Post-Deployment
 
 After successful deployment:
+
 1. Test all functionality on the live site
 2. Verify Supabase connection works
 3. Check admin panel access
@@ -136,6 +147,7 @@ After successful deployment:
 ## 📱 Domain Configuration (Optional)
 
 To use a custom domain:
+
 1. Go to your project settings in Vercel
 2. Navigate to "Domains"
 3. Add your custom domain
@@ -151,6 +163,7 @@ To use a custom domain:
 ---
 
 **Need Help?**
+
 - [Vercel Documentation](https://vercel.com/docs)
 - [Vite Deployment Guide](https://vitejs.dev/guide/static-deploy.html)
 - [Supabase Documentation](https://supabase.com/docs)

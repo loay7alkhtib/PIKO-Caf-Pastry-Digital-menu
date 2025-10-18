@@ -10,7 +10,7 @@ import { useNavigation } from '../lib/hooks/useNavigation';
 import { dirFor, t } from '../lib/i18n';
 
 interface HomeProps {
-  onNavigate: (page: string, categoryId?: string) => void;
+  onNavigate: (_page: string, _categoryId?: string) => void;
 }
 
 const Home = memo(({ onNavigate }: HomeProps) => {
@@ -24,14 +24,14 @@ const Home = memo(({ onNavigate }: HomeProps) => {
     (categoryId: string) => {
       navigateToCategory(categoryId);
     },
-    [navigateToCategory]
+    [navigateToCategory],
   );
 
   const handleCategoryHover = useCallback(
     (categoryId: string) => {
       prefetchCategory(categoryId);
     },
-    [prefetchCategory]
+    [prefetchCategory],
   );
 
   const handleLogoTripleTap = () => {
