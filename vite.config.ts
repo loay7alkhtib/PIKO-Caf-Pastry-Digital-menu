@@ -55,6 +55,7 @@ export default defineConfig({
     target: 'esnext',
     outDir: 'dist',
     sourcemap: false, // Disable sourcemaps for production
+    assetsDir: 'assets',
     minify: 'terser',
     terserOptions: {
       compress: {
