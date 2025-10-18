@@ -1,7 +1,7 @@
 import { publicAnonKey } from './config/supabase';
 import { clearSession, loadSession, saveSession } from './sessionManager';
 import type { Category, Item, Session } from './types';
-import { createClient } from '@supabase/supabase-js';
+// import { createClient } from '@supabase/supabase-js';
 
 // Simple auth state management
 let currentSession: Session | null = null;
@@ -10,11 +10,11 @@ let currentSession: Session | null = null;
 const API_BASE =
   'https://eoaissoqwlfvfizfomax.supabase.co/functions/v1/make-server-4050140e';
 
-// Direct Supabase client for KV store access
-const _supabaseClient = createClient(
-  'https://eoaissoqwlfvfizfomax.supabase.co',
-  publicAnonKey,
-);
+// Direct Supabase client for KV store access (unused but kept for future use)
+// const _supabaseClient = createClient(
+//   'https://eoaissoqwlfvfizfomax.supabase.co',
+//   publicAnonKey,
+// );
 
 // Simple cache for categories (5 minutes TTL)
 let categoriesCache: { data: Category[]; timestamp: number } | null = null;
@@ -337,3 +337,6 @@ export const authAPI = {
 export const supabase = {
   auth: authAPI,
 };
+
+// Re-export types for convenience
+export type { Category, Item, ItemVariant, Order, Session } from './types';

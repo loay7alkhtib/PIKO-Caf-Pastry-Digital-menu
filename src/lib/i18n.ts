@@ -1,5 +1,7 @@
 import type { Lang } from './types';
 
+export type { Lang };
+
 export const translations = {
   // Brand
   brandName: {
@@ -358,6 +360,11 @@ export const translations = {
     en: 'Close',
     tr: 'Kapat',
     ar: 'إغلاق',
+  },
+  variants: {
+    en: 'variants',
+    tr: 'varyant',
+    ar: 'متغيرات',
   },
 } as const;
 

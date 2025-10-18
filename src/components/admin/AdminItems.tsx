@@ -102,7 +102,7 @@ export default function AdminItems({
           id: item.id,
           name: item.names?.en,
           order: item.order,
-        })),
+        }))
       );
 
       const dragItem = filteredItems[dragIndex];
@@ -126,7 +126,7 @@ export default function AdminItems({
       if (dragItem.category_id !== hoverItem.category_id) {
         console.log('❌ Different categories:', {
           dragCategory: dragItem.category_id,
-          hoverCategory: hoverItem.category_id, 
+          hoverCategory: hoverItem.category_id,
         });
         return;
       }
@@ -154,7 +154,7 @@ export default function AdminItems({
           id: item.id,
           name: item.names?.en,
           order: item.order,
-        }))
+        })),
       );
 
       // Update local state immediately
@@ -185,7 +185,7 @@ export default function AdminItems({
         // setLocalItems(items); // Revert on error
       }
     },
-    [filteredItems, localItems, items],
+    [filteredItems, localItems, items]
   );
 
   const openDialog = (item?: Item) => {
@@ -326,7 +326,7 @@ export default function AdminItems({
           </Badge>
           {categories.map(cat => {
             const count = items.filter(
-              item => item.category_id === cat.id,
+              item => item.category_id === cat.id
             ).length;
             return (
               <Badge
@@ -620,7 +620,7 @@ export default function AdminItems({
                     size='sm'
                     onClick={() => {
                       const newVariants = formData.variants.filter(
-                        (_, i) => i !== index,
+                        (_, i) => i !== index
                       );
                       setFormData({ ...formData, variants: newVariants });
                     }}

@@ -70,7 +70,7 @@ export default function DraggableCategory({
     },
   });
 
-  const [{ isDragging }, drag, preview] = useDrag({
+  const [{ isDragging }, drag] = useDrag({
     type: 'category',
     item: () => {
       return { id: category.id, index };

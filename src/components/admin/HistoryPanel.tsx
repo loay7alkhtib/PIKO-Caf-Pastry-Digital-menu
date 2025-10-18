@@ -5,9 +5,7 @@ import { Badge } from '../ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
 import { Alert, AlertDescription } from '../ui/alert';
 import {
-  AlertCircle,
   Calendar,
-  CheckCircle2,
   FolderOpen,
   History,
   Package,

@@ -36,6 +36,7 @@ export const mockItem = {
   price: 10.99,
   image: 'test-image.jpg',
   tags: ['test', 'example'],
+  order: 1,
   created_at: '2024-01-01T00:00:00Z',
 };
 

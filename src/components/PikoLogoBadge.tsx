@@ -31,7 +31,7 @@ export default function PikoLogoBadge({
 
   // Desktop long-press handler (1.5 seconds)
   const handlePointerDown = () => {
-    longPressTimer.current = setTimeout(() => {
+    longPressTimer.current = window.setTimeout(() => {
       onTripleTap?.();
     }, 1500);
   };

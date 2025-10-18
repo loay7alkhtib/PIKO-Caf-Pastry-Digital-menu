@@ -285,7 +285,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
     setItemsCache({});
 
     // Force clear API caches by importing and clearing them
-    const { categoriesAPI, itemsAPI } = await import('./supabase');
+    const { categoriesAPI } = await import('./supabase');
 
     // Clear the API-level caches
     categoriesAPI.clearCache();

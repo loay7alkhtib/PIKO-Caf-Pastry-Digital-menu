@@ -4,9 +4,10 @@ import { gsap } from 'gsap';
 
 interface PikoLogoProps {
   onTripleTap?: () => void;
+  className?: string;
 }
 
-export default function PikoLogo({ onTripleTap }: PikoLogoProps) {
+export default function PikoLogo({ onTripleTap, className }: PikoLogoProps) {
   const lastTap = useRef(0);
   const tapCount = useRef(0);
   const longPressTimer = useRef<number | null>(null);
@@ -84,7 +85,7 @@ export default function PikoLogo({ onTripleTap }: PikoLogoProps) {
 
   // Desktop long-press handler (1.5 seconds)
   const handlePointerDown = () => {
-    longPressTimer.current = setTimeout(() => {
+    longPressTimer.current = window.setTimeout(() => {
       onTripleTap?.();
 
       // Long press animation
@@ -119,7 +120,7 @@ export default function PikoLogo({ onTripleTap }: PikoLogoProps) {
       onPointerDown={handlePointerDown}
       onPointerUp={handlePointerUp}
       onPointerLeave={handlePointerLeave}
-      className='select-none focus:outline-none focus:ring-2 focus:ring-primary rounded-full transition-transform active:scale-95 hover:scale-105 duration-200'
+      className={`select-none focus:outline-none focus:ring-2 focus:ring-primary rounded-full transition-transform active:scale-95 hover:scale-105 duration-200 ${className || ''}`}
       aria-label='Piko Patisserie Logo'
     >
       <div
