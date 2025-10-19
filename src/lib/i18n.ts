@@ -115,11 +115,6 @@ export const translations = {
     tr: 'Ürünler',
     ar: 'العناصر',
   },
-  orders: {
-    en: 'Orders',
-    tr: 'Siparişler',
-    ar: 'الطلبات',
-  },
   addNew: {
     en: 'Add New',
     tr: 'Yeni Ekle',
@@ -198,11 +193,6 @@ export const translations = {
   },
 
   // Admin Panel - Common
-  history: {
-    en: 'History',
-    tr: 'Geçmiş',
-    ar: 'السجل',
-  },
   dragToReorder: {
     en: 'Drag to Reorder',
     tr: 'Sıralamak için Sürükle',
@@ -286,42 +276,6 @@ export const translations = {
     ar: 'إضافة متغير',
   },
 
-  // History Panel
-  archivedItems: {
-    en: 'Archived Items',
-    tr: 'Arşivlenmiş Ürünler',
-    ar: 'العناصر المؤرشفة',
-  },
-  archivedCategories: {
-    en: 'Archived Categories',
-    tr: 'Arşivlenmiş Kategoriler',
-    ar: 'الفئات المؤرشفة',
-  },
-  noArchivedItems: {
-    en: 'No archived items',
-    tr: 'Arşivlenmiş ürün yok',
-    ar: 'لا توجد عناصر مؤرشفة',
-  },
-  noArchivedCategories: {
-    en: 'No archived categories',
-    tr: 'Arşivlenmiş kategori yok',
-    ar: 'لا توجد فئات مؤرشفة',
-  },
-  restore: {
-    en: 'Restore',
-    tr: 'Geri Yükle',
-    ar: 'استعادة',
-  },
-  permanentDelete: {
-    en: 'Delete Forever',
-    tr: 'Kalıcı Olarak Sil',
-    ar: 'حذف نهائي',
-  },
-  deletedAt: {
-    en: 'Deleted at',
-    tr: 'Silinme tarihi',
-    ar: 'تاريخ الحذف',
-  },
 
   // Search
   searchPlaceholder: {

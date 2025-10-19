@@ -9,8 +9,7 @@ import {
 import { useLang } from '../lib/LangContext';
 import { useData } from '../lib/DataContext';
 import { t } from '../lib/i18n';
-import { authAPI, ordersAPI } from '../lib/supabase';
-import type { Order } from '../lib/types';
+import { authAPI } from '../lib/supabase';
 import { toast } from 'sonner';
 import { LogOut, RefreshCw, Settings } from 'lucide-react';
 
@@ -19,16 +18,10 @@ const AdminCategories = lazy(
   () => import('../components/admin/AdminCategories')
 );
 const AdminItems = lazy(() => import('../components/admin/AdminItems'));
-const AdminOrders = lazy(() => import('../components/admin/AdminOrders'));
-const HistoryPanel = lazy(() =>
-  import('../components/admin/HistoryPanel').then(m => ({
-    default: m.HistoryPanel,
-  }))
-);
 // const SessionDebugger = lazy(() =>
 //   import('../components/admin/SessionDebugger').then(m => ({
 //     default: m.SessionDebugger,
-//   })),
+//   }))
 // );
 
 interface AdminProps {
@@ -40,7 +33,6 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
   const { categories, items, refetch } = useData(); // Use cached data!
   const [authorized, setAuthorized] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [orders, setOrders] = useState<Order[]>([]);
   const [showAdvancedTools, setShowAdvancedTools] = useState(false);
 
   useEffect(() => {
@@ -96,7 +88,6 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
       console.log('✅ Admin session valid:', session.user?.email);
       if (!authorized) {
         setAuthorized(true);
-        loadOrders();
       }
     } catch (error) {
       console.error('❌ Auth check error:', error);
@@ -108,19 +99,9 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
     }
   }
 
-  async function loadOrders() {
-    try {
-      const ordersData = await ordersAPI.getAll();
-      setOrders(ordersData || []);
-    } catch (error: any) {
-      console.error('Error loading orders:', error);
-    }
-  }
-
   const handleRefresh = async () => {
     try {
       await refetch(); // Refetch categories and items
-      await loadOrders(); // Refetch orders
       toast.success(
         lang === 'en'
           ? 'Data refreshed successfully!'
@@ -222,7 +203,7 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
         )}
 
         <Tabs defaultValue='categories' className='w-full'>
-          <TabsList className='grid w-full max-w-2xl mx-auto grid-cols-4 mb-6 sm:mb-8'>
+          <TabsList className='grid w-full max-w-2xl mx-auto grid-cols-2 mb-6 sm:mb-8'>
             <TabsTrigger
               value='categories'
               className='text-xs sm:text-sm gap-1'
@@ -231,12 +212,6 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
             </TabsTrigger>
             <TabsTrigger value='items' className='text-xs sm:text-sm gap-1'>
               <span>{t('items', lang)}</span>
-            </TabsTrigger>
-            <TabsTrigger value='orders' className='text-xs sm:text-sm gap-1'>
-              <span>{t('orders', lang)}</span>
-            </TabsTrigger>
-            <TabsTrigger value='history' className='text-xs sm:text-sm gap-1'>
-              <span>{t('history', lang)}</span>
             </TabsTrigger>
           </TabsList>
 
@@ -264,26 +239,6 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
                 categories={categories}
                 onRefresh={handleRefresh}
               />
-            </Suspense>
-          </TabsContent>
-
-          <TabsContent value='orders'>
-            <Suspense
-              fallback={
-                <div className='text-center py-8'>Loading orders...</div>
-              }
-            >
-              <AdminOrders orders={orders} onRefresh={loadOrders} />
-            </Suspense>
-          </TabsContent>
-
-          <TabsContent value='history'>
-            <Suspense
-              fallback={
-                <div className='text-center py-8'>Loading history...</div>
-              }
-            >
-              <HistoryPanel onRestore={handleRefresh} />
             </Suspense>
           </TabsContent>
         </Tabs>
