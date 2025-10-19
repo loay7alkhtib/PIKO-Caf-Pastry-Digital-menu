@@ -276,7 +276,6 @@ export const translations = {
     ar: 'إضافة متغير',
   },
 
-
   // Search
   searchPlaceholder: {
     en: 'Search entire menu...',

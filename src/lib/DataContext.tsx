@@ -12,6 +12,12 @@ import './debug'; // Load diagnostics tool
 import * as idb from './idb';
 import { toast } from 'sonner';
 import PikoLoader from '../components/PikoLoader';
+import {
+  getMenuDataWithStaticFallback,
+  shouldUseSupabase,
+  trackSupabaseUsage,
+} from './static-menu-fallback';
+import { freePlanDataFetcher } from './free-plan-data-fetcher';
 
 interface ItemsCache {
   data: Item[];
@@ -43,23 +49,20 @@ export function DataProvider({ children }: { children: ReactNode }) {
   // In-memory cache for items by category
   const [itemsCache, setItemsCache] = useState<Record<string, ItemsCache>>({});
 
-  // Fetch all data once on mount
+  // Fetch all data once on mount with static-first strategy
   const fetchAllData = useCallback(async () => {
     try {
       setLoading(true);
       setError(null);
 
-      // Try to fetch categories and items in parallel
-      const [categoriesData, itemsDataRaw] = await Promise.all([
-        categoriesAPI.getAll().catch(err => {
-          console.error('Categories fetch error:', err);
-          return [];
-        }),
-        itemsAPI.getAll().catch(err => {
-          console.error('Items fetch error:', err);
-          return [];
-        }),
-      ]);
+      console.log('🔄 Fetching menu data with free plan optimization...');
+
+      // Use optimized free plan data fetcher
+      const menuData = await freePlanDataFetcher.getMenuData();
+      const categoriesData = menuData.categories;
+      const itemsDataRaw = menuData.items;
+
+      console.log(`✅ Menu data loaded from: ${menuData.source}`);
 
       // Filter out only invalid items (keep all items, even with empty names)
       const itemsData = Array.isArray(itemsDataRaw)
