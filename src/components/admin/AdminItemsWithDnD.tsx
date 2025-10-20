@@ -179,9 +179,11 @@ export default function AdminItemsWithDnD({
 
     try {
       setIsSaving(true);
+      console.log('💾 Starting manual save...');
 
       // Create batch update payload
       const batchPayload = createBatchUpdatePayload(localItems, selectedCategory);
+      console.log('📦 Batch payload:', batchPayload);
 
       // Update database
       await itemsAPI.batchUpdateOrder(batchPayload, selectedCategory);
@@ -189,8 +191,11 @@ export default function AdminItemsWithDnD({
       setHasUnsavedChanges(false);
       toast.success('Changes saved successfully');
       
-      // Only refresh after manual save
-      onRefresh();
+      // Wait a moment before refreshing to ensure database is updated
+      setTimeout(() => {
+        console.log('🔄 Refreshing data after save...');
+        onRefresh();
+      }, 500);
     } catch (error) {
       console.error('Save error:', error);
       toast.error('Failed to save changes');

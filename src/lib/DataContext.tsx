@@ -6,17 +6,12 @@ import {
   useEffect,
   useState,
 } from 'react';
-import { categoriesAPI, itemsAPI } from './supabase';
+import { itemsAPI } from './supabase';
 import type { Category, Item } from './types';
 import './debug'; // Load diagnostics tool
 import * as idb from './idb';
 import { toast } from 'sonner';
 import PikoLoader from '../components/PikoLoader';
-import {
-  getMenuDataWithStaticFallback,
-  shouldUseSupabase,
-  trackSupabaseUsage,
-} from './static-menu-fallback';
 import { freePlanDataFetcher } from './free-plan-data-fetcher';
 
 interface ItemsCache {
@@ -31,10 +26,10 @@ interface DataContextType {
   error: string | null;
   refetch: () => Promise<void>;
   getCategoryItems: (
-    categoryId: string,
-    options?: { preferCache?: boolean }
+    _categoryId: string,
+    _options?: { preferCache?: boolean }
   ) => Promise<Item[]>;
-  prefetchCategory: (categoryId: string) => Promise<void>;
+  prefetchCategory: (_categoryId: string) => Promise<void>;
 }
 
 const DataContext = createContext<DataContextType | undefined>(undefined);
@@ -55,21 +50,17 @@ export function DataProvider({ children }: { children: ReactNode }) {
       setLoading(true);
       setError(null);
 
-      console.log('🔄 Fetching menu data with free plan optimization...');
-
       // Use optimized free plan data fetcher
       const menuData = await freePlanDataFetcher.getMenuData();
       const categoriesData = menuData.categories;
       const itemsDataRaw = menuData.items;
-
-      console.log(`✅ Menu data loaded from: ${menuData.source}`);
 
       // Filter out only invalid items (keep all items, even with empty names)
       const itemsData = Array.isArray(itemsDataRaw)
         ? itemsDataRaw.filter(
             item =>
               item && typeof item === 'object' && item.category_id !== undefined
-          )
+        )
         : [];
 
       // Ensure all items have an order field, defaulting to 0
@@ -90,7 +81,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       // If both are empty, there might be an initialization issue
       if (!categoriesData || categoriesData.length === 0) {
         console.warn(
-          '⚠️ No categories found. Database might need initialization.'
+          '⚠️ No categories found. Database might need initialization.',
         );
       }
 
@@ -148,10 +139,15 @@ export function DataProvider({ children }: { children: ReactNode }) {
   // Auto-refresh for visitors to see admin changes
   useEffect(() => {
     // Only run auto-refresh for visitors (not in admin mode)
-    const isAdmin = window.location.pathname.includes('/admin') || 
-                   window.location.hash.includes('admin');
-    
-    if (isAdmin) return; // Skip auto-refresh in admin mode
+    const isAdmin =
+      window.location.pathname.includes('/admin') ||
+      window.location.hash.includes('admin') ||
+      window.location.pathname.includes('admin');
+
+    if (isAdmin) {
+      console.log('🚫 Skipping auto-refresh in admin mode');
+      return; // Skip auto-refresh in admin mode
+    }
 
     // Periodic refresh every 30 seconds
     const interval = setInterval(async () => {
@@ -215,7 +211,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
                       item &&
                       typeof item === 'object' &&
                       item.category_id !== undefined
-                  )
+                )
                 : [];
 
               // Check if data actually changed
@@ -269,7 +265,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
                 item &&
                 typeof item === 'object' &&
                 item.category_id !== undefined
-            )
+          )
           : [];
 
         const newCache = { data: freshData, timestamp: now };
@@ -322,6 +318,8 @@ export function DataProvider({ children }: { children: ReactNode }) {
 
   // Refetch function for admin updates
   const refetch = useCallback(async () => {
+    console.log('🔄 Manual refetch triggered');
+    
     // Clear in-memory category-items cache used by category views
     setItemsCache({});
 
@@ -374,6 +372,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
 
       setCategories(Array.isArray(freshCategories) ? freshCategories : []);
       setItems(sortedItems);
+      console.log('✅ Manual refetch completed');
     } catch (err) {
       console.error(
         '❌ Admin refetch failed, falling back to static-first:',
