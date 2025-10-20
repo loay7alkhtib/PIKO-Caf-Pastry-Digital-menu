@@ -42,11 +42,13 @@ const CategoryMenu = memo(({ categoryId, onNavigate }: CategoryMenuProps) => {
     [categories, categoryId]
   );
 
-  // Get items for this category from cache - INSTANT!
-  const categoryItems = useMemo(
-    () => allItems.filter(item => item.category_id === categoryId),
-    [allItems, categoryId]
-  );
+  // Get items for this category and sort by explicit display order
+  const categoryItems = useMemo(() => {
+    return allItems
+      .filter(item => item.category_id === categoryId)
+      .slice()
+      .sort((a, b) => (a.order || 0) - (b.order || 0));
+  }, [allItems, categoryId]);
 
   // Filter items based on search query - search across ALL items when searching
   const items = useMemo(() => {
@@ -84,7 +86,10 @@ const CategoryMenu = memo(({ categoryId, onNavigate }: CategoryMenuProps) => {
       return nameMatch || descriptionMatch || tagMatch || categoryMatch;
     });
 
-    return allFilteredItems;
+    // Keep search results deterministic: sort by the same order as admin
+    return allFilteredItems
+      .slice()
+      .sort((a, b) => (a.order || 0) - (b.order || 0));
   }, [allItems, categories, searchQuery, categoryItems]);
 
   const handleAddItem = useCallback(
@@ -104,9 +109,12 @@ const CategoryMenu = memo(({ categoryId, onNavigate }: CategoryMenuProps) => {
 
   // Clear search when category changes
   useEffect(() => {
-    if (searchQuery) {
-      setSearchQuery('');
-    }
+    const clearSearch = () => {
+      if (searchQuery) {
+        setSearchQuery('');
+      }
+    };
+    clearSearch();
   }, [categoryId, searchQuery]);
 
   const handleLogoTripleTap = () => {

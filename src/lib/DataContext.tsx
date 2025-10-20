@@ -69,7 +69,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
         ? itemsDataRaw.filter(
             item =>
               item && typeof item === 'object' && item.category_id !== undefined
-        )
+          )
         : [];
 
       // Ensure all items have an order field, defaulting to 0
@@ -129,6 +129,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
         ).catch(() => null);
 
         if (healthCheck && healthCheck.ok) {
+          console.log('✅ Server health check passed');
         } else {
           console.warn('⚠️ Server health check failed');
         }
@@ -142,6 +143,42 @@ export function DataProvider({ children }: { children: ReactNode }) {
 
     const timer = setTimeout(initData, 100);
     return () => clearTimeout(timer);
+  }, [fetchAllData]);
+
+  // Auto-refresh for visitors to see admin changes
+  useEffect(() => {
+    // Only run auto-refresh for visitors (not in admin mode)
+    const isAdmin = window.location.pathname.includes('/admin') || 
+                   window.location.hash.includes('admin');
+    
+    if (isAdmin) return; // Skip auto-refresh in admin mode
+
+    // Periodic refresh every 30 seconds
+    const interval = setInterval(async () => {
+      try {
+        console.log('🔄 Auto-refreshing menu data for visitors...');
+        await fetchAllData();
+      } catch (err) {
+        console.warn('⚠️ Auto-refresh failed:', err);
+      }
+    }, 30000); // 30 seconds
+
+    // Refresh on tab focus (when user comes back to tab)
+    const handleFocus = async () => {
+      try {
+        console.log('🔄 Tab focused, refreshing menu data...');
+        await fetchAllData();
+      } catch (err) {
+        console.warn('⚠️ Focus refresh failed:', err);
+      }
+    };
+
+    window.addEventListener('focus', handleFocus);
+
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('focus', handleFocus);
+    };
   }, [fetchAllData]);
 
   // Helper to get items for a specific category with caching and SWR
@@ -178,7 +215,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
                       item &&
                       typeof item === 'object' &&
                       item.category_id !== undefined
-                )
+                  )
                 : [];
 
               // Check if data actually changed
@@ -232,7 +269,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
                 item &&
                 typeof item === 'object' &&
                 item.category_id !== undefined
-          )
+            )
           : [];
 
         const newCache = { data: freshData, timestamp: now };
@@ -285,23 +322,67 @@ export function DataProvider({ children }: { children: ReactNode }) {
 
   // Refetch function for admin updates
   const refetch = useCallback(async () => {
-    // Clear all caches before refetching
+    // Clear in-memory category-items cache used by category views
     setItemsCache({});
 
-    // Force clear API caches by importing and clearing them
+    // Clear API-level caches
     const { categoriesAPI } = await import('./supabase');
-
-    // Clear the API-level caches
     categoriesAPI.clearCache();
 
+    // Clear free-plan fetcher caches to avoid serving stale static data
+    try {
+      freePlanDataFetcher.clearCache();
+    } catch {}
+
     if (typeof window !== 'undefined') {
-      // Clear any localStorage cache
+      // Clear any localStorage caches used by free plan/static
       localStorage.removeItem('piko-categories');
       localStorage.removeItem('piko-items');
       localStorage.removeItem('piko-cache');
+      localStorage.removeItem('menu_cache');
     }
 
-    await fetchAllData();
+    // For admin refreshes, pull fresh dynamic data directly from the server
+    // to ensure the latest sort_order is reflected immediately.
+    try {
+      setLoading(true);
+      setError(null);
+
+      const [freshCategories, freshItemsRaw] = await Promise.all([
+        categoriesAPI.getAll(),
+        itemsAPI.getAll(),
+      ]);
+
+      const freshItems = Array.isArray(freshItemsRaw)
+        ? freshItemsRaw.filter(
+            item =>
+            item && typeof item === 'object' && item.category_id !== undefined
+        )
+        : [];
+
+      const itemsWithOrder = freshItems.map((item, index) => ({
+        ...item,
+        order: item.order ?? index,
+      }));
+
+      const sortedItems = itemsWithOrder.sort((a, b) => {
+        if (a.category_id !== b.category_id) {
+          return (a.category_id || '').localeCompare(b.category_id || '');
+        }
+        return (a.order || 0) - (b.order || 0);
+      });
+
+      setCategories(Array.isArray(freshCategories) ? freshCategories : []);
+      setItems(sortedItems);
+    } catch (err) {
+      console.error(
+        '❌ Admin refetch failed, falling back to static-first:',
+        err,
+      );
+      await fetchAllData();
+    } finally {
+      setLoading(false);
+    }
   }, [fetchAllData]);
 
   return (
