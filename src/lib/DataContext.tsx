@@ -50,7 +50,47 @@ export function DataProvider({ children }: { children: ReactNode }) {
       setLoading(true);
       setError(null);
 
-      // Use optimized free plan data fetcher
+      // Check if we're in admin mode - if so, force database mode
+      const isAdmin = window.location.pathname.includes('/admin') || 
+                     window.location.hash.includes('admin') ||
+                     window.location.pathname.includes('admin');
+
+      if (isAdmin) {
+        console.log('🔄 Admin mode detected - FORCING DATABASE FETCH');
+        // Force database mode for admin
+        const { categoriesAPI, itemsAPI } = await import('./supabase');
+        const [categoriesData, itemsDataRaw] = await Promise.all([
+          categoriesAPI.getAll(),
+          itemsAPI.getAll(),
+        ]);
+        
+        // Process the data
+        const itemsData = Array.isArray(itemsDataRaw)
+          ? itemsDataRaw.filter(
+              item =>
+              item && typeof item === 'object' && item.category_id !== undefined
+          )
+          : [];
+
+        const itemsWithOrder = itemsData.map((item, index) => ({
+          ...item,
+          order: item.order ?? index,
+        }));
+
+        const sortedItems = itemsWithOrder.sort((a, b) => {
+          if (a.category_id !== b.category_id) {
+            return (a.category_id || '').localeCompare(b.category_id || '');
+          }
+          return (a.order || 0) - (b.order || 0);
+        });
+
+        setCategories(Array.isArray(categoriesData) ? categoriesData : []);
+        setItems(sortedItems);
+        console.log('✅ Admin data loaded from DATABASE');
+        return;
+      }
+
+      // Use optimized free plan data fetcher for visitors
       const menuData = await freePlanDataFetcher.getMenuData();
       const categoriesData = menuData.categories;
       const itemsDataRaw = menuData.items;
@@ -316,15 +356,15 @@ export function DataProvider({ children }: { children: ReactNode }) {
     [itemsCache, getCategoryItems]
   );
 
-  // Refetch function for admin updates
+  // Refetch function for admin updates - FORCE DATABASE MODE
   const refetch = useCallback(async () => {
-    console.log('🔄 Manual refetch triggered');
+    console.log('🔄 Manual refetch triggered - FORCING DATABASE MODE');
     
     // Clear in-memory category-items cache used by category views
     setItemsCache({});
 
     // Clear API-level caches
-    const { categoriesAPI } = await import('./supabase');
+    const { categoriesAPI, itemsAPI } = await import('./supabase');
     categoriesAPI.clearCache();
 
     // Clear free-plan fetcher caches to avoid serving stale static data
@@ -340,12 +380,12 @@ export function DataProvider({ children }: { children: ReactNode }) {
       localStorage.removeItem('menu_cache');
     }
 
-    // For admin refreshes, pull fresh dynamic data directly from the server
-    // to ensure the latest sort_order is reflected immediately.
+    // FORCE DATABASE MODE: Always fetch from Supabase, ignore static files
     try {
       setLoading(true);
       setError(null);
 
+      console.log('🔄 FORCING DATABASE FETCH (ignoring static files)');
       const [freshCategories, freshItemsRaw] = await Promise.all([
         categoriesAPI.getAll(),
         itemsAPI.getAll(),
@@ -372,7 +412,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
 
       setCategories(Array.isArray(freshCategories) ? freshCategories : []);
       setItems(sortedItems);
-      console.log('✅ Manual refetch completed');
+      console.log('✅ Manual refetch completed - DATABASE MODE');
     } catch (err) {
       console.error(
         '❌ Admin refetch failed, falling back to static-first:',
