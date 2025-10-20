@@ -13,6 +13,7 @@ const Login = lazy(() => import('./pages/Login'));
 const SignUp = lazy(() => import('./pages/SignUp'));
 const AdminLogin = lazy(() => import('./pages/AdminLogin'));
 const Admin = lazy(() => import('./pages/Admin'));
+const BatchUpload = lazy(() => import('./pages/BatchUpload'));
 
 import type { Page } from './lib/types';
 
@@ -68,6 +69,9 @@ export default function App() {
               )}
               {page === 'admin' && (
                 <Admin onNavigate={p => navigate(p as Page)} />
+              )}
+              {page === 'batch-upload' && (
+                <BatchUpload onNavigate={p => navigate(p as Page)} />
               )}
             </Suspense>
             <Toaster position='bottom-center' />

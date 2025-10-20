@@ -11,7 +11,7 @@ import { useLang } from '../lib/LangContext';
 import { useCart } from '../lib/CartContext';
 import { t, translateSize } from '../lib/i18n';
 import { Minus, Plus, Trash2 } from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import OptimizedImage from './OptimizedImage';
 import { toast } from 'sonner';
 
 interface CartSheetProps {
@@ -67,7 +67,7 @@ const CartSheet = memo(({ open, onClose }: CartSheetProps) => {
                 >
                   <div className='w-16 h-16 rounded-lg bg-muted/30 flex-shrink-0 overflow-hidden'>
                     {item.image ? (
-                      <ImageWithFallback
+                      <OptimizedImage
                         src={item.image}
                         alt={item.name}
                         className='w-full h-full object-cover'

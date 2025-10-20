@@ -7,29 +7,29 @@ export const translations = {
   brandName: {
     en: 'Piko Patisserie & Café',
     tr: 'Piko Pastane ve Kafe',
-    ar: 'بيكو باتيسيري وكافيه',
+    ar: 'بيكو للحلويات والكافيه',
   },
   tagline: {
     en: 'Artisan Patisserie & Café',
     tr: 'Sanatsal Pastane ve Kafe',
-    ar: 'مخبز وكافيه حرفي',
+    ar: 'حلويات ومشروبات يدوية الصنع',
   },
   since: {
     en: 'Since 2000 • Premium Experience',
     tr: "2000'den Beri • Premium Deneyim",
-    ar: 'منذ ٢٠٠٠ • تجربة مميزة',
+    ar: 'منذ عام ٢٠٠٠ • تجربة فاخرة',
   },
 
   // Navigation
   specialties: {
     en: 'Our Specialties',
     tr: 'Özel Lezzetlerimiz',
-    ar: 'تخصصاتنا',
+    ar: 'تخصصاتنا المميزة',
   },
   discover: {
     en: 'Discover Delights',
     tr: 'Lezzetleri Keşfet',
-    ar: 'اكتشف اللذّات',
+    ar: 'اكتشف أطيب المذاقات',
   },
   lucky: {
     en: '🍀 Lucky',

@@ -3,9 +3,9 @@ import type { CartItem } from './types';
 
 interface CartContextType {
   items: CartItem[];
-  addItem: (item: Omit<CartItem, 'quantity'>) => void;
-  removeItem: (id: string) => void;
-  updateQuantity: (id: string, quantity: number) => void;
+  addItem: (_item: Omit<CartItem, 'quantity'>) => void;
+  removeItem: (_id: string) => void;
+  updateQuantity: (_id: string, _quantity: number) => void;
   clearCart: () => void;
   total: number;
 }
@@ -62,10 +62,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setItems([]);
   };
 
-  const total = items.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
-  );
+  const total =
+    Math.round(
+      items.reduce((sum, item) => sum + item.price * item.quantity, 0) * 100
+    ) / 100;
 
   return (
     <CartContext.Provider

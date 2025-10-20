@@ -5,7 +5,7 @@ interface CategoryNavigationProps {
   categories: Category[];
   currentCategoryId: string;
   lang: Lang;
-  onNavigate: (page: string, categoryId?: string) => void;
+  onNavigate: (_page: string, _categoryId?: string) => void;
 }
 
 const CategoryNavigation = memo(
@@ -45,7 +45,7 @@ const CategoryNavigation = memo(
         </div>
       </div>
     );
-  }
+  },
 );
 
 export default CategoryNavigation;

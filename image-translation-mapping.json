@@ -1,0 +1,2109 @@
+[
+  {
+    "arabicName": "اسبريسو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-espresso-1.jpg",
+    "translatedName": "espresso",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "اسبريسو افوكاتو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-espresso-1.jpg",
+    "translatedName": "espresso",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "اسبريسو ريستريتو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-espresso-1.jpg",
+    "translatedName": "espresso",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "اسبريسو مكياتو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-espresso-macchiato-1.jpg",
+    "translatedName": "espresso-macchiato",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "بترسكوتش لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-latte-1.jpg",
+    "translatedName": "latte",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "بترسكوتش لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-latte-medium-1.jpg",
+    "translatedName": "latte-medium",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "بيكو موكا",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-piko-mocha-1.jpg",
+    "translatedName": "piko-mocha",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "بيكو موكا وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-piko-mocha-medium-1.jpg",
+    "translatedName": "piko-mocha-medium",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "بينك بيري ماتشا لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-pink-matcha-latte-1.jpg",
+    "translatedName": "pink-matcha-latte",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "بينك ماتشا لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-pink-matcha-latte-1.jpg",
+    "translatedName": "pink-matcha-latte",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "توفي نات لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-latte-1.jpg",
+    "translatedName": "latte",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "توفي نات لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-latte-medium-1.jpg",
+    "translatedName": "latte-medium",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "دبل اسبريسو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-double-espresso-1.jpg",
+    "translatedName": "double-espresso",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "زيبرا موكا",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-mocha-1.jpg",
+    "translatedName": "mocha",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "زيبرا موكا وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-mocha-medium-1.jpg",
+    "translatedName": "mocha-medium",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "سبانش لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-latte-1.jpg",
+    "translatedName": "latte",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "سبانش لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-latte-medium-1.jpg",
+    "translatedName": "latte-medium",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "ستروبيري ماتشا لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-strawberry-matcha-latte-1.jpg",
+    "translatedName": "strawberry-matcha-latte",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "ستروبيري موكا لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-strawberry-mocha-latte-1.jpg",
+    "translatedName": "strawberry-mocha-latte",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "ستروبيري موكا لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-strawberry-mocha-latte-medium-1.jpg",
+    "translatedName": "strawberry-mocha-latte-medium",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "سلتد كراميل لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-caramel-latte-1.jpg",
+    "translatedName": "caramel-latte",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "سلتد كراميل لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-caramel-latte-medium-1.jpg",
+    "translatedName": "caramel-latte-medium",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "شاي تي لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-tea-latte-1.jpg",
+    "translatedName": "tea-latte",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "شاي تي لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-tea-latte-medium-1.jpg",
+    "translatedName": "tea-latte-medium",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "فانيليا لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-vanilla-latte-1.jpg",
+    "translatedName": "vanilla-latte",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "فانيليا لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-vanilla-latte-medium-1.jpg",
+    "translatedName": "vanilla-latte-medium",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "كراميل لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-caramel-latte-1.jpg",
+    "translatedName": "caramel-latte",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "كراميل لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-caramel-latte-medium-1.jpg",
+    "translatedName": "caramel-latte-medium",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-latte-1.jpg",
+    "translatedName": "latte",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-latte-medium-1.jpg",
+    "translatedName": "latte-medium",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "ماتشا لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-matcha-latte-1.jpg",
+    "translatedName": "matcha-latte",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "موكا لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-mocha-latte-1.jpg",
+    "translatedName": "mocha-latte",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "موكا لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-mocha-latte-medium-1.jpg",
+    "translatedName": "mocha-latte-medium",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "وايت موكا لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-white-mocha-latte-1.jpg",
+    "translatedName": "white-mocha-latte",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "وايت موكا لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-white-mocha-latte-medium-1.jpg",
+    "translatedName": "white-mocha-latte-medium",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "موكا فراب وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "coffee-mocha-frappuccino-medium-1.jpg",
+    "translatedName": "mocha-frappuccino-medium",
+    "group": "coffee"
+  },
+  {
+    "arabicName": "ايس امريكانو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-americano-2.jpg",
+    "translatedName": "iced-americano",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس امريكانو كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-americano-large-2.jpg",
+    "translatedName": "iced-americano-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس امريكانو وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-americano-medium-2.jpg",
+    "translatedName": "iced-americano-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس بتر سكوتش كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-large-2.jpg",
+    "translatedName": "iced-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس بتر سكوتش وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-medium-2.jpg",
+    "translatedName": "iced-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس بتر سوكتش لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-latte-2.jpg",
+    "translatedName": "iced-latte",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس بيكو لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-piko-latte-2.jpg",
+    "translatedName": "iced-piko-latte",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس بيكو لاتيه كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-piko-latte-large-2.jpg",
+    "translatedName": "iced-piko-latte-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس بيكو لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-piko-latte-medium-2.jpg",
+    "translatedName": "iced-piko-latte-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس بينك بيري ماتشا لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-pink-matcha-latte-2.jpg",
+    "translatedName": "iced-pink-matcha-latte",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس بينك بيري ماتشا لاتيه كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-pink-matcha-latte-large-2.jpg",
+    "translatedName": "iced-pink-matcha-latte-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس بينك بيري ماتشا لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-pink-matcha-latte-medium-2.jpg",
+    "translatedName": "iced-pink-matcha-latte-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس بينك ماتشا لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-pink-matcha-latte-2.jpg",
+    "translatedName": "iced-pink-matcha-latte",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس بينك ماتشا لاتيه كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-pink-matcha-latte-large-2.jpg",
+    "translatedName": "iced-pink-matcha-latte-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس بينك ماتشا لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-pink-matcha-latte-medium-2.jpg",
+    "translatedName": "iced-pink-matcha-latte-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس تشيز كيك لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-cheesecake-latte-2.jpg",
+    "translatedName": "iced-cheesecake-latte",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس تشيز كيك لاتيه كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-cheesecake-latte-large-2.jpg",
+    "translatedName": "iced-cheesecake-latte-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس تشيز كيك لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-cheesecake-latte-medium-2.jpg",
+    "translatedName": "iced-cheesecake-latte-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس توفي نت لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-latte-2.jpg",
+    "translatedName": "iced-latte",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس توفي نت لاتيه كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-latte-large-2.jpg",
+    "translatedName": "iced-latte-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس توفي نت لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-latte-medium-2.jpg",
+    "translatedName": "iced-latte-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس زيبرا موكا لاتيه كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-mocha-latte-large-2.jpg",
+    "translatedName": "iced-mocha-latte-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس زيبرا موكا لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-mocha-latte-medium-2.jpg",
+    "translatedName": "iced-mocha-latte-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس زيبره موكا لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-mocha-latte-2.jpg",
+    "translatedName": "iced-mocha-latte",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس سبانش لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-latte-2.jpg",
+    "translatedName": "iced-latte",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس سبانش لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-latte-medium-2.jpg",
+    "translatedName": "iced-latte-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس سبانيش لاتيه كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-latte-large-2.jpg",
+    "translatedName": "iced-latte-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس ستروبري ماتشا لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-strawberry-matcha-latte-2.jpg",
+    "translatedName": "iced-strawberry-matcha-latte",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس ستروبري ماتشا لاتيه كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-strawberry-matcha-latte-large-2.jpg",
+    "translatedName": "iced-strawberry-matcha-latte-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس ستروبري ماتشا لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-strawberry-matcha-latte-medium-2.jpg",
+    "translatedName": "iced-strawberry-matcha-latte-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس ستروبيري موكا",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-strawberry-mocha-2.jpg",
+    "translatedName": "iced-strawberry-mocha",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس ستروبيري موكا كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-strawberry-mocha-large-2.jpg",
+    "translatedName": "iced-strawberry-mocha-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس ستروبيري موكا وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-strawberry-mocha-medium-2.jpg",
+    "translatedName": "iced-strawberry-mocha-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس سلتد كراميل لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-caramel-latte-2.jpg",
+    "translatedName": "iced-caramel-latte",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس سلتد كراميل لاتيه كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-caramel-latte-large-2.jpg",
+    "translatedName": "iced-caramel-latte-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس سلتد كراميل وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-caramel-medium-2.jpg",
+    "translatedName": "iced-caramel-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس شاي تي لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-tea-latte-2.jpg",
+    "translatedName": "iced-tea-latte",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس شاي تي لاتيه كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-tea-latte-large-2.jpg",
+    "translatedName": "iced-tea-latte-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس شاي تي لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-tea-latte-medium-2.jpg",
+    "translatedName": "iced-tea-latte-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس فانيليا لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-vanilla-latte-2.jpg",
+    "translatedName": "iced-vanilla-latte",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس فانيليا لاتيه كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-vanilla-latte-large-2.jpg",
+    "translatedName": "iced-vanilla-latte-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس فانيليا لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-vanilla-latte-medium-2.jpg",
+    "translatedName": "iced-vanilla-latte-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس فيلتر قهوة",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-filter-2.jpg",
+    "translatedName": "iced-filter",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس فيلتر قهوة بالحليب",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-filter-2.jpg",
+    "translatedName": "iced-filter",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس فيلترة قهوة بالحليب كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-filter-large-2.jpg",
+    "translatedName": "iced-filter-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس فيلترة قهوة بالحليب وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-filter-medium-2.jpg",
+    "translatedName": "iced-filter-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس فيلترة قهوة كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-filter-large-2.jpg",
+    "translatedName": "iced-filter-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس فيلترة قهوة وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-filter-medium-2.jpg",
+    "translatedName": "iced-filter-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس كراميل لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-caramel-latte-2.jpg",
+    "translatedName": "iced-caramel-latte",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس كراميل لاتيه كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-caramel-latte-large-2.jpg",
+    "translatedName": "iced-caramel-latte-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس كراميل لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-caramel-latte-medium-2.jpg",
+    "translatedName": "iced-caramel-latte-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس كراميل مكياتو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-caramel-macchiato-2.jpg",
+    "translatedName": "iced-caramel-macchiato",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس كراميل مكياتو كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-caramel-macchiato-large-2.jpg",
+    "translatedName": "iced-caramel-macchiato-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس كراميل مكياتو وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-caramel-macchiato-medium-2.jpg",
+    "translatedName": "iced-caramel-macchiato-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-latte-2.jpg",
+    "translatedName": "iced-latte",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس لاتيه كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-latte-large-2.jpg",
+    "translatedName": "iced-latte-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-latte-medium-2.jpg",
+    "translatedName": "iced-latte-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس ماتشا لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-matcha-latte-2.jpg",
+    "translatedName": "iced-matcha-latte",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس ماتشا لاتيه كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-matcha-latte-large-2.jpg",
+    "translatedName": "iced-matcha-latte-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس ماتشا لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-matcha-latte-medium-2.jpg",
+    "translatedName": "iced-matcha-latte-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس موكا لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-mocha-latte-2.jpg",
+    "translatedName": "iced-mocha-latte",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس موكا لاتيه كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-mocha-latte-large-2.jpg",
+    "translatedName": "iced-mocha-latte-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس موكا لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-mocha-latte-medium-2.jpg",
+    "translatedName": "iced-mocha-latte-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس وايت شوكليت موكا كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-white-chocolate-mocha-large-2.jpg",
+    "translatedName": "iced-white-chocolate-mocha-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس وايت شوكليت موكا وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-white-chocolate-mocha-medium-2.jpg",
+    "translatedName": "iced-white-chocolate-mocha-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "ايس وايت موكا",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-white-mocha-2.jpg",
+    "translatedName": "iced-white-mocha",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "تشيري بلوسوم ايس لاتيه كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-latte-large-2.jpg",
+    "translatedName": "iced-latte-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "تشيري بلوسوم ايس لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-latte-medium-2.jpg",
+    "translatedName": "iced-latte-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "شيري بلوسوم ايس لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-latte-2.jpg",
+    "translatedName": "iced-latte",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "كراميل بابلز ايس لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-caramel-bubbles-iced-latte-2.jpg",
+    "translatedName": "caramel-bubbles-iced-latte",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "كراميل بابلز ايس لاتيه كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-caramel-bubbles-iced-latte-large-2.jpg",
+    "translatedName": "caramel-bubbles-iced-latte-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "كراميل بابلز ايس لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-caramel-bubbles-iced-latte-medium-2.jpg",
+    "translatedName": "caramel-bubbles-iced-latte-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "كوكو نت ايس لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-latte-2.jpg",
+    "translatedName": "iced-latte",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "كوكو نت ايس لاتيه كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-latte-large-2.jpg",
+    "translatedName": "iced-latte-large",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "كوكو نت ايس لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-iced-latte-medium-2.jpg",
+    "translatedName": "iced-latte-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "عصير برتقال",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-juice-orange-2.jpg",
+    "translatedName": "juice-orange",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "عصير برتقال و جزر",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-juice-orange-carrot-2.jpg",
+    "translatedName": "juice-orange-carrot",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "عصير برتقال و جزر وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-juice-orange-carrot-medium-2.jpg",
+    "translatedName": "juice-orange-carrot-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "عصير برتقال و ليمون",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-juice-orange-lemon-2.jpg",
+    "translatedName": "juice-orange-lemon",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "عصير برتقال و ليمون وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-juice-orange-lemon-medium-2.jpg",
+    "translatedName": "juice-orange-lemon-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "عصير برتقال وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-juice-orange-medium-2.jpg",
+    "translatedName": "juice-orange-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "عصير تفاح",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-juice-apple-2.jpg",
+    "translatedName": "juice-apple",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "عصير تفاح و جزر",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-juice-apple-carrot-2.jpg",
+    "translatedName": "juice-apple-carrot",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "عصير تفاح و جزر وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-juice-apple-carrot-medium-2.jpg",
+    "translatedName": "juice-apple-carrot-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "عصير تفاح وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-juice-apple-medium-2.jpg",
+    "translatedName": "juice-apple-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "عصير جزر",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-juice-carrot-2.jpg",
+    "translatedName": "juice-carrot",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "عصير جزر وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-juice-carrot-medium-2.jpg",
+    "translatedName": "juice-carrot-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "عصير ليمون",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-juice-lemon-2.jpg",
+    "translatedName": "juice-lemon",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "عصير ليمون وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "iced-coffee-juice-lemon-medium-2.jpg",
+    "translatedName": "juice-lemon-medium",
+    "group": "iced-coffee"
+  },
+  {
+    "arabicName": "وافل اوريو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "waffles-waffle-oreo-3.jpg",
+    "translatedName": "waffle-oreo",
+    "group": "waffles"
+  },
+  {
+    "arabicName": "وافل بستاشيو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "waffles-waffle-pistachio-3.jpg",
+    "translatedName": "waffle-pistachio",
+    "group": "waffles"
+  },
+  {
+    "arabicName": "وافل شوكولا",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "waffles-waffle-chocolate-3.jpg",
+    "translatedName": "waffle-chocolate",
+    "group": "waffles"
+  },
+  {
+    "arabicName": "وافل فريز",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "waffles-waffle-strawberry-3.jpg",
+    "translatedName": "waffle-strawberry",
+    "group": "waffles"
+  },
+  {
+    "arabicName": "وافل فواكه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "waffles-waffle-3.jpg",
+    "translatedName": "waffle",
+    "group": "waffles"
+  },
+  {
+    "arabicName": "وافل لوتوس",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "waffles-waffle-lotus-3.jpg",
+    "translatedName": "waffle-lotus",
+    "group": "waffles"
+  },
+  {
+    "arabicName": "وافل مارشميلو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "waffles-waffle-marshmallow-3.jpg",
+    "translatedName": "waffle-marshmallow",
+    "group": "waffles"
+  },
+  {
+    "arabicName": "كريب اوريو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "crepes-crepe-oreo-4.jpg",
+    "translatedName": "crepe-oreo",
+    "group": "crepes"
+  },
+  {
+    "arabicName": "كريب بستاشيو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "crepes-crepe-pistachio-4.jpg",
+    "translatedName": "crepe-pistachio",
+    "group": "crepes"
+  },
+  {
+    "arabicName": "كريب بيكو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "crepes-crepe-piko-4.jpg",
+    "translatedName": "crepe-piko",
+    "group": "crepes"
+  },
+  {
+    "arabicName": "كريب تشيز كيك",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "crepes-crepe-cheesecake-4.jpg",
+    "translatedName": "crepe-cheesecake",
+    "group": "crepes"
+  },
+  {
+    "arabicName": "كريب شوكولا",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "crepes-crepe-chocolate-4.jpg",
+    "translatedName": "crepe-chocolate",
+    "group": "crepes"
+  },
+  {
+    "arabicName": "كريب فواكه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "crepes-crepe-4.jpg",
+    "translatedName": "crepe",
+    "group": "crepes"
+  },
+  {
+    "arabicName": "كريب فوتوتشيني",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "crepes-crepe-4.jpg",
+    "translatedName": "crepe",
+    "group": "crepes"
+  },
+  {
+    "arabicName": "كريب لوتوس",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "crepes-crepe-lotus-4.jpg",
+    "translatedName": "crepe-lotus",
+    "group": "crepes"
+  },
+  {
+    "arabicName": "تشيز كيك لاتيه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-cheesecake-latte-5.jpg",
+    "translatedName": "cheesecake-latte",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "تشيز كيك لاتيه وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-cheesecake-latte-medium-5.jpg",
+    "translatedName": "cheesecake-latte-medium",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "تشمني كيك بندق",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-chocolate-cake-hazelnut-5.jpg",
+    "translatedName": "chocolate-cake-hazelnut",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "تشمني كيك قرفة",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-chocolate-cake-cinnamon-5.jpg",
+    "translatedName": "chocolate-cake-cinnamon",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "تشيز كيك بستاشيو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-cheesecake-pistachio-5.jpg",
+    "translatedName": "cheesecake-pistachio",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "تشيز كيك بلو بيري",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-cheesecake-blueberry-5.jpg",
+    "translatedName": "cheesecake-blueberry",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "تشيز كيك شوكولا",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-cheesecake-chocolate-5.jpg",
+    "translatedName": "cheesecake-chocolate",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "تشيز كيك فريز",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-cheesecake-strawberry-5.jpg",
+    "translatedName": "cheesecake-strawberry",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "تيراميسو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-tiramisu-5.jpg",
+    "translatedName": "tiramisu",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "كيكة الجزر",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-cake-carrot-5.jpg",
+    "translatedName": "cake-carrot",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "كيكة العسل",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-cake-5.jpg",
+    "translatedName": "cake",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "كيكة براونيز",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-cake-brownies-5.jpg",
+    "translatedName": "cake-brownies",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "كيكة سان سباستيان",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-cake-5.jpg",
+    "translatedName": "cake",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "بان كيك اوريو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-pancake-oreo-5.jpg",
+    "translatedName": "pancake-oreo",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "بان كيك بستاشيو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-pancake-pistachio-5.jpg",
+    "translatedName": "pancake-pistachio",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "بان كيك تيرامسو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-pancake-5.jpg",
+    "translatedName": "pancake",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "بان كيك شوكولا",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-pancake-chocolate-5.jpg",
+    "translatedName": "pancake-chocolate",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "بان كيك فواكه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-pancake-5.jpg",
+    "translatedName": "pancake",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "بان كيك لوتوس",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-pancake-lotus-5.jpg",
+    "translatedName": "pancake-lotus",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "ميني بان كيك اوريو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-pancake-oreo-5.jpg",
+    "translatedName": "pancake-oreo",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "ميني بان كيك بستاشيو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-pancake-pistachio-5.jpg",
+    "translatedName": "pancake-pistachio",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "ميني بان كيك شوكولا",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-pancake-chocolate-5.jpg",
+    "translatedName": "pancake-chocolate",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "ميني بان كيك فواكه",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-pancake-5.jpg",
+    "translatedName": "pancake",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "ميني بان كيك لوتوس",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-pancake-lotus-5.jpg",
+    "translatedName": "pancake-lotus",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "ميني بان كيك ميكس بيري",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "cakes-pancake-mixed-berry-5.jpg",
+    "translatedName": "pancake-mixed-berry",
+    "group": "cakes"
+  },
+  {
+    "arabicName": "امريكانو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-americano-6.jpg",
+    "translatedName": "americano",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "امريكانو وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-americano-medium-6.jpg",
+    "translatedName": "americano-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "زنجبيل وليمون",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-ginger-lemon-6.jpg",
+    "translatedName": "ginger-lemon",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "زهورات",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-herbal-tea-6.jpg",
+    "translatedName": "herbal-tea",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "زيزفون",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-linden-tea-6.jpg",
+    "translatedName": "linden-tea",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "سحلب بالقرفة",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-salep-cinnamon-6.jpg",
+    "translatedName": "salep-cinnamon",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "شاي",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-tea-6.jpg",
+    "translatedName": "tea",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "فلات وايت",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-flat-white-6.jpg",
+    "translatedName": "flat-white",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "فلات وايت وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-flat-white-medium-6.jpg",
+    "translatedName": "flat-white-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "فلتر قهوة",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-item-6.jpg",
+    "translatedName": "item",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "فلتر قهوة بالحليب",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-item-6.jpg",
+    "translatedName": "item",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "فلتر قهوة بالحليب وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-medium-6.jpg",
+    "translatedName": "medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "فلتر قهوة وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-medium-6.jpg",
+    "translatedName": "medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "في 60",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-60-6.jpg",
+    "translatedName": "60",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "في 60 وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-60-medium-6.jpg",
+    "translatedName": "60-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "قهوة تركية",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-turkish-6.jpg",
+    "translatedName": "turkish",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "قهوة تركية دبل",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-turkish-double-6.jpg",
+    "translatedName": "turkish-double",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "قهوة عربية",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-arabic-6.jpg",
+    "translatedName": "arabic",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "قهوة عربية دبل",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-arabic-double-6.jpg",
+    "translatedName": "arabic-double",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كابتشينو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cappuccino-6.jpg",
+    "translatedName": "cappuccino",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كابتشينو وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cappuccino-medium-6.jpg",
+    "translatedName": "cappuccino-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كراميل مكياتو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-caramel-macchiato-6.jpg",
+    "translatedName": "caramel-macchiato",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كراميل مكياتو وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-caramel-macchiato-medium-6.jpg",
+    "translatedName": "caramel-macchiato-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كورتادو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cortado-6.jpg",
+    "translatedName": "cortado",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "هوت شوكلت",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-hot-6.jpg",
+    "translatedName": "hot",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "هوت شوكلت وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-hot-medium-6.jpg",
+    "translatedName": "hot-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "وايت هوت شوكلت",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-white-hot-6.jpg",
+    "translatedName": "white-hot",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "وايت هوت شوكلت وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-white-hot-medium-6.jpg",
+    "translatedName": "white-hot-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "اوبرا",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-opera-6.jpg",
+    "translatedName": "opera",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "فوندون",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-fondant-6.jpg",
+    "translatedName": "fondant",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كروسان سادة",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-croissant-6.jpg",
+    "translatedName": "croissant",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كوكيز بستاشيو",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cookies-pistachio-6.jpg",
+    "translatedName": "cookies-pistachio",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كوكيز بندوق",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cookies-hazelnut-6.jpg",
+    "translatedName": "cookies-hazelnut",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كوكيز توت احمر",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cookies-6.jpg",
+    "translatedName": "cookies",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كوكيز سادة",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cookies-6.jpg",
+    "translatedName": "cookies",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كوكيز لوتوس",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cookies-lotus-6.jpg",
+    "translatedName": "cookies-lotus",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "بينا كولادا وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cool-medium-6.jpg",
+    "translatedName": "cool-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "بيستاشيو فراب وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-frappuccino-medium-6.jpg",
+    "translatedName": "frappuccino-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "فانيليا فراب وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-vanilla-frappuccino-medium-6.jpg",
+    "translatedName": "vanilla-frappuccino-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كاسة بوظة وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-medium-6.jpg",
+    "translatedName": "medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كراميل فرابتشينو وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-caramel-frappuccino-medium-6.jpg",
+    "translatedName": "caramel-frappuccino-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كوكيز فراب وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cookies-frappuccino-medium-6.jpg",
+    "translatedName": "cookies-frappuccino-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كول لايم",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cool-6.jpg",
+    "translatedName": "cool",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كول لايم ابل بابلز",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cool-bubbles-6.jpg",
+    "translatedName": "cool-bubbles",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كول لايم ابل بابلز كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cool-bubbles-large-6.jpg",
+    "translatedName": "cool-bubbles-large",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كول لايم ابل بابلز وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cool-bubbles-medium-6.jpg",
+    "translatedName": "cool-bubbles-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كول لايم بلو بيري بابلز",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cool-blueberry-bubbles-6.jpg",
+    "translatedName": "cool-blueberry-bubbles",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كول لايم بلو بيري بابلز كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cool-blueberry-bubbles-large-6.jpg",
+    "translatedName": "cool-blueberry-bubbles-large",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كول لايم بلو بيري بابلز وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cool-blueberry-bubbles-medium-6.jpg",
+    "translatedName": "cool-blueberry-bubbles-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كول لايم سترو بيري بابلز",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cool-bubbles-6.jpg",
+    "translatedName": "cool-bubbles",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كول لايم سترو بيري بابلز كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cool-bubbles-large-6.jpg",
+    "translatedName": "cool-bubbles-large",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كول لايم سترو بيري بابلز وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cool-bubbles-medium-6.jpg",
+    "translatedName": "cool-bubbles-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كول لايم سترو بيري ميكس",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cool-mix-6.jpg",
+    "translatedName": "cool-mix",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كول لايم سترو بيري ميكس كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cool-mix-large-6.jpg",
+    "translatedName": "cool-mix-large",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كول لايم سترو بيري ميكس وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cool-mix-medium-6.jpg",
+    "translatedName": "cool-mix-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كول لايم كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cool-large-6.jpg",
+    "translatedName": "cool-large",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كول لايم مانجو ميكس",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cool-mango-mix-6.jpg",
+    "translatedName": "cool-mango-mix",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كول لايم مانجو ميكس كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cool-mango-mix-large-6.jpg",
+    "translatedName": "cool-mango-mix-large",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كول لايم مانجو ميكس وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cool-mango-mix-medium-6.jpg",
+    "translatedName": "cool-mango-mix-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "كول لايم وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-cool-medium-6.jpg",
+    "translatedName": "cool-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "هيبسكوس",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-hibiscus-6.jpg",
+    "translatedName": "hibiscus",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "هيبسكوس ابل بابلز",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-hibiscus-bubbles-6.jpg",
+    "translatedName": "hibiscus-bubbles",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "هيبسكوس ابل بابلز كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-hibiscus-bubbles-large-6.jpg",
+    "translatedName": "hibiscus-bubbles-large",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "هيبسكوس ابل بابلز وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-hibiscus-bubbles-medium-6.jpg",
+    "translatedName": "hibiscus-bubbles-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "هيبسكوس بلو بيري بابلز",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-hibiscus-blueberry-bubbles-6.jpg",
+    "translatedName": "hibiscus-blueberry-bubbles",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "هيبسكوس بلو بيري ميكس",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-hibiscus-blueberry-mix-6.jpg",
+    "translatedName": "hibiscus-blueberry-mix",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "هيبسكوس بلو بيري ميكس كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-hibiscus-blueberry-mix-large-6.jpg",
+    "translatedName": "hibiscus-blueberry-mix-large",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "هيبسكوس بلو بيري ميكس وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-hibiscus-blueberry-mix-medium-6.jpg",
+    "translatedName": "hibiscus-blueberry-mix-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "هيبسكوس بلوبيري بابلز كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-hibiscus-bubbles-large-6.jpg",
+    "translatedName": "hibiscus-bubbles-large",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "هيبسكوس بلوبيري بابلز وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-hibiscus-bubbles-medium-6.jpg",
+    "translatedName": "hibiscus-bubbles-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "هيبسكوس سترو بيري بابلز",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-hibiscus-bubbles-6.jpg",
+    "translatedName": "hibiscus-bubbles",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "هيبسكوس سترو بيري ميكس",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-hibiscus-mix-6.jpg",
+    "translatedName": "hibiscus-mix",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "هيبسكوس سترو بيري ميكس كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-hibiscus-mix-large-6.jpg",
+    "translatedName": "hibiscus-mix-large",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "هيبسكوس سترو بيري ميكس وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-hibiscus-mix-medium-6.jpg",
+    "translatedName": "hibiscus-mix-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "هيبسكوس ستروبيري بابلز كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-hibiscus-strawberry-bubbles-large-6.jpg",
+    "translatedName": "hibiscus-strawberry-bubbles-large",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "هيبسكوس ستروبيري بابلز وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-hibiscus-strawberry-bubbles-medium-6.jpg",
+    "translatedName": "hibiscus-strawberry-bubbles-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "هيبسكوس كبير",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-hibiscus-large-6.jpg",
+    "translatedName": "hibiscus-large",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "هيبسكوس وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-hibiscus-medium-6.jpg",
+    "translatedName": "hibiscus-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "ميلك شيك اوريو وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-milkshake-oreo-medium-6.jpg",
+    "translatedName": "milkshake-oreo-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "ميلك شيك شوكولا وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-milkshake-chocolate-medium-6.jpg",
+    "translatedName": "milkshake-chocolate-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "ميلك شيك فانيليا وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-milkshake-vanilla-medium-6.jpg",
+    "translatedName": "milkshake-vanilla-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "ميلك شيك فريز وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-milkshake-strawberry-medium-6.jpg",
+    "translatedName": "milkshake-strawberry-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "ميلك شيك كراميل وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-milkshake-caramel-medium-6.jpg",
+    "translatedName": "milkshake-caramel-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "ميلك شيك كوكيز وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-milkshake-cookies-medium-6.jpg",
+    "translatedName": "milkshake-cookies-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "ميلك شيك لوتوس وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "drinks-milkshake-lotus-medium-6.jpg",
+    "translatedName": "milkshake-lotus-medium",
+    "group": "drinks"
+  },
+  {
+    "arabicName": "موهيتو اناناس ريد بول وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-pineapple-red-bull-medium-7.jpg",
+    "translatedName": "mojito-pineapple-red-bull-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو اناناس سفن وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-pineapple-7up-medium-7.jpg",
+    "translatedName": "mojito-pineapple-7up-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو اناناس صودا وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-pineapple-soda-medium-7.jpg",
+    "translatedName": "mojito-pineapple-soda-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو باشن برتقال ريد بول وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-passion-orange-red-bull-medium-7.jpg",
+    "translatedName": "mojito-passion-orange-red-bull-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو باشن برتقال سفن وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-passion-orange-7up-medium-7.jpg",
+    "translatedName": "mojito-passion-orange-7up-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو باشن برتقال صودا وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-passion-orange-soda-medium-7.jpg",
+    "translatedName": "mojito-passion-orange-soda-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو باشن دراق ريد بول وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-passion-peach-red-bull-medium-7.jpg",
+    "translatedName": "mojito-passion-peach-red-bull-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو باشن دراق سفن وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-passion-peach-7up-medium-7.jpg",
+    "translatedName": "mojito-passion-peach-7up-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو باشن دراق صودا وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-passion-peach-soda-medium-7.jpg",
+    "translatedName": "mojito-passion-peach-soda-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو برتقال دراق ريد بول وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-orange-peach-red-bull-medium-7.jpg",
+    "translatedName": "mojito-orange-peach-red-bull-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو برتقال دراق سفن وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-orange-peach-7up-medium-7.jpg",
+    "translatedName": "mojito-orange-peach-7up-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو برتقال دراق صودا وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-orange-peach-soda-medium-7.jpg",
+    "translatedName": "mojito-orange-peach-soda-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو دراق ريد بول وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-peach-red-bull-medium-7.jpg",
+    "translatedName": "mojito-peach-red-bull-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو دراق سفن وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-peach-7up-medium-7.jpg",
+    "translatedName": "mojito-peach-7up-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو دراق صودا وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-peach-soda-medium-7.jpg",
+    "translatedName": "mojito-peach-soda-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو رمان ريد بول وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-pomegranate-red-bull-medium-7.jpg",
+    "translatedName": "mojito-pomegranate-red-bull-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو رمان سفن وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-pomegranate-7up-medium-7.jpg",
+    "translatedName": "mojito-pomegranate-7up-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو رمان صودا وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-pomegranate-soda-medium-7.jpg",
+    "translatedName": "mojito-pomegranate-soda-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو زنجبيل ريد بول وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-ginger-red-bull-medium-7.jpg",
+    "translatedName": "mojito-ginger-red-bull-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو زنجبيل سفن وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-ginger-7up-medium-7.jpg",
+    "translatedName": "mojito-ginger-7up-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو زنجبيل صودا وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-ginger-soda-medium-7.jpg",
+    "translatedName": "mojito-ginger-soda-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو فريز ريد بول وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-strawberry-red-bull-medium-7.jpg",
+    "translatedName": "mojito-strawberry-red-bull-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو فريز سفن وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-strawberry-7up-medium-7.jpg",
+    "translatedName": "mojito-strawberry-7up-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو فريز صودا وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-strawberry-soda-medium-7.jpg",
+    "translatedName": "mojito-strawberry-soda-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو كلاسيك ريد بول وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-classic-red-bull-medium-7.jpg",
+    "translatedName": "mojito-classic-red-bull-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو كلاسيك سفن وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-classic-7up-medium-7.jpg",
+    "translatedName": "mojito-classic-7up-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو كلاسيك صودا وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-classic-soda-medium-7.jpg",
+    "translatedName": "mojito-classic-soda-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو كيوي ريد بول وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-kiwi-red-bull-medium-7.jpg",
+    "translatedName": "mojito-kiwi-red-bull-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو كيوي سفن وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-kiwi-7up-medium-7.jpg",
+    "translatedName": "mojito-kiwi-7up-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو كيوي صودا وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-kiwi-soda-medium-7.jpg",
+    "translatedName": "mojito-kiwi-soda-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو مانجو ريد بول وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-mango-red-bull-medium-7.jpg",
+    "translatedName": "mojito-mango-red-bull-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو مانجو سفن وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-mango-7up-medium-7.jpg",
+    "translatedName": "mojito-mango-7up-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو مانجو صودا وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-mango-soda-medium-7.jpg",
+    "translatedName": "mojito-mango-soda-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو ميكس بيري ريد بول وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-mixed-berry-red-bull-medium-7.jpg",
+    "translatedName": "mojito-mixed-berry-red-bull-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو ميكس بيري سفن وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-mixed-berry-7up-medium-7.jpg",
+    "translatedName": "mojito-mixed-berry-7up-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "موهيتو ميكس بيري صودا وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-mojito-mixed-berry-soda-medium-7.jpg",
+    "translatedName": "mojito-mixed-berry-soda-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "سموزي اناناس برتقال وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-smoothie-pineapple-orange-medium-7.jpg",
+    "translatedName": "smoothie-pineapple-orange-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "سموزي اناناس وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-smoothie-pineapple-medium-7.jpg",
+    "translatedName": "smoothie-pineapple-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "سموزي باشن برتقال وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-smoothie-passion-orange-medium-7.jpg",
+    "translatedName": "smoothie-passion-orange-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "سموزي باشن مانجو وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-smoothie-passion-mango-medium-7.jpg",
+    "translatedName": "smoothie-passion-mango-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "سموزي برتقال دراق وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-smoothie-orange-peach-medium-7.jpg",
+    "translatedName": "smoothie-orange-peach-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "سموزي دراق باشن وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-smoothie-peach-passion-medium-7.jpg",
+    "translatedName": "smoothie-peach-passion-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "سموزي دراق وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-smoothie-peach-medium-7.jpg",
+    "translatedName": "smoothie-peach-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "سموزي فريز وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-smoothie-strawberry-medium-7.jpg",
+    "translatedName": "smoothie-strawberry-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "سموزي كاريبيان وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-smoothie-medium-7.jpg",
+    "translatedName": "smoothie-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "سموزي ليمون بالنعناع وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-smoothie-lemon-mint-medium-7.jpg",
+    "translatedName": "smoothie-lemon-mint-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "سموزي ليمون مع رمان وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-smoothie-lemon-pomegranate-medium-7.jpg",
+    "translatedName": "smoothie-lemon-pomegranate-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "سموزي ليموناضة بالفريز وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-smoothie-lemon-strawberry-medium-7.jpg",
+    "translatedName": "smoothie-lemon-strawberry-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "سموزي مانجو فريز وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-smoothie-mango-strawberry-medium-7.jpg",
+    "translatedName": "smoothie-mango-strawberry-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "سموزي مانجو وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-smoothie-mango-medium-7.jpg",
+    "translatedName": "smoothie-mango-medium",
+    "group": "smoothies"
+  },
+  {
+    "arabicName": "سموزي ميكس بيريز وسط",
+    "oldPath": "60-1760989347404.jpg",
+    "newFilename": "smoothies-smoothie-mixed-berry-medium-7.jpg",
+    "translatedName": "smoothie-mixed-berry-medium",
+    "group": "smoothies"
+  }
+]

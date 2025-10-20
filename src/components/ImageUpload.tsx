@@ -3,11 +3,11 @@ import { Button } from './ui/button';
 import { Label } from './ui/label';
 import { Image as ImageIcon, Loader2, Upload, X } from 'lucide-react';
 import OptimizedImage from './OptimizedImage';
-import { imageUploadService } from '@/lib/imageUploadService';
+// import { imageUploadService } from '@/lib/imageUploadService';
 
 interface ImageUploadProps {
   value?: string;
-  onChange: (_url: string | null) => void;
+  onChange: (url: string | null) => void;
   label?: string;
   fallbackIcon?: string;
   aspectRatio?: string;

@@ -1,0 +1,1045 @@
+{
+  "metadata": {
+    "totalPhotos": 148,
+    "processedAt": "2025-10-20T20:19:56.522Z",
+    "description": "Arabic to English photo name translations for auto-matching"
+  },
+  "translations": [
+    {
+      "originalName": "1J5A5038.jpg",
+      "normalizedArabic": "",
+      "englishTranslation": "",
+      "safeFilename": "1j5a5038.jpg",
+      "index": 0
+    },
+    {
+      "originalName": "1J5A5054.jpg",
+      "normalizedArabic": "",
+      "englishTranslation": "",
+      "safeFilename": "1j5a5054.jpg",
+      "index": 1
+    },
+    {
+      "originalName": "1J5A5079-Edit.jpg",
+      "normalizedArabic": "",
+      "englishTranslation": "",
+      "safeFilename": "1j5a5079-edit.jpg",
+      "index": 2
+    },
+    {
+      "originalName": "1J5A5090.jpg",
+      "normalizedArabic": "",
+      "englishTranslation": "",
+      "safeFilename": "1j5a5090.jpg",
+      "index": 3
+    },
+    {
+      "originalName": "1J5A5166.jpg",
+      "normalizedArabic": "",
+      "englishTranslation": "",
+      "safeFilename": "1j5a5166.jpg",
+      "index": 4
+    },
+    {
+      "originalName": "1J5A5185.jpg",
+      "normalizedArabic": "",
+      "englishTranslation": "",
+      "safeFilename": "1j5a5185.jpg",
+      "index": 5
+    },
+    {
+      "originalName": "1J5A5222.jpg",
+      "normalizedArabic": "",
+      "englishTranslation": "",
+      "safeFilename": "1j5a5222.jpg",
+      "index": 6
+    },
+    {
+      "originalName": "1J5A5338.jpg",
+      "normalizedArabic": "",
+      "englishTranslation": "",
+      "safeFilename": "1j5a5338.jpg",
+      "index": 7
+    },
+    {
+      "originalName": "1J5A5511.jpg",
+      "normalizedArabic": "",
+      "englishTranslation": "",
+      "safeFilename": "1j5a5511.jpg",
+      "index": 8
+    },
+    {
+      "originalName": "1J5A5568.jpg",
+      "normalizedArabic": "",
+      "englishTranslation": "",
+      "safeFilename": "1j5a5568.jpg",
+      "index": 9
+    },
+    {
+      "originalName": "1J5A5574.jpg",
+      "normalizedArabic": "",
+      "englishTranslation": "",
+      "safeFilename": "1j5a5574.jpg",
+      "index": 10
+    },
+    {
+      "originalName": "1J5A5644.jpg",
+      "normalizedArabic": "",
+      "englishTranslation": "",
+      "safeFilename": "1j5a5644.jpg",
+      "index": 11
+    },
+    {
+      "originalName": "1J5A5692.jpg",
+      "normalizedArabic": "",
+      "englishTranslation": "",
+      "safeFilename": "1j5a5692.jpg",
+      "index": 12
+    },
+    {
+      "originalName": "DSC05447.jpg",
+      "normalizedArabic": "",
+      "englishTranslation": "",
+      "safeFilename": "dsc05447.jpg",
+      "index": 13
+    },
+    {
+      "originalName": "DSC05640.jpg",
+      "normalizedArabic": "",
+      "englishTranslation": "",
+      "safeFilename": "dsc05640.jpg",
+      "index": 14
+    },
+    {
+      "originalName": "NDR00187.jpg",
+      "normalizedArabic": "",
+      "englishTranslation": "",
+      "safeFilename": "ndr00187.jpg",
+      "index": 15
+    },
+    {
+      "originalName": "NDR00212.jpg",
+      "normalizedArabic": "",
+      "englishTranslation": "",
+      "safeFilename": "ndr00212.jpg",
+      "index": 16
+    },
+    {
+      "originalName": "NDR00225.jpg",
+      "normalizedArabic": "",
+      "englishTranslation": "",
+      "safeFilename": "ndr00225.jpg",
+      "index": 17
+    },
+    {
+      "originalName": "أمريكانا.jpg",
+      "normalizedArabic": "امريكانا",
+      "englishTranslation": "امريكانا",
+      "safeFilename": ".jpg",
+      "index": 18
+    },
+    {
+      "originalName": "أمريكانو.jpg",
+      "normalizedArabic": "امريكانو",
+      "englishTranslation": "americano",
+      "safeFilename": "americano.jpg",
+      "index": 19
+    },
+    {
+      "originalName": "اسبريسو افوكادو.jpg",
+      "normalizedArabic": "اسبريسو افوكادو",
+      "englishTranslation": "espresso-avocado",
+      "safeFilename": "espresso-avocado.jpg",
+      "index": 20
+    },
+    {
+      "originalName": "اسبريسو ماكياتو.jpg",
+      "normalizedArabic": "اسبريسو ماكياتو",
+      "englishTranslation": "espresso-ماكياتو",
+      "safeFilename": "espresso.jpg",
+      "index": 21
+    },
+    {
+      "originalName": "اسبريسو.jpg",
+      "normalizedArabic": "اسبريسو",
+      "englishTranslation": "espresso",
+      "safeFilename": "espresso.jpg",
+      "index": 22
+    },
+    {
+      "originalName": "اوبيرا .jpg",
+      "normalizedArabic": "اوبيرا",
+      "englishTranslation": "اوبيرا",
+      "safeFilename": ".jpg",
+      "index": 23
+    },
+    {
+      "originalName": "اوريو بروفيترول .jpg",
+      "normalizedArabic": "اوريو بروفيترول",
+      "englishTranslation": "oreo-بروفيترول",
+      "safeFilename": "oreo.jpg",
+      "index": 24
+    },
+    {
+      "originalName": "اوريو ميلك شيك .jpg",
+      "normalizedArabic": "اوريو ميلك شيك",
+      "englishTranslation": "oreo-ميلك-شيك",
+      "safeFilename": "oreo.jpg",
+      "index": 25
+    },
+    {
+      "originalName": "ايس بترسكوتش.jpg",
+      "normalizedArabic": "ايس بترسكوتش",
+      "englishTranslation": "iced-بترسكوتش",
+      "safeFilename": "iced.jpg",
+      "index": 26
+    },
+    {
+      "originalName": "ايس بيكو لاتيه.jpg",
+      "normalizedArabic": "ايس بيكو لاتيه",
+      "englishTranslation": "iced-piko-latte",
+      "safeFilename": "iced-piko-latte.jpg",
+      "index": 27
+    },
+    {
+      "originalName": "ايس بينك ماتشا+ ايس بينك بيري ماتشا.jpg",
+      "normalizedArabic": "ايس بينك ماتشا ايس بينك بيري ماتشا",
+      "englishTranslation": "iced-pink-matcha-iced-pink-بيري-matcha",
+      "safeFilename": "iced-pink-matcha-iced-pink-matcha.jpg",
+      "index": 28
+    },
+    {
+      "originalName": "ايس ستروبري موكا.jpg",
+      "normalizedArabic": "ايس ستروبري موكا",
+      "englishTranslation": "iced-strawberry-mocha",
+      "safeFilename": "iced-strawberry-mocha.jpg",
+      "index": 29
+    },
+    {
+      "originalName": "ايس شاي تي لاتيه .jpg",
+      "normalizedArabic": "ايس شاي تي لاتيه",
+      "englishTranslation": "iced-tea-تي-latte",
+      "safeFilename": "iced-tea-latte.jpg",
+      "index": 30
+    },
+    {
+      "originalName": "ايس فانيليا لاتيه.jpg",
+      "normalizedArabic": "ايس فانيليا لاتيه",
+      "englishTranslation": "iced-vanilla-latte",
+      "safeFilename": "iced-vanilla-latte.jpg",
+      "index": 31
+    },
+    {
+      "originalName": "ايس فيلترة قهوة بالحليب.jpg",
+      "normalizedArabic": "ايس فيلتره قهوه بالحليب",
+      "englishTranslation": "iced-فيلتره-قهوه-with-milk",
+      "safeFilename": "iced-with-milk.jpg",
+      "index": 32
+    },
+    {
+      "originalName": "ايس فيلترة قهوة.jpg",
+      "normalizedArabic": "ايس فيلتره قهوه",
+      "englishTranslation": "iced-فيلتره-قهوه",
+      "safeFilename": "iced.jpg",
+      "index": 33
+    },
+    {
+      "originalName": "ايس كراميل لاتيه .jpg",
+      "normalizedArabic": "ايس كراميل لاتيه",
+      "englishTranslation": "iced-caramel-latte",
+      "safeFilename": "iced-caramel-latte.jpg",
+      "index": 34
+    },
+    {
+      "originalName": "ايس كراميل لاتيه.jpg",
+      "normalizedArabic": "ايس كراميل لاتيه",
+      "englishTranslation": "iced-caramel-latte",
+      "safeFilename": "iced-caramel-latte.jpg",
+      "index": 35
+    },
+    {
+      "originalName": "ايس كراميل ماكياتو.jpg",
+      "normalizedArabic": "ايس كراميل ماكياتو",
+      "englishTranslation": "iced-caramel-ماكياتو",
+      "safeFilename": "iced-caramel.jpg",
+      "index": 36
+    },
+    {
+      "originalName": "ايس لاتيه.jpg",
+      "normalizedArabic": "ايس لاتيه",
+      "englishTranslation": "iced-latte",
+      "safeFilename": "iced-latte.jpg",
+      "index": 37
+    },
+    {
+      "originalName": "ايس ماتشا + ايس ستروبري ماتشا.jpg",
+      "normalizedArabic": "ايس ماتشا  ايس ستروبري ماتشا",
+      "englishTranslation": "iced-matcha-iced-strawberry-matcha",
+      "safeFilename": "iced-matcha-iced-strawberry-matcha.jpg",
+      "index": 38
+    },
+    {
+      "originalName": "ايس موكا لاتيه.jpg",
+      "normalizedArabic": "ايس موكا لاتيه",
+      "englishTranslation": "iced-mocha-latte",
+      "safeFilename": "iced-mocha-latte.jpg",
+      "index": 39
+    },
+    {
+      "originalName": "بان كيك اوريو.jpg",
+      "normalizedArabic": "بان كيك اوريو",
+      "englishTranslation": "بان-cake-oreo",
+      "safeFilename": "cake-oreo.jpg",
+      "index": 40
+    },
+    {
+      "originalName": "بان كيك بستاشيو.jpg",
+      "normalizedArabic": "بان كيك بستاشيو",
+      "englishTranslation": "بان-cake-pistachio",
+      "safeFilename": "cake-pistachio.jpg",
+      "index": 41
+    },
+    {
+      "originalName": "بان كيك تيراميسو .jpg",
+      "normalizedArabic": "بان كيك تيراميسو",
+      "englishTranslation": "بان-cake-tiramisu",
+      "safeFilename": "cake-tiramisu.jpg",
+      "index": 42
+    },
+    {
+      "originalName": "بان كيك فواكه .jpg",
+      "normalizedArabic": "بان كيك فواكه",
+      "englishTranslation": "بان-cake-فواكه",
+      "safeFilename": "cake.jpg",
+      "index": 43
+    },
+    {
+      "originalName": "بان كيك لوتس.jpg",
+      "normalizedArabic": "بان كيك لوتس",
+      "englishTranslation": "بان-cake-لوتس",
+      "safeFilename": "cake.jpg",
+      "index": 44
+    },
+    {
+      "originalName": "بان كيك لوتوس.jpg",
+      "normalizedArabic": "بان كيك لوتوس",
+      "englishTranslation": "بان-cake-lotus",
+      "safeFilename": "cake-lotus.jpg",
+      "index": 45
+    },
+    {
+      "originalName": "بيستاشيو فراب.jpg",
+      "normalizedArabic": "بيستاشيو فراب",
+      "englishTranslation": "بيستاشيو-frappuccino",
+      "safeFilename": "frappuccino.jpg",
+      "index": 46
+    },
+    {
+      "originalName": "بينا كولادا .jpg",
+      "normalizedArabic": "بينا كولادا",
+      "englishTranslation": "بينا-كولادا",
+      "safeFilename": ".jpg",
+      "index": 47
+    },
+    {
+      "originalName": "بينك ماتشا لاتيه+بينك بيري ماتشا لاتيه.jpg",
+      "normalizedArabic": "بينك ماتشا لاتيهبينك بيري ماتشا لاتيه",
+      "englishTranslation": "pink-matcha-لاتيهبينك-بيري-matcha-latte",
+      "safeFilename": "pink-matcha-matcha-latte.jpg",
+      "index": 48
+    },
+    {
+      "originalName": "تشري بلوسم.jpg",
+      "normalizedArabic": "تشري بلوسم",
+      "englishTranslation": "تشري-بلوسم",
+      "safeFilename": ".jpg",
+      "index": 49
+    },
+    {
+      "originalName": "تشمني كيك قرفه .jpg",
+      "normalizedArabic": "تشمني كيك قرفه",
+      "englishTranslation": "chocolate-cake-قرفه",
+      "safeFilename": "chocolate-cake.jpg",
+      "index": 50
+    },
+    {
+      "originalName": "تشيز كيك بستاشيو.jpg",
+      "normalizedArabic": "تشيز كيك بستاشيو",
+      "englishTranslation": "تشيز-cake-pistachio",
+      "safeFilename": "cake-pistachio.jpg",
+      "index": 51
+    },
+    {
+      "originalName": "تشيز كيك بلو بيري.jpg",
+      "normalizedArabic": "تشيز كيك بلو بيري",
+      "englishTranslation": "تشيز-cake-بلو-بيري",
+      "safeFilename": "cake.jpg",
+      "index": 52
+    },
+    {
+      "originalName": "تشيز كيك شوكولا.jpg",
+      "normalizedArabic": "تشيز كيك شوكولا",
+      "englishTranslation": "تشيز-cake-chocolate",
+      "safeFilename": "cake-chocolate.jpg",
+      "index": 53
+    },
+    {
+      "originalName": "تشيز كيك فريز .jpg",
+      "normalizedArabic": "تشيز كيك فريز",
+      "englishTranslation": "تشيز-cake-strawberry",
+      "safeFilename": "cake-strawberry.jpg",
+      "index": 54
+    },
+    {
+      "originalName": "تيراميسو.jpg",
+      "normalizedArabic": "تيراميسو",
+      "englishTranslation": "tiramisu",
+      "safeFilename": "tiramisu.jpg",
+      "index": 55
+    },
+    {
+      "originalName": "دبل اسبريسو.jpg",
+      "normalizedArabic": "دبل اسبريسو",
+      "englishTranslation": "دبل-espresso",
+      "safeFilename": "espresso.jpg",
+      "index": 56
+    },
+    {
+      "originalName": "زهورات .jpg",
+      "normalizedArabic": "زهورات",
+      "englishTranslation": "herbal-tea",
+      "safeFilename": "herbal-tea.jpg",
+      "index": 57
+    },
+    {
+      "originalName": "زيبرا موكا .jpg",
+      "normalizedArabic": "زيبرا موكا",
+      "englishTranslation": "زيبرا-mocha",
+      "safeFilename": "mocha.jpg",
+      "index": 58
+    },
+    {
+      "originalName": "سحلب مع قرفة.jpg",
+      "normalizedArabic": "سحلب مع قرفه",
+      "englishTranslation": "salep-with-قرفه",
+      "safeFilename": "salep-with.jpg",
+      "index": 59
+    },
+    {
+      "originalName": "سموزي أناناس .jpg",
+      "normalizedArabic": "سموزي اناناس",
+      "englishTranslation": "smoothie-pineapple",
+      "safeFilename": "smoothie-pineapple.jpg",
+      "index": 60
+    },
+    {
+      "originalName": "سموزي أناناس برتقال .jpg",
+      "normalizedArabic": "سموزي اناناس برتقال",
+      "englishTranslation": "smoothie-pineapple-orange",
+      "safeFilename": "smoothie-pineapple-orange.jpg",
+      "index": 61
+    },
+    {
+      "originalName": "سموزي باشن مانجو .jpg",
+      "normalizedArabic": "سموزي باشن مانجو",
+      "englishTranslation": "smoothie-passion-mango",
+      "safeFilename": "smoothie-passion-mango.jpg",
+      "index": 62
+    },
+    {
+      "originalName": "سموزي دراق .jpg",
+      "normalizedArabic": "سموزي دراق",
+      "englishTranslation": "smoothie-peach",
+      "safeFilename": "smoothie-peach.jpg",
+      "index": 63
+    },
+    {
+      "originalName": "سموزي دراق برتقال .jpg",
+      "normalizedArabic": "سموزي دراق برتقال",
+      "englishTranslation": "smoothie-peach-orange",
+      "safeFilename": "smoothie-peach-orange.jpg",
+      "index": 64
+    },
+    {
+      "originalName": "سموزي فريز .jpg",
+      "normalizedArabic": "سموزي فريز",
+      "englishTranslation": "smoothie-strawberry",
+      "safeFilename": "smoothie-strawberry.jpg",
+      "index": 65
+    },
+    {
+      "originalName": "سموزي كاريبيان .jpg",
+      "normalizedArabic": "سموزي كاريبيان",
+      "englishTranslation": "smoothie-caribbean",
+      "safeFilename": "smoothie-caribbean.jpg",
+      "index": 66
+    },
+    {
+      "originalName": "سموزي لليموناضا بالفريز.jpg",
+      "normalizedArabic": "سموزي لليموناضا بالفريز",
+      "englishTranslation": "smoothie-لليموناضا-with-strawberry",
+      "safeFilename": "smoothie-with-strawberry.jpg",
+      "index": 67
+    },
+    {
+      "originalName": "سموزي ليمون مع رمان .jpg",
+      "normalizedArabic": "سموزي ليمون مع رمان",
+      "englishTranslation": "smoothie-lemon-with-pomegranate",
+      "safeFilename": "smoothie-lemon-with-pomegranate.jpg",
+      "index": 68
+    },
+    {
+      "originalName": "سموزي ليمون ونعناع.jpg",
+      "normalizedArabic": "سموزي ليمون ونعناع",
+      "englishTranslation": "smoothie-lemon-ونعناع",
+      "safeFilename": "smoothie-lemon.jpg",
+      "index": 69
+    },
+    {
+      "originalName": "سموزي مانجو .jpg",
+      "normalizedArabic": "سموزي مانجو",
+      "englishTranslation": "smoothie-mango",
+      "safeFilename": "smoothie-mango.jpg",
+      "index": 70
+    },
+    {
+      "originalName": "سموزي مانجو دراق .jpg",
+      "normalizedArabic": "سموزي مانجو دراق",
+      "englishTranslation": "smoothie-mango-peach",
+      "safeFilename": "smoothie-mango-peach.jpg",
+      "index": 71
+    },
+    {
+      "originalName": "سموزي ميكس بيريز .jpg",
+      "normalizedArabic": "سموزي ميكس بيريز",
+      "englishTranslation": "smoothie-mix-بيريز",
+      "safeFilename": "smoothie-mix.jpg",
+      "index": 72
+    },
+    {
+      "originalName": "شاي .jpg",
+      "normalizedArabic": "شاي",
+      "englishTranslation": "tea",
+      "safeFilename": "tea.jpg",
+      "index": 73
+    },
+    {
+      "originalName": "شاي تي لاتيه.jpg",
+      "normalizedArabic": "شاي تي لاتيه",
+      "englishTranslation": "tea-تي-latte",
+      "safeFilename": "tea-latte.jpg",
+      "index": 74
+    },
+    {
+      "originalName": "عصير برتقال .jpg",
+      "normalizedArabic": "عصير برتقال",
+      "englishTranslation": "juice-orange",
+      "safeFilename": "juice-orange.jpg",
+      "index": 75
+    },
+    {
+      "originalName": "عصير تفاح.jpg",
+      "normalizedArabic": "عصير تفاح",
+      "englishTranslation": "juice-apple",
+      "safeFilename": "juice-apple.jpg",
+      "index": 76
+    },
+    {
+      "originalName": "عصير جزر.jpg",
+      "normalizedArabic": "عصير جزر",
+      "englishTranslation": "juice-carrot",
+      "safeFilename": "juice-carrot.jpg",
+      "index": 77
+    },
+    {
+      "originalName": "فانيليا ميلك شيك .jpg",
+      "normalizedArabic": "فانيليا ميلك شيك",
+      "englishTranslation": "vanilla-ميلك-شيك",
+      "safeFilename": "vanilla.jpg",
+      "index": 78
+    },
+    {
+      "originalName": "فلات وايت.jpg",
+      "normalizedArabic": "فلات وايت",
+      "englishTranslation": "فلات-white",
+      "safeFilename": "white.jpg",
+      "index": 79
+    },
+    {
+      "originalName": "فوندون .jpg",
+      "normalizedArabic": "فوندون",
+      "englishTranslation": "fondant",
+      "safeFilename": "fondant.jpg",
+      "index": 80
+    },
+    {
+      "originalName": "في 60 .jpg",
+      "normalizedArabic": "في",
+      "englishTranslation": "في",
+      "safeFilename": ".jpg",
+      "index": 81
+    },
+    {
+      "originalName": "قهوة تركية+عربية.jpg",
+      "normalizedArabic": "قهوه تركيهعربيه",
+      "englishTranslation": "قهوه-تركيهعربيه",
+      "safeFilename": ".jpg",
+      "index": 82
+    },
+    {
+      "originalName": "كاراميل ماكياتو .jpg",
+      "normalizedArabic": "كاراميل ماكياتو",
+      "englishTranslation": "كاراميل-ماكياتو",
+      "safeFilename": ".jpg",
+      "index": 83
+    },
+    {
+      "originalName": "كراميل ببلز ايس لاتيه.jpg",
+      "normalizedArabic": "كراميل ببلز ايس لاتيه",
+      "englishTranslation": "caramel-ببلز-iced-latte",
+      "safeFilename": "caramel-iced-latte.jpg",
+      "index": 84
+    },
+    {
+      "originalName": "كراميل فراي .jpg",
+      "normalizedArabic": "كراميل فراي",
+      "englishTranslation": "caramel-فراي",
+      "safeFilename": "caramel.jpg",
+      "index": 85
+    },
+    {
+      "originalName": "كروسان بستاشيو.jpg",
+      "normalizedArabic": "كروسان بستاشيو",
+      "englishTranslation": "croissant-pistachio",
+      "safeFilename": "croissant-pistachio.jpg",
+      "index": 86
+    },
+    {
+      "originalName": "كريب اوريو.jpg",
+      "normalizedArabic": "كريب اوريو",
+      "englishTranslation": "crepe-oreo",
+      "safeFilename": "crepe-oreo.jpg",
+      "index": 87
+    },
+    {
+      "originalName": "كريب بستاشيو.jpg",
+      "normalizedArabic": "كريب بستاشيو",
+      "englishTranslation": "crepe-pistachio",
+      "safeFilename": "crepe-pistachio.jpg",
+      "index": 88
+    },
+    {
+      "originalName": "كريب بيكو.jpg",
+      "normalizedArabic": "كريب بيكو",
+      "englishTranslation": "crepe-piko",
+      "safeFilename": "crepe-piko.jpg",
+      "index": 89
+    },
+    {
+      "originalName": "كريب تشيز كيك.jpg",
+      "normalizedArabic": "كريب تشيز كيك",
+      "englishTranslation": "crepe-تشيز-cake",
+      "safeFilename": "crepe-cake.jpg",
+      "index": 90
+    },
+    {
+      "originalName": "كريب شوكولا .jpg",
+      "normalizedArabic": "كريب شوكولا",
+      "englishTranslation": "crepe-chocolate",
+      "safeFilename": "crepe-chocolate.jpg",
+      "index": 91
+    },
+    {
+      "originalName": "كريب فواكه.jpg",
+      "normalizedArabic": "كريب فواكه",
+      "englishTranslation": "crepe-فواكه",
+      "safeFilename": "crepe.jpg",
+      "index": 92
+    },
+    {
+      "originalName": "كريب فوتوتشيني.jpg",
+      "normalizedArabic": "كريب فوتوتشيني",
+      "englishTranslation": "crepe-فوتوتشيني",
+      "safeFilename": "crepe.jpg",
+      "index": 93
+    },
+    {
+      "originalName": "كريب لوتوس.jpg",
+      "normalizedArabic": "كريب لوتوس",
+      "englishTranslation": "crepe-lotus",
+      "safeFilename": "crepe-lotus.jpg",
+      "index": 94
+    },
+    {
+      "originalName": "كلاسيك موهيتو .jpg",
+      "normalizedArabic": "كلاسيك موهيتو",
+      "englishTranslation": "classic-mojito",
+      "safeFilename": "classic-mojito.jpg",
+      "index": 95
+    },
+    {
+      "originalName": "كلشي لاتيه سخن وكابتشينو .jpg",
+      "normalizedArabic": "كلشي لاتيه سخن وكابتشينو",
+      "englishTranslation": "كلشي-latte-hot-وكابتشينو",
+      "safeFilename": "latte-hot.jpg",
+      "index": 96
+    },
+    {
+      "originalName": "كلشي لاتيه وكابتشينو سخن.jpg",
+      "normalizedArabic": "كلشي لاتيه وكابتشينو سخن",
+      "englishTranslation": "كلشي-latte-وكابتشينو-hot",
+      "safeFilename": "latte-hot.jpg",
+      "index": 97
+    },
+    {
+      "originalName": "كورتادو.jpg",
+      "normalizedArabic": "كورتادو",
+      "englishTranslation": "cortado",
+      "safeFilename": "cortado.jpg",
+      "index": 98
+    },
+    {
+      "originalName": "كوكو نت ايس لاتيه.jpg",
+      "normalizedArabic": "كوكو نت ايس لاتيه",
+      "englishTranslation": "كوكو-نت-iced-latte",
+      "safeFilename": "iced-latte.jpg",
+      "index": 99
+    },
+    {
+      "originalName": "كوكيز بستاشيو.jpg",
+      "normalizedArabic": "كوكيز بستاشيو",
+      "englishTranslation": "cookies-pistachio",
+      "safeFilename": "cookies-pistachio.jpg",
+      "index": 100
+    },
+    {
+      "originalName": "كوكيز بندوق .jpg",
+      "normalizedArabic": "كوكيز بندوق",
+      "englishTranslation": "cookies-hazelnut",
+      "safeFilename": "cookies-hazelnut.jpg",
+      "index": 101
+    },
+    {
+      "originalName": "كوكيز توت احمر .jpg",
+      "normalizedArabic": "كوكيز توت احمر",
+      "englishTranslation": "cookies-توت-احمر",
+      "safeFilename": "cookies.jpg",
+      "index": 102
+    },
+    {
+      "originalName": "كوكيز لوتوس.jpg",
+      "normalizedArabic": "كوكيز لوتوس",
+      "englishTranslation": "cookies-lotus",
+      "safeFilename": "cookies-lotus.jpg",
+      "index": 103
+    },
+    {
+      "originalName": "كول لايم .jpg",
+      "normalizedArabic": "كول لايم",
+      "englishTranslation": "cool-لايم",
+      "safeFilename": "cool.jpg",
+      "index": 104
+    },
+    {
+      "originalName": "كول لايم بابلز ستروبري .jpg",
+      "normalizedArabic": "كول لايم بابلز ستروبري",
+      "englishTranslation": "cool-لايم-bubbles-strawberry",
+      "safeFilename": "cool-bubbles-strawberry.jpg",
+      "index": 105
+    },
+    {
+      "originalName": "كولايم يابلد.jpg",
+      "normalizedArabic": "كولايم يابلد",
+      "englishTranslation": "كولايم-يابلد",
+      "safeFilename": ".jpg",
+      "index": 106
+    },
+    {
+      "originalName": "كيكة الجزر.jpg",
+      "normalizedArabic": "كيكه الجزر",
+      "englishTranslation": "كيكه-الجزر",
+      "safeFilename": ".jpg",
+      "index": 107
+    },
+    {
+      "originalName": "كيكة العسل.jpg",
+      "normalizedArabic": "كيكه العسل",
+      "englishTranslation": "كيكه-العسل",
+      "safeFilename": ".jpg",
+      "index": 108
+    },
+    {
+      "originalName": "كيكة براونيز.jpg",
+      "normalizedArabic": "كيكه براونيز",
+      "englishTranslation": "كيكه-brownies",
+      "safeFilename": "brownies.jpg",
+      "index": 109
+    },
+    {
+      "originalName": "لوتس برفيترول .jpg",
+      "normalizedArabic": "لوتس برفيترول",
+      "englishTranslation": "لوتس-برفيترول",
+      "safeFilename": ".jpg",
+      "index": 110
+    },
+    {
+      "originalName": "لوتس ميلك شيك .jpg",
+      "normalizedArabic": "لوتس ميلك شيك",
+      "englishTranslation": "لوتس-ميلك-شيك",
+      "safeFilename": ".jpg",
+      "index": 111
+    },
+    {
+      "originalName": "ليموناضا .jpg",
+      "normalizedArabic": "ليموناضا",
+      "englishTranslation": "lemonade",
+      "safeFilename": "lemonade.jpg",
+      "index": 112
+    },
+    {
+      "originalName": "ماتشا لاتيه+ستروبري ماتشا لاتيه.jpg",
+      "normalizedArabic": "ماتشا لاتيهستروبري ماتشا لاتيه",
+      "englishTranslation": "matcha-لاتيهستروبري-matcha-latte",
+      "safeFilename": "matcha-matcha-latte.jpg",
+      "index": 113
+    },
+    {
+      "originalName": "مسح.jpg",
+      "normalizedArabic": "مسح",
+      "englishTranslation": "scan",
+      "safeFilename": "scan.jpg",
+      "index": 114
+    },
+    {
+      "originalName": "مصور مرتين .jpg",
+      "normalizedArabic": "مصور مرتين",
+      "englishTranslation": "photographed-مرتين",
+      "safeFilename": "photographed.jpg",
+      "index": 115
+    },
+    {
+      "originalName": "معاد تصويره .jpg",
+      "normalizedArabic": "معاد تصويره",
+      "englishTranslation": "معاد-تصويره",
+      "safeFilename": ".jpg",
+      "index": 116
+    },
+    {
+      "originalName": "معاد تصويره.jpg",
+      "normalizedArabic": "معاد تصويره",
+      "englishTranslation": "معاد-تصويره",
+      "safeFilename": ".jpg",
+      "index": 117
+    },
+    {
+      "originalName": "معاد تصويرو .jpg",
+      "normalizedArabic": "معاد تصويرو",
+      "englishTranslation": "معاد-photo",
+      "safeFilename": "photo.jpg",
+      "index": 118
+    },
+    {
+      "originalName": "موكا فراب .jpg",
+      "normalizedArabic": "موكا فراب",
+      "englishTranslation": "mocha-frappuccino",
+      "safeFilename": "mocha-frappuccino.jpg",
+      "index": 119
+    },
+    {
+      "originalName": "موهيتو أناناس .jpg",
+      "normalizedArabic": "موهيتو اناناس",
+      "englishTranslation": "mojito-pineapple",
+      "safeFilename": "mojito-pineapple.jpg",
+      "index": 120
+    },
+    {
+      "originalName": "موهيتو باشن برتقال .jpg",
+      "normalizedArabic": "موهيتو باشن برتقال",
+      "englishTranslation": "mojito-passion-orange",
+      "safeFilename": "mojito-passion-orange.jpg",
+      "index": 121
+    },
+    {
+      "originalName": "موهيتو خيار .jpg",
+      "normalizedArabic": "موهيتو خيار",
+      "englishTranslation": "mojito-cucumber",
+      "safeFilename": "mojito-cucumber.jpg",
+      "index": 122
+    },
+    {
+      "originalName": "موهيتو دراق.jpg",
+      "normalizedArabic": "موهيتو دراق",
+      "englishTranslation": "mojito-peach",
+      "safeFilename": "mojito-peach.jpg",
+      "index": 123
+    },
+    {
+      "originalName": "موهيتو رمان .jpg",
+      "normalizedArabic": "موهيتو رمان",
+      "englishTranslation": "mojito-pomegranate",
+      "safeFilename": "mojito-pomegranate.jpg",
+      "index": 124
+    },
+    {
+      "originalName": "موهيتو زنجبيل .jpg",
+      "normalizedArabic": "موهيتو زنجبيل",
+      "englishTranslation": "mojito-ginger",
+      "safeFilename": "mojito-ginger.jpg",
+      "index": 125
+    },
+    {
+      "originalName": "موهيتو فريز.jpg",
+      "normalizedArabic": "موهيتو فريز",
+      "englishTranslation": "mojito-strawberry",
+      "safeFilename": "mojito-strawberry.jpg",
+      "index": 126
+    },
+    {
+      "originalName": "موهيتو كيوي .jpg",
+      "normalizedArabic": "موهيتو كيوي",
+      "englishTranslation": "mojito-kiwi",
+      "safeFilename": "mojito-kiwi.jpg",
+      "index": 127
+    },
+    {
+      "originalName": "موهيتو مانجو .jpg",
+      "normalizedArabic": "موهيتو مانجو",
+      "englishTranslation": "mojito-mango",
+      "safeFilename": "mojito-mango.jpg",
+      "index": 128
+    },
+    {
+      "originalName": "موهيتو ميكس بيريز .jpg",
+      "normalizedArabic": "موهيتو ميكس بيريز",
+      "englishTranslation": "mojito-mix-بيريز",
+      "safeFilename": "mojito-mix.jpg",
+      "index": 129
+    },
+    {
+      "originalName": "ميلك شيك شوكولا.jpg",
+      "normalizedArabic": "ميلك شيك شوكولا",
+      "englishTranslation": "ميلك-شيك-chocolate",
+      "safeFilename": "chocolate.jpg",
+      "index": 130
+    },
+    {
+      "originalName": "ميلك شيك فريز.jpg",
+      "normalizedArabic": "ميلك شيك فريز",
+      "englishTranslation": "ميلك-شيك-strawberry",
+      "safeFilename": "strawberry.jpg",
+      "index": 131
+    },
+    {
+      "originalName": "ميلك شيك كراميل .jpg",
+      "normalizedArabic": "ميلك شيك كراميل",
+      "englishTranslation": "ميلك-شيك-caramel",
+      "safeFilename": "caramel.jpg",
+      "index": 132
+    },
+    {
+      "originalName": "ميني بان كيك بستاشيو.jpg",
+      "normalizedArabic": "ميني بان كيك بستاشيو",
+      "englishTranslation": "mini-بان-cake-pistachio",
+      "safeFilename": "mini-cake-pistachio.jpg",
+      "index": 133
+    },
+    {
+      "originalName": "ميني بان كيك شوكولا.jpg",
+      "normalizedArabic": "ميني بان كيك شوكولا",
+      "englishTranslation": "mini-بان-cake-chocolate",
+      "safeFilename": "mini-cake-chocolate.jpg",
+      "index": 134
+    },
+    {
+      "originalName": "ميني بان كيك فواكه .jpg",
+      "normalizedArabic": "ميني بان كيك فواكه",
+      "englishTranslation": "mini-بان-cake-فواكه",
+      "safeFilename": "mini-cake.jpg",
+      "index": 135
+    },
+    {
+      "originalName": "هبيسكوس .jpg",
+      "normalizedArabic": "هبيسكوس",
+      "englishTranslation": "hibiscus",
+      "safeFilename": "hibiscus.jpg",
+      "index": 136
+    },
+    {
+      "originalName": "هبيسكوس ستروبري .jpg",
+      "normalizedArabic": "هبيسكوس ستروبري",
+      "englishTranslation": "hibiscus-strawberry",
+      "safeFilename": "hibiscus-strawberry.jpg",
+      "index": 137
+    },
+    {
+      "originalName": "هوت شوكلت.jpg",
+      "normalizedArabic": "هوت شوكلت",
+      "englishTranslation": "hot-شوكلت",
+      "safeFilename": "hot.jpg",
+      "index": 138
+    },
+    {
+      "originalName": "هيبيسكوس بابلز تفاح .jpg",
+      "normalizedArabic": "هيبيسكوس بابلز تفاح",
+      "englishTranslation": "هيبيسكوس-bubbles-apple",
+      "safeFilename": "bubbles-apple.jpg",
+      "index": 139
+    },
+    {
+      "originalName": "وافل اوريو.jpg",
+      "normalizedArabic": "وافل اوريو",
+      "englishTranslation": "waffle-oreo",
+      "safeFilename": "waffle-oreo.jpg",
+      "index": 140
+    },
+    {
+      "originalName": "وافل بستاشيو.jpg",
+      "normalizedArabic": "وافل بستاشيو",
+      "englishTranslation": "waffle-pistachio",
+      "safeFilename": "waffle-pistachio.jpg",
+      "index": 141
+    },
+    {
+      "originalName": "وافل شوكولا.jpg",
+      "normalizedArabic": "وافل شوكولا",
+      "englishTranslation": "waffle-chocolate",
+      "safeFilename": "waffle-chocolate.jpg",
+      "index": 142
+    },
+    {
+      "originalName": "وافل فواكه.jpg",
+      "normalizedArabic": "وافل فواكه",
+      "englishTranslation": "waffle-فواكه",
+      "safeFilename": "waffle.jpg",
+      "index": 143
+    },
+    {
+      "originalName": "وافل مارشميلو.jpg",
+      "normalizedArabic": "وافل مارشميلو",
+      "englishTranslation": "waffle-marshmallow",
+      "safeFilename": "waffle-marshmallow.jpg",
+      "index": 144
+    },
+    {
+      "originalName": "وايت هوت شوكلت.jpg",
+      "normalizedArabic": "وايت هوت شوكلت",
+      "englishTranslation": "white-hot-شوكلت",
+      "safeFilename": "white-hot.jpg",
+      "index": 145
+    },
+    {
+      "originalName": "وفل فريز.jpg",
+      "normalizedArabic": "وفل فريز",
+      "englishTranslation": "وفل-strawberry",
+      "safeFilename": "strawberry.jpg",
+      "index": 146
+    },
+    {
+      "originalName": "وفل لوتوس.jpg",
+      "normalizedArabic": "وفل لوتوس",
+      "englishTranslation": "وفل-lotus",
+      "safeFilename": "lotus.jpg",
+      "index": 147
+    }
+  ]
+}

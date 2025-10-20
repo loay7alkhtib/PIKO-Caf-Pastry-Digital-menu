@@ -80,4 +80,5 @@ export type Page =
   | 'login'
   | 'signup'
   | 'admin-login'
-  | 'admin';
+  | 'admin'
+  | 'batch-upload';

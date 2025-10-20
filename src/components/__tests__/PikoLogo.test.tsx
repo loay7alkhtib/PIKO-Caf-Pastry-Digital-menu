@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { render } from '../../test/utils/test-utils';
+import { render } from '@testing-library/react';
 import PikoLogo from '../PikoLogo';
 
 describe('PikoLogo', () => {

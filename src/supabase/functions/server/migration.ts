@@ -1,6 +1,13 @@
 import { createClient } from 'npm:@supabase/supabase-js';
 import * as kv from './kv_store.tsx';
 
+// Deno environment types
+declare const Deno: {
+  env: {
+    get(key: string): string | undefined;
+  };
+};
+
 // Supabase admin client for migration
 const supabase = createClient(
   Deno.env.get('SUPABASE_URL')!,

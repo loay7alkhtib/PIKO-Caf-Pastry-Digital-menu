@@ -1,6 +1,13 @@
 import { publicAnonKey } from './config/supabase';
 import { clearSession, loadSession, saveSession } from './sessionManager';
 import type { Category, Item, Session } from './types';
+
+// Type for fetch options
+type RequestInit = {
+  method?: string;
+  headers?: Record<string, string>;
+  body?: string;
+};
 // import { createClient } from '@supabase/supabase-js';
 
 // Simple auth state management

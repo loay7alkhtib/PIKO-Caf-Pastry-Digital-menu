@@ -3,7 +3,7 @@ import { Plus, X } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 import { useLang } from '../lib/LangContext';
 import { t, translateSize } from '../lib/i18n';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import OptimizedImage from './OptimizedImage';
 import { Button } from './ui/button';
 import { ItemVariant } from '../lib/supabase';
 
@@ -106,7 +106,7 @@ const ItemPreview = memo(
                 {/* Image */}
                 <div className='relative h-64 sm:h-80 md:h-96 bg-muted/30 overflow-hidden'>
                   {item.image ? (
-                    <ImageWithFallback
+                    <OptimizedImage
                       src={item.image}
                       alt={itemName}
                       className='w-full h-full object-cover'

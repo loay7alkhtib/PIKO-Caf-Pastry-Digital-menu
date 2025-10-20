@@ -11,13 +11,13 @@ import { useData } from '../lib/DataContext';
 import { t } from '../lib/i18n';
 import { authAPI } from '../lib/supabase';
 import { toast } from 'sonner';
-import { LogOut, RefreshCw, Settings } from 'lucide-react';
+import { LogOut, RefreshCw, Settings, Upload } from 'lucide-react';
 
 // Lazy load admin components
 const AdminCategories = lazy(
-  () => import('../components/admin/AdminCategories')
+  () => import('../components/admin/AdminCategories'),
 );
-const AdminItems = lazy(() => import('../components/admin/AdminItemsWithDnD'));
+const AdminItems = lazy(() => import('../components/admin/AdminItemsSimple'));
 // const SessionDebugger = lazy(() =>
 //   import('../components/admin/SessionDebugger').then(m => ({
 //     default: m.SessionDebugger,
@@ -78,7 +78,7 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
         console.log('❌ User is not admin, redirecting to login');
         console.log('📊 Session user data:', session.user);
         toast.error(
-          'Admin access required. Please login with admin credentials.'
+          'Admin access required. Please login with admin credentials.',
         );
         setAuthorized(false);
         onNavigate('admin-login');
@@ -107,7 +107,7 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
           ? 'Data refreshed successfully!'
           : lang === 'tr'
             ? 'Veriler başarıyla yenilendi!'
-            : 'تم تحديث البيانات بنجاح!'
+            : 'تم تحديث البيانات بنجاح!',
       );
     } catch (error) {
       console.error('Refresh error:', error);
@@ -116,7 +116,7 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
           ? 'Failed to refresh data'
           : lang === 'tr'
             ? 'Veriler yenilenemedi'
-            : 'فشل في تحديث البيانات'
+            : 'فشل في تحديث البيانات',
       );
     }
   };
@@ -167,6 +167,15 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
               <span className='hidden md:inline'>
                 {lang === 'en' ? 'Refresh' : lang === 'tr' ? 'Yenile' : 'تحديث'}
               </span>
+            </Button>
+            <Button
+              onClick={() => onNavigate('batch-upload')}
+              variant='outline'
+              size='sm'
+              className='gap-2'
+            >
+              <Upload className='w-4 h-4' />
+              <span className='hidden md:inline'>Batch Upload</span>
             </Button>
             <Button
               onClick={() => setShowAdvancedTools(!showAdvancedTools)}

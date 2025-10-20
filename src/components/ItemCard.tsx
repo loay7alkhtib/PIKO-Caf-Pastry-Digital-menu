@@ -3,7 +3,7 @@ import { Plus } from 'lucide-react';
 import { memo, useEffect, useState } from 'react';
 import { useLang } from '../lib/LangContext';
 import { t, translateSize } from '../lib/i18n';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import OptimizedImage from './OptimizedImage';
 import { ItemVariant } from '../lib/supabase';
 
 interface ItemCardProps {
@@ -33,7 +33,7 @@ const ItemCard = memo(
     // Detect image aspect ratio when loaded
     useEffect(() => {
       if (!image) {
-        setAspectRatio(4 / 3); // Default for emoji fallback
+        // Use default for emoji fallback without setState
         return;
       }
 
@@ -74,7 +74,7 @@ const ItemCard = memo(
             <div className='absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10 dark:to-black/30 z-10 pointer-events-none' />
 
             {image ? (
-              <ImageWithFallback
+              <OptimizedImage
                 src={image}
                 alt={name}
                 className='w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out'

@@ -3,6 +3,13 @@ import { cors } from 'npm:hono/cors';
 import { logger } from 'npm:hono/logger';
 import { createClient } from 'npm:@supabase/supabase-js';
 
+// Deno environment types
+declare const Deno: {
+  env: {
+    get(key: string): string | undefined;
+  };
+};
+
 // Password hashing utilities
 async function hashPassword(password: string): Promise<string> {
   const encoder = new TextEncoder();
@@ -59,6 +66,107 @@ function createSlug(name: string): string {
 // Health check endpoint
 app.get('/make-server-4050140e/health', c => {
   return c.json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
+// Ensure admin user exists endpoint
+app.post('/make-server-4050140e/ensure-admin', async c => {
+  try {
+    console.log('🔐 Ensuring admin user exists...');
+
+    const adminEmail = 'admin@piko.com';
+    const adminPassword = 'admin123';
+    const adminName = 'Admin User';
+
+    // Check if admin user already exists
+    const { data: existingAdmin, error: checkError } = await supabase
+      .from('profiles')
+      .select('*')
+      .eq('email', adminEmail)
+      .eq('is_admin', true)
+      .single();
+
+    if (existingAdmin) {
+      console.log('✅ Admin user already exists');
+      return c.json({
+        message: 'Admin user already exists',
+        email: adminEmail,
+        exists: true,
+      });
+    }
+
+    // Create admin user in Supabase Auth
+    console.log('🔐 Creating admin user in Supabase Auth...');
+    const { data: authUser, error: authError } =
+      await supabase.auth.admin.createUser({
+        email: adminEmail,
+        password: adminPassword,
+        email_confirm: true,
+        user_metadata: {
+          name: adminName,
+        },
+      });
+
+    if (authError || !authUser.user) {
+      console.error('❌ Admin user creation failed:', authError);
+      return c.json({ error: 'Failed to create admin user' }, 500);
+    }
+
+    // Create admin profile in database
+    console.log('✅ Creating admin profile in database...');
+    const { data: profile, error: profileError } = await supabase
+      .from('profiles')
+      .insert({
+        id: authUser.user.id,
+        email: adminEmail,
+        name: adminName,
+        is_admin: true,
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString(),
+      })
+      .select()
+      .single();
+
+    if (profileError) {
+      console.error('❌ Admin profile creation failed:', profileError);
+      // Try to clean up the auth user
+      await supabase.auth.admin.deleteUser(authUser.user.id);
+      return c.json({ error: 'Failed to create admin profile' }, 500);
+    }
+
+    // Hash password and store credentials
+    console.log('🔐 Hashing admin password...');
+    const passwordHash = await hashPassword(adminPassword);
+
+    const { error: credentialsError } = await supabase
+      .from('user_credentials')
+      .insert({
+        user_id: authUser.user.id,
+        email: adminEmail,
+        password_hash: passwordHash,
+        name: adminName,
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString(),
+      });
+
+    if (credentialsError) {
+      console.error('❌ Admin credentials creation failed:', credentialsError);
+      return c.json({ error: 'Failed to create admin credentials' }, 500);
+    }
+
+    console.log('✅ Admin user created successfully');
+    return c.json({
+      message: 'Admin user created successfully',
+      email: adminEmail,
+      password: adminPassword,
+      created: true,
+    });
+  } catch (error: any) {
+    console.error('❌ Ensure admin error:', error);
+    return c.json(
+      { error: error.message || 'Failed to ensure admin user' },
+      500,
+    );
+  }
 });
 
 // Debug endpoint to test database connection
@@ -546,6 +654,22 @@ app.post('/make-server-4050140e/auth/login', async c => {
     console.log('🔍 Password match:', passwordMatch ? 'Yes' : 'No');
 
     if (passwordMatch) {
+      // Check if user is admin
+      console.log('🔍 Checking if user is admin...');
+      const { data: profile, error: profileError } = await supabase
+        .from('profiles')
+        .select('is_admin')
+        .eq('id', userCredentials.user_id)
+        .single();
+
+      if (profileError) {
+        console.error('❌ Profile check failed:', profileError);
+        return c.json({ error: 'Failed to verify user profile' }, 500);
+      }
+
+      const isAdmin = profile?.is_admin || false;
+      console.log('🔍 User admin status:', isAdmin);
+
       // Generate a session token
       const sessionToken = crypto.randomUUID();
 
@@ -556,7 +680,7 @@ app.post('/make-server-4050140e/auth/login', async c => {
         user_id: userCredentials.user_id,
         email,
         name: userCredentials.name,
-        is_admin: false,
+        is_admin: isAdmin,
         created_at: new Date().toISOString(),
         expires_at: new Date(
           Date.now() + 30 * 24 * 60 * 60 * 1000
@@ -578,7 +702,7 @@ app.post('/make-server-4050140e/auth/login', async c => {
               email,
               name: userCredentials.name,
               id: userCredentials.user_id,
-              isAdmin: false,
+              isAdmin,
             },
           },
         },

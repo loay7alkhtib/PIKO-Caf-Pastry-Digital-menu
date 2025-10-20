@@ -7,7 +7,7 @@ import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Label } from '../ui/label';
 import ImageUpload from '../ImageUpload';
-import DraggableCategory from './DraggableCategory';
+// DraggableCategory removed - using simple category display
 import {
   Dialog,
   DialogContent,
@@ -182,14 +182,36 @@ export default function AdminCategories({
 
         <div className='space-y-2'>
           {localCategories.map((category, index) => (
-            <DraggableCategory
+            <div
               key={category.id}
-              category={category}
-              index={index}
-              onMove={moveCategory}
-              onEdit={openDialog}
-              onDelete={handleDelete}
-            />
+              className='flex items-center justify-between p-4 bg-card rounded-lg border border-border'
+            >
+              <div className='flex items-center gap-3'>
+                <span className='text-2xl'>{category.icon}</span>
+                <div>
+                  <h3 className='font-medium'>{category.names.en}</h3>
+                  <p className='text-sm text-muted-foreground'>
+                    {category.names.tr} • {category.names.ar}
+                  </p>
+                </div>
+              </div>
+              <div className='flex items-center gap-2'>
+                <Button
+                  variant='outline'
+                  size='sm'
+                  onClick={() => openDialog(category)}
+                >
+                  Edit
+                </Button>
+                <Button
+                  variant='destructive'
+                  size='sm'
+                  onClick={() => handleDelete(category.id)}
+                >
+                  Delete
+                </Button>
+              </div>
+            </div>
           ))}
         </div>
 
@@ -217,15 +239,17 @@ export default function AdminCategories({
             <div className='space-y-4'>
               <ImageUpload
                 value={formData.image}
-                onChange={base64 => {
+                onChange={imageUrl => {
                   console.log(
                     'ImageUpload onChange called with:',
-                    base64 ? `base64 data (${base64.length} chars)` : 'null'
+                    imageUrl ? `Supabase Storage URL: ${imageUrl}` : 'null'
                   );
-                  setFormData({ ...formData, image: base64 || '' });
+                  setFormData({ ...formData, image: imageUrl || '' });
                 }}
                 label={t('categoryImage', lang)}
                 fallbackIcon={formData.icon}
+                useSupabaseStorage={true}
+                itemName={formData.nameEn || formData.nameTr || formData.nameAr}
               />
               <div>
                 <Label>{t('fallbackIcon', lang)}</Label>

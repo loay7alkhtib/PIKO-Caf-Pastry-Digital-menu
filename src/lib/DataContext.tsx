@@ -6,13 +6,11 @@ import {
   useEffect,
   useState,
 } from 'react';
-import { itemsAPI } from './supabase';
+import { categoriesAPI, itemsAPI } from './supabase';
 import type { Category, Item } from './types';
-import './debug'; // Load diagnostics tool
 import * as idb from './idb';
 import { toast } from 'sonner';
 import PikoLoader from '../components/PikoLoader';
-import { freePlanDataFetcher } from './free-plan-data-fetcher';
 
 interface ItemsCache {
   data: Item[];
@@ -51,9 +49,10 @@ export function DataProvider({ children }: { children: ReactNode }) {
       setError(null);
 
       // Check if we're in admin mode - if so, force database mode
-      const isAdmin = window.location.pathname.includes('/admin') || 
-                     window.location.hash.includes('admin') ||
-                     window.location.pathname.includes('admin');
+      const isAdmin =
+        window.location.pathname.includes('/admin') ||
+        window.location.hash.includes('admin') ||
+        window.location.pathname.includes('admin');
 
       if (isAdmin) {
         console.log('🔄 Admin mode detected - FORCING DATABASE FETCH');
@@ -63,12 +62,14 @@ export function DataProvider({ children }: { children: ReactNode }) {
           categoriesAPI.getAll(),
           itemsAPI.getAll(),
         ]);
-        
+
         // Process the data
         const itemsData = Array.isArray(itemsDataRaw)
           ? itemsDataRaw.filter(
               item =>
-              item && typeof item === 'object' && item.category_id !== undefined
+                item &&
+                typeof item === 'object' &&
+                item.category_id !== undefined
           )
           : [];
 
@@ -90,10 +91,11 @@ export function DataProvider({ children }: { children: ReactNode }) {
         return;
       }
 
-      // Use optimized free plan data fetcher for visitors
-      const menuData = await freePlanDataFetcher.getMenuData();
-      const categoriesData = menuData.categories;
-      const itemsDataRaw = menuData.items;
+      // Load data from API for visitors
+      const [categoriesData, itemsDataRaw] = await Promise.all([
+        categoriesAPI.getAll(),
+        itemsAPI.getAll(),
+      ]);
 
       // Filter out only invalid items (keep all items, even with empty names)
       const itemsData = Array.isArray(itemsDataRaw)
@@ -121,7 +123,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       // If both are empty, there might be an initialization issue
       if (!categoriesData || categoriesData.length === 0) {
         console.warn(
-          '⚠️ No categories found. Database might need initialization.',
+          '⚠️ No categories found. Database might need initialization.'
         );
       }
 
@@ -359,7 +361,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
   // Refetch function for admin updates - FORCE DATABASE MODE
   const refetch = useCallback(async () => {
     console.log('🔄 Manual refetch triggered - FORCING DATABASE MODE');
-    
+
     // Clear in-memory category-items cache used by category views
     setItemsCache({});
 
@@ -367,10 +369,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
     const { categoriesAPI, itemsAPI } = await import('./supabase');
     categoriesAPI.clearCache();
 
-    // Clear free-plan fetcher caches to avoid serving stale static data
-    try {
-      freePlanDataFetcher.clearCache();
-    } catch {}
+    // Clear any cached data
 
     if (typeof window !== 'undefined') {
       // Clear any localStorage caches used by free plan/static
@@ -394,7 +393,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       const freshItems = Array.isArray(freshItemsRaw)
         ? freshItemsRaw.filter(
             item =>
-            item && typeof item === 'object' && item.category_id !== undefined
+              item && typeof item === 'object' && item.category_id !== undefined
         )
         : [];
 
@@ -416,7 +415,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
     } catch (err) {
       console.error(
         '❌ Admin refetch failed, falling back to static-first:',
-        err,
+        err
       );
       await fetchAllData();
     } finally {
@@ -473,8 +472,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
               </div>
               <button
                 onClick={async () => {
-                  const { diagnoseConnection } = await import('./debug');
-                  await diagnoseConnection();
+                  console.log('🔍 Connection diagnostics not available');
                 }}
                 className='px-3 py-1 text-xs bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded hover:bg-blue-500/20 transition-all'
               >

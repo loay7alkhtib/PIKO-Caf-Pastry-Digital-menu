@@ -1,7 +1,18 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { act, renderHook } from '@testing-library/react';
 import { useCartOperations } from '../useCartOperations';
-import { mockItem } from '../../../test/utils/test-utils';
+
+// Mock item for testing
+const mockItem = {
+  id: 'test-item',
+  names: { en: 'Test Item', tr: 'Test Öğe', ar: 'عنصر اختبار' },
+  price: 10.99,
+  category_id: 'test-category',
+  is_available: true,
+  order: 0,
+  tags: [],
+  variants: [],
+};
 
 // Mock the cart context
 const mockCartContext = {
