@@ -113,7 +113,6 @@ export async function loadStaticMenu(): Promise<StaticMenuData | null> {
     console.log('✅ Static menu loaded successfully');
     console.log(
       `📊 Categories: ${data.categories.length}, Items: ${data.items.length}`
-    );
 
     return data;
   } catch (error) {

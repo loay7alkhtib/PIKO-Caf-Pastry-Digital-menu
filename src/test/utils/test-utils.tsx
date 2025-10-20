@@ -50,4 +50,4 @@ export const mockCartItem = {
 
 // Re-export everything
 export * from '@testing-library/react';
-export { customRender as render, customRender as renderWithProviders };
+export { customRender as render };

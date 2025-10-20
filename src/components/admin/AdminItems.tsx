@@ -67,30 +67,13 @@ export default function AdminItems({
     tags: '',
     isAvailable: true,
     variants: [] as { size: string; price: number }[],
-    order: 0,
   });
 
   // Update local items when props change
   useEffect(() => {
     console.log('📦 Items updated:', items.length, 'items');
     console.log('📊 Sample item:', items[0]);
-    console.log(
-      '📊 Sample item order values:',
-      items.slice(0, 5).map(item => ({
-        id: item.id,
-        name: item.names?.en,
-        order: item.order,
-        hasOrder: item.order !== undefined && item.order !== null,
-      }))
-
-    // Initialize order values for items that don't have them
-    const itemsWithOrder = items.map((item, index) => ({
-      ...item,
-      order:
-        item.order !== undefined && item.order !== null ? item.order : index,
-    }));
-
-    setLocalItems(itemsWithOrder);
+    setLocalItems([...items]);
   }, [items]);
 
   // Filter items by selected category
@@ -121,7 +104,7 @@ export default function AdminItems({
           id: item.id,
           name: item.names?.en,
           order: item.order,
-        })),
+        }))
       );
 
       const dragItem = filteredItems[dragIndex];
@@ -137,16 +120,7 @@ export default function AdminItems({
         console.log('❌ Missing items:', {
           dragItem: !!dragItem,
           hoverItem: !!hoverItem,
-          dragIndex,
-          hoverIndex,
-          filteredItemsLength: filteredItems.length,
         });
-        return;
-      }
-
-      // Don't move item to the same position
-      if (dragIndex === hoverIndex) {
-        console.log('⚠️ Same position, skipping move');
         return;
       }
 
@@ -159,76 +133,51 @@ export default function AdminItems({
         return;
       }
 
-      // Create new array with reordered items
-      const newItems = [...filteredItems];
-      const [removedItem] = newItems.splice(dragIndex, 1);
-      newItems.splice(hoverIndex, 0, removedItem);
+      console.log('🔄 Reordering items:', {
+        from: dragIndex,
+        to: hoverIndex,
+        dragItem: dragItem.names?.en,
+        hoverItem: hoverItem.names?.en,
+      });
 
-      // Update order values for the filtered items only
-      const updatedFilteredItems = newItems.map((item, index) => ({
+      const newItems = [...filteredItems];
+      newItems.splice(dragIndex, 1);
+      newItems.splice(hoverIndex, 0, dragItem);
+
+      // Update order values for all items in the category
+      const updatedItems = newItems.map((item, index) => ({
         ...item,
         order: index,
       }));
 
       console.log(
-        '🔄 Updated filtered items order:',
-        updatedFilteredItems.map(item => ({
+        '📊 Updated items order:',
+        updatedItems.map(item => ({
           id: item.id,
           name: item.names?.en,
           order: item.order,
-        })),
+        }))
       );
 
-      // Update local state immediately - only update items in the same category
+      // Update local state immediately
       const updatedAllItems = localItems.map(item => {
-        if (item.category_id === dragItem.category_id) {
-          const foundItem = updatedFilteredItems.find(ni => ni.id === item.id);
-          return foundItem || item;
-        }
-        return item;
+        const foundItem = updatedItems.find(ni => ni.id === item.id);
+        return foundItem || item;
       });
       setLocalItems(updatedAllItems);
 
-      // Update order in backend - only send updates for items in this category
+      // Update order in backend
       try {
         // Create array of items with their new order values
-        const orderUpdates = updatedFilteredItems.map(item => ({
+        const orderUpdates = updatedItems.map(item => ({
           id: item.id,
           order: item.order,
         }));
 
         console.log('🔄 Calling updateOrder API with:', orderUpdates);
 
-        // Try bulk update first, fallback to individual updates
-        try {
-          await itemsAPI.updateOrder(orderUpdates);
-          console.log('✅ Bulk update successful');
-        } catch (bulkError) {
-          console.log(
-            '⚠️ Bulk update failed, trying individual updates:',
-            bulkError
-
-          // Fallback to individual updates with batching to avoid overwhelming the server
-          const batchSize = 5; // Process 5 items at a time
-          for (let i = 0; i < orderUpdates.length; i += batchSize) {
-            const batch = orderUpdates.slice(i, i + batchSize);
-            console.log(
-              `🔄 Processing batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(orderUpdates.length / batchSize)}: ${batch.length} items`
-
-            const updatePromises = batch.map(update =>
-              itemsAPI.update(update.id, { order: update.order }),
-            );
-
-            await Promise.all(updatePromises);
-
-            // Small delay between batches to avoid overwhelming the server
-            if (i + batchSize < orderUpdates.length) {
-              await new Promise(resolve => setTimeout(resolve, 100));
-            }
-          }
-          console.log('✅ Individual updates successful');
-        }
-
+        // Call bulk update endpoint
+        await itemsAPI.updateOrder(orderUpdates);
         toast.success('Order updated');
       } catch (error: any) {
         console.error('Reorder error:', error);
@@ -238,7 +187,7 @@ export default function AdminItems({
         // setLocalItems(items); // Revert on error
       }
     },
-    [filteredItems, localItems, items],
+    [filteredItems, localItems, items]
   );
 
   const openDialog = (item?: Item) => {
@@ -257,21 +206,9 @@ export default function AdminItems({
         tags: item.tags.join(', '),
         isAvailable: item.is_available ?? true,
         variants: item.variants || [],
-        order: item.order || 0,
       });
     } else {
       setEditingId(null);
-      // Set default order to be the next available order in the selected category
-      const selectedCategoryId =
-        selectedCategory === 'all' ? categories[0]?.id : selectedCategory;
-      const categoryItems = items.filter(
-        item => item.category_id === selectedCategoryId
-      );
-      const maxOrder =
-        categoryItems.length > 0
-          ? Math.max(...categoryItems.map(item => item.order || 0))
-          : -1;
-
       setFormData({
         nameEn: '',
         nameTr: '',
@@ -279,13 +216,12 @@ export default function AdminItems({
         descriptionEn: '',
         descriptionTr: '',
         descriptionAr: '',
-        categoryId: selectedCategoryId || '',
+        categoryId: categories[0]?.id || '',
         price: 0,
         image: '',
         tags: '',
         isAvailable: true,
         variants: [],
-        order: maxOrder + 1,
       });
     }
     setDialogOpen(true);
@@ -313,7 +249,7 @@ export default function AdminItems({
           .filter(t => t),
         is_available: formData.isAvailable,
         variants: formData.variants.length > 0 ? formData.variants : undefined,
-        order: formData.order,
+        order: 0, // New items get order 0 by default
       };
 
       if (editingId) {
@@ -354,17 +290,15 @@ export default function AdminItems({
           </h2>
           <span className='text-sm text-gray-500'>({items.length})</span>
         </div>
-        <div className='flex items-center gap-2'>
-          <Button
-            onClick={() => openDialog()}
-            size='sm'
-            className='gap-2 shrink-0'
-            style={{ backgroundColor: '#0C6071' }}
-          >
-            <Plus className='w-4 h-4' />
-            <span className='hidden sm:inline'>{t('addNew', lang)}</span>
-          </Button>
-        </div>
+        <Button
+          onClick={() => openDialog()}
+          size='sm'
+          className='gap-2 shrink-0'
+          style={{ backgroundColor: '#0C6071' }}
+        >
+          <Plus className='w-4 h-4' />
+          <span className='hidden sm:inline'>{t('addNew', lang)}</span>
+        </Button>
       </div>
 
       {/* Drag-and-Drop Info */}
@@ -394,7 +328,7 @@ export default function AdminItems({
           </Badge>
           {categories.map(cat => {
             const count = items.filter(
-              item => item.category_id === cat.id,
+              item => item.category_id === cat.id
             ).length;
             return (
               <Badge
@@ -596,23 +530,6 @@ export default function AdminItems({
               />
             </div>
             <div>
-              <Label>Display Order</Label>
-              <Input
-                type='number'
-                value={formData.order}
-                onChange={e =>
-                  setFormData({
-                    ...formData,
-                    order: parseInt(e.target.value) || 0,
-                  })
-                }
-                placeholder='0'
-              />
-              <p className='text-xs text-muted-foreground mt-1'>
-                Lower numbers appear first. Leave as 0 for automatic ordering.
-              </p>
-            </div>
-            <div>
               <Label>{t('tags', lang)}</Label>
               <Input
                 value={formData.tags}
@@ -705,7 +622,7 @@ export default function AdminItems({
                     size='sm'
                     onClick={() => {
                       const newVariants = formData.variants.filter(
-                        (_, i) => i !== index,
+                        (_, i) => i !== index
                       );
                       setFormData({ ...formData, variants: newVariants });
                     }}

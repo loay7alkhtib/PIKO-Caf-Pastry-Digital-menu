@@ -137,7 +137,6 @@ export const itemsAPI = {
 
   updateOrder: async (orderUpdates: { id: string; order: number }[]) => {
     console.log('🔄 Calling updateOrder API endpoint...');
-    console.log('📊 Order updates payload:', orderUpdates);
     try {
       const result = await apiCall('/items/bulk/update-order', {
         method: 'PUT',
@@ -147,63 +146,6 @@ export const itemsAPI = {
       return result;
     } catch (error) {
       console.error('❌ updateOrder API error:', error);
-      console.error('❌ Error details:', {
-        message: error.message,
-        stack: error.stack,
-      });
-      throw error;
-    }
-  },
-
-  // Individual item updates for drag & drop reordering (since bulk endpoint doesn't exist)
-  batchUpdateOrder: async (
-    orderUpdates: { id: string; order: number }[],
-    categoryId: string
-  ) => {
-    console.log('🔄 Calling batchUpdateOrder with individual updates...');
-    console.log('📊 Batch update payload:', { orderUpdates, categoryId });
-    try {
-      // Since bulk endpoint doesn't exist, update each item individually
-      // First, get all current item data to preserve existing fields
-      const currentItems = await itemsAPI.getAll();
-      const itemsMap = new Map(currentItems.map(item => [item.id, item]));
-
-      const updatePromises = orderUpdates.map(async update => {
-        console.log(`🔄 Updating item ${update.id} to order ${update.order}`);
-
-        const currentItem = itemsMap.get(update.id);
-        if (!currentItem) {
-          throw new Error(`Item ${update.id} not found`);
-        }
-
-        // Update only the sort_order field, preserve all other fields
-        return await apiCall(`/items/${update.id}`, {
-          method: 'PUT',
-          body: JSON.stringify({
-            names: currentItem.names,
-            descriptions: currentItem.descriptions,
-            category_id: currentItem.category_id,
-            price: currentItem.price,
-            image: currentItem.image,
-            tags: currentItem.tags,
-            variants: currentItem.variants,
-            order: update.order, // Use 'order' field name as expected by the API
-          }),
-        });
-      });
-
-      const results = await Promise.all(updatePromises);
-      const errors = results.filter(result => result.error);
-
-      if (errors.length > 0) {
-        console.error('❌ Some item updates failed:', errors);
-        throw new Error(`Failed to update ${errors.length} items`);
-      }
-
-      console.log('✅ batchUpdateOrder completed successfully');
-      return { success: true, count: orderUpdates.length };
-    } catch (error) {
-      console.error('❌ batchUpdateOrder API error:', error);
       throw error;
     }
   },

@@ -32,24 +32,20 @@ const ItemCard = memo(
 
     // Detect image aspect ratio when loaded
     useEffect(() => {
-      const updateAspectRatio = () => {
-        if (!image) {
-          setAspectRatio(4 / 3); // Default for emoji fallback
-          return;
-        }
+      if (!image) {
+        setAspectRatio(4 / 3); // Default for emoji fallback
+        return;
+      }
 
-        const img = new Image();
-        img.onload = () => {
-          const ratio = img.width / img.height;
-          setAspectRatio(ratio);
-        };
-        img.onerror = () => {
-          setAspectRatio(4 / 3); // Fallback on error
-        };
-        img.src = image;
+      const img = new Image();
+      img.onload = () => {
+        const ratio = img.width / img.height;
+        setAspectRatio(ratio);
       };
-
-      updateAspectRatio();
+      img.onerror = () => {
+        setAspectRatio(4 / 3); // Fallback on error
+      };
+      img.src = image;
     }, [image]);
 
     return (

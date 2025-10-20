@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 // @ts-ignore
 import { useDrag, useDrop } from 'react-dnd';
 import type { Identifier, XYCoord } from 'dnd-core';
@@ -22,12 +22,12 @@ interface NotionStyleItemProps {
   index: number;
   categories: Category[];
   onMove: (
-    _dragIndex: number,
-    _hoverIndex: number,
-    _dragItem?: Item,
-    _hoverItem?: Item
+    dragIndex: number,
+    hoverIndex: number,
+    dragItem?: Item,
+    hoverItem?: Item
   ) => void;
-  onUpdate: (_itemId: string, _updates: Partial<Item>) => void;
+  onUpdate: (itemId: string, updates: Partial<Item>) => void;
   onDelete: (id: string) => void;
 }
 
@@ -43,8 +43,8 @@ export default function NotionStyleItem({
   item,
   index,
   categories,
-  onMove: _onMove,
-  onUpdate: _onUpdate,
+  onMove,
+  onUpdate,
   onDelete,
 }: NotionStyleItemProps) {
   const [isEditing, setIsEditing] = useState(false);
@@ -83,8 +83,8 @@ export default function NotionStyleItem({
         return;
       }
 
-      const _dragIndex = dragItem.index;
-      const _hoverIndex = index;
+      const dragIndex = dragItem.index;
+      const hoverIndex = index;
 
       // Throttle hover events
       const now = Date.now();
@@ -104,12 +104,12 @@ export default function NotionStyleItem({
       const hoverClientY = (clientOffset as XYCoord).y - hoverBoundingRect.top;
 
       // Dragging downwards
-      if (_dragIndex < _hoverIndex && hoverClientY < hoverMiddleY) {
+      if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) {
         return;
       }
 
       // Dragging upwards
-      if (_dragIndex > _hoverIndex && hoverClientY > hoverMiddleY) {
+      if (dragIndex > hoverIndex && hoverClientY > hoverMiddleY) {
         return;
       }
 
@@ -120,8 +120,8 @@ export default function NotionStyleItem({
         order: dragItem.order,
       };
 
-      _onMove(_dragIndex, _hoverIndex, draggedItem, item);
-      dragItem.index = _hoverIndex;
+      onMove(dragIndex, hoverIndex, draggedItem, item);
+      dragItem.index = hoverIndex;
     },
   });
 
@@ -168,7 +168,7 @@ export default function NotionStyleItem({
   };
 
   const handleSave = () => {
-    _onUpdate(item.id, editValues);
+    onUpdate(item.id, editValues);
     setIsEditing(false);
   };
 

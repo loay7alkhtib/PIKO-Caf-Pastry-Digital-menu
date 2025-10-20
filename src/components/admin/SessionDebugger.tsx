@@ -44,7 +44,7 @@ export function SessionDebugger() {
         data: { session },
       } = await authAPI.getSession();
       setServerValid(session !== null);
-    } catch {
+    } catch (_error) {
       setServerValid(false);
     } finally {
       setChecking(false);

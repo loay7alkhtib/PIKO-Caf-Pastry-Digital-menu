@@ -18,23 +18,23 @@ class MockIntersectionObserver implements IntersectionObserver {
   readonly thresholds: ReadonlyArray<number> = [];
 
   constructor(
-    callback: IntersectionObserverCallback,
-    options?: IntersectionObserverInit
+    _callback: IntersectionObserverCallback,
+    _options?: IntersectionObserverInit
   ) {}
   disconnect(): void {}
-  observe(target: Element): void {}
-  unobserve(target: Element): void {}
+  observe(_target: Element): void {}
+  unobserve(_target: Element): void {}
   takeRecords(): IntersectionObserverEntry[] {
     return [];
   }
 }
 
 // Assign with cast to avoid lib type mismatch in jsdom
-(global as any).IntersectionObserver =
+global.IntersectionObserver =
   MockIntersectionObserver as unknown as typeof IntersectionObserver;
 
 // Mock ResizeObserver
-(global as any).ResizeObserver = class ResizeObserver {
+global.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
   observe() {}
