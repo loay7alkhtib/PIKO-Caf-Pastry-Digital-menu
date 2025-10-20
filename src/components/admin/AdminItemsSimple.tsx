@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Label } from '../ui/label';
@@ -30,7 +30,7 @@ import { useLang } from '../../lib/LangContext';
 import { t } from '../../lib/i18n';
 import { Category, Item, itemsAPI } from '../../lib/supabase';
 import { toast } from 'sonner';
-import { Plus, Edit, Trash2 } from 'lucide-react';
+import { Edit, Plus, Trash2 } from 'lucide-react';
 import { Badge } from '../ui/badge';
 
 interface AdminItemsSimpleProps {
@@ -98,10 +98,11 @@ export default function AdminItemsSimple({
       });
     } else {
       setEditingId(null);
-      const maxOrder = categoryItems.length > 0
-        ? Math.max(...categoryItems.map(item => item.order || 0))
-        : -1;
-      
+      const maxOrder =
+        categoryItems.length > 0
+          ? Math.max(...categoryItems.map(item => item.order || 0))
+          : -1;
+
       setFormData({
         nameEn: '',
         nameTr: '',
@@ -205,7 +206,9 @@ export default function AdminItemsSimple({
         <Label>Select Category to Manage Items</Label>
         <div className='flex items-center gap-2 flex-wrap'>
           {categories.map(cat => {
-            const count = items.filter(item => item.category_id === cat.id).length;
+            const count = items.filter(
+              item => item.category_id === cat.id
+            ).length;
             return (
               <Badge
                 key={cat.id}
@@ -228,10 +231,14 @@ export default function AdminItemsSimple({
               <TableRow>
                 <TableHead className='w-20'>Image</TableHead>
                 <TableHead className='min-w-[150px]'>Name (EN)</TableHead>
-                <TableHead className='min-w-[120px] hidden md:table-cell'>Name (AR)</TableHead>
+                <TableHead className='min-w-[120px] hidden md:table-cell'>
+                  Name (AR)
+                </TableHead>
                 <TableHead className='w-24'>Price</TableHead>
                 <TableHead className='w-20'>Order</TableHead>
-                <TableHead className='w-20 hidden lg:table-cell'>Available</TableHead>
+                <TableHead className='w-20 hidden lg:table-cell'>
+                  Available
+                </TableHead>
                 <TableHead className='text-right w-32'>Actions</TableHead>
               </TableRow>
             </TableHeader>
@@ -254,7 +261,9 @@ export default function AdminItemsSimple({
                     </div>
                   </TableCell>
                   <TableCell className='font-medium'>{item.names.en}</TableCell>
-                  <TableCell className='hidden md:table-cell'>{item.names.ar}</TableCell>
+                  <TableCell className='hidden md:table-cell'>
+                    {item.names.ar}
+                  </TableCell>
                   <TableCell>${item.price}</TableCell>
                   <TableCell>
                     <Input
@@ -269,7 +278,9 @@ export default function AdminItemsSimple({
                     />
                   </TableCell>
                   <TableCell className='hidden lg:table-cell'>
-                    <Badge variant={item.is_available ? 'default' : 'secondary'}>
+                    <Badge
+                      variant={item.is_available ? 'default' : 'secondary'}
+                    >
                       {item.is_available ? 'Yes' : 'No'}
                     </Badge>
                   </TableCell>
@@ -305,7 +316,8 @@ export default function AdminItemsSimple({
         <DialogContent className='max-w-2xl max-h-[90vh] overflow-y-auto'>
           <DialogHeader>
             <DialogTitle>
-              {editingId ? t('edit', lang) : t('addNew', lang)} {t('items', lang)}
+              {editingId ? t('edit', lang) : t('addNew', lang)}{' '}
+              {t('items', lang)}
             </DialogTitle>
             <DialogDescription>
               {editingId
@@ -313,20 +325,26 @@ export default function AdminItemsSimple({
                 : 'Add a new menu item with details below'}
             </DialogDescription>
           </DialogHeader>
-          
+
           <div className='space-y-4'>
             <ImageUpload
               value={formData.image}
-              onChange={base64 => setFormData({ ...formData, image: base64 || '' })}
+              onChange={imageUrl =>
+                setFormData({ ...formData, image: imageUrl || '' })
+              }
               label={t('itemImage', lang)}
+              useSupabaseStorage={true}
+              itemName={formData.nameEn || formData.nameTr || formData.nameAr}
               fallbackIcon='🍽️'
             />
-            
+
             <div>
               <Label>{t('category', lang)}</Label>
               <Select
                 value={formData.categoryId}
-                onValueChange={val => setFormData({ ...formData, categoryId: val })}
+                onValueChange={val =>
+                  setFormData({ ...formData, categoryId: val })
+                }
               >
                 <SelectTrigger>
                   <SelectValue />
@@ -346,7 +364,9 @@ export default function AdminItemsSimple({
                 <Label>{t('nameEnglish', lang)}</Label>
                 <Input
                   value={formData.nameEn}
-                  onChange={e => setFormData({ ...formData, nameEn: e.target.value })}
+                  onChange={e =>
+                    setFormData({ ...formData, nameEn: e.target.value })
+                  }
                   placeholder='Cappuccino'
                 />
               </div>
@@ -354,7 +374,9 @@ export default function AdminItemsSimple({
                 <Label>{t('nameTurkish', lang)}</Label>
                 <Input
                   value={formData.nameTr}
-                  onChange={e => setFormData({ ...formData, nameTr: e.target.value })}
+                  onChange={e =>
+                    setFormData({ ...formData, nameTr: e.target.value })
+                  }
                   placeholder='Kapuçino'
                 />
               </div>
@@ -362,7 +384,9 @@ export default function AdminItemsSimple({
                 <Label>{t('nameArabic', lang)}</Label>
                 <Input
                   value={formData.nameAr}
-                  onChange={e => setFormData({ ...formData, nameAr: e.target.value })}
+                  onChange={e =>
+                    setFormData({ ...formData, nameAr: e.target.value })
+                  }
                   placeholder='كابتشينو'
                   dir='rtl'
                 />
@@ -376,7 +400,12 @@ export default function AdminItemsSimple({
                   type='number'
                   step='0.01'
                   value={formData.price}
-                  onChange={e => setFormData({ ...formData, price: parseFloat(e.target.value) })}
+                  onChange={e =>
+                    setFormData({
+                      ...formData,
+                      price: parseFloat(e.target.value),
+                    })
+                  }
                 />
               </div>
               <div>
@@ -384,7 +413,12 @@ export default function AdminItemsSimple({
                 <Input
                   type='number'
                   value={formData.order}
-                  onChange={e => setFormData({ ...formData, order: parseInt(e.target.value) || 0 })}
+                  onChange={e =>
+                    setFormData({
+                      ...formData,
+                      order: parseInt(e.target.value) || 0,
+                    })
+                  }
                   placeholder='0'
                 />
                 <p className='text-xs text-muted-foreground mt-1'>
@@ -397,7 +431,9 @@ export default function AdminItemsSimple({
               <Label>{t('tags', lang)}</Label>
               <Input
                 value={formData.tags}
-                onChange={e => setFormData({ ...formData, tags: e.target.value })}
+                onChange={e =>
+                  setFormData({ ...formData, tags: e.target.value })
+                }
                 placeholder='Premium, Fresh, Hot'
               />
             </div>
@@ -407,7 +443,9 @@ export default function AdminItemsSimple({
                 type='checkbox'
                 id='isAvailable'
                 checked={formData.isAvailable}
-                onChange={e => setFormData({ ...formData, isAvailable: e.target.checked })}
+                onChange={e =>
+                  setFormData({ ...formData, isAvailable: e.target.checked })
+                }
                 className='rounded border-gray-300'
               />
               <Label htmlFor='isAvailable' className='text-sm font-normal'>
