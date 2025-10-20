@@ -17,7 +17,7 @@ import { LogOut, RefreshCw, Settings } from 'lucide-react';
 const AdminCategories = lazy(
   () => import('../components/admin/AdminCategories')
 );
-const AdminItems = lazy(() => import('../components/admin/AdminItems'));
+const AdminItems = lazy(() => import('../components/admin/AdminItemsSimple'));
 // const SessionDebugger = lazy(() =>
 //   import('../components/admin/SessionDebugger').then(m => ({
 //     default: m.SessionDebugger,
