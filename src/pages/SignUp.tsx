@@ -74,14 +74,14 @@ export default function SignUp({ onNavigate }: SignUpProps) {
     setLoading(true);
 
     try {
-      console.log('Starting signup with:', { email, name });
+      // Starting signup with: { email, name }
       await authAPI.signUp({
         email,
         password,
         name,
       });
 
-      console.log('Signup successful!');
+      // Signup successful!
 
       toast.success(
         lang === 'en'

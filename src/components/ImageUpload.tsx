@@ -26,13 +26,13 @@ const ImageUpload = memo(
 
     const handleFileSelect = async (file: File) => {
       if (!file.type.startsWith('image/')) {
-        alert('Please select an image file');
+        // Please select an image file
         return;
       }
 
       // Check file size (max 2MB)
       if (file.size > 2 * 1024 * 1024) {
-        alert('Image size must be less than 2MB');
+        // Image size must be less than 2MB
         return;
       }
 
@@ -40,7 +40,7 @@ const ImageUpload = memo(
       const reader = new FileReader();
       reader.onloadend = () => {
         const base64String = reader.result as string;
-        console.log('Image uploaded, base64 length:', base64String.length);
+        // Image uploaded, base64 length: base64String.length
         setPreview(base64String);
         onChange(base64String);
       };

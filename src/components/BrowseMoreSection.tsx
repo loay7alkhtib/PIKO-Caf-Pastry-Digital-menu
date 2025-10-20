@@ -10,7 +10,7 @@ import type { Category, Lang } from '../lib/types';
 interface BrowseMoreSectionProps {
   categories: Category[];
   lang: Lang;
-  onNavigate: (page: string, categoryId?: string) => void;
+  onNavigate: (_page: string, _categoryId?: string) => void;
 }
 
 const BrowseMoreSection = memo(

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 // @ts-ignore
 import { useDrag, useDrop } from 'react-dnd';
 import type { Identifier, XYCoord } from 'dnd-core';
@@ -19,11 +19,11 @@ interface DraggableItemProps {
 }
 
 interface DragItem {
-  index: number;
   id: string;
-  type: string;
+  index: number;
   categoryId: string;
   order: number;
+  type: string;
 }
 
 export default function DraggableItem({
@@ -35,7 +35,6 @@ export default function DraggableItem({
   onDelete,
 }: DraggableItemProps) {
   const ref = useRef<HTMLTableRowElement>(null);
-  const lastHoverTime = useRef<number>(0);
 
   const [{ handlerId }, drop] = useDrop<
     DragItem,
@@ -43,46 +42,54 @@ export default function DraggableItem({
     { handlerId: Identifier | null }
   >({
     accept: 'item',
-    collect(monitor: any) {
+    collect(monitor) {
       return {
         handlerId: monitor.getHandlerId(),
       };
     },
-    hover(dragItem: DragItem, monitor: any) {
+    hover(item: DragItem, monitor) {
       if (!ref.current) {
         return;
       }
-
-      const dragIndex = dragItem.index;
+      const dragIndex = item.index;
       const hoverIndex = index;
 
-      // Throttle hover events to prevent excessive calls
-      const now = Date.now();
-      if (now - lastHoverTime.current < 100) {
-        return;
-      }
-      lastHoverTime.current = now;
+      console.log('🔄 Hover event:', {
+        dragIndex,
+        hoverIndex,
+        dragItem: item.id,
+        hoverItem: item.id,
+        sameItem: dragIndex === hoverIndex,
+      });
 
-      // Prevent dragging the same item over itself
-      if (dragItem.id === item.id) {
-        return;
-      }
-
-      // Only allow reordering within the same category
-      if (dragItem.categoryId !== item.category_id) {
+      // Don't replace items with themselves
+      if (dragIndex === hoverIndex) {
+        console.log('⚠️ Same item, skipping');
         return;
       }
 
       // Don't replace items with themselves
       if (dragIndex === hoverIndex) {
+        console.log('⚠️ Same position, skipping');
         return;
       }
 
+      // Determine rectangle on screen
       const hoverBoundingRect = ref.current?.getBoundingClientRect();
+
+      // Get vertical middle
       const hoverMiddleY =
         (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
+
+      // Determine mouse position
       const clientOffset = monitor.getClientOffset();
+
+      // Get pixels to the top
       const hoverClientY = (clientOffset as XYCoord).y - hoverBoundingRect.top;
+
+      // Only perform the move when the mouse has crossed half of the items height
+      // When dragging downwards, only move when the cursor is below 50%
+      // When dragging upwards, only move when the cursor is above 50%
 
       // Dragging downwards
       if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) {
@@ -94,9 +101,15 @@ export default function DraggableItem({
         return;
       }
 
+      // Time to actually perform the action
+      console.log('✅ Calling onMove with:', { dragIndex, hoverIndex });
       onMove(dragIndex, hoverIndex);
-      // Update the drag item's index to prevent infinite loops
-      dragItem.index = hoverIndex;
+
+      // Note: we're mutating the monitor item here!
+      // Generally it's better to avoid mutations,
+      // but it's good here for the sake of performance
+      // to avoid expensive index searches.
+      item.index = hoverIndex;
     },
   });
 
@@ -109,24 +122,31 @@ export default function DraggableItem({
         categoryId: item.category_id,
         order: item.order,
       };
+      console.log('🎯 Drag started for item:', {
+        id: item.id,
+        name: item.names?.en,
+        index,
+        categoryId: item.category_id,
+      });
+      console.log('🚀 DRAG BEGIN - Item is being dragged!');
       return dragItem;
     },
     collect: (monitor: any) => ({
       isDragging: monitor.isDragging(),
     }),
+    end: (item, monitor) => {
+      console.log('🏁 DRAG END - Item drag ended!');
+      if (!monitor.didDrop()) {
+        console.log('⚠️ Drag was cancelled');
+      }
+    },
   });
 
   const opacity = isDragging ? 0.4 : 1;
-  const dragRef = useRef<HTMLDivElement>(null);
 
-  // Use useEffect to avoid accessing refs during render
-  useEffect(() => {
-    if (dragRef.current) {
-      drag(dragRef);
-    }
-    if (ref.current) {
-      drop(ref);
-    }
+  // Use useLayoutEffect for proper ref attachment timing
+  useLayoutEffect(() => {
+    drag(drop(ref));
   }, [drag, drop]);
 
   const category = categories.find(c => c.id === item.category_id);
@@ -140,13 +160,27 @@ export default function DraggableItem({
     >
       <TableCell className='w-8'>
         <div
-          ref={dragRef}
           className={`cursor-grab active:cursor-grabbing text-muted-foreground hover:text-foreground ${
             isDragging ? 'bg-blue-100' : ''
           }`}
           style={{
             backgroundColor: isDragging ? '#dbeafe' : 'transparent',
             border: isDragging ? '2px solid #3b82f6' : 'none',
+            padding: '8px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            minHeight: '40px',
+          }}
+          title='Drag to reorder'
+          onClick={() => {
+            console.log('🖱️ CLICKED on drag handle for item:', item.names?.en);
+          }}
+          onMouseDown={() => {
+            console.log(
+              '🖱️ MOUSE DOWN on drag handle for item:',
+              item.names?.en
+            );
           }}
         >
           <GripVertical className='w-5 h-5' />

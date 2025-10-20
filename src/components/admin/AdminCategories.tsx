@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 // @ts-ignore
 import { DndProvider } from 'react-dnd';
 // @ts-ignore
@@ -47,9 +47,9 @@ export default function AdminCategories({
   });
 
   // Update local categories when props change
-  useState(() => {
+  useEffect(() => {
     setLocalCategories([...categories].sort((a, b) => a.order - b.order));
-  });
+  }, [categories]);
 
   const moveCategory = useCallback(
     async (dragIndex: number, hoverIndex: number) => {

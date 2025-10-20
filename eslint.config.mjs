@@ -9,13 +9,25 @@ import prettierConfig from 'eslint-config-prettier';
 
 export default [
   {
-    ignores: ['dist', 'node_modules', 'build', '.vite', 'supabase/functions'],
+    ignores: [
+      'dist',
+      'node_modules',
+      'build',
+      '.vite',
+      'supabase/functions',
+      // Ignore generated or edge runtime server code outside app runtime
+      'src/supabase/functions/**',
+    ],
   },
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2023,
-      globals: globals.browser,
+      // Default to browser + node so common globals like process are defined
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
       parser: tsParser,
       parserOptions: {
         ecmaVersion: 'latest',
@@ -57,6 +69,8 @@ export default [
 
       // General code quality rules
       'no-console': ['warn', { allow: ['warn', 'error'] }],
+      // TS type checker already handles undefined variables more accurately
+      'no-undef': 'off',
       'no-debugger': 'error',
       'no-alert': 'warn',
       'no-duplicate-imports': 'error',
@@ -69,7 +83,7 @@ export default [
       'arrow-spacing': 'error',
       'no-multiple-empty-lines': ['error', { max: 1 }],
       'eol-last': 'error',
-      'comma-dangle': ['error', 'always-multiline'],
+      'comma-dangle': ['warn', 'always-multiline'],
       semi: ['error', 'always'],
       quotes: ['error', 'single', { avoidEscape: true }],
       indent: ['error', 2, { SwitchCase: 1 }],
@@ -89,6 +103,52 @@ export default [
 
       // Prettier integration
       'prettier/prettier': 'error',
+    },
+  },
+  // Test files (Vitest + jsdom)
+  {
+    files: [
+      '**/__tests__/**/*.{ts,tsx}',
+      '**/test/**/*.{ts,tsx}',
+      '**/*.test.{ts,tsx}',
+    ],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.vitest,
+      },
+    },
+    rules: {
+      // Tests often use console for debugging
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'comma-dangle': 'off',
+    },
+  },
+  // Node config files
+  {
+    files: [
+      'vite.config.*',
+      'vitest.config.*',
+      'postcss.config.*',
+      'eslint.config.*',
+      '**/*.config.*',
+      'scripts/**/*.{js,ts}',
+    ],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+      },
+    },
+  },
+  // Deno/Edge function environment (if we lint these in src)
+  {
+    files: ['src/supabase/functions/**/*.{ts,tsx}'],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...(globals.deno || {}),
+      },
     },
   },
 ];

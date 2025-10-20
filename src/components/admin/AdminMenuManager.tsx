@@ -44,7 +44,6 @@ import {
   GripVertical,
   Info,
   Plus,
-  Settings,
   Trash2,
   X,
 } from 'lucide-react';
