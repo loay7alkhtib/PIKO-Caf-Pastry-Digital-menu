@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useState } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import { LangProvider } from './lib/LangContext';
 import { CartProvider } from './lib/CartContext';
 import { DataProvider } from './lib/DataContext';
@@ -17,20 +17,28 @@ const Admin = lazy(() => import('./pages/Admin'));
 import type { Page } from './lib/types';
 
 export default function App() {
-  const [page, setPage] = useState<Page>('home');
-  const [categoryId, setCategoryId] = useState<string | null>(null);
-
-  // Initialize database in background (non-blocking) - only if needed
-  useEffect(() => {
-    // Only initialize if we detect the database is empty
-    // This will be handled by the DataContext instead
-    console.log('App mounted, data loading will be handled by DataContext');
-  }, []);
+  const [page, setPage] = useState<Page>(() => {
+    try {
+      const saved = localStorage.getItem('piko_last_page');
+      return (saved as Page) || 'home';
+    } catch {
+      return 'home';
+    }
+  });
+  const [categoryId, setCategoryId] = useState<string | null>(() => {
+    try {
+      return localStorage.getItem('piko_last_category');
+    } catch {
+      return null;
+    }
+  });
 
   const navigate = (newPage: Page, newCategoryId?: string) => {
     setPage(newPage);
+    localStorage.setItem('piko_last_page', newPage);
     if (newCategoryId) {
       setCategoryId(newCategoryId);
+      localStorage.setItem('piko_last_category', newCategoryId);
     }
   };
 
