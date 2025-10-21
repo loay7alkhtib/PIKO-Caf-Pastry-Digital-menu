@@ -67,14 +67,18 @@ export default function AdminItemsSimple({
   // Get items for selected category
   const categoryItems = selectedCategory
     ? items
-        .filter(item => item.category_id === selectedCategory)
-        .sort((a, b) => (a.order || 0) - (b.order || 0))
+      .filter(item => item.category_id === selectedCategory)
+      .sort((a, b) => (a.order || 0) - (b.order || 0))
     : [];
 
-  // Set first category as default
+  // Set first category as default (only once on mount or when categories change)
   useEffect(() => {
     if (categories.length > 0 && !selectedCategory) {
-      setSelectedCategory(categories[0].id);
+      // Use setTimeout to avoid synchronous state updates
+      const timer = setTimeout(() => {
+        setSelectedCategory(categories[0].id);
+      }, 0);
+      return () => clearTimeout(timer);
     }
   }, [categories, selectedCategory]);
 
@@ -157,9 +161,11 @@ export default function AdminItemsSimple({
 
       setDialogOpen(false);
       onRefresh();
-    } catch (error: any) {
+    } catch (error) {
       console.error('Save error:', error);
-      toast.error(error.message);
+      const errorMessage =
+        error instanceof Error ? error.message : 'Failed to save item';
+      toast.error(errorMessage);
     }
   };
 
@@ -170,9 +176,11 @@ export default function AdminItemsSimple({
       await itemsAPI.delete(id);
       toast.success('Item deleted');
       onRefresh();
-    } catch (error: any) {
+    } catch (error) {
       console.error('Delete error:', error);
-      toast.error(error.message);
+      const errorMessage =
+        error instanceof Error ? error.message : 'Failed to delete item';
+      toast.error(errorMessage);
     }
   };
 
@@ -181,7 +189,7 @@ export default function AdminItemsSimple({
       await itemsAPI.update(itemId, { order: newOrder });
       toast.success('Order updated');
       onRefresh();
-    } catch (error: any) {
+    } catch (error) {
       console.error('Order update error:', error);
       toast.error('Failed to update order');
     }
@@ -195,7 +203,7 @@ export default function AdminItemsSimple({
           <h2 className='text-xl font-medium'>{t('items', lang)}</h2>
           <span className='text-sm text-gray-500'>({items.length})</span>
         </div>
-        <Button onClick={() => openDialog()} className='gap-2'>
+        <Button type='button' onClick={() => openDialog()} className='gap-2'>
           <Plus className='w-4 h-4' />
           {t('addNew', lang)}
         </Button>
@@ -207,7 +215,7 @@ export default function AdminItemsSimple({
         <div className='flex items-center gap-2 flex-wrap'>
           {categories.map(cat => {
             const count = items.filter(
-              item => item.category_id === cat.id
+              item => item.category_id === cat.id,
             ).length;
             return (
               <Badge
@@ -287,6 +295,7 @@ export default function AdminItemsSimple({
                   <TableCell className='text-right'>
                     <div className='flex items-center gap-1'>
                       <Button
+                        type='button'
                         variant='ghost'
                         size='sm'
                         onClick={() => openDialog(item)}
@@ -295,6 +304,7 @@ export default function AdminItemsSimple({
                         <Edit className='w-4 h-4' />
                       </Button>
                       <Button
+                        type='button'
                         variant='ghost'
                         size='sm'
                         onClick={() => handleDelete(item.id)}
@@ -455,10 +465,14 @@ export default function AdminItemsSimple({
           </div>
 
           <DialogFooter>
-            <Button variant='outline' onClick={() => setDialogOpen(false)}>
+            <Button
+              type='button'
+              variant='outline'
+              onClick={() => setDialogOpen(false)}
+            >
               Cancel
             </Button>
-            <Button onClick={handleSave}>
+            <Button type='button' onClick={handleSave}>
               {editingId ? 'Update' : 'Create'}
             </Button>
           </DialogFooter>

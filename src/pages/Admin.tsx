@@ -11,7 +11,8 @@ import { useData } from '../lib/DataContext';
 import { t } from '../lib/i18n';
 import { authAPI } from '../lib/supabase';
 import { toast } from 'sonner';
-import { LogOut, RefreshCw, Settings, Upload } from 'lucide-react';
+import { LogOut, RefreshCw } from 'lucide-react';
+import StorageStatus from '../components/StorageStatus';
 
 // Lazy load admin components
 const AdminCategories = lazy(
@@ -33,18 +34,28 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
   const { categories, items, refetch } = useData(); // Use cached data!
   const [authorized, setAuthorized] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [showAdvancedTools, setShowAdvancedTools] = useState(false);
+  const [activeTab, setActiveTab] = useState(() => {
+    // Try to restore tab state from localStorage
+    const savedTab = localStorage.getItem('admin-active-tab');
+    return savedTab || 'categories';
+  });
+
+  // Debug tab changes and persist tab state
+  useEffect(() => {
+    console.log('📱 Tab changed to:', activeTab);
+    localStorage.setItem('admin-active-tab', activeTab);
+  }, [activeTab]);
 
   useEffect(() => {
     checkAuth();
 
-    // Re-check auth periodically to handle session expiry
+    // Re-check auth periodically to handle session expiry (less frequent)
     const authCheckInterval = setInterval(() => {
       checkAuth();
-    }, 60000); // Check every minute
+    }, 300000); // Check every 5 minutes instead of every minute
 
     return () => clearInterval(authCheckInterval);
-  }, []);
+  }, []); // Remove dependencies to prevent re-running
 
   async function checkAuth() {
     try {
@@ -101,7 +112,9 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
 
   const handleRefresh = async () => {
     try {
-      await refetch(); // Refetch categories and items
+      console.log('🔄 Refreshing data, current tab:', activeTab);
+      await refetch(true); // Force refetch categories and items
+      console.log('✅ Data refreshed, tab should remain:', activeTab);
       toast.success(
         lang === 'en'
           ? 'Data refreshed successfully!'
@@ -169,26 +182,6 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
               </span>
             </Button>
             <Button
-              onClick={() => onNavigate('batch-upload')}
-              variant='outline'
-              size='sm'
-              className='gap-2'
-            >
-              <Upload className='w-4 h-4' />
-              <span className='hidden md:inline'>Batch Upload</span>
-            </Button>
-            <Button
-              onClick={() => setShowAdvancedTools(!showAdvancedTools)}
-              variant='ghost'
-              size='sm'
-              className='gap-2'
-            >
-              <Settings className='w-4 h-4' />
-              <span className='hidden md:inline'>
-                {lang === 'en' ? 'Tools' : lang === 'tr' ? 'Araçlar' : 'أدوات'}
-              </span>
-            </Button>
-            <Button
               onClick={handleLogout}
               variant='outline'
               className='gap-2 flex-shrink-0'
@@ -202,16 +195,8 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
       </header>
 
       <main className='max-w-[1600px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 md:py-8'>
-        {/* Advanced Tools - Collapsible */}
-        {showAdvancedTools && (
-          <div className='mb-6 max-w-4xl mx-auto'>
-            <Suspense
-              fallback={<div className='text-center py-4'>Loading...</div>}
-            ></Suspense>
-          </div>
-        )}
-
-        <Tabs defaultValue='categories' className='w-full'>
+        <StorageStatus />
+        <Tabs value={activeTab} onValueChange={setActiveTab} className='w-full'>
           <TabsList className='grid w-full max-w-2xl mx-auto grid-cols-2 mb-6 sm:mb-8'>
             <TabsTrigger
               value='categories'
