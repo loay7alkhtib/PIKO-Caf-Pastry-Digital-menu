@@ -34,7 +34,6 @@
     "@supabase/supabase-js": "^2.75.0",
     "@tailwindcss/vite": "*",
     "@tanstack/react-query": "^5.90.5",
-    "@types/react-dnd": "^2.0.36",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
     "@vitejs/plugin-react-swc": "*",

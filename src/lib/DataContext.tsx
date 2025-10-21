@@ -201,7 +201,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       mounted = false;
       clearTimeout(timer);
     };
-  }, []);
+  }, [fetchAllData]);
 
   // Auto-refresh for visitors to see admin changes - DISABLED to prevent continuous refresh
   // useEffect(() => {

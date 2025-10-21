@@ -1,4 +1,5 @@
 import * as React from 'react';
+/* eslint-disable react-refresh/only-export-components */
 import {
   Dialog,
   DialogContent,
@@ -8,6 +9,8 @@ import {
   DialogTitle,
 } from './dialog';
 import { Button } from './button';
+
+// Keep only component exports at the top-level to satisfy react-refresh
 
 type ConfirmOptions = {
   title?: string;

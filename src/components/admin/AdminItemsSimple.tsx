@@ -1,6 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
-import { DndProvider, useDrag, useDrop } from 'react-dnd';
+import {
+  DndProvider,
+  type DragSourceMonitor,
+  type DropTargetMonitor,
+  useDrag,
+  useDrop,
+} from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
+import type { Identifier, XYCoord } from 'dnd-core';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Label } from '../ui/label';
@@ -45,7 +52,6 @@ interface AdminItemsSimpleProps {
 interface DraggableTableRowProps {
   item: Item;
   index: number;
-  categoryId: string;
   onEdit: (item: Item) => void;
   onDelete: (id: string) => void;
   onMove: (dragIndex: number, hoverIndex: number) => void;
@@ -57,17 +63,23 @@ const DraggableTableRow = ({
   onEdit,
   onDelete,
   onMove,
-}: Omit<DraggableTableRowProps, 'categoryId'>) => {
+}: DraggableTableRowProps) => {
   const ref = useRef<HTMLTableRowElement>(null);
 
-  const [{ handlerId }, drop] = useDrop({
+  // useDrop from react-dnd
+
+  const [{ handlerId }, drop] = useDrop<
+    { index: number },
+    void,
+    { handlerId: Identifier | null }
+  >({
     accept: 'item',
-    collect(monitor) {
+    collect(monitor: DropTargetMonitor) {
       return {
         handlerId: monitor.getHandlerId(),
       };
     },
-    hover(draggedItem: { index: number }, monitor) {
+    hover(draggedItem: { index: number }, monitor: DropTargetMonitor) {
       if (!ref.current) {
         return;
       }
@@ -81,7 +93,7 @@ const DraggableTableRow = ({
       const hoverBoundingRect = ref.current?.getBoundingClientRect();
       const hoverMiddleY =
         (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
-      const clientOffset = monitor.getClientOffset();
+      const clientOffset = monitor.getClientOffset() as XYCoord | null;
       if (!clientOffset) return;
       const hoverClientY = clientOffset.y - hoverBoundingRect.top;
 
@@ -97,12 +109,14 @@ const DraggableTableRow = ({
     },
   });
 
-  const [{ isDragging }, drag] = useDrag({
+  const [{ isDragging }, drag] = useDrag<
+    { id: string; index: number },
+    void,
+    { isDragging: boolean }
+  >({
     type: 'item',
-    item: () => {
-      return { id: item.id, index };
-    },
-    collect: monitor => ({
+    item: () => ({ id: item.id, index }),
+    collect: (monitor: DragSourceMonitor) => ({
       isDragging: monitor.isDragging(),
     }),
   });
@@ -246,7 +260,7 @@ function AdminItemsSimpleInner({
     if (categories.length > 0 && !selectedCategory) {
       // Use setTimeout to avoid synchronous state updates
       const timer = setTimeout(() => {
-        setSelectedCategory(categories[0].id);
+        setSelectedCategory(categories[0]?.id || '');
       }, 0);
       return () => clearTimeout(timer);
     }
@@ -371,6 +385,7 @@ function AdminItemsSimpleInner({
     );
 
     const draggedItem = categoryItems[dragIndex];
+    if (!draggedItem) return;
     const newCategoryItems = [...categoryItems];
     newCategoryItems.splice(dragIndex, 1);
     newCategoryItems.splice(hoverIndex, 0, draggedItem);
@@ -444,7 +459,13 @@ function AdminItemsSimpleInner({
 
       // Extra safety: if server lacked bulk endpoint and fallback was used,
       // perform full updates to ensure legacy endpoints persist the order.
-      if ((result as any)?.fallback) {
+      const usedFallback =
+        typeof result === 'object' &&
+        result !== null &&
+        'fallback' in (result as Record<string, unknown>) &&
+        Boolean((result as { fallback?: boolean }).fallback);
+
+      if (usedFallback) {
         console.warn('🛟 Performing full item updates as a safeguard...');
         await Promise.all(
           latestCategoryItems.map((item, index) =>
@@ -554,7 +575,6 @@ function AdminItemsSimpleInner({
                     key={item.id}
                     item={item}
                     index={index}
-                    categoryId={selectedCategory}
                     onEdit={openDialog}
                     onDelete={handleDelete}
                     onMove={moveItem}
