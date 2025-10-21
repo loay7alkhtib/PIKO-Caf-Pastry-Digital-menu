@@ -1,4 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { DndProvider, useDrag, useDrop } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Label } from '../ui/label';
@@ -15,12 +17,119 @@ import { useLang } from '../../lib/LangContext';
 import { t } from '../../lib/i18n';
 import { categoriesAPI, Category } from '../../lib/supabase';
 import { toast } from 'sonner';
-import { Plus } from 'lucide-react';
+import { GripVertical, Plus } from 'lucide-react';
 
 interface AdminCategoriesProps {
   categories: Category[];
   onRefresh: () => void;
 }
+
+interface DraggableCategoryItemProps {
+  category: Category;
+  index: number;
+  onEdit: (category: Category) => void;
+  onDelete: (id: string) => void;
+  onMove: (dragIndex: number, hoverIndex: number) => void;
+}
+
+const DraggableCategoryItem = ({
+  category,
+  index,
+  onEdit,
+  onDelete,
+  onMove,
+}: DraggableCategoryItemProps) => {
+  const ref = useRef<HTMLDivElement>(null);
+
+  const [{ handlerId }, drop] = useDrop({
+    accept: 'category',
+    collect(monitor) {
+      return {
+        handlerId: monitor.getHandlerId(),
+      };
+    },
+    hover(item: any, monitor) {
+      if (!ref.current) {
+        return;
+      }
+      const dragIndex = item.index;
+      const hoverIndex = index;
+
+      if (dragIndex === hoverIndex) {
+        return;
+      }
+
+      const hoverBoundingRect = ref.current?.getBoundingClientRect();
+      const hoverMiddleY =
+        (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
+      const clientOffset = monitor.getClientOffset();
+      const hoverClientY = clientOffset!.y - hoverBoundingRect.top;
+
+      if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) {
+        return;
+      }
+      if (dragIndex > hoverIndex && hoverClientY > hoverMiddleY) {
+        return;
+      }
+
+      onMove(dragIndex, hoverIndex);
+      item.index = hoverIndex;
+    },
+  });
+
+  const [{ isDragging }, drag] = useDrag({
+    type: 'category',
+    item: () => {
+      return { id: category.id, index };
+    },
+    collect: monitor => ({
+      isDragging: monitor.isDragging(),
+    }),
+  });
+
+  const opacity = isDragging ? 0.5 : 1;
+  drag(drop(ref));
+
+  return (
+    <div
+      ref={ref}
+      style={{ opacity }}
+      data-handler-id={handlerId}
+      className='flex items-center justify-between p-4 bg-card rounded-lg border border-border hover:shadow-md transition-shadow'
+    >
+      <div className='flex items-center gap-3'>
+        <div className='cursor-grab active:cursor-grabbing'>
+          <GripVertical className='w-4 h-4 text-muted-foreground' />
+        </div>
+        <span className='text-2xl'>{category.icon}</span>
+        <div>
+          <h3 className='font-medium'>{category.names.en}</h3>
+          <p className='text-sm text-muted-foreground'>
+            {category.names.tr} • {category.names.ar}
+          </p>
+        </div>
+      </div>
+      <div className='flex items-center gap-2'>
+        <Button
+          type='button'
+          variant='outline'
+          size='sm'
+          onClick={() => onEdit(category)}
+        >
+          Edit
+        </Button>
+        <Button
+          type='button'
+          variant='destructive'
+          size='sm'
+          onClick={() => onDelete(category.id)}
+        >
+          Delete
+        </Button>
+      </div>
+    </div>
+  );
+};
 
 export default function AdminCategories({
   categories,
@@ -42,7 +151,8 @@ export default function AdminCategories({
 
   // Update local categories when props change
   useEffect(() => {
-    setLocalCategories([...categories].sort((a, b) => a.order - b.order));
+    const sortedCategories = [...categories].sort((a, b) => a.order - b.order);
+    setLocalCategories(sortedCategories);
   }, [categories]);
 
   const openDialog = (category?: Category) => {
@@ -86,10 +196,13 @@ export default function AdminCategories({
         order: formData.order,
       };
 
-      console.log(
-        'Saving category with image:',
-        formData.image ? `Yes (length: ${formData.image.length})` : 'No',
-      );
+      // Log image status for debugging
+      if (formData.image) {
+        console.warn(
+          'Saving category with image, length:',
+          formData.image.length
+        );
+      }
 
       if (editingId) {
         await categoriesAPI.update(editingId, data);
@@ -110,7 +223,7 @@ export default function AdminCategories({
   };
 
   const handleDelete = async (id: string) => {
-    if (!confirm('Delete this category?')) return;
+    if (!window.confirm('Delete this category?')) return;
 
     try {
       await categoriesAPI.delete(id);
@@ -124,189 +237,211 @@ export default function AdminCategories({
     }
   };
 
-  return (
-    <div className='space-y-4'>
-      <div className='flex items-center justify-between'>
-        <h2 className='text-xl font-medium'>{t('categories', lang)}</h2>
-        <Button type='button' onClick={() => openDialog()} className='gap-2'>
-          <Plus className='w-4 h-4' />
-          {t('addNew', lang)}
-        </Button>
-      </div>
+  const moveCategory = (dragIndex: number, hoverIndex: number) => {
+    const draggedCategory = localCategories[dragIndex];
+    const newCategories = [...localCategories];
+    newCategories.splice(dragIndex, 1);
+    newCategories.splice(hoverIndex, 0, draggedCategory);
 
-      <div className='space-y-2'>
-        {localCategories.map((category, index) => (
-          <div
-            key={category.id}
-            className='flex items-center justify-between p-4 bg-card rounded-lg border border-border'
-          >
-            <div className='flex items-center gap-3'>
-              <span className='text-2xl'>{category.icon}</span>
+    // Update order values
+    const updatedCategories = newCategories.map((category, index) => ({
+      ...category,
+      order: index,
+    }));
+
+    setLocalCategories(updatedCategories);
+  };
+
+  const saveCategoryOrder = async () => {
+    try {
+      const updatePromises = localCategories.map((category, index) =>
+        categoriesAPI.update(category.id, { order: index }),
+      );
+      await Promise.all(updatePromises);
+      toast.success('Category order updated');
+      onRefresh();
+    } catch (error) {
+      console.error('Order update error:', error);
+      toast.error('Failed to update category order');
+      onRefresh(); // Refresh to get the correct order from server
+    }
+  };
+
+  return (
+    <DndProvider backend={HTML5Backend}>
+      <div className='space-y-4'>
+        <div className='flex items-center justify-between'>
+          <h2 className='text-xl font-medium'>{t('categories', lang)}</h2>
+          <div className='flex items-center gap-2'>
+            <Button
+              type='button'
+              onClick={saveCategoryOrder}
+              variant='secondary'
+              size='sm'
+            >
+              Save Order
+            </Button>
+            <Button
+              type='button'
+              onClick={() => openDialog()}
+              className='gap-2'
+            >
+              <Plus className='w-4 h-4' />
+              {t('addNew', lang)}
+            </Button>
+          </div>
+        </div>
+
+        <div className='space-y-2'>
+          {localCategories.map((category, index) => (
+            <DraggableCategoryItem
+              key={category.id}
+              category={category}
+              index={index}
+              onEdit={openDialog}
+              onDelete={handleDelete}
+              onMove={moveCategory}
+            />
+          ))}
+        </div>
+
+        <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>
+                {editingId ? t('edit', lang) : t('addNew', lang)}{' '}
+                {t('categories', lang)}
+              </DialogTitle>
+              <DialogDescription>
+                {editingId
+                  ? lang === 'en'
+                    ? 'Edit category details below'
+                    : lang === 'tr'
+                      ? 'Aşağıda kategori detaylarını düzenleyin'
+                      : 'قم بتحرير تفاصيل الفئة أدناه'
+                  : lang === 'en'
+                    ? 'Add a new category with details below'
+                    : lang === 'tr'
+                      ? 'Aşağıda yeni bir kategori ekleyin'
+                      : 'أضف فئة جديدة مع التفاصيل أدناه'}
+              </DialogDescription>
+            </DialogHeader>
+            <div className='space-y-4'>
+              <ImageUpload
+                value={formData.image}
+                onChange={imageUrl => {
+                  console.warn(
+                    'ImageUpload onChange called with:',
+                    imageUrl ? `Supabase Storage URL: ${imageUrl}` : 'null',
+                  );
+                  setFormData({ ...formData, image: imageUrl || '' });
+                }}
+                label={t('categoryImage', lang)}
+                fallbackIcon={formData.icon}
+                useSupabaseStorage={true}
+                itemName={formData.nameEn || formData.nameTr || formData.nameAr}
+              />
               <div>
-                <h3 className='font-medium'>{category.names.en}</h3>
-                <p className='text-sm text-muted-foreground'>
-                  {category.names.tr} • {category.names.ar}
+                <Label>{t('fallbackIcon', lang)}</Label>
+                <Input
+                  value={formData.icon}
+                  onChange={e =>
+                    setFormData({ ...formData, icon: e.target.value })
+                  }
+                  placeholder='🍽️'
+                />
+                <p className='text-xs text-muted-foreground mt-1'>
+                  {lang === 'en'
+                    ? 'Used when no image is uploaded'
+                    : lang === 'tr'
+                      ? 'Görsel yüklenmediğinde kullanılır'
+                      : 'يُستخدم عند عدم تحميل صورة'}
                 </p>
               </div>
+              <div>
+                <Label>{t('nameEnglish', lang)}</Label>
+                <Input
+                  value={formData.nameEn}
+                  onChange={e =>
+                    setFormData({ ...formData, nameEn: e.target.value })
+                  }
+                  placeholder='Hot Drinks'
+                />
+              </div>
+              <div>
+                <Label>{t('nameTurkish', lang)}</Label>
+                <Input
+                  value={formData.nameTr}
+                  onChange={e =>
+                    setFormData({ ...formData, nameTr: e.target.value })
+                  }
+                  placeholder='Sıcak İçecekler'
+                />
+              </div>
+              <div>
+                <Label>{t('nameArabic', lang)}</Label>
+                <Input
+                  value={formData.nameAr}
+                  onChange={e =>
+                    setFormData({ ...formData, nameAr: e.target.value })
+                  }
+                  placeholder='مشروبات ساخنة'
+                  dir='rtl'
+                />
+              </div>
+              <div>
+                <Label>Category Color</Label>
+                <div className='flex items-center gap-2'>
+                  <input
+                    type='color'
+                    value={formData.color}
+                    onChange={e =>
+                      setFormData({ ...formData, color: e.target.value })
+                    }
+                    className='w-12 h-10 rounded border border-gray-300 cursor-pointer'
+                  />
+                  <Input
+                    value={formData.color}
+                    onChange={e =>
+                      setFormData({ ...formData, color: e.target.value })
+                    }
+                    placeholder='#0C6071'
+                    className='flex-1'
+                  />
+                </div>
+                <p className='text-xs text-muted-foreground mt-1'>
+                  Color used for category theming and badges
+                </p>
+              </div>
+              <div>
+                <Label>{t('order', lang)}</Label>
+                <Input
+                  type='number'
+                  value={formData.order}
+                  onChange={e =>
+                    setFormData({
+                      ...formData,
+                      order: parseInt(e.target.value),
+                    })
+                  }
+                />
+              </div>
             </div>
-            <div className='flex items-center gap-2'>
+            <DialogFooter>
               <Button
                 type='button'
                 variant='outline'
-                size='sm'
-                onClick={() => openDialog(category)}
+                onClick={() => setDialogOpen(false)}
               >
-                Edit
+                {t('cancel', lang)}
               </Button>
-              <Button
-                type='button'
-                variant='destructive'
-                size='sm'
-                onClick={() => handleDelete(category.id)}
-              >
-                Delete
+              <Button type='button' onClick={handleSave}>
+                {t('save', lang)}
               </Button>
-            </div>
-          </div>
-        ))}
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
       </div>
-
-      <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>
-              {editingId ? t('edit', lang) : t('addNew', lang)}{' '}
-              {t('categories', lang)}
-            </DialogTitle>
-            <DialogDescription>
-              {editingId
-                ? lang === 'en'
-                  ? 'Edit category details below'
-                  : lang === 'tr'
-                    ? 'Aşağıda kategori detaylarını düzenleyin'
-                    : 'قم بتحرير تفاصيل الفئة أدناه'
-                : lang === 'en'
-                  ? 'Add a new category with details below'
-                  : lang === 'tr'
-                    ? 'Aşağıda yeni bir kategori ekleyin'
-                    : 'أضف فئة جديدة مع التفاصيل أدناه'}
-            </DialogDescription>
-          </DialogHeader>
-          <div className='space-y-4'>
-            <ImageUpload
-              value={formData.image}
-              onChange={imageUrl => {
-                console.log(
-                  'ImageUpload onChange called with:',
-                  imageUrl ? `Supabase Storage URL: ${imageUrl}` : 'null',
-                );
-                setFormData({ ...formData, image: imageUrl || '' });
-              }}
-              label={t('categoryImage', lang)}
-              fallbackIcon={formData.icon}
-              useSupabaseStorage={true}
-              itemName={formData.nameEn || formData.nameTr || formData.nameAr}
-            />
-            <div>
-              <Label>{t('fallbackIcon', lang)}</Label>
-              <Input
-                value={formData.icon}
-                onChange={e =>
-                  setFormData({ ...formData, icon: e.target.value })
-                }
-                placeholder='🍽️'
-              />
-              <p className='text-xs text-muted-foreground mt-1'>
-                {lang === 'en'
-                  ? 'Used when no image is uploaded'
-                  : lang === 'tr'
-                    ? 'Görsel yüklenmediğinde kullanılır'
-                    : 'يُستخدم عند عدم تحميل صورة'}
-              </p>
-            </div>
-            <div>
-              <Label>{t('nameEnglish', lang)}</Label>
-              <Input
-                value={formData.nameEn}
-                onChange={e =>
-                  setFormData({ ...formData, nameEn: e.target.value })
-                }
-                placeholder='Hot Drinks'
-              />
-            </div>
-            <div>
-              <Label>{t('nameTurkish', lang)}</Label>
-              <Input
-                value={formData.nameTr}
-                onChange={e =>
-                  setFormData({ ...formData, nameTr: e.target.value })
-                }
-                placeholder='Sıcak İçecekler'
-              />
-            </div>
-            <div>
-              <Label>{t('nameArabic', lang)}</Label>
-              <Input
-                value={formData.nameAr}
-                onChange={e =>
-                  setFormData({ ...formData, nameAr: e.target.value })
-                }
-                placeholder='مشروبات ساخنة'
-                dir='rtl'
-              />
-            </div>
-            <div>
-              <Label>Category Color</Label>
-              <div className='flex items-center gap-2'>
-                <input
-                  type='color'
-                  value={formData.color}
-                  onChange={e =>
-                    setFormData({ ...formData, color: e.target.value })
-                  }
-                  className='w-12 h-10 rounded border border-gray-300 cursor-pointer'
-                />
-                <Input
-                  value={formData.color}
-                  onChange={e =>
-                    setFormData({ ...formData, color: e.target.value })
-                  }
-                  placeholder='#0C6071'
-                  className='flex-1'
-                />
-              </div>
-              <p className='text-xs text-muted-foreground mt-1'>
-                Color used for category theming and badges
-              </p>
-            </div>
-            <div>
-              <Label>{t('order', lang)}</Label>
-              <Input
-                type='number'
-                value={formData.order}
-                onChange={e =>
-                  setFormData({
-                    ...formData,
-                    order: parseInt(e.target.value),
-                  })
-                }
-              />
-            </div>
-          </div>
-          <DialogFooter>
-            <Button
-              type='button'
-              variant='outline'
-              onClick={() => setDialogOpen(false)}
-            >
-              {t('cancel', lang)}
-            </Button>
-            <Button type='button' onClick={handleSave}>
-              {t('save', lang)}
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
-    </div>
+    </DndProvider>
   );
 }

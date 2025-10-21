@@ -1,4 +1,4 @@
-import { lazy, memo, Suspense, useEffect, useState } from 'react';
+import { lazy, memo, Suspense, useCallback, useEffect, useState } from 'react';
 import { Button } from '../components/ui/button';
 import {
   Tabs,
@@ -16,7 +16,7 @@ import StorageStatus from '../components/StorageStatus';
 
 // Lazy load admin components
 const AdminCategories = lazy(
-  () => import('../components/admin/AdminCategories'),
+  () => import('../components/admin/AdminCategories')
 );
 const AdminItems = lazy(() => import('../components/admin/AdminItemsSimple'));
 // const SessionDebugger = lazy(() =>
@@ -26,7 +26,7 @@ const AdminItems = lazy(() => import('../components/admin/AdminItemsSimple'));
 // );
 
 interface AdminProps {
-  onNavigate: (page: string) => void;
+  onNavigate: (_page: string) => void;
 }
 
 const Admin = memo(({ onNavigate }: AdminProps) => {
@@ -42,24 +42,11 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
 
   // Debug tab changes and persist tab state
   useEffect(() => {
-    console.log('📱 Tab changed to:', activeTab);
     localStorage.setItem('admin-active-tab', activeTab);
   }, [activeTab]);
 
-  useEffect(() => {
-    checkAuth();
-
-    // Re-check auth periodically to handle session expiry (less frequent)
-    const authCheckInterval = setInterval(() => {
-      checkAuth();
-    }, 300000); // Check every 5 minutes instead of every minute
-
-    return () => clearInterval(authCheckInterval);
-  }, []); // Remove dependencies to prevent re-running
-
-  async function checkAuth() {
+  const checkAuth = useCallback(async () => {
     try {
-      console.log('🔍 Checking admin session...');
       const {
         data: { session },
         error,
@@ -74,7 +61,6 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
       }
 
       if (!session) {
-        console.log('❌ No session found, redirecting to login');
         if (authorized) {
           // Only show toast if user was previously authorized
           toast.error('Session expired. Please login again.');
@@ -86,17 +72,14 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
 
       // Check if user is admin
       if (!session.user?.isAdmin) {
-        console.log('❌ User is not admin, redirecting to login');
-        console.log('📊 Session user data:', session.user);
         toast.error(
-          'Admin access required. Please login with admin credentials.',
+          'Admin access required. Please login with admin credentials.'
         );
         setAuthorized(false);
         onNavigate('admin-login');
         return;
       }
 
-      console.log('✅ Admin session valid:', session.user?.email);
       if (!authorized) {
         setAuthorized(true);
       }
@@ -108,19 +91,28 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
     } finally {
       setLoading(false);
     }
-  }
+  }, [authorized, onNavigate]);
+
+  useEffect(() => {
+    checkAuth();
+
+    // Re-check auth periodically to handle session expiry (less frequent)
+    const authCheckInterval = setInterval(() => {
+      checkAuth();
+    }, 300000); // Check every 5 minutes instead of every minute
+
+    return () => clearInterval(authCheckInterval);
+  }, [checkAuth]);
 
   const handleRefresh = async () => {
     try {
-      console.log('🔄 Refreshing data, current tab:', activeTab);
       await refetch(true); // Force refetch categories and items
-      console.log('✅ Data refreshed, tab should remain:', activeTab);
       toast.success(
         lang === 'en'
           ? 'Data refreshed successfully!'
           : lang === 'tr'
             ? 'Veriler başarıyla yenilendi!'
-            : 'تم تحديث البيانات بنجاح!',
+            : 'تم تحديث البيانات بنجاح!'
       );
     } catch (error) {
       console.error('Refresh error:', error);
@@ -129,7 +121,7 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
           ? 'Failed to refresh data'
           : lang === 'tr'
             ? 'Veriler yenilenemedi'
-            : 'فشل في تحديث البيانات',
+            : 'فشل في تحديث البيانات'
       );
     }
   };

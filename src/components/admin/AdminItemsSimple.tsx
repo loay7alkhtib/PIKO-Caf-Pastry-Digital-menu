@@ -1,4 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { DndProvider, useDrag, useDrop } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Label } from '../ui/label';
@@ -30,7 +32,7 @@ import { useLang } from '../../lib/LangContext';
 import { t } from '../../lib/i18n';
 import { Category, Item, itemsAPI } from '../../lib/supabase';
 import { toast } from 'sonner';
-import { Edit, Plus, Trash2 } from 'lucide-react';
+import { Edit, GripVertical, Plus, Trash2 } from 'lucide-react';
 import { Badge } from '../ui/badge';
 
 interface AdminItemsSimpleProps {
@@ -38,6 +40,148 @@ interface AdminItemsSimpleProps {
   categories: Category[];
   onRefresh: () => void;
 }
+
+interface DraggableTableRowProps {
+  item: Item;
+  index: number;
+  categoryId: string;
+  onEdit: (item: Item) => void;
+  onDelete: (id: string) => void;
+  onMove: (dragIndex: number, hoverIndex: number) => void;
+}
+
+const DraggableTableRow = ({
+  item,
+  index,
+  categoryId,
+  onEdit,
+  onDelete,
+  onMove,
+}: DraggableTableRowProps) => {
+  const ref = useRef<HTMLTableRowElement>(null);
+
+  const [{ handlerId }, drop] = useDrop({
+    accept: 'item',
+    collect(monitor) {
+      return {
+        handlerId: monitor.getHandlerId(),
+      };
+    },
+    hover(draggedItem: any, monitor) {
+      if (!ref.current) {
+        return;
+      }
+      const dragIndex = draggedItem.index;
+      const hoverIndex = index;
+
+      if (dragIndex === hoverIndex) {
+        return;
+      }
+
+      const hoverBoundingRect = ref.current?.getBoundingClientRect();
+      const hoverMiddleY =
+        (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
+      const clientOffset = monitor.getClientOffset();
+      const hoverClientY = clientOffset!.y - hoverBoundingRect.top;
+
+      if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) {
+        return;
+      }
+      if (dragIndex > hoverIndex && hoverClientY > hoverMiddleY) {
+        return;
+      }
+
+      onMove(dragIndex, hoverIndex);
+      draggedItem.index = hoverIndex;
+    },
+  });
+
+  const [{ isDragging }, drag] = useDrag({
+    type: 'item',
+    item: () => {
+      return { id: item.id, index };
+    },
+    collect: monitor => ({
+      isDragging: monitor.isDragging(),
+    }),
+  });
+
+  const opacity = isDragging ? 0.5 : 1;
+  drop(ref);
+
+  return (
+    <TableRow
+      ref={ref}
+      style={{ opacity }}
+      data-handler-id={handlerId}
+      className='hover:bg-muted/50'
+    >
+      <TableCell>
+        <div className='w-12 h-12 rounded-lg overflow-hidden bg-muted'>
+          {item.image ? (
+            <img
+              src={item.image}
+              alt={item.names.en}
+              className='w-full h-full object-cover'
+            />
+          ) : (
+            <div className='w-full h-full flex items-center justify-center text-2xl'>
+              🍽️
+            </div>
+          )}
+        </div>
+      </TableCell>
+      <TableCell className='font-medium'>{item.names.en}</TableCell>
+      <TableCell className='hidden md:table-cell'>{item.names.ar}</TableCell>
+      <TableCell>${item.price}</TableCell>
+      <TableCell>
+        <div className='flex items-center gap-2'>
+          <div className='cursor-grab active:cursor-grabbing' ref={drag}>
+            <GripVertical className='w-4 h-4 text-muted-foreground' />
+          </div>
+          <Input
+            type='number'
+            value={item.order || 0}
+            onChange={e => {
+              const newOrder = parseInt(e.target.value) || 0;
+              // We'll handle this through drag and drop instead
+            }}
+            className='w-16 h-8 text-center'
+            min='0'
+            readOnly
+          />
+        </div>
+      </TableCell>
+      <TableCell className='hidden lg:table-cell'>
+        <Badge variant={item.is_available ? 'default' : 'secondary'}>
+          {item.is_available ? 'Yes' : 'No'}
+        </Badge>
+      </TableCell>
+      <TableCell className='text-right'>
+        <div className='flex items-center gap-1'>
+          <Button
+            type='button'
+            variant='ghost'
+            size='sm'
+            onClick={() => onEdit(item)}
+            className='h-8 w-8 p-0'
+          >
+            <Edit className='w-4 h-4' />
+          </Button>
+          <Button
+            type='button'
+            variant='ghost'
+            size='sm'
+            onClick={() => onDelete(item.id)}
+            className='h-8 w-8 p-0 text-red-600 hover:text-red-700'
+          >
+            <Trash2 className='w-4 h-4' />
+          </Button>
+        </div>
+      </TableCell>
+    </TableRow>
+  );
+};
 
 export default function AdminItemsSimple({
   items,
@@ -48,6 +192,7 @@ export default function AdminItemsSimple({
   const [dialogOpen, setDialogOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('');
+  const [localItems, setLocalItems] = useState<Item[]>([]);
   const [formData, setFormData] = useState({
     nameEn: '',
     nameTr: '',
@@ -64,9 +209,14 @@ export default function AdminItemsSimple({
     order: 0,
   });
 
+  // Update local items when props change
+  useEffect(() => {
+    setLocalItems([...items]);
+  }, [items]);
+
   // Get items for selected category
   const categoryItems = selectedCategory
-    ? items
+    ? localItems
       .filter(item => item.category_id === selectedCategory)
       .sort((a, b) => (a.order || 0) - (b.order || 0))
     : [];
@@ -102,11 +252,6 @@ export default function AdminItemsSimple({
       });
     } else {
       setEditingId(null);
-      const maxOrder =
-        categoryItems.length > 0
-          ? Math.max(...categoryItems.map(item => item.order || 0))
-          : -1;
-
       setFormData({
         nameEn: '',
         nameTr: '',
@@ -120,7 +265,7 @@ export default function AdminItemsSimple({
         tags: '',
         isAvailable: true,
         variants: [],
-        order: maxOrder + 1,
+        order: 0,
       });
     }
     setDialogOpen(true);
@@ -170,7 +315,7 @@ export default function AdminItemsSimple({
   };
 
   const handleDelete = async (id: string) => {
-    if (!confirm('Delete this item?')) return;
+    if (!window.confirm('Delete this item?')) return;
 
     try {
       await itemsAPI.delete(id);
@@ -195,289 +340,335 @@ export default function AdminItemsSimple({
     }
   };
 
+  const moveItem = (dragIndex: number, hoverIndex: number) => {
+    console.log(`🔄 Moving item from index ${dragIndex} to ${hoverIndex}`);
+    console.log(
+      '📋 Before move - categoryItems:',
+      categoryItems.map(item => ({
+        id: item.id,
+        name: item.names.en,
+        order: item.order,
+      }));
+
+    const draggedItem = categoryItems[dragIndex];
+    const newCategoryItems = [...categoryItems];
+    newCategoryItems.splice(dragIndex, 1);
+    newCategoryItems.splice(hoverIndex, 0, draggedItem);
+
+    // Update order values for the category items
+    const updatedCategoryItems = newCategoryItems.map((item, index) => ({
+      ...item,
+      order: index,
+    }));
+
+    console.log(
+      '📋 After move - updatedCategoryItems:',
+      updatedCategoryItems.map(item => ({
+        id: item.id,
+        name: item.names.en,
+        order: item.order,
+      }))
+
+    // Update the local items state
+    const newLocalItems = [...localItems];
+    updatedCategoryItems.forEach((updatedItem, index) => {
+      const itemIndex = newLocalItems.findIndex(
+        item => item.id === updatedItem.id
+      );
+      if (itemIndex !== -1) {
+        newLocalItems[itemIndex] = {
+          ...newLocalItems[itemIndex],
+          order: index,
+        };
+      }
+    });
+
+    console.log(
+      '📋 Final newLocalItems order:',
+      newLocalItems
+        .filter(item => item.category_id === selectedCategory)
+        .map(item => ({ id: item.id, name: item.names.en, order: item.order }))
+
+    setLocalItems(newLocalItems);
+
+    // Show a toast to confirm the move happened
+    toast.success(
+      `Moved ${draggedItem.names.en} to position ${hoverIndex + 1}`
+    );
+  };
+
+  const saveItemOrder = async () => {
+    try {
+      console.log('🔄 Saving item order for category:', selectedCategory);
+      console.log(
+        '📋 Current categoryItems:',
+        categoryItems.map(item => ({
+          id: item.id,
+          name: item.names.en,
+          order: item.order,
+        }))
+
+      // Use the bulk updateOrder API which is more efficient
+      const orderUpdates = categoryItems.map((item, index) => ({
+        id: item.id,
+        order: index,
+      }));
+
+      console.log('📝 Order updates to send:', orderUpdates);
+      await itemsAPI.updateOrder(orderUpdates);
+
+      toast.success('Item order updated');
+      onRefresh();
+    } catch (error) {
+      console.error('Order update error:', error);
+      toast.error('Failed to update item order');
+      onRefresh(); // Refresh to get the correct order from server
+    }
+  };
+
   return (
-    <div className='space-y-6'>
-      {/* Header */}
-      <div className='flex items-center justify-between'>
-        <div className='flex items-center gap-2'>
-          <h2 className='text-xl font-medium'>{t('items', lang)}</h2>
-          <span className='text-sm text-gray-500'>({items.length})</span>
-        </div>
-        <Button type='button' onClick={() => openDialog()} className='gap-2'>
-          <Plus className='w-4 h-4' />
-          {t('addNew', lang)}
-        </Button>
-      </div>
-
-      {/* Category Selection */}
-      <div className='space-y-3'>
-        <Label>Select Category to Manage Items</Label>
-        <div className='flex items-center gap-2 flex-wrap'>
-          {categories.map(cat => {
-            const count = items.filter(
-              item => item.category_id === cat.id,
-            ).length;
-            return (
-              <Badge
-                key={cat.id}
-                variant={selectedCategory === cat.id ? 'default' : 'outline'}
-                className='cursor-pointer'
-                onClick={() => setSelectedCategory(cat.id)}
-              >
-                {cat.icon} {cat.names.en} ({count})
-              </Badge>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Items Table */}
-      {selectedCategory && (
-        <div className='bg-card rounded-xl border border-border overflow-x-auto'>
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead className='w-20'>Image</TableHead>
-                <TableHead className='min-w-[150px]'>Name (EN)</TableHead>
-                <TableHead className='min-w-[120px] hidden md:table-cell'>
-                  Name (AR)
-                </TableHead>
-                <TableHead className='w-24'>Price</TableHead>
-                <TableHead className='w-20'>Order</TableHead>
-                <TableHead className='w-20 hidden lg:table-cell'>
-                  Available
-                </TableHead>
-                <TableHead className='text-right w-32'>Actions</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {categoryItems.map(item => (
-                <TableRow key={item.id}>
-                  <TableCell>
-                    <div className='w-12 h-12 rounded-lg overflow-hidden bg-muted'>
-                      {item.image ? (
-                        <img
-                          src={item.image}
-                          alt={item.names.en}
-                          className='w-full h-full object-cover'
-                        />
-                      ) : (
-                        <div className='w-full h-full flex items-center justify-center text-2xl'>
-                          🍽️
-                        </div>
-                      )}
-                    </div>
-                  </TableCell>
-                  <TableCell className='font-medium'>{item.names.en}</TableCell>
-                  <TableCell className='hidden md:table-cell'>
-                    {item.names.ar}
-                  </TableCell>
-                  <TableCell>${item.price}</TableCell>
-                  <TableCell>
-                    <Input
-                      type='number'
-                      value={item.order || 0}
-                      onChange={e => {
-                        const newOrder = parseInt(e.target.value) || 0;
-                        updateItemOrder(item.id, newOrder);
-                      }}
-                      className='w-16 h-8 text-center'
-                      min='0'
-                    />
-                  </TableCell>
-                  <TableCell className='hidden lg:table-cell'>
-                    <Badge
-                      variant={item.is_available ? 'default' : 'secondary'}
-                    >
-                      {item.is_available ? 'Yes' : 'No'}
-                    </Badge>
-                  </TableCell>
-                  <TableCell className='text-right'>
-                    <div className='flex items-center gap-1'>
-                      <Button
-                        type='button'
-                        variant='ghost'
-                        size='sm'
-                        onClick={() => openDialog(item)}
-                        className='h-8 w-8 p-0'
-                      >
-                        <Edit className='w-4 h-4' />
-                      </Button>
-                      <Button
-                        type='button'
-                        variant='ghost'
-                        size='sm'
-                        onClick={() => handleDelete(item.id)}
-                        className='h-8 w-8 p-0 text-red-600 hover:text-red-700'
-                      >
-                        <Trash2 className='w-4 h-4' />
-                      </Button>
-                    </div>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
-      )}
-
-      {/* Dialog Form */}
-      <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <DialogContent className='max-w-2xl max-h-[90vh] overflow-y-auto'>
-          <DialogHeader>
-            <DialogTitle>
-              {editingId ? t('edit', lang) : t('addNew', lang)}{' '}
-              {t('items', lang)}
-            </DialogTitle>
-            <DialogDescription>
-              {editingId
-                ? 'Edit menu item details below'
-                : 'Add a new menu item with details below'}
-            </DialogDescription>
-          </DialogHeader>
-
-          <div className='space-y-4'>
-            <ImageUpload
-              value={formData.image}
-              onChange={imageUrl =>
-                setFormData({ ...formData, image: imageUrl || '' })
-              }
-              label={t('itemImage', lang)}
-              useSupabaseStorage={true}
-              itemName={formData.nameEn || formData.nameTr || formData.nameAr}
-              fallbackIcon='🍽️'
-            />
-
-            <div>
-              <Label>{t('category', lang)}</Label>
-              <Select
-                value={formData.categoryId}
-                onValueChange={val =>
-                  setFormData({ ...formData, categoryId: val })
-                }
-              >
-                <SelectTrigger>
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  {categories.map(cat => (
-                    <SelectItem key={cat.id} value={cat.id}>
-                      {cat.icon} {cat.names.en}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-              <div>
-                <Label>{t('nameEnglish', lang)}</Label>
-                <Input
-                  value={formData.nameEn}
-                  onChange={e =>
-                    setFormData({ ...formData, nameEn: e.target.value })
-                  }
-                  placeholder='Cappuccino'
-                />
-              </div>
-              <div>
-                <Label>{t('nameTurkish', lang)}</Label>
-                <Input
-                  value={formData.nameTr}
-                  onChange={e =>
-                    setFormData({ ...formData, nameTr: e.target.value })
-                  }
-                  placeholder='Kapuçino'
-                />
-              </div>
-              <div>
-                <Label>{t('nameArabic', lang)}</Label>
-                <Input
-                  value={formData.nameAr}
-                  onChange={e =>
-                    setFormData({ ...formData, nameAr: e.target.value })
-                  }
-                  placeholder='كابتشينو'
-                  dir='rtl'
-                />
-              </div>
-            </div>
-
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-              <div>
-                <Label>{t('priceWithCurrency', lang)}</Label>
-                <Input
-                  type='number'
-                  step='0.01'
-                  value={formData.price}
-                  onChange={e =>
-                    setFormData({
-                      ...formData,
-                      price: parseFloat(e.target.value),
-                    })
-                  }
-                />
-              </div>
-              <div>
-                <Label>Display Order</Label>
-                <Input
-                  type='number'
-                  value={formData.order}
-                  onChange={e =>
-                    setFormData({
-                      ...formData,
-                      order: parseInt(e.target.value) || 0,
-                    })
-                  }
-                  placeholder='0'
-                />
-                <p className='text-xs text-muted-foreground mt-1'>
-                  Lower numbers appear first
-                </p>
-              </div>
-            </div>
-
-            <div>
-              <Label>{t('tags', lang)}</Label>
-              <Input
-                value={formData.tags}
-                onChange={e =>
-                  setFormData({ ...formData, tags: e.target.value })
-                }
-                placeholder='Premium, Fresh, Hot'
-              />
-            </div>
-
-            <div className='flex items-center space-x-2'>
-              <input
-                type='checkbox'
-                id='isAvailable'
-                checked={formData.isAvailable}
-                onChange={e =>
-                  setFormData({ ...formData, isAvailable: e.target.checked })
-                }
-                className='rounded border-gray-300'
-              />
-              <Label htmlFor='isAvailable' className='text-sm font-normal'>
-                Available for ordering
-              </Label>
-            </div>
+    <DndProvider backend={HTML5Backend}>
+      <div className='space-y-6'>
+        {/* Header */}
+        <div className='flex items-center justify-between'>
+          <div className='flex items-center gap-2'>
+            <h2 className='text-xl font-medium'>{t('items', lang)}</h2>
+            <span className='text-sm text-gray-500'>({items.length})</span>
           </div>
+          <div className='flex items-center gap-2'>
+            {selectedCategory && (
+              <Button
+                type='button'
+                onClick={saveItemOrder}
+                variant='secondary'
+                size='sm'
+              >
+                Save Order
+              </Button>
+            )}
+            <Button type='button' onClick={() => openDialog()} className='gap-2'>
+              <Plus className='w-4 h-4' />
+              {t('addNew', lang)}
+            </Button>
+          </div>
+        </div>
 
-          <DialogFooter>
-            <Button
-              type='button'
-              variant='outline'
-              onClick={() => setDialogOpen(false)}
-            >
-              Cancel
-            </Button>
-            <Button type='button' onClick={handleSave}>
-              {editingId ? 'Update' : 'Create'}
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
-    </div>
+        {/* Category Selection */}
+        <div className='space-y-3'>
+          <Label>Select Category to Manage Items</Label>
+          <div className='flex items-center gap-2 flex-wrap'>
+            {categories.map(cat => {
+              const count = items.filter(
+                item => item.category_id === cat.id,
+              ).length;
+              return (
+                <Badge
+                  key={cat.id}
+                  variant={selectedCategory === cat.id ? 'default' : 'outline'}
+                  className='cursor-pointer'
+                  onClick={() => setSelectedCategory(cat.id)}
+                >
+                  {cat.icon} {cat.names.en} ({count})
+                </Badge>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Items Table */}
+        {selectedCategory && (
+          <div className='bg-card rounded-xl border border-border overflow-x-auto'>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className='w-20'>Image</TableHead>
+                  <TableHead className='min-w-[150px]'>Name (EN)</TableHead>
+                  <TableHead className='min-w-[120px] hidden md:table-cell'>
+                    Name (AR)
+                  </TableHead>
+                  <TableHead className='w-24'>Price</TableHead>
+                  <TableHead className='w-20'>Order</TableHead>
+                  <TableHead className='w-20 hidden lg:table-cell'>
+                    Available
+                  </TableHead>
+                  <TableHead className='text-right w-32'>Actions</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {categoryItems.map((item, index) => (
+                  <DraggableTableRow
+                    key={item.id}
+                    item={item}
+                    index={index}
+                    categoryId={selectedCategory}
+                    onEdit={openDialog}
+                    onDelete={handleDelete}
+                    onMove={moveItem}
+                  />
+                ))}
+              </TableBody>
+            </Table>
+          </div>
+        )}
+
+        {/* Dialog Form */}
+        <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+          <DialogContent className='max-w-2xl max-h-[90vh] overflow-y-auto'>
+            <DialogHeader>
+              <DialogTitle>
+                {editingId ? t('edit', lang) : t('addNew', lang)}{' '}
+                {t('items', lang)}
+              </DialogTitle>
+              <DialogDescription>
+                {editingId
+                  ? 'Edit menu item details below'
+                  : 'Add a new menu item with details below'}
+              </DialogDescription>
+            </DialogHeader>
+
+            <div className='space-y-4'>
+              <ImageUpload
+                value={formData.image}
+                onChange={imageUrl =>
+                  setFormData({ ...formData, image: imageUrl || '' })
+                }
+                label={t('itemImage', lang)}
+                useSupabaseStorage={true}
+                itemName={formData.nameEn || formData.nameTr || formData.nameAr}
+                fallbackIcon='🍽️'
+              />
+
+              <div>
+                <Label>{t('category', lang)}</Label>
+                <Select
+                  value={formData.categoryId}
+                  onValueChange={val =>
+                    setFormData({ ...formData, categoryId: val })
+                  }
+                >
+                  <SelectTrigger>
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {categories.map(cat => (
+                      <SelectItem key={cat.id} value={cat.id}>
+                        {cat.icon} {cat.names.en}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+                <div>
+                  <Label>{t('nameEnglish', lang)}</Label>
+                  <Input
+                    value={formData.nameEn}
+                    onChange={e =>
+                      setFormData({ ...formData, nameEn: e.target.value })
+                    }
+                    placeholder='Cappuccino'
+                  />
+                </div>
+                <div>
+                  <Label>{t('nameTurkish', lang)}</Label>
+                  <Input
+                    value={formData.nameTr}
+                    onChange={e =>
+                      setFormData({ ...formData, nameTr: e.target.value })
+                    }
+                    placeholder='Kapuçino'
+                  />
+                </div>
+                <div>
+                  <Label>{t('nameArabic', lang)}</Label>
+                  <Input
+                    value={formData.nameAr}
+                    onChange={e =>
+                      setFormData({ ...formData, nameAr: e.target.value })
+                    }
+                    placeholder='كابتشينو'
+                    dir='rtl'
+                  />
+                </div>
+              </div>
+
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                <div>
+                  <Label>{t('priceWithCurrency', lang)}</Label>
+                  <Input
+                    type='number'
+                    step='0.01'
+                    value={formData.price}
+                    onChange={e =>
+                      setFormData({
+                        ...formData,
+                        price: parseFloat(e.target.value),
+                      })
+                    }
+                  />
+                </div>
+                <div>
+                  <Label>Display Order</Label>
+                  <Input
+                    type='number'
+                    value={formData.order}
+                    onChange={e =>
+                      setFormData({
+                        ...formData,
+                        order: parseInt(e.target.value) || 0,
+                      })
+                    }
+                    placeholder='0'
+                  />
+                  <p className='text-xs text-muted-foreground mt-1'>
+                    Lower numbers appear first
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <Label>{t('tags', lang)}</Label>
+                <Input
+                  value={formData.tags}
+                  onChange={e =>
+                    setFormData({ ...formData, tags: e.target.value })
+                  }
+                  placeholder='Premium, Fresh, Hot'
+                />
+              </div>
+
+              <div className='flex items-center space-x-2'>
+                <input
+                  type='checkbox'
+                  id='isAvailable'
+                  checked={formData.isAvailable}
+                  onChange={e =>
+                    setFormData({ ...formData, isAvailable: e.target.checked })
+                  }
+                  className='rounded border-gray-300'
+                />
+                <Label htmlFor='isAvailable' className='text-sm font-normal'>
+                  Available for ordering
+                </Label>
+              </div>
+            </div>
+
+            <DialogFooter>
+              <Button
+                type='button'
+                variant='outline'
+                onClick={() => setDialogOpen(false)}
+              >
+                Cancel
+              </Button>
+              <Button type='button' onClick={handleSave}>
+                {editingId ? 'Update' : 'Create'}
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+      </div>
+    </DndProvider>
   );
 }
