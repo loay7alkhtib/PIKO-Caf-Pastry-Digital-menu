@@ -3,6 +3,8 @@ import { Button } from './ui/button';
 import { Label } from './ui/label';
 import { Image as ImageIcon, Loader2, Upload, X } from 'lucide-react';
 import OptimizedImage from './OptimizedImage';
+import { publicAnonKey } from '../lib/config/supabase';
+import { supabase } from '../lib/supabase-client';
 // import { imageUploadService } from '@/lib/imageUploadService';
 
 interface ImageUploadProps {
@@ -52,7 +54,7 @@ const ImageUpload = memo(
 
       try {
         if (useSupabaseStorage) {
-          // Direct upload to Supabase Storage using REST API
+          // Use Supabase client for proper authentication and error handling
           try {
             const timestamp = Date.now();
             const fileExtension = file.name.split('.').pop();
@@ -74,40 +76,106 @@ const ImageUpload = memo(
               : `${safeBaseName || 'image'}-${timestamp}.${fileExtension}`;
             const filePath = `menu-items/${uniqueFileName}`;
 
-            console.log('🔄 Uploading directly to Supabase:', filePath);
+            console.log('🔄 Uploading to Supabase Storage:', filePath);
 
-            // Create FormData
-            const formData = new FormData();
-            formData.append('file', file, uniqueFileName);
+            // Use Supabase client for better error handling and authentication
+            console.log('🔄 Using Supabase client upload...');
 
-            // Upload to Supabase Storage
-            const response = await fetch(
-              `https://eoaissoqwlfvfizfomax.supabase.co/storage/v1/object/menu-images/${filePath}`,
-              {
-                method: 'POST',
-                headers: {
-                  Authorization:
-                    'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVvYWlzc29xd2xmdmZpemZvbWF4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk3NTY5OTIsImV4cCI6MjA3NTMzMjk5Mn0.SHkFV9EvSnWVmC0tApVU6A6C1rrDqsPMO922rMC1JpY',
-                },
-                body: formData,
-              },
-            );
+            const { data, error } = await supabase.storage
+              .from('menu-images')
+              .upload(filePath, file, {
+                cacheControl: '3600',
+                upsert: false,
+              });
 
-            if (response.ok) {
-              const publicUrl = `https://eoaissoqwlfvfizfomax.supabase.co/storage/v1/object/public/menu-images/${filePath}`;
+            if (error) {
+              console.error('❌ Supabase upload error:', error);
+              let errorMessage = 'Upload failed: ';
+
+              if (error.message.includes('JWT')) {
+                errorMessage +=
+                  'Authentication failed. Please check your API key.';
+              } else if (error.message.includes('permission')) {
+                errorMessage +=
+                  'Access denied. You may not have permission to upload to this bucket.';
+              } else if (error.message.includes('size')) {
+                errorMessage +=
+                  'File too large. Please choose a smaller image.';
+              } else if (
+                error.message.includes('not found') ||
+                error.message.includes('bucket')
+              ) {
+                errorMessage +=
+                  'Storage bucket not found. Please create a "menu-images" bucket in your Supabase project.';
+              } else {
+                errorMessage += error.message;
+              }
+
+              // Show error but also offer fallback to base64
+              const useFallback = confirm(
+                `${errorMessage}\n\nWould you like to use base64 encoding instead? (Images will be stored in the database)`,
+              );
+
+              if (useFallback) {
+                console.log('🔄 Falling back to base64 encoding...');
+                // Convert to base64 as fallback
+                const reader = new FileReader();
+                reader.onloadend = () => {
+                  const base64String = reader.result as string;
+                  console.log(
+                    'Image uploaded as base64, length:',
+                    base64String.length,
+                  );
+                  setPreview(base64String);
+                  onChange(base64String);
+                  setIsUploading(false);
+                };
+                reader.readAsDataURL(file);
+                return;
+              } else {
+                setIsUploading(false);
+                return;
+              }
+            }
+
+            if (data) {
+              // Get the public URL
+              const { data: urlData } = supabase.storage
+                .from('menu-images')
+                .getPublicUrl(filePath);
+
+              const publicUrl = urlData.publicUrl;
+              console.log('✅ Image uploaded successfully:', publicUrl);
               setPreview(publicUrl);
               onChange(publicUrl);
-              console.log('✅ Image uploaded successfully:', publicUrl);
-            } else {
-              const errorText = await response.text();
-              console.error('❌ Upload failed:', response.status, errorText);
-              alert(`Upload failed: HTTP ${response.status} - ${errorText}`);
+              setIsUploading(false);
             }
           } catch (error) {
             console.error('❌ Upload error:', error);
-            alert(
-              `Upload failed: ${error instanceof Error ? error.message : 'Unknown error'}`,
+            // Offer fallback to base64 on any error
+            const useFallback = confirm(
+              `Upload failed: ${error instanceof Error ? error.message : 'Unknown error'}\n\nWould you like to use base64 encoding instead? (Images will be stored in the database)`,
             );
+
+            if (useFallback) {
+              console.log('🔄 Falling back to base64 encoding...');
+              // Convert to base64 as fallback
+              const reader = new FileReader();
+              reader.onloadend = () => {
+                const base64String = reader.result as string;
+                console.log(
+                  'Image uploaded as base64, length:',
+                  base64String.length,
+                );
+                setPreview(base64String);
+                onChange(base64String);
+                setIsUploading(false);
+              };
+              reader.readAsDataURL(file);
+              return;
+            } else {
+              setIsUploading(false);
+            }
           }
         } else {
           // Convert to base64 (legacy method)
@@ -262,7 +330,7 @@ const ImageUpload = memo(
         />
       </div>
     );
-  }
+  },
 );
 
 export default ImageUpload;

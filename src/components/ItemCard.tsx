@@ -123,22 +123,30 @@ const ItemCard = memo(
             {/* Size Variants Display - More Compact */}
             {hasVariants && (
               <div className='space-y-1'>
-                {variants.map((variant, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05 }}
-                    className='flex items-center justify-between text-xs sm:text-sm px-2 py-1 rounded-lg bg-white/40 dark:bg-white/5 backdrop-blur-sm border border-white/20 dark:border-white/10'
-                  >
-                    <span className='text-muted-foreground font-medium'>
-                      {translateSize(variant.size, lang)}
-                    </span>
-                    <span className='text-primary font-medium'>
-                      ₺{variant.price.toFixed(2)}
-                    </span>
-                  </motion.div>
-                ))}
+                {variants.map((variant, index) => {
+                  // Add safety checks for variant data
+                  if (!variant || typeof variant !== 'object') {
+                    console.warn('Invalid variant data:', variant);
+                    return null;
+                  }
+                  
+                  return (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.05 }}
+                      className='flex items-center justify-between text-xs sm:text-sm px-2 py-1 rounded-lg bg-white/40 dark:bg-white/5 backdrop-blur-sm border border-white/20 dark:border-white/10'
+                    >
+                      <span className='text-muted-foreground font-medium'>
+                        {translateSize(variant.size, lang)}
+                      </span>
+                      <span className='text-primary font-medium'>
+                        ₺{typeof variant.price === 'number' ? variant.price.toFixed(2) : '0.00'}
+                      </span>
+                    </motion.div>
+                  );
+                })}
               </div>
             )}
 
@@ -165,7 +173,7 @@ const ItemCard = memo(
         <div className='absolute -inset-1 rounded-3xl bg-gradient-to-br from-primary/0 via-primary/0 to-primary/0 opacity-0 group-hover:from-primary/5 group-hover:via-primary/10 group-hover:to-primary/5 group-hover:opacity-100 blur-xl transition-all duration-700 -z-10' />
       </motion.div>
     );
-  }
+  },
 );
 
 export default ItemCard;

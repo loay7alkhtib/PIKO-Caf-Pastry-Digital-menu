@@ -32,7 +32,7 @@ export default function SignUp({ onNavigate }: SignUpProps) {
           ? 'Please enter a valid email address'
           : lang === 'tr'
             ? 'Lütfen geçerli bir e-posta adresi girin'
-            : 'يرجى إدخال عنوان بريد إلكتروني صحيح'
+            : 'يرجى إدخال عنوان بريد إلكتروني صحيح',
       );
       return;
     }
@@ -44,7 +44,7 @@ export default function SignUp({ onNavigate }: SignUpProps) {
           ? 'Name must be at least 2 characters'
           : lang === 'tr'
             ? 'Ad en az 2 karakter olmalıdır'
-            : 'يجب أن يكون الاسم حرفين على الأقل'
+            : 'يجب أن يكون الاسم حرفين على الأقل',
       );
       return;
     }
@@ -55,7 +55,7 @@ export default function SignUp({ onNavigate }: SignUpProps) {
           ? 'Passwords do not match'
           : lang === 'tr'
             ? 'Şifreler eşleşmiyor'
-            : 'كلمات المرور غير متطابقة'
+            : 'كلمات المرور غير متطابقة',
       );
       return;
     }
@@ -66,7 +66,7 @@ export default function SignUp({ onNavigate }: SignUpProps) {
           ? 'Password must be at least 6 characters'
           : lang === 'tr'
             ? 'Şifre en az 6 karakter olmalıdır'
-            : 'يجب أن تكون كلمة المرور 6 أحرف على الأقل'
+            : 'يجب أن تكون كلمة المرور 6 أحرف على الأقل',
       );
       return;
     }
@@ -88,7 +88,7 @@ export default function SignUp({ onNavigate }: SignUpProps) {
           ? 'Account created successfully!'
           : lang === 'tr'
             ? 'Hesap başarıyla oluşturuldu!'
-            : 'تم إنشاء الحساب بنجاح!'
+            : 'تم إنشاء الحساب بنجاح!',
       );
 
       // Small delay to ensure session is saved before navigation

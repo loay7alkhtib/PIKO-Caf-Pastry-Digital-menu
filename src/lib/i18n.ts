@@ -330,7 +330,11 @@ export function dirFor(lang: Lang): 'ltr' | 'rtl' {
 }
 
 // Helper to translate size names
-export function translateSize(size: string, lang: Lang): string {
+export function translateSize(size: string | undefined, lang: Lang): string {
+  if (!size) {
+    return ''; // Return empty string if size is undefined or null
+  }
+  
   const sizeKey = size.toLowerCase() as keyof typeof translations;
   if (sizeKey in translations) {
     return t(sizeKey, lang);

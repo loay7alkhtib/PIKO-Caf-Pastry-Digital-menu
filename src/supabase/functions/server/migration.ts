@@ -11,7 +11,7 @@ declare const Deno: {
 // Supabase admin client for migration
 const supabase = createClient(
   Deno.env.get('SUPABASE_URL')!,
-  Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!
+  Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!,
 );
 
 // Helper function to generate UUID
@@ -108,7 +108,7 @@ export async function migrateToRelationalDB() {
       if (categoryError) {
         console.error(
           `❌ Error inserting category ${kvCategory.names.en}:`,
-          categoryError
+          categoryError,
         );
         throw categoryError;
       }
@@ -134,7 +134,7 @@ export async function migrateToRelationalDB() {
         if (translationError) {
           console.error(
             `❌ Error inserting category translation ${translation.locale}:`,
-            translationError
+            translationError,
           );
           throw translationError;
         }
@@ -156,7 +156,7 @@ export async function migrateToRelationalDB() {
       const newCategoryId = categoryIdMap.get(kvItem.category_id);
       if (!newCategoryId) {
         console.error(
-          `❌ Category not found for item ${kvItem.names.en}: ${kvItem.category_id}`
+          `❌ Category not found for item ${kvItem.names.en}: ${kvItem.category_id}`,
         );
         continue;
       }
@@ -211,7 +211,7 @@ export async function migrateToRelationalDB() {
         if (translationError) {
           console.error(
             `❌ Error inserting item translation ${translation.locale}:`,
-            translationError
+            translationError,
           );
           throw translationError;
         }
@@ -233,7 +233,7 @@ export async function migrateToRelationalDB() {
       if (basePriceError) {
         console.error(
           `❌ Error inserting base price for item ${kvItem.names.en}:`,
-          basePriceError
+          basePriceError,
         );
         throw basePriceError;
       }
@@ -257,7 +257,7 @@ export async function migrateToRelationalDB() {
           if (variantError) {
             console.error(
               `❌ Error inserting variant for item ${kvItem.names.en}:`,
-              variantError
+              variantError,
             );
             throw variantError;
           }
@@ -271,7 +271,7 @@ export async function migrateToRelationalDB() {
     console.log('💾 Storing ID mappings...');
     await kv.set(
       'migration:category-id-map',
-      Object.fromEntries(categoryIdMap)
+      Object.fromEntries(categoryIdMap),
     );
     await kv.set('migration:item-id-map', Object.fromEntries(itemIdMap));
 

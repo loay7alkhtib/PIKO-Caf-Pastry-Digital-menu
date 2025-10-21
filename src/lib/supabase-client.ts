@@ -10,7 +10,7 @@ export const supabase = createClient(
       persistSession: false,
       autoRefreshToken: false,
     },
-  }
+  },
 );
 
 // Export the client for use in other components

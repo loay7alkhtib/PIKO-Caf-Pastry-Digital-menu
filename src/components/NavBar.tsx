@@ -20,22 +20,14 @@ const NavBar = memo(
     const { items } = useCart();
     const [cartOpen, setCartOpen] = useState(false);
     const [user, setUser] = useState<{ email: string; name?: string } | null>(
-      null
+      null,
     );
 
     // Memoize expensive calculation
     const itemCount = useMemo(
       () => items.reduce((sum, item) => sum + item.quantity, 0),
-      [items]
+      [items],
     );
-
-    useEffect(() => {
-      checkSession();
-
-      // Check session periodically to detect login/logout from other components
-      const interval = setInterval(checkSession, 2000);
-      return () => clearInterval(interval);
-    }, []);
 
     async function checkSession() {
       try {
@@ -50,6 +42,14 @@ const NavBar = memo(
         setUser(null);
       }
     }
+
+    useEffect(() => {
+      checkSession();
+
+      // Check session periodically to detect login/logout from other components
+      const interval = setInterval(checkSession, 2000);
+      return () => clearInterval(interval);
+    }, []);
 
     async function handleLogout() {
       await authAPI.signOut();
@@ -119,7 +119,7 @@ const NavBar = memo(
         <CartSheet open={cartOpen} onClose={() => setCartOpen(false)} />
       </>
     );
-  }
+  },
 );
 
 export default NavBar;

@@ -2,8 +2,7 @@ import { memo } from 'react';
 import { motion } from 'motion/react';
 import Masonry from 'react-responsive-masonry';
 import ItemCard from './ItemCard';
-import type { Item } from '../lib/types';
-import type { Lang } from '../lib/types';
+import type { Item, Lang } from '../lib/types';
 
 interface ItemsGridProps {
   items: Item[];
@@ -84,7 +83,7 @@ const ItemsGrid = memo(
         ))}
       </Masonry>
     );
-  }
+  },
 );
 
 export default ItemsGrid;

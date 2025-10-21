@@ -21,7 +21,7 @@ async function hashPassword(password: string): Promise<string> {
 
 async function verifyPassword(
   password: string,
-  hash: string
+  hash: string,
 ): Promise<boolean> {
   const hashedPassword = await hashPassword(password);
   return hashedPassword === hash;
@@ -32,7 +32,7 @@ const app = new Hono();
 // Supabase admin client for auth
 const supabase = createClient(
   Deno.env.get('SUPABASE_URL')!,
-  Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!
+  Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!,
 );
 
 // Enable logger
@@ -47,7 +47,7 @@ app.use(
     allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     exposeHeaders: ['Content-Length'],
     maxAge: 600,
-  })
+  }),
 );
 
 // Helper function to generate UUID
@@ -463,7 +463,7 @@ app.post('/make-server-4050140e/auth/signup', async c => {
         error: error.message || 'Signup failed',
         details: String(error),
       },
-      500
+      500,
     );
   }
 });
@@ -481,7 +481,7 @@ app.get('/make-server-4050140e/auth/session', async c => {
 
     console.log(
       '🔍 Checking session for token:',
-      `${token.substring(0, 8)}...`
+      `${token.substring(0, 8)}...`,
     );
 
     // Check session in database
@@ -593,7 +593,7 @@ app.post('/make-server-4050140e/auth/login', async c => {
           is_admin: true,
           created_at: new Date().toISOString(),
           expires_at: new Date(
-            Date.now() + 30 * 24 * 60 * 60 * 1000
+            Date.now() + 30 * 24 * 60 * 60 * 1000,
           ).toISOString(), // 30 days
         });
 
@@ -635,21 +635,21 @@ app.post('/make-server-4050140e/auth/login', async c => {
       console.log('❌ Error details:', credentialsError);
       return c.json(
         { error: 'Invalid credentials. Please check your email or sign up.' },
-        401
+        401,
       );
     }
 
     console.log('✅ User found in database:', userCredentials.email);
     console.log(
       '✅ User password hash:',
-      userCredentials.password_hash ? 'Present' : 'Missing'
+      userCredentials.password_hash ? 'Present' : 'Missing',
     );
 
     // Verify password using hashed comparison
     console.log('🔍 Verifying password hash...');
     const passwordMatch = await verifyPassword(
       password,
-      userCredentials.password_hash
+      userCredentials.password_hash,
     );
     console.log('🔍 Password match:', passwordMatch ? 'Yes' : 'No');
 
@@ -683,7 +683,7 @@ app.post('/make-server-4050140e/auth/login', async c => {
         is_admin: isAdmin,
         created_at: new Date().toISOString(),
         expires_at: new Date(
-          Date.now() + 30 * 24 * 60 * 60 * 1000
+          Date.now() + 30 * 24 * 60 * 60 * 1000,
         ).toISOString(), // 30 days
       });
 
@@ -712,7 +712,7 @@ app.post('/make-server-4050140e/auth/login', async c => {
       console.log('❌ Password mismatch');
       return c.json(
         { error: 'Invalid credentials. Please check your email or sign up.' },
-        401
+        401,
       );
     }
   } catch (error: any) {
@@ -738,7 +738,7 @@ app.get('/make-server-4050140e/categories', async c => {
         sort_order,
         is_active,
         created_at
-      `
+      `,
       )
       .eq('is_active', true)
       .order('sort_order');
@@ -919,7 +919,7 @@ app.get('/make-server-4050140e/items', async c => {
         is_active,
         sort_order,
         created_at
-      `
+      `,
       )
       .eq('is_active', true);
 
@@ -1190,7 +1190,7 @@ app.put('/make-server-4050140e/items/bulk/update-order', async c => {
             sort_order: update.order,
             updated_at: new Date().toISOString(),
           })
-          .eq('id', update.id)
+          .eq('id', update.id),
     );
 
     const results = await Promise.all(updatePromises);

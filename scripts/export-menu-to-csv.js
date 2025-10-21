@@ -17,7 +17,7 @@ function loadMenuJson() {
     }
   }
   throw new Error(
-    'Could not find menu.json in public/static or src/piko_final_menu.json'
+    'Could not find menu.json in public/static or src/piko_final_menu.json',
   );
 }
 

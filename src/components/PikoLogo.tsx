@@ -31,7 +31,7 @@ export default function PikoLogo({ onTripleTap, className }: PikoLogoProps) {
           rotation: 0,
           duration: 0.8,
           ease: 'back.out(1.7)',
-        }
+        },
       );
 
       // Add subtle floating animation

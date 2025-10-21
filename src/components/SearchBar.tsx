@@ -1,4 +1,4 @@
-import { memo, useRef, useState } from 'react';
+import React, { memo, useRef, useState } from 'react';
 import { Search, X } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
@@ -49,6 +49,7 @@ const SearchBar = memo(
         />
         {query && (
           <Button
+            type='button'
             variant='ghost'
             size='sm'
             onClick={handleClear}
@@ -60,7 +61,7 @@ const SearchBar = memo(
         )}
       </div>
     );
-  }
+  },
 );
 
 SearchBar.displayName = 'SearchBar';

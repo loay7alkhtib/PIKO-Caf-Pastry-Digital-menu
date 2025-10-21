@@ -79,7 +79,7 @@ const CategoryCard = memo(
         <div className='absolute -inset-1 rounded-3xl bg-gradient-to-br from-primary/0 via-primary/0 to-primary/0 opacity-0 group-hover:from-primary/5 group-hover:via-primary/10 group-hover:to-primary/5 group-hover:opacity-100 blur-xl transition-all duration-700 -z-10' />
       </motion.button>
     );
-  }
+  },
 );
 
 export default CategoryCard;

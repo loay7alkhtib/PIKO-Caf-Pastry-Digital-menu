@@ -35,7 +35,6 @@ class ImageUploadService {
     try {
       // Generate unique filename if not provided
       const timestamp = Date.now();
-      const fileExtension = file.name.split('.').pop();
       const finalFileName = fileName || `${timestamp}-${file.name}`;
       const filePath = folder ? `${folder}/${finalFileName}` : finalFileName;
 
@@ -153,7 +152,7 @@ class ImageUploadService {
    */
   private findMatchingItem(
     fileName: string,
-    itemNames: string[]
+    itemNames: string[],
   ): string | null {
     // Remove file extension and normalize
     const baseName = fileName.replace(/\.[^/.]+$/, '').toLowerCase();
@@ -229,7 +228,7 @@ class ImageUploadService {
    * Delete an image from storage
    */
   async deleteImage(
-    filePath: string
+    filePath: string,
   ): Promise<{ success: boolean; error?: string }> {
     try {
       const { error } = await supabase.storage
@@ -254,7 +253,7 @@ class ImageUploadService {
    */
   async updateItemImage(
     itemId: string,
-    imageUrl: string
+    imageUrl: string,
   ): Promise<{ success: boolean; error?: string }> {
     try {
       const { error } = await supabaseOptimized
@@ -296,7 +295,7 @@ class ImageUploadService {
       height?: number;
       quality?: number;
       format?: 'webp' | 'jpeg' | 'png';
-    } = {}
+    } = {},
   ): string {
     const baseUrl = this.getPublicUrl(filePath);
 

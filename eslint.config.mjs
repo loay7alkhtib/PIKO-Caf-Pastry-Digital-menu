@@ -40,6 +40,9 @@ export default [
         { allowConstantExport: true },
       ],
 
+      // Disable base no-unused-vars for TypeScript files
+      'no-unused-vars': 'off',
+
       // TypeScript specific rules
       '@typescript-eslint/no-unused-vars': [
         'warn',
@@ -72,7 +75,7 @@ export default [
       'comma-dangle': ['error', 'always-multiline'],
       semi: ['error', 'always'],
       quotes: ['error', 'single', { avoidEscape: true }],
-      indent: ['error', 2, { SwitchCase: 1 }],
+      // indent: ['error', 2, { SwitchCase: 1 }], // Disabled - Prettier handles indentation
       'no-trailing-spaces': 'error',
       'no-mixed-spaces-and-tabs': 'error',
 

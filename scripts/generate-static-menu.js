@@ -33,7 +33,7 @@ if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
   console.error('');
   console.error('Please set these environment variables:');
   console.error(
-    '   export VITE_SUPABASE_URL="https://your-project.supabase.co"'
+    '   export VITE_SUPABASE_URL="https://your-project.supabase.co"',
   );
   console.error('   export VITE_SUPABASE_ANON_KEY="your-anon-key"');
   console.error('');
@@ -73,7 +73,7 @@ async function generateStaticMenu() {
         image_url,
         sort_order,
         is_active
-      `
+      `,
       )
       .eq('is_active', true)
       .order('sort_order');
@@ -98,7 +98,7 @@ async function generateStaticMenu() {
         variants,
         sort_order,
         is_active
-      `
+      `,
       )
       .eq('is_active', true)
       .order('sort_order');
@@ -158,7 +158,7 @@ async function generateStaticMenu() {
     console.log(`🍽️ Items: ${transformedItems.length}`);
     console.log(`📁 Output: ${OUTPUT_FILE}`);
     console.log(
-      `📏 Size: ${(fs.statSync(OUTPUT_FILE).size / 1024).toFixed(2)} KB`
+      `📏 Size: ${(fs.statSync(OUTPUT_FILE).size / 1024).toFixed(2)} KB`,
     );
 
     // Generate a hash for cache busting
@@ -182,7 +182,7 @@ async function generateStaticMenu() {
     fs.writeFileSync(compressedFile, compressedData);
 
     console.log(
-      `🗜️ Compressed size: ${(compressedData.length / 1024).toFixed(2)} KB`
+      `🗜️ Compressed size: ${(compressedData.length / 1024).toFixed(2)} KB`,
     );
     console.log(`📁 Compressed file: ${compressedFile}`);
   } catch (error) {

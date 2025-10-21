@@ -24,14 +24,14 @@ const Home = memo(({ onNavigate }: HomeProps) => {
     (categoryId: string) => {
       navigateToCategory(categoryId);
     },
-    [navigateToCategory]
+    [navigateToCategory],
   );
 
   const handleCategoryHover = useCallback(
     (categoryId: string) => {
       prefetchCategory(categoryId);
     },
-    [prefetchCategory]
+    [prefetchCategory],
   );
 
   const handleLogoTripleTap = () => {

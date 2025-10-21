@@ -201,7 +201,7 @@ export const authAPI = {
       console.log(
         '📥 Signup response status:',
         response.status,
-        response.statusText
+        response.statusText,
       );
 
       const responseText = await response.text();
@@ -236,7 +236,7 @@ export const authAPI = {
       } else {
         console.error(
           '❌ Invalid session structure received:',
-          data.data?.session
+          data.data?.session,
         );
         throw new Error('Invalid session received from server');
       }
@@ -288,7 +288,7 @@ export const authAPI = {
     } else {
       console.error(
         '❌ Invalid session structure received:',
-        data.data?.session
+        data.data?.session,
       );
       throw new Error('Invalid session received from server');
     }

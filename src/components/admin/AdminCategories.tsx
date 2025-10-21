@@ -200,7 +200,7 @@ export default function AdminCategories({
       if (formData.image) {
         console.warn(
           'Saving category with image, length:',
-          formData.image.length
+          formData.image.length,
         );
       }
 

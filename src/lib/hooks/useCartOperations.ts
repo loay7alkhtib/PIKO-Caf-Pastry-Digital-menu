@@ -26,10 +26,10 @@ export function useCartOperations() {
           ? 'Added to list!'
           : lang === 'tr'
             ? 'Listeye eklendi!'
-            : 'أضيف إلى القائمة!'
+            : 'أضيف إلى القائمة!',
       );
     },
-    [addItem, lang]
+    [addItem, lang],
   );
 
   return {

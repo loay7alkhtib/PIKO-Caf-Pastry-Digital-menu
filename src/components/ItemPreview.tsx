@@ -205,7 +205,7 @@ const ItemPreview = memo(
         )}
       </AnimatePresence>
     );
-  }
+  },
 );
 
 export default ItemPreview;

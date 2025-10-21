@@ -36,7 +36,7 @@ export default function Login({ onNavigate }: LoginProps) {
           ? 'Login successful!'
           : lang === 'tr'
             ? 'Giriş başarılı!'
-            : 'تسجيل الدخول ناجح!'
+            : 'تسجيل الدخول ناجح!',
       );
 
       // Small delay to ensure session is saved before navigation

@@ -8,7 +8,6 @@ import { t } from '../lib/i18n';
 import { authAPI } from '../lib/supabase';
 import { toast } from 'sonner';
 import { ArrowLeft } from 'lucide-react';
-import { projectId, publicAnonKey } from '../lib/utils/supabase/info';
 
 interface AdminLoginProps {
   onNavigate: (page: string) => void;

@@ -29,7 +29,7 @@ const CartSheet = memo(({ open, onClose }: CartSheetProps) => {
         ? 'Order ready to show to waiter!'
         : lang === 'tr'
           ? 'Sipariş garsona gösterilmeye hazır!'
-          : 'الطلب جاهز لعرضه على النادل!'
+          : 'الطلب جاهز لعرضه على النادل!',
     );
   };
 
@@ -92,6 +92,7 @@ const CartSheet = memo(({ open, onClose }: CartSheetProps) => {
                     </p>
                     <div className='flex items-center gap-2 mt-2'>
                       <button
+                        type='button'
                         onClick={() => {
                           const itemKey = item.size
                             ? `${item.id}-${item.size}`
@@ -107,6 +108,7 @@ const CartSheet = memo(({ open, onClose }: CartSheetProps) => {
                         {item.quantity}
                       </span>
                       <button
+                        type='button'
                         onClick={() => {
                           const itemKey = item.size
                             ? `${item.id}-${item.size}`
@@ -121,6 +123,7 @@ const CartSheet = memo(({ open, onClose }: CartSheetProps) => {
                     </div>
                   </div>
                   <button
+                    type='button'
                     onClick={() => {
                       const itemKey = item.size
                         ? `${item.id}-${item.size}`
@@ -144,13 +147,19 @@ const CartSheet = memo(({ open, onClose }: CartSheetProps) => {
                 </span>
               </div>
               <Button
+                type='button'
                 onClick={handleShowWaiter}
                 className='w-full bg-primary text-primary-foreground hover:brightness-110'
                 size='lg'
               >
                 {t('showWaiter', lang)}
               </Button>
-              <Button onClick={clearCart} variant='outline' className='w-full'>
+              <Button
+                type='button'
+                onClick={clearCart}
+                variant='outline'
+                className='w-full'
+              >
                 {t('clear', lang)}
               </Button>
             </div>

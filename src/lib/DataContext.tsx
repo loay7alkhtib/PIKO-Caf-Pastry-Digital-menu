@@ -22,10 +22,10 @@ interface DataContextType {
   items: Item[];
   loading: boolean;
   error: string | null;
-  refetch: () => Promise<void>;
+  refetch: (force?: boolean) => Promise<void>;
   getCategoryItems: (
     _categoryId: string,
-    _options?: { preferCache?: boolean }
+    _options?: { preferCache?: boolean },
   ) => Promise<Item[]>;
   prefetchCategory: (_categoryId: string) => Promise<void>;
 }
@@ -38,13 +38,21 @@ export function DataProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<Item[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [isFetching, setIsFetching] = useState(false); // Prevent concurrent fetches
 
   // In-memory cache for items by category
   const [itemsCache, setItemsCache] = useState<Record<string, ItemsCache>>({});
 
   // Fetch all data once on mount with static-first strategy
   const fetchAllData = useCallback(async () => {
+    // Prevent concurrent fetches
+    if (isFetching) {
+      console.log('🚫 Data fetch already in progress, skipping...');
+      return;
+    }
+
     try {
+      setIsFetching(true);
       setLoading(true);
       setError(null);
 
@@ -69,8 +77,8 @@ export function DataProvider({ children }: { children: ReactNode }) {
               item =>
                 item &&
                 typeof item === 'object' &&
-                item.category_id !== undefined
-          )
+                item.category_id !== undefined,
+            )
           : [];
 
         const itemsWithOrder = itemsData.map((item, index) => ({
@@ -101,8 +109,10 @@ export function DataProvider({ children }: { children: ReactNode }) {
       const itemsData = Array.isArray(itemsDataRaw)
         ? itemsDataRaw.filter(
             item =>
-              item && typeof item === 'object' && item.category_id !== undefined
-        )
+              item &&
+              typeof item === 'object' &&
+              item.category_id !== undefined,
+          )
         : [];
 
       // Ensure all items have an order field, defaulting to 0
@@ -123,7 +133,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       // If both are empty, there might be an initialization issue
       if (!categoriesData || categoriesData.length === 0) {
         console.warn(
-          '⚠️ No categories found. Database might need initialization.'
+          '⚠️ No categories found. Database might need initialization.',
         );
       }
 
@@ -144,13 +154,18 @@ export function DataProvider({ children }: { children: ReactNode }) {
       setItems([]);
     } finally {
       setLoading(false);
+      setIsFetching(false);
     }
-  }, []);
+  }, [isFetching]);
 
-  // Load data on mount
+  // Load data on mount - ONLY ONCE
   useEffect(() => {
+    let mounted = true;
+
     // Check server health first, then fetch data
     const initData = async () => {
+      if (!mounted) return;
+
       try {
         const healthCheck = await fetch(
           'https://eoaissoqwlfvfizfomax.supabase.co/functions/v1/make-server-4050140e/health',
@@ -158,7 +173,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
             headers: {
               Authorization: `Bearer ${await import('./config/supabase').then(m => m.publicAnonKey)}`,
             },
-          }
+          },
         ).catch(() => null);
 
         if (healthCheck && healthCheck.ok) {
@@ -171,59 +186,80 @@ export function DataProvider({ children }: { children: ReactNode }) {
       }
 
       // Fetch data regardless of health check
-      await fetchAllData();
+      if (mounted) {
+        await fetchAllData();
+      }
     };
 
     const timer = setTimeout(initData, 100);
-    return () => clearTimeout(timer);
-  }, [fetchAllData]);
-
-  // Auto-refresh for visitors to see admin changes
-  useEffect(() => {
-    // Only run auto-refresh for visitors (not in admin mode)
-    const isAdmin =
-      window.location.pathname.includes('/admin') ||
-      window.location.hash.includes('admin') ||
-      window.location.pathname.includes('admin');
-
-    if (isAdmin) {
-      console.log('🚫 Skipping auto-refresh in admin mode');
-      return; // Skip auto-refresh in admin mode
-    }
-
-    // Periodic refresh every 30 seconds
-    const interval = setInterval(async () => {
-      try {
-        console.log('🔄 Auto-refreshing menu data for visitors...');
-        await fetchAllData();
-      } catch (err) {
-        console.warn('⚠️ Auto-refresh failed:', err);
-      }
-    }, 30000); // 30 seconds
-
-    // Refresh on tab focus (when user comes back to tab)
-    const handleFocus = async () => {
-      try {
-        console.log('🔄 Tab focused, refreshing menu data...');
-        await fetchAllData();
-      } catch (err) {
-        console.warn('⚠️ Focus refresh failed:', err);
-      }
-    };
-
-    window.addEventListener('focus', handleFocus);
-
     return () => {
-      clearInterval(interval);
-      window.removeEventListener('focus', handleFocus);
+      mounted = false;
+      clearTimeout(timer);
     };
-  }, [fetchAllData]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Empty dependency array - only run once on mount
+
+  // Auto-refresh for visitors to see admin changes - DISABLED to prevent continuous refresh
+  // useEffect(() => {
+  //   // Simple check: if we have an admin session, skip auto-refresh
+  //   const hasAdminSession = () => {
+  //     try {
+  //       const sessionStr = localStorage.getItem('piko_session');
+  //       if (sessionStr && sessionStr !== 'undefined' && sessionStr !== 'null') {
+  //         const session = JSON.parse(sessionStr);
+  //         return session?.user?.isAdmin === true;
+  //       }
+  //     } catch (error) {
+  //       console.warn('⚠️ Error checking admin session:', error);
+  //     }
+  //     return false;
+  //   };
+
+  //   if (hasAdminSession()) {
+  //     console.log('🚫 Admin session detected - skipping auto-refresh');
+  //     return; // Skip auto-refresh when admin is logged in
+  //   }
+
+  //   console.log('🔄 Setting up auto-refresh for visitor mode');
+
+  //   // Periodic refresh every 30 seconds (only for visitors)
+  //   const interval = setInterval(async () => {
+  //     try {
+  //       console.log('🔄 Auto-refreshing menu data for visitors...');
+  //       await fetchAllData();
+  //     } catch (err) {
+  //       console.warn('⚠️ Auto-refresh failed:', err);
+  //     }
+  //   }, 30000); // 30 seconds
+
+  //   // Refresh on tab focus (when user comes back to tab) - only for visitors
+  //   let focusTimeout: NodeJS.Timeout;
+  //   const handleFocus = async () => {
+  //     // Debounce focus events to prevent excessive calls
+  //     clearTimeout(focusTimeout);
+  //     focusTimeout = setTimeout(async () => {
+  //       try {
+  //         console.log('🔄 Tab focused, refreshing menu data...');
+  //         await fetchAllData();
+  //       } catch (err) {
+  //         console.warn('⚠️ Focus refresh failed:', err);
+  //       }
+  //     }, 1000); // Wait 1 second before refreshing
+  //   };
+
+  //   window.addEventListener('focus', handleFocus);
+
+  //   return () => {
+  //     clearInterval(interval);
+  //     window.removeEventListener('focus', handleFocus);
+  //   };
+  // }, [fetchAllData]);
 
   // Helper to get items for a specific category with caching and SWR
   const getCategoryItems = useCallback(
     async (
       categoryId: string,
-      options: { preferCache?: boolean } = { preferCache: true }
+      options: { preferCache?: boolean } = { preferCache: true },
     ): Promise<Item[]> => {
       const cacheKey = `items:${categoryId}`;
       const now = Date.now();
@@ -252,8 +288,8 @@ export function DataProvider({ children }: { children: ReactNode }) {
                     item =>
                       item &&
                       typeof item === 'object' &&
-                      item.category_id !== undefined
-                )
+                      item.category_id !== undefined,
+                  )
                 : [];
 
               // Check if data actually changed
@@ -279,7 +315,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
             } catch (err) {
               console.warn(
                 `⚠️  Background revalidation failed for ${categoryId}:`,
-                err
+                err,
               );
             }
           })();
@@ -306,8 +342,8 @@ export function DataProvider({ children }: { children: ReactNode }) {
               item =>
                 item &&
                 typeof item === 'object' &&
-                item.category_id !== undefined
-          )
+                item.category_id !== undefined,
+            )
           : [];
 
         const newCache = { data: freshData, timestamp: now };
@@ -322,7 +358,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       } catch (err) {
         console.error(
           `❌ Failed to fetch items for category ${categoryId}:`,
-          err
+          err,
         );
         // If we have stale IndexedDB data, use it as fallback
         if (idbCache) {
@@ -333,7 +369,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
         return [];
       }
     },
-    [itemsCache]
+    [itemsCache],
   );
 
   // Prefetch items for a category
@@ -355,73 +391,86 @@ export function DataProvider({ children }: { children: ReactNode }) {
         console.warn(`Prefetch failed for ${categoryId}:`, err);
       }
     },
-    [itemsCache, getCategoryItems]
+    [itemsCache, getCategoryItems],
   );
 
   // Refetch function for admin updates - FORCE DATABASE MODE
-  const refetch = useCallback(async () => {
-    console.log('🔄 Manual refetch triggered - FORCING DATABASE MODE');
+  const refetch = useCallback(
+    async (force = false) => {
+      // Allow force parameter to bypass concurrent fetch protection
+      if (!force && isFetching) {
+        console.log('🚫 Refetch already in progress, skipping...');
+        return;
+      }
 
-    // Clear in-memory category-items cache used by category views
-    setItemsCache({});
+      console.log('🔄 Manual refetch triggered - FORCING DATABASE MODE');
 
-    // Clear API-level caches
-    const { categoriesAPI, itemsAPI } = await import('./supabase');
-    categoriesAPI.clearCache();
+      // Clear in-memory category-items cache used by category views
+      setItemsCache({});
 
-    // Clear any cached data
+      // Clear API-level caches
+      const { categoriesAPI, itemsAPI } = await import('./supabase');
+      categoriesAPI.clearCache();
 
-    if (typeof window !== 'undefined') {
-      // Clear any localStorage caches used by free plan/static
-      localStorage.removeItem('piko-categories');
-      localStorage.removeItem('piko-items');
-      localStorage.removeItem('piko-cache');
-      localStorage.removeItem('menu_cache');
-    }
+      // Clear any cached data
 
-    // FORCE DATABASE MODE: Always fetch from Supabase, ignore static files
-    try {
-      setLoading(true);
-      setError(null);
+      if (typeof window !== 'undefined') {
+        // Clear any localStorage caches used by free plan/static
+        localStorage.removeItem('piko-categories');
+        localStorage.removeItem('piko-items');
+        localStorage.removeItem('piko-cache');
+        localStorage.removeItem('menu_cache');
+      }
 
-      console.log('🔄 FORCING DATABASE FETCH (ignoring static files)');
-      const [freshCategories, freshItemsRaw] = await Promise.all([
-        categoriesAPI.getAll(),
-        itemsAPI.getAll(),
-      ]);
+      // FORCE DATABASE MODE: Always fetch from Supabase, ignore static files
+      try {
+        setIsFetching(true);
+        setLoading(true);
+        setError(null);
 
-      const freshItems = Array.isArray(freshItemsRaw)
-        ? freshItemsRaw.filter(
-            item =>
-              item && typeof item === 'object' && item.category_id !== undefined
-        )
-        : [];
+        console.log('🔄 FORCING DATABASE FETCH (ignoring static files)');
+        const [freshCategories, freshItemsRaw] = await Promise.all([
+          categoriesAPI.getAll(),
+          itemsAPI.getAll(),
+        ]);
 
-      const itemsWithOrder = freshItems.map((item, index) => ({
-        ...item,
-        order: item.order ?? index,
-      }));
+        const freshItems = Array.isArray(freshItemsRaw)
+          ? freshItemsRaw.filter(
+              item =>
+                item &&
+                typeof item === 'object' &&
+                item.category_id !== undefined,
+            )
+          : [];
 
-      const sortedItems = itemsWithOrder.sort((a, b) => {
-        if (a.category_id !== b.category_id) {
-          return (a.category_id || '').localeCompare(b.category_id || '');
-        }
-        return (a.order || 0) - (b.order || 0);
-      });
+        const itemsWithOrder = freshItems.map((item, index) => ({
+          ...item,
+          order: item.order ?? index,
+        }));
 
-      setCategories(Array.isArray(freshCategories) ? freshCategories : []);
-      setItems(sortedItems);
-      console.log('✅ Manual refetch completed - DATABASE MODE');
-    } catch (err) {
-      console.error(
-        '❌ Admin refetch failed, falling back to static-first:',
-        err
-      );
-      await fetchAllData();
-    } finally {
-      setLoading(false);
-    }
-  }, [fetchAllData]);
+        const sortedItems = itemsWithOrder.sort((a, b) => {
+          if (a.category_id !== b.category_id) {
+            return (a.category_id || '').localeCompare(b.category_id || '');
+          }
+          return (a.order || 0) - (b.order || 0);
+        });
+
+        setCategories(Array.isArray(freshCategories) ? freshCategories : []);
+        setItems(sortedItems);
+        console.log('✅ Manual refetch completed - DATABASE MODE');
+      } catch (err) {
+        console.error(
+          '❌ Admin refetch failed, falling back to static-first:',
+          err,
+        );
+        await fetchAllData();
+      } finally {
+        setLoading(false);
+        setIsFetching(false);
+      }
+    },
+    [fetchAllData, isFetching],
+  );
 
   return (
     <DataContext.Provider

@@ -1,8 +1,7 @@
 import { memo } from 'react';
 import { motion } from 'motion/react';
 import ItemCard from './ItemCard';
-import type { Item } from '../lib/types';
-import type { Lang } from '../lib/types';
+import type { Item, Lang } from '../lib/types';
 
 interface ResponsiveGridProps {
   items: Item[];
@@ -113,7 +112,7 @@ const ResponsiveGrid = memo(
         ))}
       </div>
     );
-  }
+  },
 );
 
 export default ResponsiveGrid;

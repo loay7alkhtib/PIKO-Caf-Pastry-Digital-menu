@@ -2,17 +2,17 @@
 
 /**
  * Menu Data Import Script
- * 
+ *
  * This script imports menu data from a CSV file with the following structure:
  * - Categories and items with multilingual support (Arabic, Turkish, English)
  * - Image handling with Supabase Storage
  * - Variable sizes and prices support
- * 
+ *
  * Expected CSV format:
  * category_name_en,category_name_tr,category_name_ar,category_icon,category_color,
  * item_name_en,item_name_tr,item_name_ar,item_description_en,item_description_tr,item_description_ar,
  * base_price,image_filename,size_variants,tags,order
- * 
+ *
  * Example:
  * "Beverages","İçecekler","المشروبات","☕","#8B4513",
  * "Turkish Coffee","Türk Kahvesi","القهوة التركية","Traditional Turkish coffee","Geleneksel Türk kahvesi","قهوة تركية تقليدية",
@@ -33,7 +33,9 @@ const SUPABASE_URL = process.env.VITE_SUPABASE_URL;
 const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 if (!SUPABASE_URL || !SUPABASE_SERVICE_KEY) {
-  console.error('❌ Missing Supabase configuration. Please set VITE_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY environment variables.');
+  console.error(
+    '❌ Missing Supabase configuration. Please set VITE_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY environment variables.',
+  );
   process.exit(1);
 }
 
@@ -62,7 +64,7 @@ class MenuImporter {
         const [size, price] = variant.trim().split(':');
         return {
           size: size.trim(),
-          price: parseFloat(price.trim())
+          price: parseFloat(price.trim()),
         };
       });
 
@@ -81,7 +83,10 @@ class MenuImporter {
       return [];
     }
 
-    return tagsString.split(',').map(tag => tag.trim()).filter(tag => tag.length > 0);
+    return tagsString
+      .split(',')
+      .map(tag => tag.trim())
+      .filter(tag => tag.length > 0);
   }
 
   /**
@@ -103,13 +108,13 @@ class MenuImporter {
       // Read file
       const fileBuffer = fs.readFileSync(imagePath);
       const fileName = path.basename(imagePath);
-      
+
       // Upload to Supabase Storage
       const { data, error } = await supabase.storage
         .from(IMAGE_BUCKET)
         .upload(`items/${fileName}`, fileBuffer, {
           contentType: 'image/jpeg',
-          upsert: true
+          upsert: true,
         });
 
       if (error) {
@@ -124,10 +129,9 @@ class MenuImporter {
 
       const imageUrl = urlData.publicUrl;
       this.uploadedImages.set(itemName, imageUrl);
-      
+
       console.log(`✅ Uploaded image: ${fileName}`);
       return imageUrl;
-
     } catch (error) {
       console.error(`❌ Error uploading image ${imagePath}:`, error.message);
       return null;
@@ -140,14 +144,17 @@ class MenuImporter {
   async ensureStorageBucket() {
     try {
       const { data, error } = await supabase.storage.getBucket(IMAGE_BUCKET);
-      
+
       if (error && error.message.includes('not found')) {
         console.log('📦 Creating storage bucket...');
-        const { error: createError } = await supabase.storage.createBucket(IMAGE_BUCKET, {
-          public: true,
-          allowedMimeTypes: ['image/jpeg', 'image/png', 'image/webp'],
-          fileSizeLimit: 5242880 // 5MB
-        });
+        const { error: createError } = await supabase.storage.createBucket(
+          IMAGE_BUCKET,
+          {
+            public: true,
+            allowedMimeTypes: ['image/jpeg', 'image/png', 'image/webp'],
+            fileSizeLimit: 5242880, // 5MB
+          },
+        );
 
         if (createError) {
           throw createError;
@@ -173,14 +180,16 @@ class MenuImporter {
 
       fs.createReadStream(csvPath)
         .pipe(csv())
-        .on('data', (row) => {
+        .on('data', row => {
           // Skip empty rows
           if (!row.category_name_en || !row.item_name_en) {
             return;
           }
 
-          const categoryKey = row.category_name_en.toLowerCase().replace(/\s+/g, '-');
-          
+          const categoryKey = row.category_name_en
+            .toLowerCase()
+            .replace(/\s+/g, '-');
+
           // Store category data
           if (!this.categories.has(categoryKey)) {
             this.categories.set(categoryKey, {
@@ -188,11 +197,11 @@ class MenuImporter {
               names: {
                 en: row.category_name_en,
                 tr: row.category_name_tr,
-                ar: row.category_name_ar
+                ar: row.category_name_ar,
               },
               icon: row.category_icon || '🍽️',
               color: row.category_color || '#8B4513',
-              order: parseInt(row.category_order) || 0
+              order: parseInt(row.category_order) || 0,
             });
           }
 
@@ -202,24 +211,26 @@ class MenuImporter {
             names: {
               en: row.item_name_en,
               tr: row.item_name_tr,
-              ar: row.item_name_ar
+              ar: row.item_name_ar,
             },
             descriptions: {
               en: row.item_description_en || null,
               tr: row.item_description_tr || null,
-              ar: row.item_description_ar || null
+              ar: row.item_description_ar || null,
             },
             base_price: parseFloat(row.base_price) || 0,
             image_filename: row.image_filename,
             size_variants: this.parseSizeVariants(row.size_variants),
             tags: this.parseTags(row.tags),
-            order: parseInt(row.order) || 0
+            order: parseInt(row.order) || 0,
           };
 
           this.items.push(item);
         })
         .on('end', () => {
-          console.log(`📊 Processed ${this.categories.size} categories and ${this.items.length} items`);
+          console.log(
+            `📊 Processed ${this.categories.size} categories and ${this.items.length} items`,
+          );
           resolve();
         })
         .on('error', reject);
@@ -231,14 +242,14 @@ class MenuImporter {
    */
   async importCategories() {
     console.log('📂 Importing categories...');
-    
+
     const categoryData = Array.from(this.categories.values()).map(cat => ({
       slug: cat.slug,
       names: cat.names,
       icon: cat.icon,
       color: cat.color,
       sort_order: cat.order,
-      is_active: true
+      is_active: true,
     }));
 
     const { data, error } = await supabase
@@ -267,7 +278,7 @@ class MenuImporter {
     console.log('🍽️ Importing items...');
 
     const itemData = [];
-    
+
     for (const item of this.items) {
       const categoryId = categoryMap.get(item.category_key);
       if (!categoryId) {
@@ -297,13 +308,11 @@ class MenuImporter {
         tags: item.tags,
         variants: variants,
         sort_order: item.order,
-        is_active: true
+        is_active: true,
       });
     }
 
-    const { data, error } = await supabase
-      .from('items')
-      .insert(itemData);
+    const { data, error } = await supabase.from('items').insert(itemData);
 
     if (error) {
       throw new Error(`Failed to import items: ${error.message}`);
@@ -318,21 +327,20 @@ class MenuImporter {
   async import(csvPath, imagesDir) {
     try {
       console.log('🚀 Starting menu data import...');
-      
+
       // Ensure storage bucket exists
       await this.ensureStorageBucket();
-      
+
       // Process CSV file
       await this.processCSV(csvPath, imagesDir);
-      
+
       // Import categories
       const categoryMap = await this.importCategories();
-      
+
       // Import items
       await this.importItems(categoryMap, imagesDir);
-      
+
       console.log('🎉 Menu data import completed successfully!');
-      
     } catch (error) {
       console.error('❌ Import failed:', error.message);
       process.exit(1);
@@ -343,7 +351,7 @@ class MenuImporter {
 // CLI usage
 async function main() {
   const args = process.argv.slice(2);
-  
+
   if (args.length < 2) {
     console.log(`
 Usage: node import-menu-data.js <csv-file> <images-directory>
@@ -359,13 +367,13 @@ Environment variables required:
   }
 
   const [csvPath, imagesDir] = args;
-  
+
   // Validate paths
   if (!fs.existsSync(csvPath)) {
     console.error(`❌ CSV file not found: ${csvPath}`);
     process.exit(1);
   }
-  
+
   if (!fs.existsSync(imagesDir)) {
     console.error(`❌ Images directory not found: ${imagesDir}`);
     process.exit(1);

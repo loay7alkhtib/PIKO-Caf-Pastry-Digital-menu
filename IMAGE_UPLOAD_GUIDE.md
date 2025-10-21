@@ -5,6 +5,7 @@ This guide explains how to upload photos to Supabase Storage and auto-match them
 ## 🎯 Overview
 
 The image upload system supports:
+
 - **Single image uploads** through the admin interface
 - **Batch image uploads** with automatic name matching
 - **Supabase Storage** for optimized image delivery
@@ -35,6 +36,7 @@ The image upload system supports:
 ### Method 2: Command Line Script
 
 1. **Prepare Your Images**
+
    ```bash
    # Create a folder for your images
    mkdir images
@@ -43,10 +45,11 @@ The image upload system supports:
    ```
 
 2. **Run the Batch Upload Script**
+
    ```bash
    # Basic upload (dry run to see what would be uploaded)
    node scripts/batch-upload-images.js --csv "new Menu csv.csv" --images "./images" --dry-run
-   
+
    # Actual upload
    node scripts/batch-upload-images.js --csv "new Menu csv.csv" --images "./images" --update-db
    ```
@@ -116,6 +119,7 @@ menu-images/
 ### Results Report
 
 After batch upload, you'll receive a detailed report including:
+
 - Total files processed
 - Success/failure counts
 - Matched vs unmatched items
@@ -133,14 +137,14 @@ import { imageUploadService } from '@/lib/imageUploadService';
 const result = await imageUploadService.uploadImage(
   file,
   'custom-filename.jpg',
-  'custom-folder'
+  'custom-folder',
 );
 
 // Batch upload with custom matching
 const batchResult = await imageUploadService.batchUploadWithMatching(
   files,
   ['Item 1', 'Item 2', 'Item 3'],
-  'custom-folder'
+  'custom-folder',
 );
 ```
 
@@ -154,7 +158,7 @@ const optimizedUrl = imageUploadService.getOptimizedUrl('image.jpg', {
   width: 800,
   height: 600,
   quality: 80,
-  format: 'webp'
+  format: 'webp',
 });
 ```
 
@@ -184,6 +188,7 @@ The system includes proper security policies:
 ### File Validation
 
 All uploaded files are validated for:
+
 - File type (must be image)
 - File size (max 5MB)
 - File name sanitization
@@ -239,7 +244,7 @@ If automatic database updates fail, you can manually update image URLs:
 
 ```sql
 -- Update item image URL
-UPDATE items 
+UPDATE items
 SET image_url = 'https://your-supabase-url/menu-images/menu-items/image.jpg'
 WHERE id = 'item-uuid';
 ```
@@ -270,6 +275,7 @@ The system supports both base64 and Supabase Storage URLs for backward compatibi
 **Happy Uploading! 🚀**
 
 For more technical details, see the source code in:
+
 - `src/lib/imageUploadService.ts` - Core upload functionality
 - `src/components/ImageUpload.tsx` - Single image upload component
 - `src/components/BatchImageUpload.tsx` - Batch upload interface

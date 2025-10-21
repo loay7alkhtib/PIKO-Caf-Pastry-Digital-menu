@@ -41,7 +41,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       prev.filter(i => {
         const itemKey = i.size ? `${i.id}-${i.size}` : i.id;
         return itemKey !== id;
-      })
+      }),
     );
   };
 
@@ -54,7 +54,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       prev.map(i => {
         const itemKey = i.size ? `${i.id}-${i.size}` : i.id;
         return itemKey === id ? { ...i, quantity } : i;
-      })
+      }),
     );
   };
 
@@ -64,7 +64,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   const total =
     Math.round(
-      items.reduce((sum, item) => sum + item.price * item.quantity, 0) * 100
+      items.reduce((sum, item) => sum + item.price * item.quantity, 0) * 100,
     ) / 100;
 
   return (

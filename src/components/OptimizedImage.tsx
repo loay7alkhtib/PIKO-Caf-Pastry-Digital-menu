@@ -20,7 +20,7 @@ function getOptimizedImageUrl(
   src: string,
   width?: number,
   height?: number,
-  quality: number = 80
+  quality: number = 80,
 ): string {
   if (!src) return '';
 
@@ -105,7 +105,7 @@ export default function OptimizedImage({
         className={cn(
           'transition-opacity duration-300',
           isLoaded ? 'opacity-100' : 'opacity-0',
-          'w-full h-auto object-contain'
+          'w-full h-full object-cover',
         )}
       />
 

@@ -16,7 +16,7 @@ import StorageStatus from '../components/StorageStatus';
 
 // Lazy load admin components
 const AdminCategories = lazy(
-  () => import('../components/admin/AdminCategories')
+  () => import('../components/admin/AdminCategories'),
 );
 const AdminItems = lazy(() => import('../components/admin/AdminItemsSimple'));
 // const SessionDebugger = lazy(() =>
@@ -73,7 +73,7 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
       // Check if user is admin
       if (!session.user?.isAdmin) {
         toast.error(
-          'Admin access required. Please login with admin credentials.'
+          'Admin access required. Please login with admin credentials.',
         );
         setAuthorized(false);
         onNavigate('admin-login');
@@ -112,7 +112,7 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
           ? 'Data refreshed successfully!'
           : lang === 'tr'
             ? 'Veriler başarıyla yenilendi!'
-            : 'تم تحديث البيانات بنجاح!'
+            : 'تم تحديث البيانات بنجاح!',
       );
     } catch (error) {
       console.error('Refresh error:', error);
@@ -121,7 +121,7 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
           ? 'Failed to refresh data'
           : lang === 'tr'
             ? 'Veriler yenilenemedi'
-            : 'فشل في تحديث البيانات'
+            : 'فشل في تحديث البيانات',
       );
     }
   };

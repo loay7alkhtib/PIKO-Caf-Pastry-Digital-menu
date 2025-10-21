@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 import type { Page } from '../types';
 
 interface UseNavigationProps {
-  onNavigate: (page: Page, categoryId?: string) => void;
+  onNavigate: (_page: Page, _categoryId?: string) => void;
 }
 
 export function useNavigation({ onNavigate }: UseNavigationProps) {
@@ -14,7 +14,7 @@ export function useNavigation({ onNavigate }: UseNavigationProps) {
     (categoryId: string) => {
       onNavigate('category', categoryId);
     },
-    [onNavigate]
+    [onNavigate],
   );
 
   const navigateToLogin = useCallback(() => {

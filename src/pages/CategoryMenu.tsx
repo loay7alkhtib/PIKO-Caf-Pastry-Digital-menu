@@ -39,7 +39,7 @@ const CategoryMenu = memo(({ categoryId, onNavigate }: CategoryMenuProps) => {
   // Get category from cache - INSTANT!
   const category = useMemo(
     () => categories.find(c => c.id === categoryId),
-    [categories, categoryId]
+    [categories, categoryId],
   );
 
   // Get items for this category and sort by explicit display order
@@ -62,14 +62,14 @@ const CategoryMenu = memo(({ categoryId, onNavigate }: CategoryMenuProps) => {
     const allFilteredItems = allItems.filter(item => {
       // Search in item names (multilingual)
       const nameMatch = Object.values(item.names).some(name =>
-        name.toLowerCase().includes(query)
+        name.toLowerCase().includes(query),
       );
 
       // Search in descriptions (multilingual)
       const descriptionMatch =
         item.descriptions &&
         Object.values(item.descriptions).some(desc =>
-          desc?.toLowerCase().includes(query)
+          desc?.toLowerCase().includes(query),
         );
 
       // Search in tags
@@ -80,7 +80,7 @@ const CategoryMenu = memo(({ categoryId, onNavigate }: CategoryMenuProps) => {
       const categoryMatch =
         category &&
         Object.values(category.names).some(catName =>
-          catName.toLowerCase().includes(query)
+          catName.toLowerCase().includes(query),
         );
 
       return nameMatch || descriptionMatch || tagMatch || categoryMatch;
@@ -96,7 +96,7 @@ const CategoryMenu = memo(({ categoryId, onNavigate }: CategoryMenuProps) => {
     (item: Item, size?: string, customPrice?: number) => {
       addItemToCart(item, size, customPrice);
     },
-    [addItemToCart]
+    [addItemToCart],
   );
 
   const handleSearch = useCallback((query: string) => {

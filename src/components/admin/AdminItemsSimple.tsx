@@ -133,7 +133,18 @@ const DraggableTableRow = ({
       </TableCell>
       <TableCell className='font-medium'>{item.names.en}</TableCell>
       <TableCell className='hidden md:table-cell'>{item.names.ar}</TableCell>
-      <TableCell>${item.price}</TableCell>
+      <TableCell>
+        {item.variants && item.variants.length > 0 ? (
+          <div className='text-xs'>
+            <div className='font-medium text-primary'>{item.variants.length} variants</div>
+            <div className='text-muted-foreground'>
+              ₺{Math.min(...item.variants.map(v => v.price))} - ₺{Math.max(...item.variants.map(v => v.price))}
+            </div>
+          </div>
+        ) : (
+          `₺${item.price}`
+        )}
+      </TableCell>
       <TableCell>
         <div className='flex items-center gap-2'>
           <div className='cursor-grab active:cursor-grabbing' ref={drag}>
@@ -217,8 +228,8 @@ export default function AdminItemsSimple({
   // Get items for selected category
   const categoryItems = selectedCategory
     ? localItems
-      .filter(item => item.category_id === selectedCategory)
-      .sort((a, b) => (a.order || 0) - (b.order || 0))
+        .filter(item => item.category_id === selectedCategory)
+        .sort((a, b) => (a.order || 0) - (b.order || 0))
     : [];
 
   // Set first category as default (only once on mount or when categories change)
@@ -348,7 +359,8 @@ export default function AdminItemsSimple({
         id: item.id,
         name: item.names.en,
         order: item.order,
-      }));
+      })),
+    );
 
     const draggedItem = categoryItems[dragIndex];
     const newCategoryItems = [...categoryItems];
@@ -367,13 +379,14 @@ export default function AdminItemsSimple({
         id: item.id,
         name: item.names.en,
         order: item.order,
-      }))
+      })),
+    );
 
     // Update the local items state
     const newLocalItems = [...localItems];
     updatedCategoryItems.forEach((updatedItem, index) => {
       const itemIndex = newLocalItems.findIndex(
-        item => item.id === updatedItem.id
+        item => item.id === updatedItem.id,
       );
       if (itemIndex !== -1) {
         newLocalItems[itemIndex] = {
@@ -387,13 +400,14 @@ export default function AdminItemsSimple({
       '📋 Final newLocalItems order:',
       newLocalItems
         .filter(item => item.category_id === selectedCategory)
-        .map(item => ({ id: item.id, name: item.names.en, order: item.order }))
+        .map(item => ({ id: item.id, name: item.names.en, order: item.order })),
+    );
 
     setLocalItems(newLocalItems);
 
     // Show a toast to confirm the move happened
     toast.success(
-      `Moved ${draggedItem.names.en} to position ${hoverIndex + 1}`
+      `Moved ${draggedItem.names.en} to position ${hoverIndex + 1}`,
     );
   };
 
@@ -406,7 +420,8 @@ export default function AdminItemsSimple({
           id: item.id,
           name: item.names.en,
           order: item.order,
-        }))
+        })),
+      );
 
       // Use the bulk updateOrder API which is more efficient
       const orderUpdates = categoryItems.map((item, index) => ({
@@ -446,7 +461,11 @@ export default function AdminItemsSimple({
                 Save Order
               </Button>
             )}
-            <Button type='button' onClick={() => openDialog()} className='gap-2'>
+            <Button
+              type='button'
+              onClick={() => openDialog()}
+              className='gap-2'
+            >
               <Plus className='w-4 h-4' />
               {t('addNew', lang)}
             </Button>
@@ -486,7 +505,7 @@ export default function AdminItemsSimple({
                   <TableHead className='min-w-[120px] hidden md:table-cell'>
                     Name (AR)
                   </TableHead>
-                  <TableHead className='w-24'>Price</TableHead>
+                  <TableHead className='w-24'>Price / Variants</TableHead>
                   <TableHead className='w-20'>Order</TableHead>
                   <TableHead className='w-20 hidden lg:table-cell'>
                     Available
@@ -623,6 +642,71 @@ export default function AdminItemsSimple({
                   />
                   <p className='text-xs text-muted-foreground mt-1'>
                     Lower numbers appear first
+                  </p>
+                </div>
+              </div>
+
+              {/* Size Variants Section */}
+              <div>
+                <Label>{t('sizeVariants', lang)}</Label>
+                <div className='space-y-2'>
+                  {formData.variants.map((variant, index) => (
+                    <div key={index} className='flex items-center gap-2 p-3 border rounded-lg bg-muted/30'>
+                      <div className='flex-1'>
+                        <Input
+                          placeholder={t('sizeName', lang)}
+                          value={variant.size}
+                          onChange={e => {
+                            const newVariants = [...formData.variants];
+                            newVariants[index] = { ...variant, size: e.target.value };
+                            setFormData({ ...formData, variants: newVariants });
+                          }}
+                          className='mb-2'
+                        />
+                      </div>
+                      <div className='flex-1'>
+                        <Input
+                          type='number'
+                          step='0.01'
+                          placeholder={t('priceWithCurrency', lang)}
+                          value={variant.price}
+                          onChange={e => {
+                            const newVariants = [...formData.variants];
+                            newVariants[index] = { ...variant, price: parseFloat(e.target.value) || 0 };
+                            setFormData({ ...formData, variants: newVariants });
+                          }}
+                          className='mb-2'
+                        />
+                      </div>
+                      <Button
+                        type='button'
+                        variant='ghost'
+                        size='sm'
+                        onClick={() => {
+                          const newVariants = formData.variants.filter((_, i) => i !== index);
+                          setFormData({ ...formData, variants: newVariants });
+                        }}
+                        className='h-8 w-8 p-0 text-red-600 hover:text-red-700'
+                      >
+                        <Trash2 className='w-4 h-4' />
+                      </Button>
+                    </div>
+                  ))}
+                  <Button
+                    type='button'
+                    variant='outline'
+                    size='sm'
+                    onClick={() => {
+                      const newVariants = [...formData.variants, { size: '', price: 0 }];
+                      setFormData({ ...formData, variants: newVariants });
+                    }}
+                    className='gap-2'
+                  >
+                    <Plus className='w-4 h-4' />
+                    {t('addVariant', lang)}
+                  </Button>
+                  <p className='text-xs text-muted-foreground'>
+                    Add size variants (e.g., Small, Medium, Large) with different prices. Leave empty if item has only one price.
                   </p>
                 </div>
               </div>

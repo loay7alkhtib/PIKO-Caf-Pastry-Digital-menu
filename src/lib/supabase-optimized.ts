@@ -26,7 +26,7 @@ export const supabaseOptimized = createClient(
     db: {
       schema: 'public',
     },
-  }
+  },
 );
 
 // Optimized query functions that only fetch needed fields
@@ -45,7 +45,7 @@ export const optimizedQueries = {
         image_url,
         sort_order,
         is_active
-      `
+      `,
       )
       .eq('is_active', true)
       .order('sort_order'),
@@ -66,7 +66,7 @@ export const optimizedQueries = {
         variants,
         sort_order,
         is_active
-      `
+      `,
       )
       .eq('is_active', true)
       .order('sort_order');
@@ -94,7 +94,7 @@ export const optimizedQueries = {
         variants,
         sort_order,
         is_active
-      `
+      `,
       )
       .eq('id', id)
       .eq('is_active', true)
@@ -131,7 +131,7 @@ export const imageOptimization = {
       height?: number;
       quality?: number;
       format?: 'webp' | 'jpeg' | 'png';
-    } = {}
+    } = {},
   ) => {
     if (!src) return '';
 
@@ -170,7 +170,7 @@ export const performanceMonitor = {
   // Track API response times
   trackApiCall: async <T>(
     name: string,
-    apiCall: () => Promise<T>
+    apiCall: () => Promise<T>,
   ): Promise<T> => {
     const start = performance.now();
     try {
@@ -216,7 +216,7 @@ export const optimizedAPI = {
   getCategoryItems: async (categoryId: string) => {
     return performanceMonitor.trackApiCall(
       `getCategoryItems-${categoryId}`,
-      () => optimizedQueries.getItems(categoryId)
+      () => optimizedQueries.getItems(categoryId),
     );
   },
 };
