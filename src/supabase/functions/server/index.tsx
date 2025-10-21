@@ -825,19 +825,21 @@ app.put('/make-server-4050140e/categories/:id', async c => {
 
     const { names, icon, image, color, order } = body;
 
-    // Update slug if English name changed
+    // Only update fields that are explicitly provided by the client
     const updateData: any = {
-      names,
-      icon: icon || '🍽️',
-      image_url: image,
-      color: color || '#0C6071',
-      sort_order: order || 0,
       updated_at: new Date().toISOString(),
     };
 
-    if (names?.en) {
-      updateData.slug = createSlug(names.en);
+    if (typeof names !== 'undefined') {
+      updateData.names = names;
+      if (names?.en) {
+        updateData.slug = createSlug(names.en);
+      }
     }
+    if (typeof icon !== 'undefined') updateData.icon = icon;
+    if (typeof image !== 'undefined') updateData.image_url = image;
+    if (typeof color !== 'undefined') updateData.color = color;
+    if (typeof order !== 'undefined') updateData.sort_order = order;
 
     const { data: category, error } = await supabase
       .from('categories')
@@ -927,7 +929,9 @@ app.get('/make-server-4050140e/items', async c => {
       query = query.eq('category_id', categoryId);
     }
 
-    const { data: items, error } = await query.order('sort_order');
+    const { data: items, error } = await query
+      .order('category_id')
+      .order('sort_order');
 
     if (error) {
       console.error('Error fetching items:', error);
@@ -1041,19 +1045,24 @@ app.put('/make-server-4050140e/items/:id', async c => {
       order,
     } = body;
 
+    // Only update fields explicitly provided
+    const updateData: any = {
+      updated_at: new Date().toISOString(),
+    };
+    if (typeof names !== 'undefined') updateData.names = names;
+    if (typeof descriptions !== 'undefined')
+      updateData.descriptions = descriptions;
+    if (typeof category_id !== 'undefined')
+      updateData.category_id = category_id;
+    if (typeof price !== 'undefined') updateData.price = price;
+    if (typeof image !== 'undefined') updateData.image_url = image;
+    if (typeof tags !== 'undefined') updateData.tags = tags;
+    if (typeof variants !== 'undefined') updateData.variants = variants;
+    if (typeof order !== 'undefined') updateData.sort_order = order;
+
     const { data: item, error } = await supabase
       .from('items')
-      .update({
-        category_id,
-        names,
-        descriptions,
-        price: price || 0,
-        image_url: image,
-        tags: tags || ['menu-item'],
-        variants: variants || [],
-        sort_order: order !== undefined ? order : undefined,
-        updated_at: new Date().toISOString(),
-      })
+      .update(updateData)
       .eq('id', id)
       .select()
       .single();
@@ -1175,7 +1184,7 @@ app.post('/make-server-4050140e/items/bulk/create', async c => {
   }
 });
 
-// Bulk update item order endpoint
+// Bulk update item order endpoint (ensure available)
 app.put('/make-server-4050140e/items/bulk/update-order', async c => {
   try {
     const { orderUpdates } = await c.req.json();

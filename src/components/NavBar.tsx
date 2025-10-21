@@ -44,11 +44,17 @@ const NavBar = memo(
     }
 
     useEffect(() => {
-      checkSession();
+      // Defer to avoid synchronous setState during initial render cycle
+      const timer = setTimeout(() => {
+        checkSession();
+      }, 0);
 
-      // Check session periodically to detect login/logout from other components
+      // Periodically check session to detect login/logout from other components
       const interval = setInterval(checkSession, 2000);
-      return () => clearInterval(interval);
+      return () => {
+        clearTimeout(timer);
+        clearInterval(interval);
+      };
     }, []);
 
     async function handleLogout() {

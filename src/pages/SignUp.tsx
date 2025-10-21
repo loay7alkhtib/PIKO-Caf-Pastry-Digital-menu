@@ -74,14 +74,11 @@ export default function SignUp({ onNavigate }: SignUpProps) {
     setLoading(true);
 
     try {
-      console.log('Starting signup with:', { email, name });
       await authAPI.signUp({
         email,
         password,
         name,
       });
-
-      console.log('Signup successful!');
 
       toast.success(
         lang === 'en'
@@ -95,12 +92,15 @@ export default function SignUp({ onNavigate }: SignUpProps) {
       setTimeout(() => {
         onNavigate('home');
       }, 100);
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Signup error:', error);
-      console.error('Error details:', error.message, error);
+      const message =
+        error && typeof error === 'object' && 'message' in error
+          ? (error as { message?: string }).message
+          : undefined;
 
       // Provide more helpful error messages
-      let errorMessage = error.message || 'Signup failed. Please try again.';
+      let errorMessage = message || 'Signup failed. Please try again.';
 
       // Handle specific error cases
       if (

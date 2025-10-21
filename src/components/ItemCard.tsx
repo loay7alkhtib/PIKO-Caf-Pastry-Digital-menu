@@ -129,7 +129,7 @@ const ItemCard = memo(
                     console.warn('Invalid variant data:', variant);
                     return null;
                   }
-                  
+
                   return (
                     <motion.div
                       key={index}
@@ -142,7 +142,10 @@ const ItemCard = memo(
                         {translateSize(variant.size, lang)}
                       </span>
                       <span className='text-primary font-medium'>
-                        ₺{typeof variant.price === 'number' ? variant.price.toFixed(2) : '0.00'}
+                        ₺
+                        {typeof variant.price === 'number'
+                          ? variant.price.toFixed(2)
+                          : '0.00'}
                       </span>
                     </motion.div>
                   );

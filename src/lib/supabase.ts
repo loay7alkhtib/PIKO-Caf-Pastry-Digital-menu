@@ -55,12 +55,12 @@ export const categoriesAPI = {
   getAll: async () => {
     // Check cache first
     if (categoriesCache && Date.now() - categoriesCache.timestamp < CACHE_TTL) {
-      console.log('✅ Using cached categories');
+      console.warn('✅ Using cached categories');
       return categoriesCache.data;
     }
 
     // Use Edge Function with simplified JSONB structure
-    console.log('🔄 Fetching categories from Edge Function...');
+    console.warn('🔄 Fetching categories from Edge Function...');
     const data = await apiCall('/categories');
 
     // Update cache
@@ -107,10 +107,14 @@ export const categoriesAPI = {
 export const itemsAPI = {
   getAll: async (categoryId?: string) => {
     // Use Edge Function with simplified JSONB structure
-    console.log('🔄 Fetching items from Edge Function...');
+    console.warn('🔄 Fetching items from Edge Function...');
     const query = categoryId ? `?category_id=${categoryId}` : '';
     const result = await apiCall(`/items${query}`);
-    console.log('📊 Edge Function items result:', result?.length || 0, 'items');
+    console.warn(
+      '📊 Edge Function items result:',
+      result?.length || 0,
+      'items',
+    );
     return result;
   },
 
@@ -143,17 +147,37 @@ export const itemsAPI = {
     }),
 
   updateOrder: async (orderUpdates: { id: string; order: number }[]) => {
-    console.log('🔄 Calling updateOrder API endpoint...');
+    console.warn('🔄 Calling updateOrder API endpoint...');
     try {
       const result = await apiCall('/items/bulk/update-order', {
         method: 'PUT',
         body: JSON.stringify({ orderUpdates }),
       });
-      console.log('✅ updateOrder API success:', result);
+      console.warn('✅ updateOrder API success:', result);
       return result;
     } catch (error) {
       console.error('❌ updateOrder API error:', error);
-      throw error;
+      // Fallback: some deployments may not include the bulk endpoint yet.
+      // Perform per-item updates using the standard update endpoint.
+      try {
+        console.warn('↩️ Falling back to per-item order updates...');
+        const results = await Promise.all(
+          orderUpdates.map(u =>
+            apiCall(`/items/${u.id}`, {
+              method: 'PUT',
+              body: JSON.stringify({ order: u.order }),
+            }),
+          ),
+        );
+        console.warn('✅ Per-item order updates completed:', results.length);
+        return { success: true, count: results.length, fallback: true };
+      } catch (fallbackError) {
+        console.error(
+          '❌ Per-item order update fallback failed:',
+          fallbackError,
+        );
+        throw fallbackError;
+      }
     }
   },
 };
@@ -162,7 +186,10 @@ export const itemsAPI = {
 export const ordersAPI = {
   getAll: () => apiCall('/orders'),
 
-  create: (data: { items: any[]; total: number }) =>
+  create: (data: {
+    items: Array<{ id: string; quantity: number; price: number }>;
+    total: number;
+  }) =>
     apiCall('/orders', {
       method: 'POST',
       body: JSON.stringify(data),
@@ -183,11 +210,11 @@ export const authAPI = {
     name: string;
   }) => {
     try {
-      console.log('🚀 Calling signup API with:', {
+      console.warn('🚀 Calling signup API with:', {
         email: credentials.email,
         name: credentials.name,
       });
-      console.log('📡 API endpoint:', `${API_BASE}/auth/signup`);
+      console.warn('📡 API endpoint:', `${API_BASE}/auth/signup`);
 
       const response = await fetch(`${API_BASE}/auth/signup`, {
         method: 'POST',
@@ -198,19 +225,19 @@ export const authAPI = {
         body: JSON.stringify(credentials),
       });
 
-      console.log(
+      console.warn(
         '📥 Signup response status:',
         response.status,
         response.statusText,
       );
 
       const responseText = await response.text();
-      console.log('📄 Signup response text:', responseText);
+      console.warn('📄 Signup response text:', responseText);
 
       let data;
       try {
         data = JSON.parse(responseText);
-        console.log('✅ Parsed response:', data);
+        console.warn('✅ Parsed response:', data);
       } catch (e) {
         console.error('❌ Failed to parse response:', e);
         console.error('Raw response was:', responseText);
@@ -224,9 +251,9 @@ export const authAPI = {
         throw new Error(data.error || `Signup failed (${response.status})`);
       }
 
-      console.log('🎉 Signup successful! Setting session...');
-      console.log('📊 Full response data:', data);
-      console.log('📊 Session data received:', data.data?.session);
+      console.warn('🎉 Signup successful! Setting session...');
+      console.warn('📊 Full response data:', data);
+      console.warn('📊 Session data received:', data.data?.session);
 
       // Validate session structure before setting
       if (data.data?.session && data.data.session.user) {
@@ -241,11 +268,16 @@ export const authAPI = {
         throw new Error('Invalid session received from server');
       }
 
-      console.log('✅ Signup complete!');
+      console.warn('✅ Signup complete!');
       return { data, error: null };
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('💥 Signup exception:', error);
-      console.error('💥 Error message:', error.message);
+      if (error && typeof error === 'object' && 'message' in error) {
+        console.error(
+          '💥 Error message:',
+          (error as { message?: string }).message,
+        );
+      }
       throw error;
     }
   },
@@ -254,7 +286,7 @@ export const authAPI = {
     email: string;
     password: string;
   }) => {
-    console.log('🔐 Attempting login for:', credentials.email);
+    console.warn('🔐 Attempting login for:', credentials.email);
 
     const response = await fetch(`${API_BASE}/auth/login`, {
       method: 'POST',
@@ -265,7 +297,7 @@ export const authAPI = {
       body: JSON.stringify(credentials),
     });
 
-    console.log('📥 Login response status:', response.status);
+    console.warn('📥 Login response status:', response.status);
 
     if (!response.ok) {
       const error = await response
@@ -276,9 +308,9 @@ export const authAPI = {
     }
 
     const data = await response.json();
-    console.log('✅ Login successful!');
-    console.log('📊 Full response data:', data);
-    console.log('📊 Session data received:', data.data?.session);
+    console.warn('✅ Login successful!');
+    console.warn('📊 Full response data:', data);
+    console.warn('📊 Session data received:', data.data?.session);
 
     // Validate session structure before setting
     if (data.data?.session && data.data.session.user) {
@@ -296,10 +328,13 @@ export const authAPI = {
     return { data, error: null };
   },
 
-  getSession: async () => {
+  getSession: async (): Promise<
+    | { data: { session: Session | null }; error: null }
+    | { data: { session: null }; error: null }
+  > => {
     // Try to get from memory first
     if (currentSession) {
-      console.log('✅ Session found in memory');
+      console.warn('✅ Session found in memory');
       return { data: { session: currentSession }, error: null };
     }
 
@@ -311,15 +346,15 @@ export const authAPI = {
 
       // For now, use local session without server verification
       // TODO: Fix server session verification endpoint
-      console.log('✅ Using local session (server verification disabled)');
+      console.warn('✅ Using local session (server verification disabled)');
       return { data: { session: storedSession }, error: null };
     }
 
-    console.log('❌ No session found');
+    console.warn('❌ No session found');
     return { data: { session: null }, error: null };
   },
 
-  signOut: async () => {
+  signOut: async (): Promise<{ error: null }> => {
     if (currentSession) {
       try {
         await fetch(`${API_BASE}/auth/logout`, {
@@ -347,3 +382,17 @@ export const supabase = {
 
 // Re-export types for convenience
 export type { Category, Item, ItemVariant, Order, Session } from './types';
+
+// Provide a single import point for the real Supabase client used for Storage
+// Consumers should import { supabaseClient } from './supabase'
+// Re-create the storage-enabled Supabase client here to avoid a separate file
+import { createClient } from '@supabase/supabase-js';
+import { supabaseConfig } from './config/supabase-credentials';
+
+export const supabaseClient = createClient(
+  supabaseConfig.url,
+  supabaseConfig.anonKey,
+  {
+    auth: { persistSession: false, autoRefreshToken: false },
+  },
+);

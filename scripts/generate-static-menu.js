@@ -16,30 +16,18 @@ const { createClient } = require('@supabase/supabase-js');
 // Configuration
 const SUPABASE_URL =
   process.env.NEXT_PUBLIC_SUPABASE_URL ||
-  process.env.VITE_SUPABASE_URL ||
-  'https://eoaissoqwlfvfizfomax.supabase.co';
+  process.env.VITE_SUPABASE_URL;
 const SUPABASE_ANON_KEY =
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
-  process.env.VITE_SUPABASE_ANON_KEY ||
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVvYWlzc29xd2xmdmZpemZvbWF4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk3NTY5OTIsImV4cCI6MjA3NTMzMjk5Mn0.SHkFV9EvSnWVmC0tApVU6A6C1rrDqsPMO922rMC1JpY';
+  process.env.VITE_SUPABASE_ANON_KEY;
 const OUTPUT_DIR = path.join(__dirname, '..', 'public', 'static');
 const OUTPUT_FILE = path.join(OUTPUT_DIR, 'menu.json');
 
 // Check if we have the required environment variables
 if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
   console.error('❌ Missing required environment variables:');
-  console.error('   SUPABASE_URL:', SUPABASE_URL ? '✅' : '❌');
-  console.error('   SUPABASE_ANON_KEY:', SUPABASE_ANON_KEY ? '✅' : '❌');
-  console.error('');
-  console.error('Please set these environment variables:');
-  console.error(
-    '   export VITE_SUPABASE_URL="https://your-project.supabase.co"',
-  );
-  console.error('   export VITE_SUPABASE_ANON_KEY="your-anon-key"');
-  console.error('');
-  console.error('Or create a .env.local file with:');
-  console.error('   VITE_SUPABASE_URL=https://your-project.supabase.co');
-  console.error('   VITE_SUPABASE_ANON_KEY=your-anon-key');
+  console.error('   VITE_SUPABASE_URL or NEXT_PUBLIC_SUPABASE_URL');
+  console.error('   VITE_SUPABASE_ANON_KEY or NEXT_PUBLIC_SUPABASE_ANON_KEY');
   process.exit(1);
 }
 

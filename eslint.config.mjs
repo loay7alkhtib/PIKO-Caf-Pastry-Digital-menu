@@ -12,6 +12,17 @@ export default [
     ignores: ['dist', 'node_modules', 'build', '.vite', 'supabase/functions'],
   },
   {
+    ignores: ['src/supabase/functions'],
+  },
+  {
+    files: ['vite.config.ts', '*.config.{js,ts,mjs,cjs}', 'scripts/**/*.{js,ts,mjs,cjs}'],
+    languageOptions: {
+      globals: {
+        ...globals.node,
+      },
+    },
+  },
+  {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2023,

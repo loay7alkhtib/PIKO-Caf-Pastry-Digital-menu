@@ -179,10 +179,18 @@ function ChartTooltipContent({
     >
       {!nestLabel ? tooltipLabel : null}
       <div className='grid gap-1.5'>
-        {payload.map((item: any, index: number) => {
-          const key = `${nameKey || item.name || item.dataKey || 'value'}`;
-          const itemConfig = getPayloadConfigFromPayload(config, item, key);
-          const indicatorColor = color || item.payload.fill || item.color;
+        {payload.map((item: unknown, index: number) => {
+          const safeItem = item as {
+            dataKey?: string;
+            name?: string;
+            value?: number;
+            color?: string;
+            payload?: Record<string, unknown> & { fill?: string };
+          };
+          const key = `${nameKey || safeItem.name || safeItem.dataKey || 'value'}`;
+          const itemConfig = getPayloadConfigFromPayload(config, safeItem, key);
+          const indicatorColor =
+            color || safeItem.payload?.fill || safeItem.color;
 
           return (
             <div
@@ -192,8 +200,14 @@ function ChartTooltipContent({
                 indicator === 'dot' && 'items-center',
               )}
             >
-              {formatter && item?.value !== undefined && item.name ? (
-                formatter(item.value, item.name, item, index, item.payload)
+              {formatter && safeItem?.value !== undefined && safeItem.name ? (
+                formatter(
+                  safeItem.value,
+                  safeItem.name,
+                  safeItem,
+                  index,
+                  safeItem.payload,
+                )
               ) : (
                 <>
                   {itemConfig?.icon ? (
@@ -232,9 +246,9 @@ function ChartTooltipContent({
                         {itemConfig?.label || item.name}
                       </span>
                     </div>
-                    {item.value && (
+                    {safeItem.value && (
                       <span className='text-foreground font-mono font-medium tabular-nums'>
-                        {item.value.toLocaleString()}
+                        {safeItem.value.toLocaleString()}
                       </span>
                     )}
                   </div>
@@ -275,13 +289,18 @@ function ChartLegendContent({
         className,
       )}
     >
-      {payload.map((item: any) => {
-        const key = `${nameKey || item.dataKey || 'value'}`;
-        const itemConfig = getPayloadConfigFromPayload(config, item, key);
+      {payload.map((item: unknown) => {
+        const safeItem = item as {
+          dataKey?: string;
+          value?: string;
+          color?: string;
+        };
+        const key = `${nameKey || safeItem.dataKey || 'value'}`;
+        const itemConfig = getPayloadConfigFromPayload(config, safeItem, key);
 
         return (
           <div
-            key={item.value}
+            key={safeItem.value}
             className={cn(
               '[&>svg]:text-muted-foreground flex items-center gap-1.5 [&>svg]:h-3 [&>svg]:w-3',
             )}
@@ -292,7 +311,7 @@ function ChartLegendContent({
               <div
                 className='h-2 w-2 shrink-0 rounded-[2px]'
                 style={{
-                  backgroundColor: item.color,
+                  backgroundColor: safeItem.color,
                 }}
               />
             )}

@@ -1,6 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
-import { DndProvider, useDrag, useDrop } from 'react-dnd';
+import {
+  DndProvider,
+  type DragSourceMonitor,
+  type DropTargetMonitor,
+  useDrag,
+  useDrop,
+} from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
+import type { Identifier, XYCoord } from 'dnd-core';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Label } from '../ui/label';
@@ -33,6 +40,7 @@ import { t } from '../../lib/i18n';
 import { Category, Item, itemsAPI } from '../../lib/supabase';
 import { toast } from 'sonner';
 import { Edit, GripVertical, Plus, Trash2 } from 'lucide-react';
+import { ConfirmDialogProvider, useConfirm } from '../ui/confirm-dialog';
 import { Badge } from '../ui/badge';
 
 interface AdminItemsSimpleProps {
@@ -44,7 +52,6 @@ interface AdminItemsSimpleProps {
 interface DraggableTableRowProps {
   item: Item;
   index: number;
-  categoryId: string;
   onEdit: (item: Item) => void;
   onDelete: (id: string) => void;
   onMove: (dragIndex: number, hoverIndex: number) => void;
@@ -53,21 +60,26 @@ interface DraggableTableRowProps {
 const DraggableTableRow = ({
   item,
   index,
-  categoryId,
   onEdit,
   onDelete,
   onMove,
 }: DraggableTableRowProps) => {
   const ref = useRef<HTMLTableRowElement>(null);
 
-  const [{ handlerId }, drop] = useDrop({
+  // useDrop from react-dnd
+
+  const [{ handlerId }, drop] = useDrop<
+    { index: number },
+    void,
+    { handlerId: Identifier | null }
+  >({
     accept: 'item',
-    collect(monitor) {
+    collect(monitor: DropTargetMonitor) {
       return {
         handlerId: monitor.getHandlerId(),
       };
     },
-    hover(draggedItem: any, monitor) {
+    hover(draggedItem: { index: number }, monitor: DropTargetMonitor) {
       if (!ref.current) {
         return;
       }
@@ -81,8 +93,9 @@ const DraggableTableRow = ({
       const hoverBoundingRect = ref.current?.getBoundingClientRect();
       const hoverMiddleY =
         (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
-      const clientOffset = monitor.getClientOffset();
-      const hoverClientY = clientOffset!.y - hoverBoundingRect.top;
+      const clientOffset = monitor.getClientOffset() as XYCoord | null;
+      if (!clientOffset) return;
+      const hoverClientY = clientOffset.y - hoverBoundingRect.top;
 
       if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) {
         return;
@@ -96,18 +109,25 @@ const DraggableTableRow = ({
     },
   });
 
-  const [{ isDragging }, drag] = useDrag({
+  const [{ isDragging }, drag] = useDrag<
+    { id: string; index: number },
+    void,
+    { isDragging: boolean }
+  >({
     type: 'item',
-    item: () => {
-      return { id: item.id, index };
-    },
-    collect: monitor => ({
+    item: () => ({ id: item.id, index }),
+    collect: (monitor: DragSourceMonitor) => ({
       isDragging: monitor.isDragging(),
     }),
   });
 
   const opacity = isDragging ? 0.5 : 1;
-  drop(ref);
+  // Attach drop in effect to avoid accessing ref during render
+  useEffect(() => {
+    if (!ref.current) return;
+    const node = ref.current;
+    drop(node);
+  }, [drop]);
 
   return (
     <TableRow
@@ -136,9 +156,12 @@ const DraggableTableRow = ({
       <TableCell>
         {item.variants && item.variants.length > 0 ? (
           <div className='text-xs'>
-            <div className='font-medium text-primary'>{item.variants.length} variants</div>
+            <div className='font-medium text-primary'>
+              {item.variants.length} variants
+            </div>
             <div className='text-muted-foreground'>
-              ₺{Math.min(...item.variants.map(v => v.price))} - ₺{Math.max(...item.variants.map(v => v.price))}
+              ₺{Math.min(...item.variants.map(v => v.price))} - ₺
+              {Math.max(...item.variants.map(v => v.price))}
             </div>
           </div>
         ) : (
@@ -153,13 +176,10 @@ const DraggableTableRow = ({
           <Input
             type='number'
             value={item.order || 0}
-            onChange={e => {
-              const newOrder = parseInt(e.target.value) || 0;
-              // We'll handle this through drag and drop instead
-            }}
             className='w-16 h-8 text-center'
             min='0'
             readOnly
+            aria-readonly
           />
         </div>
       </TableCell>
@@ -194,7 +214,7 @@ const DraggableTableRow = ({
   );
 };
 
-export default function AdminItemsSimple({
+function AdminItemsSimpleInner({
   items,
   categories,
   onRefresh,
@@ -220,9 +240,12 @@ export default function AdminItemsSimple({
     order: 0,
   });
 
-  // Update local items when props change
+  // Update local items when props change (defer setState)
   useEffect(() => {
-    setLocalItems([...items]);
+    const timer = setTimeout(() => {
+      setLocalItems([...items]);
+    }, 0);
+    return () => clearTimeout(timer);
   }, [items]);
 
   // Get items for selected category
@@ -237,7 +260,7 @@ export default function AdminItemsSimple({
     if (categories.length > 0 && !selectedCategory) {
       // Use setTimeout to avoid synchronous state updates
       const timer = setTimeout(() => {
-        setSelectedCategory(categories[0].id);
+        setSelectedCategory(categories[0]?.id || '');
       }, 0);
       return () => clearTimeout(timer);
     }
@@ -325,8 +348,16 @@ export default function AdminItemsSimple({
     }
   };
 
+  const confirm = useConfirm();
+
   const handleDelete = async (id: string) => {
-    if (!window.confirm('Delete this item?')) return;
+    const ok = await confirm({
+      title: 'Delete this item?',
+      description: 'This action cannot be undone.',
+      confirmText: 'Delete',
+      destructive: true,
+    });
+    if (!ok) return;
 
     try {
       await itemsAPI.delete(id);
@@ -340,20 +371,11 @@ export default function AdminItemsSimple({
     }
   };
 
-  const updateItemOrder = async (itemId: string, newOrder: number) => {
-    try {
-      await itemsAPI.update(itemId, { order: newOrder });
-      toast.success('Order updated');
-      onRefresh();
-    } catch (error) {
-      console.error('Order update error:', error);
-      toast.error('Failed to update order');
-    }
-  };
+  // updateItemOrder is no longer used; use bulk saveItemOrder instead
 
   const moveItem = (dragIndex: number, hoverIndex: number) => {
-    console.log(`🔄 Moving item from index ${dragIndex} to ${hoverIndex}`);
-    console.log(
+    console.warn(`🔄 Moving item from index ${dragIndex} to ${hoverIndex}`);
+    console.warn(
       '📋 Before move - categoryItems:',
       categoryItems.map(item => ({
         id: item.id,
@@ -363,6 +385,7 @@ export default function AdminItemsSimple({
     );
 
     const draggedItem = categoryItems[dragIndex];
+    if (!draggedItem) return;
     const newCategoryItems = [...categoryItems];
     newCategoryItems.splice(dragIndex, 1);
     newCategoryItems.splice(hoverIndex, 0, draggedItem);
@@ -373,7 +396,7 @@ export default function AdminItemsSimple({
       order: index,
     }));
 
-    console.log(
+    console.warn(
       '📋 After move - updatedCategoryItems:',
       updatedCategoryItems.map(item => ({
         id: item.id,
@@ -382,21 +405,16 @@ export default function AdminItemsSimple({
       })),
     );
 
-    // Update the local items state
-    const newLocalItems = [...localItems];
-    updatedCategoryItems.forEach((updatedItem, index) => {
-      const itemIndex = newLocalItems.findIndex(
-        item => item.id === updatedItem.id,
-      );
-      if (itemIndex !== -1) {
-        newLocalItems[itemIndex] = {
-          ...newLocalItems[itemIndex],
-          order: index,
-        };
+    // Update only items in the selected category in local state
+    const newLocalItems = localItems.map(li => {
+      const updated = updatedCategoryItems.find(ui => ui.id === li.id);
+      if (updated) {
+        return { ...li, order: updated.order };
       }
+      return li;
     });
 
-    console.log(
+    console.warn(
       '📋 Final newLocalItems order:',
       newLocalItems
         .filter(item => item.category_id === selectedCategory)
@@ -413,24 +431,62 @@ export default function AdminItemsSimple({
 
   const saveItemOrder = async () => {
     try {
-      console.log('🔄 Saving item order for category:', selectedCategory);
-      console.log(
-        '📋 Current categoryItems:',
-        categoryItems.map(item => ({
+      console.warn('🔄 Saving item order for category:', selectedCategory);
+
+      // Recompute the current items for the selected category from the latest state
+      const latestCategoryItems = [...localItems]
+        .filter(item => item.category_id === selectedCategory)
+        .sort((a, b) => (a.order || 0) - (b.order || 0));
+
+      console.warn(
+        '📋 Current latestCategoryItems:',
+        latestCategoryItems.map(item => ({
           id: item.id,
           name: item.names.en,
           order: item.order,
         })),
       );
 
-      // Use the bulk updateOrder API which is more efficient
-      const orderUpdates = categoryItems.map((item, index) => ({
+      // Build the payload from the latest items to avoid stale closure issues
+      const orderUpdates = latestCategoryItems.map((item, index) => ({
         id: item.id,
         order: index,
       }));
 
-      console.log('📝 Order updates to send:', orderUpdates);
-      await itemsAPI.updateOrder(orderUpdates);
+      console.warn('📝 Order updates to send:', orderUpdates);
+      const result = await itemsAPI.updateOrder(orderUpdates);
+      console.warn('✅ Bulk order update result:', result);
+
+      // Extra safety: if server lacked bulk endpoint and fallback was used,
+      // perform full updates to ensure legacy endpoints persist the order.
+      const usedFallback =
+        typeof result === 'object' &&
+        result !== null &&
+        'fallback' in (result as Record<string, unknown>) &&
+        Boolean((result as { fallback?: boolean }).fallback);
+
+      if (usedFallback) {
+        console.warn('🛟 Performing full item updates as a safeguard...');
+        await Promise.all(
+          latestCategoryItems.map((item, index) =>
+            itemsAPI.update(item.id, {
+              names: item.names,
+              descriptions: item.descriptions || undefined,
+              category_id: item.category_id || null,
+              price: item.price,
+              image: item.image || null,
+              tags: item.tags,
+              variants:
+                item.variants && item.variants.length > 0
+                  ? item.variants
+                  : undefined,
+              is_available: item.is_available ?? true,
+              order: index,
+            }),
+          ),
+        );
+        console.warn('✅ Full item updates completed');
+      }
 
       toast.success('Item order updated');
       onRefresh();
@@ -519,7 +575,6 @@ export default function AdminItemsSimple({
                     key={item.id}
                     item={item}
                     index={index}
-                    categoryId={selectedCategory}
                     onEdit={openDialog}
                     onDelete={handleDelete}
                     onMove={moveItem}
@@ -651,14 +706,20 @@ export default function AdminItemsSimple({
                 <Label>{t('sizeVariants', lang)}</Label>
                 <div className='space-y-2'>
                   {formData.variants.map((variant, index) => (
-                    <div key={index} className='flex items-center gap-2 p-3 border rounded-lg bg-muted/30'>
+                    <div
+                      key={index}
+                      className='flex items-center gap-2 p-3 border rounded-lg bg-muted/30'
+                    >
                       <div className='flex-1'>
                         <Input
                           placeholder={t('sizeName', lang)}
                           value={variant.size}
                           onChange={e => {
                             const newVariants = [...formData.variants];
-                            newVariants[index] = { ...variant, size: e.target.value };
+                            newVariants[index] = {
+                              ...variant,
+                              size: e.target.value,
+                            };
                             setFormData({ ...formData, variants: newVariants });
                           }}
                           className='mb-2'
@@ -672,7 +733,10 @@ export default function AdminItemsSimple({
                           value={variant.price}
                           onChange={e => {
                             const newVariants = [...formData.variants];
-                            newVariants[index] = { ...variant, price: parseFloat(e.target.value) || 0 };
+                            newVariants[index] = {
+                              ...variant,
+                              price: parseFloat(e.target.value) || 0,
+                            };
                             setFormData({ ...formData, variants: newVariants });
                           }}
                           className='mb-2'
@@ -683,7 +747,9 @@ export default function AdminItemsSimple({
                         variant='ghost'
                         size='sm'
                         onClick={() => {
-                          const newVariants = formData.variants.filter((_, i) => i !== index);
+                          const newVariants = formData.variants.filter(
+                            (_, i) => i !== index,
+                          );
                           setFormData({ ...formData, variants: newVariants });
                         }}
                         className='h-8 w-8 p-0 text-red-600 hover:text-red-700'
@@ -697,7 +763,10 @@ export default function AdminItemsSimple({
                     variant='outline'
                     size='sm'
                     onClick={() => {
-                      const newVariants = [...formData.variants, { size: '', price: 0 }];
+                      const newVariants = [
+                        ...formData.variants,
+                        { size: '', price: 0 },
+                      ];
                       setFormData({ ...formData, variants: newVariants });
                     }}
                     className='gap-2'
@@ -706,7 +775,8 @@ export default function AdminItemsSimple({
                     {t('addVariant', lang)}
                   </Button>
                   <p className='text-xs text-muted-foreground'>
-                    Add size variants (e.g., Small, Medium, Large) with different prices. Leave empty if item has only one price.
+                    Add size variants (e.g., Small, Medium, Large) with
+                    different prices. Leave empty if item has only one price.
                   </p>
                 </div>
               </div>
@@ -754,5 +824,13 @@ export default function AdminItemsSimple({
         </Dialog>
       </div>
     </DndProvider>
+  );
+}
+
+export default function AdminItemsSimple(props: AdminItemsSimpleProps) {
+  return (
+    <ConfirmDialogProvider>
+      <AdminItemsSimpleInner {...props} />
+    </ConfirmDialogProvider>
   );
 }

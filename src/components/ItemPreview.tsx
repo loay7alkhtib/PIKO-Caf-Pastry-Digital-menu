@@ -150,7 +150,7 @@ const ItemPreview = memo(
                         {t('selectSize', lang)}
                       </p>
                       <div className='grid grid-cols-3 gap-2'>
-                        {item.variants!.map(variant => (
+                        {(item.variants ?? []).map(variant => (
                           <button
                             key={variant.size}
                             onClick={() => setSelectedSize(variant.size)}
