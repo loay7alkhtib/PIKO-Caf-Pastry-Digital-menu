@@ -1,9 +1,11 @@
+/* eslint-disable react-refresh/only-export-components */
 import {
   createContext,
   ReactNode,
   useCallback,
   useContext,
   useEffect,
+  useRef,
   useState,
 } from 'react';
 import { categoriesAPI, itemsAPI } from './supabase';
@@ -39,6 +41,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isFetching, setIsFetching] = useState(false); // Prevent concurrent fetches
+  const isFetchingRef = useRef(false); // Ref guard to avoid effect dependency loops
 
   // In-memory cache for items by category
   const [itemsCache, setItemsCache] = useState<Record<string, ItemsCache>>({});
@@ -46,12 +49,13 @@ export function DataProvider({ children }: { children: ReactNode }) {
   // Fetch all data once on mount with static-first strategy
   const fetchAllData = useCallback(async () => {
     // Prevent concurrent fetches
-    if (isFetching) {
-      console.log('🚫 Data fetch already in progress, skipping...');
+    if (isFetchingRef.current) {
+      console.warn('🚫 Data fetch already in progress, skipping...');
       return;
     }
 
     try {
+      isFetchingRef.current = true;
       setIsFetching(true);
       setLoading(true);
       setError(null);
@@ -63,7 +67,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
         window.location.pathname.includes('admin');
 
       if (isAdmin) {
-        console.log('🔄 Admin mode detected - FORCING DATABASE FETCH');
+        console.warn('🔄 Admin mode detected - FORCING DATABASE FETCH');
         // Force database mode for admin
         const { categoriesAPI, itemsAPI } = await import('./supabase');
         const [categoriesData, itemsDataRaw] = await Promise.all([
@@ -95,7 +99,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
 
         setCategories(Array.isArray(categoriesData) ? categoriesData : []);
         setItems(sortedItems);
-        console.log('✅ Admin data loaded from DATABASE');
+        console.warn('✅ Admin data loaded from DATABASE');
         return;
       }
 
@@ -155,10 +159,11 @@ export function DataProvider({ children }: { children: ReactNode }) {
     } finally {
       setLoading(false);
       setIsFetching(false);
+      isFetchingRef.current = false;
     }
-  }, [isFetching]);
+  }, []);
 
-  // Load data on mount - ONLY ONCE
+  // Load data on mount - memoized effect depends on fetchAllData
   useEffect(() => {
     let mounted = true;
 
@@ -177,7 +182,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
         ).catch(() => null);
 
         if (healthCheck && healthCheck.ok) {
-          console.log('✅ Server health check passed');
+          console.warn('✅ Server health check passed');
         } else {
           console.warn('⚠️ Server health check failed');
         }
@@ -196,8 +201,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       mounted = false;
       clearTimeout(timer);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // Empty dependency array - only run once on mount
+  }, []);
 
   // Auto-refresh for visitors to see admin changes - DISABLED to prevent continuous refresh
   // useEffect(() => {
@@ -398,12 +402,12 @@ export function DataProvider({ children }: { children: ReactNode }) {
   const refetch = useCallback(
     async (force = false) => {
       // Allow force parameter to bypass concurrent fetch protection
-      if (!force && isFetching) {
-        console.log('🚫 Refetch already in progress, skipping...');
+      if (!force && (isFetching || isFetchingRef.current)) {
+        console.warn('🚫 Refetch already in progress, skipping...');
         return;
       }
 
-      console.log('🔄 Manual refetch triggered - FORCING DATABASE MODE');
+      console.warn('🔄 Manual refetch triggered - FORCING DATABASE MODE');
 
       // Clear in-memory category-items cache used by category views
       setItemsCache({});
@@ -424,11 +428,12 @@ export function DataProvider({ children }: { children: ReactNode }) {
 
       // FORCE DATABASE MODE: Always fetch from Supabase, ignore static files
       try {
+        isFetchingRef.current = true;
         setIsFetching(true);
         setLoading(true);
         setError(null);
 
-        console.log('🔄 FORCING DATABASE FETCH (ignoring static files)');
+        console.warn('🔄 FORCING DATABASE FETCH (ignoring static files)');
         const [freshCategories, freshItemsRaw] = await Promise.all([
           categoriesAPI.getAll(),
           itemsAPI.getAll(),
@@ -457,7 +462,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
 
         setCategories(Array.isArray(freshCategories) ? freshCategories : []);
         setItems(sortedItems);
-        console.log('✅ Manual refetch completed - DATABASE MODE');
+        console.warn('✅ Manual refetch completed - DATABASE MODE');
       } catch (err) {
         console.error(
           '❌ Admin refetch failed, falling back to static-first:',
@@ -467,6 +472,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       } finally {
         setLoading(false);
         setIsFetching(false);
+        isFetchingRef.current = false;
       }
     },
     [fetchAllData, isFetching],
@@ -507,7 +513,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
             <div className='flex flex-col gap-2'>
               <div className='flex gap-2 justify-center'>
                 <button
-                  onClick={refetch}
+                  onClick={() => refetch()}
                   className='px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:brightness-110 transition-all'
                 >
                   Retry Connection
@@ -521,7 +527,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
               </div>
               <button
                 onClick={async () => {
-                  console.log('🔍 Connection diagnostics not available');
+                  console.warn('🔍 Connection diagnostics not available');
                 }}
                 className='px-3 py-1 text-xs bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded hover:bg-blue-500/20 transition-all'
               >

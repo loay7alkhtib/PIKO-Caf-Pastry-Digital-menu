@@ -32,7 +32,7 @@ export function saveSession(session: Session): void {
     localStorage.setItem(SESSION_KEY, JSON.stringify(session));
     localStorage.setItem(SESSION_TIMESTAMP_KEY, Date.now().toString());
 
-    console.log('💾 Session saved:', {
+    console.warn('💾 Session saved:', {
       email: session.user.email,
       isAdmin: session.user.isAdmin,
       timestamp: new Date().toISOString(),
@@ -53,7 +53,7 @@ export function loadSession(): Session | null {
     const timestampStr = localStorage.getItem(SESSION_TIMESTAMP_KEY);
 
     if (!sessionStr || sessionStr === 'undefined' || sessionStr === 'null') {
-      console.log('ℹ️ No valid session in storage');
+      console.warn('ℹ️ No valid session in storage');
       return null;
     }
 
@@ -64,7 +64,7 @@ export function loadSession(): Session | null {
       const maxAge = SESSION_EXPIRY_DAYS * 24 * 60 * 60 * 1000; // 7 days in ms
 
       if (age > maxAge) {
-        console.log('⏰ Session expired, clearing...');
+        console.warn('⏰ Session expired, clearing...');
         clearSession();
         return null;
       }
@@ -74,12 +74,12 @@ export function loadSession(): Session | null {
 
     // Validate session structure
     if (!session || !session.user) {
-      console.log('❌ Invalid session structure, clearing...');
+      console.warn('❌ Invalid session structure, clearing...');
       clearSession();
       return null;
     }
 
-    console.log('✅ Session loaded from storage:', {
+    console.warn('✅ Session loaded from storage:', {
       email: session.user?.email,
       isAdmin: session.user?.isAdmin,
       age: timestampStr
@@ -105,7 +105,7 @@ export function clearSession(): void {
     localStorage.removeItem(SESSION_KEY);
     localStorage.removeItem(SESSION_TIMESTAMP_KEY);
 
-    console.log('🗑️ Session cleared');
+    console.warn('🗑️ Session cleared');
   } catch (error) {
     console.error('❌ Failed to clear session:', error);
   }
@@ -140,5 +140,5 @@ export function touchSession(): void {
   if (!hasSession()) return;
 
   localStorage.setItem(SESSION_TIMESTAMP_KEY, Date.now().toString());
-  console.log('👆 Session touched');
+  console.warn('👆 Session touched');
 }

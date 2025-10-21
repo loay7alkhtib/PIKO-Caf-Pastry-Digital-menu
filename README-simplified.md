@@ -107,8 +107,8 @@ npm install
 # Start development server
 npm run dev
 
-# Build for production
-npm run build
+# Build for production (optimized for Supabase free plan)
+npm run build:free-plan
 
 # Type checking
 npm run type-check
@@ -122,8 +122,9 @@ npm run lint
 ### **Environment Variables:**
 
 ```env
-VITE_SUPABASE_URL=https://eoaissoqwlfvfizfomax.supabase.co
+VITE_SUPABASE_URL=https://your-project-id.supabase.co
 VITE_SUPABASE_ANON_KEY=your-anon-key
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
 ```
 
 ### **Admin Access:**

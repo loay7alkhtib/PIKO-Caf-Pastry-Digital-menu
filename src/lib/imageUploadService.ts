@@ -1,5 +1,4 @@
-import { supabase } from './supabase-client';
-import { supabaseOptimized } from './supabase-optimized';
+import { supabaseClient as supabase } from './supabase';
 
 export interface UploadResult {
   success: boolean;
@@ -38,7 +37,7 @@ class ImageUploadService {
       const finalFileName = fileName || `${timestamp}-${file.name}`;
       const filePath = folder ? `${folder}/${finalFileName}` : finalFileName;
 
-      console.log('🔄 Attempting to upload:', {
+      console.warn('🔄 Attempting to upload:', {
         fileName: finalFileName,
         filePath,
         fileSize: file.size,
@@ -68,14 +67,14 @@ class ImageUploadService {
         };
       }
 
-      console.log('✅ Upload successful:', data);
+      console.warn('✅ Upload successful:', data);
 
       // Get public URL
       const { data: urlData } = supabase.storage
         .from(this.bucketName)
         .getPublicUrl(data.path);
 
-      console.log('🔗 Public URL:', urlData.publicUrl);
+      console.warn('🔗 Public URL:', urlData.publicUrl);
 
       return {
         success: true,
@@ -256,7 +255,7 @@ class ImageUploadService {
     imageUrl: string,
   ): Promise<{ success: boolean; error?: string }> {
     try {
-      const { error } = await supabaseOptimized
+      const { error } = await supabase
         .from('items')
         .update({ image_url: imageUrl })
         .eq('id', itemId);

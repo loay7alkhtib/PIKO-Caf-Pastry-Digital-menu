@@ -354,10 +354,10 @@ async function main() {
 
   if (args.length < 2) {
     console.log(`
-Usage: node import-menu-data.js <csv-file> <images-directory>
+Usage: node import-menu-data.mjs <csv-file> <images-directory>
 
 Example:
-  node import-menu-data.js menu-data.csv ./images
+  node import-menu-data.mjs menu-data.csv ./images
 
 Environment variables required:
   VITE_SUPABASE_URL
@@ -389,3 +389,5 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export { MenuImporter };
+
+

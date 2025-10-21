@@ -18,6 +18,7 @@ import { t } from '../../lib/i18n';
 import { categoriesAPI, Category } from '../../lib/supabase';
 import { toast } from 'sonner';
 import { GripVertical, Plus } from 'lucide-react';
+import { ConfirmDialogProvider, useConfirm } from '../ui/confirm-dialog';
 
 interface AdminCategoriesProps {
   categories: Category[];
@@ -48,7 +49,7 @@ const DraggableCategoryItem = ({
         handlerId: monitor.getHandlerId(),
       };
     },
-    hover(item: any, monitor) {
+    hover(item: { index: number }, monitor) {
       if (!ref.current) {
         return;
       }
@@ -63,7 +64,8 @@ const DraggableCategoryItem = ({
       const hoverMiddleY =
         (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
       const clientOffset = monitor.getClientOffset();
-      const hoverClientY = clientOffset!.y - hoverBoundingRect.top;
+      if (!clientOffset) return;
+      const hoverClientY = clientOffset.y - hoverBoundingRect.top;
 
       if (dragIndex < hoverIndex && hoverClientY < hoverMiddleY) {
         return;
@@ -88,7 +90,13 @@ const DraggableCategoryItem = ({
   });
 
   const opacity = isDragging ? 0.5 : 1;
-  drag(drop(ref));
+  // Compose drag and drop refs in effect to avoid accessing ref during render
+  useEffect(() => {
+    if (!ref.current) return;
+    const node = ref.current;
+    drop(node);
+    drag(node);
+  }, [drag, drop]);
 
   return (
     <div
@@ -131,10 +139,7 @@ const DraggableCategoryItem = ({
   );
 };
 
-export default function AdminCategories({
-  categories,
-  onRefresh,
-}: AdminCategoriesProps) {
+function AdminCategoriesInner({ categories, onRefresh }: AdminCategoriesProps) {
   const { lang } = useLang();
   const [dialogOpen, setDialogOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -149,10 +154,15 @@ export default function AdminCategories({
     order: 0,
   });
 
-  // Update local categories when props change
+  // Update local categories when props change (defer setState to avoid sync update inside effect)
   useEffect(() => {
-    const sortedCategories = [...categories].sort((a, b) => a.order - b.order);
-    setLocalCategories(sortedCategories);
+    const timer = setTimeout(() => {
+      const sortedCategories = [...categories].sort(
+        (a, b) => a.order - b.order,
+      );
+      setLocalCategories(sortedCategories);
+    }, 0);
+    return () => clearTimeout(timer);
   }, [categories]);
 
   const openDialog = (category?: Category) => {
@@ -222,8 +232,15 @@ export default function AdminCategories({
     }
   };
 
+  const confirm = useConfirm();
   const handleDelete = async (id: string) => {
-    if (!window.confirm('Delete this category?')) return;
+    const ok = await confirm({
+      title: 'Delete this category?',
+      description: 'This action cannot be undone.',
+      confirmText: 'Delete',
+      destructive: true,
+    });
+    if (!ok) return;
 
     try {
       await categoriesAPI.delete(id);
@@ -443,5 +460,13 @@ export default function AdminCategories({
         </Dialog>
       </div>
     </DndProvider>
+  );
+}
+
+export default function AdminCategories(props: AdminCategoriesProps) {
+  return (
+    <ConfirmDialogProvider>
+      <AdminCategoriesInner {...props} />
+    </ConfirmDialogProvider>
   );
 }

@@ -6,6 +6,7 @@ import { Label } from '../components/ui/label';
 import { useLang } from '../lib/LangContext';
 import { t } from '../lib/i18n';
 import { authAPI } from '../lib/supabase';
+import { saveSession } from '../lib/sessionManager';
 import { toast } from 'sonner';
 import { ArrowLeft } from 'lucide-react';
 
@@ -64,8 +65,8 @@ export default function AdminLogin({ onNavigate }: AdminLoginProps) {
           },
         };
 
-        // Store session in localStorage for development
-        localStorage.setItem('piko_session', JSON.stringify(mockSession));
+        // Store session using session manager for consistency
+        saveSession(mockSession);
 
         toast.success(
           lang === 'en'

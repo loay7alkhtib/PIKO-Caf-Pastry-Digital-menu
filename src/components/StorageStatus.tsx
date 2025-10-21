@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Alert, AlertDescription } from './ui/alert';
 import { Button } from './ui/button';
-import { supabase } from '../lib/supabase-client';
+import { supabaseClient as supabase } from '../lib/supabase';
 import { AlertTriangle, CheckCircle, ExternalLink } from 'lucide-react';
 
 export default function StorageStatus() {
@@ -13,7 +13,7 @@ export default function StorageStatus() {
   const checkStorageStatus = async () => {
     try {
       // Try to list files in the menu-images bucket
-      const { data, error } = await supabase.storage
+      const { error } = await supabase.storage
         .from('menu-images')
         .list('', { limit: 1 });
 
@@ -31,14 +31,17 @@ export default function StorageStatus() {
       } else {
         setStorageStatus('working');
       }
-    } catch (error) {
+    } catch {
       setStorageStatus('error');
       setErrorMessage('Failed to check storage status');
     }
   };
 
   useEffect(() => {
-    checkStorageStatus();
+    const timer = setTimeout(() => {
+      void checkStorageStatus();
+    }, 0);
+    return () => clearTimeout(timer);
   }, []);
 
   if (storageStatus === 'checking') {
