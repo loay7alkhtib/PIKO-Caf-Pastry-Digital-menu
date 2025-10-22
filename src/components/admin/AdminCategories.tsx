@@ -326,28 +326,58 @@ function AdminCategoriesInner({ categories, onRefresh }: AdminCategoriesProps) {
 
   const moveCategory = (dragIndex: number, hoverIndex: number) => {
     const draggedCategory = localCategories[dragIndex];
-    if (!draggedCategory) return;
+    if (!draggedCategory) {
+      console.warn('No dragged category found at index:', dragIndex);
+      return;
+    }
+
+    console.warn(
+      `🔄 Moving category from index ${dragIndex} to ${hoverIndex}:`,
+      {
+        dragged: draggedCategory.names.en,
+        from: dragIndex,
+        to: hoverIndex,
+      },
+    );
 
     const newCategories = [...localCategories];
     newCategories.splice(dragIndex, 1);
     newCategories.splice(hoverIndex, 0, draggedCategory);
 
-    // Update order values
+    // Update order values to match the new positions
     const updatedCategories = newCategories.map((category, index) => ({
       ...category,
       order: index,
     }));
 
+    console.warn(
+      '📋 Updated category order:',
+      updatedCategories.map(c => ({
+        id: c.id,
+        name: c.names.en,
+        order: c.order,
+      })),
+    );
+
     setLocalCategories(updatedCategories);
     setHasUnsavedChanges(true); // Mark that there are unsaved changes
+
+    // Show immediate feedback
+    toast.success(
+      `Moved ${draggedCategory.names.en} to position ${hoverIndex + 1}`,
+    );
   };
 
   const saveCategoryOrder = async () => {
     if (isSavingOrder) return; // Prevent double submission
+    if (!hasUnsavedChanges) {
+      toast.info('No changes to save');
+      return;
+    }
 
     try {
       setIsSavingOrder(true);
-      console.log(
+      console.warn(
         '🔄 Saving category order...',
         localCategories.map(c => ({
           id: c.id,
@@ -356,24 +386,45 @@ function AdminCategoriesInner({ categories, onRefresh }: AdminCategoriesProps) {
         })),
       );
 
-      // Prepare order updates
-      const orderUpdates = localCategories.map((category, index) => ({
-        id: category.id,
-        order: index,
-      }));
+      // Validate that we have categories to update
+      if (localCategories.length === 0) {
+        throw new Error('No categories to update');
+      }
+
+      // Prepare order updates with proper validation
+      const orderUpdates = localCategories
+        .filter(category => category.id && category.id.trim() !== '')
+        .map((category, index) => ({
+          id: category.id,
+          order: index,
+        }));
+
+      if (orderUpdates.length === 0) {
+        throw new Error('No valid categories found to update');
+      }
+
+      console.warn('📝 Order updates to send:', orderUpdates);
 
       // Use the efficient bulk update method
       await categoriesAPI.updateOrder(orderUpdates);
 
       setHasUnsavedChanges(false); // Clear unsaved changes flag
-      toast.success('Category order updated successfully');
+      toast.success(
+        `Category order updated successfully! ${orderUpdates.length} categories saved.`,
+      );
       await onRefresh();
     } catch (error) {
       console.error('❌ Order update error:', error);
       const errorMessage =
         error instanceof Error ? error.message : 'Unknown error occurred';
       toast.error(`Failed to update category order: ${errorMessage}`);
-      await onRefresh(); // Refresh to get the correct order from server
+
+      // Refresh to get the correct order from server
+      try {
+        await onRefresh();
+      } catch (refreshError) {
+        console.error('❌ Failed to refresh after error:', refreshError);
+      }
     } finally {
       setIsSavingOrder(false);
     }
