@@ -1,0 +1,5316 @@
+{
+  "categories": [
+    {
+      "id": "blended-coffee",
+      "names": {
+        "en": "Blended Coffee",
+        "tr": "Blended Coffee",
+        "ar": "Blended Coffee"
+      },
+      "icon": "🍽️",
+      "color": "#0C6071",
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/categories/blended-coffee.jpg",
+      "order": 0,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cold-drinks",
+      "names": {
+        "en": "Cold drinks",
+        "tr": "Cold drinks",
+        "ar": "Cold drinks"
+      },
+      "icon": "🍽️",
+      "color": "#0C6071",
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cold-drinks-1761123305331.jpg",
+      "order": 1,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "flavored-tea",
+      "names": {
+        "en": "Flavored tea",
+        "tr": "Flavored tea",
+        "ar": "Flavored tea"
+      },
+      "icon": "🍽️",
+      "color": "#0C6071",
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/categories/flavored-tea.jpg",
+      "order": 2,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "fresh-juices",
+      "names": {
+        "en": "Fresh juices",
+        "tr": "Fresh juices",
+        "ar": "Fresh juices"
+      },
+      "icon": "🍽️",
+      "color": "#0C6071",
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/categories/fresh-juices.jpg",
+      "order": 3,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "hot-coffee",
+      "names": {
+        "en": "Hot Coffee",
+        "tr": "Hot Coffee",
+        "ar": "Hot Coffee"
+      },
+      "icon": "🍽️",
+      "color": "#0C6071",
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hot-coffee-1761123234431.jpg",
+      "order": 4,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "ice-coffee",
+      "names": {
+        "en": "Ice Coffee",
+        "tr": "Ice Coffee",
+        "ar": "Ice Coffee"
+      },
+      "icon": "🍽️",
+      "color": "#0C6071",
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/categories/ice-coffee.jpg",
+      "order": 5,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "ice-cream",
+      "names": {
+        "en": "Ice Cream",
+        "tr": "Ice Cream",
+        "ar": "Ice Cream"
+      },
+      "icon": "🍽️",
+      "color": "#0C6071",
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/categories/ice-cream.jpg",
+      "order": 6,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "matcha",
+      "names": {
+        "en": "Matcha",
+        "tr": "Matcha",
+        "ar": "Matcha"
+      },
+      "icon": "🍽️",
+      "color": "#0C6071",
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/categories/matcha.jpg",
+      "order": 7,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "milkshakes",
+      "names": {
+        "en": "Milkshakes",
+        "tr": "Milkshakes",
+        "ar": "Milkshakes"
+      },
+      "icon": "🍽️",
+      "color": "#0C6071",
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/categories/milkshakes.jpg",
+      "order": 8,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "mojitos",
+      "names": {
+        "en": "Mojitos",
+        "tr": "Mojitos",
+        "ar": "Mojitos"
+      },
+      "icon": "🍽️",
+      "color": "#0C6071",
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/categories/mojitos.jpg",
+      "order": 9,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "patisserie",
+      "names": {
+        "en": "Patisserie",
+        "tr": "Patisserie",
+        "ar": "Patisserie"
+      },
+      "icon": "🍽️",
+      "color": "#0C6071",
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/patisserie-1761123435554.jpg",
+      "order": 10,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "signature",
+      "names": {
+        "en": "Signature",
+        "tr": "Signature",
+        "ar": "Signature"
+      },
+      "icon": "🍽️",
+      "color": "#0C6071",
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/signature-1761123399561.jpg",
+      "order": 11,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "smoothies",
+      "names": {
+        "en": "Smoothies",
+        "tr": "Smoothies",
+        "ar": "Smoothies"
+      },
+      "icon": "🍽️",
+      "color": "#0C6071",
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/categories/smoothies.jpg",
+      "order": 12,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "sweets",
+      "names": {
+        "en": "Sweets",
+        "tr": "Sweets",
+        "ar": "Sweets"
+      },
+      "icon": "🍽️",
+      "color": "#0C6071",
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/sweets-1761123368113.jpg",
+      "order": 13,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    }
+  ],
+  "items": [
+    {
+      "id": "pistachio-frappucino-medium",
+      "names": {
+        "en": "Pistachio frappucino Medium",
+        "tr": "Antep fıstıklığı frappucino orta",
+        "ar": "بيستاشيو فراب وسط"
+      },
+      "category_id": "blended-coffee",
+      "price": 275,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 0,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "vanilla-frappucino-medium",
+      "names": {
+        "en": "Vanilla frappucino Medium",
+        "tr": "Vanilla frappucino orta",
+        "ar": "فانيليا فراب وسط"
+      },
+      "category_id": "blended-coffee",
+      "price": 250,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 1,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "caramel-frappucino-medium",
+      "names": {
+        "en": "Caramel Frappucino Medium",
+        "tr": "Karamel Frappucino orta",
+        "ar": "كراميل فرابتشينو وسط"
+      },
+      "category_id": "blended-coffee",
+      "price": 250,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 2,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cookies-frappucino-medium",
+      "names": {
+        "en": "Cookies frappucino Medium",
+        "tr": "Cookies frappucino orta",
+        "ar": "كوكيز فراب وسط"
+      },
+      "category_id": "blended-coffee",
+      "price": 250,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 3,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "mocha-frappucino-medium",
+      "names": {
+        "en": "Mocha Frappucino Medium",
+        "tr": "Mocha Frappucino orta",
+        "ar": "موكا فراب وسط"
+      },
+      "category_id": "blended-coffee",
+      "price": 250,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 4,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-americano-large",
+      "names": {
+        "en": "Iced Americano large",
+        "tr": "buzlu Americano büyük",
+        "ar": "ايس امريكانو كبير"
+      },
+      "category_id": "cold-drinks",
+      "price": 170,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 0,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-americano-medium",
+      "names": {
+        "en": "Iced Americano medium",
+        "tr": "buzlu Americano orta",
+        "ar": "ايس امريكانو وسط"
+      },
+      "category_id": "cold-drinks",
+      "price": 150,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 1,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-butter-scotch-large",
+      "names": {
+        "en": "Iced butter scotch large",
+        "tr": "buzlu butter scotch büyük",
+        "ar": "ايس بتر سكوتش كبير"
+      },
+      "category_id": "cold-drinks",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 2,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-butter-scotch-medium",
+      "names": {
+        "en": "Iced butter scotch medium",
+        "tr": "buzlu butter scotch orta",
+        "ar": "ايس بتر سكوتش وسط"
+      },
+      "category_id": "cold-drinks",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 3,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-butter-scotch",
+      "names": {
+        "en": "Iced butter scotch",
+        "tr": "buzlu butter scotch",
+        "ar": "ايس بتر سوكتش لاتيه"
+      },
+      "category_id": "cold-drinks",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 4,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-piko-latte",
+      "names": {
+        "en": "Iced piko latte",
+        "tr": "buzlu piko latte",
+        "ar": "ايس بيكو لاتيه"
+      },
+      "category_id": "cold-drinks",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 5,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-piko-latte-large",
+      "names": {
+        "en": "Iced piko latte large",
+        "tr": "buzlu piko latte  büyük",
+        "ar": "ايس بيكو لاتيه كبير"
+      },
+      "category_id": "cold-drinks",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 6,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-piko-latte-medium",
+      "names": {
+        "en": "Iced piko latte medium",
+        "tr": "buzlu piko latte orta",
+        "ar": "ايس بيكو لاتيه وسط"
+      },
+      "category_id": "cold-drinks",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 7,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-pink-perry-matcha-latta",
+      "names": {
+        "en": "Iced Pink Perry matcha latta",
+        "tr": "buzlu Pink Perry matcha latte",
+        "ar": "ايس بينك بيري ماتشا لاتيه"
+      },
+      "category_id": "cold-drinks",
+      "price": 190,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 8,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-pink-perry-matcha-latta-learg",
+      "names": {
+        "en": "Iced Pink Perry matcha latta learg",
+        "tr": "buzlu Pink Perry matcha latte",
+        "ar": "ايس بينك بيري ماتشا لاتيه كبير"
+      },
+      "category_id": "cold-drinks",
+      "price": 250,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 9,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-pink-perry-matcha-latta-medium",
+      "names": {
+        "en": "Iced Pink Perry matcha latta Medium",
+        "tr": "buzlu pembe Perry matcha latte orta",
+        "ar": "ايس بينك بيري ماتشا لاتيه وسط"
+      },
+      "category_id": "cold-drinks",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 10,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-pink-matcha-latte",
+      "names": {
+        "en": "Iced Pink matcha latte",
+        "tr": "buzlu pemb matcha latte",
+        "ar": "ايس بينك ماتشا لاتيه"
+      },
+      "category_id": "cold-drinks",
+      "price": 190,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 11,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-pink-matcha-latte-large",
+      "names": {
+        "en": "Iced Pink matcha latte large",
+        "tr": "buzlu pembe matcha latte büyük",
+        "ar": "ايس بينك ماتشا لاتيه كبير"
+      },
+      "category_id": "cold-drinks",
+      "price": 250,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 12,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-pink-matcha-latte-medium",
+      "names": {
+        "en": "Iced Pink matcha latte Medium",
+        "tr": "buzlu pembe matcha latte orta",
+        "ar": "ايس بينك ماتشا لاتيه وسط"
+      },
+      "category_id": "cold-drinks",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 13,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-cheese-cake-latte",
+      "names": {
+        "en": "Iced cheese cake latte",
+        "tr": "buzlu buzlu cheese cake latte",
+        "ar": "ايس تشيز كيك لاتيه"
+      },
+      "category_id": "cold-drinks",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 14,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-cheese-cake-latte-large",
+      "names": {
+        "en": "Iced cheese cake latte large",
+        "tr": "buzlu cheese cake latte büyük",
+        "ar": "ايس تشيز كيك لاتيه كبير"
+      },
+      "category_id": "cold-drinks",
+      "price": 250,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 15,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-cheese-cake-latte-medium",
+      "names": {
+        "en": "Iced cheese cake latte medium",
+        "tr": "buzlu cheese cake latte orta",
+        "ar": "ايس تشيز كيك لاتيه وسط"
+      },
+      "category_id": "cold-drinks",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 16,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-toffee-nut-latte",
+      "names": {
+        "en": "Iced Toffee Nut Latte",
+        "tr": "buzlu Toffee fındık Latte",
+        "ar": "ايس توفي نت لاتيه"
+      },
+      "category_id": "cold-drinks",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 17,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-toffee-nut-latte-large",
+      "names": {
+        "en": "Iced Toffee Nut Latte Large",
+        "tr": "buzlu Toffee fındık Latte büyük",
+        "ar": "ايس توفي نت لاتيه كبير"
+      },
+      "category_id": "cold-drinks",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 18,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-toffee-nut-latte-medium",
+      "names": {
+        "en": "Iced Toffee Nut Latte Medium",
+        "tr": "buzlu Toffee fındık Latte orta",
+        "ar": "ايس توفي نت لاتيه وسط"
+      },
+      "category_id": "cold-drinks",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 19,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-zebra-mocha-latte-large",
+      "names": {
+        "en": "Iced Zebra mocha latte large",
+        "tr": "buzlu Zebra mocha latte büyük",
+        "ar": "ايس زيبرا موكا لاتيه كبير"
+      },
+      "category_id": "cold-drinks",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 20,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-zebra-mocha-latte-medium",
+      "names": {
+        "en": "Iced Zebra mocha latte medium",
+        "tr": "buzlu Zebra mocha latte orta",
+        "ar": "ايس زيبرا موكا لاتيه وسط"
+      },
+      "category_id": "cold-drinks",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 21,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-zebra-mocha-latte",
+      "names": {
+        "en": "Iced Zebra mocha latte",
+        "tr": "buzlu Zebra mocha latte",
+        "ar": "ايس زيبره موكا لاتيه"
+      },
+      "category_id": "cold-drinks",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 22,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-spanish-latte",
+      "names": {
+        "en": "Iced Spanish Latte",
+        "tr": "buzlu Spanish Latte",
+        "ar": "ايس سبانش لاتيه"
+      },
+      "category_id": "cold-drinks",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 23,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-spanish-latte-medium",
+      "names": {
+        "en": "Iced Spanish Latte medium",
+        "tr": "buzlu Spanish Latte orta",
+        "ar": "ايس سبانش لاتيه وسط"
+      },
+      "category_id": "cold-drinks",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 24,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-spanish-latte-large",
+      "names": {
+        "en": "Iced Spanish Latte Large",
+        "tr": "buzlu Spanish Latte büyük",
+        "ar": "ايس سبانيش لاتيه كبير"
+      },
+      "category_id": "cold-drinks",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 25,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "ginger-and-lemon",
+      "names": {
+        "en": "Ginger and lemon",
+        "tr": "zencefil ve limon",
+        "ar": "زنجبيل وليمون"
+      },
+      "category_id": "flavored-tea",
+      "price": 120,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 0,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "flavoured-tea",
+      "names": {
+        "en": "Flavoured tea",
+        "tr": "Papatya Çayı",
+        "ar": "زهورات"
+      },
+      "category_id": "flavored-tea",
+      "price": 120,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 1,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "lime-blossom-tea",
+      "names": {
+        "en": "Lime blossom tea",
+        "tr": "Lime ıhlamur Çay",
+        "ar": "زيزفون"
+      },
+      "category_id": "flavored-tea",
+      "price": 120,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 2,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "tea",
+      "names": {
+        "en": "Tea",
+        "tr": "Çay",
+        "ar": "شاي"
+      },
+      "category_id": "flavored-tea",
+      "price": 40,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 3,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "chai-tea-latte",
+      "names": {
+        "en": "Chai Tea Latte",
+        "tr": "Çay Latte",
+        "ar": "شاي تي لاتيه"
+      },
+      "category_id": "flavored-tea",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 4,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "chai-tea-latte-medium",
+      "names": {
+        "en": "Chai Tea Latte Medium",
+        "tr": "Çay Latte orta",
+        "ar": "شاي تي لاتيه وسط"
+      },
+      "category_id": "flavored-tea",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 5,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "orange-juice",
+      "names": {
+        "en": "Orange juice",
+        "tr": "portakal meyve suyu",
+        "ar": "عصير برتقال"
+      },
+      "category_id": "fresh-juices",
+      "price": 170,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 0,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "orange-carrot",
+      "names": {
+        "en": "Orange carrot",
+        "tr": "portakal ve Havuç meyve suyu",
+        "ar": "عصير برتقال و جزر"
+      },
+      "category_id": "fresh-juices",
+      "price": 170,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 1,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "orange-carrot-medium",
+      "names": {
+        "en": "Orange carrot medium",
+        "tr": "Porttakal havuç orta",
+        "ar": "عصير برتقال و جزر وسط"
+      },
+      "category_id": "fresh-juices",
+      "price": 190,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 2,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "orange-lemon",
+      "names": {
+        "en": "Orange lemon",
+        "tr": "portakal lemon",
+        "ar": "عصير برتقال و ليمون"
+      },
+      "category_id": "fresh-juices",
+      "price": 170,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 3,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "orange-lemon-medium",
+      "names": {
+        "en": "Orange lemon medium",
+        "tr": "portakal lemon orta",
+        "ar": "عصير برتقال و ليمون وسط"
+      },
+      "category_id": "fresh-juices",
+      "price": 190,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 4,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "orange-juice-medium",
+      "names": {
+        "en": "Orange juice medium",
+        "tr": "portakal meyvesuyu orta",
+        "ar": "عصير برتقال وسط"
+      },
+      "category_id": "fresh-juices",
+      "price": 190,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 5,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "apple-juice",
+      "names": {
+        "en": "Apple juice",
+        "tr": "Elma meyvesuyu",
+        "ar": "عصير تفاح"
+      },
+      "category_id": "fresh-juices",
+      "price": 170,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 6,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "apple-carrot",
+      "names": {
+        "en": "Apple carrot",
+        "tr": "Elma carrot meyvesuyu",
+        "ar": "عصير تفاح و جزر"
+      },
+      "category_id": "fresh-juices",
+      "price": 170,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 7,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "apple-carrot-medium",
+      "names": {
+        "en": "Apple carrot medium",
+        "tr": "Elma havuç orta",
+        "ar": "عصير تفاح و جزر وسط"
+      },
+      "category_id": "fresh-juices",
+      "price": 190,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 8,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "apple-juice-medium",
+      "names": {
+        "en": "Apple juice medium",
+        "tr": "Elma suyu orta",
+        "ar": "عصير تفاح وسط"
+      },
+      "category_id": "fresh-juices",
+      "price": 190,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 9,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "carrot-juice",
+      "names": {
+        "en": "Carrot juice",
+        "tr": "Havuç meyve suyu",
+        "ar": "عصير جزر"
+      },
+      "category_id": "fresh-juices",
+      "price": 170,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 10,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "carrot-juice-medium",
+      "names": {
+        "en": "Carrot juice medium",
+        "tr": "Havuç suyu orta",
+        "ar": "عصير جزر وسط"
+      },
+      "category_id": "fresh-juices",
+      "price": 170,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 11,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "lemonade",
+      "names": {
+        "en": "Lemonade",
+        "tr": "Lemonta",
+        "ar": "عصير ليمون"
+      },
+      "category_id": "fresh-juices",
+      "price": 170,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 12,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "lemonade-medium",
+      "names": {
+        "en": "Lemonade medium",
+        "tr": "Lemonata orta",
+        "ar": "عصير ليمون وسط"
+      },
+      "category_id": "fresh-juices",
+      "price": 190,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 13,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "espresso",
+      "names": {
+        "en": "Espresso",
+        "tr": "Espresso",
+        "ar": "اسبريسو"
+      },
+      "category_id": "hot-coffee",
+      "price": 95,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 0,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "espresso-affogato",
+      "names": {
+        "en": "Espresso Affogato",
+        "tr": "Espresso Avokado",
+        "ar": "اسبريسو افوكاتو"
+      },
+      "category_id": "hot-coffee",
+      "price": 195,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 1,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "espresso-ristretto",
+      "names": {
+        "en": "Espresso Ristretto",
+        "tr": "Espresso Ristretto",
+        "ar": "اسبريسو ريستريتو"
+      },
+      "category_id": "hot-coffee",
+      "price": 95,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 2,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "espresso-macchiato",
+      "names": {
+        "en": "Espresso Macchiato",
+        "tr": "Espresso Macchiato",
+        "ar": "اسبريسو مكياتو"
+      },
+      "category_id": "hot-coffee",
+      "price": 120,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 3,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "americano",
+      "names": {
+        "en": "Americano",
+        "tr": "Americano",
+        "ar": "امريكانو"
+      },
+      "category_id": "hot-coffee",
+      "price": 120,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 4,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "americano-medium",
+      "names": {
+        "en": "Americano Medium",
+        "tr": "Americano orta",
+        "ar": "امريكانو وسط"
+      },
+      "category_id": "hot-coffee",
+      "price": 140,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 5,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "butter-scotch-latte",
+      "names": {
+        "en": "Butter scotch Latte",
+        "tr": "Butter scotch Latte",
+        "ar": "بترسكوتش لاتيه"
+      },
+      "category_id": "hot-coffee",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 6,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "butter-scotch-latte-medium",
+      "names": {
+        "en": "Butter scotch Latte Medium",
+        "tr": "Butter scotch Latte orta",
+        "ar": "بترسكوتش لاتيه وسط"
+      },
+      "category_id": "hot-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 7,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "piko-mocha",
+      "names": {
+        "en": "Piko Mocha",
+        "tr": "Piko Mocha",
+        "ar": "بيكو موكا"
+      },
+      "category_id": "hot-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 8,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "piko-mocha-medium",
+      "names": {
+        "en": "Piko Mocha Medium",
+        "tr": "Piko Mocha orta",
+        "ar": "بيكو موكا وسط"
+      },
+      "category_id": "hot-coffee",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 9,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "pink-perry-matcha-latta",
+      "names": {
+        "en": "Pink Perry matcha latta",
+        "tr": "Pink Perry matcha latte",
+        "ar": "بينك بيري ماتشا لاتيه"
+      },
+      "category_id": "hot-coffee",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 10,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "pink-matcha-latte",
+      "names": {
+        "en": "Pink matcha latte",
+        "tr": "Pink matcha latte",
+        "ar": "بينك ماتشا لاتيه"
+      },
+      "category_id": "hot-coffee",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 11,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cheese-cake-latte",
+      "names": {
+        "en": "Cheese cake Latte",
+        "tr": "Cheese cake Latte",
+        "ar": "تشيز كيك لاتيه"
+      },
+      "category_id": "hot-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 12,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cheese-cake-latte-medium",
+      "names": {
+        "en": "Cheese cake Latte Medium",
+        "tr": "Cheese cake Latte orta",
+        "ar": "تشيز كيك لاتيه وسط"
+      },
+      "category_id": "hot-coffee",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 13,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "toffee-nut-latte",
+      "names": {
+        "en": "Toffee Nut Latte",
+        "tr": "Toffee fındık Latte",
+        "ar": "توفي نات لاتيه"
+      },
+      "category_id": "hot-coffee",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 14,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "toffee-nut-latte-medium",
+      "names": {
+        "en": "Toffee Nut Latte Medium",
+        "tr": "Toffee fındık Latte orta",
+        "ar": "توفي نات لاتيه وسط"
+      },
+      "category_id": "hot-coffee",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 15,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "double-espresso",
+      "names": {
+        "en": "Double Espresso",
+        "tr": "Double Espresso",
+        "ar": "دبل اسبريسو"
+      },
+      "category_id": "hot-coffee",
+      "price": 110,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 16,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "zebra-mocha",
+      "names": {
+        "en": "Zebra Mocha",
+        "tr": "Zebra Mocha",
+        "ar": "زيبرا موكا"
+      },
+      "category_id": "hot-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 17,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "zebra-mocha-medium",
+      "names": {
+        "en": "Zebra Mocha Medium",
+        "tr": "Zebra Mocha orta",
+        "ar": "زيبرا موكا وسط"
+      },
+      "category_id": "hot-coffee",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 18,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "spanish-latte",
+      "names": {
+        "en": "Spanish Latte",
+        "tr": "Spanish Latte",
+        "ar": "سبانش لاتيه"
+      },
+      "category_id": "hot-coffee",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 19,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "spanish-latte-medium",
+      "names": {
+        "en": "Spanish Latte Medium",
+        "tr": "Spanish Latte orta",
+        "ar": "سبانش لاتيه وسط"
+      },
+      "category_id": "hot-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 20,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "strawberry-matcha-latte",
+      "names": {
+        "en": "Strawberry matcha latte",
+        "tr": "Çilekli matcha latte",
+        "ar": "ستروبيري ماتشا لاتيه"
+      },
+      "category_id": "hot-coffee",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 21,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "strawberry-mocha-latte",
+      "names": {
+        "en": "Strawberry Mocha Latte",
+        "tr": "Çilekli Mocha Latte",
+        "ar": "ستروبيري موكا لاتيه"
+      },
+      "category_id": "hot-coffee",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 22,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "strawberry-mocha-latte-medium",
+      "names": {
+        "en": "Strawberry mocha latte Medium",
+        "tr": "Çilekli mocha latte orta",
+        "ar": "ستروبيري موكا لاتيه وسط"
+      },
+      "category_id": "hot-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 23,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "sahlab-with-cinnamon",
+      "names": {
+        "en": "Sahlab with Cinnamon",
+        "tr": "Sahlab with Cinnamon",
+        "ar": "سحلب بالقرفة"
+      },
+      "category_id": "hot-coffee",
+      "price": 150,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 24,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "salted-caramel-latte",
+      "names": {
+        "en": "Salted Caramel Latte",
+        "tr": "Salted Caramel Latte",
+        "ar": "سلتد كراميل لاتيه"
+      },
+      "category_id": "hot-coffee",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 25,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "salted-caramel-latte-medium",
+      "names": {
+        "en": "Salted Caramel Latte Medium",
+        "tr": "Salted Caramel Latte orta",
+        "ar": "سلتد كراميل لاتيه وسط"
+      },
+      "category_id": "hot-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 26,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "vanilla-latte",
+      "names": {
+        "en": "Vanilla Latte",
+        "tr": "Vanilla Latte",
+        "ar": "فانيليا لاتيه"
+      },
+      "category_id": "hot-coffee",
+      "price": 160,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 27,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "vanilla-latte-medium",
+      "names": {
+        "en": "Vanilla Latte Medium",
+        "tr": "Vanilla Latte orta",
+        "ar": "فانيليا لاتيه وسط"
+      },
+      "category_id": "hot-coffee",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 28,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "flat-white",
+      "names": {
+        "en": "Flat White",
+        "tr": "Flat White",
+        "ar": "فلات وايت"
+      },
+      "category_id": "hot-coffee",
+      "price": 140,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 29,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "flat-white-medium",
+      "names": {
+        "en": "Flat White Medium",
+        "tr": "Flat White orta",
+        "ar": "فلات وايت وسط"
+      },
+      "category_id": "hot-coffee",
+      "price": 160,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 30,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "filter-coffee",
+      "names": {
+        "en": "Filter Coffee",
+        "tr": "Filter kahve",
+        "ar": "فلتر قهوة"
+      },
+      "category_id": "hot-coffee",
+      "price": 140,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 31,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "filter-coffee-with-milk",
+      "names": {
+        "en": "Filter Coffee with Milk",
+        "tr": "Filter Coffee with Milk",
+        "ar": "فلتر قهوة بالحليب"
+      },
+      "category_id": "hot-coffee",
+      "price": 160,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 32,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "filter-coffee-with-milk-medium",
+      "names": {
+        "en": "Filter Coffee with Milk Medium",
+        "tr": "Filter Coffee with Milk orta",
+        "ar": "فلتر قهوة بالحليب وسط"
+      },
+      "category_id": "hot-coffee",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 33,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "filter-coffee-medium",
+      "names": {
+        "en": "Filter Coffee Medium",
+        "tr": "Filter Coffee orta",
+        "ar": "فلتر قهوة وسط"
+      },
+      "category_id": "hot-coffee",
+      "price": 160,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 34,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "v60",
+      "names": {
+        "en": "V60",
+        "tr": "V60",
+        "ar": "في 60"
+      },
+      "category_id": "hot-coffee",
+      "price": 195,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 35,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "v60-medium",
+      "names": {
+        "en": "V60 Medium",
+        "tr": "V60 orta",
+        "ar": "في 60 وسط"
+      },
+      "category_id": "hot-coffee",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 36,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "turkish-coffee",
+      "names": {
+        "en": "Turkish Coffee",
+        "tr": "Türk kahvesi",
+        "ar": "قهوة تركية"
+      },
+      "category_id": "hot-coffee",
+      "price": 95,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 37,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "double-turkish-coffee",
+      "names": {
+        "en": "Double Turkish Coffee",
+        "tr": "Double Türk kahvesi",
+        "ar": "قهوة تركية دبل"
+      },
+      "category_id": "hot-coffee",
+      "price": 135,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 38,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cardamom-coffee",
+      "names": {
+        "en": "Cardamom Coffee",
+        "tr": "Cardamom  kahvesi",
+        "ar": "قهوة عربية"
+      },
+      "category_id": "hot-coffee",
+      "price": 95,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 39,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "double-cardamom-coffee",
+      "names": {
+        "en": "Double cardamom Coffee",
+        "tr": "Double cardamom  kahvesi",
+        "ar": "قهوة عربية دبل"
+      },
+      "category_id": "hot-coffee",
+      "price": 135,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 40,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cappuccino",
+      "names": {
+        "en": "Cappuccino",
+        "tr": "Cappuccino",
+        "ar": "كابتشينو"
+      },
+      "category_id": "hot-coffee",
+      "price": 140,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 41,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cappuccino-medium",
+      "names": {
+        "en": "Cappuccino Medium",
+        "tr": "Cappuccino orta",
+        "ar": "كابتشينو وسط"
+      },
+      "category_id": "hot-coffee",
+      "price": 160,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 42,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "caramel-latte",
+      "names": {
+        "en": "Caramel Latte",
+        "tr": "karamel Latte",
+        "ar": "كراميل لاتيه"
+      },
+      "category_id": "hot-coffee",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 43,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "caramel-latte-medium",
+      "names": {
+        "en": "Caramel Latte Medium",
+        "tr": "karamel Latte orta",
+        "ar": "كراميل لاتيه وسط"
+      },
+      "category_id": "hot-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 44,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "caramel-macchiato",
+      "names": {
+        "en": "Caramel Macchiato",
+        "tr": "karamel Macchiato",
+        "ar": "كراميل مكياتو"
+      },
+      "category_id": "hot-coffee",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 45,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "caramel-macchiato-medium",
+      "names": {
+        "en": "Caramel macchiato medium",
+        "tr": "karamel macchiato orta",
+        "ar": "كراميل مكياتو وسط"
+      },
+      "category_id": "hot-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 46,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cortado",
+      "names": {
+        "en": "Cortado",
+        "tr": "kortadu",
+        "ar": "كورتادو"
+      },
+      "category_id": "hot-coffee",
+      "price": 140,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 47,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "latte",
+      "names": {
+        "en": "Latte",
+        "tr": "Latte",
+        "ar": "لاتيه"
+      },
+      "category_id": "hot-coffee",
+      "price": 140,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 48,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "latte-medium",
+      "names": {
+        "en": "Latte Medium",
+        "tr": "Latte orta",
+        "ar": "لاتيه وسط"
+      },
+      "category_id": "hot-coffee",
+      "price": 160,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 49,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "mocha-latte",
+      "names": {
+        "en": "Mocha Latte",
+        "tr": "Mocha Latte",
+        "ar": "موكا لاتيه"
+      },
+      "category_id": "hot-coffee",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 50,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "mocha-latte-medium",
+      "names": {
+        "en": "Mocha Latte Medium",
+        "tr": "Mocha Latte orta",
+        "ar": "موكا لاتيه وسط"
+      },
+      "category_id": "hot-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 51,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "hot-chocolate",
+      "names": {
+        "en": "Hot Chocolate",
+        "tr": "Sıcak çikolata",
+        "ar": "هوت شوكلت"
+      },
+      "category_id": "hot-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 52,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "hot-chocolate-medium",
+      "names": {
+        "en": "Hot Chocolate Medium",
+        "tr": "Sıcak çikolata orta",
+        "ar": "هوت شوكلت وسط"
+      },
+      "category_id": "hot-coffee",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 53,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "white-mocha-latte",
+      "names": {
+        "en": "White Mocha Latte",
+        "tr": "Beyaz Mocha Latte",
+        "ar": "وايت موكا لاتيه"
+      },
+      "category_id": "hot-coffee",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 54,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "white-mocha-latte-medium",
+      "names": {
+        "en": "White Mocha Latte Medium",
+        "tr": "Beyaz Mocha Latte orta",
+        "ar": "وايت موكا لاتيه وسط"
+      },
+      "category_id": "hot-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 55,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "white-hot-chocolate",
+      "names": {
+        "en": "White Hot Chocolate",
+        "tr": "Beyaz Hot Chocolate",
+        "ar": "وايت هوت شوكلت"
+      },
+      "category_id": "hot-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 56,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "white-hot-chocolate-medium",
+      "names": {
+        "en": "White Hot Chocolate Medium",
+        "tr": "Beyaz Hot Chocolate orta",
+        "ar": "وايت هوت شوكلت وسط"
+      },
+      "category_id": "hot-coffee",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 57,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-americano",
+      "names": {
+        "en": "Iced Americano",
+        "tr": "buzlu Americano",
+        "ar": "ايس امريكانو"
+      },
+      "category_id": "ice-coffee",
+      "price": 130,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 0,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-strawberry-mocha",
+      "names": {
+        "en": "Iced strawberry mocha",
+        "tr": "buzlu ÇİLEK mocha",
+        "ar": "ايس ستروبيري موكا"
+      },
+      "category_id": "ice-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 1,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-strawberry-mocha-large",
+      "names": {
+        "en": "Iced strawberry mocha large",
+        "tr": "buzlu ÇİLEK mocha büyük",
+        "ar": "ايس ستروبيري موكا كبير"
+      },
+      "category_id": "ice-coffee",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 2,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-strawberry-mocha-medium",
+      "names": {
+        "en": "Iced strawberry mocha medium",
+        "tr": "buzlu ÇİLEK mocha orta",
+        "ar": "ايس ستروبيري موكا وسط"
+      },
+      "category_id": "ice-coffee",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 3,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-salted-caramel-latte",
+      "names": {
+        "en": "Iced Salted Caramel Latte",
+        "tr": "buzlu Salted Caramel Latte",
+        "ar": "ايس سلتد كراميل لاتيه"
+      },
+      "category_id": "ice-coffee",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 4,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-salted-caramel-latte-large",
+      "names": {
+        "en": "Iced salted caramel latte large",
+        "tr": "buzlu salted caramel latte büyük",
+        "ar": "ايس سلتد كراميل لاتيه كبير"
+      },
+      "category_id": "ice-coffee",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 5,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-salted-caramel-latte-medium",
+      "names": {
+        "en": "Iced Salted Caramel Latte medium",
+        "tr": "buzlu Salted Caramel Latte orta",
+        "ar": "ايس سلتد كراميل وسط"
+      },
+      "category_id": "ice-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 6,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-chai-tea-latte",
+      "names": {
+        "en": "Iced chai tea latte",
+        "tr": "buzlu chai tea latte",
+        "ar": "ايس شاي تي لاتيه"
+      },
+      "category_id": "ice-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 7,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-chai-tea-latte-large",
+      "names": {
+        "en": "Iced chai tea latte Large",
+        "tr": "buzlu chai tea latte büyük",
+        "ar": "ايس شاي تي لاتيه كبير"
+      },
+      "category_id": "ice-coffee",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 8,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-chai-tea-latte-medium",
+      "names": {
+        "en": "Iced chai tea latte medium",
+        "tr": "buzlu chai tea latte orta",
+        "ar": "ايس شاي تي لاتيه وسط"
+      },
+      "category_id": "ice-coffee",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 9,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-vanilla-latte",
+      "names": {
+        "en": "Iced Vanilla Latte",
+        "tr": "buzlu Vanilla Latte",
+        "ar": "ايس فانيليا لاتيه"
+      },
+      "category_id": "ice-coffee",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 10,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-vanilla-latte-large",
+      "names": {
+        "en": "Iced Vanilla Latte Large",
+        "tr": "buzlu Vanilla Latte büyük",
+        "ar": "ايس فانيليا لاتيه كبير"
+      },
+      "category_id": "ice-coffee",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 11,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-vanilla-latte-medium",
+      "names": {
+        "en": "Iced Vanilla Latte Medium",
+        "tr": "buzlu Vanilla Latte orta",
+        "ar": "ايس فانيليا لاتيه وسط"
+      },
+      "category_id": "ice-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 12,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-filter-coffee",
+      "names": {
+        "en": "Iced Filter Coffee",
+        "tr": "buzlu Filtere kahve",
+        "ar": "ايس فيلتر قهوة"
+      },
+      "category_id": "ice-coffee",
+      "price": 125,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 13,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-filter-coffee-with-milk",
+      "names": {
+        "en": "Iced Filter Coffee with Milk",
+        "tr": "buzlu Filter Coffee with Milk",
+        "ar": "ايس فيلتر قهوة بالحليب"
+      },
+      "category_id": "ice-coffee",
+      "price": 140,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 14,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-filter-coffee-with-milk-large",
+      "names": {
+        "en": "Iced Filter Coffee with Milk Large",
+        "tr": "buzlu Filter Coffee with Milk büyük",
+        "ar": "ايس فيلترة قهوة بالحليب كبير"
+      },
+      "category_id": "ice-coffee",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 15,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-filter-coffee-with-milk-medium",
+      "names": {
+        "en": "Iced Filter Coffee with Milk Medium",
+        "tr": "buzlu Filter Coffee with Milk orta",
+        "ar": "ايس فيلترة قهوة بالحليب وسط"
+      },
+      "category_id": "ice-coffee",
+      "price": 160,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 16,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-filter-coffee-large",
+      "names": {
+        "en": "Iced Filter Coffee Large",
+        "tr": "buzlu Filter Coffee büyük",
+        "ar": "ايس فيلترة قهوة كبير"
+      },
+      "category_id": "ice-coffee",
+      "price": 145,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 17,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-filter-coffee-medium",
+      "names": {
+        "en": "Iced Filter Coffee Medium",
+        "tr": "buzlu Filter Coffee orta",
+        "ar": "ايس فيلترة قهوة وسط"
+      },
+      "category_id": "ice-coffee",
+      "price": 130,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 18,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-caramel-latte",
+      "names": {
+        "en": "Iced Caramel Latte",
+        "tr": "buzlu Caramel Latte",
+        "ar": "ايس كراميل لاتيه"
+      },
+      "category_id": "ice-coffee",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 19,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-caramel-latte-large",
+      "names": {
+        "en": "Iced Caramel Latte Large",
+        "tr": "buzlu Caramel Latte büyük",
+        "ar": "ايس كراميل لاتيه كبير"
+      },
+      "category_id": "ice-coffee",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 20,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-caramel-latte-medium",
+      "names": {
+        "en": "Iced Caramel Latte Medium",
+        "tr": "buzlu Caramel Latte orta",
+        "ar": "ايس كراميل لاتيه وسط"
+      },
+      "category_id": "ice-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 21,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-caramel-macchiato",
+      "names": {
+        "en": "Iced caramel macchiato",
+        "tr": "buzlu caramel macchiato",
+        "ar": "ايس كراميل مكياتو"
+      },
+      "category_id": "ice-coffee",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 22,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-caramel-macchiato-large",
+      "names": {
+        "en": "Iced caramel macchiato Large",
+        "tr": "buzlu karamel macchiato büyük",
+        "ar": "ايس كراميل مكياتو كبير"
+      },
+      "category_id": "ice-coffee",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 23,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-caramel-macchiato-medium",
+      "names": {
+        "en": "Iced caramel macchiato Medium",
+        "tr": "buzlu karamel macchiato orta",
+        "ar": "ايس كراميل مكياتو وسط"
+      },
+      "category_id": "ice-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 24,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-latte",
+      "names": {
+        "en": "Iced Latte",
+        "tr": "buzlu Latte",
+        "ar": "ايس لاتيه"
+      },
+      "category_id": "ice-coffee",
+      "price": 160,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 25,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-latte-large",
+      "names": {
+        "en": "Iced Latte Large",
+        "tr": "buzlu Latte büyük",
+        "ar": "ايس لاتيه كبير"
+      },
+      "category_id": "ice-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 26,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-latte-medium",
+      "names": {
+        "en": "Iced Latte Medium",
+        "tr": "buzlu Latte orta",
+        "ar": "ايس لاتيه وسط"
+      },
+      "category_id": "ice-coffee",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 27,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-matcha-latte",
+      "names": {
+        "en": "Iced Matcha latte",
+        "tr": "buzlu Matcha latte",
+        "ar": "ايس ماتشا لاتيه"
+      },
+      "category_id": "ice-coffee",
+      "price": 190,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 28,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-matcha-latte-large",
+      "names": {
+        "en": "Iced Matcha latte large",
+        "tr": "buzlu Matcha latte büyük",
+        "ar": "ايس ماتشا لاتيه كبير"
+      },
+      "category_id": "ice-coffee",
+      "price": 250,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 29,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-matcha-latte-medium",
+      "names": {
+        "en": "Iced Matcha latte Medium",
+        "tr": "buzlu Matcha latte orta",
+        "ar": "ايس ماتشا لاتيه وسط"
+      },
+      "category_id": "ice-coffee",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 30,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-mocha-latte",
+      "names": {
+        "en": "Iced Mocha Latte",
+        "tr": "buzlu Mocha Latte",
+        "ar": "ايس موكا لاتيه"
+      },
+      "category_id": "ice-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 31,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-mocha-latte-large",
+      "names": {
+        "en": "Iced Mocha Latte Large",
+        "tr": "buzlu Mocha Latte büyük",
+        "ar": "ايس موكا لاتيه كبير"
+      },
+      "category_id": "ice-coffee",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 32,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-mocha-latte-medium",
+      "names": {
+        "en": "Iced Mocha Latte Medium",
+        "tr": "buzlu Mocha Latte orta",
+        "ar": "ايس موكا لاتيه وسط"
+      },
+      "category_id": "ice-coffee",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 33,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-white-chocolate-mocha-large",
+      "names": {
+        "en": "Iced White Chocolate Mocha Large",
+        "tr": "buzlu White Chocolate Mocha büyük",
+        "ar": "ايس وايت شوكليت موكا كبير"
+      },
+      "category_id": "ice-coffee",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 34,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-white-chocolate-mocha-medium",
+      "names": {
+        "en": "Iced White Chocolate Mocha Medium",
+        "tr": "buzlu White Chocolate Mocha orta",
+        "ar": "ايس وايت شوكليت موكا وسط"
+      },
+      "category_id": "ice-coffee",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 35,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-white-chocolate-mocha",
+      "names": {
+        "en": "Iced White Chocolate Mocha",
+        "tr": "buzlu White Chocolate Mocha",
+        "ar": "ايس وايت موكا"
+      },
+      "category_id": "ice-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 36,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cherry-blossom-iced-latte-large",
+      "names": {
+        "en": "Cherry Blossom Iced Latte Large",
+        "tr": "Cherry Blossom Iced Latte büyük",
+        "ar": "تشيري بلوسوم ايس لاتيه كبير"
+      },
+      "category_id": "ice-coffee",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 37,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cherry-blossom-iced-latte-medium",
+      "names": {
+        "en": "Cherry Blossom Iced Latte Medium",
+        "tr": "Cherry Blossom Iced Latte orta",
+        "ar": "تشيري بلوسوم ايس لاتيه وسط"
+      },
+      "category_id": "ice-coffee",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 38,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cherry-blossom-iced-latte",
+      "names": {
+        "en": "Cherry Blossom Iced Latte",
+        "tr": "Cherry Blossom Iced Latte",
+        "ar": "شيري بلوسوم ايس لاتيه"
+      },
+      "category_id": "ice-coffee",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 39,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "caramel-bubbles-iced-latte",
+      "names": {
+        "en": "Caramel bubbles Iced Latte",
+        "tr": "Karamel bubbles Iced Latte",
+        "ar": "كراميل بابلز ايس لاتيه"
+      },
+      "category_id": "ice-coffee",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 40,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "caramel-bubbles-iced-latte-large",
+      "names": {
+        "en": "Caramel bubbles Iced Latte Large",
+        "tr": "karamel bubbles Iced Latte büyük",
+        "ar": "كراميل بابلز ايس لاتيه كبير"
+      },
+      "category_id": "ice-coffee",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 41,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "caramel-bubbles-iced-latte-medium",
+      "names": {
+        "en": "Caramel bubbles Iced Latte Medium",
+        "tr": "karamel bubbles Iced Latte orta",
+        "ar": "كراميل بابلز ايس لاتيه وسط"
+      },
+      "category_id": "ice-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 42,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "coconut-iced-latte",
+      "names": {
+        "en": "Coconut Iced Latte",
+        "tr": "Hinistan buzlu Latte",
+        "ar": "كوكو نت ايس لاتيه"
+      },
+      "category_id": "ice-coffee",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 43,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "coconut-iced-latte-large",
+      "names": {
+        "en": "Coconut Iced Latte Large",
+        "tr": "Hindistan cevizi  buzlu  Latte büyük",
+        "ar": "كوكو نت ايس لاتيه كبير"
+      },
+      "category_id": "ice-coffee",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 44,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "coconut-iced-latte-medium",
+      "names": {
+        "en": "Coconut Iced Latte Medium",
+        "tr": "Hindistan cevizi buzlu  Latte orta",
+        "ar": "كوكو نت ايس لاتيه وسط"
+      },
+      "category_id": "ice-coffee",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 45,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "ice-cream-medium",
+      "names": {
+        "en": "Ice cream Medium",
+        "tr": "Dondurma orta",
+        "ar": "كاسة بوظة وسط"
+      },
+      "category_id": "ice-cream",
+      "price": 210,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 0,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-strawberry-matcha-latte",
+      "names": {
+        "en": "Iced Strawberry matcha latte",
+        "tr": "buzlu ÇİLEK matcha latte",
+        "ar": "ايس ستروبري ماتشا لاتيه"
+      },
+      "category_id": "matcha",
+      "price": 190,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 0,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-strawberry-matcha-latte-large",
+      "names": {
+        "en": "Iced Strawberry matcha latte large",
+        "tr": "buzlu ÇİLEK matcha latte Soğuk",
+        "ar": "ايس ستروبري ماتشا لاتيه كبير"
+      },
+      "category_id": "matcha",
+      "price": 250,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 1,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "iced-strawberry-matcha-latte-medium",
+      "names": {
+        "en": "Iced Strawberry matcha latte Medium",
+        "tr": "buzlu ÇİLEK matcha latte orta",
+        "ar": "ايس ستروبري ماتشا لاتيه وسط"
+      },
+      "category_id": "matcha",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 2,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "matcha-latte",
+      "names": {
+        "en": "Matcha latte",
+        "tr": "Matcha latte",
+        "ar": "ماتشا لاتيه"
+      },
+      "category_id": "matcha",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 3,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "oreo-milkshake-medium",
+      "names": {
+        "en": "Oreo milkshake medium",
+        "tr": "Oreo milkshake orta",
+        "ar": "ميلك شيك اوريو وسط"
+      },
+      "category_id": "milkshakes",
+      "price": 275,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 0,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "chocolate-milkshake-medium",
+      "names": {
+        "en": "Chocolate milkshake medium",
+        "tr": "Chocolate milkshake orta",
+        "ar": "ميلك شيك شوكولا وسط"
+      },
+      "category_id": "milkshakes",
+      "price": 275,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 1,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "vanilla-milkshake-medium",
+      "names": {
+        "en": "Vanilla milkshake medium",
+        "tr": "Vanilla milkshake orta",
+        "ar": "ميلك شيك فانيليا وسط"
+      },
+      "category_id": "milkshakes",
+      "price": 275,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 2,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "strawberry-milkshake-medium",
+      "names": {
+        "en": "Strawberry milkshake medium",
+        "tr": "ÇİLEK milkshake orta",
+        "ar": "ميلك شيك فريز وسط"
+      },
+      "category_id": "milkshakes",
+      "price": 275,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 3,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "caramel-milkshake-medium",
+      "names": {
+        "en": "Caramel milkshake medium",
+        "tr": "karamel milkshake orta",
+        "ar": "ميلك شيك كراميل وسط"
+      },
+      "category_id": "milkshakes",
+      "price": 275,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 4,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cookies-milkshake-medium",
+      "names": {
+        "en": "Cookies milkshake medium",
+        "tr": "Cookies milkshake orta",
+        "ar": "ميلك شيك كوكيز وسط"
+      },
+      "category_id": "milkshakes",
+      "price": 275,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 5,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "lotus-milkshake-medium",
+      "names": {
+        "en": "Lotus milkshake medium",
+        "tr": "Lotus milkshake orta",
+        "ar": "ميلك شيك لوتوس وسط"
+      },
+      "category_id": "milkshakes",
+      "price": 275,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 6,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "pineapple-mojito-redbull-medium",
+      "names": {
+        "en": "Pineapple mojito RedBull medium",
+        "tr": "Ananas mojito RedBull orta",
+        "ar": "موهيتو اناناس ريد بول وسط"
+      },
+      "category_id": "mojitos",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 0,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "pineapple-mojito-7up-medium",
+      "names": {
+        "en": "Pineapple mojito 7up medium",
+        "tr": "Ananas  mojito 7up orta",
+        "ar": "موهيتو اناناس سفن وسط"
+      },
+      "category_id": "mojitos",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 1,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "pineapple-mojito-soda-medium",
+      "names": {
+        "en": "Pineapple mojito soda medium",
+        "tr": "Ananas  mojito soda orta",
+        "ar": "موهيتو اناناس صودا وسط"
+      },
+      "category_id": "mojitos",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 2,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "passion-orange-mojito-redbull-medium",
+      "names": {
+        "en": "Passion orange mojito RedBull medium",
+        "tr": "Passion portakal mojito RedBull orta",
+        "ar": "موهيتو باشن برتقال ريد بول وسط"
+      },
+      "category_id": "mojitos",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 3,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "passion-orange-mojito-7up-medium",
+      "names": {
+        "en": "Passion orange mojito 7up medium",
+        "tr": "Passion portakal mojito 7up orta",
+        "ar": "موهيتو باشن برتقال سفن وسط"
+      },
+      "category_id": "mojitos",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 4,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "passion-orange-mojito-soda-medium",
+      "names": {
+        "en": "Passion orange mojito soda medium",
+        "tr": "Passion portakal mojito soda orta",
+        "ar": "موهيتو باشن برتقال صودا وسط"
+      },
+      "category_id": "mojitos",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 5,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "passion-peach-mojito-redbull-medium",
+      "names": {
+        "en": "Passion peach mojito RedBull medium",
+        "tr": "Passion Şeftali mojito RedBull orta",
+        "ar": "موهيتو باشن دراق ريد بول وسط"
+      },
+      "category_id": "mojitos",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 6,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "passion-peach-mojito-7up-medium",
+      "names": {
+        "en": "Passion peach mojito 7up medium",
+        "tr": "Passion Şeftali mojito 7up orta",
+        "ar": "موهيتو باشن دراق سفن وسط"
+      },
+      "category_id": "mojitos",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 7,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "passion-peach-mojito-soda-medium",
+      "names": {
+        "en": "Passion peach mojito soda medium",
+        "tr": "Passion Şeftali mojito soda orta",
+        "ar": "موهيتو باشن دراق صودا وسط"
+      },
+      "category_id": "mojitos",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 8,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "orange-peach-mojito-redbull-medium",
+      "names": {
+        "en": "Orange peach mojito RedBull medium",
+        "tr": "portakal Şeftali mojito RedBull orta",
+        "ar": "موهيتو برتقال دراق ريد بول وسط"
+      },
+      "category_id": "mojitos",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 9,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "orange-peach-mojito-7up-medium",
+      "names": {
+        "en": "Orange peach mojito 7up medium",
+        "tr": "portakal Şeftali mojito 7up orta",
+        "ar": "موهيتو برتقال دراق سفن وسط"
+      },
+      "category_id": "mojitos",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 10,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "orange-peach-mojito-soda-medium",
+      "names": {
+        "en": "Orange peach mojito soda medium",
+        "tr": "portakal Şeftali mojito soda orta",
+        "ar": "موهيتو برتقال دراق صودا وسط"
+      },
+      "category_id": "mojitos",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 11,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "peach-mojito-redbull-medium",
+      "names": {
+        "en": "Peach mojito RedBull medium",
+        "tr": "Şeftali mojito RedBull orta",
+        "ar": "موهيتو دراق ريد بول وسط"
+      },
+      "category_id": "mojitos",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 12,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "peach-mojito-7up-medium",
+      "names": {
+        "en": "Peach mojito 7up medium",
+        "tr": "Şeftali mojito 7up orta",
+        "ar": "موهيتو دراق سفن وسط"
+      },
+      "category_id": "mojitos",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 13,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "peach-mojito-soda-medium",
+      "names": {
+        "en": "Peach mojito soda medium",
+        "tr": "Şeftali mojito soda orta",
+        "ar": "موهيتو دراق صودا وسط"
+      },
+      "category_id": "mojitos",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 14,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "pomegranate-mojito-redbull-medium",
+      "names": {
+        "en": "Pomegranate mojito RedBull medium",
+        "tr": "Pomegranate mojito RedBull orta",
+        "ar": "موهيتو رمان ريد بول وسط"
+      },
+      "category_id": "mojitos",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 15,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "pomegranate-mojito-7up-medium",
+      "names": {
+        "en": "Pomegranate mojito 7up medium",
+        "tr": "Pomegranate mojito 7up orta",
+        "ar": "موهيتو رمان سفن وسط"
+      },
+      "category_id": "mojitos",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 16,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "pomegranate-mojito-soda-medium",
+      "names": {
+        "en": "Pomegranate mojito soda medium",
+        "tr": "Pomegranate mojito soda orta",
+        "ar": "موهيتو رمان صودا وسط"
+      },
+      "category_id": "mojitos",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 17,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "ginger-mojito-redbull-medium",
+      "names": {
+        "en": "Ginger mojito RedBull medium",
+        "tr": "zencefil mojito RedBull orta",
+        "ar": "موهيتو زنجبيل ريد بول وسط"
+      },
+      "category_id": "mojitos",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 18,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "ginger-mojito-7up-medium",
+      "names": {
+        "en": "Ginger mojito 7up medium",
+        "tr": "zencefil mojito 7up orta",
+        "ar": "موهيتو زنجبيل سفن وسط"
+      },
+      "category_id": "mojitos",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 19,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "ginger-mojito-soda-medium",
+      "names": {
+        "en": "Ginger mojito soda medium",
+        "tr": "zencefil mojito soda orta",
+        "ar": "موهيتو زنجبيل صودا وسط"
+      },
+      "category_id": "mojitos",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 20,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "strawberry-mojito-redbull-medium",
+      "names": {
+        "en": "Strawberry mojito RedBull medium",
+        "tr": "ÇİLEK mojito RedBull orta",
+        "ar": "موهيتو فريز ريد بول وسط"
+      },
+      "category_id": "mojitos",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 21,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "strawberry-mojito-7up-medium",
+      "names": {
+        "en": "Strawberry mojito 7up medium",
+        "tr": "ÇİLEK mojito 7up orta",
+        "ar": "موهيتو فريز سفن وسط"
+      },
+      "category_id": "mojitos",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 22,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "strawberry-mojito-soda-medium",
+      "names": {
+        "en": "Strawberry mojito soda medium",
+        "tr": "ÇİLEK mojito soda orta",
+        "ar": "موهيتو فريز صودا وسط"
+      },
+      "category_id": "mojitos",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 23,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "mojito-classic-redbull-medium",
+      "names": {
+        "en": "Mojito classic RedBull medium",
+        "tr": "Mojito classic RedBull orta",
+        "ar": "موهيتو كلاسيك ريد بول وسط"
+      },
+      "category_id": "mojitos",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 24,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "mojito-classic-7up-medium",
+      "names": {
+        "en": "Mojito classic 7up medium",
+        "tr": "Mojito classic 7up orta",
+        "ar": "موهيتو كلاسيك سفن وسط"
+      },
+      "category_id": "mojitos",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 25,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "mojito-classic-soda-medium",
+      "names": {
+        "en": "Mojito classic soda medium",
+        "tr": "Mojito classic soda orta",
+        "ar": "موهيتو كلاسيك صودا وسط"
+      },
+      "category_id": "mojitos",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 26,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "kiwi-mojito-redbull-medium",
+      "names": {
+        "en": "Kiwi mojito RedBull medium",
+        "tr": "Kiwi mojito RedBull orta",
+        "ar": "موهيتو كيوي ريد بول وسط"
+      },
+      "category_id": "mojitos",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 27,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "kiwi-mojito-7up-medium",
+      "names": {
+        "en": "Kiwi mojito 7up medium",
+        "tr": "Kiwi mojito 7up orta",
+        "ar": "موهيتو كيوي سفن وسط"
+      },
+      "category_id": "mojitos",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 28,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "kiwi-mojito-soda-medium",
+      "names": {
+        "en": "Kiwi mojito soda medium",
+        "tr": "Kiwi mojito soda orta",
+        "ar": "موهيتو كيوي صودا وسط"
+      },
+      "category_id": "mojitos",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 29,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "mango-mojito-redbull-medium",
+      "names": {
+        "en": "Mango mojito RedBull medium",
+        "tr": "Mango mojito RedBull orta",
+        "ar": "موهيتو مانجو ريد بول وسط"
+      },
+      "category_id": "mojitos",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 30,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "mango-mojito-7up-medium",
+      "names": {
+        "en": "Mango mojito 7up medium",
+        "tr": "Mango mojito 7up orta",
+        "ar": "موهيتو مانجو سفن وسط"
+      },
+      "category_id": "mojitos",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 31,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "mango-mojito-soda-medium",
+      "names": {
+        "en": "Mango mojito soda medium",
+        "tr": "Mango mojito soda orta",
+        "ar": "موهيتو مانجو صودا وسط"
+      },
+      "category_id": "mojitos",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 32,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "mix-berries-mojito-redbull-medium",
+      "names": {
+        "en": "Mix berries mojito RedBull medium",
+        "tr": "Mix berries mojito RedBull orta",
+        "ar": "موهيتو ميكس بيري ريد بول وسط"
+      },
+      "category_id": "mojitos",
+      "price": 290,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 33,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "mix-berries-mojito-7up-medium",
+      "names": {
+        "en": "Mix berries mojito 7up medium",
+        "tr": "Mix berries mojito 7up orta",
+        "ar": "موهيتو ميكس بيري سفن وسط"
+      },
+      "category_id": "mojitos",
+      "price": 260,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 34,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "mix-berries-mojito-soda-medium",
+      "names": {
+        "en": "Mix berries mojito soda medium",
+        "tr": "Mix berries mojito soda orta",
+        "ar": "موهيتو ميكس بيري صودا وسط"
+      },
+      "category_id": "mojitos",
+      "price": 230,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 35,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "opera-cake",
+      "names": {
+        "en": "Opera cake",
+        "tr": "Opera Pastası",
+        "ar": "اوبرا"
+      },
+      "category_id": "patisserie",
+      "price": 0,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 0,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "hazelnut-chimney-cake",
+      "names": {
+        "en": "Hazelnut Chimney Cake",
+        "tr": "Fındıklı Bacalı Kek",
+        "ar": "تشمني كيك بندق"
+      },
+      "category_id": "patisserie",
+      "price": 0,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 1,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "chimney-cake",
+      "names": {
+        "en": "Chimney Cake",
+        "tr": "Çimni Cake",
+        "ar": "تشمني كيك قرفة"
+      },
+      "category_id": "patisserie",
+      "price": 0,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 2,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "pistachio-cheesecake",
+      "names": {
+        "en": "Pistachio Cheesecake",
+        "tr": "Fıstıklı Cheesecake",
+        "ar": "تشيز كيك بستاشيو"
+      },
+      "category_id": "patisserie",
+      "price": 0,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 3,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "blueberry-cheesecake",
+      "names": {
+        "en": "Blueberry Cheesecake",
+        "tr": "Yaban mersinli Cheesecake",
+        "ar": "تشيز كيك بلو بيري"
+      },
+      "category_id": "patisserie",
+      "price": 0,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 4,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "chocolate-cheesecake",
+      "names": {
+        "en": "Chocolate Cheesecake",
+        "tr": "Çikolatalı Cheesecake",
+        "ar": "تشيز كيك شوكولا"
+      },
+      "category_id": "patisserie",
+      "price": 0,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 5,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "strawberry-cheesecake",
+      "names": {
+        "en": "Strawberry Cheesecake",
+        "tr": "Çilekli Cheesecake",
+        "ar": "تشيز كيك فريز"
+      },
+      "category_id": "patisserie",
+      "price": 0,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 6,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "tiramisu",
+      "names": {
+        "en": "Tiramisu",
+        "tr": "Tiramisu",
+        "ar": "تيراميسو"
+      },
+      "category_id": "patisserie",
+      "price": 0,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 7,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "fondant-chocolate",
+      "names": {
+        "en": "Fondant chocolate",
+        "tr": "Çikolatalı Fondan",
+        "ar": "فوندون"
+      },
+      "category_id": "patisserie",
+      "price": 0,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 8,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "croissants",
+      "names": {
+        "en": "Croissants",
+        "tr": "kruvasan",
+        "ar": "كروسان سادة"
+      },
+      "category_id": "patisserie",
+      "price": 0,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 9,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "pistachio-cookies",
+      "names": {
+        "en": "Pistachio Cookies",
+        "tr": "Fıstıklı Kurabiye",
+        "ar": "كوكيز بستاشيو"
+      },
+      "category_id": "patisserie",
+      "price": 0,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 10,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "hazelnut-cookies",
+      "names": {
+        "en": "Hazelnut Cookies",
+        "tr": "Fındıklı Kurabiye",
+        "ar": "كوكيز بندوق"
+      },
+      "category_id": "patisserie",
+      "price": 0,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 11,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "raspberry-cookies",
+      "names": {
+        "en": "Raspberry Cookies",
+        "tr": "Ahududu kurabiye",
+        "ar": "كوكيز توت احمر"
+      },
+      "category_id": "patisserie",
+      "price": 0,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 12,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cookies",
+      "names": {
+        "en": "Cookies",
+        "tr": "kurabiye sadeli",
+        "ar": "كوكيز سادة"
+      },
+      "category_id": "patisserie",
+      "price": 0,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 13,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "lotus-cookies",
+      "names": {
+        "en": "Lotus Cookies",
+        "tr": "Lotuslu Kurabiye",
+        "ar": "كوكيز لوتوس"
+      },
+      "category_id": "patisserie",
+      "price": 0,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 14,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "carrot-cake",
+      "names": {
+        "en": "Carrot Cake",
+        "tr": "havuç Cake",
+        "ar": "كيكة الجزر"
+      },
+      "category_id": "patisserie",
+      "price": 0,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 15,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "honey-cake",
+      "names": {
+        "en": "Honey Cake",
+        "tr": "Ballı Cake",
+        "ar": "كيكة العسل"
+      },
+      "category_id": "patisserie",
+      "price": 0,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 16,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "brownie-cake",
+      "names": {
+        "en": "Brownie Cake",
+        "tr": "Brownie Cake",
+        "ar": "كيكة براونيز"
+      },
+      "category_id": "patisserie",
+      "price": 0,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 17,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "san-sebastian-cake",
+      "names": {
+        "en": "San Sebastian Cake",
+        "tr": "San Sebastian Cake",
+        "ar": "كيكة سان سباستيان"
+      },
+      "category_id": "patisserie",
+      "price": 0,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 18,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cool-lime",
+      "names": {
+        "en": "Cool lime",
+        "tr": "Cool lime",
+        "ar": "كول لايم"
+      },
+      "category_id": "signature",
+      "price": 160,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 0,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cool-lime-apple-bubbles",
+      "names": {
+        "en": "Cool lime apple bubbles",
+        "tr": "Cool lime elma bubbles",
+        "ar": "كول لايم ابل بابلز"
+      },
+      "category_id": "signature",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 1,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cool-lime-apple-bubbles-large",
+      "names": {
+        "en": "Cool lime apple bubbles Large",
+        "tr": "Cool lime elma bubbles büyük",
+        "ar": "كول لايم ابل بابلز كبير"
+      },
+      "category_id": "signature",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 2,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cool-lime-apple-bubbles-medium",
+      "names": {
+        "en": "Cool lime apple bubbles Medium",
+        "tr": "Cool lime elma bubbles orta",
+        "ar": "كول لايم ابل بابلز وسط"
+      },
+      "category_id": "signature",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 3,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cool-lime-blueberry-bubbles",
+      "names": {
+        "en": "Cool lime blueberry bubbles",
+        "tr": "Cool lime blueberry bubbles",
+        "ar": "كول لايم بلو بيري بابلز"
+      },
+      "category_id": "signature",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 4,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cool-lime-blueberry-bubbles-large",
+      "names": {
+        "en": "Cool lime blueberry bubbles large",
+        "tr": "Cool lime blueberry bubbles büyük",
+        "ar": "كول لايم بلو بيري بابلز كبير"
+      },
+      "category_id": "signature",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 5,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cool-lime-blueberry-bubbles-medium",
+      "names": {
+        "en": "Cool lime blueberry bubbles Medium",
+        "tr": "Cool lime blueberry bubbles orta",
+        "ar": "كول لايم بلو بيري بابلز وسط"
+      },
+      "category_id": "signature",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 6,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cool-lime-strawberry-bubbles",
+      "names": {
+        "en": "Cool lime strawberry bubbles",
+        "tr": "Cool lime Çilekli  bubbles",
+        "ar": "كول لايم سترو بيري بابلز"
+      },
+      "category_id": "signature",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 7,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cool-lime-strawberry-bubbles-large",
+      "names": {
+        "en": "Cool lime strawberry bubbles Large",
+        "tr": "Cool lime Çilekli bubbles büyük",
+        "ar": "كول لايم سترو بيري بابلز كبير"
+      },
+      "category_id": "signature",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 8,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cool-lime-strawberry-bubbles-medium",
+      "names": {
+        "en": "Cool lime strawberry bubbles Medium",
+        "tr": "Cool lime Çilekli bubbles orta",
+        "ar": "كول لايم سترو بيري بابلز وسط"
+      },
+      "category_id": "signature",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 9,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cool-lime-strawberry-mix",
+      "names": {
+        "en": "Cool lime strawberry mix",
+        "tr": "Cool lime Çilekli mix",
+        "ar": "كول لايم سترو بيري ميكس"
+      },
+      "category_id": "signature",
+      "price": 160,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 10,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cool-lime-strawberry-mix-large",
+      "names": {
+        "en": "Cool lime strawberry mix large",
+        "tr": "Cool lime Çilekli mix büyük",
+        "ar": "كول لايم سترو بيري ميكس كبير"
+      },
+      "category_id": "signature",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 11,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cool-lime-strawberry-mix-medium",
+      "names": {
+        "en": "Cool lime strawberry mix Medium",
+        "tr": "Cool lime Çilekli mix orta",
+        "ar": "كول لايم سترو بيري ميكس وسط"
+      },
+      "category_id": "signature",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 12,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cool-lime-large",
+      "names": {
+        "en": "Cool lime large",
+        "tr": "Cool lime büyük",
+        "ar": "كول لايم كبير"
+      },
+      "category_id": "signature",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 13,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cool-lime-mango-mix",
+      "names": {
+        "en": "Cool lime mango mix",
+        "tr": "Cool lime mango mix",
+        "ar": "كول لايم مانجو ميكس"
+      },
+      "category_id": "signature",
+      "price": 160,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 14,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cool-lime-mango-mix-large",
+      "names": {
+        "en": "Cool lime mango mix large",
+        "tr": "Cool lime mango mix büyük",
+        "ar": "كول لايم مانجو ميكس كبير"
+      },
+      "category_id": "signature",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 15,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cool-lime-mango-mix-medium",
+      "names": {
+        "en": "Cool lime mango mix Medium",
+        "tr": "Cool lime mango mix orta",
+        "ar": "كول لايم مانجو ميكس وسط"
+      },
+      "category_id": "signature",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 16,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cool-lime-medium",
+      "names": {
+        "en": "Cool lime Medium",
+        "tr": "Cool lime orta",
+        "ar": "كول لايم وسط"
+      },
+      "category_id": "signature",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 17,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "hibiscus",
+      "names": {
+        "en": "Hibiscus",
+        "tr": "Hibiscus",
+        "ar": "هيبسكوس"
+      },
+      "category_id": "signature",
+      "price": 160,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 18,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "hibiscus-apple-bubbles",
+      "names": {
+        "en": "Hibiscus apple bubbles",
+        "tr": "Hibiscus elma bubbles",
+        "ar": "هيبسكوس ابل بابلز"
+      },
+      "category_id": "signature",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 19,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "hibiscus-apple-bubbles-large",
+      "names": {
+        "en": "Hibiscus apple bubbles large",
+        "tr": "Hibiscus elma bubbles büyük",
+        "ar": "هيبسكوس ابل بابلز كبير"
+      },
+      "category_id": "signature",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 20,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "hibiscus-apple-bubbles-medium",
+      "names": {
+        "en": "Hibiscus apple bubbles Medium",
+        "tr": "Hibiscus elma bubbles orta",
+        "ar": "هيبسكوس ابل بابلز وسط"
+      },
+      "category_id": "signature",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 21,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "hibiscus-blueberry-bubbles",
+      "names": {
+        "en": "Hibiscus blueberry bubbles",
+        "tr": "Hibiscus blueberry bubbles",
+        "ar": "هيبسكوس بلو بيري بابلز"
+      },
+      "category_id": "signature",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 22,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "hibiscus-blueberry-mix",
+      "names": {
+        "en": "Hibiscus blueberry mix",
+        "tr": "Hibiscus blueberry mix",
+        "ar": "هيبسكوس بلو بيري ميكس"
+      },
+      "category_id": "signature",
+      "price": 160,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 23,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "hibiscus-blueberry-mix-large",
+      "names": {
+        "en": "Hibiscus blueberry mix large",
+        "tr": "Hibiscus blueberry mix büyük",
+        "ar": "هيبسكوس بلو بيري ميكس كبير"
+      },
+      "category_id": "signature",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 24,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "hibiscus-blueberry-mix-medium",
+      "names": {
+        "en": "Hibiscus blueberry mix Medium",
+        "tr": "Hibiscus blueberry mix orta",
+        "ar": "هيبسكوس بلو بيري ميكس وسط"
+      },
+      "category_id": "signature",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 25,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "hibiscus-blueberry-bubbles-large",
+      "names": {
+        "en": "Hibiscus blueberry bubbles large",
+        "tr": "Hibiscus blueberry bubbles büyük",
+        "ar": "هيبسكوس بلوبيري بابلز كبير"
+      },
+      "category_id": "signature",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 26,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "hibiscus-blueberry-bubbles-medium",
+      "names": {
+        "en": "Hibiscus blueberry bubbles Medium",
+        "tr": "Hibiscus blueberry bubbles orta",
+        "ar": "هيبسكوس بلوبيري بابلز وسط"
+      },
+      "category_id": "signature",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 27,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "hibiscus-strawberry-bubbles",
+      "names": {
+        "en": "Hibiscus strawberry bubbles",
+        "tr": "Hibiscus ÇİLEK bubbles",
+        "ar": "هيبسكوس سترو بيري بابلز"
+      },
+      "category_id": "signature",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 28,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "hibiscus-strawberry-mix",
+      "names": {
+        "en": "Hibiscus strawberry Mix",
+        "tr": "HibiscusÇİLEK Mix",
+        "ar": "هيبسكوس سترو بيري ميكس"
+      },
+      "category_id": "signature",
+      "price": 160,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 29,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "hibiscus-strawberry-mix-large",
+      "names": {
+        "en": "Hibiscus strawberry mix large",
+        "tr": "Hibiscus ÇİLEK mix büyük",
+        "ar": "هيبسكوس سترو بيري ميكس كبير"
+      },
+      "category_id": "signature",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 30,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "hibiscus-strawberry-mix-medium",
+      "names": {
+        "en": "Hibiscus strawberry mix Medium",
+        "tr": "Hibiscus ÇİLEKmix orta",
+        "ar": "هيبسكوس سترو بيري ميكس وسط"
+      },
+      "category_id": "signature",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 31,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "hibiscus-strawberry-bubbles-large",
+      "names": {
+        "en": "Hibiscus strawberry bubbles large",
+        "tr": "Hibiscus ÇİLEK bubbles büyük",
+        "ar": "هيبسكوس ستروبيري بابلز كبير"
+      },
+      "category_id": "signature",
+      "price": 220,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 32,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "hibiscus-strawberry-bubbles-medium",
+      "names": {
+        "en": "Hibiscus strawberry bubbles Medium",
+        "tr": "Hibiscus ÇİLEK bubbles orta",
+        "ar": "هيبسكوس ستروبيري بابلز وسط"
+      },
+      "category_id": "signature",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 33,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "hibiscus-large",
+      "names": {
+        "en": "Hibiscus large",
+        "tr": "Hibiscus büyük",
+        "ar": "هيبسكوس كبير"
+      },
+      "category_id": "signature",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 34,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "hibiscus-medium",
+      "names": {
+        "en": "Hibiscus Medium",
+        "tr": "Hibiscus orta",
+        "ar": "هيبسكوس وسط"
+      },
+      "category_id": "signature",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 35,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "pina-colada",
+      "names": {
+        "en": "Pina colada",
+        "tr": "Pina colada",
+        "ar": "بينا كولادا وسط"
+      },
+      "category_id": "smoothies",
+      "price": 0,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 0,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "pineapple-orange-smoothie-medium",
+      "names": {
+        "en": "Pineapple orange smoothie medium",
+        "tr": "Pineapple orange smoothie orta",
+        "ar": "سموزي اناناس برتقال وسط"
+      },
+      "category_id": "smoothies",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 1,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "pineapple-smoothie-medium",
+      "names": {
+        "en": "Pineapple smoothie medium",
+        "tr": "Ananas smoothie orta",
+        "ar": "سموزي اناناس وسط"
+      },
+      "category_id": "smoothies",
+      "price": 200,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 2,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "passion-orange-smoothie-medium",
+      "names": {
+        "en": "Passion orange smoothie medium",
+        "tr": "Passion orange smoothie orta",
+        "ar": "سموزي باشن برتقال وسط"
+      },
+      "category_id": "smoothies",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 3,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "passion-mango-smoothie-medium",
+      "names": {
+        "en": "Passion mango smoothie medium",
+        "tr": "Passion mango smoothie orta",
+        "ar": "سموزي باشن مانجو وسط"
+      },
+      "category_id": "smoothies",
+      "price": 250,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 4,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "peach-orange-smoothie-medium",
+      "names": {
+        "en": "Peach orange smoothie medium",
+        "tr": "Şeftali portakal smoothie orta",
+        "ar": "سموزي برتقال دراق وسط"
+      },
+      "category_id": "smoothies",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 5,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "passion-peach-smoothie-medium",
+      "names": {
+        "en": "Passion peach smoothie medium",
+        "tr": "Passion peach smoothie orta",
+        "ar": "سموزي دراق باشن وسط"
+      },
+      "category_id": "smoothies",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 6,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "peach-smoothie-medium",
+      "names": {
+        "en": "Peach smoothie medium",
+        "tr": "Şeftali smoothie orta",
+        "ar": "سموزي دراق وسط"
+      },
+      "category_id": "smoothies",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 7,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "strawberry-smoothie-medium",
+      "names": {
+        "en": "Strawberry smoothie medium",
+        "tr": "Çilekli smoothie orta",
+        "ar": "سموزي فريز وسط"
+      },
+      "category_id": "smoothies",
+      "price": 170,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 8,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "caribbean-smoothie-medium",
+      "names": {
+        "en": "Caribbean smoothie medium",
+        "tr": "Karibbean smoothie orta",
+        "ar": "سموزي كاريبيان وسط"
+      },
+      "category_id": "smoothies",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 9,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "minted-lemonade-medium",
+      "names": {
+        "en": "Minted lemonade medium",
+        "tr": "Naneli limonata orta",
+        "ar": "سموزي ليمون بالنعناع وسط"
+      },
+      "category_id": "smoothies",
+      "price": 170,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 10,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "pink-lemonade-medium",
+      "names": {
+        "en": "Pink lemonade medium",
+        "tr": "pembe lemonata orta",
+        "ar": "سموزي ليمون مع رمان وسط"
+      },
+      "category_id": "smoothies",
+      "price": 250,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 11,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "strawberry-lemonade-smoothie-medium",
+      "names": {
+        "en": "Strawberry lemonade smoothie medium",
+        "tr": "Çilekli lemonata smoothie orta",
+        "ar": "سموزي ليموناضة بالفريز وسط"
+      },
+      "category_id": "smoothies",
+      "price": 180,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 12,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "strawberry-mango-smoothie-medium",
+      "names": {
+        "en": "Strawberry mango smoothie medium",
+        "tr": "Çilekli mango smoothie orta",
+        "ar": "سموزي مانجو فريز وسط"
+      },
+      "category_id": "smoothies",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 13,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "mango-smoothie-medium",
+      "names": {
+        "en": "Mango smoothie medium",
+        "tr": "Mango smoothie orta",
+        "ar": "سموزي مانجو وسط"
+      },
+      "category_id": "smoothies",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 14,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "mix-berries-smoothie-medium",
+      "names": {
+        "en": "Mix berries smoothie medium",
+        "tr": "Mix berries smoothie orta",
+        "ar": "سموزي ميكس بيريز وسط"
+      },
+      "category_id": "smoothies",
+      "price": 240,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 15,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "oreo-crepe",
+      "names": {
+        "en": "Oreo Crepe",
+        "tr": "Oreo krep",
+        "ar": "كريب اوريو"
+      },
+      "category_id": "sweets",
+      "price": 350,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 0,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "pistachio-crepe",
+      "names": {
+        "en": "Pistachio Crepe",
+        "tr": "Antep fıstığı krep",
+        "ar": "كريب بستاشيو"
+      },
+      "category_id": "sweets",
+      "price": 300,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 1,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "piko-crepe",
+      "names": {
+        "en": "Piko Crepe",
+        "tr": "Piko krep",
+        "ar": "كريب بيكو"
+      },
+      "category_id": "sweets",
+      "price": 420,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 2,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "cheesecake-crepe",
+      "names": {
+        "en": "Cheesecake Crepe",
+        "tr": "Cheesecake krep",
+        "ar": "كريب تشيز كيك"
+      },
+      "category_id": "sweets",
+      "price": 320,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 3,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "chocolate-crepe",
+      "names": {
+        "en": "Chocolate Crepe",
+        "tr": "Çikolata krep",
+        "ar": "كريب شوكولا"
+      },
+      "category_id": "sweets",
+      "price": 300,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 4,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "fruit-crepe",
+      "names": {
+        "en": "Fruit Crepe",
+        "tr": "Meyveli krep",
+        "ar": "كريب فواكه"
+      },
+      "category_id": "sweets",
+      "price": 400,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 5,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "fettuccine-crepe",
+      "names": {
+        "en": "Fettuccine Crepe",
+        "tr": "Fettucine",
+        "ar": "كريب فوتوتشيني"
+      },
+      "category_id": "sweets",
+      "price": 350,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 6,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "lotus-crepe",
+      "names": {
+        "en": "Lotus Crepe",
+        "tr": "Lotus Crepe",
+        "ar": "كريب لوتوس"
+      },
+      "category_id": "sweets",
+      "price": 380,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 7,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "oreo-waffle",
+      "names": {
+        "en": "Oreo Waffle",
+        "tr": "Oreo Waffle",
+        "ar": "وافل اوريو"
+      },
+      "category_id": "sweets",
+      "price": 350,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 8,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "pistachio-waffle",
+      "names": {
+        "en": "Pistachio Waffle",
+        "tr": "Antep fıstığı Waffle",
+        "ar": "وافل بستاشيو"
+      },
+      "category_id": "sweets",
+      "price": 390,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 9,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "chocolate-waffle",
+      "names": {
+        "en": "Chocolate Waffle",
+        "tr": "Çikolata Waffle",
+        "ar": "وافل شوكولا"
+      },
+      "category_id": "sweets",
+      "price": 280,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 10,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "strawberry-waffle",
+      "names": {
+        "en": "Strawberry Waffle",
+        "tr": "ÇİLEKli Waffle",
+        "ar": "وافل فريز"
+      },
+      "category_id": "sweets",
+      "price": 340,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 11,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "fruit-waffle",
+      "names": {
+        "en": "Fruit Waffle",
+        "tr": "meyveli Waffle",
+        "ar": "وافل فواكه"
+      },
+      "category_id": "sweets",
+      "price": 450,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 12,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "lotus-waffle",
+      "names": {
+        "en": "Lotus Waffle",
+        "tr": "Lotus Waffle",
+        "ar": "وافل لوتوس"
+      },
+      "category_id": "sweets",
+      "price": 450,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 13,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "marshmallow-waffle",
+      "names": {
+        "en": "Marshmallow Waffle",
+        "tr": "Marshmallow Waffle",
+        "ar": "وافل مارشميلو"
+      },
+      "category_id": "sweets",
+      "price": 300,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 14,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "oreo-pancake",
+      "names": {
+        "en": "Oreo Pancake",
+        "tr": "Oreo Pancake",
+        "ar": "بان كيك اوريو"
+      },
+      "category_id": "sweets",
+      "price": 320,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 15,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "pistachio-pancake",
+      "names": {
+        "en": "Pistachio Pancake",
+        "tr": "Antep fıstığı Pancake",
+        "ar": "بان كيك بستاشيو"
+      },
+      "category_id": "sweets",
+      "price": 350,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 16,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "tiramisu-pancake",
+      "names": {
+        "en": "Tiramisu Pancake",
+        "tr": "Tiramisu Pancake",
+        "ar": "بان كيك تيرامسو"
+      },
+      "category_id": "sweets",
+      "price": 320,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 17,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "chocolate-pancake",
+      "names": {
+        "en": "Chocolate Pancake",
+        "tr": "Chocolate Pancake",
+        "ar": "بان كيك شوكولا"
+      },
+      "category_id": "sweets",
+      "price": 300,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 18,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "fruit-pancake",
+      "names": {
+        "en": "Fruit Pancake",
+        "tr": "Fruit Pancake",
+        "ar": "بان كيك فواكه"
+      },
+      "category_id": "sweets",
+      "price": 450,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 19,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "lotus-pancake",
+      "names": {
+        "en": "Lotus Pancake",
+        "tr": "Lotus Pancake",
+        "ar": "بان كيك لوتوس"
+      },
+      "category_id": "sweets",
+      "price": 400,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 20,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "mini-oreo-pancake",
+      "names": {
+        "en": "Mini Oreo Pancake",
+        "tr": "Mini Oreo Pancake",
+        "ar": "ميني بان كيك اوريو"
+      },
+      "category_id": "sweets",
+      "price": 350,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 21,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "mini-pistachio-pancake",
+      "names": {
+        "en": "Mini Pistachio Pancake",
+        "tr": "Mini Antep fıstığı Pancake",
+        "ar": "ميني بان كيك بستاشيو"
+      },
+      "category_id": "sweets",
+      "price": 320,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 22,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "mini-chocolate-pancake",
+      "names": {
+        "en": "Mini Chocolate Pancake",
+        "tr": "Mini Çikolatalı Pancake",
+        "ar": "ميني بان كيك شوكولا"
+      },
+      "category_id": "sweets",
+      "price": 300,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 23,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "mini-fruit-pancake",
+      "names": {
+        "en": "Mini Fruit Pancake",
+        "tr": "Mini meyveli  Pancake",
+        "ar": "ميني بان كيك فواكه"
+      },
+      "category_id": "sweets",
+      "price": 450,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 24,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "mini-lotus-pancake",
+      "names": {
+        "en": "Mini Lotus Pancake",
+        "tr": "Mini Lotus Pancake",
+        "ar": "ميني بان كيك لوتوس"
+      },
+      "category_id": "sweets",
+      "price": 360,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 25,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    },
+    {
+      "id": "mixed-berry-pancake",
+      "names": {
+        "en": "Mixed Berry Pancake",
+        "tr": "Mixed Berry Pancake",
+        "ar": "ميني بان كيك ميكس بيري"
+      },
+      "category_id": "sweets",
+      "price": 350,
+      "image": null,
+      "tags": [
+        "menu-item"
+      ],
+      "is_available": true,
+      "order": 26,
+      "created_at": "2025-10-22T10:06:02.962Z"
+    }
+  ],
+  "generatedAt": "2025-10-22T10:06:02.962Z",
+  "version": "1.0.0",
+  "metadata": {
+    "totalCategories": 14,
+    "totalItems": 301,
+    "lastUpdated": "2025-10-22T10:26:45.494Z",
+    "cacheExpiry": "2025-10-22T11:06:02.964Z",
+    "imagesUpdated": true,
+    "categoriesWithImages": 14,
+    "itemsWithImages": 0
+  }
+}
