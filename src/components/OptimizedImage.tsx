@@ -36,7 +36,13 @@ export default function OptimizedImage({
     setIsLoaded(true);
   };
 
-  const finalSrc = hasError ? fallback : src;
+  // Don't try to load fallback if it's the same as the original or if it's a placeholder that doesn't exist
+  const shouldShowFallback =
+    hasError &&
+    fallback &&
+    fallback !== src &&
+    !fallback.includes('placeholder-image.jpg');
+  const finalSrc = shouldShowFallback ? fallback : src;
 
   return (
     <div className={cn('relative overflow-hidden bg-muted', className)}>
@@ -65,10 +71,10 @@ export default function OptimizedImage({
 
       {/* Error fallback */}
       {hasError && (
-        <div className='absolute inset-0 flex items-center justify-center bg-muted text-muted-foreground'>
+        <div className='absolute inset-0 flex items-center justify-center bg-gradient-to-br from-muted to-muted/50 text-muted-foreground'>
           <div className='text-center'>
-            <div className='text-2xl mb-2'>📷</div>
-            <div className='text-xs'>Image unavailable</div>
+            <div className='text-4xl mb-2 opacity-60'>🍽️</div>
+            <div className='text-xs font-medium'>No image available</div>
           </div>
         </div>
       )}

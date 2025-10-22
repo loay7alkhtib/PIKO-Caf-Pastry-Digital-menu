@@ -9,7 +9,7 @@
       },
       "icon": "🍽️",
       "color": "#0C6071",
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/categories/blended-coffee.jpg",
       "order": 0,
       "created_at": "2025-10-22T10:06:02.962Z"
     },
@@ -22,7 +22,7 @@
       },
       "icon": "🍽️",
       "color": "#0C6071",
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cold-drinks-1761123305331.jpg",
       "order": 1,
       "created_at": "2025-10-22T10:06:02.962Z"
     },
@@ -35,7 +35,7 @@
       },
       "icon": "🍽️",
       "color": "#0C6071",
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/categories/flavored-tea.jpg",
       "order": 2,
       "created_at": "2025-10-22T10:06:02.962Z"
     },
@@ -48,7 +48,7 @@
       },
       "icon": "🍽️",
       "color": "#0C6071",
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/categories/fresh-juices.jpg",
       "order": 3,
       "created_at": "2025-10-22T10:06:02.962Z"
     },
@@ -61,7 +61,7 @@
       },
       "icon": "🍽️",
       "color": "#0C6071",
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hot-coffee-1761123234431.jpg",
       "order": 4,
       "created_at": "2025-10-22T10:06:02.962Z"
     },
@@ -74,7 +74,7 @@
       },
       "icon": "🍽️",
       "color": "#0C6071",
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/categories/ice-coffee.jpg",
       "order": 5,
       "created_at": "2025-10-22T10:06:02.962Z"
     },
@@ -87,7 +87,7 @@
       },
       "icon": "🍽️",
       "color": "#0C6071",
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/categories/ice-cream.jpg",
       "order": 6,
       "created_at": "2025-10-22T10:06:02.962Z"
     },
@@ -100,7 +100,7 @@
       },
       "icon": "🍽️",
       "color": "#0C6071",
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/categories/matcha.jpg",
       "order": 7,
       "created_at": "2025-10-22T10:06:02.962Z"
     },
@@ -113,7 +113,7 @@
       },
       "icon": "🍽️",
       "color": "#0C6071",
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/categories/milkshakes.jpg",
       "order": 8,
       "created_at": "2025-10-22T10:06:02.962Z"
     },
@@ -126,7 +126,7 @@
       },
       "icon": "🍽️",
       "color": "#0C6071",
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/categories/mojitos.jpg",
       "order": 9,
       "created_at": "2025-10-22T10:06:02.962Z"
     },
@@ -139,7 +139,7 @@
       },
       "icon": "🍽️",
       "color": "#0C6071",
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/patisserie-1761123435554.jpg",
       "order": 10,
       "created_at": "2025-10-22T10:06:02.962Z"
     },
@@ -152,7 +152,7 @@
       },
       "icon": "🍽️",
       "color": "#0C6071",
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/signature-1761123399561.jpg",
       "order": 11,
       "created_at": "2025-10-22T10:06:02.962Z"
     },
@@ -165,7 +165,7 @@
       },
       "icon": "🍽️",
       "color": "#0C6071",
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/categories/smoothies.jpg",
       "order": 12,
       "created_at": "2025-10-22T10:06:02.962Z"
     },
@@ -178,7 +178,7 @@
       },
       "icon": "🍽️",
       "color": "#0C6071",
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/sweets-1761123368113.jpg",
       "order": 13,
       "created_at": "2025-10-22T10:06:02.962Z"
     }
@@ -227,7 +227,7 @@
       },
       "category_id": "blended-coffee",
       "price": 250,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/caramel-frappucino-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -244,7 +244,7 @@
       },
       "category_id": "blended-coffee",
       "price": 250,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cookies-frappucino-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -261,7 +261,7 @@
       },
       "category_id": "blended-coffee",
       "price": 250,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/mocha-frappucino-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -312,7 +312,7 @@
       },
       "category_id": "cold-drinks",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-butter-scotch-large.jpg",
       "tags": [
         "menu-item"
       ],
@@ -329,7 +329,7 @@
       },
       "category_id": "cold-drinks",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-butter-scotch-large.jpg",
       "tags": [
         "menu-item"
       ],
@@ -346,7 +346,7 @@
       },
       "category_id": "cold-drinks",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-butter-scotch-large.jpg",
       "tags": [
         "menu-item"
       ],
@@ -363,7 +363,7 @@
       },
       "category_id": "cold-drinks",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-piko-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -380,7 +380,7 @@
       },
       "category_id": "cold-drinks",
       "price": 240,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -397,7 +397,7 @@
       },
       "category_id": "cold-drinks",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -414,7 +414,7 @@
       },
       "category_id": "cold-drinks",
       "price": 190,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-pink-perry-matcha-latta.jpg",
       "tags": [
         "menu-item"
       ],
@@ -431,7 +431,7 @@
       },
       "category_id": "cold-drinks",
       "price": 250,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-pink-perry-matcha-latta-learg.jpg",
       "tags": [
         "menu-item"
       ],
@@ -448,7 +448,7 @@
       },
       "category_id": "cold-drinks",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-pink-perry-matcha-latta-learg.jpg",
       "tags": [
         "menu-item"
       ],
@@ -465,7 +465,7 @@
       },
       "category_id": "cold-drinks",
       "price": 190,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-pink-matcha-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -482,7 +482,7 @@
       },
       "category_id": "cold-drinks",
       "price": 250,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-matcha-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -499,7 +499,7 @@
       },
       "category_id": "cold-drinks",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-matcha-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -516,7 +516,7 @@
       },
       "category_id": "cold-drinks",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-cheese-cake-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -533,7 +533,7 @@
       },
       "category_id": "cold-drinks",
       "price": 250,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cheese-cake-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -550,7 +550,7 @@
       },
       "category_id": "cold-drinks",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cheese-cake-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -567,7 +567,7 @@
       },
       "category_id": "cold-drinks",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-toffee-nut-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -584,7 +584,7 @@
       },
       "category_id": "cold-drinks",
       "price": 240,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-toffee-nut-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -601,7 +601,7 @@
       },
       "category_id": "cold-drinks",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-toffee-nut-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -669,7 +669,7 @@
       },
       "category_id": "cold-drinks",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-spanish-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -686,7 +686,7 @@
       },
       "category_id": "cold-drinks",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/spanish-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -703,7 +703,7 @@
       },
       "category_id": "cold-drinks",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/spanish-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -720,7 +720,7 @@
       },
       "category_id": "flavored-tea",
       "price": 120,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/ginger-and-lemon.jpg",
       "tags": [
         "menu-item"
       ],
@@ -737,7 +737,7 @@
       },
       "category_id": "flavored-tea",
       "price": 120,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/flavoured-tea.jpg",
       "tags": [
         "menu-item"
       ],
@@ -754,7 +754,7 @@
       },
       "category_id": "flavored-tea",
       "price": 120,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/lime-blossom-tea.jpg",
       "tags": [
         "menu-item"
       ],
@@ -771,7 +771,7 @@
       },
       "category_id": "flavored-tea",
       "price": 40,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/tea.jpg",
       "tags": [
         "menu-item"
       ],
@@ -788,7 +788,7 @@
       },
       "category_id": "flavored-tea",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/chai-tea-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -805,7 +805,7 @@
       },
       "category_id": "flavored-tea",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-chai-tea-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -822,7 +822,7 @@
       },
       "category_id": "fresh-juices",
       "price": 170,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/orange-juice.jpg",
       "tags": [
         "menu-item"
       ],
@@ -839,7 +839,7 @@
       },
       "category_id": "fresh-juices",
       "price": 170,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/orange-carrot.jpg",
       "tags": [
         "menu-item"
       ],
@@ -856,7 +856,7 @@
       },
       "category_id": "fresh-juices",
       "price": 190,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/orange-carrot.jpg",
       "tags": [
         "menu-item"
       ],
@@ -873,7 +873,7 @@
       },
       "category_id": "fresh-juices",
       "price": 170,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/orange-lemon.jpg",
       "tags": [
         "menu-item"
       ],
@@ -890,7 +890,7 @@
       },
       "category_id": "fresh-juices",
       "price": 190,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/orange-lemon.jpg",
       "tags": [
         "menu-item"
       ],
@@ -907,7 +907,7 @@
       },
       "category_id": "fresh-juices",
       "price": 190,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/orange-juice.jpg",
       "tags": [
         "menu-item"
       ],
@@ -924,7 +924,7 @@
       },
       "category_id": "fresh-juices",
       "price": 170,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/apple-juice.jpg",
       "tags": [
         "menu-item"
       ],
@@ -941,7 +941,7 @@
       },
       "category_id": "fresh-juices",
       "price": 170,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/apple-carrot.jpg",
       "tags": [
         "menu-item"
       ],
@@ -958,7 +958,7 @@
       },
       "category_id": "fresh-juices",
       "price": 190,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/apple-carrot.jpg",
       "tags": [
         "menu-item"
       ],
@@ -975,7 +975,7 @@
       },
       "category_id": "fresh-juices",
       "price": 190,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/apple-juice.jpg",
       "tags": [
         "menu-item"
       ],
@@ -992,7 +992,7 @@
       },
       "category_id": "fresh-juices",
       "price": 170,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/carrot-juice.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1009,7 +1009,7 @@
       },
       "category_id": "fresh-juices",
       "price": 170,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/carrot-juice.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1026,7 +1026,7 @@
       },
       "category_id": "fresh-juices",
       "price": 170,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/lemonade.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1043,7 +1043,7 @@
       },
       "category_id": "fresh-juices",
       "price": 190,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/pink-lemonade-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1060,7 +1060,7 @@
       },
       "category_id": "hot-coffee",
       "price": 95,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/espresso.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1077,7 +1077,7 @@
       },
       "category_id": "hot-coffee",
       "price": 195,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/espresso-affogato.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1094,7 +1094,7 @@
       },
       "category_id": "hot-coffee",
       "price": 95,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/espresso-ristretto.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1111,7 +1111,7 @@
       },
       "category_id": "hot-coffee",
       "price": 120,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/espresso-macchiato.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1128,7 +1128,7 @@
       },
       "category_id": "hot-coffee",
       "price": 120,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/americano.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1162,7 +1162,7 @@
       },
       "category_id": "hot-coffee",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/butter-scotch-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1179,7 +1179,7 @@
       },
       "category_id": "hot-coffee",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-butter-scotch-large.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1196,7 +1196,7 @@
       },
       "category_id": "hot-coffee",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/piko-mocha.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1213,7 +1213,7 @@
       },
       "category_id": "hot-coffee",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/piko-mocha.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1230,7 +1230,7 @@
       },
       "category_id": "hot-coffee",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/pink-perry-matcha-latta.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1247,7 +1247,7 @@
       },
       "category_id": "hot-coffee",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/pink-matcha-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1264,7 +1264,7 @@
       },
       "category_id": "hot-coffee",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cheese-cake-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1281,7 +1281,7 @@
       },
       "category_id": "hot-coffee",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cheese-cake-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1298,7 +1298,7 @@
       },
       "category_id": "hot-coffee",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/toffee-nut-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1315,7 +1315,7 @@
       },
       "category_id": "hot-coffee",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-toffee-nut-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1332,7 +1332,7 @@
       },
       "category_id": "hot-coffee",
       "price": 110,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/double-espresso.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1349,7 +1349,7 @@
       },
       "category_id": "hot-coffee",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/zebra-mocha.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1383,7 +1383,7 @@
       },
       "category_id": "hot-coffee",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/spanish-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1400,7 +1400,7 @@
       },
       "category_id": "hot-coffee",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/spanish-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1417,7 +1417,7 @@
       },
       "category_id": "hot-coffee",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/strawberry-matcha-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1434,7 +1434,7 @@
       },
       "category_id": "hot-coffee",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/strawberry-mocha-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1451,7 +1451,7 @@
       },
       "category_id": "hot-coffee",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/strawberry-mocha-latte-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1468,7 +1468,7 @@
       },
       "category_id": "hot-coffee",
       "price": 150,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/sahlab-with-cinnamon.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1485,7 +1485,7 @@
       },
       "category_id": "hot-coffee",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/salted-caramel-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1502,7 +1502,7 @@
       },
       "category_id": "hot-coffee",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-salted-caramel-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1519,7 +1519,7 @@
       },
       "category_id": "hot-coffee",
       "price": 160,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/vanilla-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1536,7 +1536,7 @@
       },
       "category_id": "hot-coffee",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-vanilla-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1553,7 +1553,7 @@
       },
       "category_id": "hot-coffee",
       "price": 140,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/flat-white.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1570,7 +1570,7 @@
       },
       "category_id": "hot-coffee",
       "price": 160,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/flat-white.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1587,7 +1587,7 @@
       },
       "category_id": "hot-coffee",
       "price": 140,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/filter-coffee.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1604,7 +1604,7 @@
       },
       "category_id": "hot-coffee",
       "price": 160,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/filter-coffee-with-milk.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1621,7 +1621,7 @@
       },
       "category_id": "hot-coffee",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/filter-coffee.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1638,7 +1638,7 @@
       },
       "category_id": "hot-coffee",
       "price": 160,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/filter-coffee.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1655,7 +1655,7 @@
       },
       "category_id": "hot-coffee",
       "price": 195,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/v60.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1672,7 +1672,7 @@
       },
       "category_id": "hot-coffee",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/v60.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1689,7 +1689,7 @@
       },
       "category_id": "hot-coffee",
       "price": 95,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/turkish-coffee.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1706,7 +1706,7 @@
       },
       "category_id": "hot-coffee",
       "price": 135,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/double-turkish-coffee.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1723,7 +1723,7 @@
       },
       "category_id": "hot-coffee",
       "price": 95,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cardamom-coffee.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1740,7 +1740,7 @@
       },
       "category_id": "hot-coffee",
       "price": 135,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/double-cardamom-coffee.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1757,7 +1757,7 @@
       },
       "category_id": "hot-coffee",
       "price": 140,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cappuccino.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1774,7 +1774,7 @@
       },
       "category_id": "hot-coffee",
       "price": 160,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cappuccino.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1791,7 +1791,7 @@
       },
       "category_id": "hot-coffee",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/caramel-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1808,7 +1808,7 @@
       },
       "category_id": "hot-coffee",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-salted-caramel-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1825,7 +1825,7 @@
       },
       "category_id": "hot-coffee",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/caramel-macchiato.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1842,7 +1842,7 @@
       },
       "category_id": "hot-coffee",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/caramel-macchiato-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1859,7 +1859,7 @@
       },
       "category_id": "hot-coffee",
       "price": 140,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cortado.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1876,7 +1876,7 @@
       },
       "category_id": "hot-coffee",
       "price": 140,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1910,7 +1910,7 @@
       },
       "category_id": "hot-coffee",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/mocha-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1944,7 +1944,7 @@
       },
       "category_id": "hot-coffee",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hot-chocolate.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1961,7 +1961,7 @@
       },
       "category_id": "hot-coffee",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/chocolate-crepe.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1978,7 +1978,7 @@
       },
       "category_id": "hot-coffee",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/white-mocha-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -1995,7 +1995,7 @@
       },
       "category_id": "hot-coffee",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/mocha-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2012,7 +2012,7 @@
       },
       "category_id": "hot-coffee",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/white-hot-chocolate.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2029,7 +2029,7 @@
       },
       "category_id": "hot-coffee",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hot-chocolate.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2063,7 +2063,7 @@
       },
       "category_id": "ice-coffee",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-strawberry-mocha.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2080,7 +2080,7 @@
       },
       "category_id": "ice-coffee",
       "price": 240,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/strawberry-mocha-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2097,7 +2097,7 @@
       },
       "category_id": "ice-coffee",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/strawberry-mocha-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2114,7 +2114,7 @@
       },
       "category_id": "ice-coffee",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-salted-caramel-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2131,7 +2131,7 @@
       },
       "category_id": "ice-coffee",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-salted-caramel-latte-large.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2148,7 +2148,7 @@
       },
       "category_id": "ice-coffee",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-salted-caramel-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2165,7 +2165,7 @@
       },
       "category_id": "ice-coffee",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-chai-tea-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2182,7 +2182,7 @@
       },
       "category_id": "ice-coffee",
       "price": 240,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-chai-tea-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2199,7 +2199,7 @@
       },
       "category_id": "ice-coffee",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-chai-tea-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2216,7 +2216,7 @@
       },
       "category_id": "ice-coffee",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-vanilla-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2233,7 +2233,7 @@
       },
       "category_id": "ice-coffee",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-vanilla-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2250,7 +2250,7 @@
       },
       "category_id": "ice-coffee",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-vanilla-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2267,7 +2267,7 @@
       },
       "category_id": "ice-coffee",
       "price": 125,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-filter-coffee.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2284,7 +2284,7 @@
       },
       "category_id": "ice-coffee",
       "price": 140,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-filter-coffee-with-milk.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2301,7 +2301,7 @@
       },
       "category_id": "ice-coffee",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/filter-coffee.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2318,7 +2318,7 @@
       },
       "category_id": "ice-coffee",
       "price": 160,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/filter-coffee.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2335,7 +2335,7 @@
       },
       "category_id": "ice-coffee",
       "price": 145,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/filter-coffee.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2352,7 +2352,7 @@
       },
       "category_id": "ice-coffee",
       "price": 130,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/filter-coffee.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2369,7 +2369,7 @@
       },
       "category_id": "ice-coffee",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-caramel-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2386,7 +2386,7 @@
       },
       "category_id": "ice-coffee",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-salted-caramel-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2403,7 +2403,7 @@
       },
       "category_id": "ice-coffee",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-salted-caramel-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2420,7 +2420,7 @@
       },
       "category_id": "ice-coffee",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-caramel-macchiato.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2437,7 +2437,7 @@
       },
       "category_id": "ice-coffee",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/caramel-macchiato-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2454,7 +2454,7 @@
       },
       "category_id": "ice-coffee",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/caramel-macchiato-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2471,7 +2471,7 @@
       },
       "category_id": "ice-coffee",
       "price": 160,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2522,7 +2522,7 @@
       },
       "category_id": "ice-coffee",
       "price": 190,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-matcha-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2539,7 +2539,7 @@
       },
       "category_id": "ice-coffee",
       "price": 250,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-strawberry-matcha-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2556,7 +2556,7 @@
       },
       "category_id": "ice-coffee",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-strawberry-matcha-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2573,7 +2573,7 @@
       },
       "category_id": "ice-coffee",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-mocha-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2726,7 +2726,7 @@
       },
       "category_id": "ice-coffee",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/caramel-bubbles-iced-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2743,7 +2743,7 @@
       },
       "category_id": "ice-coffee",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/caramel-bubbles-iced-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2760,7 +2760,7 @@
       },
       "category_id": "ice-coffee",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/caramel-bubbles-iced-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2777,7 +2777,7 @@
       },
       "category_id": "ice-coffee",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/coconut-iced-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2794,7 +2794,7 @@
       },
       "category_id": "ice-coffee",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/coconut-iced-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2811,7 +2811,7 @@
       },
       "category_id": "ice-coffee",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/coconut-iced-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2828,7 +2828,7 @@
       },
       "category_id": "ice-cream",
       "price": 210,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/ice-cream-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2845,7 +2845,7 @@
       },
       "category_id": "matcha",
       "price": 190,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-strawberry-matcha-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2862,7 +2862,7 @@
       },
       "category_id": "matcha",
       "price": 250,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-strawberry-matcha-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2879,7 +2879,7 @@
       },
       "category_id": "matcha",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/iced-strawberry-matcha-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2896,7 +2896,7 @@
       },
       "category_id": "matcha",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/matcha-latte.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2913,7 +2913,7 @@
       },
       "category_id": "milkshakes",
       "price": 275,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/oreo-milkshake-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2930,7 +2930,7 @@
       },
       "category_id": "milkshakes",
       "price": 275,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/chocolate-milkshake-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2947,7 +2947,7 @@
       },
       "category_id": "milkshakes",
       "price": 275,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/vanilla-milkshake-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2964,7 +2964,7 @@
       },
       "category_id": "milkshakes",
       "price": 275,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/strawberry-milkshake-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2981,7 +2981,7 @@
       },
       "category_id": "milkshakes",
       "price": 275,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/caramel-milkshake-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -2998,7 +2998,7 @@
       },
       "category_id": "milkshakes",
       "price": 275,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cookies-milkshake-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3015,7 +3015,7 @@
       },
       "category_id": "milkshakes",
       "price": 275,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/lotus-milkshake-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3032,7 +3032,7 @@
       },
       "category_id": "mojitos",
       "price": 240,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/pineapple-mojito-redbull-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3083,7 +3083,7 @@
       },
       "category_id": "mojitos",
       "price": 240,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/passion-orange-mojito-redbull-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3134,7 +3134,7 @@
       },
       "category_id": "mojitos",
       "price": 240,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/passion-peach-mojito-redbull-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3185,7 +3185,7 @@
       },
       "category_id": "mojitos",
       "price": 240,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/orange-peach-mojito-redbull-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3236,7 +3236,7 @@
       },
       "category_id": "mojitos",
       "price": 240,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/peach-mojito-redbull-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3542,7 +3542,7 @@
       },
       "category_id": "mojitos",
       "price": 240,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/mango-mojito-redbull-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3593,7 +3593,7 @@
       },
       "category_id": "mojitos",
       "price": 290,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/mix-berries-mojito-redbull-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3644,7 +3644,7 @@
       },
       "category_id": "patisserie",
       "price": 0,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/opera-cake.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3661,7 +3661,7 @@
       },
       "category_id": "patisserie",
       "price": 0,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hazelnut-chimney-cake.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3678,7 +3678,7 @@
       },
       "category_id": "patisserie",
       "price": 0,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/chimney-cake.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3695,7 +3695,7 @@
       },
       "category_id": "patisserie",
       "price": 0,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/pistachio-cheesecake.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3712,7 +3712,7 @@
       },
       "category_id": "patisserie",
       "price": 0,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/blueberry-cheesecake.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3729,7 +3729,7 @@
       },
       "category_id": "patisserie",
       "price": 0,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/chocolate-cheesecake.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3746,7 +3746,7 @@
       },
       "category_id": "patisserie",
       "price": 0,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/strawberry-cheesecake.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3763,7 +3763,7 @@
       },
       "category_id": "patisserie",
       "price": 0,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/tiramisu.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3780,7 +3780,7 @@
       },
       "category_id": "patisserie",
       "price": 0,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/fondant-chocolate.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3797,7 +3797,7 @@
       },
       "category_id": "patisserie",
       "price": 0,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/croissants.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3814,7 +3814,7 @@
       },
       "category_id": "patisserie",
       "price": 0,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/pistachio-cookies.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3831,7 +3831,7 @@
       },
       "category_id": "patisserie",
       "price": 0,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hazelnut-cookies.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3848,7 +3848,7 @@
       },
       "category_id": "patisserie",
       "price": 0,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/raspberry-cookies.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3865,7 +3865,7 @@
       },
       "category_id": "patisserie",
       "price": 0,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cookies.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3882,7 +3882,7 @@
       },
       "category_id": "patisserie",
       "price": 0,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/lotus-cookies.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3899,7 +3899,7 @@
       },
       "category_id": "patisserie",
       "price": 0,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/carrot-cake.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3916,7 +3916,7 @@
       },
       "category_id": "patisserie",
       "price": 0,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/honey-cake.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3933,7 +3933,7 @@
       },
       "category_id": "patisserie",
       "price": 0,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/brownie-cake.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3950,7 +3950,7 @@
       },
       "category_id": "patisserie",
       "price": 0,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/san-sebastian-cake.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3967,7 +3967,7 @@
       },
       "category_id": "signature",
       "price": 160,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cool-lime.jpg",
       "tags": [
         "menu-item"
       ],
@@ -3984,7 +3984,7 @@
       },
       "category_id": "signature",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cool-lime-apple-bubbles.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4001,7 +4001,7 @@
       },
       "category_id": "signature",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cool-lime-apple-bubbles.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4018,7 +4018,7 @@
       },
       "category_id": "signature",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cool-lime-apple-bubbles.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4035,7 +4035,7 @@
       },
       "category_id": "signature",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cool-lime-blueberry-bubbles.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4052,7 +4052,7 @@
       },
       "category_id": "signature",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cool-lime-blueberry-bubbles.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4069,7 +4069,7 @@
       },
       "category_id": "signature",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cool-lime-blueberry-bubbles.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4086,7 +4086,7 @@
       },
       "category_id": "signature",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cool-lime-strawberry-bubbles.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4103,7 +4103,7 @@
       },
       "category_id": "signature",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cool-lime.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4120,7 +4120,7 @@
       },
       "category_id": "signature",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cool-lime.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4137,7 +4137,7 @@
       },
       "category_id": "signature",
       "price": 160,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cool-lime.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4154,7 +4154,7 @@
       },
       "category_id": "signature",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cool-lime.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4171,7 +4171,7 @@
       },
       "category_id": "signature",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cool-lime.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4188,7 +4188,7 @@
       },
       "category_id": "signature",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cool-lime-apple-bubbles.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4205,7 +4205,7 @@
       },
       "category_id": "signature",
       "price": 160,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cool-lime-mango-mix.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4222,7 +4222,7 @@
       },
       "category_id": "signature",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cool-lime-mango-mix.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4239,7 +4239,7 @@
       },
       "category_id": "signature",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cool-lime-mango-mix.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4256,7 +4256,7 @@
       },
       "category_id": "signature",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cool-lime-apple-bubbles.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4273,7 +4273,7 @@
       },
       "category_id": "signature",
       "price": 160,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hibiscus.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4290,7 +4290,7 @@
       },
       "category_id": "signature",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hibiscus-apple-bubbles.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4307,7 +4307,7 @@
       },
       "category_id": "signature",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hibiscus.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4324,7 +4324,7 @@
       },
       "category_id": "signature",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hibiscus.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4341,7 +4341,7 @@
       },
       "category_id": "signature",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hibiscus-blueberry-bubbles.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4358,7 +4358,7 @@
       },
       "category_id": "signature",
       "price": 160,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hibiscus.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4375,7 +4375,7 @@
       },
       "category_id": "signature",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hibiscus.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4392,7 +4392,7 @@
       },
       "category_id": "signature",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hibiscus.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4409,7 +4409,7 @@
       },
       "category_id": "signature",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hibiscus.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4426,7 +4426,7 @@
       },
       "category_id": "signature",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hibiscus.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4443,7 +4443,7 @@
       },
       "category_id": "signature",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hibiscus-strawberry-bubbles.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4460,7 +4460,7 @@
       },
       "category_id": "signature",
       "price": 160,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hibiscus.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4477,7 +4477,7 @@
       },
       "category_id": "signature",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hibiscus.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4494,7 +4494,7 @@
       },
       "category_id": "signature",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hibiscus.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4511,7 +4511,7 @@
       },
       "category_id": "signature",
       "price": 220,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hibiscus.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4528,7 +4528,7 @@
       },
       "category_id": "signature",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hibiscus.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4545,7 +4545,7 @@
       },
       "category_id": "signature",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hibiscus.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4562,7 +4562,7 @@
       },
       "category_id": "signature",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/hibiscus.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4579,7 +4579,7 @@
       },
       "category_id": "smoothies",
       "price": 0,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/pina-colada.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4596,7 +4596,7 @@
       },
       "category_id": "smoothies",
       "price": 240,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/pineapple-orange-smoothie-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4613,7 +4613,7 @@
       },
       "category_id": "smoothies",
       "price": 200,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/pineapple-smoothie-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4630,7 +4630,7 @@
       },
       "category_id": "smoothies",
       "price": 240,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/passion-orange-smoothie-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4647,7 +4647,7 @@
       },
       "category_id": "smoothies",
       "price": 250,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/passion-mango-smoothie-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4664,7 +4664,7 @@
       },
       "category_id": "smoothies",
       "price": 240,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/peach-orange-smoothie-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4681,7 +4681,7 @@
       },
       "category_id": "smoothies",
       "price": 240,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/passion-peach-smoothie-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4698,7 +4698,7 @@
       },
       "category_id": "smoothies",
       "price": 240,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/peach-smoothie-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4715,7 +4715,7 @@
       },
       "category_id": "smoothies",
       "price": 170,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/strawberry-smoothie-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4732,7 +4732,7 @@
       },
       "category_id": "smoothies",
       "price": 240,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/caribbean-smoothie-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4749,7 +4749,7 @@
       },
       "category_id": "smoothies",
       "price": 170,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/minted-lemonade-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4766,7 +4766,7 @@
       },
       "category_id": "smoothies",
       "price": 250,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/pink-lemonade-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4783,7 +4783,7 @@
       },
       "category_id": "smoothies",
       "price": 180,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/strawberry-lemonade-smoothie-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4800,7 +4800,7 @@
       },
       "category_id": "smoothies",
       "price": 240,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/strawberry-mango-smoothie-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4817,7 +4817,7 @@
       },
       "category_id": "smoothies",
       "price": 240,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/mango-smoothie-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4834,7 +4834,7 @@
       },
       "category_id": "smoothies",
       "price": 240,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/mix-berries-smoothie-medium.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4851,7 +4851,7 @@
       },
       "category_id": "sweets",
       "price": 350,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/oreo-crepe.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4868,7 +4868,7 @@
       },
       "category_id": "sweets",
       "price": 300,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/pistachio-crepe.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4885,7 +4885,7 @@
       },
       "category_id": "sweets",
       "price": 420,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/piko-crepe.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4902,7 +4902,7 @@
       },
       "category_id": "sweets",
       "price": 320,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/cheesecake-crepe.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4919,7 +4919,7 @@
       },
       "category_id": "sweets",
       "price": 300,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/chocolate-crepe.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4936,7 +4936,7 @@
       },
       "category_id": "sweets",
       "price": 400,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/fruit-crepe.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4953,7 +4953,7 @@
       },
       "category_id": "sweets",
       "price": 350,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/fettuccine-crepe.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4970,7 +4970,7 @@
       },
       "category_id": "sweets",
       "price": 380,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/lotus-crepe.jpg",
       "tags": [
         "menu-item"
       ],
@@ -4987,7 +4987,7 @@
       },
       "category_id": "sweets",
       "price": 350,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/oreo-waffle.jpg",
       "tags": [
         "menu-item"
       ],
@@ -5004,7 +5004,7 @@
       },
       "category_id": "sweets",
       "price": 390,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/pistachio-waffle.jpg",
       "tags": [
         "menu-item"
       ],
@@ -5021,7 +5021,7 @@
       },
       "category_id": "sweets",
       "price": 280,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/chocolate-waffle.jpg",
       "tags": [
         "menu-item"
       ],
@@ -5038,7 +5038,7 @@
       },
       "category_id": "sweets",
       "price": 340,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/strawberry-waffle.jpg",
       "tags": [
         "menu-item"
       ],
@@ -5055,7 +5055,7 @@
       },
       "category_id": "sweets",
       "price": 450,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/fruit-waffle.jpg",
       "tags": [
         "menu-item"
       ],
@@ -5072,7 +5072,7 @@
       },
       "category_id": "sweets",
       "price": 450,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/lotus-waffle.jpg",
       "tags": [
         "menu-item"
       ],
@@ -5089,7 +5089,7 @@
       },
       "category_id": "sweets",
       "price": 300,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/marshmallow-waffle.jpg",
       "tags": [
         "menu-item"
       ],
@@ -5106,7 +5106,7 @@
       },
       "category_id": "sweets",
       "price": 320,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/oreo-pancake.jpg",
       "tags": [
         "menu-item"
       ],
@@ -5123,7 +5123,7 @@
       },
       "category_id": "sweets",
       "price": 350,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/pistachio-pancake.jpg",
       "tags": [
         "menu-item"
       ],
@@ -5140,7 +5140,7 @@
       },
       "category_id": "sweets",
       "price": 320,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/tiramisu-pancake.jpg",
       "tags": [
         "menu-item"
       ],
@@ -5157,7 +5157,7 @@
       },
       "category_id": "sweets",
       "price": 300,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/chocolate-pancake.jpg",
       "tags": [
         "menu-item"
       ],
@@ -5174,7 +5174,7 @@
       },
       "category_id": "sweets",
       "price": 450,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/fruit-pancake.jpg",
       "tags": [
         "menu-item"
       ],
@@ -5191,7 +5191,7 @@
       },
       "category_id": "sweets",
       "price": 400,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/lotus-pancake.jpg",
       "tags": [
         "menu-item"
       ],
@@ -5208,7 +5208,7 @@
       },
       "category_id": "sweets",
       "price": 350,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/mini-oreo-pancake.jpg",
       "tags": [
         "menu-item"
       ],
@@ -5225,7 +5225,7 @@
       },
       "category_id": "sweets",
       "price": 320,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/mini-pistachio-pancake.jpg",
       "tags": [
         "menu-item"
       ],
@@ -5242,7 +5242,7 @@
       },
       "category_id": "sweets",
       "price": 300,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/mini-chocolate-pancake.jpg",
       "tags": [
         "menu-item"
       ],
@@ -5259,7 +5259,7 @@
       },
       "category_id": "sweets",
       "price": 450,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/mini-fruit-pancake.jpg",
       "tags": [
         "menu-item"
       ],
@@ -5276,7 +5276,7 @@
       },
       "category_id": "sweets",
       "price": 360,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/mini-lotus-pancake.jpg",
       "tags": [
         "menu-item"
       ],
@@ -5293,7 +5293,7 @@
       },
       "category_id": "sweets",
       "price": 350,
-      "image": null,
+      "image": "https://jppymhzgprvshurcqmdn.supabase.co/storage/v1/object/public/menu-images/menu-items/mixed-berry-pancake.jpg",
       "tags": [
         "menu-item"
       ],
@@ -5307,7 +5307,10 @@
   "metadata": {
     "totalCategories": 14,
     "totalItems": 301,
-    "lastUpdated": "2025-10-22T10:06:02.962Z",
-    "cacheExpiry": "2025-10-22T11:06:02.964Z"
+    "lastUpdated": "2025-10-22T10:27:53.596Z",
+    "cacheExpiry": "2025-10-22T11:06:02.964Z",
+    "imagesUpdated": true,
+    "categoriesWithImages": 14,
+    "itemsWithImages": 250
   }
 }
