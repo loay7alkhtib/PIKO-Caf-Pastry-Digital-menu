@@ -50,11 +50,12 @@ const DraggableCategoryItem = ({
         handlerId: monitor.getHandlerId(),
       };
     },
-    hover(item: { id: string; index: number }, monitor) {
+    hover(item: unknown, monitor) {
+      const dragItem = item as { id: string; index: number };
       if (!ref.current) {
         return;
       }
-      const dragIndex = item.index;
+      const dragIndex = dragItem.index;
       const hoverIndex = index;
 
       if (dragIndex === hoverIndex) {
@@ -76,7 +77,7 @@ const DraggableCategoryItem = ({
       }
 
       onMove(dragIndex, hoverIndex);
-      item.index = hoverIndex;
+      dragItem.index = hoverIndex;
     },
   });
 
