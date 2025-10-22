@@ -1,0 +1,4249 @@
+[
+  {
+    "id": "item_1761121366009_hx7juwkf4",
+    "name_ar": "اسبريسو",
+    "name_tr": "Espresso",
+    "name_en": "Espresso",
+    "category": "Hot Coffee",
+    "base_price": 95,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_llhvg359v",
+    "name_ar": "اسبريسو افوكاتو",
+    "name_tr": "Espresso Avokado",
+    "name_en": "Espresso Affogato",
+    "category": "Hot Coffee",
+    "base_price": 195,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_i7j0vvm55",
+    "name_ar": "اسبريسو ريستريتو",
+    "name_tr": "Espresso Ristretto",
+    "name_en": "Espresso Ristretto",
+    "category": "Hot Coffee",
+    "base_price": 95,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_fpt05ax3b",
+    "name_ar": "اسبريسو مكياتو",
+    "name_tr": "Espresso Macchiato",
+    "name_en": "Espresso Macchiato",
+    "category": "Hot Coffee",
+    "base_price": 120,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_1xez1lt7q",
+    "name_ar": "امريكانو",
+    "name_tr": "Americano",
+    "name_en": "Americano",
+    "category": "Hot Coffee",
+    "base_price": 120,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 120,
+        "name_ar": "امريكانو",
+        "name_tr": "Americano",
+        "name_en": "Americano"
+      },
+      {
+        "size": "medium",
+        "price": 140,
+        "name_ar": "امريكانو وسط",
+        "name_tr": "Americano orta",
+        "name_en": "Americano Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_jlh7zzyxg",
+    "name_ar": "بترسكوتش لاتيه",
+    "name_tr": "Butter scotch Latte",
+    "name_en": "Butter scotch Latte",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "بترسكوتش لاتيه",
+        "name_tr": "Butter scotch Latte",
+        "name_en": "Butter scotch Latte"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "بترسكوتش لاتيه وسط",
+        "name_tr": "Butter scotch Latte orta",
+        "name_en": "Butter scotch Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_gqqm12w55",
+    "name_ar": "بيكو موكا",
+    "name_tr": "Piko Mocha",
+    "name_en": "Piko Mocha",
+    "category": "Hot Coffee",
+    "base_price": 200,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "بيكو موكا",
+        "name_tr": "Piko Mocha",
+        "name_en": "Piko Mocha"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "بيكو موكا وسط",
+        "name_tr": "Piko Mocha orta",
+        "name_en": "Piko Mocha Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_i63elu5yq",
+    "name_ar": "بينك بيري ماتشا لاتيه",
+    "name_tr": "Pink Perry matcha latte",
+    "name_en": "Pink Perry matcha latta",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_d6v6uymuh",
+    "name_ar": "بينك ماتشا لاتيه",
+    "name_tr": "Pink matcha latte",
+    "name_en": "Pink matcha latte",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_ssziel2ct",
+    "name_ar": "تشيز كيك لاتيه",
+    "name_tr": "Cheese cake Latte",
+    "name_en": "Cheese cake Latte",
+    "category": "Hot Coffee",
+    "base_price": 200,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "تشيز كيك لاتيه",
+        "name_tr": "Cheese cake Latte",
+        "name_en": "Cheese cake Latte"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "تشيز كيك لاتيه وسط",
+        "name_tr": "Cheese cake Latte orta",
+        "name_en": "Cheese cake Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_n9k44h5a5",
+    "name_ar": "توفي نات لاتيه",
+    "name_tr": "Toffee fındık Latte",
+    "name_en": "Toffee Nut Latte",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "توفي نات لاتيه",
+        "name_tr": "Toffee fındık Latte",
+        "name_en": "Toffee Nut Latte"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "توفي نات لاتيه وسط",
+        "name_tr": "Toffee fındık Latte orta",
+        "name_en": "Toffee Nut Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_7puet36aj",
+    "name_ar": "دبل اسبريسو",
+    "name_tr": "Double Espresso",
+    "name_en": "Double Espresso",
+    "category": "Hot Coffee",
+    "base_price": 110,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_wfgt0e32o",
+    "name_ar": "زيبرا موكا",
+    "name_tr": "Zebra Mocha",
+    "name_en": "Zebra Mocha",
+    "category": "Hot Coffee",
+    "base_price": 200,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "زيبرا موكا",
+        "name_tr": "Zebra Mocha",
+        "name_en": "Zebra Mocha"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "زيبرا موكا وسط",
+        "name_tr": "Zebra Mocha orta",
+        "name_en": "Zebra Mocha Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_s77i6fej1",
+    "name_ar": "سبانش لاتيه",
+    "name_tr": "Spanish Latte",
+    "name_en": "Spanish Latte",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "سبانش لاتيه",
+        "name_tr": "Spanish Latte",
+        "name_en": "Spanish Latte"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "سبانش لاتيه وسط",
+        "name_tr": "Spanish Latte orta",
+        "name_en": "Spanish Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_03epma9k2",
+    "name_ar": "ستروبيري ماتشا لاتيه",
+    "name_tr": "Çilekli matcha latte",
+    "name_en": "Strawberry matcha latte",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_5d8n90ssr",
+    "name_ar": "ستروبيري موكا لاتيه",
+    "name_tr": "Çilekli Mocha Latte",
+    "name_en": "Strawberry Mocha Latte",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_tpjyznsvc",
+    "name_ar": "ستروبيري موكا لاتيه وسط",
+    "name_tr": "Çilekli mocha latte orta",
+    "name_en": "Strawberry mocha latte Medium",
+    "category": "Hot Coffee",
+    "base_price": 200,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_ccgnt71fu",
+    "name_ar": "سحلب بالقرفة",
+    "name_tr": "Sahlab with Cinnamon",
+    "name_en": "Sahlab with Cinnamon",
+    "category": "Hot Coffee",
+    "base_price": 150,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_t6b2iunms",
+    "name_ar": "سلتد كراميل لاتيه",
+    "name_tr": "Salted Caramel Latte",
+    "name_en": "Salted Caramel Latte",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "سلتد كراميل لاتيه",
+        "name_tr": "Salted Caramel Latte",
+        "name_en": "Salted Caramel Latte"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "سلتد كراميل لاتيه وسط",
+        "name_tr": "Salted Caramel Latte orta",
+        "name_en": "Salted Caramel Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_xhic0pntr",
+    "name_ar": "فانيليا لاتيه",
+    "name_tr": "Vanilla Latte",
+    "name_en": "Vanilla Latte",
+    "category": "Hot Coffee",
+    "base_price": 160,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 160,
+        "name_ar": "فانيليا لاتيه",
+        "name_tr": "Vanilla Latte",
+        "name_en": "Vanilla Latte"
+      },
+      {
+        "size": "medium",
+        "price": 180,
+        "name_ar": "فانيليا لاتيه وسط",
+        "name_tr": "Vanilla Latte orta",
+        "name_en": "Vanilla Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_pa3sfvuap",
+    "name_ar": "فلات وايت",
+    "name_tr": "Flat White",
+    "name_en": "Flat White",
+    "category": "Hot Coffee",
+    "base_price": 140,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 140,
+        "name_ar": "فلات وايت",
+        "name_tr": "Flat White",
+        "name_en": "Flat White"
+      },
+      {
+        "size": "medium",
+        "price": 160,
+        "name_ar": "فلات وايت وسط",
+        "name_tr": "Flat White orta",
+        "name_en": "Flat White Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_pl5yvinz2",
+    "name_ar": "فلتر قهوة",
+    "name_tr": "Filter kahve",
+    "name_en": "Filter Coffee",
+    "category": "Hot Coffee",
+    "base_price": 140,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 140,
+        "name_ar": "فلتر قهوة",
+        "name_tr": "Filter kahve",
+        "name_en": "Filter Coffee"
+      },
+      {
+        "size": "medium",
+        "price": 160,
+        "name_ar": "فلتر قهوة وسط",
+        "name_tr": "Filter Coffee orta",
+        "name_en": "Filter Coffee Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_wkuayabh1",
+    "name_ar": "فلتر قهوة بالحليب",
+    "name_tr": "Filter Coffee with Milk",
+    "name_en": "Filter Coffee with Milk",
+    "category": "Hot Coffee",
+    "base_price": 160,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 160,
+        "name_ar": "فلتر قهوة بالحليب",
+        "name_tr": "Filter Coffee with Milk",
+        "name_en": "Filter Coffee with Milk"
+      },
+      {
+        "size": "medium",
+        "price": 180,
+        "name_ar": "فلتر قهوة بالحليب وسط",
+        "name_tr": "Filter Coffee with Milk orta",
+        "name_en": "Filter Coffee with Milk Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_5lhumgshd",
+    "name_ar": "في 60",
+    "name_tr": "V60",
+    "name_en": "V60",
+    "category": "Hot Coffee",
+    "base_price": 195,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 195,
+        "name_ar": "في 60",
+        "name_tr": "V60",
+        "name_en": "V60"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "في 60 وسط",
+        "name_tr": "V60 orta",
+        "name_en": "V60 Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_3rpwyfjkq",
+    "name_ar": "قهوة تركية",
+    "name_tr": "Türk kahvesi",
+    "name_en": "Turkish Coffee",
+    "category": "Hot Coffee",
+    "base_price": 95,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_c0zreeuwa",
+    "name_ar": "قهوة تركية دبل",
+    "name_tr": "Double Türk kahvesi",
+    "name_en": "Double Turkish Coffee",
+    "category": "Hot Coffee",
+    "base_price": 135,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_bjsgsnr20",
+    "name_ar": "قهوة عربية",
+    "name_tr": "Cardamom  kahvesi",
+    "name_en": "Cardamom Coffee",
+    "category": "Hot Coffee",
+    "base_price": 95,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_a5ayfrig7",
+    "name_ar": "قهوة عربية دبل",
+    "name_tr": "Double cardamom  kahvesi",
+    "name_en": "Double cardamom Coffee",
+    "category": "Hot Coffee",
+    "base_price": 135,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_sprluqg7c",
+    "name_ar": "كابتشينو",
+    "name_tr": "Cappuccino",
+    "name_en": "Cappuccino",
+    "category": "Hot Coffee",
+    "base_price": 140,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 140,
+        "name_ar": "كابتشينو",
+        "name_tr": "Cappuccino",
+        "name_en": "Cappuccino"
+      },
+      {
+        "size": "medium",
+        "price": 160,
+        "name_ar": "كابتشينو وسط",
+        "name_tr": "Cappuccino orta",
+        "name_en": "Cappuccino Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_urngk5pr4",
+    "name_ar": "كراميل لاتيه",
+    "name_tr": "karamel Latte",
+    "name_en": "Caramel Latte",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "كراميل لاتيه",
+        "name_tr": "karamel Latte",
+        "name_en": "Caramel Latte"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "كراميل لاتيه وسط",
+        "name_tr": "karamel Latte orta",
+        "name_en": "Caramel Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_e2khctcyt",
+    "name_ar": "كراميل مكياتو",
+    "name_tr": "karamel Macchiato",
+    "name_en": "Caramel Macchiato",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_6w39cpznu",
+    "name_ar": "كراميل مكياتو وسط",
+    "name_tr": "karamel macchiato orta",
+    "name_en": "Caramel macchiato medium",
+    "category": "Hot Coffee",
+    "base_price": 200,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_t85xweytd",
+    "name_ar": "كورتادو",
+    "name_tr": "kortadu",
+    "name_en": "Cortado",
+    "category": "Hot Coffee",
+    "base_price": 140,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_hhi2v2rjl",
+    "name_ar": "لاتيه",
+    "name_tr": "Latte",
+    "name_en": "Latte",
+    "category": "Hot Coffee",
+    "base_price": 140,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 140,
+        "name_ar": "لاتيه",
+        "name_tr": "Latte",
+        "name_en": "Latte"
+      },
+      {
+        "size": "medium",
+        "price": 160,
+        "name_ar": "لاتيه وسط",
+        "name_tr": "Latte orta",
+        "name_en": "Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_sagh05dbe",
+    "name_ar": "موكا لاتيه",
+    "name_tr": "Mocha Latte",
+    "name_en": "Mocha Latte",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "موكا لاتيه",
+        "name_tr": "Mocha Latte",
+        "name_en": "Mocha Latte"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "موكا لاتيه وسط",
+        "name_tr": "Mocha Latte orta",
+        "name_en": "Mocha Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_jbmmo0hno",
+    "name_ar": "هوت شوكلت",
+    "name_tr": "Sıcak çikolata",
+    "name_en": "Hot Chocolate",
+    "category": "Hot Coffee",
+    "base_price": 200,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "هوت شوكلت",
+        "name_tr": "Sıcak çikolata",
+        "name_en": "Hot Chocolate"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "هوت شوكلت وسط",
+        "name_tr": "Sıcak çikolata orta",
+        "name_en": "Hot Chocolate Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_3s3yfcrzt",
+    "name_ar": "وايت موكا لاتيه",
+    "name_tr": "Beyaz Mocha Latte",
+    "name_en": "White Mocha Latte",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "وايت موكا لاتيه",
+        "name_tr": "Beyaz Mocha Latte",
+        "name_en": "White Mocha Latte"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "وايت موكا لاتيه وسط",
+        "name_tr": "Beyaz Mocha Latte orta",
+        "name_en": "White Mocha Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_888fkhlzm",
+    "name_ar": "وايت هوت شوكلت",
+    "name_tr": "Beyaz Hot Chocolate",
+    "name_en": "White Hot Chocolate",
+    "category": "Hot Coffee",
+    "base_price": 200,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "وايت هوت شوكلت",
+        "name_tr": "Beyaz Hot Chocolate",
+        "name_en": "White Hot Chocolate"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "وايت هوت شوكلت وسط",
+        "name_tr": "Beyaz Hot Chocolate orta",
+        "name_en": "White Hot Chocolate Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_m8r6g7664",
+    "name_ar": "ايس ستروبيري موكا",
+    "name_tr": " buzlu ÇİLEK mocha",
+    "name_en": "Iced strawberry mocha",
+    "category": "Ice Coffee",
+    "base_price": 200,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "ايس ستروبيري موكا",
+        "name_tr": " buzlu ÇİLEK mocha",
+        "name_en": "Iced strawberry mocha"
+      },
+      {
+        "size": "large",
+        "price": 240,
+        "name_ar": "ايس ستروبيري موكا كبير",
+        "name_tr": " buzlu ÇİLEK mocha büyük",
+        "name_en": "Iced strawberry mocha large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس ستروبيري موكا وسط",
+        "name_tr": " buzlu ÇİLEK mocha orta",
+        "name_en": "Iced strawberry mocha medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_3ll5daw9e",
+    "name_ar": "ايس سلتد كراميل لاتيه",
+    "name_tr": " buzlu Salted Caramel Latte",
+    "name_en": "Iced Salted Caramel Latte",
+    "category": "Ice Coffee",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "ايس سلتد كراميل لاتيه",
+        "name_tr": " buzlu Salted Caramel Latte",
+        "name_en": "Iced Salted Caramel Latte"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "ايس سلتد كراميل وسط",
+        "name_tr": " buzlu Salted Caramel Latte orta",
+        "name_en": "Iced Salted Caramel Latte medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_u1y3krtk8",
+    "name_ar": "ايس سلتد كراميل لاتيه كبير",
+    "name_tr": " buzlu salted caramel latte büyük",
+    "name_en": "Iced salted caramel latte large",
+    "category": "Ice Coffee",
+    "base_price": 220,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_6qu3ql862",
+    "name_ar": "ايس شاي تي لاتيه",
+    "name_tr": " buzlu chai tea latte",
+    "name_en": "Iced chai tea latte",
+    "category": "Ice Coffee",
+    "base_price": 200,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "ايس شاي تي لاتيه",
+        "name_tr": " buzlu chai tea latte",
+        "name_en": "Iced chai tea latte"
+      },
+      {
+        "size": "large",
+        "price": 240,
+        "name_ar": "ايس شاي تي لاتيه كبير",
+        "name_tr": " buzlu chai tea latte büyük",
+        "name_en": "Iced chai tea latte Large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس شاي تي لاتيه وسط",
+        "name_tr": " buzlu chai tea latte orta",
+        "name_en": "Iced chai tea latte medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_ecfutfsof",
+    "name_ar": "ايس فانيليا لاتيه",
+    "name_tr": " buzlu Vanilla Latte",
+    "name_en": "Iced Vanilla Latte",
+    "category": "Ice Coffee",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "ايس فانيليا لاتيه",
+        "name_tr": " buzlu Vanilla Latte",
+        "name_en": "Iced Vanilla Latte"
+      },
+      {
+        "size": "large",
+        "price": 220,
+        "name_ar": "ايس فانيليا لاتيه كبير",
+        "name_tr": " buzlu Vanilla Latte büyük",
+        "name_en": "Iced Vanilla Latte Large"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "ايس فانيليا لاتيه وسط",
+        "name_tr": " buzlu Vanilla Latte orta",
+        "name_en": "Iced Vanilla Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_jilzz8xs2",
+    "name_ar": "ايس فيلتر قهوة",
+    "name_tr": " buzlu Filtere kahve",
+    "name_en": "Iced Filter Coffee",
+    "category": "Ice Coffee",
+    "base_price": 125,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 125,
+        "name_ar": "ايس فيلتر قهوة",
+        "name_tr": " buzlu Filtere kahve",
+        "name_en": "Iced Filter Coffee"
+      },
+      {
+        "size": "large",
+        "price": 145,
+        "name_ar": "ايس فيلترة قهوة كبير",
+        "name_tr": " buzlu Filter Coffee büyük",
+        "name_en": "Iced Filter Coffee Large"
+      },
+      {
+        "size": "medium",
+        "price": 130,
+        "name_ar": "ايس فيلترة قهوة وسط",
+        "name_tr": " buzlu Filter Coffee orta",
+        "name_en": "Iced Filter Coffee Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_v9jkh87j9",
+    "name_ar": "ايس فيلتر قهوة بالحليب",
+    "name_tr": " buzlu Filter Coffee with Milk",
+    "name_en": "Iced Filter Coffee with Milk",
+    "category": "Ice Coffee",
+    "base_price": 140,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 140,
+        "name_ar": "ايس فيلتر قهوة بالحليب",
+        "name_tr": " buzlu Filter Coffee with Milk",
+        "name_en": "Iced Filter Coffee with Milk"
+      },
+      {
+        "size": "large",
+        "price": 180,
+        "name_ar": "ايس فيلترة قهوة بالحليب كبير",
+        "name_tr": " buzlu Filter Coffee with Milk büyük",
+        "name_en": "Iced Filter Coffee with Milk Large"
+      },
+      {
+        "size": "medium",
+        "price": 160,
+        "name_ar": "ايس فيلترة قهوة بالحليب وسط",
+        "name_tr": " buzlu Filter Coffee with Milk orta",
+        "name_en": "Iced Filter Coffee with Milk Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_cur41593f",
+    "name_ar": "ايس كراميل لاتيه",
+    "name_tr": " buzlu Caramel Latte",
+    "name_en": "Iced Caramel Latte",
+    "category": "Ice Coffee",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "ايس كراميل لاتيه",
+        "name_tr": " buzlu Caramel Latte",
+        "name_en": "Iced Caramel Latte"
+      },
+      {
+        "size": "large",
+        "price": 220,
+        "name_ar": "ايس كراميل لاتيه كبير",
+        "name_tr": " buzlu Caramel Latte büyük",
+        "name_en": "Iced Caramel Latte Large"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "ايس كراميل لاتيه وسط",
+        "name_tr": " buzlu Caramel Latte orta",
+        "name_en": "Iced Caramel Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_gkp4ljrpg",
+    "name_ar": "ايس كراميل مكياتو",
+    "name_tr": " buzlu caramel macchiato",
+    "name_en": "Iced caramel macchiato",
+    "category": "Ice Coffee",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "ايس كراميل مكياتو",
+        "name_tr": " buzlu caramel macchiato",
+        "name_en": "Iced caramel macchiato"
+      },
+      {
+        "size": "large",
+        "price": 220,
+        "name_ar": "ايس كراميل مكياتو كبير",
+        "name_tr": " buzlu karamel macchiato büyük",
+        "name_en": "Iced caramel macchiato Large"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "ايس كراميل مكياتو وسط",
+        "name_tr": "buzlu karamel macchiato orta",
+        "name_en": "Iced caramel macchiato Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_7ohayi994",
+    "name_ar": "ايس لاتيه",
+    "name_tr": "buzlu Latte",
+    "name_en": "Iced Latte",
+    "category": "Ice Coffee",
+    "base_price": 160,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 160,
+        "name_ar": "ايس لاتيه",
+        "name_tr": "buzlu Latte",
+        "name_en": "Iced Latte"
+      },
+      {
+        "size": "large",
+        "price": 200,
+        "name_ar": "ايس لاتيه كبير",
+        "name_tr": "buzlu Latte büyük",
+        "name_en": "Iced Latte Large"
+      },
+      {
+        "size": "medium",
+        "price": 180,
+        "name_ar": "ايس لاتيه وسط",
+        "name_tr": "buzlu Latte orta",
+        "name_en": "Iced Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_zbswrw3ub",
+    "name_ar": "ايس ماتشا لاتيه",
+    "name_tr": "buzlu Matcha latte",
+    "name_en": "Iced Matcha latte",
+    "category": "Ice Coffee",
+    "base_price": 190,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 190,
+        "name_ar": "ايس ماتشا لاتيه",
+        "name_tr": "buzlu Matcha latte",
+        "name_en": "Iced Matcha latte"
+      },
+      {
+        "size": "large",
+        "price": 250,
+        "name_ar": "ايس ماتشا لاتيه كبير",
+        "name_tr": "buzlu Matcha latte büyük",
+        "name_en": "Iced Matcha latte large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس ماتشا لاتيه وسط",
+        "name_tr": "buzlu Matcha latte orta",
+        "name_en": "Iced Matcha latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_tr700olla",
+    "name_ar": "ايس موكا لاتيه",
+    "name_tr": "buzlu Mocha Latte",
+    "name_en": "Iced Mocha Latte",
+    "category": "Ice Coffee",
+    "base_price": 200,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "ايس موكا لاتيه",
+        "name_tr": "buzlu Mocha Latte",
+        "name_en": "Iced Mocha Latte"
+      },
+      {
+        "size": "large",
+        "price": 240,
+        "name_ar": "ايس موكا لاتيه كبير",
+        "name_tr": "buzlu Mocha Latte büyük",
+        "name_en": "Iced Mocha Latte Large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس موكا لاتيه وسط",
+        "name_tr": "buzlu Mocha Latte orta",
+        "name_en": "Iced Mocha Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_3wrwexuvb",
+    "name_ar": "ايس وايت شوكليت موكا كبير",
+    "name_tr": "buzlu White Chocolate Mocha büyük",
+    "name_en": "Iced White Chocolate Mocha Large",
+    "category": "Ice Coffee",
+    "base_price": 240,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "large",
+        "price": 240,
+        "name_ar": "ايس وايت شوكليت موكا كبير",
+        "name_tr": "buzlu White Chocolate Mocha büyük",
+        "name_en": "Iced White Chocolate Mocha Large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس وايت شوكليت موكا وسط",
+        "name_tr": "buzlu White Chocolate Mocha orta",
+        "name_en": "Iced White Chocolate Mocha Medium"
+      },
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "ايس وايت موكا",
+        "name_tr": "buzlu White Chocolate Mocha",
+        "name_en": "Iced White Chocolate Mocha"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_d65alaglj",
+    "name_ar": "تشيري بلوسوم ايس لاتيه كبير",
+    "name_tr": "Cherry Blossom Iced Latte büyük",
+    "name_en": "Cherry Blossom Iced Latte Large",
+    "category": "Ice Coffee",
+    "base_price": 240,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "large",
+        "price": 240,
+        "name_ar": "تشيري بلوسوم ايس لاتيه كبير",
+        "name_tr": "Cherry Blossom Iced Latte büyük",
+        "name_en": "Cherry Blossom Iced Latte Large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "تشيري بلوسوم ايس لاتيه وسط",
+        "name_tr": "Cherry Blossom Iced Latte orta",
+        "name_en": "Cherry Blossom Iced Latte Medium"
+      },
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "شيري بلوسوم ايس لاتيه",
+        "name_tr": "Cherry Blossom Iced Latte",
+        "name_en": "Cherry Blossom Iced Latte"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_mmbqi4t2f",
+    "name_ar": "كراميل بابلز ايس لاتيه",
+    "name_tr": "Karamel bubbles Iced Latte",
+    "name_en": "Caramel bubbles Iced Latte",
+    "category": "Ice Coffee",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "كراميل بابلز ايس لاتيه",
+        "name_tr": "Karamel bubbles Iced Latte",
+        "name_en": "Caramel bubbles Iced Latte"
+      },
+      {
+        "size": "large",
+        "price": 220,
+        "name_ar": "كراميل بابلز ايس لاتيه كبير",
+        "name_tr": "karamel bubbles Iced Latte büyük",
+        "name_en": "Caramel bubbles Iced Latte Large"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "كراميل بابلز ايس لاتيه وسط",
+        "name_tr": "karamel bubbles Iced Latte orta",
+        "name_en": "Caramel bubbles Iced Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_blne86qyi",
+    "name_ar": "كوكو نت ايس لاتيه",
+    "name_tr": "Hinistan buzlu Latte",
+    "name_en": "Coconut Iced Latte",
+    "category": "Ice Coffee",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "كوكو نت ايس لاتيه",
+        "name_tr": "Hinistan buzlu Latte",
+        "name_en": "Coconut Iced Latte"
+      },
+      {
+        "size": "large",
+        "price": 220,
+        "name_ar": "كوكو نت ايس لاتيه كبير",
+        "name_tr": "Hindistan cevizi  buzlu  Latte büyük",
+        "name_en": "Coconut Iced Latte Large"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "كوكو نت ايس لاتيه وسط",
+        "name_tr": "Hindistan cevizi buzlu  Latte orta",
+        "name_en": "Coconut Iced Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366008_799xsd0vi",
+    "name_ar": "ايس امريكانو كبير",
+    "name_tr": " buzlu Americano büyük",
+    "name_en": "Iced Americano large",
+    "category": "Cold drinks",
+    "base_price": 170,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "large",
+        "price": 170,
+        "name_ar": "ايس امريكانو كبير",
+        "name_tr": " buzlu Americano büyük",
+        "name_en": "Iced Americano large"
+      },
+      {
+        "size": "medium",
+        "price": 150,
+        "name_ar": "ايس امريكانو وسط",
+        "name_tr": " buzlu Americano orta",
+        "name_en": "Iced Americano medium"
+      },
+      {
+        "size": "regular",
+        "price": 130,
+        "name_ar": "ايس امريكانو",
+        "name_tr": " buzlu Americano",
+        "name_en": "Iced Americano"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366008_yfts2r5pw",
+    "name_ar": "ايس بتر سكوتش كبير",
+    "name_tr": " buzlu butter scotch büyük",
+    "name_en": "Iced butter scotch large",
+    "category": "Cold drinks",
+    "base_price": 220,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "large",
+        "price": 220,
+        "name_ar": "ايس بتر سكوتش كبير",
+        "name_tr": " buzlu butter scotch büyük",
+        "name_en": "Iced butter scotch large"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "ايس بتر سكوتش وسط",
+        "name_tr": " buzlu butter scotch orta",
+        "name_en": "Iced butter scotch medium"
+      },
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "ايس بتر سوكتش لاتيه",
+        "name_tr": " buzlu butter scotch",
+        "name_en": "Iced butter scotch"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366008_6ux14belz",
+    "name_ar": "ايس بيكو لاتيه",
+    "name_tr": " buzlu piko latte",
+    "name_en": "Iced piko latte",
+    "category": "Cold drinks",
+    "base_price": 200,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "ايس بيكو لاتيه",
+        "name_tr": " buzlu piko latte",
+        "name_en": "Iced piko latte"
+      },
+      {
+        "size": "large",
+        "price": 240,
+        "name_ar": "ايس بيكو لاتيه كبير",
+        "name_tr": " buzlu piko latte  büyük",
+        "name_en": "Iced piko latte large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس بيكو لاتيه وسط",
+        "name_tr": " buzlu piko latte orta",
+        "name_en": "Iced piko latte medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366008_pnz7w7sb3",
+    "name_ar": "ايس بينك بيري ماتشا لاتيه",
+    "name_tr": " buzlu Pink Perry matcha latte",
+    "name_en": "Iced Pink Perry matcha latta",
+    "category": "Cold drinks",
+    "base_price": 190,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 190,
+        "name_ar": "ايس بينك بيري ماتشا لاتيه",
+        "name_tr": " buzlu Pink Perry matcha latte",
+        "name_en": "Iced Pink Perry matcha latta"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس بينك بيري ماتشا لاتيه وسط",
+        "name_tr": " buzlu pembe Perry matcha latte orta",
+        "name_en": "Iced Pink Perry matcha latta Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_j37wj2pjm",
+    "name_ar": "ايس بينك بيري ماتشا لاتيه كبير",
+    "name_tr": " buzlu Pink Perry matcha latte",
+    "name_en": "Iced Pink Perry matcha latta learg",
+    "category": "Cold drinks",
+    "base_price": 250,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_cz1iko8d0",
+    "name_ar": "ايس بينك ماتشا لاتيه",
+    "name_tr": " buzlu pemb matcha latte",
+    "name_en": "Iced Pink matcha latte",
+    "category": "Cold drinks",
+    "base_price": 190,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 190,
+        "name_ar": "ايس بينك ماتشا لاتيه",
+        "name_tr": " buzlu pemb matcha latte",
+        "name_en": "Iced Pink matcha latte"
+      },
+      {
+        "size": "large",
+        "price": 250,
+        "name_ar": "ايس بينك ماتشا لاتيه كبير",
+        "name_tr": " buzlu pembe matcha latte büyük",
+        "name_en": "Iced Pink matcha latte large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس بينك ماتشا لاتيه وسط",
+        "name_tr": " buzlu pembe matcha latte orta",
+        "name_en": "Iced Pink matcha latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_a518wakln",
+    "name_ar": "ايس تشيز كيك لاتيه",
+    "name_tr": " buzlu buzlu cheese cake latte",
+    "name_en": "Iced cheese cake latte",
+    "category": "Cold drinks",
+    "base_price": 200,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "ايس تشيز كيك لاتيه",
+        "name_tr": " buzlu buzlu cheese cake latte",
+        "name_en": "Iced cheese cake latte"
+      },
+      {
+        "size": "large",
+        "price": 250,
+        "name_ar": "ايس تشيز كيك لاتيه كبير",
+        "name_tr": " buzlu cheese cake latte büyük",
+        "name_en": "Iced cheese cake latte large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس تشيز كيك لاتيه وسط",
+        "name_tr": " buzlu cheese cake latte orta",
+        "name_en": "Iced cheese cake latte medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_fgy2llmwi",
+    "name_ar": "ايس توفي نت لاتيه",
+    "name_tr": " buzlu Toffee fındık Latte",
+    "name_en": "Iced Toffee Nut Latte",
+    "category": "Cold drinks",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "ايس توفي نت لاتيه",
+        "name_tr": " buzlu Toffee fındık Latte",
+        "name_en": "Iced Toffee Nut Latte"
+      },
+      {
+        "size": "large",
+        "price": 240,
+        "name_ar": "ايس توفي نت لاتيه كبير",
+        "name_tr": " buzlu Toffee fındık Latte büyük",
+        "name_en": "Iced Toffee Nut Latte Large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس توفي نت لاتيه وسط",
+        "name_tr": " buzlu Toffee fındık Latte orta",
+        "name_en": "Iced Toffee Nut Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_jr11nx7ff",
+    "name_ar": "ايس زيبرا موكا لاتيه كبير",
+    "name_tr": " buzlu Zebra mocha latte büyük",
+    "name_en": "Iced Zebra mocha latte large",
+    "category": "Cold drinks",
+    "base_price": 240,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "large",
+        "price": 240,
+        "name_ar": "ايس زيبرا موكا لاتيه كبير",
+        "name_tr": " buzlu Zebra mocha latte büyük",
+        "name_en": "Iced Zebra mocha latte large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس زيبرا موكا لاتيه وسط",
+        "name_tr": " buzlu Zebra mocha latte orta ",
+        "name_en": "Iced Zebra mocha latte medium"
+      },
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "ايس زيبره موكا لاتيه",
+        "name_tr": " buzlu Zebra mocha latte",
+        "name_en": "Iced Zebra mocha latte"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_hfn7d64z1",
+    "name_ar": "ايس سبانش لاتيه",
+    "name_tr": " buzlu Spanish Latte",
+    "name_en": "Iced Spanish Latte",
+    "category": "Cold drinks",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "ايس سبانش لاتيه",
+        "name_tr": " buzlu Spanish Latte",
+        "name_en": "Iced Spanish Latte"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "ايس سبانش لاتيه وسط",
+        "name_tr": " buzlu Spanish Latte orta",
+        "name_en": "Iced Spanish Latte medium"
+      },
+      {
+        "size": "large",
+        "price": 220,
+        "name_ar": "ايس سبانيش لاتيه كبير",
+        "name_tr": " buzlu Spanish Latte büyük",
+        "name_en": "Iced Spanish Latte Large"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366008_qpfos0j7t",
+    "name_ar": "بيستاشيو فراب وسط",
+    "name_tr": "Antep fıstıklığı frappucino orta",
+    "name_en": "Pistachio frappucino Medium",
+    "category": "Blended Coffee",
+    "base_price": 275,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366008_d65uv4elz",
+    "name_ar": "فانيليا فراب وسط",
+    "name_tr": "Vanilla frappucino orta",
+    "name_en": "Vanilla frappucino Medium",
+    "category": "Blended Coffee",
+    "base_price": 250,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366008_wl3451l65",
+    "name_ar": "كراميل فرابتشينو وسط",
+    "name_tr": "Karamel Frappucino orta",
+    "name_en": "Caramel Frappucino Medium",
+    "category": "Blended Coffee",
+    "base_price": 250,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366008_9nnfkizd3",
+    "name_ar": "كوكيز فراب وسط",
+    "name_tr": "Cookies frappucino orta",
+    "name_en": "Cookies frappucino Medium",
+    "category": "Blended Coffee",
+    "base_price": 250,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366008_5zqv2igyx",
+    "name_ar": "موكا فراب وسط",
+    "name_tr": "Mocha Frappucino orta",
+    "name_en": "Mocha Frappucino Medium",
+    "category": "Blended Coffee",
+    "base_price": 250,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_fmbks3rwy",
+    "name_ar": "ايس ستروبري ماتشا لاتيه",
+    "name_tr": "  buzlu ÇİLEK matcha latte",
+    "name_en": "Iced Strawberry matcha latte",
+    "category": "Matcha",
+    "base_price": 190,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 190,
+        "name_ar": "ايس ستروبري ماتشا لاتيه",
+        "name_tr": "  buzlu ÇİLEK matcha latte",
+        "name_en": "Iced Strawberry matcha latte"
+      },
+      {
+        "size": "large",
+        "price": 250,
+        "name_ar": "ايس ستروبري ماتشا لاتيه كبير",
+        "name_tr": " buzlu ÇİLEK matcha latte Soğuk",
+        "name_en": "Iced Strawberry matcha latte large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس ستروبري ماتشا لاتيه وسط",
+        "name_tr": " buzlu ÇİLEK matcha latte orta",
+        "name_en": "Iced Strawberry matcha latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_dugm1oyoo",
+    "name_ar": "ماتشا لاتيه",
+    "name_tr": "Matcha latte",
+    "name_en": "Matcha latte",
+    "category": "Matcha",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_6n1562tya",
+    "name_ar": "زنجبيل وليمون",
+    "name_tr": "zencefil ve limon",
+    "name_en": "Ginger and lemon",
+    "category": "Flavored tea",
+    "base_price": 120,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_bsmlana8d",
+    "name_ar": "زهورات",
+    "name_tr": "Papatya Çayı",
+    "name_en": "Flavoured tea",
+    "category": "Flavored tea",
+    "base_price": 120,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_k85o5p9s1",
+    "name_ar": "زيزفون",
+    "name_tr": "Lime ıhlamur Çay",
+    "name_en": "Lime blossom tea",
+    "category": "Flavored tea",
+    "base_price": 120,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_57akytkks",
+    "name_ar": "شاي",
+    "name_tr": "Çay",
+    "name_en": "Tea",
+    "category": "Flavored tea",
+    "base_price": 40,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_w4uro3rq1",
+    "name_ar": "شاي تي لاتيه",
+    "name_tr": "Çay Latte",
+    "name_en": "Chai Tea Latte",
+    "category": "Flavored tea",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "شاي تي لاتيه",
+        "name_tr": "Çay Latte",
+        "name_en": "Chai Tea Latte"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "شاي تي لاتيه وسط",
+        "name_tr": "Çay Latte orta",
+        "name_en": "Chai Tea Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_pljdbwug2",
+    "name_ar": "عصير برتقال",
+    "name_tr": "portakal meyve suyu",
+    "name_en": "Orange juice",
+    "category": "Fresh juices",
+    "base_price": 170,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 170,
+        "name_ar": "عصير برتقال",
+        "name_tr": "portakal meyve suyu",
+        "name_en": "Orange juice"
+      },
+      {
+        "size": "medium",
+        "price": 190,
+        "name_ar": "عصير برتقال وسط",
+        "name_tr": "portakal meyvesuyu orta",
+        "name_en": "Orange juice medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_0mo90dqec",
+    "name_ar": "عصير برتقال و جزر",
+    "name_tr": "portakal ve Havuç meyve suyu",
+    "name_en": "Orange carrot",
+    "category": "Fresh juices",
+    "base_price": 170,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 170,
+        "name_ar": "عصير برتقال و جزر",
+        "name_tr": "portakal ve Havuç meyve suyu",
+        "name_en": "Orange carrot"
+      },
+      {
+        "size": "medium",
+        "price": 190,
+        "name_ar": "عصير برتقال و جزر وسط",
+        "name_tr": "Porttakal havuç orta",
+        "name_en": "Orange carrot medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_th3awm6f3",
+    "name_ar": "عصير برتقال و ليمون",
+    "name_tr": "portakal lemon",
+    "name_en": "Orange lemon",
+    "category": "Fresh juices",
+    "base_price": 170,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 170,
+        "name_ar": "عصير برتقال و ليمون",
+        "name_tr": "portakal lemon",
+        "name_en": "Orange lemon"
+      },
+      {
+        "size": "medium",
+        "price": 190,
+        "name_ar": "عصير برتقال و ليمون وسط",
+        "name_tr": "portakal lemon orta",
+        "name_en": "Orange lemon medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_m1levkuwu",
+    "name_ar": "عصير تفاح",
+    "name_tr": "Elma meyvesuyu",
+    "name_en": "Apple juice",
+    "category": "Fresh juices",
+    "base_price": 170,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 170,
+        "name_ar": "عصير تفاح",
+        "name_tr": "Elma meyvesuyu",
+        "name_en": "Apple juice"
+      },
+      {
+        "size": "medium",
+        "price": 190,
+        "name_ar": "عصير تفاح وسط",
+        "name_tr": "Elma suyu orta",
+        "name_en": "Apple juice medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_s7f061tzi",
+    "name_ar": "عصير تفاح و جزر",
+    "name_tr": "Elma carrot meyvesuyu",
+    "name_en": "Apple carrot",
+    "category": "Fresh juices",
+    "base_price": 170,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 170,
+        "name_ar": "عصير تفاح و جزر",
+        "name_tr": "Elma carrot meyvesuyu",
+        "name_en": "Apple carrot"
+      },
+      {
+        "size": "medium",
+        "price": 190,
+        "name_ar": "عصير تفاح و جزر وسط",
+        "name_tr": "Elma havuç orta",
+        "name_en": "Apple carrot medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_zigdvwey8",
+    "name_ar": "عصير جزر",
+    "name_tr": "Havuç meyve suyu",
+    "name_en": "Carrot juice",
+    "category": "Fresh juices",
+    "base_price": 170,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 170,
+        "name_ar": "عصير جزر",
+        "name_tr": "Havuç meyve suyu",
+        "name_en": "Carrot juice"
+      },
+      {
+        "size": "medium",
+        "price": 170,
+        "name_ar": "عصير جزر وسط",
+        "name_tr": "Havuç suyu orta",
+        "name_en": "Carrot juice medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_69vhsbpta",
+    "name_ar": "عصير ليمون",
+    "name_tr": "Lemonta",
+    "name_en": "Lemonade",
+    "category": "Fresh juices",
+    "base_price": 170,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 170,
+        "name_ar": "عصير ليمون",
+        "name_tr": "Lemonta",
+        "name_en": "Lemonade"
+      },
+      {
+        "size": "medium",
+        "price": 190,
+        "name_ar": "عصير ليمون وسط",
+        "name_tr": "Lemonata orta",
+        "name_en": "Lemonade medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2
+  },
+  {
+    "id": "item_1761121366009_m6bkfwypp",
+    "name_ar": "ميلك شيك اوريو وسط",
+    "name_tr": "Oreo milkshake orta",
+    "name_en": "Oreo milkshake medium",
+    "category": "Milkshakes",
+    "base_price": 275,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_husjaevr0",
+    "name_ar": "ميلك شيك شوكولا وسط",
+    "name_tr": "Chocolate milkshake orta",
+    "name_en": "Chocolate milkshake medium",
+    "category": "Milkshakes",
+    "base_price": 275,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_s3q1ajw3k",
+    "name_ar": "ميلك شيك فانيليا وسط",
+    "name_tr": "Vanilla milkshake orta",
+    "name_en": "Vanilla milkshake medium",
+    "category": "Milkshakes",
+    "base_price": 275,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_o1ojenfa2",
+    "name_ar": "ميلك شيك فريز وسط",
+    "name_tr": "ÇİLEK milkshake orta",
+    "name_en": "Strawberry milkshake medium",
+    "category": "Milkshakes",
+    "base_price": 275,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_qm2blc343",
+    "name_ar": "ميلك شيك كراميل وسط",
+    "name_tr": "karamel milkshake orta",
+    "name_en": "Caramel milkshake medium",
+    "category": "Milkshakes",
+    "base_price": 275,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_ijjqhmwlw",
+    "name_ar": "ميلك شيك كوكيز وسط",
+    "name_tr": "Cookies milkshake orta",
+    "name_en": "Cookies milkshake medium",
+    "category": "Milkshakes",
+    "base_price": 275,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_sd52mgktw",
+    "name_ar": "ميلك شيك لوتوس وسط",
+    "name_tr": "Lotus milkshake orta",
+    "name_en": "Lotus milkshake medium",
+    "category": "Milkshakes",
+    "base_price": 275,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_592q2b4jr",
+    "name_ar": "موهيتو اناناس ريد بول وسط",
+    "name_tr": "Ananas mojito RedBull orta",
+    "name_en": "Pineapple mojito RedBull medium",
+    "category": "Mojitos",
+    "base_price": 240,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 240,
+        "name_ar": "موهيتو اناناس ريد بول وسط",
+        "name_tr": "Ananas mojito RedBull orta",
+        "name_en": "Pineapple mojito RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 220,
+        "name_ar": "موهيتو اناناس سفن وسط",
+        "name_tr": "Ananas  mojito 7up orta",
+        "name_en": "Pineapple mojito 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 200,
+        "name_ar": "موهيتو اناناس صودا وسط",
+        "name_tr": "Ananas  mojito soda orta",
+        "name_en": "Pineapple mojito soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_qdwmrueg4",
+    "name_ar": "موهيتو باشن برتقال ريد بول وسط",
+    "name_tr": "Passion portakal mojito RedBull orta",
+    "name_en": "Passion orange mojito RedBull medium",
+    "category": "Mojitos",
+    "base_price": 240,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 240,
+        "name_ar": "موهيتو باشن برتقال ريد بول وسط",
+        "name_tr": "Passion portakal mojito RedBull orta",
+        "name_en": "Passion orange mojito RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 220,
+        "name_ar": "موهيتو باشن برتقال سفن وسط",
+        "name_tr": "Passion portakal mojito 7up orta",
+        "name_en": "Passion orange mojito 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 200,
+        "name_ar": "موهيتو باشن برتقال صودا وسط",
+        "name_tr": "Passion portakal mojito soda orta",
+        "name_en": "Passion orange mojito soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_dvy6scuya",
+    "name_ar": "موهيتو باشن دراق ريد بول وسط",
+    "name_tr": "Passion Şeftali mojito RedBull orta",
+    "name_en": "Passion peach mojito RedBull medium",
+    "category": "Mojitos",
+    "base_price": 240,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 240,
+        "name_ar": "موهيتو باشن دراق ريد بول وسط",
+        "name_tr": "Passion Şeftali mojito RedBull orta",
+        "name_en": "Passion peach mojito RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 220,
+        "name_ar": "موهيتو باشن دراق سفن وسط",
+        "name_tr": "Passion Şeftali mojito 7up orta",
+        "name_en": "Passion peach mojito 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 200,
+        "name_ar": "موهيتو باشن دراق صودا وسط",
+        "name_tr": "Passion Şeftali mojito soda orta",
+        "name_en": "Passion peach mojito soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_79r7ssdnj",
+    "name_ar": "موهيتو برتقال دراق ريد بول وسط",
+    "name_tr": "portakal Şeftali mojito RedBull orta",
+    "name_en": "Orange peach mojito RedBull medium",
+    "category": "Mojitos",
+    "base_price": 240,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 240,
+        "name_ar": "موهيتو برتقال دراق ريد بول وسط",
+        "name_tr": "portakal Şeftali mojito RedBull orta",
+        "name_en": "Orange peach mojito RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 220,
+        "name_ar": "موهيتو برتقال دراق سفن وسط",
+        "name_tr": "portakal Şeftali mojito 7up orta",
+        "name_en": "Orange peach mojito 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 200,
+        "name_ar": "موهيتو برتقال دراق صودا وسط",
+        "name_tr": "portakal Şeftali mojito soda orta",
+        "name_en": "Orange peach mojito soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_67cu6ndju",
+    "name_ar": "موهيتو دراق ريد بول وسط",
+    "name_tr": "Şeftali mojito RedBull orta",
+    "name_en": "Peach mojito RedBull medium",
+    "category": "Mojitos",
+    "base_price": 240,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 240,
+        "name_ar": "موهيتو دراق ريد بول وسط",
+        "name_tr": "Şeftali mojito RedBull orta",
+        "name_en": "Peach mojito RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 220,
+        "name_ar": "موهيتو دراق سفن وسط",
+        "name_tr": "Şeftali mojito 7up orta",
+        "name_en": "Peach mojito 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 200,
+        "name_ar": "موهيتو دراق صودا وسط",
+        "name_tr": "Şeftali mojito soda orta",
+        "name_en": "Peach mojito soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_opyotmfa9",
+    "name_ar": "موهيتو رمان ريد بول وسط",
+    "name_tr": "Pomegranate mojito RedBull orta",
+    "name_en": "Pomegranate mojito RedBull medium",
+    "category": "Mojitos",
+    "base_price": 240,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 240,
+        "name_ar": "موهيتو رمان ريد بول وسط",
+        "name_tr": "Pomegranate mojito RedBull orta",
+        "name_en": "Pomegranate mojito RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 220,
+        "name_ar": "موهيتو رمان سفن وسط",
+        "name_tr": "Pomegranate mojito 7up orta",
+        "name_en": "Pomegranate mojito 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 200,
+        "name_ar": "موهيتو رمان صودا وسط",
+        "name_tr": "Pomegranate mojito soda orta",
+        "name_en": "Pomegranate mojito soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_alujwz08v",
+    "name_ar": "موهيتو زنجبيل ريد بول وسط",
+    "name_tr": "zencefil mojito RedBull orta",
+    "name_en": "Ginger mojito RedBull medium",
+    "category": "Mojitos",
+    "base_price": 240,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 240,
+        "name_ar": "موهيتو زنجبيل ريد بول وسط",
+        "name_tr": "zencefil mojito RedBull orta",
+        "name_en": "Ginger mojito RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 220,
+        "name_ar": "موهيتو زنجبيل سفن وسط",
+        "name_tr": "zencefil mojito 7up orta",
+        "name_en": "Ginger mojito 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 200,
+        "name_ar": "موهيتو زنجبيل صودا وسط",
+        "name_tr": "zencefil mojito soda orta",
+        "name_en": "Ginger mojito soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_27dclohp8",
+    "name_ar": "موهيتو فريز ريد بول وسط",
+    "name_tr": "ÇİLEK mojito RedBull orta",
+    "name_en": "Strawberry mojito RedBull medium",
+    "category": "Mojitos",
+    "base_price": 240,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 240,
+        "name_ar": "موهيتو فريز ريد بول وسط",
+        "name_tr": "ÇİLEK mojito RedBull orta",
+        "name_en": "Strawberry mojito RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 220,
+        "name_ar": "موهيتو فريز سفن وسط",
+        "name_tr": "ÇİLEK mojito 7up orta",
+        "name_en": "Strawberry mojito 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 200,
+        "name_ar": "موهيتو فريز صودا وسط",
+        "name_tr": "ÇİLEK mojito soda orta",
+        "name_en": "Strawberry mojito soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_9flx0sgva",
+    "name_ar": "موهيتو كلاسيك ريد بول وسط",
+    "name_tr": "Mojito classic RedBull orta",
+    "name_en": "Mojito classic RedBull medium",
+    "category": "Mojitos",
+    "base_price": 240,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 240,
+        "name_ar": "موهيتو كلاسيك ريد بول وسط",
+        "name_tr": "Mojito classic RedBull orta",
+        "name_en": "Mojito classic RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 220,
+        "name_ar": "موهيتو كلاسيك سفن وسط",
+        "name_tr": "Mojito classic 7up orta",
+        "name_en": "Mojito classic 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 200,
+        "name_ar": "موهيتو كلاسيك صودا وسط",
+        "name_tr": "Mojito classic soda orta",
+        "name_en": "Mojito classic soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_dislzvhx3",
+    "name_ar": "موهيتو كيوي ريد بول وسط",
+    "name_tr": "Kiwi mojito RedBull orta",
+    "name_en": "Kiwi mojito RedBull medium",
+    "category": "Mojitos",
+    "base_price": 240,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 240,
+        "name_ar": "موهيتو كيوي ريد بول وسط",
+        "name_tr": "Kiwi mojito RedBull orta",
+        "name_en": "Kiwi mojito RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 220,
+        "name_ar": "موهيتو كيوي سفن وسط",
+        "name_tr": "Kiwi mojito 7up orta",
+        "name_en": "Kiwi mojito 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 200,
+        "name_ar": "موهيتو كيوي صودا وسط",
+        "name_tr": "Kiwi mojito soda orta",
+        "name_en": "Kiwi mojito soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_8fa04njz3",
+    "name_ar": "موهيتو مانجو ريد بول وسط",
+    "name_tr": "Mango mojito RedBull orta",
+    "name_en": "Mango mojito RedBull medium",
+    "category": "Mojitos",
+    "base_price": 240,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 240,
+        "name_ar": "موهيتو مانجو ريد بول وسط",
+        "name_tr": "Mango mojito RedBull orta",
+        "name_en": "Mango mojito RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 220,
+        "name_ar": "موهيتو مانجو سفن وسط",
+        "name_tr": "Mango mojito 7up orta",
+        "name_en": "Mango mojito 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 200,
+        "name_ar": "موهيتو مانجو صودا وسط",
+        "name_tr": "Mango mojito soda orta",
+        "name_en": "Mango mojito soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_93zogdp8p",
+    "name_ar": "موهيتو ميكس بيري ريد بول وسط",
+    "name_tr": "Mix berries mojito RedBull orta",
+    "name_en": "Mix berries mojito RedBull medium",
+    "category": "Mojitos",
+    "base_price": 290,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 290,
+        "name_ar": "موهيتو ميكس بيري ريد بول وسط",
+        "name_tr": "Mix berries mojito RedBull orta",
+        "name_en": "Mix berries mojito RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 260,
+        "name_ar": "موهيتو ميكس بيري سفن وسط",
+        "name_tr": "Mix berries mojito 7up orta",
+        "name_en": "Mix berries mojito 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 230,
+        "name_ar": "موهيتو ميكس بيري صودا وسط",
+        "name_tr": "Mix berries mojito soda orta",
+        "name_en": "Mix berries mojito soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_9zfy9qwku",
+    "name_ar": "بينا كولادا وسط",
+    "name_tr": "Pina colada",
+    "name_en": "Pina colada",
+    "category": "Smoothies",
+    "base_price": 0,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_429cfk7bo",
+    "name_ar": "سموزي اناناس برتقال وسط",
+    "name_tr": "Pineapple orange smoothie orta",
+    "name_en": "Pineapple orange smoothie medium",
+    "category": "Smoothies",
+    "base_price": 240,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_a5dvicktx",
+    "name_ar": "سموزي اناناس وسط",
+    "name_tr": "Ananas smoothie orta",
+    "name_en": "Pineapple smoothie medium",
+    "category": "Smoothies",
+    "base_price": 200,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_yp60o4eq3",
+    "name_ar": "سموزي باشن برتقال وسط",
+    "name_tr": "Passion orange smoothie orta",
+    "name_en": "Passion orange smoothie medium",
+    "category": "Smoothies",
+    "base_price": 240,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_d2tdds0z0",
+    "name_ar": "سموزي باشن مانجو وسط",
+    "name_tr": "Passion mango smoothie orta",
+    "name_en": "Passion mango smoothie medium",
+    "category": "Smoothies",
+    "base_price": 250,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_jddgsqrr6",
+    "name_ar": "سموزي برتقال دراق وسط",
+    "name_tr": "Şeftali portakal smoothie orta",
+    "name_en": "Peach orange smoothie medium",
+    "category": "Smoothies",
+    "base_price": 240,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_iroz57g4b",
+    "name_ar": "سموزي دراق باشن وسط",
+    "name_tr": "Passion peach smoothie orta",
+    "name_en": "Passion peach smoothie medium",
+    "category": "Smoothies",
+    "base_price": 240,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_jgfrr7a1w",
+    "name_ar": "سموزي دراق وسط",
+    "name_tr": "Şeftali smoothie orta",
+    "name_en": "Peach smoothie medium",
+    "category": "Smoothies",
+    "base_price": 240,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_7b1extnph",
+    "name_ar": "سموزي فريز وسط",
+    "name_tr": "Çilekli smoothie orta",
+    "name_en": "Strawberry smoothie medium",
+    "category": "Smoothies",
+    "base_price": 170,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_wnkathaag",
+    "name_ar": "سموزي كاريبيان وسط",
+    "name_tr": "Karibbean smoothie orta",
+    "name_en": "Caribbean smoothie medium",
+    "category": "Smoothies",
+    "base_price": 240,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_7y9nto5po",
+    "name_ar": "سموزي ليمون بالنعناع وسط",
+    "name_tr": "Naneli limonata orta",
+    "name_en": "Minted lemonade medium",
+    "category": "Smoothies",
+    "base_price": 170,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_wcpg4lp1e",
+    "name_ar": "سموزي ليمون مع رمان وسط",
+    "name_tr": "pembe lemonata orta",
+    "name_en": "Pink lemonade medium",
+    "category": "Smoothies",
+    "base_price": 250,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_0lbw5ega1",
+    "name_ar": "سموزي ليموناضة بالفريز وسط",
+    "name_tr": "Çilekli lemonata smoothie orta",
+    "name_en": "Strawberry lemonade smoothie medium",
+    "category": "Smoothies",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_rqdqzrwb0",
+    "name_ar": "سموزي مانجو فريز وسط",
+    "name_tr": "Çilekli mango smoothie orta",
+    "name_en": "Strawberry mango smoothie medium",
+    "category": "Smoothies",
+    "base_price": 240,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_ly9nfhbf5",
+    "name_ar": "سموزي مانجو وسط",
+    "name_tr": "Mango smoothie orta",
+    "name_en": "Mango smoothie medium",
+    "category": "Smoothies",
+    "base_price": 240,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_a96c8yt8a",
+    "name_ar": "سموزي ميكس بيريز وسط",
+    "name_tr": "Mix berries smoothie orta",
+    "name_en": "Mix berries smoothie medium",
+    "category": "Smoothies",
+    "base_price": 240,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_c2fws7e9a",
+    "name_ar": "كول لايم",
+    "name_tr": "Cool lime",
+    "name_en": "Cool lime",
+    "category": "Signature",
+    "base_price": 160,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 160,
+        "name_ar": "كول لايم",
+        "name_tr": "Cool lime",
+        "name_en": "Cool lime"
+      },
+      {
+        "size": "large",
+        "price": 200,
+        "name_ar": "كول لايم كبير",
+        "name_tr": "Cool lime büyük",
+        "name_en": "Cool lime large"
+      },
+      {
+        "size": "medium",
+        "price": 180,
+        "name_ar": "كول لايم وسط",
+        "name_tr": "Cool lime orta",
+        "name_en": "Cool lime Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_9h0jlfeq0",
+    "name_ar": "كول لايم ابل بابلز",
+    "name_tr": "Cool lime elma bubbles",
+    "name_en": "Cool lime apple bubbles",
+    "category": "Signature",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "كول لايم ابل بابلز",
+        "name_tr": "Cool lime elma bubbles",
+        "name_en": "Cool lime apple bubbles"
+      },
+      {
+        "size": "large",
+        "price": 220,
+        "name_ar": "كول لايم ابل بابلز كبير",
+        "name_tr": "Cool lime elma bubbles büyük",
+        "name_en": "Cool lime apple bubbles Large"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "كول لايم ابل بابلز وسط",
+        "name_tr": "Cool lime elma bubbles orta",
+        "name_en": "Cool lime apple bubbles Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_5dxhb77dr",
+    "name_ar": "كول لايم بلو بيري بابلز",
+    "name_tr": "Cool lime blueberry bubbles",
+    "name_en": "Cool lime blueberry bubbles",
+    "category": "Signature",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "كول لايم بلو بيري بابلز",
+        "name_tr": "Cool lime blueberry bubbles",
+        "name_en": "Cool lime blueberry bubbles"
+      },
+      {
+        "size": "large",
+        "price": 220,
+        "name_ar": "كول لايم بلو بيري بابلز كبير",
+        "name_tr": "Cool lime blueberry bubbles büyük",
+        "name_en": "Cool lime blueberry bubbles large"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "كول لايم بلو بيري بابلز وسط",
+        "name_tr": "Cool lime blueberry bubbles orta",
+        "name_en": "Cool lime blueberry bubbles Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_sfvak02vt",
+    "name_ar": "كول لايم سترو بيري بابلز",
+    "name_tr": "Cool lime Çilekli  bubbles",
+    "name_en": "Cool lime strawberry bubbles",
+    "category": "Signature",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": true,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "كول لايم سترو بيري بابلز",
+        "name_tr": "Cool lime Çilekli  bubbles",
+        "name_en": "Cool lime strawberry bubbles"
+      },
+      {
+        "size": "large",
+        "price": 220,
+        "name_ar": "كول لايم سترو بيري بابلز كبير",
+        "name_tr": "Cool lime Çilekli bubbles büyük",
+        "name_en": "Cool lime strawberry bubbles Large"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "كول لايم سترو بيري بابلز وسط",
+        "name_tr": "Cool lime Çilekli bubbles orta",
+        "name_en": "Cool lime strawberry bubbles Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": [
+      {
+        "type": "bubbles",
+        "price": 180,
+        "name_ar": "كول لايم سترو بيري بابلز",
+        "name_tr": "Cool lime Çilekli  bubbles",
+        "name_en": "Cool lime strawberry bubbles"
+      },
+      {
+        "type": "mix",
+        "price": 160,
+        "name_ar": "كول لايم سترو بيري ميكس",
+        "name_tr": "Cool lime Çilekli mix",
+        "name_en": "Cool lime strawberry mix"
+      }
+    ],
+    "original_variations": 6
+  },
+  {
+    "id": "item_1761121366009_kkcrhuqpp",
+    "name_ar": "كول لايم مانجو ميكس",
+    "name_tr": "Cool lime mango mix",
+    "name_en": "Cool lime mango mix",
+    "category": "Signature",
+    "base_price": 160,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 160,
+        "name_ar": "كول لايم مانجو ميكس",
+        "name_tr": "Cool lime mango mix",
+        "name_en": "Cool lime mango mix"
+      },
+      {
+        "size": "large",
+        "price": 200,
+        "name_ar": "كول لايم مانجو ميكس كبير",
+        "name_tr": "Cool lime mango mix büyük",
+        "name_en": "Cool lime mango mix large"
+      },
+      {
+        "size": "medium",
+        "price": 180,
+        "name_ar": "كول لايم مانجو ميكس وسط",
+        "name_tr": "Cool lime mango mix orta",
+        "name_en": "Cool lime mango mix Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_7lm2u19a8",
+    "name_ar": "هيبسكوس",
+    "name_tr": "Hibiscus",
+    "name_en": "Hibiscus",
+    "category": "Signature",
+    "base_price": 160,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 160,
+        "name_ar": "هيبسكوس",
+        "name_tr": "Hibiscus",
+        "name_en": "Hibiscus"
+      },
+      {
+        "size": "large",
+        "price": 200,
+        "name_ar": "هيبسكوس كبير",
+        "name_tr": "Hibiscus büyük",
+        "name_en": "Hibiscus large"
+      },
+      {
+        "size": "medium",
+        "price": 180,
+        "name_ar": "هيبسكوس وسط",
+        "name_tr": "Hibiscus orta",
+        "name_en": "Hibiscus Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_5uslmd9ta",
+    "name_ar": "هيبسكوس ابل بابلز",
+    "name_tr": "Hibiscus elma bubbles",
+    "name_en": "Hibiscus apple bubbles",
+    "category": "Signature",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "هيبسكوس ابل بابلز",
+        "name_tr": "Hibiscus elma bubbles",
+        "name_en": "Hibiscus apple bubbles"
+      },
+      {
+        "size": "large",
+        "price": 220,
+        "name_ar": "هيبسكوس ابل بابلز كبير",
+        "name_tr": "Hibiscus elma bubbles büyük",
+        "name_en": "Hibiscus apple bubbles large"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "هيبسكوس ابل بابلز وسط",
+        "name_tr": "Hibiscus elma bubbles orta",
+        "name_en": "Hibiscus apple bubbles Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3
+  },
+  {
+    "id": "item_1761121366009_hw79wegss",
+    "name_ar": "هيبسكوس بلو بيري بابلز",
+    "name_tr": "Hibiscus blueberry bubbles",
+    "name_en": "Hibiscus blueberry bubbles",
+    "category": "Signature",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": true,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "هيبسكوس بلو بيري بابلز",
+        "name_tr": "Hibiscus blueberry bubbles",
+        "name_en": "Hibiscus blueberry bubbles"
+      },
+      {
+        "size": "large",
+        "price": 200,
+        "name_ar": "هيبسكوس بلو بيري ميكس كبير",
+        "name_tr": "Hibiscus blueberry mix büyük",
+        "name_en": "Hibiscus blueberry mix large"
+      },
+      {
+        "size": "medium",
+        "price": 180,
+        "name_ar": "هيبسكوس بلو بيري ميكس وسط",
+        "name_tr": "Hibiscus blueberry mix orta",
+        "name_en": "Hibiscus blueberry mix Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": [
+      {
+        "type": "bubbles",
+        "price": 180,
+        "name_ar": "هيبسكوس بلو بيري بابلز",
+        "name_tr": "Hibiscus blueberry bubbles",
+        "name_en": "Hibiscus blueberry bubbles"
+      },
+      {
+        "type": "mix",
+        "price": 160,
+        "name_ar": "هيبسكوس بلو بيري ميكس",
+        "name_tr": "Hibiscus blueberry mix",
+        "name_en": "Hibiscus blueberry mix"
+      }
+    ],
+    "original_variations": 6
+  },
+  {
+    "id": "item_1761121366009_endw56jpo",
+    "name_ar": "هيبسكوس سترو بيري بابلز",
+    "name_tr": "Hibiscus ÇİLEK bubbles",
+    "name_en": "Hibiscus strawberry bubbles",
+    "category": "Signature",
+    "base_price": 180,
+    "image": null,
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": true,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "هيبسكوس سترو بيري بابلز",
+        "name_tr": "Hibiscus ÇİLEK bubbles",
+        "name_en": "Hibiscus strawberry bubbles"
+      },
+      {
+        "size": "large",
+        "price": 200,
+        "name_ar": "هيبسكوس سترو بيري ميكس كبير",
+        "name_tr": "Hibiscus ÇİLEK mix büyük",
+        "name_en": "Hibiscus strawberry mix large"
+      },
+      {
+        "size": "medium",
+        "price": 180,
+        "name_ar": "هيبسكوس سترو بيري ميكس وسط",
+        "name_tr": "Hibiscus ÇİLEKmix orta",
+        "name_en": "Hibiscus strawberry mix Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": [
+      {
+        "type": "bubbles",
+        "price": 180,
+        "name_ar": "هيبسكوس سترو بيري بابلز",
+        "name_tr": "Hibiscus ÇİLEK bubbles",
+        "name_en": "Hibiscus strawberry bubbles"
+      },
+      {
+        "type": "mix",
+        "price": 160,
+        "name_ar": "هيبسكوس سترو بيري ميكس",
+        "name_tr": "HibiscusÇİLEK Mix",
+        "name_en": "Hibiscus strawberry Mix"
+      }
+    ],
+    "original_variations": 6
+  },
+  {
+    "id": "item_1761121366009_37mkytoyx",
+    "name_ar": "كريب اوريو",
+    "name_tr": "Oreo krep",
+    "name_en": "Oreo Crepe",
+    "category": "Sweets",
+    "base_price": 350,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_1n871hven",
+    "name_ar": "كريب بستاشيو",
+    "name_tr": "Antep fıstığı krep",
+    "name_en": "Pistachio Crepe",
+    "category": "Sweets",
+    "base_price": 300,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_vdiwt79mh",
+    "name_ar": "كريب بيكو",
+    "name_tr": "Piko krep",
+    "name_en": "Piko Crepe",
+    "category": "Sweets",
+    "base_price": 420,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_0rbew6msb",
+    "name_ar": "كريب تشيز كيك",
+    "name_tr": "Cheesecake krep",
+    "name_en": "Cheesecake Crepe",
+    "category": "Sweets",
+    "base_price": 320,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_q33g6iqmo",
+    "name_ar": "كريب شوكولا",
+    "name_tr": "Çikolata krep",
+    "name_en": "Chocolate Crepe",
+    "category": "Sweets",
+    "base_price": 300,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_0pzhq9e5q",
+    "name_ar": "كريب فواكه",
+    "name_tr": "Meyveli krep ",
+    "name_en": "Fruit Crepe",
+    "category": "Sweets",
+    "base_price": 400,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_tcp3ossn2",
+    "name_ar": "كريب فوتوتشيني",
+    "name_tr": "Fettucine ",
+    "name_en": "Fettuccine Crepe",
+    "category": "Sweets",
+    "base_price": 350,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_tfkhltgy1",
+    "name_ar": "كريب لوتوس",
+    "name_tr": "Lotus Crepe",
+    "name_en": "Lotus Crepe",
+    "category": "Sweets",
+    "base_price": 380,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_wmy38hvvt",
+    "name_ar": "وافل اوريو",
+    "name_tr": "Oreo Waffle",
+    "name_en": "Oreo Waffle",
+    "category": "Sweets",
+    "base_price": 350,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_xpdnlk86c",
+    "name_ar": "وافل بستاشيو",
+    "name_tr": "Antep fıstığı Waffle",
+    "name_en": "Pistachio Waffle",
+    "category": "Sweets",
+    "base_price": 390,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_u46xk46cc",
+    "name_ar": "وافل شوكولا",
+    "name_tr": "Çikolata Waffle",
+    "name_en": "Chocolate Waffle",
+    "category": "Sweets",
+    "base_price": 280,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_b3etxaxgb",
+    "name_ar": "وافل فريز",
+    "name_tr": "ÇİLEKli Waffle",
+    "name_en": "Strawberry Waffle",
+    "category": "Sweets",
+    "base_price": 340,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_tdvaz2uzx",
+    "name_ar": "وافل فواكه",
+    "name_tr": "meyveli Waffle",
+    "name_en": "Fruit Waffle",
+    "category": "Sweets",
+    "base_price": 450,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_ewdqfrb5l",
+    "name_ar": "وافل لوتوس",
+    "name_tr": "Lotus Waffle",
+    "name_en": "Lotus Waffle",
+    "category": "Sweets",
+    "base_price": 450,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_tt52iv4xg",
+    "name_ar": "وافل مارشميلو",
+    "name_tr": "Marshmallow Waffle",
+    "name_en": "Marshmallow Waffle",
+    "category": "Sweets",
+    "base_price": 300,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_m6wm7q97d",
+    "name_ar": "بان كيك اوريو",
+    "name_tr": "Oreo Pancake",
+    "name_en": "Oreo Pancake",
+    "category": "Sweets",
+    "base_price": 320,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_ua8njzk3t",
+    "name_ar": "بان كيك بستاشيو",
+    "name_tr": "Antep fıstığı Pancake",
+    "name_en": "Pistachio Pancake",
+    "category": "Sweets",
+    "base_price": 350,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_r2klv90sl",
+    "name_ar": "بان كيك تيرامسو",
+    "name_tr": "Tiramisu Pancake",
+    "name_en": "Tiramisu Pancake",
+    "category": "Sweets",
+    "base_price": 320,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_76aerzjjz",
+    "name_ar": "بان كيك شوكولا",
+    "name_tr": "Chocolate Pancake",
+    "name_en": "Chocolate Pancake",
+    "category": "Sweets",
+    "base_price": 300,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_y5qqju1e8",
+    "name_ar": "بان كيك فواكه",
+    "name_tr": "Fruit Pancake",
+    "name_en": "Fruit Pancake",
+    "category": "Sweets",
+    "base_price": 450,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_11dwsxvkp",
+    "name_ar": "بان كيك لوتوس",
+    "name_tr": "Lotus Pancake",
+    "name_en": "Lotus Pancake",
+    "category": "Sweets",
+    "base_price": 400,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_74kcl1a1q",
+    "name_ar": "ميني بان كيك اوريو",
+    "name_tr": "Mini Oreo Pancake",
+    "name_en": "Mini Oreo Pancake",
+    "category": "Sweets",
+    "base_price": 350,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_ty7gmea04",
+    "name_ar": "ميني بان كيك بستاشيو",
+    "name_tr": "Mini Antep fıstığı Pancake",
+    "name_en": "Mini Pistachio Pancake",
+    "category": "Sweets",
+    "base_price": 320,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_7hnlbst10",
+    "name_ar": "ميني بان كيك شوكولا",
+    "name_tr": "Mini Çikolatalı Pancake",
+    "name_en": "Mini Chocolate Pancake",
+    "category": "Sweets",
+    "base_price": 300,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_mgbf8lkmi",
+    "name_ar": "ميني بان كيك فواكه",
+    "name_tr": "Mini meyveli  Pancake",
+    "name_en": "Mini Fruit Pancake",
+    "category": "Sweets",
+    "base_price": 450,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_c4ii9g9qo",
+    "name_ar": "ميني بان كيك لوتوس",
+    "name_tr": "Mini Lotus Pancake",
+    "name_en": "Mini Lotus Pancake",
+    "category": "Sweets",
+    "base_price": 360,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_c4l3w8fr8",
+    "name_ar": "ميني بان كيك ميكس بيري",
+    "name_tr": "Mixed Berry Pancake",
+    "name_en": "Mixed Berry Pancake",
+    "category": "Sweets",
+    "base_price": 350,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_daw7n62vq",
+    "name_ar": "اوبرا",
+    "name_tr": "Opera Pastası",
+    "name_en": "Opera cake",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_jmqjrwr0n",
+    "name_ar": "تشمني كيك بندق",
+    "name_tr": "Fındıklı Bacalı Kek",
+    "name_en": "Hazelnut Chimney Cake",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_8akaemmy2",
+    "name_ar": "تشمني كيك قرفة",
+    "name_tr": "Çimni Cake",
+    "name_en": "Chimney Cake",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_glc7p8zy4",
+    "name_ar": "تشيز كيك بستاشيو",
+    "name_tr": "Fıstıklı Cheesecake",
+    "name_en": "Pistachio Cheesecake",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_baxd1gzme",
+    "name_ar": "تشيز كيك بلو بيري",
+    "name_tr": "Yaban mersinli Cheesecake",
+    "name_en": "Blueberry Cheesecake",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_vxiq1hiaq",
+    "name_ar": "تشيز كيك شوكولا",
+    "name_tr": "Çikolatalı Cheesecake",
+    "name_en": "Chocolate Cheesecake",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_9pxt3wlct",
+    "name_ar": "تشيز كيك فريز",
+    "name_tr": "Çilekli Cheesecake",
+    "name_en": "Strawberry Cheesecake",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_m8ktgzlnb",
+    "name_ar": "تيراميسو",
+    "name_tr": "Tiramisu",
+    "name_en": "Tiramisu",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_0upv2ox38",
+    "name_ar": "فوندون",
+    "name_tr": "Çikolatalı Fondan",
+    "name_en": "Fondant chocolate",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_qqar1rld7",
+    "name_ar": "كروسان سادة",
+    "name_tr": "kruvasan",
+    "name_en": "Croissants",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_w82w7106e",
+    "name_ar": "كوكيز بستاشيو",
+    "name_tr": "Fıstıklı Kurabiye",
+    "name_en": "Pistachio Cookies",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_2zwf6ko9e",
+    "name_ar": "كوكيز بندوق",
+    "name_tr": "\tFındıklı Kurabiye",
+    "name_en": "Hazelnut Cookies",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_bx4xlz69g",
+    "name_ar": "كوكيز توت احمر",
+    "name_tr": "Ahududu kurabiye",
+    "name_en": "Raspberry Cookies",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_4rq9wbiuu",
+    "name_ar": "كوكيز سادة",
+    "name_tr": "kurabiye sadeli",
+    "name_en": " Cookies",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_a8g70sj01",
+    "name_ar": "كوكيز لوتوس",
+    "name_tr": "Lotuslu Kurabiye",
+    "name_en": "Lotus Cookies",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_h4fi9mr4d",
+    "name_ar": "كيكة الجزر",
+    "name_tr": "havuç Cake",
+    "name_en": "Carrot Cake",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_wbf9djam3",
+    "name_ar": "كيكة العسل",
+    "name_tr": "Ballı Cake",
+    "name_en": "Honey Cake",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_dqg3y25ap",
+    "name_ar": "كيكة براونيز",
+    "name_tr": "Brownie Cake",
+    "name_en": "Brownie Cake",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_j97kw8eb9",
+    "name_ar": "كيكة سان سباستيان",
+    "name_tr": "San Sebastian Cake",
+    "name_en": "San Sebastian Cake",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  },
+  {
+    "id": "item_1761121366009_5bal6s3xx",
+    "name_ar": "كاسة بوظة وسط",
+    "name_tr": "Dondurma orta ",
+    "name_en": "Ice cream Medium",
+    "category": "Ice Cream",
+    "base_price": 210,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1
+  }
+]

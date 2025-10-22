@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu Images Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .image-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+        .image-item { text-align: center; border: 1px solid #ddd; padding: 10px; }
+        .image-item img { max-width: 100%; height: 150px; object-fit: cover; }
+        .image-item p { margin: 5px 0; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <h1>Menu Images Test</h1>
+    <p>This page shows all menu images to verify they are accessible.</p>
+    
+    <div class="image-grid" id="imageGrid">
+        <!-- Images will be loaded here -->
+    </div>
+
+    <script>
+        // Sample images to test
+        const sampleImages = [
+            'Espresso.jpg',
+            'Latte.jpg', 
+            'Cappuccino.jpg',
+            'Turkish Coffee.jpg',
+            'Hot Chocolate.jpg',
+            'Iced Latte.jpg',
+            'Matcha Latte.jpg',
+            'Strawberry Smoothie.jpg',
+            'Oreo Milkshake.jpg',
+            'Pistachio Waffle.jpg'
+        ];
+
+        const imageGrid = document.getElementById('imageGrid');
+        
+        sampleImages.forEach(imageName => {
+            const imageItem = document.createElement('div');
+            imageItem.className = 'image-item';
+            
+            const img = document.createElement('img');
+            img.src = `./${imageName}`;
+            img.alt = imageName;
+            img.onerror = function() {
+                this.style.display = 'none';
+                this.nextElementSibling.textContent = `❌ ${imageName} - Not found`;
+                this.nextElementSibling.style.color = 'red';
+            };
+            
+            const p = document.createElement('p');
+            p.textContent = imageName;
+            
+            imageItem.appendChild(img);
+            imageItem.appendChild(p);
+            imageGrid.appendChild(imageItem);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,2410 @@
+[
+  {
+    "Name_Ar": "بيستاشيو فراب وسط",
+    "Price": 275.0,
+    "Name_tr": "Antep fıstıklığı frappucino orta",
+    "Name_En": "Pistachio frappucino Medium",
+    "Category Name": "Blended Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "فانيليا فراب وسط",
+    "Price": 250.0,
+    "Name_tr": "Vanilla frappucino orta",
+    "Name_En": "Vanilla frappucino Medium",
+    "Category Name": "Blended Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كراميل فرابتشينو وسط",
+    "Price": 250.0,
+    "Name_tr": "Karamel Frappucino orta",
+    "Name_En": "Caramel Frappucino Medium",
+    "Category Name": "Blended Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كوكيز فراب وسط",
+    "Price": 250.0,
+    "Name_tr": "Cookies frappucino orta",
+    "Name_En": "Cookies frappucino Medium",
+    "Category Name": "Blended Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موكا فراب وسط",
+    "Price": 250.0,
+    "Name_tr": "Mocha Frappucino orta",
+    "Name_En": "Mocha Frappucino Medium",
+    "Category Name": "Blended Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس امريكانو كبير",
+    "Price": 170.0,
+    "Name_tr": " buzlu Americano büyük",
+    "Name_En": "Iced Americano large",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس امريكانو وسط",
+    "Price": 150.0,
+    "Name_tr": " buzlu Americano orta",
+    "Name_En": "Iced Americano medium",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس بتر سكوتش كبير",
+    "Price": 220.0,
+    "Name_tr": " buzlu butter scotch büyük",
+    "Name_En": "Iced butter scotch large",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس بتر سكوتش وسط",
+    "Price": 200.0,
+    "Name_tr": " buzlu butter scotch orta",
+    "Name_En": "Iced butter scotch medium",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس بتر سوكتش لاتيه",
+    "Price": 180.0,
+    "Name_tr": " buzlu butter scotch",
+    "Name_En": "Iced butter scotch",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس بيكو لاتيه",
+    "Price": 200.0,
+    "Name_tr": " buzlu piko latte",
+    "Name_En": "Iced piko latte",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس بيكو لاتيه كبير",
+    "Price": 240.0,
+    "Name_tr": " buzlu piko latte  büyük",
+    "Name_En": "Iced piko latte large",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس بيكو لاتيه وسط",
+    "Price": 220.0,
+    "Name_tr": " buzlu piko latte orta",
+    "Name_En": "Iced piko latte medium",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس بينك بيري ماتشا لاتيه",
+    "Price": 190.0,
+    "Name_tr": " buzlu Pink Perry matcha latte",
+    "Name_En": "Iced Pink Perry matcha latta",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس بينك بيري ماتشا لاتيه كبير",
+    "Price": 250.0,
+    "Name_tr": " buzlu Pink Perry matcha latte",
+    "Name_En": "Iced Pink Perry matcha latta learg",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس بينك بيري ماتشا لاتيه وسط",
+    "Price": 220.0,
+    "Name_tr": " buzlu pembe Perry matcha latte orta",
+    "Name_En": "Iced Pink Perry matcha latta Medium",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس بينك ماتشا لاتيه",
+    "Price": 190.0,
+    "Name_tr": " buzlu pemb matcha latte",
+    "Name_En": "Iced Pink matcha latte",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس بينك ماتشا لاتيه كبير",
+    "Price": 250.0,
+    "Name_tr": " buzlu pembe matcha latte büyük",
+    "Name_En": "Iced Pink matcha latte large",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس بينك ماتشا لاتيه وسط",
+    "Price": 220.0,
+    "Name_tr": " buzlu pembe matcha latte orta",
+    "Name_En": "Iced Pink matcha latte Medium",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس تشيز كيك لاتيه",
+    "Price": 200.0,
+    "Name_tr": " buzlu buzlu cheese cake latte",
+    "Name_En": "Iced cheese cake latte",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس تشيز كيك لاتيه كبير",
+    "Price": 250.0,
+    "Name_tr": " buzlu cheese cake latte büyük",
+    "Name_En": "Iced cheese cake latte large",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس تشيز كيك لاتيه وسط",
+    "Price": 220.0,
+    "Name_tr": " buzlu cheese cake latte orta",
+    "Name_En": "Iced cheese cake latte medium",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس توفي نت لاتيه",
+    "Price": 180.0,
+    "Name_tr": " buzlu Toffee fındık Latte",
+    "Name_En": "Iced Toffee Nut Latte",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس توفي نت لاتيه كبير",
+    "Price": 240.0,
+    "Name_tr": " buzlu Toffee fındık Latte büyük",
+    "Name_En": "Iced Toffee Nut Latte Large",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس توفي نت لاتيه وسط",
+    "Price": 220.0,
+    "Name_tr": " buzlu Toffee fındık Latte orta",
+    "Name_En": "Iced Toffee Nut Latte Medium",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس زيبرا موكا لاتيه كبير",
+    "Price": 240.0,
+    "Name_tr": " buzlu Zebra mocha latte büyük",
+    "Name_En": "Iced Zebra mocha latte large",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس زيبرا موكا لاتيه وسط",
+    "Price": 220.0,
+    "Name_tr": " buzlu Zebra mocha latte orta ",
+    "Name_En": "Iced Zebra mocha latte medium",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس زيبره موكا لاتيه",
+    "Price": 200.0,
+    "Name_tr": " buzlu Zebra mocha latte",
+    "Name_En": "Iced Zebra mocha latte",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس سبانش لاتيه",
+    "Price": 180.0,
+    "Name_tr": " buzlu Spanish Latte",
+    "Name_En": "Iced Spanish Latte",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس سبانش لاتيه وسط",
+    "Price": 200.0,
+    "Name_tr": " buzlu Spanish Latte orta",
+    "Name_En": "Iced Spanish Latte medium",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس سبانيش لاتيه كبير",
+    "Price": 220.0,
+    "Name_tr": " buzlu Spanish Latte büyük",
+    "Name_En": "Iced Spanish Latte Large",
+    "Category Name": "Cold drinks",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "زنجبيل وليمون",
+    "Price": 120.0,
+    "Name_tr": "zencefil ve limon",
+    "Name_En": "Ginger and lemon",
+    "Category Name": "Flavored tea",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "زهورات",
+    "Price": 120.0,
+    "Name_tr": "Papatya Çayı",
+    "Name_En": "Flavoured tea",
+    "Category Name": "Flavored tea",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "زيزفون",
+    "Price": 120.0,
+    "Name_tr": "Lime ıhlamur Çay",
+    "Name_En": "Lime blossom tea",
+    "Category Name": "Flavored tea",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "شاي",
+    "Price": 40.0,
+    "Name_tr": "Çay",
+    "Name_En": "Tea",
+    "Category Name": "Flavored tea",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "شاي تي لاتيه",
+    "Price": 180.0,
+    "Name_tr": "Çay Latte",
+    "Name_En": "Chai Tea Latte",
+    "Category Name": "Flavored tea",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "شاي تي لاتيه وسط",
+    "Price": 200.0,
+    "Name_tr": "Çay Latte orta",
+    "Name_En": "Chai Tea Latte Medium",
+    "Category Name": "Flavored tea",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "عصير برتقال",
+    "Price": 170.0,
+    "Name_tr": "portakal meyve suyu",
+    "Name_En": "Orange juice",
+    "Category Name": "Fresh juices",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "عصير برتقال و جزر",
+    "Price": 170.0,
+    "Name_tr": "portakal ve Havuç meyve suyu",
+    "Name_En": "Orange carrot",
+    "Category Name": "Fresh juices",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "عصير برتقال و جزر وسط",
+    "Price": 190.0,
+    "Name_tr": "Porttakal havuç orta",
+    "Name_En": "Orange carrot medium",
+    "Category Name": "Fresh juices",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "عصير برتقال و ليمون",
+    "Price": 170.0,
+    "Name_tr": "portakal lemon",
+    "Name_En": "Orange lemon",
+    "Category Name": "Fresh juices",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "عصير برتقال و ليمون وسط",
+    "Price": 190.0,
+    "Name_tr": "portakal lemon orta",
+    "Name_En": "Orange lemon medium",
+    "Category Name": "Fresh juices",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "عصير برتقال وسط",
+    "Price": 190.0,
+    "Name_tr": "portakal meyvesuyu orta",
+    "Name_En": "Orange juice medium",
+    "Category Name": "Fresh juices",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "عصير تفاح",
+    "Price": 170.0,
+    "Name_tr": "Elma meyvesuyu",
+    "Name_En": "Apple juice",
+    "Category Name": "Fresh juices",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "عصير تفاح و جزر",
+    "Price": 170.0,
+    "Name_tr": "Elma carrot meyvesuyu",
+    "Name_En": "Apple carrot",
+    "Category Name": "Fresh juices",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "عصير تفاح و جزر وسط",
+    "Price": 190.0,
+    "Name_tr": "Elma havuç orta",
+    "Name_En": "Apple carrot medium",
+    "Category Name": "Fresh juices",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "عصير تفاح وسط",
+    "Price": 190.0,
+    "Name_tr": "Elma suyu orta",
+    "Name_En": "Apple juice medium",
+    "Category Name": "Fresh juices",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "عصير جزر",
+    "Price": 170.0,
+    "Name_tr": "Havuç meyve suyu",
+    "Name_En": "Carrot juice",
+    "Category Name": "Fresh juices",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "عصير جزر وسط",
+    "Price": 170.0,
+    "Name_tr": "Havuç suyu orta",
+    "Name_En": "Carrot juice medium",
+    "Category Name": "Fresh juices",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "عصير ليمون",
+    "Price": 170.0,
+    "Name_tr": "Lemonta",
+    "Name_En": "Lemonade",
+    "Category Name": "Fresh juices",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "عصير ليمون وسط",
+    "Price": 190.0,
+    "Name_tr": "Lemonata orta",
+    "Name_En": "Lemonade medium",
+    "Category Name": "Fresh juices",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "اسبريسو",
+    "Price": 95.0,
+    "Name_tr": "Espresso",
+    "Name_En": "Espresso",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "اسبريسو افوكاتو",
+    "Price": 195.0,
+    "Name_tr": "Espresso Avokado",
+    "Name_En": "Espresso Affogato",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "اسبريسو ريستريتو",
+    "Price": 95.0,
+    "Name_tr": "Espresso Ristretto",
+    "Name_En": "Espresso Ristretto",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "اسبريسو مكياتو",
+    "Price": 120.0,
+    "Name_tr": "Espresso Macchiato",
+    "Name_En": "Espresso Macchiato",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "امريكانو",
+    "Price": 120.0,
+    "Name_tr": "Americano",
+    "Name_En": "Americano",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "امريكانو وسط",
+    "Price": 140.0,
+    "Name_tr": "Americano orta",
+    "Name_En": "Americano Medium",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "بترسكوتش لاتيه",
+    "Price": 180.0,
+    "Name_tr": "Butter scotch Latte",
+    "Name_En": "Butter scotch Latte",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "بترسكوتش لاتيه وسط",
+    "Price": 200.0,
+    "Name_tr": "Butter scotch Latte orta",
+    "Name_En": "Butter scotch Latte Medium",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "بيكو موكا",
+    "Price": 200.0,
+    "Name_tr": "Piko Mocha",
+    "Name_En": "Piko Mocha",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "بيكو موكا وسط",
+    "Price": 220.0,
+    "Name_tr": "Piko Mocha orta",
+    "Name_En": "Piko Mocha Medium",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "بينك بيري ماتشا لاتيه",
+    "Price": 180.0,
+    "Name_tr": "Pink Perry matcha latte",
+    "Name_En": "Pink Perry matcha latta",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "بينك ماتشا لاتيه",
+    "Price": 180.0,
+    "Name_tr": "Pink matcha latte",
+    "Name_En": "Pink matcha latte",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "تشيز كيك لاتيه",
+    "Price": 200.0,
+    "Name_tr": "Cheese cake Latte",
+    "Name_En": "Cheese cake Latte",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "تشيز كيك لاتيه وسط",
+    "Price": 220.0,
+    "Name_tr": "Cheese cake Latte orta",
+    "Name_En": "Cheese cake Latte Medium",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "توفي نات لاتيه",
+    "Price": 180.0,
+    "Name_tr": "Toffee fındık Latte",
+    "Name_En": "Toffee Nut Latte",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "توفي نات لاتيه وسط",
+    "Price": 220.0,
+    "Name_tr": "Toffee fındık Latte orta",
+    "Name_En": "Toffee Nut Latte Medium",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "دبل اسبريسو",
+    "Price": 110.0,
+    "Name_tr": "Double Espresso",
+    "Name_En": "Double Espresso",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "زيبرا موكا",
+    "Price": 200.0,
+    "Name_tr": "Zebra Mocha",
+    "Name_En": "Zebra Mocha",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "زيبرا موكا وسط",
+    "Price": 220.0,
+    "Name_tr": "Zebra Mocha orta",
+    "Name_En": "Zebra Mocha Medium",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "سبانش لاتيه",
+    "Price": 180.0,
+    "Name_tr": "Spanish Latte",
+    "Name_En": "Spanish Latte",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "سبانش لاتيه وسط",
+    "Price": 200.0,
+    "Name_tr": "Spanish Latte orta",
+    "Name_En": "Spanish Latte Medium",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ستروبيري ماتشا لاتيه",
+    "Price": 180.0,
+    "Name_tr": "Çilekli matcha latte",
+    "Name_En": "Strawberry matcha latte",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ستروبيري موكا لاتيه",
+    "Price": 180.0,
+    "Name_tr": "Çilekli Mocha Latte",
+    "Name_En": "Strawberry Mocha Latte",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ستروبيري موكا لاتيه وسط",
+    "Price": 200.0,
+    "Name_tr": "Çilekli mocha latte orta",
+    "Name_En": "Strawberry mocha latte Medium",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "سحلب بالقرفة",
+    "Price": 150.0,
+    "Name_tr": "Sahlab with Cinnamon",
+    "Name_En": "Sahlab with Cinnamon",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "سلتد كراميل لاتيه",
+    "Price": 180.0,
+    "Name_tr": "Salted Caramel Latte",
+    "Name_En": "Salted Caramel Latte",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "سلتد كراميل لاتيه وسط",
+    "Price": 200.0,
+    "Name_tr": "Salted Caramel Latte orta",
+    "Name_En": "Salted Caramel Latte Medium",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "فانيليا لاتيه",
+    "Price": 160.0,
+    "Name_tr": "Vanilla Latte",
+    "Name_En": "Vanilla Latte",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "فانيليا لاتيه وسط",
+    "Price": 180.0,
+    "Name_tr": "Vanilla Latte orta",
+    "Name_En": "Vanilla Latte Medium",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "فلات وايت",
+    "Price": 140.0,
+    "Name_tr": "Flat White",
+    "Name_En": "Flat White",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "فلات وايت وسط",
+    "Price": 160.0,
+    "Name_tr": "Flat White orta",
+    "Name_En": "Flat White Medium",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "فلتر قهوة",
+    "Price": 140.0,
+    "Name_tr": "Filter kahve",
+    "Name_En": "Filter Coffee",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "فلتر قهوة بالحليب",
+    "Price": 160.0,
+    "Name_tr": "Filter Coffee with Milk",
+    "Name_En": "Filter Coffee with Milk",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "فلتر قهوة بالحليب وسط",
+    "Price": 180.0,
+    "Name_tr": "Filter Coffee with Milk orta",
+    "Name_En": "Filter Coffee with Milk Medium",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "فلتر قهوة وسط",
+    "Price": 160.0,
+    "Name_tr": "Filter Coffee orta",
+    "Name_En": "Filter Coffee Medium",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "في 60",
+    "Price": 195.0,
+    "Name_tr": "V60",
+    "Name_En": "V60",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "في 60 وسط",
+    "Price": 220.0,
+    "Name_tr": "V60 orta",
+    "Name_En": "V60 Medium",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "قهوة تركية",
+    "Price": 95.0,
+    "Name_tr": "Türk kahvesi",
+    "Name_En": "Turkish Coffee",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "قهوة تركية دبل",
+    "Price": 135.0,
+    "Name_tr": "Double Türk kahvesi",
+    "Name_En": "Double Turkish Coffee",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "قهوة عربية",
+    "Price": 95.0,
+    "Name_tr": "Cardamom  kahvesi",
+    "Name_En": "Cardamom Coffee",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "قهوة عربية دبل",
+    "Price": 135.0,
+    "Name_tr": "Double cardamom  kahvesi",
+    "Name_En": "Double cardamom Coffee",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كابتشينو",
+    "Price": 140.0,
+    "Name_tr": "Cappuccino",
+    "Name_En": "Cappuccino",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كابتشينو وسط",
+    "Price": 160.0,
+    "Name_tr": "Cappuccino orta",
+    "Name_En": "Cappuccino Medium",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كراميل لاتيه",
+    "Price": 180.0,
+    "Name_tr": "karamel Latte",
+    "Name_En": "Caramel Latte",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كراميل لاتيه وسط",
+    "Price": 200.0,
+    "Name_tr": "karamel Latte orta",
+    "Name_En": "Caramel Latte Medium",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كراميل مكياتو",
+    "Price": 180.0,
+    "Name_tr": "karamel Macchiato",
+    "Name_En": "Caramel Macchiato",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كراميل مكياتو وسط",
+    "Price": 200.0,
+    "Name_tr": "karamel macchiato orta",
+    "Name_En": "Caramel macchiato medium",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كورتادو",
+    "Price": 140.0,
+    "Name_tr": "kortadu",
+    "Name_En": "Cortado",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "لاتيه",
+    "Price": 140.0,
+    "Name_tr": "Latte",
+    "Name_En": "Latte",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "لاتيه وسط",
+    "Price": 160.0,
+    "Name_tr": "Latte orta",
+    "Name_En": "Latte Medium",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موكا لاتيه",
+    "Price": 180.0,
+    "Name_tr": "Mocha Latte",
+    "Name_En": "Mocha Latte",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موكا لاتيه وسط",
+    "Price": 200.0,
+    "Name_tr": "Mocha Latte orta",
+    "Name_En": "Mocha Latte Medium",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "هوت شوكلت",
+    "Price": 200.0,
+    "Name_tr": "Sıcak çikolata",
+    "Name_En": "Hot Chocolate",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "هوت شوكلت وسط",
+    "Price": 220.0,
+    "Name_tr": "Sıcak çikolata orta",
+    "Name_En": "Hot Chocolate Medium",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "وايت موكا لاتيه",
+    "Price": 180.0,
+    "Name_tr": "Beyaz Mocha Latte",
+    "Name_En": "White Mocha Latte",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "وايت موكا لاتيه وسط",
+    "Price": 200.0,
+    "Name_tr": "Beyaz Mocha Latte orta",
+    "Name_En": "White Mocha Latte Medium",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "وايت هوت شوكلت",
+    "Price": 200.0,
+    "Name_tr": "Beyaz Hot Chocolate",
+    "Name_En": "White Hot Chocolate",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "وايت هوت شوكلت وسط",
+    "Price": 220.0,
+    "Name_tr": "Beyaz Hot Chocolate orta",
+    "Name_En": "White Hot Chocolate Medium",
+    "Category Name": "Hot Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس امريكانو",
+    "Price": 130.0,
+    "Name_tr": " buzlu Americano",
+    "Name_En": "Iced Americano",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس ستروبيري موكا",
+    "Price": 200.0,
+    "Name_tr": " buzlu ÇİLEK mocha",
+    "Name_En": "Iced strawberry mocha",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس ستروبيري موكا كبير",
+    "Price": 240.0,
+    "Name_tr": " buzlu ÇİLEK mocha büyük",
+    "Name_En": "Iced strawberry mocha large",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس ستروبيري موكا وسط",
+    "Price": 220.0,
+    "Name_tr": " buzlu ÇİLEK mocha orta",
+    "Name_En": "Iced strawberry mocha medium",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس سلتد كراميل لاتيه",
+    "Price": 180.0,
+    "Name_tr": " buzlu Salted Caramel Latte",
+    "Name_En": "Iced Salted Caramel Latte",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس سلتد كراميل لاتيه كبير",
+    "Price": 220.0,
+    "Name_tr": " buzlu salted caramel latte büyük",
+    "Name_En": "Iced salted caramel latte large",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس سلتد كراميل وسط",
+    "Price": 200.0,
+    "Name_tr": " buzlu Salted Caramel Latte orta",
+    "Name_En": "Iced Salted Caramel Latte medium",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس شاي تي لاتيه",
+    "Price": 200.0,
+    "Name_tr": " buzlu chai tea latte",
+    "Name_En": "Iced chai tea latte",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس شاي تي لاتيه كبير",
+    "Price": 240.0,
+    "Name_tr": " buzlu chai tea latte büyük",
+    "Name_En": "Iced chai tea latte Large",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس شاي تي لاتيه وسط",
+    "Price": 220.0,
+    "Name_tr": " buzlu chai tea latte orta",
+    "Name_En": "Iced chai tea latte medium",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس فانيليا لاتيه",
+    "Price": 180.0,
+    "Name_tr": " buzlu Vanilla Latte",
+    "Name_En": "Iced Vanilla Latte",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس فانيليا لاتيه كبير",
+    "Price": 220.0,
+    "Name_tr": " buzlu Vanilla Latte büyük",
+    "Name_En": "Iced Vanilla Latte Large",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس فانيليا لاتيه وسط",
+    "Price": 200.0,
+    "Name_tr": " buzlu Vanilla Latte orta",
+    "Name_En": "Iced Vanilla Latte Medium",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس فيلتر قهوة",
+    "Price": 125.0,
+    "Name_tr": " buzlu Filtere kahve",
+    "Name_En": "Iced Filter Coffee",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس فيلتر قهوة بالحليب",
+    "Price": 140.0,
+    "Name_tr": " buzlu Filter Coffee with Milk",
+    "Name_En": "Iced Filter Coffee with Milk",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس فيلترة قهوة بالحليب كبير",
+    "Price": 180.0,
+    "Name_tr": " buzlu Filter Coffee with Milk büyük",
+    "Name_En": "Iced Filter Coffee with Milk Large",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس فيلترة قهوة بالحليب وسط",
+    "Price": 160.0,
+    "Name_tr": " buzlu Filter Coffee with Milk orta",
+    "Name_En": "Iced Filter Coffee with Milk Medium",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس فيلترة قهوة كبير",
+    "Price": 145.0,
+    "Name_tr": " buzlu Filter Coffee büyük",
+    "Name_En": "Iced Filter Coffee Large",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس فيلترة قهوة وسط",
+    "Price": 130.0,
+    "Name_tr": " buzlu Filter Coffee orta",
+    "Name_En": "Iced Filter Coffee Medium",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس كراميل لاتيه",
+    "Price": 180.0,
+    "Name_tr": " buzlu Caramel Latte",
+    "Name_En": "Iced Caramel Latte",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس كراميل لاتيه كبير",
+    "Price": 220.0,
+    "Name_tr": " buzlu Caramel Latte büyük",
+    "Name_En": "Iced Caramel Latte Large",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس كراميل لاتيه وسط",
+    "Price": 200.0,
+    "Name_tr": " buzlu Caramel Latte orta",
+    "Name_En": "Iced Caramel Latte Medium",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس كراميل مكياتو",
+    "Price": 180.0,
+    "Name_tr": " buzlu caramel macchiato",
+    "Name_En": "Iced caramel macchiato",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس كراميل مكياتو كبير",
+    "Price": 220.0,
+    "Name_tr": " buzlu karamel macchiato büyük",
+    "Name_En": "Iced caramel macchiato Large",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس كراميل مكياتو وسط",
+    "Price": 200.0,
+    "Name_tr": "buzlu karamel macchiato orta",
+    "Name_En": "Iced caramel macchiato Medium",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس لاتيه",
+    "Price": 160.0,
+    "Name_tr": "buzlu Latte",
+    "Name_En": "Iced Latte",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس لاتيه كبير",
+    "Price": 200.0,
+    "Name_tr": "buzlu Latte büyük",
+    "Name_En": "Iced Latte Large",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس لاتيه وسط",
+    "Price": 180.0,
+    "Name_tr": "buzlu Latte orta",
+    "Name_En": "Iced Latte Medium",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس ماتشا لاتيه",
+    "Price": 190.0,
+    "Name_tr": "buzlu Matcha latte",
+    "Name_En": "Iced Matcha latte",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس ماتشا لاتيه كبير",
+    "Price": 250.0,
+    "Name_tr": "buzlu Matcha latte büyük",
+    "Name_En": "Iced Matcha latte large",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس ماتشا لاتيه وسط",
+    "Price": 220.0,
+    "Name_tr": "buzlu Matcha latte orta",
+    "Name_En": "Iced Matcha latte Medium",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس موكا لاتيه",
+    "Price": 200.0,
+    "Name_tr": "buzlu Mocha Latte",
+    "Name_En": "Iced Mocha Latte",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس موكا لاتيه كبير",
+    "Price": 240.0,
+    "Name_tr": "buzlu Mocha Latte büyük",
+    "Name_En": "Iced Mocha Latte Large",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس موكا لاتيه وسط",
+    "Price": 220.0,
+    "Name_tr": "buzlu Mocha Latte orta",
+    "Name_En": "Iced Mocha Latte Medium",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس وايت شوكليت موكا كبير",
+    "Price": 240.0,
+    "Name_tr": "buzlu White Chocolate Mocha büyük",
+    "Name_En": "Iced White Chocolate Mocha Large",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس وايت شوكليت موكا وسط",
+    "Price": 220.0,
+    "Name_tr": "buzlu White Chocolate Mocha orta",
+    "Name_En": "Iced White Chocolate Mocha Medium",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس وايت موكا",
+    "Price": 200.0,
+    "Name_tr": "buzlu White Chocolate Mocha",
+    "Name_En": "Iced White Chocolate Mocha",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "تشيري بلوسوم ايس لاتيه كبير",
+    "Price": 240.0,
+    "Name_tr": "Cherry Blossom Iced Latte büyük",
+    "Name_En": "Cherry Blossom Iced Latte Large",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "تشيري بلوسوم ايس لاتيه وسط",
+    "Price": 220.0,
+    "Name_tr": "Cherry Blossom Iced Latte orta",
+    "Name_En": "Cherry Blossom Iced Latte Medium",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "شيري بلوسوم ايس لاتيه",
+    "Price": 180.0,
+    "Name_tr": "Cherry Blossom Iced Latte",
+    "Name_En": "Cherry Blossom Iced Latte",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كراميل بابلز ايس لاتيه",
+    "Price": 180.0,
+    "Name_tr": "Karamel bubbles Iced Latte",
+    "Name_En": "Caramel bubbles Iced Latte",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كراميل بابلز ايس لاتيه كبير",
+    "Price": 220.0,
+    "Name_tr": "karamel bubbles Iced Latte büyük",
+    "Name_En": "Caramel bubbles Iced Latte Large",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كراميل بابلز ايس لاتيه وسط",
+    "Price": 200.0,
+    "Name_tr": "karamel bubbles Iced Latte orta",
+    "Name_En": "Caramel bubbles Iced Latte Medium",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كوكو نت ايس لاتيه",
+    "Price": 180.0,
+    "Name_tr": "Hinistan buzlu Latte",
+    "Name_En": "Coconut Iced Latte",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كوكو نت ايس لاتيه كبير",
+    "Price": 220.0,
+    "Name_tr": "Hindistan cevizi  buzlu  Latte büyük",
+    "Name_En": "Coconut Iced Latte Large",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كوكو نت ايس لاتيه وسط",
+    "Price": 200.0,
+    "Name_tr": "Hindistan cevizi buzlu  Latte orta",
+    "Name_En": "Coconut Iced Latte Medium",
+    "Category Name": "Ice Coffee",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كاسة بوظة وسط",
+    "Price": 210.0,
+    "Name_tr": "Dondurma orta ",
+    "Name_En": "Ice cream Medium",
+    "Category Name": "Ice Cream",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس ستروبري ماتشا لاتيه",
+    "Price": 190.0,
+    "Name_tr": "  buzlu ÇİLEK matcha latte",
+    "Name_En": "Iced Strawberry matcha latte",
+    "Category Name": "Matcha",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس ستروبري ماتشا لاتيه كبير",
+    "Price": 250.0,
+    "Name_tr": " buzlu ÇİLEK matcha latte Soğuk",
+    "Name_En": "Iced Strawberry matcha latte large",
+    "Category Name": "Matcha",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ايس ستروبري ماتشا لاتيه وسط",
+    "Price": 220.0,
+    "Name_tr": " buzlu ÇİLEK matcha latte orta",
+    "Name_En": "Iced Strawberry matcha latte Medium",
+    "Category Name": "Matcha",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ماتشا لاتيه",
+    "Price": 180.0,
+    "Name_tr": "Matcha latte",
+    "Name_En": "Matcha latte",
+    "Category Name": "Matcha",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ميلك شيك اوريو وسط",
+    "Price": 275.0,
+    "Name_tr": "Oreo milkshake orta",
+    "Name_En": "Oreo milkshake medium",
+    "Category Name": "Milkshakes",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ميلك شيك شوكولا وسط",
+    "Price": 275.0,
+    "Name_tr": "Chocolate milkshake orta",
+    "Name_En": "Chocolate milkshake medium",
+    "Category Name": "Milkshakes",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ميلك شيك فانيليا وسط",
+    "Price": 275.0,
+    "Name_tr": "Vanilla milkshake orta",
+    "Name_En": "Vanilla milkshake medium",
+    "Category Name": "Milkshakes",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ميلك شيك فريز وسط",
+    "Price": 275.0,
+    "Name_tr": "ÇİLEK milkshake orta",
+    "Name_En": "Strawberry milkshake medium",
+    "Category Name": "Milkshakes",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ميلك شيك كراميل وسط",
+    "Price": 275.0,
+    "Name_tr": "karamel milkshake orta",
+    "Name_En": "Caramel milkshake medium",
+    "Category Name": "Milkshakes",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ميلك شيك كوكيز وسط",
+    "Price": 275.0,
+    "Name_tr": "Cookies milkshake orta",
+    "Name_En": "Cookies milkshake medium",
+    "Category Name": "Milkshakes",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ميلك شيك لوتوس وسط",
+    "Price": 275.0,
+    "Name_tr": "Lotus milkshake orta",
+    "Name_En": "Lotus milkshake medium",
+    "Category Name": "Milkshakes",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو اناناس ريد بول وسط",
+    "Price": 240.0,
+    "Name_tr": "Ananas mojito RedBull orta",
+    "Name_En": "Pineapple mojito RedBull medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو اناناس سفن وسط",
+    "Price": 220.0,
+    "Name_tr": "Ananas  mojito 7up orta",
+    "Name_En": "Pineapple mojito 7up medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو اناناس صودا وسط",
+    "Price": 200.0,
+    "Name_tr": "Ananas  mojito soda orta",
+    "Name_En": "Pineapple mojito soda medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو باشن برتقال ريد بول وسط",
+    "Price": 240.0,
+    "Name_tr": "Passion portakal mojito RedBull orta",
+    "Name_En": "Passion orange mojito RedBull medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو باشن برتقال سفن وسط",
+    "Price": 220.0,
+    "Name_tr": "Passion portakal mojito 7up orta",
+    "Name_En": "Passion orange mojito 7up medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو باشن برتقال صودا وسط",
+    "Price": 200.0,
+    "Name_tr": "Passion portakal mojito soda orta",
+    "Name_En": "Passion orange mojito soda medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو باشن دراق ريد بول وسط",
+    "Price": 240.0,
+    "Name_tr": "Passion Şeftali mojito RedBull orta",
+    "Name_En": "Passion peach mojito RedBull medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو باشن دراق سفن وسط",
+    "Price": 220.0,
+    "Name_tr": "Passion Şeftali mojito 7up orta",
+    "Name_En": "Passion peach mojito 7up medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو باشن دراق صودا وسط",
+    "Price": 200.0,
+    "Name_tr": "Passion Şeftali mojito soda orta",
+    "Name_En": "Passion peach mojito soda medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو برتقال دراق ريد بول وسط",
+    "Price": 240.0,
+    "Name_tr": "portakal Şeftali mojito RedBull orta",
+    "Name_En": "Orange peach mojito RedBull medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو برتقال دراق سفن وسط",
+    "Price": 220.0,
+    "Name_tr": "portakal Şeftali mojito 7up orta",
+    "Name_En": "Orange peach mojito 7up medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو برتقال دراق صودا وسط",
+    "Price": 200.0,
+    "Name_tr": "portakal Şeftali mojito soda orta",
+    "Name_En": "Orange peach mojito soda medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو دراق ريد بول وسط",
+    "Price": 240.0,
+    "Name_tr": "Şeftali mojito RedBull orta",
+    "Name_En": "Peach mojito RedBull medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو دراق سفن وسط",
+    "Price": 220.0,
+    "Name_tr": "Şeftali mojito 7up orta",
+    "Name_En": "Peach mojito 7up medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو دراق صودا وسط",
+    "Price": 200.0,
+    "Name_tr": "Şeftali mojito soda orta",
+    "Name_En": "Peach mojito soda medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو رمان ريد بول وسط",
+    "Price": 240.0,
+    "Name_tr": "Pomegranate mojito RedBull orta",
+    "Name_En": "Pomegranate mojito RedBull medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو رمان سفن وسط",
+    "Price": 220.0,
+    "Name_tr": "Pomegranate mojito 7up orta",
+    "Name_En": "Pomegranate mojito 7up medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو رمان صودا وسط",
+    "Price": 200.0,
+    "Name_tr": "Pomegranate mojito soda orta",
+    "Name_En": "Pomegranate mojito soda medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو زنجبيل ريد بول وسط",
+    "Price": 240.0,
+    "Name_tr": "zencefil mojito RedBull orta",
+    "Name_En": "Ginger mojito RedBull medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو زنجبيل سفن وسط",
+    "Price": 220.0,
+    "Name_tr": "zencefil mojito 7up orta",
+    "Name_En": "Ginger mojito 7up medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو زنجبيل صودا وسط",
+    "Price": 200.0,
+    "Name_tr": "zencefil mojito soda orta",
+    "Name_En": "Ginger mojito soda medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو فريز ريد بول وسط",
+    "Price": 240.0,
+    "Name_tr": "ÇİLEK mojito RedBull orta",
+    "Name_En": "Strawberry mojito RedBull medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو فريز سفن وسط",
+    "Price": 220.0,
+    "Name_tr": "ÇİLEK mojito 7up orta",
+    "Name_En": "Strawberry mojito 7up medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو فريز صودا وسط",
+    "Price": 200.0,
+    "Name_tr": "ÇİLEK mojito soda orta",
+    "Name_En": "Strawberry mojito soda medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو كلاسيك ريد بول وسط",
+    "Price": 240.0,
+    "Name_tr": "Mojito classic RedBull orta",
+    "Name_En": "Mojito classic RedBull medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو كلاسيك سفن وسط",
+    "Price": 220.0,
+    "Name_tr": "Mojito classic 7up orta",
+    "Name_En": "Mojito classic 7up medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو كلاسيك صودا وسط",
+    "Price": 200.0,
+    "Name_tr": "Mojito classic soda orta",
+    "Name_En": "Mojito classic soda medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو كيوي ريد بول وسط",
+    "Price": 240.0,
+    "Name_tr": "Kiwi mojito RedBull orta",
+    "Name_En": "Kiwi mojito RedBull medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو كيوي سفن وسط",
+    "Price": 220.0,
+    "Name_tr": "Kiwi mojito 7up orta",
+    "Name_En": "Kiwi mojito 7up medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو كيوي صودا وسط",
+    "Price": 200.0,
+    "Name_tr": "Kiwi mojito soda orta",
+    "Name_En": "Kiwi mojito soda medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو مانجو ريد بول وسط",
+    "Price": 240.0,
+    "Name_tr": "Mango mojito RedBull orta",
+    "Name_En": "Mango mojito RedBull medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو مانجو سفن وسط",
+    "Price": 220.0,
+    "Name_tr": "Mango mojito 7up orta",
+    "Name_En": "Mango mojito 7up medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو مانجو صودا وسط",
+    "Price": 200.0,
+    "Name_tr": "Mango mojito soda orta",
+    "Name_En": "Mango mojito soda medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو ميكس بيري ريد بول وسط",
+    "Price": 290.0,
+    "Name_tr": "Mix berries mojito RedBull orta",
+    "Name_En": "Mix berries mojito RedBull medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو ميكس بيري سفن وسط",
+    "Price": 260.0,
+    "Name_tr": "Mix berries mojito 7up orta",
+    "Name_En": "Mix berries mojito 7up medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "موهيتو ميكس بيري صودا وسط",
+    "Price": 230.0,
+    "Name_tr": "Mix berries mojito soda orta",
+    "Name_En": "Mix berries mojito soda medium",
+    "Category Name": "Mojitos",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "اوبرا",
+    "Price": 0.0,
+    "Name_tr": "Opera Pastası",
+    "Name_En": "Opera cake",
+    "Category Name": "Patisserie",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "تشمني كيك بندق",
+    "Price": 0.0,
+    "Name_tr": "Fındıklı Bacalı Kek",
+    "Name_En": "Hazelnut Chimney Cake",
+    "Category Name": "Patisserie",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "تشمني كيك قرفة",
+    "Price": 0.0,
+    "Name_tr": "Çimni Cake",
+    "Name_En": "Chimney Cake",
+    "Category Name": "Patisserie",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "تشيز كيك بستاشيو",
+    "Price": 0.0,
+    "Name_tr": "Fıstıklı Cheesecake",
+    "Name_En": "Pistachio Cheesecake",
+    "Category Name": "Patisserie",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "تشيز كيك بلو بيري",
+    "Price": 0.0,
+    "Name_tr": "Yaban mersinli Cheesecake",
+    "Name_En": "Blueberry Cheesecake",
+    "Category Name": "Patisserie",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "تشيز كيك شوكولا",
+    "Price": 0.0,
+    "Name_tr": "Çikolatalı Cheesecake",
+    "Name_En": "Chocolate Cheesecake",
+    "Category Name": "Patisserie",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "تشيز كيك فريز",
+    "Price": 0.0,
+    "Name_tr": "Çilekli Cheesecake",
+    "Name_En": "Strawberry Cheesecake",
+    "Category Name": "Patisserie",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "تيراميسو",
+    "Price": 0.0,
+    "Name_tr": "Tiramisu",
+    "Name_En": "Tiramisu",
+    "Category Name": "Patisserie",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "فوندون",
+    "Price": 0.0,
+    "Name_tr": "Çikolatalı Fondan",
+    "Name_En": "Fondant chocolate",
+    "Category Name": "Patisserie",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كروسان سادة",
+    "Price": 0.0,
+    "Name_tr": "kruvasan",
+    "Name_En": "Croissants",
+    "Category Name": "Patisserie",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كوكيز بستاشيو",
+    "Price": 0.0,
+    "Name_tr": "Fıstıklı Kurabiye",
+    "Name_En": "Pistachio Cookies",
+    "Category Name": "Patisserie",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كوكيز بندوق",
+    "Price": 0.0,
+    "Name_tr": "\tFındıklı Kurabiye",
+    "Name_En": "Hazelnut Cookies",
+    "Category Name": "Patisserie",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كوكيز توت احمر",
+    "Price": 0.0,
+    "Name_tr": "Ahududu kurabiye",
+    "Name_En": "Raspberry Cookies",
+    "Category Name": "Patisserie",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كوكيز سادة",
+    "Price": 0.0,
+    "Name_tr": "kurabiye sadeli",
+    "Name_En": " Cookies",
+    "Category Name": "Patisserie",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كوكيز لوتوس",
+    "Price": 0.0,
+    "Name_tr": "Lotuslu Kurabiye",
+    "Name_En": "Lotus Cookies",
+    "Category Name": "Patisserie",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كيكة الجزر",
+    "Price": 0.0,
+    "Name_tr": "havuç Cake",
+    "Name_En": "Carrot Cake",
+    "Category Name": "Patisserie",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كيكة العسل",
+    "Price": 0.0,
+    "Name_tr": "Ballı Cake",
+    "Name_En": "Honey Cake",
+    "Category Name": "Patisserie",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كيكة براونيز",
+    "Price": 0.0,
+    "Name_tr": "Brownie Cake",
+    "Name_En": "Brownie Cake",
+    "Category Name": "Patisserie",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كيكة سان سباستيان",
+    "Price": 0.0,
+    "Name_tr": "San Sebastian Cake",
+    "Name_En": "San Sebastian Cake",
+    "Category Name": "Patisserie",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كول لايم",
+    "Price": 160.0,
+    "Name_tr": "Cool lime",
+    "Name_En": "Cool lime",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كول لايم ابل بابلز",
+    "Price": 180.0,
+    "Name_tr": "Cool lime elma bubbles",
+    "Name_En": "Cool lime apple bubbles",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كول لايم ابل بابلز كبير",
+    "Price": 220.0,
+    "Name_tr": "Cool lime elma bubbles büyük",
+    "Name_En": "Cool lime apple bubbles Large",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كول لايم ابل بابلز وسط",
+    "Price": 200.0,
+    "Name_tr": "Cool lime elma bubbles orta",
+    "Name_En": "Cool lime apple bubbles Medium",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كول لايم بلو بيري بابلز",
+    "Price": 180.0,
+    "Name_tr": "Cool lime blueberry bubbles",
+    "Name_En": "Cool lime blueberry bubbles",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كول لايم بلو بيري بابلز كبير",
+    "Price": 220.0,
+    "Name_tr": "Cool lime blueberry bubbles büyük",
+    "Name_En": "Cool lime blueberry bubbles large",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كول لايم بلو بيري بابلز وسط",
+    "Price": 200.0,
+    "Name_tr": "Cool lime blueberry bubbles orta",
+    "Name_En": "Cool lime blueberry bubbles Medium",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كول لايم سترو بيري بابلز",
+    "Price": 180.0,
+    "Name_tr": "Cool lime Çilekli  bubbles",
+    "Name_En": "Cool lime strawberry bubbles",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كول لايم سترو بيري بابلز كبير",
+    "Price": 220.0,
+    "Name_tr": "Cool lime Çilekli bubbles büyük",
+    "Name_En": "Cool lime strawberry bubbles Large",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كول لايم سترو بيري بابلز وسط",
+    "Price": 200.0,
+    "Name_tr": "Cool lime Çilekli bubbles orta",
+    "Name_En": "Cool lime strawberry bubbles Medium",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كول لايم سترو بيري ميكس",
+    "Price": 160.0,
+    "Name_tr": "Cool lime Çilekli mix",
+    "Name_En": "Cool lime strawberry mix",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كول لايم سترو بيري ميكس كبير",
+    "Price": 200.0,
+    "Name_tr": "Cool lime Çilekli mix büyük",
+    "Name_En": "Cool lime strawberry mix large",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كول لايم سترو بيري ميكس وسط",
+    "Price": 180.0,
+    "Name_tr": "Cool lime Çilekli mix orta",
+    "Name_En": "Cool lime strawberry mix Medium",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كول لايم كبير",
+    "Price": 200.0,
+    "Name_tr": "Cool lime büyük",
+    "Name_En": "Cool lime large",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كول لايم مانجو ميكس",
+    "Price": 160.0,
+    "Name_tr": "Cool lime mango mix",
+    "Name_En": "Cool lime mango mix",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كول لايم مانجو ميكس كبير",
+    "Price": 200.0,
+    "Name_tr": "Cool lime mango mix büyük",
+    "Name_En": "Cool lime mango mix large",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كول لايم مانجو ميكس وسط",
+    "Price": 180.0,
+    "Name_tr": "Cool lime mango mix orta",
+    "Name_En": "Cool lime mango mix Medium",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كول لايم وسط",
+    "Price": 180.0,
+    "Name_tr": "Cool lime orta",
+    "Name_En": "Cool lime Medium",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "هيبسكوس",
+    "Price": 160.0,
+    "Name_tr": "Hibiscus",
+    "Name_En": "Hibiscus",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "هيبسكوس ابل بابلز",
+    "Price": 180.0,
+    "Name_tr": "Hibiscus elma bubbles",
+    "Name_En": "Hibiscus apple bubbles",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "هيبسكوس ابل بابلز كبير",
+    "Price": 220.0,
+    "Name_tr": "Hibiscus elma bubbles büyük",
+    "Name_En": "Hibiscus apple bubbles large",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "هيبسكوس ابل بابلز وسط",
+    "Price": 200.0,
+    "Name_tr": "Hibiscus elma bubbles orta",
+    "Name_En": "Hibiscus apple bubbles Medium",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "هيبسكوس بلو بيري بابلز",
+    "Price": 180.0,
+    "Name_tr": "Hibiscus blueberry bubbles",
+    "Name_En": "Hibiscus blueberry bubbles",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "هيبسكوس بلو بيري ميكس",
+    "Price": 160.0,
+    "Name_tr": "Hibiscus blueberry mix",
+    "Name_En": "Hibiscus blueberry mix",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "هيبسكوس بلو بيري ميكس كبير",
+    "Price": 200.0,
+    "Name_tr": "Hibiscus blueberry mix büyük",
+    "Name_En": "Hibiscus blueberry mix large",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "هيبسكوس بلو بيري ميكس وسط",
+    "Price": 180.0,
+    "Name_tr": "Hibiscus blueberry mix orta",
+    "Name_En": "Hibiscus blueberry mix Medium",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "هيبسكوس بلوبيري بابلز كبير",
+    "Price": 220.0,
+    "Name_tr": "Hibiscus blueberry bubbles büyük",
+    "Name_En": "Hibiscus blueberry bubbles large",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "هيبسكوس بلوبيري بابلز وسط",
+    "Price": 200.0,
+    "Name_tr": "Hibiscus blueberry bubbles orta",
+    "Name_En": "Hibiscus blueberry bubbles Medium",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "هيبسكوس سترو بيري بابلز",
+    "Price": 180.0,
+    "Name_tr": "Hibiscus ÇİLEK bubbles",
+    "Name_En": "Hibiscus strawberry bubbles",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "هيبسكوس سترو بيري ميكس",
+    "Price": 160.0,
+    "Name_tr": "HibiscusÇİLEK Mix",
+    "Name_En": "Hibiscus strawberry Mix",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "هيبسكوس سترو بيري ميكس كبير",
+    "Price": 200.0,
+    "Name_tr": "Hibiscus ÇİLEK mix büyük",
+    "Name_En": "Hibiscus strawberry mix large",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "هيبسكوس سترو بيري ميكس وسط",
+    "Price": 180.0,
+    "Name_tr": "Hibiscus ÇİLEKmix orta",
+    "Name_En": "Hibiscus strawberry mix Medium",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "هيبسكوس ستروبيري بابلز كبير",
+    "Price": 220.0,
+    "Name_tr": "Hibiscus ÇİLEK bubbles büyük",
+    "Name_En": "Hibiscus strawberry bubbles large",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "هيبسكوس ستروبيري بابلز وسط",
+    "Price": 200.0,
+    "Name_tr": "Hibiscus ÇİLEK bubbles orta",
+    "Name_En": "Hibiscus strawberry bubbles Medium",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "هيبسكوس كبير",
+    "Price": 200.0,
+    "Name_tr": "Hibiscus büyük",
+    "Name_En": "Hibiscus large",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "هيبسكوس وسط",
+    "Price": 180.0,
+    "Name_tr": "Hibiscus orta",
+    "Name_En": "Hibiscus Medium",
+    "Category Name": "Signature",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "بينا كولادا وسط",
+    "Price": 0.0,
+    "Name_tr": "Pina colada",
+    "Name_En": "Pina colada",
+    "Category Name": "Smoothies",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "سموزي اناناس برتقال وسط",
+    "Price": 240.0,
+    "Name_tr": "Pineapple orange smoothie orta",
+    "Name_En": "Pineapple orange smoothie medium",
+    "Category Name": "Smoothies",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "سموزي اناناس وسط",
+    "Price": 200.0,
+    "Name_tr": "Ananas smoothie orta",
+    "Name_En": "Pineapple smoothie medium",
+    "Category Name": "Smoothies",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "سموزي باشن برتقال وسط",
+    "Price": 240.0,
+    "Name_tr": "Passion orange smoothie orta",
+    "Name_En": "Passion orange smoothie medium",
+    "Category Name": "Smoothies",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "سموزي باشن مانجو وسط",
+    "Price": 250.0,
+    "Name_tr": "Passion mango smoothie orta",
+    "Name_En": "Passion mango smoothie medium",
+    "Category Name": "Smoothies",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "سموزي برتقال دراق وسط",
+    "Price": 240.0,
+    "Name_tr": "Şeftali portakal smoothie orta",
+    "Name_En": "Peach orange smoothie medium",
+    "Category Name": "Smoothies",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "سموزي دراق باشن وسط",
+    "Price": 240.0,
+    "Name_tr": "Passion peach smoothie orta",
+    "Name_En": "Passion peach smoothie medium",
+    "Category Name": "Smoothies",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "سموزي دراق وسط",
+    "Price": 240.0,
+    "Name_tr": "Şeftali smoothie orta",
+    "Name_En": "Peach smoothie medium",
+    "Category Name": "Smoothies",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "سموزي فريز وسط",
+    "Price": 170.0,
+    "Name_tr": "Çilekli smoothie orta",
+    "Name_En": "Strawberry smoothie medium",
+    "Category Name": "Smoothies",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "سموزي كاريبيان وسط",
+    "Price": 240.0,
+    "Name_tr": "Karibbean smoothie orta",
+    "Name_En": "Caribbean smoothie medium",
+    "Category Name": "Smoothies",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "سموزي ليمون بالنعناع وسط",
+    "Price": 170.0,
+    "Name_tr": "Naneli limonata orta",
+    "Name_En": "Minted lemonade medium",
+    "Category Name": "Smoothies",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "سموزي ليمون مع رمان وسط",
+    "Price": 250.0,
+    "Name_tr": "pembe lemonata orta",
+    "Name_En": "Pink lemonade medium",
+    "Category Name": "Smoothies",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "سموزي ليموناضة بالفريز وسط",
+    "Price": 180.0,
+    "Name_tr": "Çilekli lemonata smoothie orta",
+    "Name_En": "Strawberry lemonade smoothie medium",
+    "Category Name": "Smoothies",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "سموزي مانجو فريز وسط",
+    "Price": 240.0,
+    "Name_tr": "Çilekli mango smoothie orta",
+    "Name_En": "Strawberry mango smoothie medium",
+    "Category Name": "Smoothies",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "سموزي مانجو وسط",
+    "Price": 240.0,
+    "Name_tr": "Mango smoothie orta",
+    "Name_En": "Mango smoothie medium",
+    "Category Name": "Smoothies",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "سموزي ميكس بيريز وسط",
+    "Price": 240.0,
+    "Name_tr": "Mix berries smoothie orta",
+    "Name_En": "Mix berries smoothie medium",
+    "Category Name": "Smoothies",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كريب اوريو",
+    "Price": 350.0,
+    "Name_tr": "Oreo krep",
+    "Name_En": "Oreo Crepe",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كريب بستاشيو",
+    "Price": 300.0,
+    "Name_tr": "Antep fıstığı krep",
+    "Name_En": "Pistachio Crepe",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كريب بيكو",
+    "Price": 420.0,
+    "Name_tr": "Piko krep",
+    "Name_En": "Piko Crepe",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كريب تشيز كيك",
+    "Price": 320.0,
+    "Name_tr": "Cheesecake krep",
+    "Name_En": "Cheesecake Crepe",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كريب شوكولا",
+    "Price": 300.0,
+    "Name_tr": "Çikolata krep",
+    "Name_En": "Chocolate Crepe",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كريب فواكه",
+    "Price": 400.0,
+    "Name_tr": "Meyveli krep ",
+    "Name_En": "Fruit Crepe",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كريب فوتوتشيني",
+    "Price": 350.0,
+    "Name_tr": "Fettucine ",
+    "Name_En": "Fettuccine Crepe",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "كريب لوتوس",
+    "Price": 380.0,
+    "Name_tr": "Lotus Crepe",
+    "Name_En": "Lotus Crepe",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "وافل اوريو",
+    "Price": 350.0,
+    "Name_tr": "Oreo Waffle",
+    "Name_En": "Oreo Waffle",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "وافل بستاشيو",
+    "Price": 390.0,
+    "Name_tr": "Antep fıstığı Waffle",
+    "Name_En": "Pistachio Waffle",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "وافل شوكولا",
+    "Price": 280.0,
+    "Name_tr": "Çikolata Waffle",
+    "Name_En": "Chocolate Waffle",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "وافل فريز",
+    "Price": 340.0,
+    "Name_tr": "ÇİLEKli Waffle",
+    "Name_En": "Strawberry Waffle",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "وافل فواكه",
+    "Price": 450.0,
+    "Name_tr": "meyveli Waffle",
+    "Name_En": "Fruit Waffle",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "وافل لوتوس",
+    "Price": 450.0,
+    "Name_tr": "Lotus Waffle",
+    "Name_En": "Lotus Waffle",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "وافل مارشميلو",
+    "Price": 300.0,
+    "Name_tr": "Marshmallow Waffle",
+    "Name_En": "Marshmallow Waffle",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "بان كيك اوريو",
+    "Price": 320.0,
+    "Name_tr": "Oreo Pancake",
+    "Name_En": "Oreo Pancake",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "بان كيك بستاشيو",
+    "Price": 350.0,
+    "Name_tr": "Antep fıstığı Pancake",
+    "Name_En": "Pistachio Pancake",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "بان كيك تيرامسو",
+    "Price": 320.0,
+    "Name_tr": "Tiramisu Pancake",
+    "Name_En": "Tiramisu Pancake",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "بان كيك شوكولا",
+    "Price": 300.0,
+    "Name_tr": "Chocolate Pancake",
+    "Name_En": "Chocolate Pancake",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "بان كيك فواكه",
+    "Price": 450.0,
+    "Name_tr": "Fruit Pancake",
+    "Name_En": "Fruit Pancake",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "بان كيك لوتوس",
+    "Price": 400.0,
+    "Name_tr": "Lotus Pancake",
+    "Name_En": "Lotus Pancake",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ميني بان كيك اوريو",
+    "Price": 350.0,
+    "Name_tr": "Mini Oreo Pancake",
+    "Name_En": "Mini Oreo Pancake",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ميني بان كيك بستاشيو",
+    "Price": 320.0,
+    "Name_tr": "Mini Antep fıstığı Pancake",
+    "Name_En": "Mini Pistachio Pancake",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ميني بان كيك شوكولا",
+    "Price": 300.0,
+    "Name_tr": "Mini Çikolatalı Pancake",
+    "Name_En": "Mini Chocolate Pancake",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ميني بان كيك فواكه",
+    "Price": 450.0,
+    "Name_tr": "Mini meyveli  Pancake",
+    "Name_En": "Mini Fruit Pancake",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ميني بان كيك لوتوس",
+    "Price": 360.0,
+    "Name_tr": "Mini Lotus Pancake",
+    "Name_En": "Mini Lotus Pancake",
+    "Category Name": "Sweets",
+    "Image": NaN
+  },
+  {
+    "Name_Ar": "ميني بان كيك ميكس بيري",
+    "Price": 350.0,
+    "Name_tr": "Mixed Berry Pancake",
+    "Name_En": "Mixed Berry Pancake",
+    "Category Name": "Sweets",
+    "Image": NaN
+  }
+]

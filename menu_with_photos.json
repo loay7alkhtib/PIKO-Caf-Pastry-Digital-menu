@@ -1,0 +1,4423 @@
+[
+  {
+    "id": "item_1761098078113_6a5i7vl5n",
+    "name_ar": "اسبريسو",
+    "name_tr": "Espresso",
+    "name_en": "Espresso",
+    "category": "Hot Coffee",
+    "base_price": 95,
+    "image": "/Piko Web app Photos 6/Espresso.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Espresso.jpg"
+  },
+  {
+    "id": "item_1761098078113_xa9tvzaaf",
+    "name_ar": "اسبريسو افوكاتو",
+    "name_tr": "Espresso Avokado",
+    "name_en": "Espresso Affogato",
+    "category": "Hot Coffee",
+    "base_price": 195,
+    "image": "/Piko Web app Photos 6/Espresso Affogato.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Espresso Affogato.jpg"
+  },
+  {
+    "id": "item_1761098078113_emctx605m",
+    "name_ar": "اسبريسو ريستريتو",
+    "name_tr": "Espresso Ristretto",
+    "name_en": "Espresso Ristretto",
+    "category": "Hot Coffee",
+    "base_price": 95,
+    "image": "/Piko Web app Photos 6/Espresso.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Espresso.jpg"
+  },
+  {
+    "id": "item_1761098078113_qhbm53puz",
+    "name_ar": "اسبريسو مكياتو",
+    "name_tr": "Espresso Macchiato",
+    "name_en": "Espresso Macchiato",
+    "category": "Hot Coffee",
+    "base_price": 120,
+    "image": "/Piko Web app Photos 6/Espresso Macchiato.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Espresso Macchiato.jpg"
+  },
+  {
+    "id": "item_1761098078113_p3jgevqlz",
+    "name_ar": "امريكانو",
+    "name_tr": "Americano",
+    "name_en": "Americano",
+    "category": "Hot Coffee",
+    "base_price": 120,
+    "image": "/Piko Web app Photos 6/Americano.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 120,
+        "name_ar": "امريكانو",
+        "name_tr": "Americano",
+        "name_en": "Americano"
+      },
+      {
+        "size": "medium",
+        "price": 140,
+        "name_ar": "امريكانو وسط",
+        "name_tr": "Americano orta",
+        "name_en": "Americano Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Americano.jpg"
+  },
+  {
+    "id": "item_1761098078113_09ddplupq",
+    "name_ar": "بترسكوتش لاتيه",
+    "name_tr": "Butter scotch Latte",
+    "name_en": "Butter scotch Latte",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "بترسكوتش لاتيه",
+        "name_tr": "Butter scotch Latte",
+        "name_en": "Butter scotch Latte"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "بترسكوتش لاتيه وسط",
+        "name_tr": "Butter scotch Latte orta",
+        "name_en": "Butter scotch Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_sen2x2ja5",
+    "name_ar": "بيكو موكا",
+    "name_tr": "Piko Mocha",
+    "name_en": "Piko Mocha",
+    "category": "Hot Coffee",
+    "base_price": 200,
+    "image": "/Piko Web app Photos 6/Iced Mocha Latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "بيكو موكا",
+        "name_tr": "Piko Mocha",
+        "name_en": "Piko Mocha"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "بيكو موكا وسط",
+        "name_tr": "Piko Mocha orta",
+        "name_en": "Piko Mocha Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Iced Mocha Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_7qd9p3dis",
+    "name_ar": "بينك بيري ماتشا لاتيه",
+    "name_tr": "Pink Perry matcha latte",
+    "name_en": "Pink Perry matcha latta",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Pink Perry Matcha .jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Pink Perry Matcha .jpg"
+  },
+  {
+    "id": "item_1761098078113_q4bo5hvfd",
+    "name_ar": "بينك ماتشا لاتيه",
+    "name_tr": "Pink matcha latte",
+    "name_en": "Pink matcha latte",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Pink Matcha Latte.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Pink Matcha Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_4g6wgx3us",
+    "name_ar": "تشيز كيك لاتيه",
+    "name_tr": "Cheese cake Latte",
+    "name_en": "Cheese cake Latte",
+    "category": "Hot Coffee",
+    "base_price": 200,
+    "image": "/Piko Web app Photos 6/Blueberry Cheesecake.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "تشيز كيك لاتيه",
+        "name_tr": "Cheese cake Latte",
+        "name_en": "Cheese cake Latte"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "تشيز كيك لاتيه وسط",
+        "name_tr": "Cheese cake Latte orta",
+        "name_en": "Cheese cake Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Blueberry Cheesecake.jpg"
+  },
+  {
+    "id": "item_1761098078113_5u491px22",
+    "name_ar": "توفي نات لاتيه",
+    "name_tr": "Toffee fındık Latte",
+    "name_en": "Toffee Nut Latte",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "توفي نات لاتيه",
+        "name_tr": "Toffee fındık Latte",
+        "name_en": "Toffee Nut Latte"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "توفي نات لاتيه وسط",
+        "name_tr": "Toffee fındık Latte orta",
+        "name_en": "Toffee Nut Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_xccrypj0r",
+    "name_ar": "دبل اسبريسو",
+    "name_tr": "Double Espresso",
+    "name_en": "Double Espresso",
+    "category": "Hot Coffee",
+    "base_price": 110,
+    "image": "/Piko Web app Photos 6/Double Espresso.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Double Espresso.jpg"
+  },
+  {
+    "id": "item_1761098078113_0tdvayeng",
+    "name_ar": "زيبرا موكا",
+    "name_tr": "Zebra Mocha",
+    "name_en": "Zebra Mocha",
+    "category": "Hot Coffee",
+    "base_price": 200,
+    "image": "/Piko Web app Photos 6/Iced Zebra Mocha Latte .jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "زيبرا موكا",
+        "name_tr": "Zebra Mocha",
+        "name_en": "Zebra Mocha"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "زيبرا موكا وسط",
+        "name_tr": "Zebra Mocha orta",
+        "name_en": "Zebra Mocha Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Iced Zebra Mocha Latte .jpg"
+  },
+  {
+    "id": "item_1761098078113_rjh93uouj",
+    "name_ar": "سبانش لاتيه",
+    "name_tr": "Spanish Latte",
+    "name_en": "Spanish Latte",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "سبانش لاتيه",
+        "name_tr": "Spanish Latte",
+        "name_en": "Spanish Latte"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "سبانش لاتيه وسط",
+        "name_tr": "Spanish Latte orta",
+        "name_en": "Spanish Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_qwytv1dbl",
+    "name_ar": "ستروبيري ماتشا لاتيه",
+    "name_tr": "Çilekli matcha latte",
+    "name_en": "Strawberry matcha latte",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Matcha Latte.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Matcha Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_xin4wclyr",
+    "name_ar": "ستروبيري موكا لاتيه",
+    "name_tr": "Çilekli Mocha Latte",
+    "name_en": "Strawberry Mocha Latte",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Iced Strawberry Mocha .jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Iced Strawberry Mocha .jpg"
+  },
+  {
+    "id": "item_1761098078113_9pju5x64h",
+    "name_ar": "ستروبيري موكا لاتيه وسط",
+    "name_tr": "Çilekli mocha latte orta",
+    "name_en": "Strawberry mocha latte Medium",
+    "category": "Hot Coffee",
+    "base_price": 200,
+    "image": "/Piko Web app Photos 6/Iced Strawberry Mocha .jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Iced Strawberry Mocha .jpg"
+  },
+  {
+    "id": "item_1761098078113_epppng9ng",
+    "name_ar": "سحلب بالقرفة",
+    "name_tr": "Sahlab with Cinnamon",
+    "name_en": "Sahlab with Cinnamon",
+    "category": "Hot Coffee",
+    "base_price": 150,
+    "image": "/Piko Web app Photos 6/Sahlab With Cinnamon.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Sahlab With Cinnamon.jpg"
+  },
+  {
+    "id": "item_1761098078113_fbzcwchll",
+    "name_ar": "سلتد كراميل لاتيه",
+    "name_tr": "Salted Caramel Latte",
+    "name_en": "Salted Caramel Latte",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Caramel bubbles iced latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "سلتد كراميل لاتيه",
+        "name_tr": "Salted Caramel Latte",
+        "name_en": "Salted Caramel Latte"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "سلتد كراميل لاتيه وسط",
+        "name_tr": "Salted Caramel Latte orta",
+        "name_en": "Salted Caramel Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Caramel bubbles iced latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_v2vya1kf0",
+    "name_ar": "فانيليا لاتيه",
+    "name_tr": "Vanilla Latte",
+    "name_en": "Vanilla Latte",
+    "category": "Hot Coffee",
+    "base_price": 160,
+    "image": "/Piko Web app Photos 6/Iced Vanilla Latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 160,
+        "name_ar": "فانيليا لاتيه",
+        "name_tr": "Vanilla Latte",
+        "name_en": "Vanilla Latte"
+      },
+      {
+        "size": "medium",
+        "price": 180,
+        "name_ar": "فانيليا لاتيه وسط",
+        "name_tr": "Vanilla Latte orta",
+        "name_en": "Vanilla Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Iced Vanilla Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_42b8ej0nr",
+    "name_ar": "فلات وايت",
+    "name_tr": "Flat White",
+    "name_en": "Flat White",
+    "category": "Hot Coffee",
+    "base_price": 140,
+    "image": "/Piko Web app Photos 6/Flat white .jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 140,
+        "name_ar": "فلات وايت",
+        "name_tr": "Flat White",
+        "name_en": "Flat White"
+      },
+      {
+        "size": "medium",
+        "price": 160,
+        "name_ar": "فلات وايت وسط",
+        "name_tr": "Flat White orta",
+        "name_en": "Flat White Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Flat white .jpg"
+  },
+  {
+    "id": "item_1761098078113_f7u9qaheq",
+    "name_ar": "فلتر قهوة",
+    "name_tr": "Filter kahve",
+    "name_en": "Filter Coffee",
+    "category": "Hot Coffee",
+    "base_price": 140,
+    "image": "/Piko Web app Photos 6/Iced Filter Coffee With Milk.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 140,
+        "name_ar": "فلتر قهوة",
+        "name_tr": "Filter kahve",
+        "name_en": "Filter Coffee"
+      },
+      {
+        "size": "medium",
+        "price": 160,
+        "name_ar": "فلتر قهوة وسط",
+        "name_tr": "Filter Coffee orta",
+        "name_en": "Filter Coffee Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Iced Filter Coffee With Milk.jpg"
+  },
+  {
+    "id": "item_1761098078113_ei9wn5ll4",
+    "name_ar": "فلتر قهوة بالحليب",
+    "name_tr": "Filter Coffee with Milk",
+    "name_en": "Filter Coffee with Milk",
+    "category": "Hot Coffee",
+    "base_price": 160,
+    "image": "/Piko Web app Photos 6/Iced Filter Coffee With Milk.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 160,
+        "name_ar": "فلتر قهوة بالحليب",
+        "name_tr": "Filter Coffee with Milk",
+        "name_en": "Filter Coffee with Milk"
+      },
+      {
+        "size": "medium",
+        "price": 180,
+        "name_ar": "فلتر قهوة بالحليب وسط",
+        "name_tr": "Filter Coffee with Milk orta",
+        "name_en": "Filter Coffee with Milk Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Iced Filter Coffee With Milk.jpg"
+  },
+  {
+    "id": "item_1761098078113_ba61dm1ck",
+    "name_ar": "في 60",
+    "name_tr": "V60",
+    "name_en": "V60",
+    "category": "Hot Coffee",
+    "base_price": 195,
+    "image": "/Piko Web app Photos 6/V60.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 195,
+        "name_ar": "في 60",
+        "name_tr": "V60",
+        "name_en": "V60"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "في 60 وسط",
+        "name_tr": "V60 orta",
+        "name_en": "V60 Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "V60.jpg"
+  },
+  {
+    "id": "item_1761098078113_uknnnbxhn",
+    "name_ar": "قهوة تركية",
+    "name_tr": "Türk kahvesi",
+    "name_en": "Turkish Coffee",
+    "category": "Hot Coffee",
+    "base_price": 95,
+    "image": "/Piko Web app Photos 6/Turkish Coffee.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Turkish Coffee.jpg"
+  },
+  {
+    "id": "item_1761098078113_8ttvq33fp",
+    "name_ar": "قهوة تركية دبل",
+    "name_tr": "Double Türk kahvesi",
+    "name_en": "Double Turkish Coffee",
+    "category": "Hot Coffee",
+    "base_price": 135,
+    "image": "/Piko Web app Photos 6/Turkish Coffee.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Turkish Coffee.jpg"
+  },
+  {
+    "id": "item_1761098078113_xj9ghx9zw",
+    "name_ar": "قهوة عربية",
+    "name_tr": "Cardamom  kahvesi",
+    "name_en": "Cardamom Coffee",
+    "category": "Hot Coffee",
+    "base_price": 95,
+    "image": "/Piko Web app Photos 6/Cardamom Coffee.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Cardamom Coffee.jpg"
+  },
+  {
+    "id": "item_1761098078113_d44l16lik",
+    "name_ar": "قهوة عربية دبل",
+    "name_tr": "Double cardamom  kahvesi",
+    "name_en": "Double cardamom Coffee",
+    "category": "Hot Coffee",
+    "base_price": 135,
+    "image": "/Piko Web app Photos 6/Cardamom Coffee.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Cardamom Coffee.jpg"
+  },
+  {
+    "id": "item_1761098078113_u9knxti3k",
+    "name_ar": "كابتشينو",
+    "name_tr": "Cappuccino",
+    "name_en": "Cappuccino",
+    "category": "Hot Coffee",
+    "base_price": 140,
+    "image": "/Piko Web app Photos 6/Cappuccino.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 140,
+        "name_ar": "كابتشينو",
+        "name_tr": "Cappuccino",
+        "name_en": "Cappuccino"
+      },
+      {
+        "size": "medium",
+        "price": 160,
+        "name_ar": "كابتشينو وسط",
+        "name_tr": "Cappuccino orta",
+        "name_en": "Cappuccino Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Cappuccino.jpg"
+  },
+  {
+    "id": "item_1761098078113_8op3f6lmr",
+    "name_ar": "كراميل لاتيه",
+    "name_tr": "karamel Latte",
+    "name_en": "Caramel Latte",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Iced Caramel Latte .jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "كراميل لاتيه",
+        "name_tr": "karamel Latte",
+        "name_en": "Caramel Latte"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "كراميل لاتيه وسط",
+        "name_tr": "karamel Latte orta",
+        "name_en": "Caramel Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Iced Caramel Latte .jpg"
+  },
+  {
+    "id": "item_1761098078113_de3tg7d1d",
+    "name_ar": "كراميل مكياتو",
+    "name_tr": "karamel Macchiato",
+    "name_en": "Caramel Macchiato",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Caramel Macchiato.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Caramel Macchiato.jpg"
+  },
+  {
+    "id": "item_1761098078113_7lcwn6gzy",
+    "name_ar": "كراميل مكياتو وسط",
+    "name_tr": "karamel macchiato orta",
+    "name_en": "Caramel macchiato medium",
+    "category": "Hot Coffee",
+    "base_price": 200,
+    "image": "/Piko Web app Photos 6/Caramel Macchiato.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Caramel Macchiato.jpg"
+  },
+  {
+    "id": "item_1761098078113_ydrglhrwv",
+    "name_ar": "كورتادو",
+    "name_tr": "kortadu",
+    "name_en": "Cortado",
+    "category": "Hot Coffee",
+    "base_price": 140,
+    "image": "/Piko Web app Photos 6/Cortado.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Cortado.jpg"
+  },
+  {
+    "id": "item_1761098078113_j1iqwf48s",
+    "name_ar": "لاتيه",
+    "name_tr": "Latte",
+    "name_en": "Latte",
+    "category": "Hot Coffee",
+    "base_price": 140,
+    "image": "/Piko Web app Photos 6/Latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 140,
+        "name_ar": "لاتيه",
+        "name_tr": "Latte",
+        "name_en": "Latte"
+      },
+      {
+        "size": "medium",
+        "price": 160,
+        "name_ar": "لاتيه وسط",
+        "name_tr": "Latte orta",
+        "name_en": "Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_il5rq1y2o",
+    "name_ar": "موكا لاتيه",
+    "name_tr": "Mocha Latte",
+    "name_en": "Mocha Latte",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Iced Mocha Latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "موكا لاتيه",
+        "name_tr": "Mocha Latte",
+        "name_en": "Mocha Latte"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "موكا لاتيه وسط",
+        "name_tr": "Mocha Latte orta",
+        "name_en": "Mocha Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Iced Mocha Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_5dbwfc6by",
+    "name_ar": "هوت شوكلت",
+    "name_tr": "Sıcak çikolata",
+    "name_en": "Hot Chocolate",
+    "category": "Hot Coffee",
+    "base_price": 200,
+    "image": "/Piko Web app Photos 6/Hot Chocolate.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "هوت شوكلت",
+        "name_tr": "Sıcak çikolata",
+        "name_en": "Hot Chocolate"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "هوت شوكلت وسط",
+        "name_tr": "Sıcak çikolata orta",
+        "name_en": "Hot Chocolate Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Hot Chocolate.jpg"
+  },
+  {
+    "id": "item_1761098078113_86x7m5xys",
+    "name_ar": "وايت موكا لاتيه",
+    "name_tr": "Beyaz Mocha Latte",
+    "name_en": "White Mocha Latte",
+    "category": "Hot Coffee",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Iced Mocha Latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "وايت موكا لاتيه",
+        "name_tr": "Beyaz Mocha Latte",
+        "name_en": "White Mocha Latte"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "وايت موكا لاتيه وسط",
+        "name_tr": "Beyaz Mocha Latte orta",
+        "name_en": "White Mocha Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Iced Mocha Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_jcr0y3e8x",
+    "name_ar": "وايت هوت شوكلت",
+    "name_tr": "Beyaz Hot Chocolate",
+    "name_en": "White Hot Chocolate",
+    "category": "Hot Coffee",
+    "base_price": 200,
+    "image": "/Piko Web app Photos 6/White Hot Chocolate .jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "وايت هوت شوكلت",
+        "name_tr": "Beyaz Hot Chocolate",
+        "name_en": "White Hot Chocolate"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "وايت هوت شوكلت وسط",
+        "name_tr": "Beyaz Hot Chocolate orta",
+        "name_en": "White Hot Chocolate Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "White Hot Chocolate .jpg"
+  },
+  {
+    "id": "item_1761098078113_7h87dku47",
+    "name_ar": "ايس ستروبيري موكا",
+    "name_tr": " buzlu ÇİLEK mocha",
+    "name_en": "Iced strawberry mocha",
+    "category": "Ice Coffee",
+    "base_price": 200,
+    "image": "/Piko Web app Photos 6/Iced Strawberry Mocha .jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "ايس ستروبيري موكا",
+        "name_tr": " buzlu ÇİLEK mocha",
+        "name_en": "Iced strawberry mocha"
+      },
+      {
+        "size": "large",
+        "price": 240,
+        "name_ar": "ايس ستروبيري موكا كبير",
+        "name_tr": " buzlu ÇİLEK mocha büyük",
+        "name_en": "Iced strawberry mocha large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس ستروبيري موكا وسط",
+        "name_tr": " buzlu ÇİLEK mocha orta",
+        "name_en": "Iced strawberry mocha medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Iced Strawberry Mocha .jpg"
+  },
+  {
+    "id": "item_1761098078113_sppaa34yp",
+    "name_ar": "ايس سلتد كراميل لاتيه",
+    "name_tr": " buzlu Salted Caramel Latte",
+    "name_en": "Iced Salted Caramel Latte",
+    "category": "Ice Coffee",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Caramel bubbles iced latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "ايس سلتد كراميل لاتيه",
+        "name_tr": " buzlu Salted Caramel Latte",
+        "name_en": "Iced Salted Caramel Latte"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "ايس سلتد كراميل وسط",
+        "name_tr": " buzlu Salted Caramel Latte orta",
+        "name_en": "Iced Salted Caramel Latte medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Caramel bubbles iced latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_9j15ys51g",
+    "name_ar": "ايس سلتد كراميل لاتيه كبير",
+    "name_tr": " buzlu salted caramel latte büyük",
+    "name_en": "Iced salted caramel latte large",
+    "category": "Ice Coffee",
+    "base_price": 220,
+    "image": "/Piko Web app Photos 6/Caramel bubbles iced latte.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Caramel bubbles iced latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_fj23kfouu",
+    "name_ar": "ايس شاي تي لاتيه",
+    "name_tr": " buzlu chai tea latte",
+    "name_en": "Iced chai tea latte",
+    "category": "Ice Coffee",
+    "base_price": 200,
+    "image": "/Piko Web app Photos 6/Iced Chai Tea Latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "ايس شاي تي لاتيه",
+        "name_tr": " buzlu chai tea latte",
+        "name_en": "Iced chai tea latte"
+      },
+      {
+        "size": "large",
+        "price": 240,
+        "name_ar": "ايس شاي تي لاتيه كبير",
+        "name_tr": " buzlu chai tea latte büyük",
+        "name_en": "Iced chai tea latte Large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس شاي تي لاتيه وسط",
+        "name_tr": " buzlu chai tea latte orta",
+        "name_en": "Iced chai tea latte medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Iced Chai Tea Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_guiamcmww",
+    "name_ar": "ايس فانيليا لاتيه",
+    "name_tr": " buzlu Vanilla Latte",
+    "name_en": "Iced Vanilla Latte",
+    "category": "Ice Coffee",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Iced Vanilla Latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "ايس فانيليا لاتيه",
+        "name_tr": " buzlu Vanilla Latte",
+        "name_en": "Iced Vanilla Latte"
+      },
+      {
+        "size": "large",
+        "price": 220,
+        "name_ar": "ايس فانيليا لاتيه كبير",
+        "name_tr": " buzlu Vanilla Latte büyük",
+        "name_en": "Iced Vanilla Latte Large"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "ايس فانيليا لاتيه وسط",
+        "name_tr": " buzlu Vanilla Latte orta",
+        "name_en": "Iced Vanilla Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Iced Vanilla Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_jy1z47v8c",
+    "name_ar": "ايس فيلتر قهوة",
+    "name_tr": " buzlu Filtere kahve",
+    "name_en": "Iced Filter Coffee",
+    "category": "Ice Coffee",
+    "base_price": 125,
+    "image": "/Piko Web app Photos 6/Iced Filter Coffee.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 125,
+        "name_ar": "ايس فيلتر قهوة",
+        "name_tr": " buzlu Filtere kahve",
+        "name_en": "Iced Filter Coffee"
+      },
+      {
+        "size": "large",
+        "price": 145,
+        "name_ar": "ايس فيلترة قهوة كبير",
+        "name_tr": " buzlu Filter Coffee büyük",
+        "name_en": "Iced Filter Coffee Large"
+      },
+      {
+        "size": "medium",
+        "price": 130,
+        "name_ar": "ايس فيلترة قهوة وسط",
+        "name_tr": " buzlu Filter Coffee orta",
+        "name_en": "Iced Filter Coffee Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Iced Filter Coffee.jpg"
+  },
+  {
+    "id": "item_1761098078113_nd57spi49",
+    "name_ar": "ايس فيلتر قهوة بالحليب",
+    "name_tr": " buzlu Filter Coffee with Milk",
+    "name_en": "Iced Filter Coffee with Milk",
+    "category": "Ice Coffee",
+    "base_price": 140,
+    "image": "/Piko Web app Photos 6/Iced Filter Coffee With Milk.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 140,
+        "name_ar": "ايس فيلتر قهوة بالحليب",
+        "name_tr": " buzlu Filter Coffee with Milk",
+        "name_en": "Iced Filter Coffee with Milk"
+      },
+      {
+        "size": "large",
+        "price": 180,
+        "name_ar": "ايس فيلترة قهوة بالحليب كبير",
+        "name_tr": " buzlu Filter Coffee with Milk büyük",
+        "name_en": "Iced Filter Coffee with Milk Large"
+      },
+      {
+        "size": "medium",
+        "price": 160,
+        "name_ar": "ايس فيلترة قهوة بالحليب وسط",
+        "name_tr": " buzlu Filter Coffee with Milk orta",
+        "name_en": "Iced Filter Coffee with Milk Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Iced Filter Coffee With Milk.jpg"
+  },
+  {
+    "id": "item_1761098078113_j9868j98k",
+    "name_ar": "ايس كراميل لاتيه",
+    "name_tr": " buzlu Caramel Latte",
+    "name_en": "Iced Caramel Latte",
+    "category": "Ice Coffee",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Iced Caramel Latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "ايس كراميل لاتيه",
+        "name_tr": " buzlu Caramel Latte",
+        "name_en": "Iced Caramel Latte"
+      },
+      {
+        "size": "large",
+        "price": 220,
+        "name_ar": "ايس كراميل لاتيه كبير",
+        "name_tr": " buzlu Caramel Latte büyük",
+        "name_en": "Iced Caramel Latte Large"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "ايس كراميل لاتيه وسط",
+        "name_tr": " buzlu Caramel Latte orta",
+        "name_en": "Iced Caramel Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Iced Caramel Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_fvi5noety",
+    "name_ar": "ايس كراميل مكياتو",
+    "name_tr": " buzlu caramel macchiato",
+    "name_en": "Iced caramel macchiato",
+    "category": "Ice Coffee",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Iced Caramel Macchiato.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "ايس كراميل مكياتو",
+        "name_tr": " buzlu caramel macchiato",
+        "name_en": "Iced caramel macchiato"
+      },
+      {
+        "size": "large",
+        "price": 220,
+        "name_ar": "ايس كراميل مكياتو كبير",
+        "name_tr": " buzlu karamel macchiato büyük",
+        "name_en": "Iced caramel macchiato Large"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "ايس كراميل مكياتو وسط",
+        "name_tr": "buzlu karamel macchiato orta",
+        "name_en": "Iced caramel macchiato Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Iced Caramel Macchiato.jpg"
+  },
+  {
+    "id": "item_1761098078113_vyys0re0v",
+    "name_ar": "ايس لاتيه",
+    "name_tr": "buzlu Latte",
+    "name_en": "Iced Latte",
+    "category": "Ice Coffee",
+    "base_price": 160,
+    "image": "/Piko Web app Photos 6/Iced Latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 160,
+        "name_ar": "ايس لاتيه",
+        "name_tr": "buzlu Latte",
+        "name_en": "Iced Latte"
+      },
+      {
+        "size": "large",
+        "price": 200,
+        "name_ar": "ايس لاتيه كبير",
+        "name_tr": "buzlu Latte büyük",
+        "name_en": "Iced Latte Large"
+      },
+      {
+        "size": "medium",
+        "price": 180,
+        "name_ar": "ايس لاتيه وسط",
+        "name_tr": "buzlu Latte orta",
+        "name_en": "Iced Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Iced Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_69evuc31f",
+    "name_ar": "ايس ماتشا لاتيه",
+    "name_tr": "buzlu Matcha latte",
+    "name_en": "Iced Matcha latte",
+    "category": "Ice Coffee",
+    "base_price": 190,
+    "image": "/Piko Web app Photos 6/Iced Pink Perry Matcha Latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 190,
+        "name_ar": "ايس ماتشا لاتيه",
+        "name_tr": "buzlu Matcha latte",
+        "name_en": "Iced Matcha latte"
+      },
+      {
+        "size": "large",
+        "price": 250,
+        "name_ar": "ايس ماتشا لاتيه كبير",
+        "name_tr": "buzlu Matcha latte büyük",
+        "name_en": "Iced Matcha latte large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس ماتشا لاتيه وسط",
+        "name_tr": "buzlu Matcha latte orta",
+        "name_en": "Iced Matcha latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Iced Pink Perry Matcha Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_010jn9n1o",
+    "name_ar": "ايس موكا لاتيه",
+    "name_tr": "buzlu Mocha Latte",
+    "name_en": "Iced Mocha Latte",
+    "category": "Ice Coffee",
+    "base_price": 200,
+    "image": "/Piko Web app Photos 6/Iced Mocha Latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "ايس موكا لاتيه",
+        "name_tr": "buzlu Mocha Latte",
+        "name_en": "Iced Mocha Latte"
+      },
+      {
+        "size": "large",
+        "price": 240,
+        "name_ar": "ايس موكا لاتيه كبير",
+        "name_tr": "buzlu Mocha Latte büyük",
+        "name_en": "Iced Mocha Latte Large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس موكا لاتيه وسط",
+        "name_tr": "buzlu Mocha Latte orta",
+        "name_en": "Iced Mocha Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Iced Mocha Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_to0rcsmgu",
+    "name_ar": "ايس وايت شوكليت موكا كبير",
+    "name_tr": "buzlu White Chocolate Mocha büyük",
+    "name_en": "Iced White Chocolate Mocha Large",
+    "category": "Ice Coffee",
+    "base_price": 240,
+    "image": "/Piko Web app Photos 6/White Hot Chocolate .jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "large",
+        "price": 240,
+        "name_ar": "ايس وايت شوكليت موكا كبير",
+        "name_tr": "buzlu White Chocolate Mocha büyük",
+        "name_en": "Iced White Chocolate Mocha Large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس وايت شوكليت موكا وسط",
+        "name_tr": "buzlu White Chocolate Mocha orta",
+        "name_en": "Iced White Chocolate Mocha Medium"
+      },
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "ايس وايت موكا",
+        "name_tr": "buzlu White Chocolate Mocha",
+        "name_en": "Iced White Chocolate Mocha"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "White Hot Chocolate .jpg"
+  },
+  {
+    "id": "item_1761098078113_lu40jejn4",
+    "name_ar": "تشيري بلوسوم ايس لاتيه كبير",
+    "name_tr": "Cherry Blossom Iced Latte büyük",
+    "name_en": "Cherry Blossom Iced Latte Large",
+    "category": "Ice Coffee",
+    "base_price": 240,
+    "image": "/Piko Web app Photos 6/Cherry Blossom Iced Latte .jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "large",
+        "price": 240,
+        "name_ar": "تشيري بلوسوم ايس لاتيه كبير",
+        "name_tr": "Cherry Blossom Iced Latte büyük",
+        "name_en": "Cherry Blossom Iced Latte Large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "تشيري بلوسوم ايس لاتيه وسط",
+        "name_tr": "Cherry Blossom Iced Latte orta",
+        "name_en": "Cherry Blossom Iced Latte Medium"
+      },
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "شيري بلوسوم ايس لاتيه",
+        "name_tr": "Cherry Blossom Iced Latte",
+        "name_en": "Cherry Blossom Iced Latte"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Cherry Blossom Iced Latte .jpg"
+  },
+  {
+    "id": "item_1761098078113_1d2g69quo",
+    "name_ar": "كراميل بابلز ايس لاتيه",
+    "name_tr": "Karamel bubbles Iced Latte",
+    "name_en": "Caramel bubbles Iced Latte",
+    "category": "Ice Coffee",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Caramel bubbles iced latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "كراميل بابلز ايس لاتيه",
+        "name_tr": "Karamel bubbles Iced Latte",
+        "name_en": "Caramel bubbles Iced Latte"
+      },
+      {
+        "size": "large",
+        "price": 220,
+        "name_ar": "كراميل بابلز ايس لاتيه كبير",
+        "name_tr": "karamel bubbles Iced Latte büyük",
+        "name_en": "Caramel bubbles Iced Latte Large"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "كراميل بابلز ايس لاتيه وسط",
+        "name_tr": "karamel bubbles Iced Latte orta",
+        "name_en": "Caramel bubbles Iced Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Caramel bubbles iced latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_jegcyzieu",
+    "name_ar": "كوكو نت ايس لاتيه",
+    "name_tr": "Hinistan buzlu Latte",
+    "name_en": "Coconut Iced Latte",
+    "category": "Ice Coffee",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Coconut Iced Latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "كوكو نت ايس لاتيه",
+        "name_tr": "Hinistan buzlu Latte",
+        "name_en": "Coconut Iced Latte"
+      },
+      {
+        "size": "large",
+        "price": 220,
+        "name_ar": "كوكو نت ايس لاتيه كبير",
+        "name_tr": "Hindistan cevizi  buzlu  Latte büyük",
+        "name_en": "Coconut Iced Latte Large"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "كوكو نت ايس لاتيه وسط",
+        "name_tr": "Hindistan cevizi buzlu  Latte orta",
+        "name_en": "Coconut Iced Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Coconut Iced Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_hxxu2c0ku",
+    "name_ar": "ايس امريكانو كبير",
+    "name_tr": " buzlu Americano büyük",
+    "name_en": "Iced Americano large",
+    "category": "Cold drinks",
+    "base_price": 170,
+    "image": "/Piko Web app Photos 6/Americano.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "large",
+        "price": 170,
+        "name_ar": "ايس امريكانو كبير",
+        "name_tr": " buzlu Americano büyük",
+        "name_en": "Iced Americano large"
+      },
+      {
+        "size": "medium",
+        "price": 150,
+        "name_ar": "ايس امريكانو وسط",
+        "name_tr": " buzlu Americano orta",
+        "name_en": "Iced Americano medium"
+      },
+      {
+        "size": "regular",
+        "price": 130,
+        "name_ar": "ايس امريكانو",
+        "name_tr": " buzlu Americano",
+        "name_en": "Iced Americano"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Americano.jpg"
+  },
+  {
+    "id": "item_1761098078113_3dm3ptpnm",
+    "name_ar": "ايس بتر سكوتش كبير",
+    "name_tr": " buzlu butter scotch büyük",
+    "name_en": "Iced butter scotch large",
+    "category": "Cold drinks",
+    "base_price": 220,
+    "image": "/Piko Web app Photos 6/Iced Butter Scotch.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "large",
+        "price": 220,
+        "name_ar": "ايس بتر سكوتش كبير",
+        "name_tr": " buzlu butter scotch büyük",
+        "name_en": "Iced butter scotch large"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "ايس بتر سكوتش وسط",
+        "name_tr": " buzlu butter scotch orta",
+        "name_en": "Iced butter scotch medium"
+      },
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "ايس بتر سوكتش لاتيه",
+        "name_tr": " buzlu butter scotch",
+        "name_en": "Iced butter scotch"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Iced Butter Scotch.jpg"
+  },
+  {
+    "id": "item_1761098078113_2us84s8dc",
+    "name_ar": "ايس بيكو لاتيه",
+    "name_tr": " buzlu piko latte",
+    "name_en": "Iced piko latte",
+    "category": "Cold drinks",
+    "base_price": 200,
+    "image": "/Piko Web app Photos 6/Iced Piko Latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "ايس بيكو لاتيه",
+        "name_tr": " buzlu piko latte",
+        "name_en": "Iced piko latte"
+      },
+      {
+        "size": "large",
+        "price": 240,
+        "name_ar": "ايس بيكو لاتيه كبير",
+        "name_tr": " buzlu piko latte  büyük",
+        "name_en": "Iced piko latte large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس بيكو لاتيه وسط",
+        "name_tr": " buzlu piko latte orta",
+        "name_en": "Iced piko latte medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Iced Piko Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_6h42koy4i",
+    "name_ar": "ايس بينك بيري ماتشا لاتيه",
+    "name_tr": " buzlu Pink Perry matcha latte",
+    "name_en": "Iced Pink Perry matcha latta",
+    "category": "Cold drinks",
+    "base_price": 190,
+    "image": "/Piko Web app Photos 6/Iced Pink Perry Matcha Latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 190,
+        "name_ar": "ايس بينك بيري ماتشا لاتيه",
+        "name_tr": " buzlu Pink Perry matcha latte",
+        "name_en": "Iced Pink Perry matcha latta"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس بينك بيري ماتشا لاتيه وسط",
+        "name_tr": " buzlu pembe Perry matcha latte orta",
+        "name_en": "Iced Pink Perry matcha latta Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Iced Pink Perry Matcha Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_viqwnvfzm",
+    "name_ar": "ايس بينك بيري ماتشا لاتيه كبير",
+    "name_tr": " buzlu Pink Perry matcha latte",
+    "name_en": "Iced Pink Perry matcha latta learg",
+    "category": "Cold drinks",
+    "base_price": 250,
+    "image": "/Piko Web app Photos 6/Iced Pink Perry Matcha Latte.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Iced Pink Perry Matcha Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_3cie4h9f9",
+    "name_ar": "ايس بينك ماتشا لاتيه",
+    "name_tr": " buzlu pemb matcha latte",
+    "name_en": "Iced Pink matcha latte",
+    "category": "Cold drinks",
+    "base_price": 190,
+    "image": "/Piko Web app Photos 6/Iced Pink Perry Matcha Latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 190,
+        "name_ar": "ايس بينك ماتشا لاتيه",
+        "name_tr": " buzlu pemb matcha latte",
+        "name_en": "Iced Pink matcha latte"
+      },
+      {
+        "size": "large",
+        "price": 250,
+        "name_ar": "ايس بينك ماتشا لاتيه كبير",
+        "name_tr": " buzlu pembe matcha latte büyük",
+        "name_en": "Iced Pink matcha latte large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس بينك ماتشا لاتيه وسط",
+        "name_tr": " buzlu pembe matcha latte orta",
+        "name_en": "Iced Pink matcha latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Iced Pink Perry Matcha Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_rnddlpobf",
+    "name_ar": "ايس تشيز كيك لاتيه",
+    "name_tr": " buzlu buzlu cheese cake latte",
+    "name_en": "Iced cheese cake latte",
+    "category": "Cold drinks",
+    "base_price": 200,
+    "image": "/Piko Web app Photos 6/Blueberry Cheesecake.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "ايس تشيز كيك لاتيه",
+        "name_tr": " buzlu buzlu cheese cake latte",
+        "name_en": "Iced cheese cake latte"
+      },
+      {
+        "size": "large",
+        "price": 250,
+        "name_ar": "ايس تشيز كيك لاتيه كبير",
+        "name_tr": " buzlu cheese cake latte büyük",
+        "name_en": "Iced cheese cake latte large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس تشيز كيك لاتيه وسط",
+        "name_tr": " buzlu cheese cake latte orta",
+        "name_en": "Iced cheese cake latte medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Blueberry Cheesecake.jpg"
+  },
+  {
+    "id": "item_1761098078113_np1902cbe",
+    "name_ar": "ايس توفي نت لاتيه",
+    "name_tr": " buzlu Toffee fındık Latte",
+    "name_en": "Iced Toffee Nut Latte",
+    "category": "Cold drinks",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Caramel bubbles iced latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "ايس توفي نت لاتيه",
+        "name_tr": " buzlu Toffee fındık Latte",
+        "name_en": "Iced Toffee Nut Latte"
+      },
+      {
+        "size": "large",
+        "price": 240,
+        "name_ar": "ايس توفي نت لاتيه كبير",
+        "name_tr": " buzlu Toffee fındık Latte büyük",
+        "name_en": "Iced Toffee Nut Latte Large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس توفي نت لاتيه وسط",
+        "name_tr": " buzlu Toffee fındık Latte orta",
+        "name_en": "Iced Toffee Nut Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Caramel bubbles iced latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_v31io9mb1",
+    "name_ar": "ايس زيبرا موكا لاتيه كبير",
+    "name_tr": " buzlu Zebra mocha latte büyük",
+    "name_en": "Iced Zebra mocha latte large",
+    "category": "Cold drinks",
+    "base_price": 240,
+    "image": "/Piko Web app Photos 6/Iced Zebra Mocha Latte .jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "large",
+        "price": 240,
+        "name_ar": "ايس زيبرا موكا لاتيه كبير",
+        "name_tr": " buzlu Zebra mocha latte büyük",
+        "name_en": "Iced Zebra mocha latte large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس زيبرا موكا لاتيه وسط",
+        "name_tr": " buzlu Zebra mocha latte orta ",
+        "name_en": "Iced Zebra mocha latte medium"
+      },
+      {
+        "size": "regular",
+        "price": 200,
+        "name_ar": "ايس زيبره موكا لاتيه",
+        "name_tr": " buzlu Zebra mocha latte",
+        "name_en": "Iced Zebra mocha latte"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Iced Zebra Mocha Latte .jpg"
+  },
+  {
+    "id": "item_1761098078113_a18yhjmxf",
+    "name_ar": "ايس سبانش لاتيه",
+    "name_tr": " buzlu Spanish Latte",
+    "name_en": "Iced Spanish Latte",
+    "category": "Cold drinks",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Caramel bubbles iced latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "ايس سبانش لاتيه",
+        "name_tr": " buzlu Spanish Latte",
+        "name_en": "Iced Spanish Latte"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "ايس سبانش لاتيه وسط",
+        "name_tr": " buzlu Spanish Latte orta",
+        "name_en": "Iced Spanish Latte medium"
+      },
+      {
+        "size": "large",
+        "price": 220,
+        "name_ar": "ايس سبانيش لاتيه كبير",
+        "name_tr": " buzlu Spanish Latte büyük",
+        "name_en": "Iced Spanish Latte Large"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Caramel bubbles iced latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_emkut67w6",
+    "name_ar": "بيستاشيو فراب وسط",
+    "name_tr": "Antep fıstıklığı frappucino orta",
+    "name_en": "Pistachio frappucino Medium",
+    "category": "Blended Coffee",
+    "base_price": 275,
+    "image": "/Piko Web app Photos 6/Pistachio Frappucino.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Pistachio Frappucino.jpg"
+  },
+  {
+    "id": "item_1761098078113_km9ehxpd7",
+    "name_ar": "فانيليا فراب وسط",
+    "name_tr": "Vanilla frappucino orta",
+    "name_en": "Vanilla frappucino Medium",
+    "category": "Blended Coffee",
+    "base_price": 250,
+    "image": "/Piko Web app Photos 6/Mocha Frappucino.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Mocha Frappucino.jpg"
+  },
+  {
+    "id": "item_1761098078113_ze9h876e8",
+    "name_ar": "كراميل فرابتشينو وسط",
+    "name_tr": "Karamel Frappucino orta",
+    "name_en": "Caramel Frappucino Medium",
+    "category": "Blended Coffee",
+    "base_price": 250,
+    "image": "/Piko Web app Photos 6/Caramel Frappuccino .jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Caramel Frappuccino .jpg"
+  },
+  {
+    "id": "item_1761098078113_q307c0ueh",
+    "name_ar": "كوكيز فراب وسط",
+    "name_tr": "Cookies frappucino orta",
+    "name_en": "Cookies frappucino Medium",
+    "category": "Blended Coffee",
+    "base_price": 250,
+    "image": "/Piko Web app Photos 6/Hazelnut Cookies.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Hazelnut Cookies.jpg"
+  },
+  {
+    "id": "item_1761098078113_njhxlalq9",
+    "name_ar": "موكا فراب وسط",
+    "name_tr": "Mocha Frappucino orta",
+    "name_en": "Mocha Frappucino Medium",
+    "category": "Blended Coffee",
+    "base_price": 250,
+    "image": "/Piko Web app Photos 6/Mocha Frappucino.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Mocha Frappucino.jpg"
+  },
+  {
+    "id": "item_1761098078113_f1jdz1t21",
+    "name_ar": "ايس ستروبري ماتشا لاتيه",
+    "name_tr": "  buzlu ÇİLEK matcha latte",
+    "name_en": "Iced Strawberry matcha latte",
+    "category": "Matcha",
+    "base_price": 190,
+    "image": "/Piko Web app Photos 6/Iced Pink Perry Matcha Latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 190,
+        "name_ar": "ايس ستروبري ماتشا لاتيه",
+        "name_tr": "  buzlu ÇİLEK matcha latte",
+        "name_en": "Iced Strawberry matcha latte"
+      },
+      {
+        "size": "large",
+        "price": 250,
+        "name_ar": "ايس ستروبري ماتشا لاتيه كبير",
+        "name_tr": " buzlu ÇİLEK matcha latte Soğuk",
+        "name_en": "Iced Strawberry matcha latte large"
+      },
+      {
+        "size": "medium",
+        "price": 220,
+        "name_ar": "ايس ستروبري ماتشا لاتيه وسط",
+        "name_tr": " buzlu ÇİLEK matcha latte orta",
+        "name_en": "Iced Strawberry matcha latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Iced Pink Perry Matcha Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_p29hmjiuw",
+    "name_ar": "ماتشا لاتيه",
+    "name_tr": "Matcha latte",
+    "name_en": "Matcha latte",
+    "category": "Matcha",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Matcha Latte.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Matcha Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_newly2j24",
+    "name_ar": "زنجبيل وليمون",
+    "name_tr": "zencefil ve limon",
+    "name_en": "Ginger and lemon",
+    "category": "Flavored tea",
+    "base_price": 120,
+    "image": "/Piko Web app Photos 6/Ginger Mojito.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Ginger Mojito.jpg"
+  },
+  {
+    "id": "item_1761098078113_habuzxw3y",
+    "name_ar": "زهورات",
+    "name_tr": "Papatya Çayı",
+    "name_en": "Flavoured tea",
+    "category": "Flavored tea",
+    "base_price": 120,
+    "image": "/Piko Web app Photos 6/Flavoured Tea.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Flavoured Tea.jpg"
+  },
+  {
+    "id": "item_1761098078113_vr5ath1zu",
+    "name_ar": "زيزفون",
+    "name_tr": "Lime ıhlamur Çay",
+    "name_en": "Lime blossom tea",
+    "category": "Flavored tea",
+    "base_price": 120,
+    "image": "/Piko Web app Photos 6/Tea.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Tea.jpg"
+  },
+  {
+    "id": "item_1761098078113_xhw6kwux3",
+    "name_ar": "شاي",
+    "name_tr": "Çay",
+    "name_en": "Tea",
+    "category": "Flavored tea",
+    "base_price": 40,
+    "image": "/Piko Web app Photos 6/Tea.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Tea.jpg"
+  },
+  {
+    "id": "item_1761098078113_t8i6857me",
+    "name_ar": "شاي تي لاتيه",
+    "name_tr": "Çay Latte",
+    "name_en": "Chai Tea Latte",
+    "category": "Flavored tea",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Chai Tea Latte.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "شاي تي لاتيه",
+        "name_tr": "Çay Latte",
+        "name_en": "Chai Tea Latte"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "شاي تي لاتيه وسط",
+        "name_tr": "Çay Latte orta",
+        "name_en": "Chai Tea Latte Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Chai Tea Latte.jpg"
+  },
+  {
+    "id": "item_1761098078113_ncgqfqx18",
+    "name_ar": "عصير برتقال",
+    "name_tr": "portakal meyve suyu",
+    "name_en": "Orange juice",
+    "category": "Fresh juices",
+    "base_price": 170,
+    "image": "/Piko Web app Photos 6/Orange Juice.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 170,
+        "name_ar": "عصير برتقال",
+        "name_tr": "portakal meyve suyu",
+        "name_en": "Orange juice"
+      },
+      {
+        "size": "medium",
+        "price": 190,
+        "name_ar": "عصير برتقال وسط",
+        "name_tr": "portakal meyvesuyu orta",
+        "name_en": "Orange juice medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Orange Juice.jpg"
+  },
+  {
+    "id": "item_1761098078113_4itg1x0xa",
+    "name_ar": "عصير برتقال و جزر",
+    "name_tr": "portakal ve Havuç meyve suyu",
+    "name_en": "Orange carrot",
+    "category": "Fresh juices",
+    "base_price": 170,
+    "image": "/Piko Web app Photos 6/Orange Juice.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 170,
+        "name_ar": "عصير برتقال و جزر",
+        "name_tr": "portakal ve Havuç meyve suyu",
+        "name_en": "Orange carrot"
+      },
+      {
+        "size": "medium",
+        "price": 190,
+        "name_ar": "عصير برتقال و جزر وسط",
+        "name_tr": "Porttakal havuç orta",
+        "name_en": "Orange carrot medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Orange Juice.jpg"
+  },
+  {
+    "id": "item_1761098078113_fbsgcn31h",
+    "name_ar": "عصير برتقال و ليمون",
+    "name_tr": "portakal lemon",
+    "name_en": "Orange lemon",
+    "category": "Fresh juices",
+    "base_price": 170,
+    "image": "/Piko Web app Photos 6/Orange Juice.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 170,
+        "name_ar": "عصير برتقال و ليمون",
+        "name_tr": "portakal lemon",
+        "name_en": "Orange lemon"
+      },
+      {
+        "size": "medium",
+        "price": 190,
+        "name_ar": "عصير برتقال و ليمون وسط",
+        "name_tr": "portakal lemon orta",
+        "name_en": "Orange lemon medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Orange Juice.jpg"
+  },
+  {
+    "id": "item_1761098078113_uu5wh5ox8",
+    "name_ar": "عصير تفاح",
+    "name_tr": "Elma meyvesuyu",
+    "name_en": "Apple juice",
+    "category": "Fresh juices",
+    "base_price": 170,
+    "image": "/Piko Web app Photos 6/Apple Juice.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 170,
+        "name_ar": "عصير تفاح",
+        "name_tr": "Elma meyvesuyu",
+        "name_en": "Apple juice"
+      },
+      {
+        "size": "medium",
+        "price": 190,
+        "name_ar": "عصير تفاح وسط",
+        "name_tr": "Elma suyu orta",
+        "name_en": "Apple juice medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Apple Juice.jpg"
+  },
+  {
+    "id": "item_1761098078113_r8xz5z207",
+    "name_ar": "عصير تفاح و جزر",
+    "name_tr": "Elma carrot meyvesuyu",
+    "name_en": "Apple carrot",
+    "category": "Fresh juices",
+    "base_price": 170,
+    "image": "/Piko Web app Photos 6/Apple Juice.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 170,
+        "name_ar": "عصير تفاح و جزر",
+        "name_tr": "Elma carrot meyvesuyu",
+        "name_en": "Apple carrot"
+      },
+      {
+        "size": "medium",
+        "price": 190,
+        "name_ar": "عصير تفاح و جزر وسط",
+        "name_tr": "Elma havuç orta",
+        "name_en": "Apple carrot medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Apple Juice.jpg"
+  },
+  {
+    "id": "item_1761098078113_e71wpwij3",
+    "name_ar": "عصير جزر",
+    "name_tr": "Havuç meyve suyu",
+    "name_en": "Carrot juice",
+    "category": "Fresh juices",
+    "base_price": 170,
+    "image": "/Piko Web app Photos 6/Carrot Juice .jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 170,
+        "name_ar": "عصير جزر",
+        "name_tr": "Havuç meyve suyu",
+        "name_en": "Carrot juice"
+      },
+      {
+        "size": "medium",
+        "price": 170,
+        "name_ar": "عصير جزر وسط",
+        "name_tr": "Havuç suyu orta",
+        "name_en": "Carrot juice medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "Carrot Juice .jpg"
+  },
+  {
+    "id": "item_1761098078113_fykwuhsrz",
+    "name_ar": "عصير ليمون",
+    "name_tr": "Lemonta",
+    "name_en": "Lemonade",
+    "category": "Fresh juices",
+    "base_price": 170,
+    "image": "/Piko Web app Photos 6/lemonade.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 170,
+        "name_ar": "عصير ليمون",
+        "name_tr": "Lemonta",
+        "name_en": "Lemonade"
+      },
+      {
+        "size": "medium",
+        "price": 190,
+        "name_ar": "عصير ليمون وسط",
+        "name_tr": "Lemonata orta",
+        "name_en": "Lemonade medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 2,
+    "image_filename": "lemonade.jpg"
+  },
+  {
+    "id": "item_1761098078113_madcpbw3d",
+    "name_ar": "ميلك شيك اوريو وسط",
+    "name_tr": "Oreo milkshake orta",
+    "name_en": "Oreo milkshake medium",
+    "category": "Milkshakes",
+    "base_price": 275,
+    "image": "/Piko Web app Photos 6/Oreo Milkshake.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Oreo Milkshake.jpg"
+  },
+  {
+    "id": "item_1761098078113_lxuuozlif",
+    "name_ar": "ميلك شيك شوكولا وسط",
+    "name_tr": "Chocolate milkshake orta",
+    "name_en": "Chocolate milkshake medium",
+    "category": "Milkshakes",
+    "base_price": 275,
+    "image": "/Piko Web app Photos 6/Chocolate Milkshake .jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Chocolate Milkshake .jpg"
+  },
+  {
+    "id": "item_1761098078113_ebukpngey",
+    "name_ar": "ميلك شيك فانيليا وسط",
+    "name_tr": "Vanilla milkshake orta",
+    "name_en": "Vanilla milkshake medium",
+    "category": "Milkshakes",
+    "base_price": 275,
+    "image": "/Piko Web app Photos 6/Vanilla Milkshake .jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Vanilla Milkshake .jpg"
+  },
+  {
+    "id": "item_1761098078113_20c4qaqmg",
+    "name_ar": "ميلك شيك فريز وسط",
+    "name_tr": "ÇİLEK milkshake orta",
+    "name_en": "Strawberry milkshake medium",
+    "category": "Milkshakes",
+    "base_price": 275,
+    "image": "/Piko Web app Photos 6/Strawberry Milkshake.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Strawberry Milkshake.jpg"
+  },
+  {
+    "id": "item_1761098078113_7amgcq73x",
+    "name_ar": "ميلك شيك كراميل وسط",
+    "name_tr": "karamel milkshake orta",
+    "name_en": "Caramel milkshake medium",
+    "category": "Milkshakes",
+    "base_price": 275,
+    "image": "/Piko Web app Photos 6/Caramel Milkshake.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Caramel Milkshake.jpg"
+  },
+  {
+    "id": "item_1761098078113_8w741kvvg",
+    "name_ar": "ميلك شيك كوكيز وسط",
+    "name_tr": "Cookies milkshake orta",
+    "name_en": "Cookies milkshake medium",
+    "category": "Milkshakes",
+    "base_price": 275,
+    "image": "/Piko Web app Photos 6/Caramel Milkshake.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Caramel Milkshake.jpg"
+  },
+  {
+    "id": "item_1761098078113_pd2jlsq2r",
+    "name_ar": "ميلك شيك لوتوس وسط",
+    "name_tr": "Lotus milkshake orta",
+    "name_en": "Lotus milkshake medium",
+    "category": "Milkshakes",
+    "base_price": 275,
+    "image": "/Piko Web app Photos 6/Lotus Milkshake .jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Lotus Milkshake .jpg"
+  },
+  {
+    "id": "item_1761098078113_vu345dg46",
+    "name_ar": "موهيتو اناناس ريد بول وسط",
+    "name_tr": "Ananas mojito RedBull orta",
+    "name_en": "Pineapple mojito RedBull medium",
+    "category": "Mojitos",
+    "base_price": 240,
+    "image": "/Piko Web app Photos 6/Pineapple Mojito .jpg",
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 240,
+        "name_ar": "موهيتو اناناس ريد بول وسط",
+        "name_tr": "Ananas mojito RedBull orta",
+        "name_en": "Pineapple mojito RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 220,
+        "name_ar": "موهيتو اناناس سفن وسط",
+        "name_tr": "Ananas  mojito 7up orta",
+        "name_en": "Pineapple mojito 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 200,
+        "name_ar": "موهيتو اناناس صودا وسط",
+        "name_tr": "Ananas  mojito soda orta",
+        "name_en": "Pineapple mojito soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Pineapple Mojito .jpg"
+  },
+  {
+    "id": "item_1761098078114_bzsrdij8m",
+    "name_ar": "موهيتو باشن برتقال ريد بول وسط",
+    "name_tr": "Passion portakal mojito RedBull orta",
+    "name_en": "Passion orange mojito RedBull medium",
+    "category": "Mojitos",
+    "base_price": 240,
+    "image": "/Piko Web app Photos 6/Passion orange mojito RedBull.jpg",
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 240,
+        "name_ar": "موهيتو باشن برتقال ريد بول وسط",
+        "name_tr": "Passion portakal mojito RedBull orta",
+        "name_en": "Passion orange mojito RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 220,
+        "name_ar": "موهيتو باشن برتقال سفن وسط",
+        "name_tr": "Passion portakal mojito 7up orta",
+        "name_en": "Passion orange mojito 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 200,
+        "name_ar": "موهيتو باشن برتقال صودا وسط",
+        "name_tr": "Passion portakal mojito soda orta",
+        "name_en": "Passion orange mojito soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Passion orange mojito RedBull.jpg"
+  },
+  {
+    "id": "item_1761098078114_bnn16fwjh",
+    "name_ar": "موهيتو باشن دراق ريد بول وسط",
+    "name_tr": "Passion Şeftali mojito RedBull orta",
+    "name_en": "Passion peach mojito RedBull medium",
+    "category": "Mojitos",
+    "base_price": 240,
+    "image": "/Piko Web app Photos 6/Passion orange mojito RedBull.jpg",
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 240,
+        "name_ar": "موهيتو باشن دراق ريد بول وسط",
+        "name_tr": "Passion Şeftali mojito RedBull orta",
+        "name_en": "Passion peach mojito RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 220,
+        "name_ar": "موهيتو باشن دراق سفن وسط",
+        "name_tr": "Passion Şeftali mojito 7up orta",
+        "name_en": "Passion peach mojito 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 200,
+        "name_ar": "موهيتو باشن دراق صودا وسط",
+        "name_tr": "Passion Şeftali mojito soda orta",
+        "name_en": "Passion peach mojito soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Passion orange mojito RedBull.jpg"
+  },
+  {
+    "id": "item_1761098078114_43z2x3d0x",
+    "name_ar": "موهيتو برتقال دراق ريد بول وسط",
+    "name_tr": "portakal Şeftali mojito RedBull orta",
+    "name_en": "Orange peach mojito RedBull medium",
+    "category": "Mojitos",
+    "base_price": 240,
+    "image": "/Piko Web app Photos 6/Passion orange mojito RedBull.jpg",
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 240,
+        "name_ar": "موهيتو برتقال دراق ريد بول وسط",
+        "name_tr": "portakal Şeftali mojito RedBull orta",
+        "name_en": "Orange peach mojito RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 220,
+        "name_ar": "موهيتو برتقال دراق سفن وسط",
+        "name_tr": "portakal Şeftali mojito 7up orta",
+        "name_en": "Orange peach mojito 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 200,
+        "name_ar": "موهيتو برتقال دراق صودا وسط",
+        "name_tr": "portakal Şeftali mojito soda orta",
+        "name_en": "Orange peach mojito soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Passion orange mojito RedBull.jpg"
+  },
+  {
+    "id": "item_1761098078114_vjiq5qek9",
+    "name_ar": "موهيتو دراق ريد بول وسط",
+    "name_tr": "Şeftali mojito RedBull orta",
+    "name_en": "Peach mojito RedBull medium",
+    "category": "Mojitos",
+    "base_price": 240,
+    "image": "/Piko Web app Photos 6/Peach mojito.jpg",
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 240,
+        "name_ar": "موهيتو دراق ريد بول وسط",
+        "name_tr": "Şeftali mojito RedBull orta",
+        "name_en": "Peach mojito RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 220,
+        "name_ar": "موهيتو دراق سفن وسط",
+        "name_tr": "Şeftali mojito 7up orta",
+        "name_en": "Peach mojito 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 200,
+        "name_ar": "موهيتو دراق صودا وسط",
+        "name_tr": "Şeftali mojito soda orta",
+        "name_en": "Peach mojito soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Peach mojito.jpg"
+  },
+  {
+    "id": "item_1761098078114_dm44qk8gp",
+    "name_ar": "موهيتو رمان ريد بول وسط",
+    "name_tr": "Pomegranate mojito RedBull orta",
+    "name_en": "Pomegranate mojito RedBull medium",
+    "category": "Mojitos",
+    "base_price": 240,
+    "image": "/Piko Web app Photos 6/Pomegranate Mojito.jpg",
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 240,
+        "name_ar": "موهيتو رمان ريد بول وسط",
+        "name_tr": "Pomegranate mojito RedBull orta",
+        "name_en": "Pomegranate mojito RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 220,
+        "name_ar": "موهيتو رمان سفن وسط",
+        "name_tr": "Pomegranate mojito 7up orta",
+        "name_en": "Pomegranate mojito 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 200,
+        "name_ar": "موهيتو رمان صودا وسط",
+        "name_tr": "Pomegranate mojito soda orta",
+        "name_en": "Pomegranate mojito soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Pomegranate Mojito.jpg"
+  },
+  {
+    "id": "item_1761098078114_554f4l3st",
+    "name_ar": "موهيتو زنجبيل ريد بول وسط",
+    "name_tr": "zencefil mojito RedBull orta",
+    "name_en": "Ginger mojito RedBull medium",
+    "category": "Mojitos",
+    "base_price": 240,
+    "image": "/Piko Web app Photos 6/Ginger Mojito.jpg",
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 240,
+        "name_ar": "موهيتو زنجبيل ريد بول وسط",
+        "name_tr": "zencefil mojito RedBull orta",
+        "name_en": "Ginger mojito RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 220,
+        "name_ar": "موهيتو زنجبيل سفن وسط",
+        "name_tr": "zencefil mojito 7up orta",
+        "name_en": "Ginger mojito 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 200,
+        "name_ar": "موهيتو زنجبيل صودا وسط",
+        "name_tr": "zencefil mojito soda orta",
+        "name_en": "Ginger mojito soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Ginger Mojito.jpg"
+  },
+  {
+    "id": "item_1761098078114_oulcudgim",
+    "name_ar": "موهيتو فريز ريد بول وسط",
+    "name_tr": "ÇİLEK mojito RedBull orta",
+    "name_en": "Strawberry mojito RedBull medium",
+    "category": "Mojitos",
+    "base_price": 240,
+    "image": "/Piko Web app Photos 6/Strawberry Mojito .jpg",
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 240,
+        "name_ar": "موهيتو فريز ريد بول وسط",
+        "name_tr": "ÇİLEK mojito RedBull orta",
+        "name_en": "Strawberry mojito RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 220,
+        "name_ar": "موهيتو فريز سفن وسط",
+        "name_tr": "ÇİLEK mojito 7up orta",
+        "name_en": "Strawberry mojito 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 200,
+        "name_ar": "موهيتو فريز صودا وسط",
+        "name_tr": "ÇİLEK mojito soda orta",
+        "name_en": "Strawberry mojito soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Strawberry Mojito .jpg"
+  },
+  {
+    "id": "item_1761098078114_g04tqbj71",
+    "name_ar": "موهيتو كلاسيك ريد بول وسط",
+    "name_tr": "Mojito classic RedBull orta",
+    "name_en": "Mojito classic RedBull medium",
+    "category": "Mojitos",
+    "base_price": 240,
+    "image": "/Piko Web app Photos 6/Classic Mojito.jpg",
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 240,
+        "name_ar": "موهيتو كلاسيك ريد بول وسط",
+        "name_tr": "Mojito classic RedBull orta",
+        "name_en": "Mojito classic RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 220,
+        "name_ar": "موهيتو كلاسيك سفن وسط",
+        "name_tr": "Mojito classic 7up orta",
+        "name_en": "Mojito classic 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 200,
+        "name_ar": "موهيتو كلاسيك صودا وسط",
+        "name_tr": "Mojito classic soda orta",
+        "name_en": "Mojito classic soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Classic Mojito.jpg"
+  },
+  {
+    "id": "item_1761098078114_ir09j3rem",
+    "name_ar": "موهيتو كيوي ريد بول وسط",
+    "name_tr": "Kiwi mojito RedBull orta",
+    "name_en": "Kiwi mojito RedBull medium",
+    "category": "Mojitos",
+    "base_price": 240,
+    "image": "/Piko Web app Photos 6/Kiwi Mojito.jpg",
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 240,
+        "name_ar": "موهيتو كيوي ريد بول وسط",
+        "name_tr": "Kiwi mojito RedBull orta",
+        "name_en": "Kiwi mojito RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 220,
+        "name_ar": "موهيتو كيوي سفن وسط",
+        "name_tr": "Kiwi mojito 7up orta",
+        "name_en": "Kiwi mojito 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 200,
+        "name_ar": "موهيتو كيوي صودا وسط",
+        "name_tr": "Kiwi mojito soda orta",
+        "name_en": "Kiwi mojito soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Kiwi Mojito.jpg"
+  },
+  {
+    "id": "item_1761098078114_d3e3s1vij",
+    "name_ar": "موهيتو مانجو ريد بول وسط",
+    "name_tr": "Mango mojito RedBull orta",
+    "name_en": "Mango mojito RedBull medium",
+    "category": "Mojitos",
+    "base_price": 240,
+    "image": "/Piko Web app Photos 6/Mango Mojito.jpg",
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 240,
+        "name_ar": "موهيتو مانجو ريد بول وسط",
+        "name_tr": "Mango mojito RedBull orta",
+        "name_en": "Mango mojito RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 220,
+        "name_ar": "موهيتو مانجو سفن وسط",
+        "name_tr": "Mango mojito 7up orta",
+        "name_en": "Mango mojito 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 200,
+        "name_ar": "موهيتو مانجو صودا وسط",
+        "name_tr": "Mango mojito soda orta",
+        "name_en": "Mango mojito soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Mango Mojito.jpg"
+  },
+  {
+    "id": "item_1761098078114_ntf9lxvr3",
+    "name_ar": "موهيتو ميكس بيري ريد بول وسط",
+    "name_tr": "Mix berries mojito RedBull orta",
+    "name_en": "Mix berries mojito RedBull medium",
+    "category": "Mojitos",
+    "base_price": 290,
+    "image": "/Piko Web app Photos 6/Mix Berries Mojito.jpg",
+    "has_sizes": false,
+    "has_drink_types": true,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": [
+      {
+        "type": "redbull",
+        "price": 290,
+        "name_ar": "موهيتو ميكس بيري ريد بول وسط",
+        "name_tr": "Mix berries mojito RedBull orta",
+        "name_en": "Mix berries mojito RedBull medium"
+      },
+      {
+        "type": "7up",
+        "price": 260,
+        "name_ar": "موهيتو ميكس بيري سفن وسط",
+        "name_tr": "Mix berries mojito 7up orta",
+        "name_en": "Mix berries mojito 7up medium"
+      },
+      {
+        "type": "soda",
+        "price": 230,
+        "name_ar": "موهيتو ميكس بيري صودا وسط",
+        "name_tr": "Mix berries mojito soda orta",
+        "name_en": "Mix berries mojito soda medium"
+      }
+    ],
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Mix Berries Mojito.jpg"
+  },
+  {
+    "id": "item_1761098078114_eukcxze0a",
+    "name_ar": "بينا كولادا وسط",
+    "name_tr": "Pina colada",
+    "name_en": "Pina colada",
+    "category": "Smoothies",
+    "base_price": 0,
+    "image": "/Piko Web app Photos 6/Pina Colada.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Pina Colada.jpg"
+  },
+  {
+    "id": "item_1761098078114_v6mx95pwp",
+    "name_ar": "سموزي اناناس برتقال وسط",
+    "name_tr": "Pineapple orange smoothie orta",
+    "name_en": "Pineapple orange smoothie medium",
+    "category": "Smoothies",
+    "base_price": 240,
+    "image": "/Piko Web app Photos 6/Pineapple Orange Smoothie.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Pineapple Orange Smoothie.jpg"
+  },
+  {
+    "id": "item_1761098078114_7an17pi07",
+    "name_ar": "سموزي اناناس وسط",
+    "name_tr": "Ananas smoothie orta",
+    "name_en": "Pineapple smoothie medium",
+    "category": "Smoothies",
+    "base_price": 200,
+    "image": "/Piko Web app Photos 6/Pineapple Smoothie.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Pineapple Smoothie.jpg"
+  },
+  {
+    "id": "item_1761098078114_3abbc6fk0",
+    "name_ar": "سموزي باشن برتقال وسط",
+    "name_tr": "Passion orange smoothie orta",
+    "name_en": "Passion orange smoothie medium",
+    "category": "Smoothies",
+    "base_price": 240,
+    "image": "/Piko Web app Photos 6/Passion Mango Smoothie.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Passion Mango Smoothie.jpg"
+  },
+  {
+    "id": "item_1761098078114_97io9ppoa",
+    "name_ar": "سموزي باشن مانجو وسط",
+    "name_tr": "Passion mango smoothie orta",
+    "name_en": "Passion mango smoothie medium",
+    "category": "Smoothies",
+    "base_price": 250,
+    "image": "/Piko Web app Photos 6/Passion Mango Smoothie.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Passion Mango Smoothie.jpg"
+  },
+  {
+    "id": "item_1761098078114_lk5khmaul",
+    "name_ar": "سموزي برتقال دراق وسط",
+    "name_tr": "Şeftali portakal smoothie orta",
+    "name_en": "Peach orange smoothie medium",
+    "category": "Smoothies",
+    "base_price": 240,
+    "image": "/Piko Web app Photos 6/Peach Orange Smoothie.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Peach Orange Smoothie.jpg"
+  },
+  {
+    "id": "item_1761098078114_45238ilut",
+    "name_ar": "سموزي دراق باشن وسط",
+    "name_tr": "Passion peach smoothie orta",
+    "name_en": "Passion peach smoothie medium",
+    "category": "Smoothies",
+    "base_price": 240,
+    "image": "/Piko Web app Photos 6/Peach smoothie.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Peach smoothie.jpg"
+  },
+  {
+    "id": "item_1761098078114_jw1qobg0k",
+    "name_ar": "سموزي دراق وسط",
+    "name_tr": "Şeftali smoothie orta",
+    "name_en": "Peach smoothie medium",
+    "category": "Smoothies",
+    "base_price": 240,
+    "image": "/Piko Web app Photos 6/Peach smoothie.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Peach smoothie.jpg"
+  },
+  {
+    "id": "item_1761098078114_c59d3z7sz",
+    "name_ar": "سموزي فريز وسط",
+    "name_tr": "Çilekli smoothie orta",
+    "name_en": "Strawberry smoothie medium",
+    "category": "Smoothies",
+    "base_price": 170,
+    "image": "/Piko Web app Photos 6/Strawberry Smoothie.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Strawberry Smoothie.jpg"
+  },
+  {
+    "id": "item_1761098078114_fc1v3ba3q",
+    "name_ar": "سموزي كاريبيان وسط",
+    "name_tr": "Karibbean smoothie orta",
+    "name_en": "Caribbean smoothie medium",
+    "category": "Smoothies",
+    "base_price": 240,
+    "image": "/Piko Web app Photos 6/Mango Smoothie .jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Mango Smoothie .jpg"
+  },
+  {
+    "id": "item_1761098078114_w8n3463so",
+    "name_ar": "سموزي ليمون بالنعناع وسط",
+    "name_tr": "Naneli limonata orta",
+    "name_en": "Minted lemonade medium",
+    "category": "Smoothies",
+    "base_price": 170,
+    "image": "/Piko Web app Photos 6/Minted lemonade.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Minted lemonade.jpg"
+  },
+  {
+    "id": "item_1761098078114_x6mb3593x",
+    "name_ar": "سموزي ليمون مع رمان وسط",
+    "name_tr": "pembe lemonata orta",
+    "name_en": "Pink lemonade medium",
+    "category": "Smoothies",
+    "base_price": 250,
+    "image": "/Piko Web app Photos 6/Pink Lemonade.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Pink Lemonade.jpg"
+  },
+  {
+    "id": "item_1761098078114_fb5n49br1",
+    "name_ar": "سموزي ليموناضة بالفريز وسط",
+    "name_tr": "Çilekli lemonata smoothie orta",
+    "name_en": "Strawberry lemonade smoothie medium",
+    "category": "Smoothies",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Strawberry lemonade smoothie.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Strawberry lemonade smoothie.jpg"
+  },
+  {
+    "id": "item_1761098078114_64h5m0t1j",
+    "name_ar": "سموزي مانجو فريز وسط",
+    "name_tr": "Çilekli mango smoothie orta",
+    "name_en": "Strawberry mango smoothie medium",
+    "category": "Smoothies",
+    "base_price": 240,
+    "image": "/Piko Web app Photos 6/Strawberry Smoothie.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Strawberry Smoothie.jpg"
+  },
+  {
+    "id": "item_1761098078114_3g4a3phvw",
+    "name_ar": "سموزي مانجو وسط",
+    "name_tr": "Mango smoothie orta",
+    "name_en": "Mango smoothie medium",
+    "category": "Smoothies",
+    "base_price": 240,
+    "image": "/Piko Web app Photos 6/Mango Smoothie .jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Mango Smoothie .jpg"
+  },
+  {
+    "id": "item_1761098078114_b86o3u7e8",
+    "name_ar": "سموزي ميكس بيريز وسط",
+    "name_tr": "Mix berries smoothie orta",
+    "name_en": "Mix berries smoothie medium",
+    "category": "Smoothies",
+    "base_price": 240,
+    "image": "/Piko Web app Photos 6/Mix Berries Smoothie .jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Mix Berries Smoothie .jpg"
+  },
+  {
+    "id": "item_1761098078114_i373ue4bx",
+    "name_ar": "كول لايم",
+    "name_tr": "Cool lime",
+    "name_en": "Cool lime",
+    "category": "Signature",
+    "base_price": 160,
+    "image": "/Piko Web app Photos 6/Cool Lime.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 160,
+        "name_ar": "كول لايم",
+        "name_tr": "Cool lime",
+        "name_en": "Cool lime"
+      },
+      {
+        "size": "large",
+        "price": 200,
+        "name_ar": "كول لايم كبير",
+        "name_tr": "Cool lime büyük",
+        "name_en": "Cool lime large"
+      },
+      {
+        "size": "medium",
+        "price": 180,
+        "name_ar": "كول لايم وسط",
+        "name_tr": "Cool lime orta",
+        "name_en": "Cool lime Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Cool Lime.jpg"
+  },
+  {
+    "id": "item_1761098078114_f6w4st0ie",
+    "name_ar": "كول لايم ابل بابلز",
+    "name_tr": "Cool lime elma bubbles",
+    "name_en": "Cool lime apple bubbles",
+    "category": "Signature",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Cool Lime Apple Bubbles.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "كول لايم ابل بابلز",
+        "name_tr": "Cool lime elma bubbles",
+        "name_en": "Cool lime apple bubbles"
+      },
+      {
+        "size": "large",
+        "price": 220,
+        "name_ar": "كول لايم ابل بابلز كبير",
+        "name_tr": "Cool lime elma bubbles büyük",
+        "name_en": "Cool lime apple bubbles Large"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "كول لايم ابل بابلز وسط",
+        "name_tr": "Cool lime elma bubbles orta",
+        "name_en": "Cool lime apple bubbles Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Cool Lime Apple Bubbles.jpg"
+  },
+  {
+    "id": "item_1761098078114_bsqh73rny",
+    "name_ar": "كول لايم بلو بيري بابلز",
+    "name_tr": "Cool lime blueberry bubbles",
+    "name_en": "Cool lime blueberry bubbles",
+    "category": "Signature",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Cool Lime Apple Bubbles.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "كول لايم بلو بيري بابلز",
+        "name_tr": "Cool lime blueberry bubbles",
+        "name_en": "Cool lime blueberry bubbles"
+      },
+      {
+        "size": "large",
+        "price": 220,
+        "name_ar": "كول لايم بلو بيري بابلز كبير",
+        "name_tr": "Cool lime blueberry bubbles büyük",
+        "name_en": "Cool lime blueberry bubbles large"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "كول لايم بلو بيري بابلز وسط",
+        "name_tr": "Cool lime blueberry bubbles orta",
+        "name_en": "Cool lime blueberry bubbles Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Cool Lime Apple Bubbles.jpg"
+  },
+  {
+    "id": "item_1761098078114_1nxbu3hpq",
+    "name_ar": "كول لايم سترو بيري بابلز",
+    "name_tr": "Cool lime Çilekli  bubbles",
+    "name_en": "Cool lime strawberry bubbles",
+    "category": "Signature",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Cool lime Strawberry bubbles.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": true,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "كول لايم سترو بيري بابلز",
+        "name_tr": "Cool lime Çilekli  bubbles",
+        "name_en": "Cool lime strawberry bubbles"
+      },
+      {
+        "size": "large",
+        "price": 220,
+        "name_ar": "كول لايم سترو بيري بابلز كبير",
+        "name_tr": "Cool lime Çilekli bubbles büyük",
+        "name_en": "Cool lime strawberry bubbles Large"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "كول لايم سترو بيري بابلز وسط",
+        "name_tr": "Cool lime Çilekli bubbles orta",
+        "name_en": "Cool lime strawberry bubbles Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": [
+      {
+        "type": "bubbles",
+        "price": 180,
+        "name_ar": "كول لايم سترو بيري بابلز",
+        "name_tr": "Cool lime Çilekli  bubbles",
+        "name_en": "Cool lime strawberry bubbles"
+      },
+      {
+        "type": "mix",
+        "price": 160,
+        "name_ar": "كول لايم سترو بيري ميكس",
+        "name_tr": "Cool lime Çilekli mix",
+        "name_en": "Cool lime strawberry mix"
+      }
+    ],
+    "original_variations": 6,
+    "image_filename": "Cool lime Strawberry bubbles.jpg"
+  },
+  {
+    "id": "item_1761098078114_he4ouyvzr",
+    "name_ar": "كول لايم مانجو ميكس",
+    "name_tr": "Cool lime mango mix",
+    "name_en": "Cool lime mango mix",
+    "category": "Signature",
+    "base_price": 160,
+    "image": "/Piko Web app Photos 6/Cool Lime.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 160,
+        "name_ar": "كول لايم مانجو ميكس",
+        "name_tr": "Cool lime mango mix",
+        "name_en": "Cool lime mango mix"
+      },
+      {
+        "size": "large",
+        "price": 200,
+        "name_ar": "كول لايم مانجو ميكس كبير",
+        "name_tr": "Cool lime mango mix büyük",
+        "name_en": "Cool lime mango mix large"
+      },
+      {
+        "size": "medium",
+        "price": 180,
+        "name_ar": "كول لايم مانجو ميكس وسط",
+        "name_tr": "Cool lime mango mix orta",
+        "name_en": "Cool lime mango mix Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Cool Lime.jpg"
+  },
+  {
+    "id": "item_1761098078114_f43jqu2mm",
+    "name_ar": "هيبسكوس",
+    "name_tr": "Hibiscus",
+    "name_en": "Hibiscus",
+    "category": "Signature",
+    "base_price": 160,
+    "image": "/Piko Web app Photos 6/Hibiscus.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 160,
+        "name_ar": "هيبسكوس",
+        "name_tr": "Hibiscus",
+        "name_en": "Hibiscus"
+      },
+      {
+        "size": "large",
+        "price": 200,
+        "name_ar": "هيبسكوس كبير",
+        "name_tr": "Hibiscus büyük",
+        "name_en": "Hibiscus large"
+      },
+      {
+        "size": "medium",
+        "price": 180,
+        "name_ar": "هيبسكوس وسط",
+        "name_tr": "Hibiscus orta",
+        "name_en": "Hibiscus Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Hibiscus.jpg"
+  },
+  {
+    "id": "item_1761098078114_utautge5k",
+    "name_ar": "هيبسكوس ابل بابلز",
+    "name_tr": "Hibiscus elma bubbles",
+    "name_en": "Hibiscus apple bubbles",
+    "category": "Signature",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Hibiscus Apple Bubbles.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "هيبسكوس ابل بابلز",
+        "name_tr": "Hibiscus elma bubbles",
+        "name_en": "Hibiscus apple bubbles"
+      },
+      {
+        "size": "large",
+        "price": 220,
+        "name_ar": "هيبسكوس ابل بابلز كبير",
+        "name_tr": "Hibiscus elma bubbles büyük",
+        "name_en": "Hibiscus apple bubbles large"
+      },
+      {
+        "size": "medium",
+        "price": 200,
+        "name_ar": "هيبسكوس ابل بابلز وسط",
+        "name_tr": "Hibiscus elma bubbles orta",
+        "name_en": "Hibiscus apple bubbles Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 3,
+    "image_filename": "Hibiscus Apple Bubbles.jpg"
+  },
+  {
+    "id": "item_1761098078114_affkk1vzm",
+    "name_ar": "هيبسكوس بلو بيري بابلز",
+    "name_tr": "Hibiscus blueberry bubbles",
+    "name_en": "Hibiscus blueberry bubbles",
+    "category": "Signature",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Blueberry Cheesecake.jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": true,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "هيبسكوس بلو بيري بابلز",
+        "name_tr": "Hibiscus blueberry bubbles",
+        "name_en": "Hibiscus blueberry bubbles"
+      },
+      {
+        "size": "large",
+        "price": 200,
+        "name_ar": "هيبسكوس بلو بيري ميكس كبير",
+        "name_tr": "Hibiscus blueberry mix büyük",
+        "name_en": "Hibiscus blueberry mix large"
+      },
+      {
+        "size": "medium",
+        "price": 180,
+        "name_ar": "هيبسكوس بلو بيري ميكس وسط",
+        "name_tr": "Hibiscus blueberry mix orta",
+        "name_en": "Hibiscus blueberry mix Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": [
+      {
+        "type": "bubbles",
+        "price": 180,
+        "name_ar": "هيبسكوس بلو بيري بابلز",
+        "name_tr": "Hibiscus blueberry bubbles",
+        "name_en": "Hibiscus blueberry bubbles"
+      },
+      {
+        "type": "mix",
+        "price": 160,
+        "name_ar": "هيبسكوس بلو بيري ميكس",
+        "name_tr": "Hibiscus blueberry mix",
+        "name_en": "Hibiscus blueberry mix"
+      }
+    ],
+    "original_variations": 6,
+    "image_filename": "Blueberry Cheesecake.jpg"
+  },
+  {
+    "id": "item_1761098078114_wddk5nnt0",
+    "name_ar": "هيبسكوس سترو بيري بابلز",
+    "name_tr": "Hibiscus ÇİLEK bubbles",
+    "name_en": "Hibiscus strawberry bubbles",
+    "category": "Signature",
+    "base_price": 180,
+    "image": "/Piko Web app Photos 6/Hibiscus Strawberry .jpg",
+    "has_sizes": true,
+    "has_drink_types": false,
+    "has_preparation_types": true,
+    "size_options": [
+      {
+        "size": "regular",
+        "price": 180,
+        "name_ar": "هيبسكوس سترو بيري بابلز",
+        "name_tr": "Hibiscus ÇİLEK bubbles",
+        "name_en": "Hibiscus strawberry bubbles"
+      },
+      {
+        "size": "large",
+        "price": 200,
+        "name_ar": "هيبسكوس سترو بيري ميكس كبير",
+        "name_tr": "Hibiscus ÇİLEK mix büyük",
+        "name_en": "Hibiscus strawberry mix large"
+      },
+      {
+        "size": "medium",
+        "price": 180,
+        "name_ar": "هيبسكوس سترو بيري ميكس وسط",
+        "name_tr": "Hibiscus ÇİLEKmix orta",
+        "name_en": "Hibiscus strawberry mix Medium"
+      }
+    ],
+    "drink_type_options": null,
+    "preparation_type_options": [
+      {
+        "type": "bubbles",
+        "price": 180,
+        "name_ar": "هيبسكوس سترو بيري بابلز",
+        "name_tr": "Hibiscus ÇİLEK bubbles",
+        "name_en": "Hibiscus strawberry bubbles"
+      },
+      {
+        "type": "mix",
+        "price": 160,
+        "name_ar": "هيبسكوس سترو بيري ميكس",
+        "name_tr": "HibiscusÇİLEK Mix",
+        "name_en": "Hibiscus strawberry Mix"
+      }
+    ],
+    "original_variations": 6,
+    "image_filename": "Hibiscus Strawberry .jpg"
+  },
+  {
+    "id": "item_1761098078114_zjlorjrw8",
+    "name_ar": "كريب اوريو",
+    "name_tr": "Oreo krep",
+    "name_en": "Oreo Crepe",
+    "category": "Sweets",
+    "base_price": 350,
+    "image": "/Piko Web app Photos 6/Oreo Crepe.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Oreo Crepe.jpg"
+  },
+  {
+    "id": "item_1761098078114_4lt6hh7ci",
+    "name_ar": "كريب بستاشيو",
+    "name_tr": "Antep fıstığı krep",
+    "name_en": "Pistachio Crepe",
+    "category": "Sweets",
+    "base_price": 300,
+    "image": "/Piko Web app Photos 6/Pistachio Crepe.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Pistachio Crepe.jpg"
+  },
+  {
+    "id": "item_1761098078114_25rkmyksp",
+    "name_ar": "كريب بيكو",
+    "name_tr": "Piko krep",
+    "name_en": "Piko Crepe",
+    "category": "Sweets",
+    "base_price": 420,
+    "image": "/Piko Web app Photos 6/Piko Crepe.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Piko Crepe.jpg"
+  },
+  {
+    "id": "item_1761098078114_7rsvewi35",
+    "name_ar": "كريب تشيز كيك",
+    "name_tr": "Cheesecake krep",
+    "name_en": "Cheesecake Crepe",
+    "category": "Sweets",
+    "base_price": 320,
+    "image": "/Piko Web app Photos 6/Cheesecake Crepe.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Cheesecake Crepe.jpg"
+  },
+  {
+    "id": "item_1761098078114_f8o4o838y",
+    "name_ar": "كريب شوكولا",
+    "name_tr": "Çikolata krep",
+    "name_en": "Chocolate Crepe",
+    "category": "Sweets",
+    "base_price": 300,
+    "image": "/Piko Web app Photos 6/Chocolate Crepe .jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Chocolate Crepe .jpg"
+  },
+  {
+    "id": "item_1761098078114_bat9uxp4l",
+    "name_ar": "كريب فواكه",
+    "name_tr": "Meyveli krep ",
+    "name_en": "Fruit Crepe",
+    "category": "Sweets",
+    "base_price": 400,
+    "image": "/Piko Web app Photos 6/Fruit Crepe.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Fruit Crepe.jpg"
+  },
+  {
+    "id": "item_1761098078114_klxhmxm4a",
+    "name_ar": "كريب فوتوتشيني",
+    "name_tr": "Fettucine ",
+    "name_en": "Fettuccine Crepe",
+    "category": "Sweets",
+    "base_price": 350,
+    "image": "/Piko Web app Photos 6/Fettuccine Crepe.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Fettuccine Crepe.jpg"
+  },
+  {
+    "id": "item_1761098078114_isluo68dn",
+    "name_ar": "كريب لوتوس",
+    "name_tr": "Lotus Crepe",
+    "name_en": "Lotus Crepe",
+    "category": "Sweets",
+    "base_price": 380,
+    "image": "/Piko Web app Photos 6/Lotus Crepe.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Lotus Crepe.jpg"
+  },
+  {
+    "id": "item_1761098078114_ycwz7o4hl",
+    "name_ar": "وافل اوريو",
+    "name_tr": "Oreo Waffle",
+    "name_en": "Oreo Waffle",
+    "category": "Sweets",
+    "base_price": 350,
+    "image": "/Piko Web app Photos 6/Oreo Waffle.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Oreo Waffle.jpg"
+  },
+  {
+    "id": "item_1761098078114_c6qyrgfdb",
+    "name_ar": "وافل بستاشيو",
+    "name_tr": "Antep fıstığı Waffle",
+    "name_en": "Pistachio Waffle",
+    "category": "Sweets",
+    "base_price": 390,
+    "image": "/Piko Web app Photos 6/Pistachio Waffle.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Pistachio Waffle.jpg"
+  },
+  {
+    "id": "item_1761098078114_c0ozh309k",
+    "name_ar": "وافل شوكولا",
+    "name_tr": "Çikolata Waffle",
+    "name_en": "Chocolate Waffle",
+    "category": "Sweets",
+    "base_price": 280,
+    "image": "/Piko Web app Photos 6/Chocolate Waffle.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Chocolate Waffle.jpg"
+  },
+  {
+    "id": "item_1761098078114_5i06npecr",
+    "name_ar": "وافل فريز",
+    "name_tr": "ÇİLEKli Waffle",
+    "name_en": "Strawberry Waffle",
+    "category": "Sweets",
+    "base_price": 340,
+    "image": "/Piko Web app Photos 6/Strawberry Waffle.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Strawberry Waffle.jpg"
+  },
+  {
+    "id": "item_1761098078114_bbifwcz3z",
+    "name_ar": "وافل فواكه",
+    "name_tr": "meyveli Waffle",
+    "name_en": "Fruit Waffle",
+    "category": "Sweets",
+    "base_price": 450,
+    "image": "/Piko Web app Photos 6/Fruit Waffle.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Fruit Waffle.jpg"
+  },
+  {
+    "id": "item_1761098078114_fnpqm7skg",
+    "name_ar": "وافل لوتوس",
+    "name_tr": "Lotus Waffle",
+    "name_en": "Lotus Waffle",
+    "category": "Sweets",
+    "base_price": 450,
+    "image": "/Piko Web app Photos 6/Lotus Waffle.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Lotus Waffle.jpg"
+  },
+  {
+    "id": "item_1761098078114_vd6t55asi",
+    "name_ar": "وافل مارشميلو",
+    "name_tr": "Marshmallow Waffle",
+    "name_en": "Marshmallow Waffle",
+    "category": "Sweets",
+    "base_price": 300,
+    "image": "/Piko Web app Photos 6/Marshmallow waffle.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Marshmallow waffle.jpg"
+  },
+  {
+    "id": "item_1761098078114_n6x11e8em",
+    "name_ar": "بان كيك اوريو",
+    "name_tr": "Oreo Pancake",
+    "name_en": "Oreo Pancake",
+    "category": "Sweets",
+    "base_price": 320,
+    "image": "/Piko Web app Photos 6/Oreo Pancake.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Oreo Pancake.jpg"
+  },
+  {
+    "id": "item_1761098078114_yohgnmzgt",
+    "name_ar": "بان كيك بستاشيو",
+    "name_tr": "Antep fıstığı Pancake",
+    "name_en": "Pistachio Pancake",
+    "category": "Sweets",
+    "base_price": 350,
+    "image": "/Piko Web app Photos 6/Pistachio Pancake.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Pistachio Pancake.jpg"
+  },
+  {
+    "id": "item_1761098078114_qj91pd0zm",
+    "name_ar": "بان كيك تيرامسو",
+    "name_tr": "Tiramisu Pancake",
+    "name_en": "Tiramisu Pancake",
+    "category": "Sweets",
+    "base_price": 320,
+    "image": "/Piko Web app Photos 6/Tiramisu Pancake .jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Tiramisu Pancake .jpg"
+  },
+  {
+    "id": "item_1761098078114_rkze6kpz3",
+    "name_ar": "بان كيك شوكولا",
+    "name_tr": "Chocolate Pancake",
+    "name_en": "Chocolate Pancake",
+    "category": "Sweets",
+    "base_price": 300,
+    "image": "/Piko Web app Photos 6/Mini Chocolate Pancake .jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Mini Chocolate Pancake .jpg"
+  },
+  {
+    "id": "item_1761098078114_r9irgn4a6",
+    "name_ar": "بان كيك فواكه",
+    "name_tr": "Fruit Pancake",
+    "name_en": "Fruit Pancake",
+    "category": "Sweets",
+    "base_price": 450,
+    "image": "/Piko Web app Photos 6/Fruit Pancake.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Fruit Pancake.jpg"
+  },
+  {
+    "id": "item_1761098078114_6q1v1olyg",
+    "name_ar": "بان كيك لوتوس",
+    "name_tr": "Lotus Pancake",
+    "name_en": "Lotus Pancake",
+    "category": "Sweets",
+    "base_price": 400,
+    "image": "/Piko Web app Photos 6/Lotus Pancake.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Lotus Pancake.jpg"
+  },
+  {
+    "id": "item_1761098078114_3crnq4iy1",
+    "name_ar": "ميني بان كيك اوريو",
+    "name_tr": "Mini Oreo Pancake",
+    "name_en": "Mini Oreo Pancake",
+    "category": "Sweets",
+    "base_price": 350,
+    "image": "/Piko Web app Photos 6/Oreo Pancake.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Oreo Pancake.jpg"
+  },
+  {
+    "id": "item_1761098078114_f7ylu3y09",
+    "name_ar": "ميني بان كيك بستاشيو",
+    "name_tr": "Mini Antep fıstığı Pancake",
+    "name_en": "Mini Pistachio Pancake",
+    "category": "Sweets",
+    "base_price": 320,
+    "image": "/Piko Web app Photos 6/Mini Pistachio Pancake.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Mini Pistachio Pancake.jpg"
+  },
+  {
+    "id": "item_1761098078114_4vr16454d",
+    "name_ar": "ميني بان كيك شوكولا",
+    "name_tr": "Mini Çikolatalı Pancake",
+    "name_en": "Mini Chocolate Pancake",
+    "category": "Sweets",
+    "base_price": 300,
+    "image": "/Piko Web app Photos 6/Mini Chocolate Pancake .jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Mini Chocolate Pancake .jpg"
+  },
+  {
+    "id": "item_1761098078114_5ghda9z0f",
+    "name_ar": "ميني بان كيك فواكه",
+    "name_tr": "Mini meyveli  Pancake",
+    "name_en": "Mini Fruit Pancake",
+    "category": "Sweets",
+    "base_price": 450,
+    "image": "/Piko Web app Photos 6/Mini Fruit Pancake.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Mini Fruit Pancake.jpg"
+  },
+  {
+    "id": "item_1761098078114_d0708ptms",
+    "name_ar": "ميني بان كيك لوتوس",
+    "name_tr": "Mini Lotus Pancake",
+    "name_en": "Mini Lotus Pancake",
+    "category": "Sweets",
+    "base_price": 360,
+    "image": "/Piko Web app Photos 6/Lotus Pancake.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Lotus Pancake.jpg"
+  },
+  {
+    "id": "item_1761098078114_0makaaooc",
+    "name_ar": "ميني بان كيك ميكس بيري",
+    "name_tr": "Mixed Berry Pancake",
+    "name_en": "Mixed Berry Pancake",
+    "category": "Sweets",
+    "base_price": 350,
+    "image": "/Piko Web app Photos 6/Fruit Pancake.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Fruit Pancake.jpg"
+  },
+  {
+    "id": "item_1761098078114_w25kh928s",
+    "name_ar": "اوبرا",
+    "name_tr": "Opera Pastası",
+    "name_en": "Opera cake",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": "/Piko Web app Photos 6/Opera Cake.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Opera Cake.jpg"
+  },
+  {
+    "id": "item_1761098078114_tnbpuxe36",
+    "name_ar": "تشمني كيك بندق",
+    "name_tr": "Fındıklı Bacalı Kek",
+    "name_en": "Hazelnut Chimney Cake",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": "/Piko Web app Photos 6/Chimney Cake.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Chimney Cake.jpg"
+  },
+  {
+    "id": "item_1761098078114_f89gomy1e",
+    "name_ar": "تشمني كيك قرفة",
+    "name_tr": "Çimni Cake",
+    "name_en": "Chimney Cake",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": "/Piko Web app Photos 6/Chimney Cake.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Chimney Cake.jpg"
+  },
+  {
+    "id": "item_1761098078114_qubwb9rcp",
+    "name_ar": "تشيز كيك بستاشيو",
+    "name_tr": "Fıstıklı Cheesecake",
+    "name_en": "Pistachio Cheesecake",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": "/Piko Web app Photos 6/Pistachio Cheesecake .jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Pistachio Cheesecake .jpg"
+  },
+  {
+    "id": "item_1761098078114_byu09mvfj",
+    "name_ar": "تشيز كيك بلو بيري",
+    "name_tr": "Yaban mersinli Cheesecake",
+    "name_en": "Blueberry Cheesecake",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": "/Piko Web app Photos 6/Blueberry Cheesecake.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Blueberry Cheesecake.jpg"
+  },
+  {
+    "id": "item_1761098078114_xc64j0jto",
+    "name_ar": "تشيز كيك شوكولا",
+    "name_tr": "Çikolatalı Cheesecake",
+    "name_en": "Chocolate Cheesecake",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": "/Piko Web app Photos 6/Chocolate Cheesecake.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Chocolate Cheesecake.jpg"
+  },
+  {
+    "id": "item_1761098078114_x3r0vppez",
+    "name_ar": "تشيز كيك فريز",
+    "name_tr": "Çilekli Cheesecake",
+    "name_en": "Strawberry Cheesecake",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": "/Piko Web app Photos 6/Strawberry Cheesecake.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Strawberry Cheesecake.jpg"
+  },
+  {
+    "id": "item_1761098078114_qygpasn2m",
+    "name_ar": "تيراميسو",
+    "name_tr": "Tiramisu",
+    "name_en": "Tiramisu",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": "/Piko Web app Photos 6/Tiramisu.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Tiramisu.jpg"
+  },
+  {
+    "id": "item_1761098078114_zwggcsean",
+    "name_ar": "فوندون",
+    "name_tr": "Çikolatalı Fondan",
+    "name_en": "Fondant chocolate",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": "/Piko Web app Photos 6/Fondant chocolate.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Fondant chocolate.jpg"
+  },
+  {
+    "id": "item_1761098078114_k8tmwiqya",
+    "name_ar": "كروسان سادة",
+    "name_tr": "kruvasan",
+    "name_en": "Croissants",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": "/Piko Web app Photos 6/Pistachio Croissants.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Pistachio Croissants.jpg"
+  },
+  {
+    "id": "item_1761098078114_nwbgirt0f",
+    "name_ar": "كوكيز بستاشيو",
+    "name_tr": "Fıstıklı Kurabiye",
+    "name_en": "Pistachio Cookies",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": "/Piko Web app Photos 6/Pistachio Cookies .jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Pistachio Cookies .jpg"
+  },
+  {
+    "id": "item_1761098078114_nt6c9qsuc",
+    "name_ar": "كوكيز بندوق",
+    "name_tr": "\tFındıklı Kurabiye",
+    "name_en": "Hazelnut Cookies",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": "/Piko Web app Photos 6/Hazelnut Cookies.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Hazelnut Cookies.jpg"
+  },
+  {
+    "id": "item_1761098078114_ng42ldo3x",
+    "name_ar": "كوكيز توت احمر",
+    "name_tr": "Ahududu kurabiye",
+    "name_en": "Raspberry Cookies",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": "/Piko Web app Photos 6/Raspberry Cookies.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Raspberry Cookies.jpg"
+  },
+  {
+    "id": "item_1761098078114_ts1eegluj",
+    "name_ar": "كوكيز سادة",
+    "name_tr": "kurabiye sadeli",
+    "name_en": " Cookies",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": "/Piko Web app Photos 6/Hazelnut Cookies.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Hazelnut Cookies.jpg"
+  },
+  {
+    "id": "item_1761098078114_f6l4l2ola",
+    "name_ar": "كوكيز لوتوس",
+    "name_tr": "Lotuslu Kurabiye",
+    "name_en": "Lotus Cookies",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": "/Piko Web app Photos 6/Lotus Cookies .jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Lotus Cookies .jpg"
+  },
+  {
+    "id": "item_1761098078114_vo9etlf1j",
+    "name_ar": "كيكة الجزر",
+    "name_tr": "havuç Cake",
+    "name_en": "Carrot Cake",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": "/Piko Web app Photos 6/Carrot Cake.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Carrot Cake.jpg"
+  },
+  {
+    "id": "item_1761098078114_jefqxf6ct",
+    "name_ar": "كيكة العسل",
+    "name_tr": "Ballı Cake",
+    "name_en": "Honey Cake",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": "/Piko Web app Photos 6/Honey Cake.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Honey Cake.jpg"
+  },
+  {
+    "id": "item_1761098078114_9gzza69jj",
+    "name_ar": "كيكة براونيز",
+    "name_tr": "Brownie Cake",
+    "name_en": "Brownie Cake",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": "/Piko Web app Photos 6/Brownie Cake.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Brownie Cake.jpg"
+  },
+  {
+    "id": "item_1761098078114_3mmtil94k",
+    "name_ar": "كيكة سان سباستيان",
+    "name_tr": "San Sebastian Cake",
+    "name_en": "San Sebastian Cake",
+    "category": "Patisserie",
+    "base_price": 0,
+    "image": "/Piko Web app Photos 6/Blueberry Cheesecake.jpg",
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": "Blueberry Cheesecake.jpg"
+  },
+  {
+    "id": "item_1761098078113_3d2v3qoin",
+    "name_ar": "كاسة بوظة وسط",
+    "name_tr": "Dondurma orta ",
+    "name_en": "Ice cream Medium",
+    "category": "Ice Cream",
+    "base_price": 210,
+    "image": null,
+    "has_sizes": false,
+    "has_drink_types": false,
+    "has_preparation_types": false,
+    "size_options": null,
+    "drink_type_options": null,
+    "preparation_type_options": null,
+    "original_variations": 1,
+    "image_filename": null
+  }
+]
