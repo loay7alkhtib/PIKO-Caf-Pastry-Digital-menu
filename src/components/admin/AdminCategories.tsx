@@ -148,6 +148,7 @@ function AdminCategoriesInner({ categories, onRefresh }: AdminCategoriesProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [isSaving, setIsSaving] = useState(false);
   const [isSavingOrder, setIsSavingOrder] = useState(false);
+  const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
   const [formData, setFormData] = useState({
     nameEn: '',
     nameTr: '',
@@ -165,6 +166,7 @@ function AdminCategoriesInner({ categories, onRefresh }: AdminCategoriesProps) {
         (a, b) => a.order - b.order,
       );
       setLocalCategories(sortedCategories);
+      setHasUnsavedChanges(false); // Reset unsaved changes when categories are refreshed
     }, 0);
     return () => clearTimeout(timer);
   }, [categories]);
@@ -337,6 +339,7 @@ function AdminCategoriesInner({ categories, onRefresh }: AdminCategoriesProps) {
     }));
 
     setLocalCategories(updatedCategories);
+    setHasUnsavedChanges(true); // Mark that there are unsaved changes
   };
 
   const saveCategoryOrder = async () => {
@@ -344,25 +347,32 @@ function AdminCategoriesInner({ categories, onRefresh }: AdminCategoriesProps) {
 
     try {
       setIsSavingOrder(true);
+      console.log(
+        '🔄 Saving category order...',
+        localCategories.map(c => ({
+          id: c.id,
+          name: c.names.en,
+          order: c.order,
+        })),
+      );
 
-      // Update each category with its new order
-      const updatePromises = localCategories.map((category, index) => {
-        const updateData = {
-          names: category.names,
-          icon: category.icon,
-          image: category.image,
-          color: category.color,
-          order: index,
-        };
-        return categoriesAPI.update(category.id, updateData);
-      });
+      // Prepare order updates
+      const orderUpdates = localCategories.map((category, index) => ({
+        id: category.id,
+        order: index,
+      }));
 
-      await Promise.all(updatePromises);
+      // Use the efficient bulk update method
+      await categoriesAPI.updateOrder(orderUpdates);
+
+      setHasUnsavedChanges(false); // Clear unsaved changes flag
       toast.success('Category order updated successfully');
       await onRefresh();
     } catch (error) {
-      console.error('Order update error:', error);
-      toast.error('Failed to update category order');
+      console.error('❌ Order update error:', error);
+      const errorMessage =
+        error instanceof Error ? error.message : 'Unknown error occurred';
+      toast.error(`Failed to update category order: ${errorMessage}`);
       await onRefresh(); // Refresh to get the correct order from server
     } finally {
       setIsSavingOrder(false);
@@ -378,11 +388,15 @@ function AdminCategoriesInner({ categories, onRefresh }: AdminCategoriesProps) {
             <Button
               type='button'
               onClick={saveCategoryOrder}
-              variant='secondary'
+              variant={hasUnsavedChanges ? 'default' : 'secondary'}
               size='sm'
-              disabled={isSavingOrder}
+              disabled={isSavingOrder || !hasUnsavedChanges}
             >
-              {isSavingOrder ? 'Saving...' : 'Save Order'}
+              {isSavingOrder
+                ? 'Saving...'
+                : hasUnsavedChanges
+                  ? 'Save Order*'
+                  : 'Save Order'}
             </Button>
             <Button
               type='button'

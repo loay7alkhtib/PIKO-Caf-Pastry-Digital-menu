@@ -180,6 +180,29 @@ export const categoriesAPI = {
   clearCache: () => {
     categoriesCache = null;
   },
+  updateOrder: async (orderUpdates: { id: string; order: number }[]) => {
+    if (STATIC_MODE) throw new Error('Categories API disabled in static mode');
+    categoriesCache = null;
+
+    console.log('🔄 Updating category orders:', orderUpdates);
+
+    // Use a transaction-like approach with Promise.all for better performance
+    const updatePromises = orderUpdates.map(({ id, order }) =>
+      supabaseClient.from('categories').update({ order }).eq('id', id),
+    );
+
+    const results = await Promise.all(updatePromises);
+
+    // Check for any errors
+    const errors = results.filter(result => result.error);
+    if (errors.length > 0) {
+      console.error('❌ Some category order updates failed:', errors);
+      throw new Error(`Failed to update ${errors.length} categories`);
+    }
+
+    console.log('✅ All category orders updated successfully');
+    return results;
+  },
 };
 
 export const itemsAPI = {
