@@ -129,4 +129,4 @@ src/**/*.md
 
 # Development files
 setup-cursor.*
-*.template
+*.template.env.local
