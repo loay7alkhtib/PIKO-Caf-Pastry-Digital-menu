@@ -14,21 +14,34 @@ let cachedMenu: { data: StaticMenuFile; timestamp: number } | null = null;
 
 export function isStaticDataSourceEnabled(): boolean {
   const dataSource = import.meta.env.VITE_DATA_SOURCE;
-  if (typeof dataSource === 'string') {
-    return dataSource.trim().toLowerCase() === 'static';
-  }
-
-  // Check for admin mode override
   const isAdminMode = import.meta.env.VITE_ADMIN_MODE === 'true';
-  if (isAdminMode) {
-    return false; // Disable static mode for admin operations
-  }
-
   const hasSupabaseConfig = Boolean(
     import.meta.env.VITE_SUPABASE_URL && import.meta.env.VITE_SUPABASE_ANON_KEY,
   );
 
-  return !hasSupabaseConfig;
+  console.warn('🔍 Static mode detection:', {
+    dataSource,
+    isAdminMode,
+    hasSupabaseConfig,
+    supabaseUrl: import.meta.env.VITE_SUPABASE_URL,
+    supabaseKey: import.meta.env.VITE_SUPABASE_ANON_KEY ? 'present' : 'missing',
+  });
+
+  if (typeof dataSource === 'string') {
+    const isStatic = dataSource.trim().toLowerCase() === 'static';
+    console.warn('📊 Data source check:', { dataSource, isStatic });
+    return isStatic;
+  }
+
+  // Check for admin mode override
+  if (isAdminMode) {
+    console.warn('🔧 Admin mode override: disabling static mode');
+    return false; // Disable static mode for admin operations
+  }
+
+  const result = !hasSupabaseConfig;
+  console.warn('🔗 Supabase config check:', { hasSupabaseConfig, result });
+  return result;
 }
 
 function getStaticMenuUrl(): string {
