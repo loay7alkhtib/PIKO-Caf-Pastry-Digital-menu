@@ -424,6 +424,15 @@ function AdminCategoriesInner({ categories, onRefresh }: AdminCategoriesProps) {
         await onRefresh();
       } catch (refreshError) {
         console.error('❌ Failed to refresh after error:', refreshError);
+        // Check if we're in static mode
+        if (
+          refreshError instanceof Error &&
+          refreshError.message.includes('static mode')
+        ) {
+          toast.error(
+            'Admin operations are disabled in static mode. Please set VITE_ADMIN_MODE=true in environment variables.',
+          );
+        }
       }
     } finally {
       setIsSavingOrder(false);

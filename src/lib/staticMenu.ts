@@ -18,6 +18,12 @@ export function isStaticDataSourceEnabled(): boolean {
     return dataSource.trim().toLowerCase() === 'static';
   }
 
+  // Check for admin mode override
+  const isAdminMode = import.meta.env.VITE_ADMIN_MODE === 'true';
+  if (isAdminMode) {
+    return false; // Disable static mode for admin operations
+  }
+
   const hasSupabaseConfig = Boolean(
     import.meta.env.VITE_SUPABASE_URL && import.meta.env.VITE_SUPABASE_ANON_KEY,
   );
