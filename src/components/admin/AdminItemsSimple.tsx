@@ -64,6 +64,7 @@ interface DraggableTableRowProps {
   isSearching: boolean;
   categoryLabel?: string;
   onToggleAvailability: (id: string, next: boolean) => void;
+  onOrderChange: (id: string, order: number) => void;
 }
 
 const DraggableTableRow = ({
@@ -78,6 +79,7 @@ const DraggableTableRow = ({
   isSearching,
   categoryLabel,
   onToggleAvailability,
+  onOrderChange,
 }: DraggableTableRowProps) => {
   const ref = useRef<HTMLTableRowElement>(null);
 
@@ -217,8 +219,10 @@ const DraggableTableRow = ({
             value={item.order || 0}
             className='w-16 h-8 text-center'
             min='0'
-            readOnly
-            aria-readonly
+            onChange={e => {
+              const newOrder = parseInt(e.target.value) || 0;
+              onOrderChange(item.id, newOrder);
+            }}
           />
         </div>
       </TableCell>
@@ -417,6 +421,12 @@ function AdminItemsSimpleInner({
         prev.map(it => (it.id === id ? { ...it, is_available: !next } : it)),
       );
     }
+  };
+
+  const handleOrderChange = (id: string, order: number) => {
+    setLocalItems(prev =>
+      prev.map(item => (item.id === id ? { ...item, order } : item)),
+    );
   };
 
   const openDialog = (item?: Item) => {
@@ -684,54 +694,52 @@ function AdminItemsSimpleInner({
     try {
       console.warn('🔄 Saving item order for category:', selectedCategory);
 
-      // Recompute the current items for the selected category from the latest state
-      const latestCategoryItems = [...localItems]
+      // Collect all current order input values from local state
+      const currentCategoryItems = localItems
         .filter(item => item.category_id === selectedCategory)
-        .sort((a, b) => (a.order || 0) - (b.order || 0));
+        .map(item => ({
+          id: item.id,
+          order: item.order || 0,
+          name: item.names.en,
+        }));
 
       console.warn(
-        '📋 Current latestCategoryItems:',
-        latestCategoryItems.map(item => ({
+        '📋 Current order values from inputs:',
+        currentCategoryItems.map(item => ({
           id: item.id,
-          name: item.names.en,
+          name: item.name,
           order: item.order,
         })),
       );
 
-      // Build the payload from the latest items to avoid stale closure issues
-      const orderUpdates = latestCategoryItems.map((item, index) => ({
+      // Build the payload with the current order values from inputs
+      const orderUpdates = currentCategoryItems.map(item => ({
         id: item.id,
-        order: index,
+        order: item.order,
       }));
 
       console.warn('📝 Order updates to send:', orderUpdates);
       const result = await itemsAPI.updateOrder(orderUpdates);
       console.warn('✅ Bulk order update result:', result);
 
-      // Always perform full updates for changed items as a safety net
-      const changedItems = latestCategoryItems.filter(
-        (item, index) => (item.order ?? -1) !== index,
-      );
-      if (changedItems.length > 0) {
-        console.warn(
-          `🛟 Performing full updates for ${changedItems.length} changed items...`,
-        );
-        await Promise.all(
-          changedItems.map(item =>
-            itemsAPI.update(item.id, {
-              names: item.names,
-              category_id: item.category_id || null,
-              price: item.price,
-              image: item.image || null,
-              tags: item.tags,
-              is_available: item.is_available ?? true,
-              // Set to the index from orderUpdates for this id
-              order: orderUpdates.find(u => u.id === item.id)?.order ?? 0,
-            }),
-          ),
-        );
-        console.warn('✅ Full item updates completed');
-      }
+      // Also perform full updates for all items to ensure consistency
+      const updatePromises = currentCategoryItems.map(item => {
+        const localItem = localItems.find(li => li.id === item.id);
+        if (!localItem) return Promise.resolve();
+
+        return itemsAPI.update(item.id, {
+          names: localItem.names,
+          category_id: localItem.category_id || null,
+          price: localItem.price,
+          image: localItem.image || null,
+          tags: localItem.tags,
+          is_available: localItem.is_available ?? true,
+          order: item.order,
+        });
+      });
+
+      await Promise.all(updatePromises);
+      console.warn('✅ Full item updates completed');
 
       // Pull fresh items for this category from the server and sync local state
       try {
@@ -758,7 +766,7 @@ function AdminItemsSimpleInner({
         console.warn('⚠️ Could not fetch fresh items after reordering:', e);
       }
 
-      toast.success('Item order updated');
+      toast.success('Item order saved successfully!');
       onRefresh();
     } catch (error) {
       console.error('Order update error:', error);
@@ -830,11 +838,17 @@ function AdminItemsSimpleInner({
         .sort((a, b) => (a.order || 0) - (b.order || 0))
         .map((it, idx) => ({ ...it, order: idx }));
 
-      const updatedMoved = movedItems.map(mi => ({
-        ...(localItems.find(li => li.id === mi.id) || {}),
-        category_id: bulkTargetCategory,
-        order: (mi.payload as { order: number }).order,
-      }));
+      const updatedMoved = movedItems
+        .map(mi => {
+          const originalItem = localItems.find(li => li.id === mi.id);
+          if (!originalItem) return null;
+          return {
+            ...originalItem,
+            category_id: bulkTargetCategory,
+            order: (mi.payload as { order: number }).order,
+          } as Item;
+        })
+        .filter((item): item is Item => item !== null);
 
       const untouched = localItems.filter(
         it =>
@@ -1157,6 +1171,7 @@ function AdminItemsSimpleInner({
                       isSearching={normalizedQuery.length > 0}
                       categoryLabel={categoryLabel}
                       onToggleAvailability={handleToggleAvailability}
+                      onOrderChange={handleOrderChange}
                     />
                   );
                 })}
