@@ -25,18 +25,19 @@ export function isStaticDataSourceEnabled(): boolean {
     hasSupabaseConfig,
     supabaseUrl: import.meta.env.VITE_SUPABASE_URL,
     supabaseKey: import.meta.env.VITE_SUPABASE_ANON_KEY ? 'present' : 'missing',
+    timestamp: new Date().toISOString(),
   });
+
+  // Check for admin mode override FIRST - this should take precedence
+  if (isAdminMode) {
+    console.warn('🔧 Admin mode override: disabling static mode');
+    return false; // Disable static mode for admin operations
+  }
 
   if (typeof dataSource === 'string') {
     const isStatic = dataSource.trim().toLowerCase() === 'static';
     console.warn('📊 Data source check:', { dataSource, isStatic });
     return isStatic;
-  }
-
-  // Check for admin mode override
-  if (isAdminMode) {
-    console.warn('🔧 Admin mode override: disabling static mode');
-    return false; // Disable static mode for admin operations
   }
 
   const result = !hasSupabaseConfig;

@@ -12,6 +12,15 @@ type RequestInit = {
 
 const STATIC_MODE = isStaticDataSourceEnabled();
 
+// Debug static mode detection
+console.warn('🔍 Supabase client initialization:', {
+  STATIC_MODE,
+  supabaseUrl: import.meta.env.VITE_SUPABASE_URL,
+  supabaseKey: import.meta.env.VITE_SUPABASE_ANON_KEY ? 'present' : 'missing',
+  dataSource: import.meta.env.VITE_DATA_SOURCE,
+  adminMode: import.meta.env.VITE_ADMIN_MODE,
+});
+
 let currentSession: Session | null = null;
 
 // Create Supabase client

@@ -51,7 +51,19 @@ export function DataProvider({ children }: { children: ReactNode }) {
   // In-memory cache for items by category
   const [itemsCache, setItemsCache] = useState<Record<string, ItemsCache>>({});
 
+  // Check static mode dynamically to ensure environment variables are loaded
   const staticMode = isStaticDataSourceEnabled();
+
+  console.warn('🔍 DataContext static mode check:', {
+    staticMode,
+    pathname: window.location.pathname,
+    isAdmin: window.location.pathname.includes('/admin'),
+    envVars: {
+      dataSource: import.meta.env.VITE_DATA_SOURCE,
+      adminMode: import.meta.env.VITE_ADMIN_MODE,
+      supabaseUrl: import.meta.env.VITE_SUPABASE_URL,
+    },
+  });
 
   // Fetch all data once on mount with static-first strategy
   const fetchAllData = useCallback(async () => {
