@@ -1,6 +1,6 @@
 # 🆓 Supabase Free Plan Optimization Guide
 
-This guide shows you how to run your PIKO Café Digital Menu on the **Supabase Free Plan** (5GB egress/month) without any additional costs.
+This guide shows you how to run your PIKO Café Digital Menu on the **Supabase Free Plan** (5GB egress/month) without any additional costs. Prefer the static JSON setup if you no longer have a Supabase project or want to minimize database usage entirely.
 
 ## 📊 Free Plan Limits
 
@@ -16,22 +16,16 @@ This guide shows you how to run your PIKO Café Digital Menu on the **Supabase F
 ### 1. Generate Static Menu Data
 
 ```bash
-npm run free-plan:setup
+npm run generate:static
 ```
 
-This creates optimized static files:
+This creates:
 
-- `public/static/menu.json` (15MB → 7.4MB compressed)
-- `public/static/menu.json.gz` (compressed version)
-- `public/static/menu.hash` (cache validation)
+- `public/static/menu.json`
+- `public/static/menu.json.gz`
+- `public/static/menu.hash`
 
-### 2. Build for Free Plan
-
-```bash
-npm run build:free-plan
-```
-
-### 3. Deploy to Vercel
+### 2. Deploy the static build
 
 ```bash
 vercel --prod

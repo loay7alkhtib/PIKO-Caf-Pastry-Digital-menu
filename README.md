@@ -8,10 +8,14 @@ Run `npm i` to install the dependencies.
 
 Run `npm run dev` to start the development server.
 
+### Static JSON mode
+
+If you don't have a Supabase project, you can run the menu entirely from a static JSON file. Generate the file once and the app will read from `public/static/menu.json`.
+
 Additional scripts:
 
 - Generate static menu JSON before build:
-  - `npm run build:free-plan`
+  - `npm run generate:static`
 - Import full menu data from CSV (ESM):
   - `npm run import:menu -- path/to/menu.csv ./images`
 - Export current menu to CSV:

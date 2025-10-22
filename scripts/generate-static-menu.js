@@ -1,197 +1,176 @@
 #!/usr/bin/env node
 
-/**
- * Static Menu Generator
+/*
+ * Generate static menu JSON files from `final_menu.json`.
  *
- * This script generates a static JSON file of the menu data
- * to minimize Supabase data egress and improve performance.
- *
- * Run this script as part of your build process or on a schedule.
+ * Outputs (under `public/static/`):
+ *   - menu.json
+ *   - menu.json.gz
+ *   - menu.hash
  */
 
 const fs = require('fs');
 const path = require('path');
-const { createClient } = require('@supabase/supabase-js');
+const crypto = require('crypto');
+const zlib = require('zlib');
 
-// Configuration
-const SUPABASE_URL =
-  process.env.NEXT_PUBLIC_SUPABASE_URL ||
-  process.env.VITE_SUPABASE_URL;
-const SUPABASE_ANON_KEY =
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
-  process.env.VITE_SUPABASE_ANON_KEY;
-const OUTPUT_DIR = path.join(__dirname, '..', 'public', 'static');
-const OUTPUT_FILE = path.join(OUTPUT_DIR, 'menu.json');
+const ROOT_DIR = path.resolve(__dirname, '..');
+const INPUT_PATH = path.join(ROOT_DIR, 'final_menu.json');
+const OUTPUT_DIR = path.join(ROOT_DIR, 'public', 'static');
+const OUTPUT_JSON = path.join(OUTPUT_DIR, 'menu.json');
+const OUTPUT_GZIP = path.join(OUTPUT_DIR, 'menu.json.gz');
+const OUTPUT_HASH = path.join(OUTPUT_DIR, 'menu.hash');
 
-// Check if we have the required environment variables
-if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
-  console.error('❌ Missing required environment variables:');
-  console.error('   VITE_SUPABASE_URL or NEXT_PUBLIC_SUPABASE_URL');
-  console.error('   VITE_SUPABASE_ANON_KEY or NEXT_PUBLIC_SUPABASE_ANON_KEY');
+function exitWithError(message) {
+  console.error(`❌ ${message}`);
   process.exit(1);
 }
 
-// Initialize Supabase client
-const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY, {
-  // Disable realtime and auth for read-only operations
-  realtime: { enabled: false },
-  auth: { persistSession: false },
-});
+function slugify(value, fallback = 'item') {
+  const base = (value || '')
+    .toString()
+    .trim()
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-zA-Z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .toLowerCase();
 
-async function generateStaticMenu() {
-  console.log('🔄 Generating static menu data...');
-
-  try {
-    // Create output directory if it doesn't exist
-    if (!fs.existsSync(OUTPUT_DIR)) {
-      fs.mkdirSync(OUTPUT_DIR, { recursive: true });
-    }
-
-    // Fetch categories with only needed fields
-    console.log('📂 Fetching categories...');
-    const { data: categories, error: categoriesError } = await supabase
-      .from('categories')
-      .select(
-        `
-        id,
-        slug,
-        names,
-        icon,
-        color,
-        image_url,
-        sort_order,
-        is_active
-      `,
-      )
-      .eq('is_active', true)
-      .order('sort_order');
-
-    if (categoriesError) {
-      throw new Error(`Categories error: ${categoriesError.message}`);
-    }
-
-    // Fetch items with only needed fields
-    console.log('🍽️ Fetching items...');
-    const { data: items, error: itemsError } = await supabase
-      .from('items')
-      .select(
-        `
-        id,
-        category_id,
-        names,
-        descriptions,
-        price,
-        image_url,
-        tags,
-        variants,
-        sort_order,
-        is_active
-      `,
-      )
-      .eq('is_active', true)
-      .order('sort_order');
-
-    if (itemsError) {
-      throw new Error(`Items error: ${itemsError.message}`);
-    }
-
-    // Transform data to match frontend expectations
-    const transformedCategories = categories.map(cat => ({
-      id: cat.id,
-      names: cat.names || { en: 'Category', tr: 'Kategori', ar: 'فئة' },
-      icon: cat.icon || '🍽️',
-      color: cat.color,
-      image: cat.image_url,
-      order: cat.sort_order,
-    }));
-
-    const transformedItems = items.map(item => ({
-      id: item.id,
-      names: item.names || { en: 'Item', tr: 'Ürün', ar: 'منتج' },
-      descriptions: item.descriptions || null,
-      category_id: item.category_id,
-      price: item.price || 0,
-      image: item.image_url,
-      variants:
-        item.variants &&
-        Array.isArray(item.variants) &&
-        item.variants.length > 0
-          ? item.variants
-          : undefined,
-      tags: item.tags || ['menu-item'],
-      is_available: item.is_active,
-      order: item.sort_order || 0,
-    }));
-
-    // Create the static menu data
-    const menuData = {
-      categories: transformedCategories,
-      items: transformedItems,
-      generatedAt: new Date().toISOString(),
-      version: '1.0.0',
-      // Add metadata for cache optimization
-      metadata: {
-        totalCategories: transformedCategories.length,
-        totalItems: transformedItems.length,
-        lastUpdated: new Date().toISOString(),
-        cacheExpiry: new Date(Date.now() + 60 * 60 * 1000).toISOString(), // 1 hour
-      },
-    };
-
-    // Write to file with pretty formatting
-    fs.writeFileSync(OUTPUT_FILE, JSON.stringify(menuData, null, 2));
-
-    console.log('✅ Static menu generated successfully!');
-    console.log(`📊 Categories: ${transformedCategories.length}`);
-    console.log(`🍽️ Items: ${transformedItems.length}`);
-    console.log(`📁 Output: ${OUTPUT_FILE}`);
-    console.log(
-      `📏 Size: ${(fs.statSync(OUTPUT_FILE).size / 1024).toFixed(2)} KB`,
-    );
-
-    // Generate a hash for cache busting
-    const crypto = require('crypto');
-    const hash = crypto
-      .createHash('md5')
-      .update(JSON.stringify(menuData))
-      .digest('hex');
-
-    // Write hash file for cache validation
-    const hashFile = path.join(OUTPUT_DIR, 'menu.hash');
-    fs.writeFileSync(hashFile, hash);
-
-    console.log(`🔑 Cache hash: ${hash}`);
-    console.log(`📁 Hash file: ${hashFile}`);
-
-    // Generate a compressed version for even better performance
-    const zlib = require('zlib');
-    const compressedData = zlib.gzipSync(JSON.stringify(menuData));
-    const compressedFile = path.join(OUTPUT_DIR, 'menu.json.gz');
-    fs.writeFileSync(compressedFile, compressedData);
-
-    console.log(
-      `🗜️ Compressed size: ${(compressedData.length / 1024).toFixed(2)} KB`,
-    );
-    console.log(`📁 Compressed file: ${compressedFile}`);
-  } catch (error) {
-    console.error('❌ Error generating static menu:', error);
-    process.exit(1);
+  if (!base) {
+    return fallback;
   }
+  return base;
 }
 
-// Run the generator
-if (require.main === module) {
-  generateStaticMenu()
-    .then(() => {
-      console.log('🎉 Static menu generation complete!');
-      console.log('💰 This reduces Supabase egress costs by ~95%');
-      console.log('📊 Free Plan Status: Optimized for 5GB/month limit');
-      process.exit(0);
-    })
-    .catch(error => {
-      console.error('💥 Static menu generation failed:', error);
-      process.exit(1);
+function ensureUniqueId(base, used, suffixStart = 1) {
+  let candidate = base;
+  let counter = suffixStart;
+  while (used.has(candidate)) {
+    candidate = `${base}-${counter++}`;
+  }
+  used.add(candidate);
+  return candidate;
+}
+
+if (!fs.existsSync(INPUT_PATH)) {
+  exitWithError(`Input file not found at ${INPUT_PATH}`);
+}
+
+fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+
+let rawContent = fs.readFileSync(INPUT_PATH, 'utf8');
+
+// Replace bare NaN tokens with null to avoid JSON parse errors.
+rawContent = rawContent.replace(/\bNaN\b/g, 'null');
+
+let sourceRecords;
+try {
+  sourceRecords = JSON.parse(rawContent);
+} catch (error) {
+  exitWithError(`Failed to parse JSON: ${error.message}`);
+}
+
+if (!Array.isArray(sourceRecords)) {
+  exitWithError('Expected the input JSON to contain an array of items.');
+}
+
+console.log(`📥 Loaded ${sourceRecords.length} raw records.`);
+
+const generatedAt = new Date().toISOString();
+const categoriesMap = new Map();
+const categoryOrders = new Map();
+const categoryIdSet = new Set();
+const itemIdSet = new Set();
+const items = [];
+
+function normalizeName(value) {
+  if (value === null || value === undefined) return '';
+  return String(value).trim();
+}
+
+function getCategory(record) {
+  const categoryEn = normalizeName(record['Category Name']) || 'General';
+  if (!categoriesMap.has(categoryEn)) {
+    const categoryIdBase = slugify(categoryEn, 'category');
+    const categoryId = ensureUniqueId(categoryIdBase, categoryIdSet);
+    categoriesMap.set(categoryEn, {
+      id: categoryId,
+      names: {
+        en: categoryEn,
+        tr: categoryEn,
+        ar: categoryEn,
+      },
+      icon: '🍽️',
+      color: '#0C6071',
+      image: null,
+      order: categoriesMap.size,
+      created_at: generatedAt,
     });
+    categoryOrders.set(categoryId, 0);
+  }
+  return categoriesMap.get(categoryEn);
 }
 
-module.exports = { generateStaticMenu };
+for (const record of sourceRecords) {
+  const category = getCategory(record);
+  const order = categoryOrders.get(category.id) || 0;
+
+  const nameEn = normalizeName(record['Name_En']);
+  const itemIdBase = slugify(nameEn || `${category.id}-item`, 'item');
+  const itemId = ensureUniqueId(itemIdBase, itemIdSet);
+
+  const priceValue = Number(record['Price']);
+  const price = Number.isFinite(priceValue) ? priceValue : 0;
+
+  items.push({
+    id: itemId,
+    names: {
+      en: nameEn,
+      tr: normalizeName(record['Name_tr']) || nameEn,
+      ar: normalizeName(record['Name_Ar']) || nameEn,
+    },
+    descriptions: undefined,
+    category_id: category.id,
+    price,
+    image: null,
+    tags: ['menu-item'],
+    variants: undefined,
+    is_available: true,
+    order,
+    created_at: generatedAt,
+  });
+
+  categoryOrders.set(category.id, order + 1);
+}
+
+const categories = Array.from(categoriesMap.values()).sort(
+  (a, b) => a.order - b.order,
+);
+
+const payload = {
+  categories,
+  items,
+  generatedAt,
+  version: '1.0.0',
+  metadata: {
+    totalCategories: categories.length,
+    totalItems: items.length,
+    lastUpdated: generatedAt,
+    cacheExpiry: new Date(Date.now() + 60 * 60 * 1000).toISOString(),
+  },
+};
+
+const jsonString = JSON.stringify(payload, null, 2);
+fs.writeFileSync(OUTPUT_JSON, jsonString, 'utf8');
+console.log(`✅ Wrote ${OUTPUT_JSON}`);
+
+const gzBuffer = zlib.gzipSync(jsonString, { level: 9 });
+fs.writeFileSync(OUTPUT_GZIP, gzBuffer);
+console.log(`✅ Wrote ${OUTPUT_GZIP}`);
+
+const hash = crypto.createHash('sha256').update(jsonString).digest('hex');
+fs.writeFileSync(OUTPUT_HASH, hash, 'utf8');
+console.log(`✅ Wrote ${OUTPUT_HASH}`);
+
+console.log('🎉 Static menu generation complete!');
+

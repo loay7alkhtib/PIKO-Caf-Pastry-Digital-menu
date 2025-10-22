@@ -100,7 +100,13 @@ const Home = memo(({ onNavigate }: HomeProps) => {
               transition={{ duration: 0.2, delay: Math.min(index * 0.03, 0.3) }}
             >
               <CategoryCard
-                name={category.names[lang] || category.names.en}
+                name={
+                  category.names?.[lang] ||
+                  category.names?.en ||
+                  category.name?.[lang] ||
+                  category.name?.en ||
+                  'Unknown'
+                }
                 icon={category.icon}
                 image={category.image}
                 onClick={() => handleCategoryClick(category.id)}

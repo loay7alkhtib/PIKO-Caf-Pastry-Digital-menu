@@ -45,7 +45,13 @@ const ItemsGrid = memo(
 
     const getCategoryName = (categoryId: string) => {
       const category = categories.find(c => c.id === categoryId);
-      return category ? category.names[lang] || category.names.en : '';
+      return category
+        ? category.names?.[lang] ||
+            category.names?.en ||
+            category.name?.[lang] ||
+            category.name?.en ||
+            ''
+        : '';
     };
 
     return (
@@ -60,10 +66,14 @@ const ItemsGrid = memo(
             <div className='relative'>
               <ItemCard
                 name={
-                  item.names[lang] ||
-                  item.names.en ||
-                  item.names.tr ||
-                  item.names.ar ||
+                  item.names?.[lang] ||
+                  item.names?.en ||
+                  item.names?.tr ||
+                  item.names?.ar ||
+                  item.name?.[lang] ||
+                  item.name?.en ||
+                  item.name?.tr ||
+                  item.name?.ar ||
                   `Item ${item.id.slice(0, 8)}`
                 }
                 price={item.price}

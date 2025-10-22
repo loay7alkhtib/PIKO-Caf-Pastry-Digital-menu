@@ -14,7 +14,12 @@ export function useCartOperations() {
 
       addItem({
         id: item.id,
-        name: item.names[lang] || item.names.en,
+        name:
+          item.names?.[lang] ||
+          item.names?.en ||
+          item.name?.[lang] ||
+          item.name?.en ||
+          'Unknown Item',
         price: displayPrice,
         image: item.image || undefined,
         size,

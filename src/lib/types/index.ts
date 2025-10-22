@@ -17,14 +17,13 @@ export interface ItemVariant {
 export interface Item {
   id: string;
   names: { en: string; tr: string; ar: string };
-  descriptions?: { en?: string; tr?: string; ar?: string }; // Optional descriptions
   category_id: string | null;
-  price: number; // Base price (used if no variants)
+  price: number; // Base price
   image: string | null;
   tags: string[];
-  variants?: ItemVariant[]; // Optional size variants
   is_available?: boolean; // Availability status
   order: number; // Display order within category
+  variants?: ItemVariant[]; // Optional size variants when present
   created_at: string;
 }
 

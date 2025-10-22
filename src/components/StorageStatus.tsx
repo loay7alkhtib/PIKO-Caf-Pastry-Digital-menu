@@ -77,7 +77,7 @@ export default function StorageStatus() {
             size='sm'
             onClick={() =>
               window.open(
-                'https://supabase.com/dashboard/project/eoaissoqwlfvfizfomax/storage/buckets',
+                'https://supabase.com/dashboard/project/jppymhzgprvshurcqmdn/storage/buckets',
                 '_blank',
               )
             }

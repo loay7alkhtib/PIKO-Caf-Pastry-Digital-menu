@@ -23,6 +23,7 @@ import { ConfirmDialogProvider, useConfirm } from '../ui/confirm-dialog';
 interface AdminCategoriesProps {
   categories: Category[];
   onRefresh: () => void;
+  staticMode: boolean;
 }
 
 interface DraggableCategoryItemProps {
@@ -49,7 +50,7 @@ const DraggableCategoryItem = ({
         handlerId: monitor.getHandlerId(),
       };
     },
-    hover(item: { index: number }, monitor) {
+    hover(item: any, monitor) {
       if (!ref.current) {
         return;
       }
@@ -144,6 +145,9 @@ function AdminCategoriesInner({ categories, onRefresh }: AdminCategoriesProps) {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
   const [localCategories, setLocalCategories] = useState<Category[]>([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isSaving, setIsSaving] = useState(false);
+  const [isSavingOrder, setIsSavingOrder] = useState(false);
   const [formData, setFormData] = useState({
     nameEn: '',
     nameTr: '',
@@ -164,6 +168,19 @@ function AdminCategoriesInner({ categories, onRefresh }: AdminCategoriesProps) {
     }, 0);
     return () => clearTimeout(timer);
   }, [categories]);
+
+  // Filter categories based on search query
+  const filteredCategories = localCategories.filter(category => {
+    if (!searchQuery.trim()) return true;
+
+    const query = searchQuery.toLowerCase();
+    return (
+      category.names.en.toLowerCase().includes(query) ||
+      category.names.tr.toLowerCase().includes(query) ||
+      category.names.ar.toLowerCase().includes(query) ||
+      category.icon.includes(query)
+    );
+  });
 
   const openDialog = (category?: Category) => {
     if (category) {
@@ -193,12 +210,60 @@ function AdminCategoriesInner({ categories, onRefresh }: AdminCategoriesProps) {
   };
 
   const handleSave = async () => {
+    if (isSaving) return; // Prevent double submission
+
     try {
+      setIsSaving(true);
+
+      // Validation
+      if (
+        !formData.nameEn.trim() &&
+        !formData.nameTr.trim() &&
+        !formData.nameAr.trim()
+      ) {
+        toast.error('Please enter at least one category name');
+        return;
+      }
+
+      // Check for duplicate names (excluding current category if editing)
+      const existingCategories = categories.filter(cat =>
+        editingId ? cat.id !== editingId : true,
+      );
+
+      const duplicateEn = existingCategories.some(
+        cat =>
+          cat.names.en.toLowerCase() === formData.nameEn.toLowerCase() &&
+          formData.nameEn.trim(),
+      );
+      const duplicateTr = existingCategories.some(
+        cat =>
+          cat.names.tr.toLowerCase() === formData.nameTr.toLowerCase() &&
+          formData.nameTr.trim(),
+      );
+      const duplicateAr = existingCategories.some(
+        cat =>
+          cat.names.ar.toLowerCase() === formData.nameAr.toLowerCase() &&
+          formData.nameAr.trim(),
+      );
+
+      if (duplicateEn) {
+        toast.error('A category with this English name already exists');
+        return;
+      }
+      if (duplicateTr) {
+        toast.error('A category with this Turkish name already exists');
+        return;
+      }
+      if (duplicateAr) {
+        toast.error('A category with this Arabic name already exists');
+        return;
+      }
+
       const data = {
         names: {
-          en: formData.nameEn,
-          tr: formData.nameTr,
-          ar: formData.nameAr,
+          en: formData.nameEn.trim(),
+          tr: formData.nameTr.trim(),
+          ar: formData.nameAr.trim(),
         },
         icon: formData.icon,
         image: formData.image || undefined,
@@ -216,19 +281,22 @@ function AdminCategoriesInner({ categories, onRefresh }: AdminCategoriesProps) {
 
       if (editingId) {
         await categoriesAPI.update(editingId, data);
-        toast.success('Category updated');
+        toast.success('Category updated successfully');
       } else {
         await categoriesAPI.create(data);
-        toast.success('Category created');
+        toast.success('Category created successfully');
       }
 
       setDialogOpen(false);
-      onRefresh();
+      // Force refresh to show the new image immediately
+      await onRefresh();
     } catch (error) {
       console.error('Save error:', error);
       const errorMessage =
         error instanceof Error ? error.message : 'Failed to save category';
       toast.error(errorMessage);
+    } finally {
+      setIsSaving(false);
     }
   };
 
@@ -244,8 +312,8 @@ function AdminCategoriesInner({ categories, onRefresh }: AdminCategoriesProps) {
 
     try {
       await categoriesAPI.delete(id);
-      toast.success('Category deleted');
-      onRefresh();
+      toast.success('Category deleted successfully');
+      await onRefresh();
     } catch (error) {
       console.error('Delete error:', error);
       const errorMessage =
@@ -256,6 +324,8 @@ function AdminCategoriesInner({ categories, onRefresh }: AdminCategoriesProps) {
 
   const moveCategory = (dragIndex: number, hoverIndex: number) => {
     const draggedCategory = localCategories[dragIndex];
+    if (!draggedCategory) return;
+
     const newCategories = [...localCategories];
     newCategories.splice(dragIndex, 1);
     newCategories.splice(hoverIndex, 0, draggedCategory);
@@ -270,17 +340,32 @@ function AdminCategoriesInner({ categories, onRefresh }: AdminCategoriesProps) {
   };
 
   const saveCategoryOrder = async () => {
+    if (isSavingOrder) return; // Prevent double submission
+
     try {
-      const updatePromises = localCategories.map((category, index) =>
-        categoriesAPI.update(category.id, { order: index }),
-      );
+      setIsSavingOrder(true);
+
+      // Update each category with its new order
+      const updatePromises = localCategories.map((category, index) => {
+        const updateData = {
+          names: category.names,
+          icon: category.icon,
+          image: category.image,
+          color: category.color,
+          order: index,
+        };
+        return categoriesAPI.update(category.id, updateData);
+      });
+
       await Promise.all(updatePromises);
-      toast.success('Category order updated');
-      onRefresh();
+      toast.success('Category order updated successfully');
+      await onRefresh();
     } catch (error) {
       console.error('Order update error:', error);
       toast.error('Failed to update category order');
-      onRefresh(); // Refresh to get the correct order from server
+      await onRefresh(); // Refresh to get the correct order from server
+    } finally {
+      setIsSavingOrder(false);
     }
   };
 
@@ -295,8 +380,9 @@ function AdminCategoriesInner({ categories, onRefresh }: AdminCategoriesProps) {
               onClick={saveCategoryOrder}
               variant='secondary'
               size='sm'
+              disabled={isSavingOrder}
             >
-              Save Order
+              {isSavingOrder ? 'Saving...' : 'Save Order'}
             </Button>
             <Button
               type='button'
@@ -309,8 +395,28 @@ function AdminCategoriesInner({ categories, onRefresh }: AdminCategoriesProps) {
           </div>
         </div>
 
+        {/* Search Bar */}
+        <div className='flex items-center gap-2'>
+          <Input
+            placeholder='Search categories...'
+            value={searchQuery}
+            onChange={e => setSearchQuery(e.target.value)}
+            className='max-w-sm'
+          />
+          {searchQuery && (
+            <Button
+              type='button'
+              variant='ghost'
+              size='sm'
+              onClick={() => setSearchQuery('')}
+            >
+              Clear
+            </Button>
+          )}
+        </div>
+
         <div className='space-y-2'>
-          {localCategories.map((category, index) => (
+          {filteredCategories.map((category, index) => (
             <DraggableCategoryItem
               key={category.id}
               category={category}
@@ -320,6 +426,11 @@ function AdminCategoriesInner({ categories, onRefresh }: AdminCategoriesProps) {
               onMove={moveCategory}
             />
           ))}
+          {filteredCategories.length === 0 && searchQuery && (
+            <div className='text-center py-8 text-muted-foreground'>
+              No categories found matching "{searchQuery}"
+            </div>
+          )}
         </div>
 
         <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
@@ -452,8 +563,8 @@ function AdminCategoriesInner({ categories, onRefresh }: AdminCategoriesProps) {
               >
                 {t('cancel', lang)}
               </Button>
-              <Button type='button' onClick={handleSave}>
-                {t('save', lang)}
+              <Button type='button' onClick={handleSave} disabled={isSaving}>
+                {isSaving ? 'Saving...' : t('save', lang)}
               </Button>
             </DialogFooter>
           </DialogContent>

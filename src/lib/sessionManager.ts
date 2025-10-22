@@ -100,12 +100,22 @@ export function loadSession(): Session | null {
  */
 export function clearSession(): void {
   try {
-    if (typeof localStorage === 'undefined') return;
+    if (typeof localStorage === 'undefined') {
+      console.warn('⚠️ localStorage not available');
+      return;
+    }
 
+    console.warn('🗑️ Clearing session from localStorage...');
     localStorage.removeItem(SESSION_KEY);
     localStorage.removeItem(SESSION_TIMESTAMP_KEY);
 
-    console.warn('🗑️ Session cleared');
+    // Verify session was cleared
+    const sessionStillExists = localStorage.getItem(SESSION_KEY) !== null;
+    if (sessionStillExists) {
+      console.error('❌ Session still exists after clear attempt');
+    } else {
+      console.warn('✅ Session successfully cleared');
+    }
   } catch (error) {
     console.error('❌ Failed to clear session:', error);
   }

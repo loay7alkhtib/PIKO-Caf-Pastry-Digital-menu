@@ -61,8 +61,8 @@ const CategoryMenu = memo(({ categoryId, onNavigate }: CategoryMenuProps) => {
     // When searching, search across ALL items in the menu, not just current category
     const allFilteredItems = allItems.filter(item => {
       // Search in item names (multilingual)
-      const nameMatch = Object.values(item.names).some(name =>
-        name.toLowerCase().includes(query),
+      const nameMatch = Object.values(item.names || item.name || {}).some(
+        name => name.toLowerCase().includes(query),
       );
 
       // Search in descriptions (multilingual)
@@ -79,7 +79,7 @@ const CategoryMenu = memo(({ categoryId, onNavigate }: CategoryMenuProps) => {
       const category = categories.find(c => c.id === item.category_id);
       const categoryMatch =
         category &&
-        Object.values(category.names).some(catName =>
+        Object.values(category.names || category.name || {}).some(catName =>
           catName.toLowerCase().includes(query),
         );
 
@@ -188,7 +188,12 @@ const CategoryMenu = memo(({ categoryId, onNavigate }: CategoryMenuProps) => {
           previewItem && handleAddItem(previewItem, size, price)
         }
         categoryName={
-          category ? category.names[lang] || category.names.en : undefined
+          category
+            ? category.names?.[lang] ||
+              category.names?.en ||
+              category.name?.[lang] ||
+              category.name?.en
+            : undefined
         }
       />
     </div>

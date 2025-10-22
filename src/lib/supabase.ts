@@ -1,398 +1,506 @@
-import { publicAnonKey } from './config/supabase';
 import { clearSession, loadSession, saveSession } from './sessionManager';
 import type { Category, Item, Session } from './types';
+import { isStaticDataSourceEnabled } from './staticMenu';
+import { createClient } from '@supabase/supabase-js';
+import { supabaseConfig } from './config/supabase-credentials';
 
-// Type for fetch options
 type RequestInit = {
   method?: string;
   headers?: Record<string, string>;
   body?: string;
 };
-// import { createClient } from '@supabase/supabase-js';
 
-// Simple auth state management
+const STATIC_MODE = isStaticDataSourceEnabled();
+
 let currentSession: Session | null = null;
 
-// API base URL
-const API_BASE =
-  'https://eoaissoqwlfvfizfomax.supabase.co/functions/v1/make-server-4050140e';
+// Create Supabase client
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || supabaseConfig.url;
+const supabaseAnonKey =
+  import.meta.env.VITE_SUPABASE_ANON_KEY || supabaseConfig.anonKey;
 
-// Direct Supabase client for KV store access (unused but kept for future use)
-// const _supabaseClient = createClient(
-//   'https://eoaissoqwlfvfizfomax.supabase.co',
-//   publicAnonKey,
-// );
-
-// Simple cache for categories (5 minutes TTL)
-let categoriesCache: { data: Category[]; timestamp: number } | null = null;
-const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
-
-// Helper function for API calls
-async function apiCall(endpoint: string, options: RequestInit = {}) {
-  const response = await fetch(`${API_BASE}${endpoint}`, {
-    ...options,
-    headers: {
-      Authorization: `Bearer ${publicAnonKey}`,
-      'Content-Type': 'application/json',
-      ...options.headers,
-    },
+// Create mock client for static mode
+const createMockClient = () => {
+  const mockError = () => ({
+    data: null,
+    error: new Error(
+      'Supabase DB is not configured or is disabled in static mode.',
+    ),
   });
 
-  if (!response.ok) {
-    const error = await response
-      .json()
-      .catch(() => ({ error: 'Request failed' }));
-    throw new Error(error.error || `HTTP ${response.status}`);
-  }
+  const authError = () => ({
+    data: null,
+    error: new Error(
+      'Supabase Auth is not configured or is disabled in static mode.',
+    ),
+  });
 
-  return response.json();
+  const storageError = () => ({
+    data: null,
+    error: new Error(
+      'Supabase Storage is not configured or is disabled in static mode.',
+    ),
+  });
+
+  return {
+    from: () => ({
+      select: () => ({
+        eq: () => ({
+          single: () => mockError(),
+        }),
+        order: () => mockError(),
+      }),
+      insert: () => ({
+        select: () => mockError(),
+      }),
+      update: () => ({
+        eq: () => ({
+          select: () => mockError(),
+        }),
+      }),
+      delete: () => ({
+        eq: () => mockError(),
+        neq: () => mockError(),
+      }),
+      remove: () => ({
+        eq: () => mockError(),
+      }),
+    }),
+    auth: {
+      signUp: async () => authError(),
+      signInWithPassword: async () => authError(),
+      signOut: async () => ({ error: null }),
+      getSession: async () => ({ data: { session: null }, error: null }),
+      admin: {
+        createUser: async () => authError(),
+        deleteUser: async () => ({
+          data: null,
+          error: new Error('Supabase Auth disabled'),
+        }),
+      },
+    },
+    storage: {
+      from: () => ({
+        upload: async () => storageError(),
+        getPublicUrl: () => ({ data: { publicUrl: '' } }),
+        remove: async () => ({ error: null }),
+      }),
+    },
+  } as unknown;
+};
+
+const supabaseClient = STATIC_MODE
+  ? createMockClient()
+  : createClient(supabaseUrl, supabaseAnonKey);
+
+// Export supabaseClient for direct access
+export { supabaseClient };
+
+let categoriesCache: { data: Category[]; timestamp: number } | null = null;
+const CACHE_TTL = 5 * 60 * 1000;
+
+// Legacy API call function - now using Supabase client directly
+async function apiCall(_endpoint: string, _options: RequestInit = {}) {
+  if (STATIC_MODE) {
+    throw new Error('Supabase API is disabled in static data mode');
+  }
+  throw new Error('apiCall is deprecated - use Supabase client directly');
 }
 
-// Removed KV store access functions - using direct table access now
-
-// Categories API
 export const categoriesAPI = {
   getAll: async () => {
-    // Check cache first
+    if (STATIC_MODE) throw new Error('Categories API disabled in static mode');
     if (categoriesCache && Date.now() - categoriesCache.timestamp < CACHE_TTL) {
-      console.warn('✅ Using cached categories');
       return categoriesCache.data;
     }
 
-    // Use Edge Function with simplified JSONB structure
-    console.warn('🔄 Fetching categories from Edge Function...');
-    const data = await apiCall('/categories');
+    const { data, error } = await supabaseClient
+      .from('categories')
+      .select('*')
+      .order('order');
+    if (error) throw error;
 
-    // Update cache
-    categoriesCache = {
-      data,
-      timestamp: Date.now(),
-    };
+    // Map database fields to client format
+    const mappedData = data.map((category: Record<string, unknown>) => ({
+      ...category,
+      image: category.image_url || category.image, // Use image_url if available, fallback to image
+    }));
 
-    return data;
+    categoriesCache = { data: mappedData, timestamp: Date.now() };
+    return mappedData;
   },
-
   create: async (data: Omit<Category, 'id' | 'created_at'>) => {
-    const result = await apiCall('/categories', {
-      method: 'POST',
-      body: JSON.stringify(data),
-    });
-    categoriesCache = null; // Invalidate cache
+    if (STATIC_MODE) throw new Error('Categories API disabled in static mode');
+    categoriesCache = null;
+
+    // Map image field to image_url for database compatibility
+    const insertData: Record<string, unknown> = { ...data };
+    if (data.image !== undefined) {
+      insertData.image_url = data.image;
+      delete insertData.image;
+    }
+
+    const { data: result, error } = await supabaseClient
+      .from('categories')
+      .insert(insertData)
+      .select();
+    if (error) throw error;
     return result;
   },
-
   update: async (id: string, data: Omit<Category, 'id' | 'created_at'>) => {
-    const result = await apiCall(`/categories/${id}`, {
-      method: 'PUT',
-      body: JSON.stringify(data),
-    });
-    categoriesCache = null; // Invalidate cache
+    if (STATIC_MODE) throw new Error('Categories API disabled in static mode');
+    categoriesCache = null;
+
+    // Map image field to image_url for database compatibility
+    const updateData: Record<string, unknown> = { ...data };
+    if (data.image !== undefined) {
+      updateData.image_url = data.image;
+      delete updateData.image;
+    }
+
+    const { data: result, error } = await supabaseClient
+      .from('categories')
+      .update(updateData)
+      .eq('id', id)
+      .select();
+    if (error) throw error;
     return result;
   },
-
   delete: async (id: string) => {
-    const result = await apiCall(`/categories/${id}`, {
-      method: 'DELETE',
-    });
-    categoriesCache = null; // Invalidate cache
-    return result;
-  },
+    if (STATIC_MODE) throw new Error('Categories API disabled in static mode');
+    categoriesCache = null;
 
+    const { error } = await supabaseClient
+      .from('categories')
+      .delete()
+      .eq('id', id);
+    if (error) throw error;
+    return null;
+  },
   clearCache: () => {
-    categoriesCache = null; // Clear cache
+    categoriesCache = null;
   },
 };
 
-// Items API
 export const itemsAPI = {
   getAll: async (categoryId?: string) => {
-    // Use Edge Function with simplified JSONB structure
-    console.warn('🔄 Fetching items from Edge Function...');
-    const query = categoryId ? `?category_id=${categoryId}` : '';
-    const result = await apiCall(`/items${query}`);
-    console.warn(
-      '📊 Edge Function items result:',
-      result?.length || 0,
-      'items',
+    if (STATIC_MODE) throw new Error('Items API disabled in static mode');
+
+    let query = supabaseClient.from('items').select('*').order('order');
+    if (categoryId) {
+      query = query.eq('category_id', categoryId);
+    }
+
+    const { data, error } = await query;
+    if (error) throw error;
+    // Normalize fields: ensure image is properly handled and default order
+    const mapped = (data || []).map(
+      (item: Record<string, unknown>, index: number) => ({
+        ...item,
+        image: item.image ?? null,
+        order: item.order ?? index,
+      }),
     );
+    return mapped;
+  },
+  create: async (data: Omit<Item, 'id' | 'created_at'>) => {
+    if (STATIC_MODE) throw new Error('Items API disabled in static mode');
+
+    // Items table uses 'image' field directly (not image_url)
+    const insertData: Record<string, unknown> = { ...data };
+
+    const { data: result, error } = await supabaseClient
+      .from('items')
+      .insert(insertData)
+      .select();
+    if (error) throw error;
     return result;
   },
+  update: async (id: string, data: Omit<Item, 'id' | 'created_at'>) => {
+    if (STATIC_MODE) throw new Error('Items API disabled in static mode');
 
-  create: (data: Omit<Item, 'id' | 'created_at'>) =>
-    apiCall('/items', {
-      method: 'POST',
-      body: JSON.stringify(data),
-    }),
+    // Items table uses 'image' field directly (not image_url)
+    const updateData: Record<string, unknown> = { ...data };
 
-  update: (id: string, data: Omit<Item, 'id' | 'created_at'>) =>
-    apiCall(`/items/${id}`, {
-      method: 'PUT',
-      body: JSON.stringify(data),
-    }),
+    const { data: result, error } = await supabaseClient
+      .from('items')
+      .update(updateData)
+      .eq('id', id)
+      .select();
+    if (error) throw error;
+    return result;
+  },
+  delete: async (id: string) => {
+    if (STATIC_MODE) throw new Error('Items API disabled in static mode');
 
-  delete: (id: string) =>
-    apiCall(`/items/${id}`, {
-      method: 'DELETE',
-    }),
+    const { error } = await supabaseClient.from('items').delete().eq('id', id);
+    if (error) throw error;
+    return null;
+  },
+  deleteAll: async () => {
+    if (STATIC_MODE) throw new Error('Items API disabled in static mode');
 
-  deleteAll: () =>
-    apiCall('/items/bulk/delete-all', {
-      method: 'DELETE',
-    }),
+    const { error } = await supabaseClient
+      .from('items')
+      .delete()
+      .neq('id', '0');
+    if (error) throw error;
+    return [];
+  },
+  bulkCreate: async (items: Omit<Item, 'id' | 'created_at'>[]) => {
+    if (STATIC_MODE) throw new Error('Items API disabled in static mode');
 
-  bulkCreate: (items: Omit<Item, 'id' | 'created_at'>[]) =>
-    apiCall('/items/bulk/create', {
-      method: 'POST',
-      body: JSON.stringify({ items }),
-    }),
-
+    const { data: result, error } = await supabaseClient
+      .from('items')
+      .insert(items)
+      .select();
+    if (error) throw error;
+    return result;
+  },
   updateOrder: async (orderUpdates: { id: string; order: number }[]) => {
-    console.warn('🔄 Calling updateOrder API endpoint...');
-    try {
-      const result = await apiCall('/items/bulk/update-order', {
-        method: 'PUT',
-        body: JSON.stringify({ orderUpdates }),
-      });
-      console.warn('✅ updateOrder API success:', result);
-      return result;
-    } catch (error) {
-      console.error('❌ updateOrder API error:', error);
-      // Fallback: some deployments may not include the bulk endpoint yet.
-      // Perform per-item updates using the standard update endpoint.
-      try {
-        console.warn('↩️ Falling back to per-item order updates...');
-        const results = await Promise.all(
-          orderUpdates.map(u =>
-            apiCall(`/items/${u.id}`, {
-              method: 'PUT',
-              body: JSON.stringify({ order: u.order }),
-            }),
-          ),
-        );
-        console.warn('✅ Per-item order updates completed:', results.length);
-        return { success: true, count: results.length, fallback: true };
-      } catch (fallbackError) {
-        console.error(
-          '❌ Per-item order update fallback failed:',
-          fallbackError,
-        );
-        throw fallbackError;
-      }
-    }
+    if (STATIC_MODE) throw new Error('Items API disabled in static mode');
+
+    const promises = orderUpdates.map(update =>
+      supabaseClient
+        .from('items')
+        .update({ order: update.order })
+        .eq('id', update.id),
+    );
+
+    const results = await Promise.all(promises);
+    const errors = results.filter(r => r.error);
+    if (errors.length > 0) throw errors[0]?.error || new Error('Unknown error');
+    return results;
   },
 };
 
-// Orders API
 export const ordersAPI = {
-  getAll: () => apiCall('/orders'),
-
+  getAll: () => {
+    if (STATIC_MODE) throw new Error('Orders API disabled in static mode');
+    return apiCall('/orders');
+  },
   create: (data: {
     items: Array<{ id: string; quantity: number; price: number }>;
     total: number;
-  }) =>
-    apiCall('/orders', {
-      method: 'POST',
-      body: JSON.stringify(data),
-    }),
-
-  update: (id: string, status: 'pending' | 'completed') =>
-    apiCall(`/orders/${id}`, {
+  }) => {
+    if (STATIC_MODE) throw new Error('Orders API disabled in static mode');
+    return apiCall('/orders', { method: 'POST', body: JSON.stringify(data) });
+  },
+  update: (id: string, status: 'pending' | 'completed') => {
+    if (STATIC_MODE) throw new Error('Orders API disabled in static mode');
+    return apiCall(`/orders/${id}`, {
       method: 'PUT',
       body: JSON.stringify({ status }),
-    }),
+    });
+  },
 };
 
-// Auth API (custom implementation)
+// Initialize auth state change listener
+let authStateListenerInitialized = false;
+
+const initializeAuthStateListener = () => {
+  if (STATIC_MODE || authStateListenerInitialized) return;
+
+  authStateListenerInitialized = true;
+
+  supabaseClient.auth.onAuthStateChange((event: string, session: unknown) => {
+    console.warn(
+      '🔄 Auth state changed:',
+      event,
+      session ? 'session exists' : 'no session',
+    );
+
+    if (
+      event === 'SIGNED_IN' &&
+      session &&
+      typeof session === 'object' &&
+      'access_token' in session
+    ) {
+      const sessionData: Session = {
+        access_token: (session as { access_token: string }).access_token,
+        user: {
+          id: (session as { user: { id: string } }).user.id,
+          email: (session as { user: { email?: string } }).user.email || '',
+          name:
+            (session as { user: { user_metadata?: { name?: string } } }).user
+              .user_metadata?.name || '',
+          isAdmin:
+            (session as { user: { user_metadata?: { isAdmin?: boolean } } })
+              .user.user_metadata?.isAdmin || false,
+        },
+      };
+      saveSession(sessionData);
+      currentSession = sessionData;
+      console.warn('✅ Session saved on sign in');
+    } else if (event === 'SIGNED_OUT') {
+      currentSession = null;
+      clearSession();
+      console.warn('✅ Session cleared on sign out');
+    } else if (
+      event === 'TOKEN_REFRESHED' &&
+      session &&
+      typeof session === 'object' &&
+      'access_token' in session
+    ) {
+      const sessionData: Session = {
+        access_token: (session as { access_token: string }).access_token,
+        user: {
+          id: (session as { user: { id: string } }).user.id,
+          email: (session as { user: { email?: string } }).user.email || '',
+          name:
+            (session as { user: { user_metadata?: { name?: string } } }).user
+              .user_metadata?.name || '',
+          isAdmin:
+            (session as { user: { user_metadata?: { isAdmin?: boolean } } })
+              .user.user_metadata?.isAdmin || false,
+        },
+      };
+      saveSession(sessionData);
+      currentSession = sessionData;
+      console.warn('✅ Session refreshed');
+    }
+  });
+};
+
 export const authAPI = {
   signUp: async (credentials: {
     email: string;
     password: string;
     name: string;
   }) => {
-    try {
-      console.warn('🚀 Calling signup API with:', {
-        email: credentials.email,
-        name: credentials.name,
-      });
-      console.warn('📡 API endpoint:', `${API_BASE}/auth/signup`);
+    if (STATIC_MODE) throw new Error('Auth API disabled in static mode');
 
-      const response = await fetch(`${API_BASE}/auth/signup`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${publicAnonKey}`,
+    initializeAuthStateListener();
+    const { data, error } = await supabaseClient.auth.signUp(credentials);
+    if (error) throw error;
+
+    if (data.session) {
+      const session: Session = {
+        access_token: data.session.access_token,
+        user: {
+          id: data.session.user.id,
+          email: data.session.user.email || '',
+          name: data.session.user.user_metadata?.name || '',
+          isAdmin: data.session.user.user_metadata?.isAdmin || false,
         },
-        body: JSON.stringify(credentials),
-      });
-
-      console.warn(
-        '📥 Signup response status:',
-        response.status,
-        response.statusText,
-      );
-
-      const responseText = await response.text();
-      console.warn('📄 Signup response text:', responseText);
-
-      let data;
-      try {
-        data = JSON.parse(responseText);
-        console.warn('✅ Parsed response:', data);
-      } catch (e) {
-        console.error('❌ Failed to parse response:', e);
-        console.error('Raw response was:', responseText);
-        throw new Error('Invalid server response');
-      }
-
-      if (!response.ok) {
-        console.error('❌ Signup failed with status:', response.status);
-        console.error('❌ Error from server:', data.error);
-        console.error('❌ Full error response:', data);
-        throw new Error(data.error || `Signup failed (${response.status})`);
-      }
-
-      console.warn('🎉 Signup successful! Setting session...');
-      console.warn('📊 Full response data:', data);
-      console.warn('📊 Session data received:', data.data?.session);
-
-      // Validate session structure before setting
-      if (data.data?.session && data.data.session.user) {
-        currentSession = data.data.session;
-        // Store session using session manager
-        saveSession(data.data.session);
-      } else {
-        console.error(
-          '❌ Invalid session structure received:',
-          data.data?.session,
-        );
-        throw new Error('Invalid session received from server');
-      }
-
-      console.warn('✅ Signup complete!');
-      return { data, error: null };
-    } catch (error: unknown) {
-      console.error('💥 Signup exception:', error);
-      if (error && typeof error === 'object' && 'message' in error) {
-        console.error(
-          '💥 Error message:',
-          (error as { message?: string }).message,
-        );
-      }
-      throw error;
+      };
+      saveSession(session);
+      currentSession = session;
     }
+    return data;
   },
-
   signInWithPassword: async (credentials: {
     email: string;
     password: string;
   }) => {
-    console.warn('🔐 Attempting login for:', credentials.email);
+    if (STATIC_MODE) throw new Error('Auth API disabled in static mode');
 
-    const response = await fetch(`${API_BASE}/auth/login`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${publicAnonKey}`,
-      },
-      body: JSON.stringify(credentials),
-    });
+    initializeAuthStateListener();
+    const { data, error } =
+      await supabaseClient.auth.signInWithPassword(credentials);
+    if (error) throw error;
 
-    console.warn('📥 Login response status:', response.status);
-
-    if (!response.ok) {
-      const error = await response
-        .json()
-        .catch(() => ({ error: 'Login failed' }));
-      console.error('❌ Login failed:', error);
-      throw new Error(error.error || 'Invalid credentials');
+    if (data.session) {
+      const session: Session = {
+        access_token: data.session.access_token,
+        user: {
+          id: data.session.user.id,
+          email: data.session.user.email || '',
+          name: data.session.user.user_metadata?.name || '',
+          isAdmin: data.session.user.user_metadata?.isAdmin || false,
+        },
+      };
+      saveSession(session);
+      currentSession = session;
     }
-
-    const data = await response.json();
-    console.warn('✅ Login successful!');
-    console.warn('📊 Full response data:', data);
-    console.warn('📊 Session data received:', data.data?.session);
-
-    // Validate session structure before setting
-    if (data.data?.session && data.data.session.user) {
-      currentSession = data.data.session;
-      // Store session using session manager
-      saveSession(data.data.session);
-    } else {
-      console.error(
-        '❌ Invalid session structure received:',
-        data.data?.session,
-      );
-      throw new Error('Invalid session received from server');
-    }
-
-    return { data, error: null };
+    return data;
   },
-
   getSession: async (): Promise<
     | { data: { session: Session | null }; error: null }
     | { data: { session: null }; error: null }
   > => {
-    // Try to get from memory first
+    if (STATIC_MODE) {
+      console.warn('Auth API disabled in static mode, returning null session');
+      return { data: { session: null }, error: null };
+    }
+
+    initializeAuthStateListener();
+
     if (currentSession) {
-      console.warn('✅ Session found in memory');
       return { data: { session: currentSession }, error: null };
     }
-
-    // Try to load from storage using session manager
-    const storedSession = loadSession();
-
-    if (storedSession) {
-      currentSession = storedSession;
-
-      // For now, use local session without server verification
-      // TODO: Fix server session verification endpoint
-      console.warn('✅ Using local session (server verification disabled)');
-      return { data: { session: storedSession }, error: null };
+    const session = loadSession();
+    if (session) {
+      currentSession = session;
+      return { data: { session }, error: null };
     }
-
-    console.warn('❌ No session found');
     return { data: { session: null }, error: null };
   },
-
   signOut: async (): Promise<{ error: null }> => {
-    if (currentSession) {
-      try {
-        await fetch(`${API_BASE}/auth/logout`, {
-          method: 'POST',
-          headers: {
-            Authorization: `Bearer ${currentSession.access_token}`,
-          },
-        });
-      } catch (e) {
-        console.error('Logout error:', e);
-      }
+    if (STATIC_MODE) {
+      console.warn(
+        'Auth API disabled in static mode, performing local sign out',
+      );
+      currentSession = null;
+      clearSession();
+      return { error: null };
     }
 
+    initializeAuthStateListener();
+    await supabaseClient.auth.signOut();
     currentSession = null;
     clearSession();
-
     return { error: null };
   },
 };
 
-// Export a compatible auth object for backward compatibility
+export const storageAPI = {
+  upload: async (file: File, path: string) => {
+    if (STATIC_MODE) throw new Error('Storage API disabled in static mode');
+
+    const { data, error } = await supabaseClient.storage
+      .from('menu-images')
+      .upload(path, file);
+
+    if (error) throw error;
+    return data;
+  },
+  getPublicUrl: (path: string) => {
+    if (STATIC_MODE) return '';
+
+    const { data } = supabaseClient.storage
+      .from('menu-images')
+      .getPublicUrl(path);
+
+    return data.publicUrl;
+  },
+  delete: async (path: string) => {
+    if (STATIC_MODE) throw new Error('Storage API disabled in static mode');
+
+    const { error } = await supabaseClient.storage
+      .from('menu-images')
+      .remove([path]);
+
+    if (error) throw error;
+    return null;
+  },
+};
+
 export const supabase = {
+  categories: categoriesAPI,
+  items: itemsAPI,
+  orders: ordersAPI,
   auth: authAPI,
+  storage: storageAPI,
 };
 
 // Re-export types for convenience
 export type { Category, Item, ItemVariant, Order, Session } from './types';
 
-// Provide a single import point for the real Supabase client used for Storage
-// Consumers should import { supabaseClient } from './supabase'
-// Re-create the storage-enabled Supabase client here to avoid a separate file
-import { createClient } from '@supabase/supabase-js';
-import { supabaseConfig } from './config/supabase-credentials';
+export const publicAnonKey = supabaseAnonKey || '';
+export const supabaseConfigured = Boolean(supabaseUrl && supabaseAnonKey);
+export const STATIC_MODE_ENABLED = STATIC_MODE; // Export for external checks
 
-export const supabaseClient = createClient(
-  supabaseConfig.url,
-  supabaseConfig.anonKey,
-  {
-    auth: { persistSession: false, autoRefreshToken: false },
-  },
-);
+// Mock client removed - using null for static mode
+
+// Supabase client is already created above

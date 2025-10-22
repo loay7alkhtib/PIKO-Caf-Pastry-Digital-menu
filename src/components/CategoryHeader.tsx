@@ -13,7 +13,11 @@ const CategoryHeader = memo(({ category, lang }: CategoryHeaderProps) => {
     <div className='mb-6 sm:mb-8 text-center'>
       <div className='text-4xl sm:text-5xl mb-2 sm:mb-3'>{category.icon}</div>
       <h2 className='text-xl sm:text-2xl md:text-3xl font-medium px-4'>
-        {category.names[lang] || category.names.en}
+        {category.names?.[lang] ||
+          category.names?.en ||
+          category.name?.[lang] ||
+          category.name?.en ||
+          'Unknown'}
       </h2>
     </div>
   );

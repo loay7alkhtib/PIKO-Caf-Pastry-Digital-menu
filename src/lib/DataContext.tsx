@@ -13,6 +13,11 @@ import type { Category, Item } from './types';
 import * as idb from './idb';
 import { toast } from 'sonner';
 import PikoLoader from '../components/PikoLoader';
+import {
+  clearStaticMenuCache,
+  isStaticDataSourceEnabled,
+  loadStaticMenu,
+} from './staticMenu';
 
 interface ItemsCache {
   data: Item[];
@@ -46,6 +51,8 @@ export function DataProvider({ children }: { children: ReactNode }) {
   // In-memory cache for items by category
   const [itemsCache, setItemsCache] = useState<Record<string, ItemsCache>>({});
 
+  const staticMode = isStaticDataSourceEnabled();
+
   // Fetch all data once on mount with static-first strategy
   const fetchAllData = useCallback(async () => {
     // Prevent concurrent fetches
@@ -66,16 +73,46 @@ export function DataProvider({ children }: { children: ReactNode }) {
         window.location.hash.includes('admin') ||
         window.location.pathname.includes('admin');
 
+      if (staticMode) {
+        if (isAdmin) {
+          console.warn(
+            'ℹ️ Admin route accessed in static mode - editing disabled. Showing static data.',
+          );
+        }
+
+        try {
+          console.warn('🗂️ Loading menu from static JSON');
+          const { categories: staticCats, items: staticItems } =
+            await loadStaticMenu();
+
+          if (staticCats.length === 0 && staticItems.length === 0) {
+            console.warn('⚠️ Static menu is empty');
+          }
+
+          setCategories(staticCats);
+          setItems(staticItems);
+          return;
+        } catch (staticError) {
+          console.error('❌ Failed to load static menu:', staticError);
+          setError(
+            staticError instanceof Error
+              ? staticError.message
+              : 'Static menu could not be loaded',
+          );
+          setCategories([]);
+          setItems([]);
+          return;
+        }
+      }
+
       if (isAdmin) {
         console.warn('🔄 Admin mode detected - FORCING DATABASE FETCH');
-        // Force database mode for admin
-        const { categoriesAPI, itemsAPI } = await import('./supabase');
+
         const [categoriesData, itemsDataRaw] = await Promise.all([
           categoriesAPI.getAll(),
           itemsAPI.getAll(),
         ]);
 
-        // Process the data
         const itemsData = Array.isArray(itemsDataRaw)
           ? itemsDataRaw.filter(
               item =>
@@ -103,7 +140,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
         return;
       }
 
-      // Load data from API for visitors
+      // Non-admin fallback to Supabase when static mode is disabled
       const [categoriesData, itemsDataRaw] = await Promise.all([
         categoriesAPI.getAll(),
         itemsAPI.getAll(),
@@ -134,13 +171,6 @@ export function DataProvider({ children }: { children: ReactNode }) {
         return (a.order || 0) - (b.order || 0);
       });
 
-      // If both are empty, there might be an initialization issue
-      if (!categoriesData || categoriesData.length === 0) {
-        console.warn(
-          '⚠️ No categories found. Database might need initialization.',
-        );
-      }
-
       setCategories(Array.isArray(categoriesData) ? categoriesData : []);
       setItems(sortedItems);
     } catch (err) {
@@ -161,7 +191,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       setIsFetching(false);
       isFetchingRef.current = false;
     }
-  }, []);
+  }, [staticMode]);
 
   // Load data on mount - memoized effect depends on fetchAllData
   useEffect(() => {
@@ -171,26 +201,28 @@ export function DataProvider({ children }: { children: ReactNode }) {
     const initData = async () => {
       if (!mounted) return;
 
-      try {
-        const healthCheck = await fetch(
-          'https://eoaissoqwlfvfizfomax.supabase.co/functions/v1/make-server-4050140e/health',
-          {
-            headers: {
-              Authorization: `Bearer ${await import('./config/supabase').then(m => m.publicAnonKey)}`,
+      if (!staticMode) {
+        try {
+          const healthCheck = await fetch(
+            'https://jppymhzgprvshurcqmdn.supabase.co/rest/v1/categories?select=count',
+            {
+              headers: {
+                apikey: import.meta.env.VITE_SUPABASE_ANON_KEY || '',
+                Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY || ''}`,
+              },
             },
-          },
-        ).catch(() => null);
+          ).catch(() => null);
 
-        if (healthCheck && healthCheck.ok) {
-          console.warn('✅ Server health check passed');
-        } else {
-          console.warn('⚠️ Server health check failed');
+          if (healthCheck && healthCheck.ok) {
+            console.warn('✅ Server health check passed');
+          } else {
+            console.warn('⚠️ Server health check failed');
+          }
+        } catch (err) {
+          console.warn('⚠️ Could not check server health:', err);
         }
-      } catch (err) {
-        console.warn('⚠️ Could not check server health:', err);
       }
 
-      // Fetch data regardless of health check
       if (mounted) {
         await fetchAllData();
       }
@@ -201,7 +233,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       mounted = false;
       clearTimeout(timer);
     };
-  }, [fetchAllData]);
+  }, [fetchAllData, staticMode]);
 
   // Auto-refresh for visitors to see admin changes - DISABLED to prevent continuous refresh
   // useEffect(() => {
@@ -265,6 +297,10 @@ export function DataProvider({ children }: { children: ReactNode }) {
       categoryId: string,
       options: { preferCache?: boolean } = { preferCache: true },
     ): Promise<Item[]> => {
+      if (staticMode) {
+        return items.filter(item => item.category_id === categoryId);
+      }
+
       const cacheKey = `items:${categoryId}`;
       const now = Date.now();
 
@@ -373,12 +409,16 @@ export function DataProvider({ children }: { children: ReactNode }) {
         return [];
       }
     },
-    [itemsCache],
+    [itemsCache, items, staticMode],
   );
 
   // Prefetch items for a category
   const prefetchCategory = useCallback(
     async (categoryId: string) => {
+      if (staticMode) {
+        return;
+      }
+
       try {
         // Only prefetch if not in cache or stale
         const cached = itemsCache[categoryId];
@@ -395,7 +435,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
         console.warn(`Prefetch failed for ${categoryId}:`, err);
       }
     },
-    [itemsCache, getCategoryItems],
+    [itemsCache, getCategoryItems, staticMode],
   );
 
   // Refetch function for admin updates - FORCE DATABASE MODE
@@ -411,6 +451,26 @@ export function DataProvider({ children }: { children: ReactNode }) {
 
       // Clear in-memory category-items cache used by category views
       setItemsCache({});
+
+      if (staticMode) {
+        try {
+          clearStaticMenuCache();
+          const { categories: staticCats, items: staticItems } =
+            await loadStaticMenu(true);
+          setCategories(staticCats);
+          setItems(staticItems);
+          console.warn('✅ Static menu reloaded');
+        } catch (err) {
+          console.error('❌ Failed to reload static menu:', err);
+          setError(
+            err instanceof Error ? err.message : 'Failed to reload static menu',
+          );
+        }
+        setLoading(false);
+        setIsFetching(false);
+        isFetchingRef.current = false;
+        return;
+      }
 
       // Clear API-level caches
       const { categoriesAPI, itemsAPI } = await import('./supabase');
@@ -475,7 +535,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
         isFetchingRef.current = false;
       }
     },
-    [fetchAllData, isFetching],
+    [fetchAllData, isFetching, staticMode],
   );
 
   return (

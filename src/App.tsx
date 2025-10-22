@@ -19,7 +19,13 @@ import type { Page } from './lib/types';
 export default function App() {
   const [page, setPage] = useState<Page>(() => {
     try {
+      // Always start with home page to prevent auto-navigation to admin
+      // Clear any saved admin page to force proper authentication flow
       const saved = localStorage.getItem('piko_last_page');
+      if (saved === 'admin') {
+        localStorage.removeItem('piko_last_page');
+        return 'home';
+      }
       return (saved as Page) || 'home';
     } catch {
       return 'home';

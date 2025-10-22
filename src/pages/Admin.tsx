@@ -9,7 +9,8 @@ import {
 import { useLang } from '../lib/LangContext';
 import { useData } from '../lib/DataContext';
 import { t } from '../lib/i18n';
-import { authAPI } from '../lib/supabase';
+import { authAPI, STATIC_MODE_ENABLED } from '../lib/supabase';
+import { clearSession } from '../lib/sessionManager';
 import { toast } from 'sonner';
 import { LogOut, RefreshCw } from 'lucide-react';
 import StorageStatus from '../components/StorageStatus';
@@ -34,6 +35,7 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
   const { categories, items, refetch } = useData(); // Use cached data!
   const [authorized, setAuthorized] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [isLoggingOut, setIsLoggingOut] = useState(false);
   const [activeTab, setActiveTab] = useState(() => {
     // Try to restore tab state from localStorage
     const savedTab = localStorage.getItem('admin-active-tab');
@@ -46,6 +48,19 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
   }, [activeTab]);
 
   const checkAuth = useCallback(async () => {
+    // Skip auth check if user is logging out
+    if (isLoggingOut) {
+      console.warn('🚪 Skipping auth check - user is logging out');
+      return;
+    }
+
+    if (STATIC_MODE_ENABLED) {
+      console.warn('ℹ️ Admin authentication bypassed in static mode.');
+      setAuthorized(true); // Always authorize in static mode for admin view
+      setLoading(false);
+      return;
+    }
+
     try {
       const {
         data: { session },
@@ -91,7 +106,7 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
     } finally {
       setLoading(false);
     }
-  }, [authorized, onNavigate]);
+  }, [authorized, onNavigate, isLoggingOut]);
 
   useEffect(() => {
     checkAuth();
@@ -105,6 +120,17 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
   }, [checkAuth]);
 
   const handleRefresh = async () => {
+    if (STATIC_MODE_ENABLED) {
+      toast.info(
+        lang === 'en'
+          ? 'Cannot refresh data in static mode.'
+          : lang === 'tr'
+            ? 'Statik modda veri yenilenemez.'
+            : 'لا يمكن تحديث البيانات في الوضع الثابت.',
+      );
+      return;
+    }
+
     try {
       await refetch(true); // Force refetch categories and items
       toast.success(
@@ -127,9 +153,50 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
   };
 
   const handleLogout = async () => {
-    await authAPI.signOut();
-    toast.success(t('logout', lang));
-    onNavigate('home');
+    try {
+      console.warn('🚪 Starting logout process...');
+      setIsLoggingOut(true);
+
+      // Clear session regardless of mode
+      if (STATIC_MODE_ENABLED) {
+        console.warn('📱 Static mode: clearing local session');
+        clearSession();
+      } else {
+        console.warn('🌐 Dynamic mode: calling authAPI.signOut');
+        await authAPI.signOut();
+      }
+
+      console.warn('✅ Logout process completed');
+
+      // Show success message
+      toast.success(
+        lang === 'en'
+          ? 'Logged out successfully'
+          : lang === 'tr'
+            ? 'Başarıyla çıkış yapıldı'
+            : 'تم تسجيل الخروج بنجاح',
+      );
+
+      // Reset authorization state
+      setAuthorized(false);
+
+      // Clear saved page to prevent auto-navigation back to admin
+      localStorage.removeItem('piko_last_page');
+
+      console.warn('🏠 Navigating to home...');
+      onNavigate('home');
+    } catch (error) {
+      console.error('❌ Logout error:', error);
+      toast.error(
+        lang === 'en'
+          ? 'Logout failed. Please try again.'
+          : lang === 'tr'
+            ? 'Çıkış başarısız. Lütfen tekrar deneyin.'
+            : 'فشل في تسجيل الخروج. يرجى المحاولة مرة أخرى.',
+      );
+    } finally {
+      setIsLoggingOut(false);
+    }
   };
 
   if (loading) {
@@ -178,6 +245,7 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
               variant='outline'
               className='gap-2 flex-shrink-0'
               size='sm'
+              type='button'
             >
               <LogOut className='w-4 h-4' />
               <span className='hidden sm:inline'>{t('logout', lang)}</span>
@@ -187,7 +255,7 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
       </header>
 
       <main className='max-w-[1600px] mx-auto px-3 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 md:py-8'>
-        <StorageStatus />
+        {!STATIC_MODE_ENABLED && <StorageStatus />}
         <Tabs value={activeTab} onValueChange={setActiveTab} className='w-full'>
           <TabsList className='grid w-full max-w-2xl mx-auto grid-cols-2 mb-6 sm:mb-8'>
             <TabsTrigger
@@ -210,6 +278,7 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
               <AdminCategories
                 categories={categories}
                 onRefresh={handleRefresh}
+                staticMode={STATIC_MODE_ENABLED}
               />
             </Suspense>
           </TabsContent>
@@ -224,6 +293,7 @@ const Admin = memo(({ onNavigate }: AdminProps) => {
                 items={items}
                 categories={categories}
                 onRefresh={handleRefresh}
+                staticMode={STATIC_MODE_ENABLED}
               />
             </Suspense>
           </TabsContent>

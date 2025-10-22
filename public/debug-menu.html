@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Debug - PIKO Café</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .section h2 {
+            color: #667eea;
+            margin-top: 0;
+        }
+        .category {
+            background: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        .item {
+            background: #f8f9fa;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+        .error {
+            color: #e74c3c;
+            background: #ffeaea;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .success {
+            color: #27ae60;
+            background: #eafaf1;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: #666;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .stat-card {
+            background: #667eea;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            display: block;
+        }
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Menu Debug - PIKO Café</h1>
+        
+        <div class="loading" id="loading">
+            Loading menu data...
+        </div>
+
+        <div id="content" style="display: none;">
+            <div class="stats" id="stats">
+                <!-- Stats will be loaded here -->
+            </div>
+
+            <div class="section">
+                <h2>📊 Menu Statistics</h2>
+                <div id="menuStats"></div>
+            </div>
+
+            <div class="section">
+                <h2>📁 Categories</h2>
+                <div id="categories"></div>
+            </div>
+
+            <div class="section">
+                <h2>🍽️ Sample Items (First 10)</h2>
+                <div id="sampleItems"></div>
+            </div>
+
+            <div class="section">
+                <h2>🖼️ Items with Images</h2>
+                <div id="itemsWithImages"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function loadMenuData() {
+            try {
+                console.log('Loading menu from /static/menu.json...');
+                const response = await fetch('/static/menu.json');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
+                const menuData = await response.json();
+                console.log('Menu data loaded:', menuData);
+                
+                // Hide loading, show content
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+                
+                // Display statistics
+                displayStats(menuData);
+                
+                // Display categories
+                displayCategories(menuData.categories);
+                
+                // Display sample items
+                displaySampleItems(menuData.items);
+                
+                // Display items with images
+                displayItemsWithImages(menuData.items);
+                
+            } catch (error) {
+                console.error('Error loading menu:', error);
+                document.getElementById('loading').innerHTML = 
+                    `<div class="error">❌ Error loading menu: ${error.message}</div>`;
+            }
+        }
+
+        function displayStats(menuData) {
+            const categories = menuData.categories || [];
+            const items = menuData.items || [];
+            const itemsWithImages = items.filter(item => item.image);
+            
+            const statsHtml = `
+                <div class="stat-card">
+                    <span class="stat-number">${categories.length}</span>
+                    <span class="stat-label">Categories</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">${items.length}</span>
+                    <span class="stat-label">Total Items</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">${itemsWithImages.length}</span>
+                    <span class="stat-label">Items with Images</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">${Math.round((itemsWithImages.length / items.length) * 100)}%</span>
+                    <span class="stat-label">Image Coverage</span>
+                </div>
+            `;
+            
+            document.getElementById('stats').innerHTML = statsHtml;
+            
+            const menuStatsHtml = `
+                <div class="success">
+                    ✅ Menu loaded successfully!<br>
+                    📁 Categories: ${categories.length}<br>
+                    🍽️ Items: ${items.length}<br>
+                    🖼️ Items with images: ${itemsWithImages.length}<br>
+                    📊 Image coverage: ${Math.round((itemsWithImages.length / items.length) * 100)}%
+                </div>
+            `;
+            
+            document.getElementById('menuStats').innerHTML = menuStatsHtml;
+        }
+
+        function displayCategories(categories) {
+            const categoriesHtml = categories.map(category => `
+                <div class="category">
+                    <strong>${category.name.en}</strong> (${category.name.ar})<br>
+                    <small>ID: ${category.id} | Order: ${category.order} | Active: ${category.active}</small>
+                </div>
+            `).join('');
+            
+            document.getElementById('categories').innerHTML = categoriesHtml;
+        }
+
+        function displaySampleItems(items) {
+            const sampleItems = items.slice(0, 10);
+            const itemsHtml = sampleItems.map(item => `
+                <div class="item">
+                    <strong>${item.name.en}</strong> - ${item.price} L.E.<br>
+                    <small>Category: ${item.category_id} | Image: ${item.image ? '✅' : '❌'}</small>
+                </div>
+            `).join('');
+            
+            document.getElementById('sampleItems').innerHTML = itemsHtml;
+        }
+
+        function displayItemsWithImages(items) {
+            const itemsWithImages = items.filter(item => item.image).slice(0, 10);
+            const itemsHtml = itemsWithImages.map(item => `
+                <div class="item">
+                    <strong>${item.name.en}</strong> - ${item.price} L.E.<br>
+                    <small>Image: ${item.image}</small>
+                </div>
+            `).join('');
+            
+            document.getElementById('itemsWithImages').innerHTML = itemsHtml;
+        }
+
+        // Load menu data when page loads
+        loadMenuData();
+    </script>
+</body>
+</html>
