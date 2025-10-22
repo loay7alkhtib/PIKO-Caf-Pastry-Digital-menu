@@ -190,20 +190,21 @@ const DraggableTableRow = ({
       </TableCell>
       <TableCell className='hidden md:table-cell'>{item.names.ar}</TableCell>
       <TableCell>
-        {Array.isArray((item as any).variants) &&
-        (item as any).variants?.length ? (
+        {Array.isArray((item as { variants?: unknown }).variants) &&
+        (item as { variants: Array<{ size: string; price: number }> }).variants
+          ?.length ? (
           <div className='flex flex-wrap gap-1'>
-            {(item as any).variants.map(
-              (v: { size: string; price: number }) => (
-                <Badge
-                  key={`${item.id}_${v.size}`}
-                  variant='secondary'
-                  className='text-xs'
-                >
-                  {v.size}: ₺{v.price}
-                </Badge>
-              ),
-            )}
+            {(
+              item as { variants: Array<{ size: string; price: number }> }
+            ).variants.map((v: { size: string; price: number }) => (
+              <Badge
+                key={`${item.id}_${v.size}`}
+                variant='secondary'
+                className='text-xs'
+              >
+                {v.size}: ₺{v.price}
+              </Badge>
+            ))}
           </div>
         ) : (
           <>₺{item.price}</>

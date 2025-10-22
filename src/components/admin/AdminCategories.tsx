@@ -50,7 +50,7 @@ const DraggableCategoryItem = ({
         handlerId: monitor.getHandlerId(),
       };
     },
-    hover(item: any, monitor) {
+    hover(item: { id: string; index: number }, monitor) {
       if (!ref.current) {
         return;
       }

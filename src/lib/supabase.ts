@@ -184,7 +184,7 @@ export const categoriesAPI = {
     if (STATIC_MODE) throw new Error('Categories API disabled in static mode');
     categoriesCache = null;
 
-    console.log('🔄 Updating category orders:', orderUpdates);
+    console.warn('🔄 Updating category orders:', orderUpdates);
 
     // Use a transaction-like approach with Promise.all for better performance
     const updatePromises = orderUpdates.map(({ id, order }) =>
@@ -200,7 +200,7 @@ export const categoriesAPI = {
       throw new Error(`Failed to update ${errors.length} categories`);
     }
 
-    console.log('✅ All category orders updated successfully');
+    console.warn('✅ All category orders updated successfully');
     return results;
   },
 };
