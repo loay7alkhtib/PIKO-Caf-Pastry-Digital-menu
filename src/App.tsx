@@ -6,6 +6,7 @@ import { Toaster } from './components/ui/sonner';
 import Home from './pages/Home';
 import PikoLoader from './components/PikoLoader';
 import LanguageWrapper from './components/LanguageWrapper';
+// import ErrorBoundary from './components/ErrorBoundary';
 
 // Lazy load pages that aren't immediately needed
 const CategoryMenu = lazy(() => import('./pages/CategoryMenu'));

@@ -238,8 +238,16 @@ export const itemsAPI = {
   create: async (data: Omit<Item, 'id' | 'created_at'>) => {
     if (STATIC_MODE) throw new Error('Items API disabled in static mode');
 
+    // Generate a unique ID for the item
+    const timestamp = Date.now();
+    const randomId = Math.random().toString(36).substring(2, 15);
+    const itemId = `item_${timestamp}_${randomId}`;
+
     // Items table uses 'image' field directly (not image_url)
-    const insertData: Record<string, unknown> = { ...data };
+    const insertData: Record<string, unknown> = {
+      ...data,
+      id: itemId,
+    };
 
     const { data: result, error } = await supabaseClient
       .from('items')

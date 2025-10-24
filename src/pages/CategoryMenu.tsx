@@ -60,9 +60,9 @@ const CategoryMenu = memo(({ categoryId, onNavigate }: CategoryMenuProps) => {
 
     // When searching, search across ALL items in the menu, not just current category
     const allFilteredItems = allItems.filter(item => {
-      // Search in item names (multilingual)
-      const nameMatch = Object.values(item.names || item.name || {}).some(
-        name => name.toLowerCase().includes(query),
+      // Search in item names (multilingual) with safer typing
+      const nameMatch = Object.values(item.names || {}).some(
+        name => typeof name === 'string' && name.toLowerCase().includes(query),
       );
 
       // Search in descriptions (multilingual)
